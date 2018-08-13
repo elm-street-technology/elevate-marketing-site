@@ -22,7 +22,7 @@ const Footer = ({ classes }) => (
               />
             </svg>
           </Link>
-          <div>{config.copyright}</div>
+          <div className={classes.copyright}>{config.copyright}</div>
         </div>
         <div>Product</div>
         <div>About</div>
@@ -64,5 +64,10 @@ export default withStyles((theme) => ({
     [theme.breakpoints[900]]: {
       gridTemplateColumns: "repeat(4, 1fr)",
     },
+  },
+  copyright: {
+    fontSize: "14px",
+    color: "#64616E",
+    marginTop: "8px",
   },
 }))(Footer);

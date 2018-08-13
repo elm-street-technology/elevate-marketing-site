@@ -7,9 +7,9 @@ import Footer from "../components/Footer";
 import favicon from "../images/favicon.png";
 import withStyles from "elevate-ui/withStyles";
 
-const Template = ({ children }) => {
+const Template = ({ children, classes }) => {
   return (
-    <div className="siteRoot">
+    <div>
       <Helmet>
         <title>{config.siteTitle}</title>
         <meta charSet="utf-8" />
@@ -24,9 +24,9 @@ const Template = ({ children }) => {
       </Helmet>
 
       <ThemeProvider>
-        <div>
+        <div className={classes.root}>
           <Header />
-          {children()}
+          <div className={classes.children}>{children()}</div>
           <Footer />
         </div>
       </ThemeProvider>
@@ -45,5 +45,9 @@ export default withStyles((theme) => ({
     display: "flex",
     flexDirection: "column",
     width: "100%",
+    minHeight: "100vh",
+  },
+  children: {
+    flex: "1",
   },
 }))(Template);
