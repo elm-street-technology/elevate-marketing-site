@@ -8,9 +8,16 @@ import PageBody from "../components/PageBody";
 import TagList from "../components/TagList";
 import PostLinks from "../components/PostLinks";
 import PostDate from "../components/PostDate";
+import classNames from "classnames";
+import withStyles from "elevate-ui/withStyles";
 import SEO from "../components/SEO";
 
-const PostTemplate = ({ data: { allContentfulPost, contentfulPost } }) => {
+const PostTemplate = ({
+  children,
+  classes,
+  className,
+  data: { allContentfulPost, contentfulPost },
+}) => {
   const {
     title,
     slug,
@@ -28,18 +35,17 @@ const PostTemplate = ({ data: { allContentfulPost, contentfulPost } }) => {
   );
 
   return (
-    <div>
+    <div className={classNames(classes.root, className)}>
       <Helmet>
         <title>{`${title} - ${config.siteTitle}`}</title>
       </Helmet>
       <SEO pagePath={slug} postNode={postNode} postSEO />
 
-      <Hero title={title} image={heroImage} height={"50vh"} />
-
       <Container>
-        {tags && <TagList tags={tags} />}
+        <Hero title={title} image={heroImage} height={"50vh"} />
         <PostDate date={publishDate} />
         <PageBody body={body} />
+        {tags && <TagList tags={tags} />}
         <PostLinks previous={postIndex.previous} next={postIndex.next} />
       </Container>
     </div>
@@ -101,4 +107,20 @@ export const query = graphql`
   }
 `;
 
-export default PostTemplate;
+export default withStyles((theme) => ({
+  root: {
+    display: "flex",
+    flexDirection: "column",
+    width: "100%",
+    padding: "0 8px",
+    margin: "72px auto 96px auto",
+
+    [theme.breakpoints[600]]: {
+      maxWidth: "584px",
+    },
+
+    [theme.breakpoints[900]]: {
+      maxWidth: "700px",
+    },
+  },
+}))(PostTemplate);

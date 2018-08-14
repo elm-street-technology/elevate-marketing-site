@@ -1,7 +1,20 @@
 import React from "react";
+import classNames from "classnames";
+import withStyles from "elevate-ui/withStyles";
 
-const PageTitle = (props) => {
-  return <div>{props.children}</div>;
+const PageTitle = ({ children, classes, className }) => {
+  return <div className={classNames(classes.root, className)}>{children}</div>;
 };
 
-export default PageTitle;
+export default withStyles((theme) => ({
+  root: {
+    lineHeight: "1.2",
+    fontSize: "28px",
+    color: "#2E2E35",
+    fontWeight: "800",
+
+    [theme.breakpoints[600]]: {
+      fontSize: "36px",
+    },
+  },
+}))(PageTitle);

@@ -2,8 +2,8 @@ import React from "react";
 import sortBy from "lodash/sortBy";
 import Helmet from "react-helmet";
 import config from "../utils/siteConfig";
-import Card from "../components/Card";
-import CardList from "../components/CardList";
+import BlogCard from "../components/BlogCard";
+import BlogCardList from "../components/BlogCardList";
 import PageTitle from "../components/PageTitle";
 import Container from "../components/Container";
 
@@ -30,9 +30,9 @@ const TagTemplate = ({ data: { contentfulTag } }) => {
           &rdquo;
         </PageTitle>
 
-        <CardList>
+        <BlogCardList>
           {posts.map((post) => (
-            <Card
+            <BlogCard
               key={post.id}
               slug={post.slug}
               image={post.heroImage}
@@ -41,7 +41,7 @@ const TagTemplate = ({ data: { contentfulTag } }) => {
               excerpt={post.body}
             />
           ))}
-        </CardList>
+        </BlogCardList>
       </Container>
     </div>
   );
