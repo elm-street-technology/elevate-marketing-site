@@ -82,6 +82,7 @@ export default withStyles((theme) => ({
   bootcampLink: {
     color: "inherit",
     textDecoration: "none",
+    padding: "12px 0",
 
     "&:hover": {
       textDecoration: "underline",

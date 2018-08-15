@@ -20,7 +20,6 @@ const Bootcamp = ({ classes, data: { contentfulBootcamp } }) => {
     topics,
   } = contentfulBootcamp;
   // const postNode = contentfulBootcamp;
-  console.log(contentfulBootcamp);
 
   return (
     <div className={classes.root}>
