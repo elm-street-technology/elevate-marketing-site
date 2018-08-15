@@ -29,7 +29,14 @@ const EventCard = ({ classes, className, event }) => {
         <div className={classes.title}>{event.title}</div>
         <div className={classes.location}>{event.location}</div>
       </div>
-      <button className={classes.button}>Register</button>
+      <a
+        href={event.registrationUrl}
+        target="_blank"
+        rel="noopener noreferrer"
+        className={classes.registerLink}
+      >
+        Register
+      </a>
     </div>
   );
 };
@@ -90,7 +97,19 @@ export default withStyles((theme) => ({
   location: {
     fontSize: "16px",
   },
-  button: {
+  registerLink: {
+    display: "flex",
+    alignContent: "center",
+    justifyContent: "center",
+    backgroundColor: "#44cfa5",
+    fontSize: "14px",
+    letterSpacing: ".25px",
+    color: "#fff",
+    textDecoration: "none",
+    fontWeight: "600",
+    padding: "12px 16px",
+    borderRadius: "6px",
     alignSelf: "flex-end",
+    marginLeft: "4px",
   },
 }))(EventCard);

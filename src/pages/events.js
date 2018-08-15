@@ -15,7 +15,9 @@ const Events = ({ classes, data }) => {
       <Container>
         <div className={classes.top}>
           <div className={classes.heading}>Upcoming Events</div>
-          <Link to="/bootcamp">Learn about our Social Media Bootcamp →</Link>
+          <Link className={classes.bootcampLink} to="/bootcamp">
+            Learn about our Social Media Bootcamp →
+          </Link>
         </div>
         <EventCardGrid className={classes.grid}>
           {events.map(({ node: event }) => (
@@ -53,6 +55,7 @@ export const query = graphql`
           datetime
           id
           location
+          registrationUrl
           title
         }
       }
@@ -75,6 +78,14 @@ export default withStyles((theme) => ({
     fontSize: "32px",
     fontWeight: "700",
     marginRight: "auto",
+  },
+  bootcampLink: {
+    color: "inherit",
+    textDecoration: "none",
+
+    "&:hover": {
+      textDecoration: "underline",
+    },
   },
   grid: {
     paddingTop: "96px",
