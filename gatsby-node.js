@@ -3,10 +3,10 @@ const path = require(`path`);
 exports.createPages = ({ graphql, boundActionCreators }) => {
   const { createPage } = boundActionCreators;
 
-  const loadPosts = new Promise((resolve, reject) => {
+  const loadBootcamps = new Promise((resolve, reject) => {
     graphql(`
       {
-        allContentfulPost {
+        allContentfulBootcamp {
           edges {
             node {
               slug
@@ -15,10 +15,10 @@ exports.createPages = ({ graphql, boundActionCreators }) => {
         }
       }
     `).then((result) => {
-      result.data.allContentfulPost.edges.map(({ node }) => {
+      result.data.allContentfulBootcamp.edges.map(({ node }) => {
         createPage({
           path: `${node.slug}/`,
-          component: path.resolve(`./src/templates/post.js`),
+          component: path.resolve(`./src/templates/bootcamp.js`),
           context: {
             slug: node.slug,
           },
@@ -53,10 +53,10 @@ exports.createPages = ({ graphql, boundActionCreators }) => {
     });
   });
 
-  const loadBootcamps = new Promise((resolve, reject) => {
+  const loadPosts = new Promise((resolve, reject) => {
     graphql(`
       {
-        allContentfulBootcamp {
+        allContentfulPost {
           edges {
             node {
               slug
@@ -65,10 +65,10 @@ exports.createPages = ({ graphql, boundActionCreators }) => {
         }
       }
     `).then((result) => {
-      result.data.allContentfulBootcamp.edges.map(({ node }) => {
+      result.data.allContentfulPost.edges.map(({ node }) => {
         createPage({
           path: `${node.slug}/`,
-          component: path.resolve(`./src/templates/bootcamp.js`),
+          component: path.resolve(`./src/templates/post.js`),
           context: {
             slug: node.slug,
           },
@@ -103,5 +103,36 @@ exports.createPages = ({ graphql, boundActionCreators }) => {
     });
   });
 
-  return Promise.all([loadBootcamps, loadPosts, loadPages, loadTags]);
+  const loadTestimonials = new Promise((resolve, reject) => {
+    graphql(`
+      {
+        allContentfulTestimonial {
+          edges {
+            node {
+              slug
+            }
+          }
+        }
+      }
+    `).then((result) => {
+      result.data.allContentfulTestimonial.edges.map(({ node }) => {
+        createPage({
+          path: `${node.slug}/`,
+          component: path.resolve(`./src/templates/testimonial.js`),
+          context: {
+            slug: node.slug,
+          },
+        });
+      });
+      resolve();
+    });
+  });
+
+  return Promise.all([
+    loadBootcamps,
+    loadPages,
+    loadPosts,
+    loadTags,
+    loadTestimonials,
+  ]);
 };
