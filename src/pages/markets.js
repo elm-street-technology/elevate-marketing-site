@@ -91,14 +91,14 @@ export default withStyles((theme) => ({
   },
   container: {
     backgroundColor: "#fff",
-    padding: "20px 12px",
+    padding: "20px 24px",
     boxShadow: "0px 8px 12px rgba(0,0,0,.1)",
 
     [theme.breakpoints[600]]: {
       padding: "40px 48px",
     },
 
-    [theme.breakpoints[600]]: {
+    [theme.breakpoints[900]]: {
       padding: "60px 72px",
     },
   },
