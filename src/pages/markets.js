@@ -3,17 +3,29 @@ import withStyles from "elevate-ui/withStyles";
 
 import Container from "../components/Container";
 import SEO from "../components/SEO";
+import CircuitBoard from "../images/circuit-board.svg";
 
 const Markets = ({ classes, data }) => {
   const markets = data.allContentfulMarket.edges;
-  console.log(markets);
+  let marketCount = 0;
+  markets.forEach(({ node: market }) => {
+    marketCount += market.mlsName.length;
+  });
   return (
-    <div className={classes.root}>
+    <div
+      className={classes.root}
+      style={{
+        backgroundImage: `url('${CircuitBoard}')`,
+        backgroundRepeat: "repeat",
+      }}
+    >
       <SEO />
       <Container>
         <div className={classes.container}>
           <div className={classes.heading}>Areas we serve</div>
-          <div className={classes.subheading}>Available in ## US states</div>
+          <div className={classes.subheading}>
+            Available in {marketCount} markets across the US
+          </div>
           <div className={classes.table}>
             <div className={classes.tableThead}>
               <div className={classes.tableTh}>State</div>
@@ -28,12 +40,13 @@ const Markets = ({ classes, data }) => {
                       {market.mlsName &&
                         market.mlsName.map(
                           (mls, i) =>
-                            i === 0 ? (
+                            i === market.mlsName.length - 1 ? (
                               <span key={mls} className={classes.mls}>
                                 {mls}
                               </span>
                             ) : (
                               <span key={mls}>
+                                <span className={classes.mls}>{mls}</span>
                                 <span
                                   style={{
                                     color: "#64616E",
@@ -42,7 +55,6 @@ const Markets = ({ classes, data }) => {
                                 >
                                   |
                                 </span>
-                                <span className={classes.mls}>{mls}</span>
                               </span>
                             )
                         )}
@@ -74,13 +86,21 @@ export const query = graphql`
 
 export default withStyles((theme) => ({
   root: {
-    padding: "96px 10px 192px 10px",
+    padding: "96px 8px 192px 8px",
     backgroundColor: "#faf8f6",
   },
   container: {
     backgroundColor: "#fff",
-    padding: "60px 70px",
+    padding: "20px 12px",
     boxShadow: "0px 8px 12px rgba(0,0,0,.1)",
+
+    [theme.breakpoints[600]]: {
+      padding: "40px 48px",
+    },
+
+    [theme.breakpoints[600]]: {
+      padding: "60px 72px",
+    },
   },
   heading: {
     fontSize: "28px",
@@ -104,7 +124,7 @@ export default withStyles((theme) => ({
     background: "#ececec",
   },
   tableTh: {
-    minWidth: "80px",
+    minWidth: "120px",
     padding: "14px",
     fontSize: "14px",
     textTransform: "uppercase",
@@ -121,7 +141,7 @@ export default withStyles((theme) => ({
     borderBottom: "1px solid rgba(100, 97, 110, .25)",
   },
   tableTd: {
-    minWidth: "80px",
+    minWidth: "120px",
     padding: "24px 14px",
     fontWeight: "600",
     maxWidth: "100%",
