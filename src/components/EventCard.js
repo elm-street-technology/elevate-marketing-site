@@ -52,8 +52,9 @@ export default withStyles((theme) => ({
     padding: "16px",
   },
   date: {
+    flexShrink: "0",
     display: "flex",
-    width: "72px",
+    width: "56px",
     flexDirection: "column",
     justifyContent: "center",
     alignItems: "stretch",
