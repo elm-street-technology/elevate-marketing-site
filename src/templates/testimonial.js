@@ -4,7 +4,6 @@ import withStyles from "elevate-ui/withStyles";
 import phone from "../images/phone.png";
 import workChat from "../images/work-chat.png";
 import quotation from "../images/quotation.png";
-import quotationRed from "../images/quotation-red.png";
 import duotone from "../images/duotone.png";
 import config from "../utils/siteConfig";
 import Container from "../components/Container";
@@ -42,8 +41,7 @@ const Testimonial = ({ classes, data: { contentfulTestimonial } }) => {
           </div>
           <div className={classes.headingRight}>
             <img
-              className={classes.mainTestImg}
-              style={{ width: "650px" }}
+              className={classes.headingImg}
               src={workChat}
               alt={"co-workers chatting"}
             />
@@ -52,16 +50,15 @@ const Testimonial = ({ classes, data: { contentfulTestimonial } }) => {
       </Container>
       <Container>
         <div className={classes.mainTestimonial}>
-          <div>
+          <div className={classes.mainTestImgContainer}>
             <img
               className={classes.mainTestImg}
-              style={{ width: "450px" }}
               src={phone}
               alt={"phone being held"}
             />
           </div>
           <img
-            style={{ height: "30px" }}
+            className={classes.quotationImg}
             src={quotation}
             alt={"quotation marks"}
           />
@@ -80,8 +77,9 @@ const Testimonial = ({ classes, data: { contentfulTestimonial } }) => {
       <Container>
         <div className={classes.mainTestimonial}>
           <img
-            style={{ height: "20px" }}
-            src={quotationRed}
+            className={classes.quotationImg}
+            // style={{ height: "20px" }}
+            src={quotation}
             alt={"quotation marks"}
           />
           <TestimonialMain
@@ -91,7 +89,7 @@ const Testimonial = ({ classes, data: { contentfulTestimonial } }) => {
           />
           <div>
             <img
-              style={{ width: "450px", margin: "40px 0px 0px 34px" }}
+              className={classes.meetingImg}
               src={duotone}
               alt={"business meeting"}
             />
@@ -167,27 +165,75 @@ export default withStyles((theme) => ({
   },
   headingContainer: {
     display: "flex",
-    justifyContent: "space-between",
+    justifyContent: "center",
+    flexDirection: "column",
+    paddingLeft: "10px",
+
+    [theme.breakpoints[600]]: {
+      justifyContent: "space-between",
+      flexDirection: "row",
+    },
+  },
+  headingLeft: {
+    order: "1",
+
+    [theme.breakpoints[600]]: {
+      order: "0",
+    },
   },
   heading: {
-    fontSize: "32px",
+    fontSize: "24px",
     fontWeight: "800",
     color: "#2E2E35",
-    marginTop: "180px",
+    lineHeight: "1.2",
+
+    [theme.breakpoints[600]]: {
+      marginTop: "180px",
+      fontSize: "32px",
+    },
   },
   subHeading: {
-    fontSize: "24px",
+    fontSize: "18px",
     marginTop: "24px",
-    marginBottom: "50px",
-    maxWidth: "380px",
-    lineHeight: "32px",
+    marginBottom: "30px",
+    maxWidth: "280px",
+    lineHeight: "26px",
+
+    [theme.breakpoints[600]]: {
+      fontSize: "24px",
+      lineHeight: "32px",
+      maxWidth: "380px",
+      marginBottom: "50px",
+    },
+  },
+  headingRight: {
+    alignSelf: "flex-end",
+  },
+  headingImg: {
+    width: "350px",
+    marginTop: "30px",
+
+    [theme.breakpoints[600]]: {
+      width: "450px",
+      marginTop: "200px",
+    },
+
+    [theme.breakpoints[900]]: {
+      width: "650px",
+      marginTop: "100px",
+    },
   },
   main: {
-    paddingTop: "44px",
-    paddingBottom: "92px",
+    padding: "12px 12px 42px 12px",
     color: "#64616E",
-    fontSize: "18px",
-    lineHeight: "28px",
+    fontSize: "16px",
+    lineHeight: "24px",
+
+    [theme.breakpoints[900]]: {
+      fontSize: "18px",
+      padding: "44px 0px 92px 0px",
+      lineHeight: "30px",
+    },
 
     "& p": {
       marginBottom: "20px",
@@ -221,20 +267,33 @@ export default withStyles((theme) => ({
     display: "flex",
     justifyContent: "center",
     backgroundColor: "#FAF8F6",
-    paddingTop: "80px",
-    paddingBottom: "80px",
+    paddingTop: "50px",
+    paddingBottom: "50px",
     marginTop: "80px",
   },
   additional: {
+    padding: "0px 20px",
     display: "flex",
     maxWidth: "1150px",
     justifyContent: "space-between",
-    flexDirection: "row",
+    flexDirection: "column",
     lineHeight: "28px",
 
+    [theme.breakpoints[900]]: {
+      flexDirection: "row",
+    },
+
+    "& > div": {
+      padding: "30px 20px",
+    },
+
     "& img": {
-      marginTop: "30px",
+      marginTop: "20px",
       width: "70px",
+
+      [theme.breakpoints[900]]: {
+        marginTop: "30px",
+      },
     },
 
     "& p": {
@@ -242,24 +301,66 @@ export default withStyles((theme) => ({
     },
 
     "& div": {
-      maxWidth: "325px",
+      [theme.breakpoints[900]]: {
+        maxWidth: "325px",
+      },
     },
   },
   mainBtn: {
     backgroundColor: "#FFF4F0",
-    fontSize: "18px",
+    fontSize: "14px",
     letterSpacing: ".25px",
     color: "#F15953",
     textDecoration: "none",
     fontWeight: "700",
-    padding: "16px 16px",
+    padding: "12px 12px",
     borderRadius: "6px",
+
+    [theme.breakpoints[600]]: {
+      padding: "16px 16px",
+      fontSize: "18px",
+    },
   },
   mainTestimonial: {
     display: "flex",
-    marginTop: "180px",
+    flexDirection: "column",
+    marginTop: "60px",
+
+    [theme.breakpoints[900]]: {
+      marginTop: "180px",
+      flexDirection: "row",
+    },
+  },
+  mainTestImgContainer: {
+    alignSelf: "center",
+    [theme.breakpoints[900]]: {
+      alignSelf: "auto",
+    },
   },
   mainTestImg: {
     marginTop: "100px",
+    width: "350px",
+
+    [theme.breakpoints[600]]: {
+      width: "450px",
+    },
+  },
+  meetingImg: {
+    width: "250px",
+    margin: "40px 0px 0px 34px",
+    display: "none",
+
+    [theme.breakpoints[900]]: {
+      width: "450px",
+      display: "flex",
+    },
+  },
+  quotationImg: {
+    width: "30px",
+
+    [theme.breakpoints[600]]: {
+      height: "30px",
+      width: "45px",
+    },
   },
 }))(Testimonial);

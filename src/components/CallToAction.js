@@ -25,31 +25,45 @@ export default withStyles((theme) => ({
     alignContent: "center",
     backgroundColor: "#FFF4F0",
     height: "300px",
+    padding: "0 18px",
   },
   contentBlock: {
     textAlign: "center",
     marginTop: "70px",
+    lineHeight: "1.6",
 
     "& h1": {
-      fontSize: "24px",
+      fontSize: "20px",
+
+      [theme.breakpoints[900]]: {
+        fontSize: "24px",
+      },
     },
 
     "& p": {
-      marginTop: "26px",
+      marginTop: "12px",
+      fontSize: "14px",
+
+      [theme.breakpoints[900]]: {
+        fontSize: "16px",
+        marginTop: "26px",
+      },
     },
   },
   form: {
+    boxShadow: "0px 4px 8px rgba(0,0,0,.1)",
     overflow: "hidden",
     height: "48px",
-    width: "400px",
+    maxWidth: "400px",
     margin: "0 auto",
     position: "relative",
     marginTop: "28px",
     border: "none",
+    borderRadius: "4px",
 
     "& input": {
       width: "100%",
-      borderRadius: "5px",
+      borderRadius: "4px",
       height: "48px",
       padding: "18px 0 18px 15px",
       outline: "none",
