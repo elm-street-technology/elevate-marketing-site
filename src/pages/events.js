@@ -20,9 +20,17 @@ const Events = ({ classes, data }) => {
           </Link>
         </div>
         <EventCardGrid className={classes.grid}>
-          {events.map(({ node: event }) => (
-            <EventCard key={event.id} event={event} />
-          ))}
+          {events.map(({ node: event }) => {
+            // TODO: What's the proper way to do this with static gen?
+            // Is there a way to do it in the graphql query? Do we need to kick
+            // off a build daily to update this page?
+            const datetime = new Date(event.datetime);
+            const now = new Date();
+            if (datetime < now) {
+              return null;
+            }
+            return <EventCard key={event.id} event={event} />;
+          })}
         </EventCardGrid>
       </Container>
       <div className={classes.backgroundSlice}>
