@@ -50,9 +50,6 @@ export default withStyles((theme) => ({
     color: "inherit !important", // remove default `a` tag styling, along with :hover/:active/:etc.
     textDecoration: "inherit !important", // remove default `a` tag styling, along with :hover/:active/:etc.
   },
-  post: {
-    // padding: "12px",
-  },
   postImage: {
     marginBottom: "5px",
     width: "280px",

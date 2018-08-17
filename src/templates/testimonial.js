@@ -10,7 +10,6 @@ import Container from "../components/Container";
 import TestimonialMain from "../components/TestimonialMain";
 import TestimonialAdditional from "../components/TestimonialAdditional";
 import CallToAction from "../components/CallToAction";
-// import SEO from '../components/SEO'
 
 const Testimonial = ({ classes, data: { contentfulTestimonial } }) => {
   const {
