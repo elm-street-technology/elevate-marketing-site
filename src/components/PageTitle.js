@@ -8,10 +8,12 @@ const PageTitle = ({ children, classes, className }) => {
 
 export default withStyles((theme) => ({
   root: {
+    width: "100%",
     lineHeight: "1.2",
     fontSize: "28px",
     color: "#2E2E35",
     fontWeight: "800",
+    margin: "92px auto 0 auto",
 
     [theme.breakpoints[600]]: {
       fontSize: "36px",

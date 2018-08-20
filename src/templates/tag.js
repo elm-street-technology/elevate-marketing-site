@@ -1,9 +1,10 @@
 import React from "react";
 import sortBy from "lodash/sortBy";
 import Helmet from "react-helmet";
+
 import config from "../utils/siteConfig";
 import BlogCard from "../components/BlogCard";
-import BlogCardList from "../components/BlogCardList";
+import BlogCardGrid from "../components/BlogCardGrid";
 import PageTitle from "../components/PageTitle";
 import Container from "../components/Container";
 
@@ -24,13 +25,8 @@ const TagTemplate = ({ data: { contentfulTag } }) => {
       </Helmet>
 
       <Container>
-        <PageTitle small>
-          Tag: &ldquo;
-          {title}
-          &rdquo;
-        </PageTitle>
-
-        <BlogCardList>
+        <PageTitle>{`Tag: “${title}”`}</PageTitle>
+        <BlogCardGrid>
           {posts.map((post) => (
             <BlogCard
               key={post.id}
@@ -41,7 +37,7 @@ const TagTemplate = ({ data: { contentfulTag } }) => {
               excerpt={post.body}
             />
           ))}
-        </BlogCardList>
+        </BlogCardGrid>
       </Container>
     </div>
   );

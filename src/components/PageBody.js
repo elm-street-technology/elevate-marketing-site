@@ -14,13 +14,11 @@ const PageBody = (props) => {
 
 export default withStyles((theme) => ({
   post: {
+    width: "100%",
     color: "#121130",
     fontSize: "18px",
     lineHeight: "1.6",
-
-    [theme.breakpoints[600]]: {
-      padding: "0px",
-    },
+    margin: "48px auto 96px auto",
 
     "& h1": {
       color: "#2E2E35",

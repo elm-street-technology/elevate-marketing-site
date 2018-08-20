@@ -7,33 +7,36 @@ const TagList = (props) => {
   return (
     <div className={props.classes.postTagsContainer}>
       {props.tags.map((tag) => (
-        <div className={props.classes.postTags} key={tag.id}>
-          <Link className={props.classes.postTagLink} to={`/tag/${tag.slug}/`}>
-            {tag.title}
-          </Link>
-        </div>
+        <Link
+          key={tag.id}
+          className={props.classes.postTagLink}
+          to={`/tag/${tag.slug}/`}
+        >
+          {tag.title}
+        </Link>
       ))}
     </div>
   );
 };
 
 export default withStyles((theme) => ({
-  postTags: {
-    fontSize: "10px",
-    fontWeight: "800",
-    color: "#A9A8B6",
-    letterSpacing: ".5px",
-    padding: "8px",
-    borderRadius: "16px",
-    backgroundColor: "#ECECEC",
-    "&:hover": {
-      color: "#A9A8B6",
-      textDecoration: "none !important",
-    },
-  },
+  postTags: {},
   postTagLink: {
+    fontSize: "10px",
+    lineHeight: "16px",
+    fontWeight: "800",
+    letterSpacing: ".5px",
+    textAlign: "center",
+    textDecoration: "none",
+    color: "#A9A8B6",
+    backgroundColor: "#ECECEC",
+    padding: "6px 12px",
+    borderRadius: "14px",
+
     "&:hover": {
-      textDecoration: "none !important",
+      textDecoration: "none",
+      color: "#A9A8B6",
+      backgroundColor: "#dfdfdf",
     },
   },
   postTagsContainer: {
