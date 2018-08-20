@@ -13,6 +13,7 @@ export default withStyles((theme) => ({
     fontSize: "28px",
     color: "#2E2E35",
     fontWeight: "800",
+    marginBottom: "32px",
 
     [theme.breakpoints[600]]: {
       fontSize: "36px",
