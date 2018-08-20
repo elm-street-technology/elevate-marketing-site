@@ -8,6 +8,8 @@ import analysisHero from "../images/analysis-hero.png";
 import ProductCard from "../components/ProductCard";
 import FeatureCardGrid from "../components/FeatureCardGrid";
 import FeatureCard from "../components/FeatureCard";
+import TestimonialCard from "../components/TestimonialCard";
+import TestimonialCardGrid from "../components/TestimonialCardGrid";
 
 const Index = ({ classes, data }) => {
   return (
@@ -61,6 +63,17 @@ const Index = ({ classes, data }) => {
           <FeatureCard className={classes.featureCard} />
           <FeatureCard className={classes.featureCard} />
         </FeatureCardGrid>
+      </div>
+      <div className={classes.testimonialContainer}>
+        <div className={classes.testHeading}>
+          <h1>What Our Customer Are Saying</h1>
+        </div>
+        <TestimonialCardGrid>
+          <TestimonialCard />
+          <TestimonialCard />
+          <TestimonialCard />
+          <TestimonialCard />
+        </TestimonialCardGrid>
       </div>
     </div>
   );
@@ -184,5 +197,13 @@ export default withStyles((theme) => ({
     margin: "16px auto",
     width: "100%",
     textAlign: "center",
+  },
+  testimonialContainer: {
+    justifyContent: "center",
+    display: "flex",
+    flexDirection: "column",
+    paddingTop: "100px",
+    paddingBottom: "200px",
+    backgroundColor: "#FFF",
   },
 }))(Index);

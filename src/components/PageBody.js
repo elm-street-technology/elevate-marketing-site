@@ -18,6 +18,10 @@ export default withStyles((theme) => ({
     color: "#121130",
     fontSize: "18px",
     lineHeight: "1.6",
+<<<<<<< HEAD
+=======
+    margin: "48px auto 16px auto",
+>>>>>>> Added Testimonial to Homepage and Global Styles on Blog
 
     "& h1": {
       color: "#2E2E35",
@@ -44,9 +48,24 @@ export default withStyles((theme) => ({
       marginBottom: "12px",
     },
 
+    "& h4": {
+      fontSize: "18px",
+      fontWeight: "600",
+      marginTop: "24px",
+      marginBottom: "12px",
+    },
+
     "& a": {
       color: "#2E2E35",
       textDecoration: "underline",
+    },
+
+    "& em": {
+      textStyle: "italic",
+    },
+
+    "& strong": {
+      fontWeight: "700",
     },
 
     "& ol": {
