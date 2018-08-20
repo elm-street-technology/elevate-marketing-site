@@ -26,7 +26,12 @@ const Footer = ({ classes }) => (
         </div>
         <div>Product</div>
         <div>About</div>
-        <div>Support</div>
+        <div>
+          <h4>Support</h4>
+          <Link to="/terms-of-service">Terms of Service</Link>
+          <Link to="/privacy">Privacy Policy</Link>
+          <Link to="/dmca">DMCA Notice</Link>
+        </div>
       </div>
     </Container>
     <a

@@ -18,10 +18,6 @@ export default withStyles((theme) => ({
     color: "#121130",
     fontSize: "18px",
     lineHeight: "1.6",
-<<<<<<< HEAD
-=======
-    margin: "48px auto 16px auto",
->>>>>>> Added Testimonial to Homepage and Global Styles on Blog
 
     "& h1": {
       color: "#2E2E35",
