@@ -3,7 +3,7 @@ import Container from "../components/Container";
 import withStyles from "elevate-ui/withStyles";
 import classNames from "classnames";
 import SEO from "../components/SEO";
-import Form from "../components/Form";
+import CallToActionForm from "../components/CallToActionForm";
 import analysisHero from "../images/analysis-hero.png";
 import ProductCard from "../components/ProductCard";
 import FeatureCardGrid from "../components/FeatureCardGrid";
@@ -23,7 +23,7 @@ const Index = ({ classes, data }) => {
               Elevate is the only fully integrated single system on the market
               today that does everything real estate professionals need.
             </div>
-            <Form className={classes.form} />
+            <CallToActionForm className={classes.form} />
           </div>
           <div className={classes.headingRight}>
             <img
