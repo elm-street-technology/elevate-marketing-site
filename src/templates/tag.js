@@ -1,6 +1,7 @@
 import React from "react";
 import sortBy from "lodash/sortBy";
 import Helmet from "react-helmet";
+import withStyles from "elevate-ui/withStyles";
 
 import config from "../utils/siteConfig";
 import BlogCard from "../components/BlogCard";
@@ -8,13 +9,13 @@ import BlogCardGrid from "../components/BlogCardGrid";
 import PageTitle from "../components/PageTitle";
 import Container from "../components/Container";
 
-const TagTemplate = ({ data: { contentfulTag } }) => {
+const TagTemplate = ({ classes, data: { contentfulTag } }) => {
   const { title, slug } = contentfulTag;
 
   const posts = sortBy(contentfulTag.post, "publishDate").reverse();
 
   return (
-    <div>
+    <div className={classes.root}>
       <Helmet>
         <title>{`Tag: ${title} - ${config.siteTitle}`}</title>
         <meta
@@ -71,4 +72,12 @@ export const query = graphql`
   }
 `;
 
-export default TagTemplate;
+export default withStyles((theme) => ({
+  root: {
+    display: "flex",
+    flexDirection: "column",
+    width: "100%",
+    padding: "0 8px",
+    margin: "72px auto 96px auto",
+  },
+}))(TagTemplate);
