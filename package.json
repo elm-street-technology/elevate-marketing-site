@@ -40,6 +40,7 @@
     "lodash": "^4.17.10",
     "path": "^0.12.7",
     "prismjs": "^1.15.0",
+    "react-card-flipper": "^1.0.1",
     "react-helmet": "^5.2.0",
     "react-jss": "^8.6.1",
     "whatwg-fetch": "^2.0.4",
