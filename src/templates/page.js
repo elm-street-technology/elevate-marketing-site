@@ -1,17 +1,19 @@
 import React from "react";
 import Helmet from "react-helmet";
+import withStyles from "elevate-ui/withStyles";
+
 import config from "../utils/siteConfig";
 import Container from "../components/Container";
 import PageTitle from "../components/PageTitle";
 import PageBody from "../components/PageBody";
 import SEO from "../components/SEO";
 
-const PageTemplate = ({ data: { contentfulPage } }) => {
+const PageTemplate = ({ classes, data: { contentfulPage } }) => {
   const { title, slug, body } = contentfulPage;
   const postNode = contentfulPage;
 
   return (
-    <div>
+    <div className={classes.root}>
       <Helmet>
         <title>{`${title} - ${config.siteTitle}`}</title>
       </Helmet>
@@ -45,4 +47,12 @@ export const query = graphql`
   }
 `;
 
-export default PageTemplate;
+export default withStyles((theme) => ({
+  root: {
+    display: "flex",
+    flexDirection: "column",
+    width: "100%",
+    padding: "0 8px",
+    margin: "72px auto 96px auto",
+  },
+}))(PageTemplate);

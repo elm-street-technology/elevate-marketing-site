@@ -1,6 +1,8 @@
 import React from "react";
 import find from "lodash/find";
 import Helmet from "react-helmet";
+import withStyles from "elevate-ui/withStyles";
+
 import config from "../utils/siteConfig";
 import Hero from "../components/Hero";
 import Container from "../components/Container";
@@ -8,14 +10,11 @@ import PageBody from "../components/PageBody";
 import TagList from "../components/TagList";
 import PostLinks from "../components/PostLinks";
 import PostDate from "../components/PostDate";
-import classNames from "classnames";
-import withStyles from "elevate-ui/withStyles";
 import SEO from "../components/SEO";
 
 const PostTemplate = ({
   children,
   classes,
-  className,
   data: { allContentfulPost, contentfulPost },
 }) => {
   const {
@@ -35,7 +34,7 @@ const PostTemplate = ({
   );
 
   return (
-    <div className={classNames(classes.root, className)}>
+    <div className={classes.root}>
       <Helmet>
         <title>{`${title} - ${config.siteTitle}`}</title>
       </Helmet>

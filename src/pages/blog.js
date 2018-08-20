@@ -1,15 +1,17 @@
 import React from "react";
+import withStyles from "elevate-ui/withStyles";
+
 import BlogCardGrid from "../components/BlogCardGrid";
 import BlogCard from "../components/BlogCard";
 import Container from "../components/Container";
 import PageTitle from "../components/PageTitle";
 import SEO from "../components/SEO";
 
-const Blog = ({ children, data }) => {
+const Blog = ({ children, classes, data }) => {
   const posts = data.allContentfulPost.edges;
 
   return (
-    <div>
+    <div className={classes.root}>
       <SEO />
       <Container>
         <PageTitle>The Elevate Blog</PageTitle>
@@ -60,4 +62,12 @@ export const query = graphql`
   }
 `;
 
-export default Blog;
+export default withStyles((theme) => ({
+  root: {
+    display: "flex",
+    flexDirection: "column",
+    width: "100%",
+    padding: "0 8px",
+    margin: "72px auto 96px auto",
+  },
+}))(Blog);

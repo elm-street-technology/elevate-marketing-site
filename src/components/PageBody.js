@@ -18,7 +18,6 @@ export default withStyles((theme) => ({
     color: "#121130",
     fontSize: "18px",
     lineHeight: "1.6",
-    margin: "48px auto 96px auto",
 
     "& h1": {
       color: "#2E2E35",
