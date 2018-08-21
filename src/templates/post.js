@@ -8,24 +8,16 @@ import Hero from "../components/Hero";
 import Container from "../components/Container";
 import PageBody from "../components/PageBody";
 import TagList from "../components/TagList";
-import PostLinks from "../components/PostLinks";
-import PostDate from "../components/PostDate";
+import PostPagination from "../components/PostPagination";
 import SEO from "../components/SEO";
+import PostSocialLinks from "../components/PostSocialLinks";
 
 const PostTemplate = ({
   children,
   classes,
   data: { allContentfulPost, contentfulPost },
 }) => {
-  const {
-    title,
-    slug,
-    id,
-    heroImage,
-    body,
-    publishDate,
-    tags,
-  } = contentfulPost;
+  const { title, slug, id, body, tags } = contentfulPost;
   const postNode = contentfulPost;
 
   const postIndex = find(
@@ -41,11 +33,11 @@ const PostTemplate = ({
       <SEO pagePath={slug} postNode={postNode} postSEO />
 
       <Container>
-        <Hero title={title} image={heroImage} height={"50vh"} />
-        <PostDate date={publishDate} />
+        <Hero post={contentfulPost} />
         <PageBody body={body} />
         {tags && <TagList tags={tags} />}
-        <PostLinks previous={postIndex.previous} next={postIndex.next} />
+        <PostSocialLinks className={classes.social} post={contentfulPost} />
+        <PostPagination previous={postIndex.previous} next={postIndex.next} />
       </Container>
     </div>
   );
@@ -71,6 +63,9 @@ export const query = graphql`
       }
       heroImage {
         title
+        file {
+          url
+        }
         sizes(maxWidth: 1800) {
           ...GatsbyContentfulSizes_withWebp_noBase64
         }
@@ -121,5 +116,9 @@ export default withStyles((theme) => ({
     [theme.breakpoints[900]]: {
       maxWidth: "700px",
     },
+  },
+  social: {
+    justifyContent: "flex-end",
+    marginBottom: "24px",
   },
 }))(PostTemplate);
