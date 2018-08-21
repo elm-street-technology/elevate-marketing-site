@@ -52,6 +52,7 @@ export default withStyles((theme) => ({
     flexShrink: "0",
     width: "72px",
     height: "72px",
+    borderRadius: "50%",
     marginRight: "12px",
   },
   authorName: {
