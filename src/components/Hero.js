@@ -19,7 +19,9 @@ const Hero = ({
       )}
       <PostSocialLinks post={post} className={classes.social} />
     </div>
-    {heroImage && <img src={heroImage.file.url} className={classes.image} />}
+    {heroImage && (
+      <img src={heroImage.file.url} className={classes.image} alt={title} />
+    )}
   </div>
 );
 

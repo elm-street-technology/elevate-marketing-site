@@ -8,6 +8,8 @@ import LinkedIn from "elevate-ui/Icon/LinkedIn";
 import Pinterest from "elevate-ui/Icon/Pinterest";
 import GooglePlus from "elevate-ui/Icon/GooglePlus";
 
+import config from "../utils/siteConfig";
+
 type Props = {
   classes: Object,
   className: string,
@@ -19,8 +21,8 @@ const PostSocialLinks = ({ classes, className, post }: Props) => {
     <div className={classNames(classes.root, className)}>
       <a
         className={classNames(classes.icon, classes.facebook)}
-        href={`https://www.facebook.com/sharer/sharer.php?u=${
-          window.location.href
+        href={`https://www.facebook.com/sharer/sharer.php?u=${config.siteUrl}/${
+          post.slug
         }&title=${post.title}`}
         target="_blank"
         rel="noreferrer noopener"
@@ -30,8 +32,8 @@ const PostSocialLinks = ({ classes, className, post }: Props) => {
       <a
         className={classNames(classes.icon, classes.twitter)}
         href={`https://twitter.com/intent/tweet?status=${post.title}+${
-          window.location.href
-        }`}
+          config.siteUrl
+        }/${post.slug}`}
         target="_blank"
         rel="noreferrer noopener"
       >
@@ -40,8 +42,8 @@ const PostSocialLinks = ({ classes, className, post }: Props) => {
       <a
         className={classNames(classes.icon, classes.linkedin)}
         href={`https://www.linkedin.com/shareArticle?mini=true&url=${
-          window.location.href
-        }&title=${post.title}`}
+          config.siteUrl
+        }/${post.slug}&title=${post.title}`}
         target="_blank"
         rel="noreferrer noopener"
       >
@@ -51,8 +53,8 @@ const PostSocialLinks = ({ classes, className, post }: Props) => {
         className={classNames(classes.icon, classes.pinterest)}
         href={`https://pinterest.com/pin/create/bookmarklet/?media=${
           post.heroImage.file.url
-        }?itok=cNTqvOf8&url=${
-          window.location.href
+        }?itok=cNTqvOf8&url=${config.siteUrl}/${
+          post.slug
         }&is_video=false&description=${post.title}`}
         target="_blank"
         rel="noreferrer noopener"
@@ -61,7 +63,9 @@ const PostSocialLinks = ({ classes, className, post }: Props) => {
       </a>
       <a
         className={classNames(classes.icon, classes.google)}
-        href={`https://plus.google.com/share?url=${window.location.href}`}
+        href={`https://plus.google.com/share?url=${config.siteUrl}/${
+          post.slug
+        }`}
         target="_blank"
         rel="noreferrer noopener"
       >
