@@ -3,12 +3,15 @@ import classNames from "classnames";
 import withStyles from "elevate-ui/withStyles";
 import Link from "gatsby-link";
 
-const PostLinks = (props) => {
+const PostPagination = (props) => {
   return (
     <div className={classNames(props.classes.root, props.className)}>
       {props.previous && (
         <Link
-          className={props.classes.postButton}
+          className={classNames(
+            props.classes.postButton,
+            props.classes.postButtonPrevious
+          )}
           to={`/${props.previous.slug}/`}
         >
           <svg
@@ -24,7 +27,13 @@ const PostLinks = (props) => {
         </Link>
       )}
       {props.next && (
-        <Link className={props.classes.postButton} to={`/${props.next.slug}/`}>
+        <Link
+          className={classNames(
+            props.classes.postButton,
+            props.classes.postButtonNext
+          )}
+          to={`/${props.next.slug}/`}
+        >
           <span className={props.classes.postLink}>Next Post </span>
           <svg
             className={props.classes.arrow}
@@ -45,7 +54,6 @@ const PostLinks = (props) => {
 export default withStyles((theme) => ({
   root: {
     display: "flex",
-    justifyContent: "space-between",
     alignContent: "center",
     marginTop: "20px",
   },
@@ -62,6 +70,12 @@ export default withStyles((theme) => ({
     padding: "8px 16px",
     borderRadius: "6px",
   },
+  postButtonPrevious: {
+    marginRight: "auto",
+  },
+  postButtonNext: {
+    marginLeft: "auto",
+  },
   arrow: {
     fill: "#F15953",
   },
@@ -69,4 +83,4 @@ export default withStyles((theme) => ({
     marginTop: "3px",
     padding: "0 3px",
   },
-}))(PostLinks);
+}))(PostPagination);
