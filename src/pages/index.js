@@ -5,6 +5,7 @@ import classNames from "classnames";
 import SEO from "../components/SEO";
 import CallToActionForm from "../components/CallToActionForm";
 import analysisHero from "../images/analysis-hero.png";
+import arrowDown from "../images/arrow-down.svg";
 import ProductCard from "../components/ProductCard";
 import FeatureCardGrid from "../components/FeatureCardGrid";
 import FeatureCard from "../components/FeatureCard";
@@ -34,6 +35,14 @@ const Index = ({ classes, data }) => {
               alt={"co-workers chatting"}
             />
           </div>
+        </div>
+        <div className={classes.learnMore}>
+          <h2>Learn More</h2>
+          <img
+            className={classes.arrowDown}
+            src={arrowDown}
+            alt={"arrow pointing down"}
+          />
         </div>
       </Container>
       <div className={classes.productContainer}>
@@ -66,7 +75,7 @@ const Index = ({ classes, data }) => {
       </div>
       <div className={classes.testimonialContainer}>
         <div className={classes.testHeading}>
-          <h1>What Our Customer Are Saying</h1>
+          <h1>What Our Customers Are Saying</h1>
         </div>
         <TestimonialCardGrid>
           <TestimonialCard />
@@ -90,10 +99,13 @@ export default withStyles((theme) => ({
     justifyContent: "center",
     flexDirection: "column",
     paddingLeft: "10px",
+    paddingRight: "10px",
+    paddingBottom: "100px",
 
     [theme.breakpoints[900]]: {
       justifyContent: "space-between",
       flexDirection: "row",
+      paddingBottom: "0px",
     },
   },
   headingLeft: {
@@ -154,6 +166,19 @@ export default withStyles((theme) => ({
       marginBottom: "140px",
     },
   },
+  learnMore: {
+    display: "none",
+
+    [theme.breakpoints[900]]: {
+      display: "block",
+      textAlign: "center",
+      paddingBottom: "80px",
+      color: "#64616E",
+    },
+  },
+  arrowDown: {
+    marginTop: "0px",
+  },
   form: {
     maxWidth: "400px",
   },
@@ -161,35 +186,64 @@ export default withStyles((theme) => ({
     display: "flex",
     flexDirection: "column",
     paddingTop: "100px",
-    paddingBottom: "200px",
-    background: "linear-gradient(#E46457, #F39D90)",
+    paddingLeft: "12px",
+    paddingRight: "12px",
+    background: "linear-gradient(#F15953, #F39D90)",
+
+    [theme.breakpoints[900]]: {
+      paddingBottom: "140px",
+    },
   },
   productHeading: {
     margin: "0 auto",
-    fontSize: "36px",
+    fontSize: "28px",
+    textAlign: "center",
+    lineHeight: "45px",
+    padding: "0 12px",
     color: "#FFF",
     width: "100%",
-    maxWidth: "660px",
+    maxWidth: "700px",
+
+    [theme.breakpoints[900]]: {
+      fontSize: "36px",
+    },
   },
   productCardContainer: {
     display: "flex",
+    flexDirection: "column",
+    margin: "60px auto",
     justifyContent: "center",
+
+    [theme.breakpoints[900]]: {
+      margin: "80px auto",
+      flexDirection: "row",
+    },
   },
   featureContainer: {
     justifyContent: "center",
     display: "flex",
     flexDirection: "column",
-    paddingTop: "100px",
-    paddingBottom: "200px",
+    paddingTop: "75px",
+    paddingBottom: "100px",
     backgroundColor: "#FFF4F0",
+
+    [theme.breakpoints[900]]: {
+      paddingTop: "100px",
+      paddingBottom: "200px",
+    },
   },
   featureHeading: {
     margin: "0 auto",
-    fontSize: "36px",
-    color: "#E46457",
+    fontSize: "28px",
+    color: "#F15953",
     display: "flex",
+    textAlign: "center",
     justifyContent: "center",
     flexDirection: "column",
+
+    [theme.breakpoints[900]]: {
+      fontSize: "36px",
+    },
   },
   featureSubHeading: {
     color: "#64616E",
@@ -198,12 +252,29 @@ export default withStyles((theme) => ({
     width: "100%",
     textAlign: "center",
   },
+  testHeading: {
+    margin: "0 auto",
+    marginBottom: "20px",
+    textAlign: "center",
+    fontSize: "32px",
+    fontWeight: "800",
+    color: "#413F48",
+    width: "100%",
+    maxWidth: "900px",
+  },
   testimonialContainer: {
     justifyContent: "center",
     display: "flex",
     flexDirection: "column",
-    paddingTop: "100px",
-    paddingBottom: "200px",
+    paddingLeft: "12px",
+    paddingRight: "12px",
+    paddingTop: "75px",
+    paddingBottom: "100px",
     backgroundColor: "#FFF",
+
+    [theme.breakpoints[900]]: {
+      paddingBottom: "200px",
+      paddingTop: "100px",
+    },
   },
 }))(Index);

@@ -2,6 +2,7 @@ import React from "react";
 import Link from "gatsby-link";
 import Img from "gatsby-image";
 import withStyles from "elevate-ui/withStyles";
+import TagList from "../components/TagList";
 
 const BlogCard = (props) => {
   return (
@@ -20,6 +21,7 @@ const BlogCard = (props) => {
             __html: props.excerpt.childMarkdownRemark.excerpt,
           }}
         />
+        {props.tags && <TagList tags={props.tags} />}
       </Link>
     </div>
   );

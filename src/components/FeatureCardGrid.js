@@ -10,9 +10,9 @@ export default withStyles((theme) => ({
   root: {
     display: "grid",
     justifyContent: "center",
-    gridTemplateColumns: "repeat(1, 1fr)",
+    // gridTemplateColumns: "repeat(1, 1fr)",
     marginTop: "60px",
-    gridColumnGap: "16px",
+    gridColumnGap: "32px",
     gridRowGap: "50px",
 
     [theme.breakpoints[600]]: {
@@ -21,6 +21,7 @@ export default withStyles((theme) => ({
 
     [theme.breakpoints[900]]: {
       gridTemplateColumns: "repeat(4, 280px)",
+      gridColumnGap: "0px",
     },
   },
 }))(FeatureCardGrid);

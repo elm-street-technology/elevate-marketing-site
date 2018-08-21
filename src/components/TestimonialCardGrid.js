@@ -10,13 +10,13 @@ export default withStyles((theme) => ({
   root: {
     display: "grid",
     justifyContent: "center",
-    gridTemplateColumns: "repeat(1, 1fr)",
-    marginTop: "60px",
+    marginTop: "40px",
     gridColumnGap: "40px",
     gridRowGap: "40px",
 
-    [theme.breakpoints[600]]: {
+    [theme.breakpoints[900]]: {
       gridTemplateColumns: "repeat(2, 440px)",
+      marginTop: "60px",
     },
   },
 }))(TestimonialCardGrid);

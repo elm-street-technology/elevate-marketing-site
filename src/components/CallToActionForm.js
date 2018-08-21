@@ -43,7 +43,7 @@ export default withStyles((theme) => ({
     fontSize: "13px",
     fontWeight: "700",
     height: "48px",
-    backgroundColor: "#E46457",
+    backgroundColor: "#F15953",
     color: "#fff",
     padding: "0px 10px",
     margin: "0",

@@ -7,7 +7,7 @@ import Container from "../components/Container";
 import PageTitle from "../components/PageTitle";
 import SEO from "../components/SEO";
 
-const Blog = ({ children, classes, data }) => {
+const Blog = ({ children, classes, data, tags }) => {
   const posts = data.allContentfulPost.edges;
 
   return (
@@ -18,6 +18,7 @@ const Blog = ({ children, classes, data }) => {
         <BlogCardGrid>
           {posts.map(({ node: post }) => (
             <BlogCard
+              tags={tags}
               key={post.id}
               slug={post.slug}
               image={post.heroImage}
@@ -55,6 +56,11 @@ export const query = graphql`
               html
               excerpt(pruneLength: 80)
             }
+          }
+          tags {
+            title
+            id
+            slug
           }
         }
       }

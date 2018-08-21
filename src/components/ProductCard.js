@@ -30,13 +30,13 @@ export default withStyles((theme) => ({
   root: {
     display: "flex",
     flexDirection: "column",
-    width: "320px",
+    maxWidth: "340px",
     background: "#fff", // material-design 1dp
     transition: "all 200ms ease-in-out",
     overflow: "hidden",
     userSelect: "none",
     borderRadius: "12px",
-    margin: "80px 20px",
+    margin: "20px 20px",
     boxShadow: "0px 12px 24px rgba(0, 0, 0, .1)",
   },
   productTitle: {

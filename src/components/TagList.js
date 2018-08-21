@@ -28,6 +28,7 @@ export default withStyles((theme) => ({
     letterSpacing: ".5px",
     textAlign: "center",
     textDecoration: "none",
+    marginRight: "4px",
     color: "#A9A8B6",
     backgroundColor: "#ECECEC",
     padding: "6px 12px",

@@ -15,9 +15,13 @@ const PageBody = (props) => {
 export default withStyles((theme) => ({
   post: {
     width: "100%",
-    color: "#121130",
+    color: "#413F48",
     fontSize: "18px",
     lineHeight: "1.6",
+<<<<<<< HEAD
+=======
+    margin: "48px auto 16px auto",
+>>>>>>> Added Mobile Styles to Homepage, Styling BugFix on Blog Post Tags
 
     "& h1": {
       color: "#2E2E35",
@@ -57,7 +61,7 @@ export default withStyles((theme) => ({
     },
 
     "& em": {
-      textStyle: "italic",
+      fontStyle: "italic",
     },
 
     "& strong": {

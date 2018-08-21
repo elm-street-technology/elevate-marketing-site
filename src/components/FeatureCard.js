@@ -32,7 +32,7 @@ export default withStyles((theme) => ({
     boxShadow: "0px 12px 24px rgba(0, 0, 0, .1)",
   },
   featureTitle: {
-    color: "#E46457",
+    color: "#F15953",
     fontSize: "18px",
     fontWeight: "800",
     padding: "10px",
