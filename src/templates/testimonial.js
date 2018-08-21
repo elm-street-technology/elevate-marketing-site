@@ -16,6 +16,7 @@ const Testimonial = ({ classes, data: { contentfulTestimonial } }) => {
     additionalTestimonials,
     primaryTestimonial,
     secondaryTestimonial,
+    tagline,
     title,
   } = contentfulTestimonial;
   // const postNode = contentfulTestimonial;
@@ -32,10 +33,7 @@ const Testimonial = ({ classes, data: { contentfulTestimonial } }) => {
         <div className={classes.headingContainer}>
           <div className={classes.headingLeft}>
             <div className={classes.heading}>{title}</div>
-            <div className={classes.subHeading}>
-              Absolutely amazing experience. So easy to set up and the results
-              were immediate.
-            </div>
+            <div className={classes.subHeading}>{tagline}</div>
             <button className={classes.mainBtn}>Request a demo</button>
           </div>
           <div className={classes.headingRight}>
@@ -105,6 +103,7 @@ export const query = graphql`
     contentfulTestimonial(slug: { eq: $slug }) {
       slug
       title
+      tagline
       primaryTestimonial {
         id
         name
@@ -140,6 +139,7 @@ export const query = graphql`
       additionalTestimonials {
         id
         name
+        jobTitle
         photo {
           file {
             url
@@ -243,10 +243,6 @@ export default withStyles((theme) => ({
     "& strong": {
       fontWeight: "800",
     },
-    "& img": {
-      marginTop: "30px",
-      width: "70px",
-    },
     "& h1": {
       color: "#2E2E35",
       fontWeight: "700",
@@ -284,19 +280,6 @@ export default withStyles((theme) => ({
 
     "& > div": {
       padding: "30px 20px",
-    },
-
-    "& img": {
-      marginTop: "20px",
-      width: "70px",
-
-      [theme.breakpoints[900]]: {
-        marginTop: "30px",
-      },
-    },
-
-    "& p": {
-      color: "#2E2E35",
     },
 
     "& div": {

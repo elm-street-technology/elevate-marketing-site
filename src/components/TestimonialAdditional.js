@@ -15,17 +15,15 @@ const TestimonialAdditional = ({ classes, className, testimonials }) => {
                 testimonial.childMarkdownRemark.html,
             }}
           />
-          <div>
-            <div>
-              <img
-                className={classes.instructorPhoto}
-                src={photo.file.url}
-                alt={`${name}'s Testimonial Headshot`}
-              />
-            </div>
-            <div>
-              <div>{name}</div>
-              <div>{jobTitle}</div>
+          <div className={classes.author}>
+            <img
+              className={classes.authorPhoto}
+              src={photo.file.url}
+              alt={`${name}'s Testimonial Headshot`}
+            />
+            <div className={classes.authorDetails}>
+              <div className={classes.authorName}>{name}</div>
+              <div className={classes.authorTitle}>{jobTitle}</div>
             </div>
           </div>
         </div>
@@ -39,5 +37,35 @@ export default withStyles((theme) => ({
     display: "flex",
     flexDirection: "column",
     width: "100%",
+  },
+  testimonial: {
+    color: "#2E2E35",
+  },
+  author: {
+    display: "flex",
+    alignItems: "flex-start",
+    marginTop: "24px",
+
+    [theme.breakpoints[900]]: {
+      marginTop: "32px",
+    },
+  },
+  authorPhoto: {
+    flexShrink: "0",
+    width: "56px",
+    height: "56px",
+    marginRight: "12px",
+  },
+  authorName: {
+    color: "#64616E",
+    fontSize: "18px",
+    lineHeight: "1.4",
+    fontWeight: "700",
+  },
+  authorTitle: {
+    fontSize: "14px",
+    lineHeight: "1.4",
+    fontWeight: "600",
+    color: "#9a94ad",
   },
 }))(TestimonialAdditional);
