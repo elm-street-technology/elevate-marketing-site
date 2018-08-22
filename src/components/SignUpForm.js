@@ -110,6 +110,7 @@ export default withStyles((theme) => ({
     borderRadius: "6px",
     border: "2px solid #ECECEC",
     height: "50px",
+    fontWeight: "600",
   },
   topRow: {
     display: "flex",
