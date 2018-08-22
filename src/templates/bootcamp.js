@@ -16,6 +16,7 @@ const Bootcamp = ({ classes, data: { contentfulBootcamp } }) => {
     heroImage,
     heroText,
     instructors,
+    signupMessaging,
     // slug,
     topics,
   } = contentfulBootcamp;
@@ -51,7 +52,10 @@ const Bootcamp = ({ classes, data: { contentfulBootcamp } }) => {
       <Container>
         <BootcampFaqs className={classes.faqs} faqs={faqs} />
       </Container>
-      <BootcampSignup className={classes.signup} />
+      <BootcampSignup
+        className={classes.signup}
+        signupMessaging={signupMessaging}
+      />
       <Container>
         <BootcampTopics className={classes.topics} topics={topics} />
       </Container>
@@ -84,6 +88,12 @@ export const query = graphql`
         }
       }
       heroText {
+        childMarkdownRemark {
+          html
+          excerpt(pruneLength: 320)
+        }
+      }
+      signupMessaging {
         childMarkdownRemark {
           html
           excerpt(pruneLength: 320)
@@ -153,10 +163,7 @@ export default withStyles((theme) => ({
       fontStyle: "italic",
     },
   },
-  signup: {
-    paddingTop: "32px",
-    paddingBottom: "184px",
-  },
+  signup: {},
   faqs: {
     borderTop: "1px solid #2E2E35",
     paddingTop: "32px",

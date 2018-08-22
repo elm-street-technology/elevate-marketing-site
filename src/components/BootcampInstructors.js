@@ -12,8 +12,8 @@ const BootcampInstructors = ({ classes, className, instructors }) => {
         {instructors.map((item) => (
           <ReactCardFlipper
             key={item.id}
-            width={400}
-            height={400}
+            width={300}
+            height={300}
             innerCardClass={classes.instructor}
             levitate
           >
@@ -24,13 +24,9 @@ const BootcampInstructors = ({ classes, className, instructors }) => {
                 alt={"nice"}
               />
               <div className={classes.instructorName}>
-                <h2>
-                  {item.firstName} {item.lastName}
-                </h2>
+                {item.firstName} {item.lastName}
               </div>
-              <div className={classes.instructorTitle}>
-                <h3>{item.jobTitle}</h3>
-              </div>
+              <div className={classes.instructorTitle}>{item.jobTitle}</div>
               <button className={classes.learnMore}>
                 Learn more about {item.firstName} <ArrowForward color="#000" />
               </button>
@@ -89,7 +85,7 @@ export default withStyles((theme) => ({
     borderRadius: theme.globalBorderRadius,
     border: "1px solid rgba(94, 94, 94, 0.05)",
     boxShadow: "0 8px 12px rgba(0,0,0,0.1)",
-    padding: "40px",
+    padding: "24px",
   },
   cardFront: {
     width: "100%",
@@ -103,20 +99,16 @@ export default withStyles((theme) => ({
     borderRadius: "50%",
   },
   instructorName: {
-    "& h2": {
-      marginBottom: "16px",
-      fontWeight: "700",
-      fontSize: "24px",
-      color: "#000",
-      textAlign: "center",
-    },
+    marginBottom: "16px",
+    fontWeight: "700",
+    fontSize: "24px",
+    color: "#000",
+    textAlign: "center",
   },
   instructorTitle: {
-    "& h3": {
-      fontSize: "18px",
-      color: theme.colors.gray500,
-      textAlign: "center",
-    },
+    fontSize: "18px",
+    color: theme.colors.gray500,
+    textAlign: "center",
   },
   instructorBio: {
     "& p": {
@@ -133,9 +125,9 @@ export default withStyles((theme) => ({
     width: "100%",
     maxWidth: "310px",
     margin: "50px auto 10px",
-    padding: "23px",
+    padding: "12px",
     borderRadius: theme.globalBorderRadius,
-    backgroundColor: "rgba(255	244	240)",
+    backgroundColor: "rgba(255, 244, 240)",
     fontWeight: "700",
     fontSize: "18px",
     textAlign: "center",
