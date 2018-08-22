@@ -19,7 +19,7 @@ const SignUpForm = ({ classes, className }) => (
         Yup.object().shape({
           firstname: Yup.string().required("First name is required"),
           lastname: Yup.string().required("Last name is required"),
-          company: Yup.string().required("Company is required"),
+          company: Yup.string(),
           email: Yup.string()
             .email("Invalid email address")
             .required("Email is required"),

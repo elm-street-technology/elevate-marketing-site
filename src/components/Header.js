@@ -60,7 +60,7 @@ export default withStyles((theme) => ({
     display: "none",
     alignItems: "center",
     marginLeft: "48px",
-    marginRight: "auto",
+    marginRight: "8px",
 
     "& > * + *": {
       marginLeft: "32px",
@@ -90,6 +90,6 @@ export default withStyles((theme) => ({
     padding: "12px 16px",
     borderRadius: "4px",
     alignSelf: "flex-end",
-    marginLeft: "4px",
+    marginLeft: "auto",
   },
 }))(Header);
