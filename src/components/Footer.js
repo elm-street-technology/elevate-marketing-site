@@ -8,7 +8,7 @@ const Footer = ({ classes }) => (
   <div className={classes.root}>
     <Container>
       <div className={classes.grid}>
-        <div>
+        <div className={classes.column}>
           <Link to="/">
             <svg width={140} viewBox="0 0 200 63">
               <defs />
@@ -24,9 +24,18 @@ const Footer = ({ classes }) => (
           </Link>
           <div className={classes.copyright}>{config.copyright}</div>
         </div>
-        <div>Product</div>
-        <div>About</div>
-        <div>
+        <div className={classes.column}>
+          <h4>Products</h4>
+          <div>Coming Soon</div>
+        </div>
+        <div className={classes.column}>
+          <h4>About</h4>
+          <Link to="/testimonials">Testimonials</Link>
+          <Link to="/markets">Markets</Link>
+          <Link to="/events">Events</Link>
+          <Link to="/webinars">Webinars</Link>
+        </div>
+        <div className={classes.column}>
           <h4>Support</h4>
           <Link to="/terms-of-service">Terms of Service</Link>
           <Link to="/privacy">Privacy Policy</Link>
@@ -69,6 +78,10 @@ export default withStyles((theme) => ({
     [theme.breakpoints[900]]: {
       gridTemplateColumns: "repeat(4, 1fr)",
     },
+  },
+  column: {
+    display: "flex",
+    flexDirection: "column",
   },
   copyright: {
     fontSize: "14px",
