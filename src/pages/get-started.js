@@ -19,9 +19,7 @@ const GetStarted = ({ children, classes, data, tags }) => {
       <SEO postNode={postNode} pagePath="contact" customTitle />
 
       <Container>
-        <h1 className={classes.heading} type="title">
-          Get Started
-        </h1>
+        <h1 className={classes.heading}>Get Started</h1>
         <h2 className={classes.subHeading}>
           Fill out this form and an Elevate Agent Success coach will be in touch
           shortly!

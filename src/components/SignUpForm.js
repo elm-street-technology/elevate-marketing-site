@@ -1,25 +1,29 @@
 import React from "react";
 import { Formik, Form, Field } from "formik";
-import Yup from "yup";
+import * as Yup from "yup";
 import withStyles from "elevate-ui/withStyles";
 import Input from "elevate-ui/Input";
 import classNames from "classnames";
 
-type Props = {
-  classes: Object,
-  className: string,
-};
-
-const SignUpForm = ({ classes, className }: Props) => (
+const SignUpForm = ({ classes, className }) => (
   <div className={classNames(classes.root, className)}>
     <Formik
-      initialValues={{ firstname: "", lastname: "", email: "", password: "" }}
+      initialValues={{
+        firstname: "",
+        lastname: "",
+        company: "",
+        email: "",
+        phone: "",
+      }}
       validationSchema={() =>
         Yup.object().shape({
+          firstname: Yup.string().required("First name is required"),
+          lastname: Yup.string().required("Last name is required"),
+          company: Yup.string().required("Company is required"),
           email: Yup.string()
             .email("Invalid email address")
             .required("Email is required"),
-          password: Yup.string().required("Password is required"),
+          phone: Yup.string().required("Phone is required"),
         })
       }
       onSubmit={(values, { setSubmitting }) => {
@@ -44,14 +48,15 @@ const SignUpForm = ({ classes, className }: Props) => (
               name="firstname"
               label="First Name"
               component={Input}
-              className={classes.name}
+              className={classes.field}
+              autoFocus
             />
             <Field
               id="lastname"
               name="lastname"
               label="Last Name"
               component={Input}
-              className={classes.name}
+              className={classes.field}
             />
           </div>
           <Field
@@ -70,14 +75,15 @@ const SignUpForm = ({ classes, className }: Props) => (
           />
           <Field
             id="phone"
+            name="phone"
             label="Phone"
-            type="number"
             component={Input}
             className={classes.field}
+            type="tel"
           />
           <button
-            className={classes.signUpBtn}
             type="submit"
+            className={classes.signUpBtn}
             disabled={isSubmitting}
           >
             Request a demo
@@ -89,22 +95,13 @@ const SignUpForm = ({ classes, className }: Props) => (
 );
 
 export default withStyles((theme) => ({
-  "@global body": {
-    backgroundColor: "#fff !important",
-    a: {
-      textDecoration: "none",
-      "&:hover": {
-        textDecoration: "none !important",
-      },
-    },
-  },
   root: {
     display: "flex",
     flexDirection: "column",
-    margin: "0 auto",
+    width: "100%",
     maxWidth: "400px",
     backgroundColor: "#FFF !important",
-    padding: "0px 12px",
+    margin: "0 auto",
   },
   field: {
     borderRadius: "6px",
@@ -121,19 +118,15 @@ export default withStyles((theme) => ({
       marginLeft: "12px",
     },
   },
-  name: {
-    height: "50px",
-    borderRadius: "6px",
-    border: "2px solid #ECECEC",
-  },
   signUpBtn: {
     width: "100%",
-    height: "64px",
-    margin: "14px 0",
-    fontSize: "24px",
+    fontSize: "20px",
+    lineHeight: "26px",
     fontWeight: "600",
     color: "#FFF",
     backgroundColor: "#40D0A3",
     borderRadius: "6px",
+    padding: "12px",
+    margin: "14px 0",
   },
 }))(SignUpForm);
