@@ -101,7 +101,7 @@ export default withStyles((theme) => ({
   },
   backgroundSlice: {
     position: "absolute",
-    top: "240px",
+    top: "200px",
     bottom: "0",
     right: "0",
     left: "0",

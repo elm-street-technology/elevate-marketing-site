@@ -41,47 +41,17 @@ export default withStyles((theme) => ({
     borderRadius: "6px",
     boxShadow: "0 8px 12px rgba(0,0,0,0.1)",
   },
-  day: {
-    paddingTop: "10px",
-    paddingLeft: "8px",
-  },
-  desc: {
-    color: "#64616E",
-    lineHeight: "22px",
-    paddingBottom: "4px",
-  },
-  details: {
-    display: "flex",
-    flexDirection: "column",
-    padding: "12px 6px 0px 4px",
-    marginLeft: "16px",
-    marginRight: "auto",
-    flex: "1",
-  },
-  detailsBottom: {
-    marginTop: "auto",
-  },
-  detailsTop: {
-    paddingBottom: "10px",
-  },
-  time: {
-    fontSize: "16px",
-    paddingBottom: "10px",
-    fontWeight: "600",
-  },
-  title: {
-    fontSize: "18px",
-    fontWeight: "600",
-    paddingBottom: "8px",
-  },
   top: {
     display: "flex",
     justifyContent: "space-between",
+    alignItems: "center",
     width: "100%",
-    padding: "12px",
+    padding: "12px 20px",
+    borderBottom: "2px solid rgba(100, 97, 110, .10)",
+  },
+  day: {
     fontSize: "18px",
     fontWeight: "700",
-    borderBottom: "2px solid rgba(100, 97, 110, .10)",
   },
   registerLink: {
     display: "flex",
@@ -97,5 +67,32 @@ export default withStyles((theme) => ({
     borderRadius: "6px",
     alignSelf: "flex-end",
     marginLeft: "4px",
+  },
+  desc: {
+    color: "#64616E",
+    lineHeight: "22px",
+    paddingBottom: "4px",
+  },
+  details: {
+    display: "flex",
+    flexDirection: "column",
+    padding: "12px 20px",
+    marginRight: "auto",
+    flex: "1",
+  },
+  detailsBottom: {
+    marginTop: "auto",
+  },
+  detailsTop: {
+    paddingBottom: "10px",
+  },
+  time: {
+    fontSize: "16px",
+    fontWeight: "600",
+  },
+  title: {
+    fontSize: "18px",
+    fontWeight: "600",
+    paddingBottom: "8px",
   },
 }))(WebinarCard);

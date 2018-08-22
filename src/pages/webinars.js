@@ -5,10 +5,23 @@ import WebinarCardGrid from "../components/WebinarCardGrid";
 import WebinarCard from "../components/WebinarCard";
 import Container from "../components/Container";
 import SEO from "../components/SEO";
-import Hexagons from "../images/hexagons.svg";
+import OverlappingHexagons from "../images/overlapping-hexagons.svg";
+
+const days = [
+  "Every Monday",
+  "Every Tuesday",
+  "Every Wednesday",
+  "Every Thursday",
+  "Every Friday",
+  "Every Saturday",
+  "Every Sunday",
+];
 
 const Webinars = ({ classes, data }) => {
   const webinars = data.allContentfulWebinar.edges;
+  const orderedWebinars = [...webinars].sort(
+    (a, b) => days.indexOf(a.node.day) > days.indexOf(b.node.day)
+  );
   return (
     <div className={classes.root}>
       <SEO />
@@ -20,15 +33,7 @@ const Webinars = ({ classes, data }) => {
           </Link>
         </div>
         <WebinarCardGrid className={classes.grid}>
-          {webinars.map(({ node: webinar }) => {
-            // TODO: What's the proper way to do this with static gen?
-            // Is there a way to do it in the graphql query? Do we need to kick
-            // off a build daily to update this page?
-            const day = new Date(webinar.day);
-            const now = new Date();
-            if (day < now) {
-              return null;
-            }
+          {orderedWebinars.map(({ node: webinar }) => {
             return <WebinarCard key={webinar.id} webinar={webinar} />;
           })}
         </WebinarCardGrid>
@@ -71,7 +76,7 @@ const Webinars = ({ classes, data }) => {
 
 export const query = graphql`
   query webinarQuery {
-    allContentfulWebinar(limit: 1000, sort: { fields: [day], order: ASC }) {
+    allContentfulWebinar(limit: 1000) {
       edges {
         node {
           day
@@ -117,13 +122,13 @@ export default withStyles((theme) => ({
   },
   backgroundSlice: {
     position: "absolute",
-    top: "240px",
+    top: "200px",
     bottom: "0",
     right: "0",
     left: "0",
     width: "100%",
     height: "400px",
-    backgroundImage: `url('${Hexagons}')`,
+    backgroundImage: `url('${OverlappingHexagons}')`,
     opacity: "0.5",
     zIndex: "-1",
   },
