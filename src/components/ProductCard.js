@@ -1,9 +1,7 @@
 import React from "react";
-import Link from "gatsby-link";
 import classNames from "classnames";
 import withStyles from "elevate-ui/withStyles";
 import Checkmark from "../images/checkmark.svg";
-// import Checkmark from "../components/Checkmark";
 
 const ProductCard = ({ props, children, classes, className }) => {
   return (
