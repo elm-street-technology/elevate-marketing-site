@@ -1,37 +1,56 @@
 import React from "react";
 import Link from "gatsby-link";
 import withStyles from "elevate-ui/withStyles";
-import EventCardGrid from "../components/EventCardGrid";
-import EventCard from "../components/EventCard";
+import WebinarCardGrid from "../components/WebinarCardGrid";
+import WebinarCard from "../components/WebinarCard";
 import Container from "../components/Container";
 import SEO from "../components/SEO";
-import Hexagons from "../images/hexagons.svg";
+import OverlappingHexagons from "../images/overlapping-hexagons.svg";
 
-const Events = ({ classes, data }) => {
-  const events = data.allContentfulEvent.edges;
+const days = [
+  "Every Monday",
+  "Every Tuesday",
+  "Every Wednesday",
+  "Every Thursday",
+  "Every Friday",
+  "Every Saturday",
+  "Every Sunday",
+];
+
+const Webinars = ({ classes, data }) => {
+  const webinars = data.allContentfulWebinar.edges;
+  const orderedWebinars = [...webinars].sort(
+    (a, b) => days.indexOf(a.node.day) > days.indexOf(b.node.day)
+  );
   return (
     <div className={classes.root}>
       <SEO />
       <Container>
         <div className={classes.top}>
-          <div className={classes.heading}>Upcoming Events</div>
+          <div className={classes.heading}>Upcoming Webinars</div>
           <Link className={classes.bootcampLink} to="/bootcamp">
             Learn about our Social Media Bootcamp →
           </Link>
         </div>
-        <EventCardGrid className={classes.grid}>
-          {events.map(({ node: event }) => {
-            // TODO: What's the proper way to do this with static gen?
-            // Is there a way to do it in the graphql query? Do we need to kick
-            // off a build daily to update this page?
-            const datetime = new Date(event.datetime);
-            const now = new Date();
-            if (datetime < now) {
-              return null;
-            }
-            return <EventCard key={event.id} event={event} />;
+        <WebinarCardGrid className={classes.grid}>
+          {orderedWebinars.map(({ node: webinar }) => {
+            return <WebinarCard key={webinar.id} webinar={webinar} />;
           })}
-        </EventCardGrid>
+        </WebinarCardGrid>
+        <div className={classes.pastContainer}>
+          <div className={classes.past}>Past Webinars</div>
+          <div className={classes.pastDesc}>
+            Updated upon the completion of the weekly webinars
+          </div>
+          <a
+            href={"https://www.gotostage.com/channel/elmstreettechnology"}
+            target="_blank"
+            rel="noopener noreferrer"
+            className={classes.pastLink}
+          >
+            View Recordings
+          </a>
+        </div>
       </Container>
       <div className={classes.backgroundSlice}>
         <svg
@@ -56,14 +75,15 @@ const Events = ({ classes, data }) => {
 };
 
 export const query = graphql`
-  query eventQuery {
-    allContentfulEvent(limit: 1000, sort: { fields: [datetime], order: ASC }) {
+  query webinarQuery {
+    allContentfulWebinar(limit: 1000) {
       edges {
         node {
-          datetime
+          day
+          description
           id
-          location
           registrationUrl
+          time
           title
         }
       }
@@ -98,6 +118,7 @@ export default withStyles((theme) => ({
   },
   grid: {
     paddingTop: "96px",
+    paddingBottom: "120px",
   },
   backgroundSlice: {
     position: "absolute",
@@ -107,11 +128,10 @@ export default withStyles((theme) => ({
     left: "0",
     width: "100%",
     height: "400px",
-    backgroundImage: `url('${Hexagons}')`,
+    backgroundImage: `url('${OverlappingHexagons}')`,
     opacity: "0.5",
     zIndex: "-1",
   },
-
   backgroundTopSlice: {
     position: "absolute",
     top: "-1px",
@@ -119,11 +139,41 @@ export default withStyles((theme) => ({
     height: "10vw",
     transform: "rotate(180deg)",
   },
-
   backgroundBottomSlice: {
     position: "absolute",
     bottom: "0",
     width: "100%",
     height: "10vw",
   },
-}))(Events);
+  past: {
+    color: "#2E2E35",
+    fontSize: "28px",
+    fontWeight: "700",
+    paddingBottom: "20px",
+    borderBottom: "2px solid rgba(100, 97, 110, .20)",
+  },
+  pastContainer: {
+    display: "flex",
+    flexDirection: "column",
+  },
+  pastDesc: {
+    padding: "24px 0",
+    fontSize: "18px",
+    lineHeight: "26px",
+  },
+  pastLink: {
+    display: "flex",
+    alignContent: "center",
+    justifyContent: "center",
+    backgroundColor: "#A373EF",
+    fontSize: "14px",
+    letterSpacing: ".25px",
+    color: "#fff",
+    textDecoration: "none",
+    fontWeight: "600",
+    padding: "16px 16px",
+    borderRadius: "6px",
+    alignSelf: "flex-start",
+    marginLeft: "4px",
+  },
+}))(Webinars);
