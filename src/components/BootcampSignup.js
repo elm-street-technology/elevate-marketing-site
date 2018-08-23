@@ -43,10 +43,24 @@ export default withStyles((theme) => ({
   },
   cardWrapper: {
     display: "flex",
-    justifyContent: "space-between",
+    flexWrap: "wrap",
+    justifyContent: "center",
     width: "100%",
     maxWidth: "1000px",
     marginTop: "48px",
+
+    "& > * + *": {
+      marginTop: "24px",
+    },
+
+    [theme.breakpoints[900]]: {
+      flexWrap: "nowrap",
+
+      "& > * + *": {
+        marginTop: "0",
+        marginLeft: "24px",
+      },
+    },
   },
   card: {
     flex: "1",
@@ -54,12 +68,17 @@ export default withStyles((theme) => ({
     flexDirection: "column",
     justifyContent: "center",
     alignItems: "center",
+    minWidth: "300px",
     maxWidth: "450px",
     background: "#fff",
     borderRadius: theme.globalBorderRadius,
     border: "1px solid rgba(94, 94, 94, 0.05)",
     boxShadow: "0 8px 12px rgba(0,0,0,0.1)",
     padding: "24px",
+
+    [theme.breakpoints[600]]: {
+      minWidth: "420px",
+    },
   },
   signupMessaging: {
     "& h2": {

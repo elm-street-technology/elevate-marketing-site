@@ -174,6 +174,7 @@ export default withStyles((theme) => ({
     paddingBottom: "92px",
   },
   instructors: {
+    paddingTop: "48px",
     paddingBottom: "92px",
   },
 }))(Bootcamp);
