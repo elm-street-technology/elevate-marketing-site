@@ -4,6 +4,7 @@ import withStyles from "elevate-ui/withStyles";
 
 import Topography from "../images/topography.svg";
 import BootcampLogo from "./BootcampLogo";
+import SignUpForm from "./SignUpForm";
 
 const BootcampSignup = ({ classes, className, signupMessaging }) => {
   return (
@@ -12,7 +13,7 @@ const BootcampSignup = ({ classes, className, signupMessaging }) => {
       <div className={classes.cardWrapper}>
         <div className={classes.card}>
           <div
-            className={classes.heroText}
+            className={classes.signupMessaging}
             dangerouslySetInnerHTML={{
               __html:
                 signupMessaging &&
@@ -22,7 +23,7 @@ const BootcampSignup = ({ classes, className, signupMessaging }) => {
           />
         </div>
         <div className={classes.card}>
-          <div>Todo: Form</div>
+          <SignUpForm />
         </div>
       </div>
     </div>
@@ -51,6 +52,7 @@ export default withStyles((theme) => ({
     flex: "1",
     display: "flex",
     flexDirection: "column",
+    justifyContent: "center",
     alignItems: "center",
     maxWidth: "450px",
     background: "#fff",
@@ -58,5 +60,50 @@ export default withStyles((theme) => ({
     border: "1px solid rgba(94, 94, 94, 0.05)",
     boxShadow: "0 8px 12px rgba(0,0,0,0.1)",
     padding: "24px",
+  },
+  signupMessaging: {
+    "& h2": {
+      fontSize: "22px",
+      lineHeight: "1.4",
+      fontWeight: "700",
+      marginBottom: "12px",
+    },
+
+    "& h3": {
+      fontSize: "20px",
+      lineHeight: "1.4",
+      fontWeight: "700",
+      marginTop: "32px",
+      marginBottom: "12px",
+    },
+
+    "& h4": {
+      fontSize: "18px",
+      lineHeight: "1.2",
+      fontWeight: "600",
+      marginTop: "24px",
+    },
+
+    "& em": {
+      fontStyle: "italic",
+    },
+
+    "& strong": {
+      fontWeight: "700",
+    },
+
+    "& p": {
+      color: "#413F48",
+      fontSize: "18px",
+      lineHeight: "1.6",
+      marginTop: "4px",
+      marginBottom: "8px",
+    },
+
+    "& img": {
+      display: "block",
+      maxWidth: "100%",
+      marginBottom: "16px",
+    },
   },
 }))(BootcampSignup);
