@@ -25,21 +25,49 @@ const Footer = ({ classes }) => (
           <div className={classes.copyright}>{config.copyright}</div>
         </div>
         <div className={classes.column}>
-          <h4>Products</h4>
-          <div>Coming Soon</div>
+          <div className={classes.section}>Products</div>
+          <Link className={classes.link} to="/">
+            Coming Soon
+          </Link>
+          <Link className={classes.link} to="/">
+            Coming Soon
+          </Link>
+          <Link className={classes.link} to="/">
+            Coming Soon
+          </Link>
+          <Link className={classes.link} to="/">
+            Coming Soon
+          </Link>
         </div>
         <div className={classes.column}>
-          <h4>About</h4>
-          <Link to="/testimonials">Testimonials</Link>
-          <Link to="/markets">Markets</Link>
-          <Link to="/events">Events</Link>
-          <Link to="/webinars">Webinars</Link>
+          <div className={classes.section}>About</div>
+          <Link className={classes.link} to="/blog">
+            Blog
+          </Link>
+          <Link className={classes.link} to="/testimonials">
+            Testimonials
+          </Link>
+          <Link className={classes.link} to="/markets">
+            Markets
+          </Link>
+          <Link className={classes.link} to="/events">
+            Events
+          </Link>
+          <Link className={classes.link} to="/webinars">
+            Webinars
+          </Link>
         </div>
         <div className={classes.column}>
-          <h4>Support</h4>
-          <Link to="/terms-of-service">Terms of Service</Link>
-          <Link to="/privacy">Privacy Policy</Link>
-          <Link to="/dmca">DMCA Notice</Link>
+          <div className={classes.section}>Support</div>
+          <Link className={classes.link} to="/terms-of-service">
+            Terms of Service
+          </Link>
+          <Link className={classes.link} to="/privacy">
+            Privacy Policy
+          </Link>
+          <Link className={classes.link} to="/dmca">
+            DMCA Notice
+          </Link>
         </div>
       </div>
     </Container>
@@ -87,5 +115,14 @@ export default withStyles((theme) => ({
     fontSize: "14px",
     color: "#64616E",
     marginTop: "8px",
+  },
+  section: {
+    fontWeight: "600",
+    marginBottom: "8px",
+  },
+  link: {
+    color: "#64616E",
+    textDecoration: "none",
+    marginTop: "12px",
   },
 }))(Footer);

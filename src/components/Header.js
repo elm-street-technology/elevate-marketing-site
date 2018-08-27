@@ -22,7 +22,8 @@ const Header = ({ classes }) => {
             </svg>
           </Link>
           <nav className={classes.nav}>
-            <Link to="/" className={classes.link}>
+            Navigation work in progress: see footer for links ↓
+            {/* <Link to="/" className={classes.link}>
               Products
             </Link>
             <Link to="/" className={classes.link}>
@@ -33,7 +34,7 @@ const Header = ({ classes }) => {
             </Link>
             <Link to="/blog" className={classes.link}>
               Blog
-            </Link>
+            </Link> */}
           </nav>
           <Link to="/get-started" className={classes.getStartedLink}>
             Get Started
