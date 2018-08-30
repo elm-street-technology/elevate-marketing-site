@@ -22,7 +22,7 @@ const FeatureCard = ({
       <div className={classes.icon}>
         <img src={url} alt={"feature icon"} style={{ maxWidth: "100%" }} />
       </div>
-      <div className={classes.title}>{feature.title}</div>
+      <div className={classes.title}>{title}</div>
       <div
         className={classes.description}
         dangerouslySetInnerHTML={{
