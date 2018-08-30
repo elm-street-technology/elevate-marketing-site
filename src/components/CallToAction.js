@@ -37,6 +37,7 @@ export default withStyles((theme) => ({
   },
   heading: {
     fontSize: "20px",
+    fontWeight: "600",
     lineHeight: "1.6",
     textAlign: "center",
 
