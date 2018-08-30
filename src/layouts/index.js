@@ -1,4 +1,4 @@
-import React, { Fragment } from "react";
+import React from "react";
 import Helmet from "react-helmet";
 import ThemeProvider from "elevate-ui/ThemeProvider";
 import config from "../utils/siteConfig";

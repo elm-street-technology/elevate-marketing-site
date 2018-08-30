@@ -22,7 +22,8 @@ const Header = ({ classes }) => {
             </svg>
           </Link>
           <nav className={classes.nav}>
-            <Link to="/" className={classes.link}>
+            Navigation work in progress: see footer for links ↓
+            {/* <Link to="/" className={classes.link}>
               Products
             </Link>
             <Link to="/" className={classes.link}>
@@ -33,9 +34,11 @@ const Header = ({ classes }) => {
             </Link>
             <Link to="/blog" className={classes.link}>
               Blog
-            </Link>
+            </Link> */}
           </nav>
-          <button>Request a Demo</button>
+          <Link to="/get-started" className={classes.getStartedLink}>
+            Get Started
+          </Link>
         </div>
       </Container>
     </header>
@@ -58,7 +61,7 @@ export default withStyles((theme) => ({
     display: "none",
     alignItems: "center",
     marginLeft: "48px",
-    marginRight: "auto",
+    marginRight: "8px",
 
     "& > * + *": {
       marginLeft: "32px",
@@ -73,5 +76,21 @@ export default withStyles((theme) => ({
     fontWeight: "500",
     color: "#64616E",
     textDecoration: "none",
+  },
+  getStartedLink: {
+    display: "flex",
+    alignContent: "center",
+    justifyContent: "center",
+    backgroundColor: "transparent",
+    fontSize: "14px",
+    fontWeight: "700",
+    letterSpacing: ".25px",
+    color: theme.colors.primary,
+    border: `1px solid ${theme.colors.primary}`,
+    textDecoration: "none",
+    padding: "12px 16px",
+    borderRadius: "4px",
+    alignSelf: "flex-end",
+    marginLeft: "auto",
   },
 }))(Header);

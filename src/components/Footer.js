@@ -8,7 +8,7 @@ const Footer = ({ classes }) => (
   <div className={classes.root}>
     <Container>
       <div className={classes.grid}>
-        <div>
+        <div className={classes.column}>
           <Link to="/">
             <svg width={140} viewBox="0 0 200 63">
               <defs />
@@ -24,13 +24,50 @@ const Footer = ({ classes }) => (
           </Link>
           <div className={classes.copyright}>{config.copyright}</div>
         </div>
-        <div>Product</div>
-        <div>About</div>
-        <div>
-          <h4>Support</h4>
-          <Link to="/terms-of-service">Terms of Service</Link>
-          <Link to="/privacy">Privacy Policy</Link>
-          <Link to="/dmca">DMCA Notice</Link>
+        <div className={classes.column}>
+          <div className={classes.section}>Products</div>
+          <Link className={classes.link} to="/elevate-dms">
+            DMS
+          </Link>
+          <Link className={classes.link} to="/">
+            Coming Soon
+          </Link>
+          <Link className={classes.link} to="/">
+            Coming Soon
+          </Link>
+          <Link className={classes.link} to="/">
+            Coming Soon
+          </Link>
+        </div>
+        <div className={classes.column}>
+          <div className={classes.section}>About</div>
+          <Link className={classes.link} to="/blog">
+            Blog
+          </Link>
+          <Link className={classes.link} to="/testimonials">
+            Testimonials
+          </Link>
+          <Link className={classes.link} to="/markets">
+            Markets
+          </Link>
+          <Link className={classes.link} to="/events">
+            Events
+          </Link>
+          <Link className={classes.link} to="/webinars">
+            Webinars
+          </Link>
+        </div>
+        <div className={classes.column}>
+          <div className={classes.section}>Support</div>
+          <Link className={classes.link} to="/terms-of-service">
+            Terms of Service
+          </Link>
+          <Link className={classes.link} to="/privacy">
+            Privacy Policy
+          </Link>
+          <Link className={classes.link} to="/dmca">
+            DMCA Notice
+          </Link>
         </div>
       </div>
     </Container>
@@ -70,9 +107,22 @@ export default withStyles((theme) => ({
       gridTemplateColumns: "repeat(4, 1fr)",
     },
   },
+  column: {
+    display: "flex",
+    flexDirection: "column",
+  },
   copyright: {
     fontSize: "14px",
     color: "#64616E",
     marginTop: "8px",
+  },
+  section: {
+    fontWeight: "600",
+    marginBottom: "8px",
+  },
+  link: {
+    color: "#64616E",
+    textDecoration: "none",
+    marginTop: "12px",
   },
 }))(Footer);

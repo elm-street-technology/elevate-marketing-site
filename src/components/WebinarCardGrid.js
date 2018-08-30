@@ -2,7 +2,7 @@ import React from "react";
 import classNames from "classnames";
 import withStyles from "elevate-ui/withStyles";
 
-const FeatureCardGrid = ({ classes, className, children }) => {
+const WebinarCardGrid = ({ classes, className, children }) => {
   return <div className={classNames(classes.root, className)}>{children}</div>;
 };
 
@@ -11,16 +11,15 @@ export default withStyles((theme) => ({
     display: "grid",
     justifyContent: "center",
     gridTemplateColumns: "repeat(1, 1fr)",
-    gridColumnGap: "40px",
-    gridRowGap: "48px",
-    marginTop: "60px",
+    gridColumnGap: "44px",
+    gridRowGap: "32px",
 
     [theme.breakpoints[600]]: {
-      gridTemplateColumns: "repeat(2, 1fr)",
+      gridTemplateColumns: "repeat(1, 400px)",
     },
 
     [theme.breakpoints[900]]: {
-      gridTemplateColumns: "repeat(3, 1fr)",
+      gridTemplateColumns: "repeat(2, 400px)",
     },
   },
-}))(FeatureCardGrid);
+}))(WebinarCardGrid);

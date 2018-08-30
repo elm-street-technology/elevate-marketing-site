@@ -1,18 +1,34 @@
 import React from "react";
 import classNames from "classnames";
 import withStyles from "elevate-ui/withStyles";
-import featureIcon from "../images/feature-icon.png";
 
-const FeatureCard = ({ children, classes, className }) => {
+const FeatureCard = ({
+  children,
+  classes,
+  className,
+  feature,
+  feature: {
+    icon: {
+      file: { url },
+    },
+    title,
+    description: {
+      childMarkdownRemark: { html },
+    },
+  },
+}) => {
   return (
     <div className={classNames(classes.root, className)}>
-      <div className={classes.iconContainer}>
-        <img style={{ width: "50px" }} src={featureIcon} alt={"feature icon"} />
+      <div className={classes.icon}>
+        <img src={url} alt={"feature icon"} style={{ maxWidth: "100%" }} />
       </div>
-      <div className={classes.featureTitle}>Feature Title</div>
-      <div className={classes.featureDesc}>
-        Designed with best-in-class lead capture technology.
-      </div>
+      <div className={classes.title}>{title}</div>
+      <div
+        className={classes.description}
+        dangerouslySetInnerHTML={{
+          __html: html,
+        }}
+      />
     </div>
   );
 };
@@ -22,29 +38,28 @@ export default withStyles((theme) => ({
     display: "flex",
     flexDirection: "column",
     justifyContent: "center",
-    padding: "20px",
-    maxWidth: "240px",
-    background: "#fff", // material-design 1dp
-    transition: "all 200ms ease-in-out",
-    overflow: "hidden",
-    userSelect: "none",
-    borderRadius: "6px",
-    boxShadow: "0px 12px 24px rgba(0, 0, 0, .1)",
+    justifySelf: "center",
+    maxWidth: "360px",
   },
-  featureTitle: {
-    color: "#F15953",
+  icon: {
+    width: "56px",
+    height: "56px",
+    display: "flex",
+    alignItems: "center",
+    justifyContent: "center",
+    backgroundColor: theme.colors.primary,
+    borderRadius: "50%",
+    padding: "12px",
+  },
+  title: {
     fontSize: "18px",
-    fontWeight: "800",
-    padding: "10px",
-    textAlign: "center",
+    fontWeight: "700",
+    marginTop: "24px",
   },
-  iconContainer: {
-    textAlign: "center",
-  },
-  featureDesc: {
-    textAlign: "center",
+  description: {
     color: "#64616E",
-    lineHeight: "28px",
-    padding: "6px",
+    fontSize: "16px",
+    lineHeight: "24px",
+    marginTop: "12px",
   },
 }))(FeatureCard);
