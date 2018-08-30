@@ -29,14 +29,14 @@ const Footer = ({ classes }) => (
           <Link className={classes.link} to="/elevate-dms">
             DMS
           </Link>
-          <Link className={classes.link} to="/">
-            Coming Soon
+          <Link className={classes.link} to="/elevate-social-pro">
+            Social Pro
           </Link>
-          <Link className={classes.link} to="/">
-            Coming Soon
+          <Link className={classes.link} to="/elevate-idx">
+            IDX
           </Link>
-          <Link className={classes.link} to="/">
-            Coming Soon
+          <Link className={classes.link} to="/elevate-ignite">
+            Ignite
           </Link>
         </div>
         <div className={classes.column}>
