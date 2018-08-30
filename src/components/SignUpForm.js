@@ -27,10 +27,30 @@ const SignUpForm = ({ classes, className }) => (
         })
       }
       onSubmit={(values, { setSubmitting }) => {
-        setTimeout(() => {
-          alert(JSON.stringify(values, null, 2));
-          setSubmitting(false);
-        }, 1000);
+        return fetch("https://relegate.herokuapp.com/marketing/sign-up", {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json; charset=utf-8",
+          },
+          body: JSON.stringify({
+            firstname: values.firstname,
+            lastname: values.lastname,
+            company: values.company,
+            email: values.email,
+            phone: values.phone,
+          }),
+        })
+          .then((response) => response.json())
+          .then((res) => {
+            if (res.message === "ok") {
+              setSubmitting(false); // success
+            } else {
+              // bad things happened, we don't know what, show generic error flash
+            }
+          })
+          .catch((err) => {
+            // bad things happened, we don't know what, show generic error flash
+          });
       }}
       render={({
         values,
