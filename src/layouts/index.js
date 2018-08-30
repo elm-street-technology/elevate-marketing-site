@@ -21,6 +21,10 @@ const Template = ({ children, classes }) => {
         <meta property="og:locale" content="en_US" />
         <meta property="og:type" content="website" />
         <meta property="og:site_name" content={config.siteTitle} />
+        <link
+          href="https://fonts.googleapis.com/css?family=Open+Sans:400,600,700,800"
+          rel="stylesheet"
+        />
       </Helmet>
 
       <ThemeProvider>
