@@ -49,7 +49,6 @@ const SignUpForm = ({ classes, className }) => (
               label="First Name"
               component={Input}
               className={classes.field}
-              autoFocus
             />
             <Field
               id="lastname"

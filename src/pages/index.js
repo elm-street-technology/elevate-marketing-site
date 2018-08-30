@@ -6,11 +6,6 @@ import SEO from "../components/SEO";
 import CallToActionForm from "../components/CallToActionForm";
 import analysisHero from "../images/analysis-hero.png";
 import arrowDown from "../images/arrow-down.svg";
-import ProductCard from "../components/ProductCard";
-import FeatureCardGrid from "../components/FeatureCardGrid";
-import FeatureCard from "../components/FeatureCard";
-import TestimonialCard from "../components/TestimonialCard";
-import TestimonialCardGrid from "../components/TestimonialCardGrid";
 
 const Index = ({ classes, data }) => {
   return (
@@ -45,45 +40,6 @@ const Index = ({ classes, data }) => {
           />
         </div>
       </Container>
-      <div className={classes.productContainer}>
-        <h1 className={classes.productHeading}>
-          Which Elevate Product is Right For You?
-        </h1>
-        <div className={classes.productCardContainer}>
-          <ProductCard className={classes.productCard} />
-          <ProductCard className={classes.productCard} />
-          <ProductCard className={classes.productCard} />
-        </div>
-      </div>
-      <div className={classes.featureContainer}>
-        <div className={classes.featureHeading}>
-          <h1>Features included in Elevate DMS</h1>
-          <h2 className={classes.featureSubHeading}>
-            The all-in-one solution for real estate professionals
-          </h2>
-        </div>
-        <FeatureCardGrid>
-          <FeatureCard className={classes.featureCard} />
-          <FeatureCard className={classes.featureCard} />
-          <FeatureCard className={classes.featureCard} />
-          <FeatureCard className={classes.featureCard} />
-          <FeatureCard className={classes.featureCard} />
-          <FeatureCard className={classes.featureCard} />
-          <FeatureCard className={classes.featureCard} />
-          <FeatureCard className={classes.featureCard} />
-        </FeatureCardGrid>
-      </div>
-      <div className={classes.testimonialContainer}>
-        <div className={classes.testHeading}>
-          <h1>What Our Customers Are Saying</h1>
-        </div>
-        <TestimonialCardGrid>
-          <TestimonialCard />
-          <TestimonialCard />
-          <TestimonialCard />
-          <TestimonialCard />
-        </TestimonialCardGrid>
-      </div>
     </div>
   );
 };
