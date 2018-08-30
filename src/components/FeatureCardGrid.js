@@ -10,18 +10,17 @@ export default withStyles((theme) => ({
   root: {
     display: "grid",
     justifyContent: "center",
-    // gridTemplateColumns: "repeat(1, 1fr)",
+    gridTemplateColumns: "repeat(1, 1fr)",
+    gridColumnGap: "40px",
+    gridRowGap: "48px",
     marginTop: "60px",
-    gridColumnGap: "32px",
-    gridRowGap: "50px",
 
     [theme.breakpoints[600]]: {
-      gridTemplateColumns: "repeat(2, 220px)",
+      gridTemplateColumns: "repeat(2, 1fr)",
     },
 
     [theme.breakpoints[900]]: {
-      gridTemplateColumns: "repeat(4, 280px)",
-      gridColumnGap: "0px",
+      gridTemplateColumns: "repeat(3, 1fr)",
     },
   },
 }))(FeatureCardGrid);

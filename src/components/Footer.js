@@ -26,8 +26,8 @@ const Footer = ({ classes }) => (
         </div>
         <div className={classes.column}>
           <div className={classes.section}>Products</div>
-          <Link className={classes.link} to="/">
-            Coming Soon
+          <Link className={classes.link} to="/elevate-dms">
+            DMS
           </Link>
           <Link className={classes.link} to="/">
             Coming Soon

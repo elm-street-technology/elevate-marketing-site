@@ -78,6 +78,31 @@ exports.createPages = ({ graphql, boundActionCreators }) => {
     });
   });
 
+  const loadProducts = new Promise((resolve, reject) => {
+    graphql(`
+      {
+        allContentfulProduct {
+          edges {
+            node {
+              slug
+            }
+          }
+        }
+      }
+    `).then((result) => {
+      result.data.allContentfulProduct.edges.map(({ node }) => {
+        createPage({
+          path: `${node.slug}/`,
+          component: path.resolve(`./src/templates/product.js`),
+          context: {
+            slug: node.slug,
+          },
+        });
+      });
+      resolve();
+    });
+  });
+
   const loadTags = new Promise((resolve, reject) => {
     graphql(`
       {
@@ -132,6 +157,7 @@ exports.createPages = ({ graphql, boundActionCreators }) => {
     loadBootcamps,
     loadPages,
     loadPosts,
+    loadProducts,
     loadTags,
     loadTestimonials,
   ]);
