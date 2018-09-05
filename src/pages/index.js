@@ -15,8 +15,8 @@ import AgentPhone from "../images/agents-phone.png";
 import AgentDashLeads from "../images/agents-dash-leads.jpg";
 import AgentDashContacts from "../images/agent-dash-contacts.jpg";
 import AgentDashGraph from "../images/agent-dash-graph.jpg";
-import TeamsLaptop from "../images/teams-laptop.png";
 import BrokerDash from "../images/broker-dash-listings.png";
+import TeamsLaptop from "../images/teams-laptop.png";
 
 const Index = ({ classes, data }) => {
   const roles = [
@@ -210,15 +210,15 @@ const Index = ({ classes, data }) => {
                 clients.
               </h2>
             </div>
+            <div className={classes.teamIncludesContainer}>
+              <Icon name={"InfoOutline"} style={{ color: "#0092FF" }} />
+              <div className={classes.teamIncludes}>
+                Includes all Agents features plus
+              </div>
+            </div>
           </div>
           <div className={classes.teamDetails}>
             <div className={classes.teamDetailsLeft}>
-              <div className={classes.teamIncludesContainer}>
-                <Icon name={"InfoOutline"} style={{ color: "#0092FF" }} />
-                <div className={classes.teamIncludes}>
-                  Includes all Agents features plus
-                </div>
-              </div>
               <div className={classes.teamFeaturesContainer}>
                 <div className={classes.teamFeatures}>
                   <div className={classes.teamFeatureHead}>
@@ -267,7 +267,7 @@ const Index = ({ classes, data }) => {
             <div className={classes.teamsLaptop}>
               <img
                 src={TeamsLaptop}
-                style={{ width: "110%" }}
+                style={{ width: "100%" }}
                 alt={"Laptop screenschot"}
               />
             </div>
@@ -421,7 +421,7 @@ export default withStyles((theme) => ({
     right: "0",
     left: "0",
     width: "100%",
-    height: "50%",
+    height: "400px",
     backgroundColor: "#FFF",
     opacity: "0.5",
     zIndex: "-1",
@@ -464,6 +464,7 @@ export default withStyles((theme) => ({
     paddingTop: "100px",
     paddingLeft: "12px",
     paddingRight: "12px",
+    paddingBottom: "60px",
 
     [theme.breakpoints[900]]: {
       paddingBottom: "140px",
@@ -510,17 +511,32 @@ export default withStyles((theme) => ({
   },
   agentSubHeading: {
     display: "flex",
-    justifyContent: "center",
+    alignSelf: "center",
     paddingTop: "16px",
     fontSize: "20px",
     color: "#2E2E35",
     fontWeight: "600",
+    textAlign: "center",
+    maxWidth: "400px",
+    lineHeight: "28px",
+
+    [theme.breakpoints[600]]: {
+      maxWidth: "700px",
+    },
   },
   agentFeaturesContainer: {
     display: "flex",
     maxWidth: "1100px",
-    margin: "60px auto",
+    margin: "10px auto",
+    marginBottom: "40px",
     justifyContent: "space-between",
+    flexDirection: "column",
+
+    [theme.breakpoints[600]]: {
+      maxWidth: "1100px",
+      flexDirection: "row",
+      margin: "60px auto",
+    },
   },
   agentFeature: {
     display: "flex",
@@ -530,7 +546,12 @@ export default withStyles((theme) => ({
     margin: "0 25px",
     flex: "1",
     flexDirection: "column",
-    width: "340px",
+    maxWidth: "340px",
+    marginTop: "60px",
+
+    [theme.breakpoints[600]]: {
+      marginTop: "0px",
+    },
   },
   agentImage: {
     textAlign: "center",
@@ -539,14 +560,22 @@ export default withStyles((theme) => ({
     color: "#2E2E35",
     fontSize: "15px",
     fontWeight: "700",
-    paddingTop: "30px",
+    paddingTop: "10px",
+
+    [theme.breakpoints[600]]: {
+      paddingTop: "30px",
+    },
   },
   agentFeatureDesc: {
     color: "#64616E",
     fontSize: "13px",
-    paddingTop: "20px",
+    paddingTop: "10px",
     maxWidth: "80%",
     lineHeight: "18px",
+
+    [theme.breakpoints[600]]: {
+      paddingTop: "20px",
+    },
   },
   agentBtnContainer: {
     display: "flex",
@@ -599,11 +628,12 @@ export default withStyles((theme) => ({
     display: "flex",
     flexDirection: "column",
     paddingTop: "75px",
-    paddingBottom: "100px",
+    paddingLeft: "20px",
+    paddingRight: "20px",
+    paddingBottom: "80px",
 
     [theme.breakpoints[900]]: {
       paddingTop: "125px",
-      paddingBottom: "0px",
     },
   },
   teamHeadingContainer: {
@@ -613,6 +643,11 @@ export default withStyles((theme) => ({
   teamHeadingLeft: {
     display: "flex",
     alignItems: "center",
+    paddingBottom: "16px",
+
+    [theme.breakpoints[600]]: {
+      paddingBottom: "0px",
+    },
   },
   teamHeading: {
     fontSize: "28px",
@@ -621,6 +656,11 @@ export default withStyles((theme) => ({
     display: "flex",
     alignItems: "center",
     justifyContent: "space-between",
+    flexDirection: "column",
+
+    [theme.breakpoints[600]]: {
+      flexDirection: "row",
+    },
 
     [theme.breakpoints[900]]: {
       fontSize: "36px",
@@ -628,21 +668,46 @@ export default withStyles((theme) => ({
   },
   teamSubHeading: {
     color: "#2E2E35",
-    fontSize: "20px",
-    maxWidth: "320px",
-    lineHeight: "30px",
+    fontSize: "17px",
+    maxWidth: "440px",
+    lineHeight: "24px",
     marginTop: "20px",
+    margin: "auto",
+    textAlign: "center",
+
+    [theme.breakpoints[600]]: {
+      maxWidth: "320px",
+      lineHeight: "30px",
+      fontSize: "20px",
+      textAlign: "left",
+      margin: "0",
+      marginTop: "20px",
+    },
   },
   teamDetails: {
     display: "flex",
+    flexDirection: "column",
+
+    [theme.breakpoints[900]]: {
+      flexDirection: "row",
+    },
   },
   teamDetailsLeft: {
+    display: "flex",
+    flexDirection: "column",
     flex: "1 50%",
   },
   teamIncludesContainer: {
     display: "flex",
     alignItems: "center",
+    alignSelf: "center",
     paddingTop: "40px",
+    fontSize: "15px",
+    lineHeight: "20px",
+
+    [theme.breakpoints[600]]: {
+      alignSelf: "start",
+    },
   },
   teamIncludes: {
     color: "#2E2E35",
@@ -651,8 +716,19 @@ export default withStyles((theme) => ({
   },
   teamFeaturesContainer: {
     display: "flex",
-    flexDirection: "column",
-    paddingTop: "20px",
+    flexDirection: "row",
+    paddingTop: "0px",
+    flexWrap: "wrap",
+    paddingBottom: "20px",
+
+    [theme.breakpoints[600]]: {
+      flexWrap: "nowrap",
+    },
+
+    [theme.breakpoints[900]]: {
+      flexDirection: "column",
+      paddingTop: "20px",
+    },
   },
   teamFeatureHead: {
     display: "flex",
