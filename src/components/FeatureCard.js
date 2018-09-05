@@ -1,6 +1,7 @@
 import React from "react";
 import classNames from "classnames";
 import withStyles from "elevate-ui/withStyles";
+import Icon from "elevate-ui/Icon/Icon";
 
 const FeatureCard = ({
   children,
@@ -8,9 +9,7 @@ const FeatureCard = ({
   className,
   feature,
   feature: {
-    icon: {
-      file: { url },
-    },
+    icon,
     title,
     description: {
       childMarkdownRemark: { html },
@@ -20,7 +19,7 @@ const FeatureCard = ({
   return (
     <div className={classNames(classes.root, className)}>
       <div className={classes.icon}>
-        <img src={url} alt={"feature icon"} style={{ maxWidth: "100%" }} />
+        <Icon name={icon} size={28} />
       </div>
       <div className={classes.title}>{title}</div>
       <div
@@ -47,6 +46,7 @@ export default withStyles((theme) => ({
     display: "flex",
     alignItems: "center",
     justifyContent: "center",
+    color: theme.colors.white,
     backgroundColor: theme.colors.primary,
     borderRadius: "50%",
     padding: "12px",

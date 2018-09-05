@@ -97,11 +97,7 @@ export const query = graphql`
             html
           }
         }
-        icon {
-          file {
-            url
-          }
-        }
+        icon
       }
       secondaryInformation {
         title
@@ -136,11 +132,7 @@ export const query = graphql`
             html
           }
         }
-        icon {
-          file {
-            url
-          }
-        }
+        icon
       }
       slug
       title
