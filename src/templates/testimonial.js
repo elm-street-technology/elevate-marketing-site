@@ -20,7 +20,6 @@ const Testimonial = ({ classes, data: { contentfulTestimonial } }) => {
     title,
   } = contentfulTestimonial;
   // const postNode = contentfulTestimonial;
-  console.log(contentfulTestimonial);
 
   return (
     <div className={classes.root}>

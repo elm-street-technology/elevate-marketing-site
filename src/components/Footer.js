@@ -1,5 +1,6 @@
 import React from "react";
 import Link from "gatsby-link";
+import classNames from "classnames";
 import withStyles from "elevate-ui/withStyles";
 import Container from "./Container";
 import config from "../utils/siteConfig";
@@ -8,7 +9,7 @@ const Footer = ({ classes }) => (
   <div className={classes.root}>
     <Container>
       <div className={classes.grid}>
-        <div className={classes.column}>
+        <div className={classNames(classes.column, classes.logo)}>
           <Link to="/">
             <svg width={140} viewBox="0 0 200 63">
               <defs />
@@ -71,18 +72,6 @@ const Footer = ({ classes }) => (
         </div>
       </div>
     </Container>
-    <a
-      href="https://www.contentful.com/"
-      rel="nofollow noopener noreferrer"
-      target="_blank"
-      style={{ marginTop: "48px" }}
-    >
-      <img
-        src="https://images.ctfassets.net/fo9twyrwpveg/44baP9Gtm8qE2Umm8CQwQk/c43325463d1cb5db2ef97fca0788ea55/PoweredByContentful_LightBackground.svg"
-        style={{ width: "100px" }}
-        alt="Powered by Contentful"
-      />
-    </a>
   </div>
 );
 
@@ -94,7 +83,15 @@ export default withStyles((theme) => ({
     justifyContent: "center",
     width: "100%",
     backgroundColor: "#FAF8F6",
-    padding: "96px 128px",
+    padding: "48px 16px",
+
+    [theme.breakpoints[900]]: {
+      padding: "64px 24px",
+    },
+
+    [theme.breakpoints[1200]]: {
+      padding: "96px 64px",
+    },
   },
   grid: {
     width: "100%",
@@ -107,6 +104,7 @@ export default withStyles((theme) => ({
       gridTemplateColumns: "repeat(4, 1fr)",
     },
   },
+  logo: {},
   column: {
     display: "flex",
     flexDirection: "column",

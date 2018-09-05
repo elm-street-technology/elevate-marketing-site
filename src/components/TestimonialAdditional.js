@@ -5,8 +5,8 @@ import withStyles from "elevate-ui/withStyles";
 const TestimonialAdditional = ({ classes, className, testimonials }) => {
   return (
     <div className={classNames(classes.root, className)}>
-      {testimonials.map(({ testimonial, photo, name, jobTitle }) => (
-        <div className={classes.testimonial}>
+      {testimonials.map(({ testimonial, photo, name, jobTitle }, i) => (
+        <div key={i} className={classes.testimonial}>
           <div
             dangerouslySetInnerHTML={{
               __html:
