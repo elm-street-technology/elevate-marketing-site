@@ -23,10 +23,10 @@ const Header = ({ classes }) => {
               />
             </svg>
           </Link>
+          <div className={classes.navMobile}>
+            <Dehaze size={30} aria-hidden={"true"} />
+          </div>
           <nav className={classes.nav}>
-            <div className={classes.toggle}>
-              <Dehaze aria-hidden={"true"} />
-            </div>
             <div className={classes.link}>
               <div className={classes.navItem}>
                 Products
@@ -109,13 +109,14 @@ export default withStyles((theme) => ({
     display: "flex",
     alignItems: "center",
   },
-  toggle: {
+  navMobile: {
     width: "100%",
     padding: "10px 20px",
     color: "#2E2E35",
     textAlign: "right",
     boxSizing: "border-box",
     display: "flex",
+    justifyContent: "flex-end",
 
     [theme.breakpoints[600]]: {
       display: "none",
