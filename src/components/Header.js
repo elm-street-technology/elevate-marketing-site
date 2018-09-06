@@ -2,7 +2,7 @@ import React from "react";
 import Link from "gatsby-link";
 import withStyles from "elevate-ui/withStyles";
 import Container from "./Container";
-import ArrowDropDown from "elevate-ui/icon/ArrowDropDown";
+import ArrowDropDown from "elevate-ui/Icon/ArrowDropDown";
 
 const Header = ({ classes }) => {
   return (
