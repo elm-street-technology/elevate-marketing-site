@@ -23,7 +23,7 @@ const Header = ({ classes }) => {
             </svg>
           </Link>
           <nav className={classes.nav}>
-            <Link to="/" className={classes.link}>
+            <div to="/" className={classes.link}>
               <div className={classes.navItem}>
                 Products
                 <ArrowDropDown size={20} />
@@ -42,8 +42,8 @@ const Header = ({ classes }) => {
                   <li className={classes.listItem}>Ignite</li>
                 </Link>
               </ul>
-            </Link>
-            <Link to="/" className={classes.link}>
+            </div>
+            <div to="/" className={classes.link}>
               <div className={classes.navItem}>
                 About
                 <ArrowDropDown size={20} />
@@ -65,8 +65,8 @@ const Header = ({ classes }) => {
                   <li className={classes.listItem}>Webinars</li>
                 </Link>
               </ul>
-            </Link>
-            <Link to="/events" className={classes.link}>
+            </div>
+            <div to="/events" className={classes.link}>
               <div className={classes.navItem}>
                 Support
                 <ArrowDropDown size={20} />
@@ -82,7 +82,7 @@ const Header = ({ classes }) => {
                   <li className={classes.listItem}>DCMA Notice</li>
                 </Link>
               </ul>
-            </Link>
+            </div>
           </nav>
           <Link to="/get-started" className={classes.getStartedLink}>
             Get Started
