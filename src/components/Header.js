@@ -3,6 +3,7 @@ import Link from "gatsby-link";
 import withStyles from "elevate-ui/withStyles";
 import Container from "./Container";
 import ArrowDropDown from "elevate-ui/Icon/ArrowDropDown";
+import Dehaze from "elevate-ui/Icon/Dehaze";
 
 const Header = ({ classes }) => {
   return (
@@ -23,6 +24,9 @@ const Header = ({ classes }) => {
             </svg>
           </Link>
           <nav className={classes.nav}>
+            <div className={classes.toggle}>
+              <Dehaze aria-hidden={"true"} />
+            </div>
             <div className={classes.link}>
               <div className={classes.navItem}>
                 Products
@@ -105,6 +109,18 @@ export default withStyles((theme) => ({
     display: "flex",
     alignItems: "center",
   },
+  toggle: {
+    width: "100%",
+    padding: "10px 20px",
+    color: "#2E2E35",
+    textAlign: "right",
+    boxSizing: "border-box",
+    display: "flex",
+
+    [theme.breakpoints[600]]: {
+      display: "none",
+    },
+  },
   nav: {
     display: "none",
     alignItems: "center",
@@ -123,7 +139,7 @@ export default withStyles((theme) => ({
     display: "flex",
   },
   getStartedLink: {
-    display: "flex",
+    display: "none",
     alignContent: "center",
     justifyContent: "center",
     backgroundColor: "transparent",
@@ -137,6 +153,10 @@ export default withStyles((theme) => ({
     borderRadius: "4px",
     alignSelf: "flex-end",
     marginLeft: "auto",
+
+    [theme.breakpoints[600]]: {
+      display: "flex",
+    },
   },
   link: {
     float: "left",
