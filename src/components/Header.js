@@ -23,7 +23,7 @@ const Header = ({ classes }) => {
             </svg>
           </Link>
           <nav className={classes.nav}>
-            <div to="/" className={classes.link}>
+            <div className={classes.link}>
               <div className={classes.navItem}>
                 Products
                 <ArrowDropDown size={20} />
@@ -43,7 +43,7 @@ const Header = ({ classes }) => {
                 </Link>
               </ul>
             </div>
-            <div to="/" className={classes.link}>
+            <div className={classes.link}>
               <div className={classes.navItem}>
                 About
                 <ArrowDropDown size={20} />
@@ -66,7 +66,7 @@ const Header = ({ classes }) => {
                 </Link>
               </ul>
             </div>
-            <div to="/events" className={classes.link}>
+            <div className={classes.link}>
               <div className={classes.navItem}>
                 Support
                 <ArrowDropDown size={20} />
@@ -112,7 +112,7 @@ export default withStyles((theme) => ({
     marginRight: "8px",
 
     "& > * + *": {
-      marginLeft: "32px",
+      marginLeft: "16px",
     },
 
     [theme.breakpoints[600]]: {
