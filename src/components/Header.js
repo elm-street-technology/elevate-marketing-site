@@ -6,7 +6,7 @@ import classNames from "classnames";
 import HeaderNavDesktop from "./HeaderNavDesktop";
 import HeaderNavMobile from "./HeaderNavMobile";
 import Dehaze from "elevate-ui/Icon/Dehaze";
-import Close from "elevate-ui/Icon/Close";
+import noScroll from "no-scroll";
 
 class Header extends Component {
   state = {
@@ -15,10 +15,12 @@ class Header extends Component {
 
   onMenuOpen = () => {
     this.setState({ isMenuOpen: true });
+    noScroll.on();
   };
 
   onMenuClose = () => {
     this.setState({ isMenuOpen: false });
+    noScroll.off();
   };
 
   render() {
@@ -56,6 +58,13 @@ class Header extends Component {
             </Link>
           </div>
         </Container>
+        <button
+          onClick={this.onMenuClose}
+          className={classNames(
+            classes.navMobileUnderlay,
+            this.state.isMenuOpen && classes.navMobileUnderlayOpen
+          )}
+        />
       </header>
     );
   }
@@ -72,6 +81,7 @@ export default withStyles((theme) => ({
   inner: {
     display: "flex",
     alignItems: "center",
+    justifyContent: "space-between",
   },
   navDesktop: {
     display: "none",
@@ -81,13 +91,13 @@ export default withStyles((theme) => ({
     },
   },
   navMobileIcon: {
-    width: "100%",
-    padding: "10px 20px",
+    margin: "10px 20px",
     color: "#2E2E35",
-    textAlign: "right",
-    boxSizing: "border-box",
     display: "inline-flex",
-    justifyContent: "flex-end",
+
+    "&:focus": {
+      outline: "1px solid #fff",
+    },
 
     [theme.breakpoints[900]]: {
       display: "none",
@@ -116,9 +126,29 @@ export default withStyles((theme) => ({
 
   navMobile: {
     visibility: "hidden",
+    transform: "translateX(100vw)",
+    transition: "all .5s ease",
   },
 
   navMobileOpen: {
+    visibility: "visible",
+    transform: "translateX(calc(100vw - 280px))",
+  },
+
+  navMobileUnderlay: {
+    display: "flex",
+    width: "100%",
+    height: "100%",
+    position: "fixed",
+    visibility: "hidden",
+    top: "0",
+    right: "0",
+    bottom: "0",
+    left: "0",
+    backgroundColor: "rgba(0,0,0, 0.5)",
+    zIndex: "5",
+  },
+  navMobileUnderlayOpen: {
     visibility: "visible",
   },
 }))(Header);
