@@ -8,6 +8,8 @@ import CTASecondary from "../components/CTASecondary";
 import RoleCard from "../components/RoleCard";
 import TestimonialCard from "../components/TestimonialCard";
 import TestimonialCardGrid from "../components/TestimonialCardGrid";
+import HomePageBrokerageCard from "../components/HomePageBrokerageCard";
+import HomePageBrokerageHeading from "../components/HomePageBrokerageHeading";
 import Icon from "elevate-ui/Icon/Icon";
 import AgentLaptop from "../images/agents-laptop.png";
 import AgentDashActive from "../images/agents-dash-active.jpg";
@@ -15,7 +17,6 @@ import AgentPhone from "../images/agents-phone.png";
 import AgentDashLeads from "../images/agents-dash-leads.jpg";
 import AgentDashContacts from "../images/agent-dash-contacts.jpg";
 import AgentDashGraph from "../images/agent-dash-graph.jpg";
-import BrokerDash from "../images/broker-dash-listings.png";
 import TeamsLaptop from "../images/teams-laptop.png";
 
 const Index = ({ classes, data }) => {
@@ -276,65 +277,9 @@ const Index = ({ classes, data }) => {
       </Container>
       <CTASecondary />
       <div className={classes.brokerageContainer}>
-        <div className={classes.brokerageHeadingContainer}>
-          <div className={classes.iconContainer}>
-            <Icon name={"PersonAdd"} style={{ color: "#00A54D" }} />
-            <div
-              style={{
-                backgroundColor: "#00A54D",
-                opacity: ".2",
-                position: "absolute",
-                width: "100%",
-                height: "100%",
-                top: 0,
-                left: 0,
-              }}
-            />
-          </div>
-          <div className={classes.brokerageHeading}>Brokerages</div>
-        </div>
-        <div className={classes.agentSubHeading}>
-          The tool brokerage firms reach for to grow their business
-        </div>
-        <div className={classes.brokerageCardContainer}>
-          <div className={classes.brokerageCard}>
-            <div className={classes.brokerageCardLeft}>
-              <div className={classes.teamFeatureHead}>
-                <Icon name={"Dashboard"} style={{ color: "00A54D" }} />
-                <div className={classes.teamFeatureHeading}>Dashboard</div>
-              </div>
-              <div className={classes.teamFeatureDesc}>
-                Mauris viverra molestie tempus. Proin quam dui, accumsan eget
-                dui a, tempus fermentum neque. Proin fringilla imperdiet
-                lacinia. Mauris lacinia, dui quis auctor sollicitudin, nisi
-                magna maximus sapien, vel commodo mauris sem et dui.
-              </div>
-              <div className={classes.topTab}>
-                <span style={{ zIndex: "1", position: "relative" }}>
-                  👍 includes all agents and teams features
-                </span>
-                <div
-                  style={{
-                    backgroundColor: "#00A54D",
-                    opacity: ".2",
-                    position: "absolute",
-                    width: "100%",
-                    height: "100%",
-                    top: 0,
-                    left: 0,
-                    borderTopRightRadius: "6px",
-                    borderBottomRightRadius: "6px",
-                  }}
-                />
-              </div>
-            </div>
-            <img
-              src={BrokerDash}
-              style={{ width: "50%" }}
-              alt={"App Dashboard"}
-            />
-          </div>
-        </div>
+        <HomePageBrokerageHeading />
+        <HomePageBrokerageCard />
+
         <div className={classes.agentBtnContainer}>
           <button className={classes.brokerageBtn}>
             More Brokerages Features
@@ -461,13 +406,13 @@ export default withStyles((theme) => ({
     display: "flex",
     flexDirection: "column",
     justifyContent: "center",
-    paddingTop: "100px",
     paddingLeft: "12px",
     paddingRight: "12px",
     paddingBottom: "60px",
 
     [theme.breakpoints[900]]: {
       paddingBottom: "140px",
+      paddingTop: "100px",
     },
   },
   iconContainer: {
@@ -527,8 +472,7 @@ export default withStyles((theme) => ({
   agentFeaturesContainer: {
     display: "flex",
     maxWidth: "1100px",
-    margin: "10px auto",
-    marginBottom: "40px",
+    margin: "0 auto",
     justifyContent: "space-between",
     flexDirection: "column",
 
@@ -547,10 +491,18 @@ export default withStyles((theme) => ({
     flex: "1",
     flexDirection: "column",
     maxWidth: "340px",
-    marginTop: "60px",
+    marginTop: "40px",
+    paddingBottom: "40px",
+    borderBottom: "1px solid #ECECEC",
+
+    "&:last-child": {
+      borderBottom: "none",
+    },
 
     [theme.breakpoints[600]]: {
       marginTop: "0px",
+      borderBottom: "none",
+      paddingBottom: "0px",
     },
   },
   agentImage: {
@@ -596,15 +548,6 @@ export default withStyles((theme) => ({
     fontSize: "14px",
     margin: "auto",
     color: "#0092FF",
-    fontWeight: "600",
-  },
-  brokerageBtn: {
-    borderRadius: "28px",
-    border: "1px solid #00A54D",
-    padding: "12px 30px",
-    fontSize: "14px",
-    margin: "auto",
-    color: "#00A54D",
     fontWeight: "600",
   },
   roleCardContainer: {
@@ -756,51 +699,14 @@ export default withStyles((theme) => ({
     padding: "100px 0",
     justifyContent: "center",
   },
-  brokerageHeadingContainer: {
-    display: "flex",
-    justifyContent: "center",
-    alignItems: "center",
-  },
-  brokerageHeading: {
-    fontSize: "26px",
-    fontWeight: "800",
-    textAlign: "center",
-    lineHeight: "45px",
-    padding: "0 12px",
+  brokerageBtn: {
+    borderRadius: "28px",
+    border: "1px solid #00A54D",
+    padding: "12px 30px",
+    fontSize: "14px",
+    margin: "auto",
     color: "#00A54D",
-    maxWidth: "700px",
-
-    [theme.breakpoints[900]]: {
-      fontSize: "30px",
-    },
-  },
-  brokerageCardContainer: {
-    display: "flex",
-    justifyContent: "center",
-    padding: "40px",
-  },
-  brokerageCard: {
-    display: "flex",
-    background: "#fff",
-    justifyContent: "space-between", // material-design 1dp
-    transition: "all 200ms ease-in-out",
-    overflow: "hidden",
-    userSelect: "none",
-    borderRadius: "12px",
-    boxShadow: "0px 12px 24px rgba(0, 0, 0, .1)",
-
-    [theme.breakpoints[900]]: {
-      width: "655px",
-      height: "300px",
-    },
-  },
-  brokerageCardLeft: {
-    display: "flex",
-    flexDirection: "column",
-    // justifyContent: "center",
-    marginTop: "60px",
-    paddingLeft: "26px",
-    paddingRight: "22px",
+    fontWeight: "600",
   },
   topTab: {
     display: "flex",
