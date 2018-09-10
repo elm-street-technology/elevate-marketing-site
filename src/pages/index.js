@@ -3,9 +3,10 @@ import Container from "../components/Container";
 import withStyles from "elevate-ui/withStyles";
 import classNames from "classnames";
 import SEO from "../components/SEO";
+import RoleCard from "../components/RoleCard";
+import HomePageHero from "../components/HomePageHero";
 import CallToAction from "../components/CallToAction";
 import CTASecondary from "../components/CTASecondary";
-import RoleCard from "../components/RoleCard";
 import TestimonialCard from "../components/TestimonialCard";
 import TestimonialCardGrid from "../components/TestimonialCardGrid";
 import HomePageBrokerageCard from "../components/HomePageBrokerageCard";
@@ -70,26 +71,15 @@ const Index = ({ classes, data }) => {
     <div className={classNames(classes.root)}>
       <SEO />
       <Container>
-        <div className={classes.headingContainer}>
-          <div className={classes.headingLeft}>
-            <div className={classes.heading}>
-              Choose the Elevate that suits you
-            </div>
-            <div className={classes.subHeading}>
-              Elevate is the best online product for real estate agents, teams,
-              and brokers. We help you generate leads and create clients for
-              life.
-            </div>
-            <div className={classes.roleCardContainer}>
-              {roles.map((role) => (
-                <RoleCard
-                  key={role.name}
-                  className={classes.roleCard}
-                  role={role}
-                />
-              ))}
-            </div>
-          </div>
+        <HomePageHero />
+        <div className={classes.roleCardContainer}>
+          {roles.map((role) => (
+            <RoleCard
+              key={role.name}
+              className={classes.roleCard}
+              role={role}
+            />
+          ))}
         </div>
       </Container>
       <div className={classes.backgroundSlice} />
@@ -279,7 +269,6 @@ const Index = ({ classes, data }) => {
       <div className={classes.brokerageContainer}>
         <HomePageBrokerageHeading />
         <HomePageBrokerageCard />
-
         <div className={classes.agentBtnContainer}>
           <button className={classes.brokerageBtn}>
             More Brokerages Features
@@ -319,14 +308,6 @@ export default withStyles((theme) => ({
       justifyContent: "space-between",
       flexDirection: "row",
       paddingBottom: "0px",
-    },
-  },
-  headingLeft: {
-    order: "1",
-    zIndex: "1",
-
-    [theme.breakpoints[900]]: {
-      order: "0",
     },
   },
   heading: {
