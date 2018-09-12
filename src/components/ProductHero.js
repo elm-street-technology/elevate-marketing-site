@@ -136,9 +136,10 @@ export default withStyles((theme) => ({
   heroImage: {
     display: "flex",
     alignItems: "center",
-    maxWidth: "400px",
+    maxWidth: "95%",
     boxShadow: "0 8px 12px rgba(0,0,0,0.1)",
     marginTop: "30px",
+    padding: "10px",
 
     [theme.breakpoints[600]]: {
       maxWidth: "600px",
