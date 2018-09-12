@@ -37,8 +37,6 @@ export default withStyles((theme) => ({
     display: "flex",
     flexDirection: "column",
     justifyContent: "center",
-    justifySelf: "center",
-    maxWidth: "360px",
   },
   icon: {
     width: "56px",
@@ -55,6 +53,7 @@ export default withStyles((theme) => ({
     fontSize: "18px",
     fontWeight: "700",
     marginTop: "24px",
+    lineHeight: "26px",
   },
   description: {
     color: "#64616E",

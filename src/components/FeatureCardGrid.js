@@ -16,10 +16,6 @@ export default withStyles((theme) => ({
     marginTop: "60px",
 
     [theme.breakpoints[600]]: {
-      gridTemplateColumns: "repeat(2, 1fr)",
-    },
-
-    [theme.breakpoints[900]]: {
       gridTemplateColumns: "repeat(3, 1fr)",
     },
   },
