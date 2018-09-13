@@ -30,7 +30,7 @@ const ProductSectionTertiary = ({
             ))}
           </div>
         </div>
-        <div>
+        <div className={classes.headingContainer}>
           <div className={classes.title}>{title}</div>
           <div
             className={classes.description}
@@ -41,9 +41,11 @@ const ProductSectionTertiary = ({
           <div className={classes.screenshot}>
             <img src={url} alt={"screenshot"} style={{ maxWidth: "100%" }} />
           </div>
-          <Link to="/get-started" className={classes.link}>
-            Let us show you around →
-          </Link>
+          <div className={classes.linkContainer}>
+            <Link to="/get-started" className={classes.link}>
+              Let us show you around →
+            </Link>
+          </div>
         </div>
       </div>
     </div>
@@ -53,8 +55,14 @@ const ProductSectionTertiary = ({
 export default withStyles((theme) => ({
   root: {
     display: "flex",
+    flexDirection: "column",
+
+    [theme.breakpoints[900]]: {
+      flexDirection: "row",
+    },
   },
   features: {
+    order: "2",
     flexShrink: "0",
     maxWidth: "440px",
     background: "#fff",
@@ -62,7 +70,14 @@ export default withStyles((theme) => ({
     boxShadow: "0 8px 12px rgba(0,0,0,0.1)",
     border: "6px solid #FFF4F0",
     padding: "60px 48px",
-    marginRight: "64px",
+    margin: "auto",
+    marginTop: "30px",
+
+    [theme.breakpoints[900]]: {
+      order: "0",
+      margin: "0",
+      marginRight: "64px",
+    },
   },
   featuresHeading: {
     color: theme.colors.primary,
@@ -77,6 +92,13 @@ export default withStyles((theme) => ({
     gridRowGap: "48px",
     marginTop: "48px",
   },
+  headingContainer: {
+    paddingLeft: "8px",
+
+    [theme.breakpoints[900]]: {
+      paddingLeft: "0px",
+    },
+  },
   title: {
     fontSize: "36px",
     lineHeight: "44px",
@@ -87,20 +109,45 @@ export default withStyles((theme) => ({
     fontSize: "20px",
     lineHeight: "32px",
     color: "#64616e",
-    maxWidth: "480px",
+    paddingBottom: "40px",
+
+    [theme.breakpoints[900]]: {
+      paddingBottom: "0px",
+    },
   },
   screenshot: {
-    display: "flex",
+    display: "none",
     alignItems: "center",
     margin: "48px 0",
     boxShadow: "0 8px 12px rgba(0,0,0,0.1)",
+
+    [theme.breakpoints[900]]: {
+      display: "flex",
+    },
   },
   link: {
     color: "inherit",
     textDecoration: "none",
+    margin: "auto",
+    fontSize: "20px",
 
     "&:hover": {
       textDecoration: "underline",
+    },
+
+    [theme.breakpoints[900]]: {
+      display: "flex",
+      fontSize: "16px",
+    },
+  },
+
+  linkContainer: {
+    display: "flex",
+    justifyContent: "center",
+    marginTop: "40px",
+
+    [theme.breakpoints[900]]: {
+      display: "block",
     },
   },
 }))(ProductSectionTertiary);

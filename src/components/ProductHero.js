@@ -27,9 +27,11 @@ const ProductHero = ({
                   heroText.childMarkdownRemark.html,
               }}
             />
-            <Link to="/get-started" className={classes.button}>
-              Request a Demo
-            </Link>
+            <div className={classes.buttonContainer}>
+              <Link to="/get-started" className={classes.button}>
+                Request a Demo
+              </Link>
+            </div>
           </div>
           <img
             className={classes.heroImage}
@@ -51,29 +53,71 @@ export default withStyles((theme) => ({
   },
   content: {
     display: "flex",
+    flexDirection: "column",
     alignItems: "center",
+
+    [theme.breakpoints[900]]: {
+      flexDirection: "row",
+    },
   },
   product: {
-    fontSize: "20px",
+    fontSize: "16px",
     fontWeight: "700",
     color: theme.colors.primary,
     textTransform: "uppercase",
+    textAlign: "center",
+
+    [theme.breakpoints[900]]: {
+      textAlign: "left",
+      fontSize: "20px",
+    },
   },
   heroText: {
-    maxWidth: "560px",
+    maxWidth: "650px",
+    textAlign: "center",
 
     "& h2": {
-      fontSize: "32px",
-      lineHeight: "40px",
+      fontSize: "28px",
+      lineHeight: "36px",
       fontWeight: "700",
-      margin: "32px 0 24px",
+      margin: "20px 0 24px",
     },
     "& em": {
       color: theme.colors.primary,
     },
     "& p": {
       fontSize: "20px",
-      lineHeight: "32px",
+      lineHeight: "28px",
+      display: "none",
+
+      [theme.breakpoints[600]]: {
+        display: "flex",
+      },
+    },
+
+    [theme.breakpoints[900]]: {
+      maxWidth: "560px",
+      textAlign: "left",
+
+      "& h2": {
+        fontSize: "32px",
+        lineHeight: "40px",
+        margin: "32px 0 24px",
+      },
+      "& p": {
+        fontSize: "20px",
+        lineHeight: "32px",
+      },
+    },
+  },
+  buttonContainer: {
+    display: "flex",
+    justifyContent: "center",
+    marginTop: "30px",
+
+    [theme.breakpoints[900]]: {
+      marginTop: "48px",
+      justifyContent: "flex-start",
     },
   },
   button: {
@@ -88,14 +132,23 @@ export default withStyles((theme) => ({
     borderRadius: "4px",
     textAlign: "center",
     textDecoration: "none",
-    marginTop: "48px",
   },
   heroImage: {
     display: "flex",
     alignItems: "center",
-    maxWidth: "540px",
+    maxWidth: "95%",
     boxShadow: "0 8px 12px rgba(0,0,0,0.1)",
-    marginLeft: "16px",
-    marginRight: "-64px",
+    marginTop: "30px",
+    padding: "10px",
+
+    [theme.breakpoints[600]]: {
+      maxWidth: "600px",
+    },
+
+    [theme.breakpoints[900]]: {
+      marginLeft: "16px",
+      marginRight: "-64px",
+      maxWidth: "540px",
+    },
   },
 }))(ProductHero);

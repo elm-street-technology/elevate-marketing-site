@@ -147,19 +147,27 @@ export default withStyles((theme) => ({
     width: "100%",
   },
   hero: {
-    paddingTop: "96px",
+    paddingTop: "36px",
     paddingBottom: "64px",
+
+    [theme.breakpoints[900]]: {
+      paddingTop: "96px",
+    },
   },
   primarySection: {
-    paddingTop: "64px",
+    paddingTop: "92px",
     paddingBottom: "92px",
   },
   secondarySection: {
-    paddingTop: "64px",
+    paddingTop: "92px",
     paddingBottom: "92px",
   },
   tertiarySection: {
-    paddingTop: "64px",
+    paddingTop: "54px",
     paddingBottom: "92px",
+
+    [theme.breakpoints[900]]: {
+      paddingTop: "92px",
+    },
   },
 }))(Product);

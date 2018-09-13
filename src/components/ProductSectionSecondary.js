@@ -50,23 +50,26 @@ export default withStyles((theme) => ({
     fontWeight: "700",
     color: theme.colors.primary,
     textTransform: "uppercase",
+    paddingLeft: "8px",
   },
   title: {
     fontSize: "32px",
-    lineHeight: "40px",
+    lineHeight: "45px",
     fontWeight: "700",
     margin: "32px 0 24px",
+    paddingLeft: "8px",
   },
   description: {
     fontSize: "20px",
     lineHeight: "32px",
     color: "#64616e",
     maxWidth: "620px",
+    paddingLeft: "8px",
   },
   screenshot: {
     display: "flex",
     alignItems: "center",
-    margin: "48px 0 24px",
+    margin: "48px 8px 24px",
     boxShadow: "0 8px 12px rgba(0,0,0,0.1)",
   },
 }))(ProductSectionSecondary);

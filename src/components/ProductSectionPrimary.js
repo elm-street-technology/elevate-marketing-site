@@ -79,6 +79,6 @@ export default withStyles((theme) => ({
     boxShadow: "0 8px 12px rgba(0,0,0,0.1)",
   },
   grid: {
-    padding: "0 24px",
+    padding: "0 14px",
   },
 }))(ProductSectionPrimary);
