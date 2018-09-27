@@ -9,10 +9,10 @@ const HomePageTeamHeading = ({ classes, className }) => {
       <div className={classes.teamHeading}>
         <div className={classes.teamHeadingLeft}>
           <div className={classes.iconContainer}>
-            <Icon name={"People"} style={{ color: "#0092FF" }} />
+            <Icon name={"People"} style={{ color: "#55C3BA" }} />
             <div
               style={{
-                backgroundColor: "#0092FF",
+                backgroundColor: "#55C3BA",
                 opacity: ".2",
                 position: "absolute",
                 width: "100%",
@@ -35,7 +35,7 @@ const HomePageTeamHeading = ({ classes, className }) => {
         </h2>
       </div>
       <div className={classes.teamIncludesContainer}>
-        <Icon name={"InfoOutline"} style={{ color: "#0092FF" }} />
+        <Icon name={"InfoOutline"} style={{ color: "#55C3BA" }} />
         <div className={classes.teamIncludes}>
           Includes all Agents features plus
         </div>
@@ -60,7 +60,7 @@ export default withStyles((theme) => ({
   },
   teamHeading: {
     fontSize: "28px",
-    color: "#0092FF",
+    color: "#55C3BA",
     fontWeight: "800",
     display: "flex",
     alignItems: "center",
@@ -76,7 +76,7 @@ export default withStyles((theme) => ({
     },
   },
   teamSubHeading: {
-    color: "#2E2E35",
+    color: "#5A5B5C",
     fontSize: "17px",
     maxWidth: "440px",
     lineHeight: "24px",
@@ -108,11 +108,11 @@ export default withStyles((theme) => ({
   },
   teamBtn: {
     borderRadius: "28px",
-    border: "1px solid #0092FF",
+    border: "1px solid #55C3BA",
     padding: "12px 30px",
     fontSize: "14px",
     margin: "auto",
-    color: "#0092FF",
+    color: "#55C3BA",
     fontWeight: "600",
   },
   teamIncludesContainer: {
@@ -128,7 +128,7 @@ export default withStyles((theme) => ({
     },
   },
   teamIncludes: {
-    color: "#2E2E35",
+    color: "#5A5B5C",
     fontWeight: "700",
     paddingLeft: "6px",
   },

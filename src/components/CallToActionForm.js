@@ -31,7 +31,7 @@ export default withStyles((theme) => ({
     padding: "18px 0 18px 15px",
     border: "1px solid rgba(100, 97, 110, .36)",
     borderRight: "0",
-    color: "#64616E",
+    color: "#5A5B5C",
     fontSize: "14px",
     fontFamily: "inherit",
     fontWeight: "600",

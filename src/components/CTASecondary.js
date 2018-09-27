@@ -21,7 +21,7 @@ export default withStyles((theme) => ({
     display: "flex",
     justifyContent: "center",
     alignContent: "center",
-    backgroundColor: "#FAF8F6",
+    backgroundColor: "#55C3BA",
     padding: "40px 12px",
 
     [theme.breakpoints[900]]: {
@@ -43,6 +43,7 @@ export default withStyles((theme) => ({
     },
   },
   heading: {
+    color: "#FFF",
     fontSize: "20px",
     lineHeight: "1.6",
     fontWeight: "600",
@@ -56,7 +57,7 @@ export default withStyles((theme) => ({
     lineHeight: "1.6",
     marginTop: "6px",
     marginBottom: "12px",
-    color: "#64616E",
+    color: "#FFF",
 
     [theme.breakpoints[900]]: {
       fontSize: "18px",

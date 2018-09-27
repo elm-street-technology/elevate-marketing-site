@@ -39,7 +39,7 @@ export default withStyles((theme) => ({
     justifyContent: "center",
     padding: "20px 0px 30px 12px",
     maxWidth: "500px",
-    background: "#FAF8F6", // material-design 1dp
+    background: "#ebebeb", // material-design 1dp
     transition: "all 200ms ease-in-out",
     overflow: "hidden",
     userSelect: "none",

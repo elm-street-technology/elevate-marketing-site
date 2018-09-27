@@ -68,7 +68,7 @@ export default withStyles((theme) => ({
     alignSelf: "center",
     paddingTop: "16px",
     fontSize: "20px",
-    color: "#2E2E35",
+    color: "#5A5B5C",
     fontWeight: "600",
     textAlign: "center",
     maxWidth: "400px",

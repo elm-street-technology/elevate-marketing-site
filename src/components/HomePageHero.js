@@ -1,21 +1,30 @@
 import React from "react";
 import classNames from "classnames";
-import Container from "../components/Container";
 import withStyles from "elevate-ui/withStyles";
+import heroImage from "../images/heroimage1200.jpg";
+import HomePageHeroFooter from "../components/HomePageHeroFooter";
 
-const HomePageHero = ({ classes, className }) => {
+const HomePageHero = ({ classes, className, roles }) => {
   return (
     <div className={classNames(classes.root)}>
       <div className={classes.headingContainer}>
-        <div className={classes.headingLeft}>
-          <div className={classes.heading}>
+        <div className={classes.heading}>
+          Online Technology and Marketing Services for Agents and Brokers Made
+          Easy
+        </div>
+        <div className={classes.subHeading}>
+          Elevate is the only fully integrated single system on the market today
+          that does everything real estate professionals need — from generating
+          new leads to creating clients for life!
+          <div className={classes.subHeadingSecondary}>
+            Elevate is the best online product or real estate agents, teams, and
+            brokers. We help you generate leads and create clients for life.
+          </div>
+          <div className={classes.subHeadingTagline}>
             Choose the Elevate that suits you
           </div>
-          <div className={classes.subHeading}>
-            Elevate is the best online product for real estate agents, teams,
-            and brokers. We help you generate leads and create clients for life.
-          </div>
         </div>
+        <HomePageHeroFooter roles={roles} />
       </div>
     </div>
   );
@@ -31,52 +40,53 @@ export default withStyles((theme) => ({
     display: "flex",
     justifyContent: "center",
     flexDirection: "column",
-    paddingLeft: "10px",
-    paddingRight: "10px",
     paddingBottom: "100px",
+    backgroundImage: `url('${heroImage}')`,
+    backgroundSize: "auto",
+    backgroundRepeat: "no-repeat",
+    backgroundPosition: "center",
+    backgroundAttachment: "fixed",
+    width: "100%",
 
     [theme.breakpoints[900]]: {
-      justifyContent: "space-between",
-      flexDirection: "row",
       paddingBottom: "0px",
-    },
-  },
-  headingLeft: {
-    order: "1",
-    zIndex: "1",
-
-    [theme.breakpoints[900]]: {
-      order: "0",
     },
   },
   heading: {
     fontSize: "22px",
     fontWeight: "800",
-    color: "#2E2E35",
+    color: "#5A5B5C",
     lineHeight: "1.2",
-    maxWidth: "500px",
-    marginTop: "40px",
+    maxWidth: "710px",
+    margin: "40px auto 80px auto",
     textAlign: "center",
 
     [theme.breakpoints[600]]: {
-      fontSize: "28px",
-      textAlign: "left",
+      fontSize: "32px",
     },
   },
   subHeading: {
     fontSize: "18px",
-    color: "#64616E",
+    color: "#5A5B5C",
     marginTop: "16px",
     marginBottom: "20px",
     lineHeight: "26px",
     textAlign: "center",
 
     [theme.breakpoints[600]]: {
-      maxWidth: "340px",
-      lineHeight: "28px",
+      maxWidth: "450px",
       marginBottom: "36px",
       marginTop: "14px",
       textAlign: "left",
     },
+  },
+  subHeadingSecondary: {
+    padding: "20px 0",
+  },
+  subHeadingTagline: {
+    color: "#5A5B5C",
+    fontWeight: "700",
+    fontSize: "24px",
+    paddingBottom: "40px",
   },
 }))(HomePageHero);

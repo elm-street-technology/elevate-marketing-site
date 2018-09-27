@@ -8,10 +8,10 @@ const HomePageBrokerageHeading = ({ classes, className }) => {
     <div className={classNames(classes.root, className)}>
       <div className={classes.brokerageHeadingContainer}>
         <div className={classes.iconContainer}>
-          <Icon name={"PersonAdd"} style={{ color: "#00A54D" }} />
+          <Icon name={"PersonAdd"} style={{ color: "#FFC629" }} />
           <div
             style={{
-              backgroundColor: "#00A54D",
+              backgroundColor: "#FFC629",
               opacity: ".2",
               position: "absolute",
               width: "100%",
@@ -47,7 +47,7 @@ export default withStyles((theme) => ({
     textAlign: "center",
     lineHeight: "45px",
     padding: "0 12px",
-    color: "#00A54D",
+    color: "#FFC629",
     maxWidth: "700px",
 
     [theme.breakpoints[900]]: {
@@ -59,7 +59,7 @@ export default withStyles((theme) => ({
     alignSelf: "center",
     paddingTop: "16px",
     fontSize: "20px",
-    color: "#2E2E35",
+    color: "#5A5B5C",
     fontWeight: "600",
     textAlign: "center",
     maxWidth: "400px",

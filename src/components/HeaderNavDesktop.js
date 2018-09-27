@@ -74,6 +74,7 @@ const HeaderNavDesktop = ({ classes, className }) => {
 export default withStyles((theme) => ({
   nav: {
     display: "flex",
+    justifyContent: "flex-end",
     alignItems: "center",
     marginLeft: "48px",
     marginRight: "8px",
