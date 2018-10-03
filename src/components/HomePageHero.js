@@ -1,10 +1,9 @@
 import React from "react";
 import classNames from "classnames";
 import withStyles from "elevate-ui/withStyles";
-import heroImage from "../images/heroimage1200.jpg";
 import HomePageHeroFooter from "../components/HomePageHeroFooter";
 
-const HomePageHero = ({ classes, className, roles }) => {
+const HomePageHero = ({ classes, className, roles, handleRoleChange }) => {
   return (
     <div className={classNames(classes.root)}>
       <div className={classes.headingContainer}>
@@ -13,9 +12,11 @@ const HomePageHero = ({ classes, className, roles }) => {
           Easy
         </div>
         <div className={classes.subHeading}>
-          Elevate is the only fully integrated single system on the market today
-          that does everything real estate professionals need — from generating
-          new leads to creating clients for life!
+          <div className={classes.subHeadingPrimary}>
+            Elevate is the only fully integrated single system on the market
+            today that does everything real estate professionals need — from
+            generating new leads to creating clients for life!
+          </div>
           <div className={classes.subHeadingSecondary}>
             Elevate is the best online product or real estate agents, teams, and
             brokers. We help you generate leads and create clients for life.
@@ -24,7 +25,7 @@ const HomePageHero = ({ classes, className, roles }) => {
             Choose the Elevate that suits you
           </div>
         </div>
-        <HomePageHeroFooter roles={roles} />
+        <HomePageHeroFooter handleRoleChange={handleRoleChange} roles={roles} />
       </div>
     </div>
   );
@@ -40,12 +41,6 @@ export default withStyles((theme) => ({
     display: "flex",
     justifyContent: "center",
     flexDirection: "column",
-    paddingBottom: "100px",
-    backgroundImage: `url('${heroImage}')`,
-    backgroundSize: "auto",
-    backgroundRepeat: "no-repeat",
-    backgroundPosition: "center",
-    backgroundAttachment: "fixed",
     width: "100%",
 
     [theme.breakpoints[900]]: {
@@ -53,16 +48,17 @@ export default withStyles((theme) => ({
     },
   },
   heading: {
-    fontSize: "22px",
+    fontSize: "28px",
     fontWeight: "800",
     color: "#5A5B5C",
-    lineHeight: "1.2",
+    lineHeight: "1.3",
     maxWidth: "710px",
-    margin: "40px auto 80px auto",
+    margin: "40px auto 20px auto",
     textAlign: "center",
 
     [theme.breakpoints[600]]: {
       fontSize: "32px",
+      marginBottom: "60px",
     },
   },
   subHeading: {
@@ -72,12 +68,21 @@ export default withStyles((theme) => ({
     marginBottom: "20px",
     lineHeight: "26px",
     textAlign: "center",
+    fontWeight: "600",
 
     [theme.breakpoints[600]]: {
       maxWidth: "450px",
       marginBottom: "36px",
       marginTop: "14px",
       textAlign: "left",
+      fontWeight: "500",
+    },
+  },
+  subHeadingPrimary: {
+    display: "none",
+
+    [theme.breakpoints[600]]: {
+      display: "flex",
     },
   },
   subHeadingSecondary: {

@@ -6,8 +6,12 @@ import People from "elevate-ui/Icon/People";
 import withStyles from "elevate-ui/withStyles";
 import RoleCard from "../components/RoleCard";
 
-const HomePageHeroFooter = ({ classes, className, roles }) => {
-  console.log(roles);
+const HomePageHeroFooter = ({
+  classes,
+  className,
+  roles,
+  handleRoleChange,
+}) => {
   return (
     <div className={classNames(classes.root)}>
       <div className={classes.footerContainer}>
@@ -17,14 +21,24 @@ const HomePageHeroFooter = ({ classes, className, roles }) => {
             classes.itemAgent,
             classes.link
           )}
+          onClick={() => {
+            handleRoleChange("Agents");
+          }}
         >
           <Person className={classes.icon} size={22} />
           <div className={classes.itemText}>Agents</div>
           <div className={classNames(classes.dropDown, classes.agentdropDown)}>
-            <RoleCard className={classes.roleCard} role={roles.Agents} />
+            <RoleCard
+              className={classes.roleCard}
+              role={roles.Agents}
+              handleRoleChange={handleRoleChange}
+            />
           </div>
         </div>
         <div
+          onClick={() => {
+            handleRoleChange("Teams");
+          }}
           className={classNames(
             classes.footerItem,
             classes.itemTeam,
@@ -34,10 +48,17 @@ const HomePageHeroFooter = ({ classes, className, roles }) => {
           <People className={classes.icon} size={22} />
           <div className={classes.itemText}>Teams</div>
           <div className={classNames(classes.dropDown, classes.teamdropDown)}>
-            <RoleCard className={classes.roleCard} role={roles.Teams} />
+            <RoleCard
+              className={classes.roleCard}
+              role={roles.Teams}
+              handleRoleChange={handleRoleChange}
+            />
           </div>
         </div>
         <div
+          onClick={() => {
+            handleRoleChange("Brokerages");
+          }}
           className={classNames(
             classes.footerItem,
             classes.itemBroker,
@@ -47,7 +68,11 @@ const HomePageHeroFooter = ({ classes, className, roles }) => {
           <GroupAdd className={classes.icon} size={22} />
           <div className={classes.itemText}>Brokers</div>
           <div className={classNames(classes.dropDown, classes.brokerdropDown)}>
-            <RoleCard className={classes.roleCard} role={roles.Brokerages} />
+            <RoleCard
+              className={classes.roleCard}
+              role={roles.Brokerages}
+              handleRoleChange={handleRoleChange}
+            />
           </div>
         </div>
       </div>
@@ -76,8 +101,12 @@ export default withStyles((theme) => ({
   itemText: {
     color: "#5A5B5C",
     textTransform: "uppercase",
-    fontSize: "18px",
+    fontSize: "14px",
     fontWeight: "700",
+
+    [theme.breakpoints[600]]: {
+      fontSize: "18px",
+    },
   },
   itemAgent: {
     backgroundColor: "#F15953",
@@ -92,8 +121,6 @@ export default withStyles((theme) => ({
     fill: "#5A5B5C",
   },
   link: {
-    float: "left",
-    padding: "1rem",
     position: "relative",
     display: "grid",
     gridGap: "4px",
@@ -103,7 +130,11 @@ export default withStyles((theme) => ({
     },
 
     "&:hover $dropDown": {
-      visibility: "visible",
+      [theme.breakpoints[600]]: {
+        visibility: "visible",
+      },
+
+      visibility: "hidden",
       opacity: "1",
       zIndex: "999",
       transitionDelay: "0s, 0s, .3s",
@@ -114,7 +145,7 @@ export default withStyles((theme) => ({
     padding: "20px",
     width: "100%",
     fontSize: "15px",
-    borderTop: "1px solid rgba(236,236,236, .6)",
+    borderTop: "10px solid rgba(236,236,236, .6)",
 
     "&:hover": {
       color: "#2E2E35",
@@ -128,7 +159,7 @@ export default withStyles((theme) => ({
     visibility: "hidden",
     opacity: "0",
     position: "absolute",
-    transform: "translateY(-56.2%)",
+    transform: "translateY(-54.4%)",
     transition: "all .3s ease-in-out",
     overflow: "hidden",
     zIndex: "999",

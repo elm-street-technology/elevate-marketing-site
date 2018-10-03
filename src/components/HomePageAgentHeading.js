@@ -69,7 +69,6 @@ export default withStyles((theme) => ({
     paddingTop: "16px",
     fontSize: "20px",
     color: "#5A5B5C",
-    fontWeight: "600",
     textAlign: "center",
     maxWidth: "400px",
     lineHeight: "28px",

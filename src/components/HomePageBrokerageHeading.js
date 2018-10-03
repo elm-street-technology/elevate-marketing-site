@@ -24,7 +24,7 @@ const HomePageBrokerageHeading = ({ classes, className }) => {
         <div className={classes.brokerageHeading}>Brokerages</div>
       </div>
       <div className={classes.brokerageSubHeading}>
-        The tool brokerage firms reach for to grow their business
+        Everything you and your team need to increase leads and retain clients.
       </div>
     </div>
   );
@@ -60,10 +60,10 @@ export default withStyles((theme) => ({
     paddingTop: "16px",
     fontSize: "20px",
     color: "#5A5B5C",
-    fontWeight: "600",
     textAlign: "center",
     maxWidth: "400px",
     lineHeight: "28px",
+    marginBottom: "40px",
 
     [theme.breakpoints[600]]: {
       maxWidth: "700px",

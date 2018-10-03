@@ -3,8 +3,7 @@ import classNames from "classnames";
 import withStyles from "elevate-ui/withStyles";
 import Icon from "elevate-ui/Icon/Icon";
 
-const RoleCard = ({ classes, className, role }) => {
-  console.log(role);
+const RoleCard = ({ classes, className, role, handleRoleChange }) => {
   return (
     <div
       className={classNames(classes.root, className)}
@@ -46,10 +45,13 @@ const RoleCard = ({ classes, className, role }) => {
           </div>
         </div>
         <button
+          onClick={() => {
+            handleRoleChange(role.name);
+          }}
           className={classes.roleBtn}
           style={{ backgroundColor: role.color }}
         >
-          {role.btnText}
+          Get Started
         </button>
       </div>
     </div>
@@ -68,7 +70,7 @@ export default withStyles((theme) => ({
     transition: "all 200ms ease-in-out",
     overflow: "hidden",
     userSelect: "none",
-    border: "1px solid",
+    border: "12px solid",
     borderRadius: "6px 6px 0 0",
     borderBottom: "none",
   },
@@ -94,7 +96,7 @@ export default withStyles((theme) => ({
   },
   roleSubHeading: {
     textTransform: "uppercase",
-    fontSize: "12px",
+    fontSize: "18px",
     paddingTop: "10px",
   },
   roleCard: {
@@ -129,7 +131,7 @@ export default withStyles((theme) => ({
   },
   roleBtn: {
     padding: "12px",
-    width: "100%",
+    width: "50%",
     color: "#FFF",
     borderRadius: "4px",
     margin: "auto",

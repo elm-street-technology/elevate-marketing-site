@@ -24,9 +24,6 @@ const HomePageTeamHeading = ({ classes, className }) => {
           </div>
           <div style={{ paddingLeft: "10px" }}>Teams</div>
         </div>
-        <div className={classes.teamBtnContainer}>
-          <button className={classes.teamBtn}>More Teams Features</button>
-        </div>
       </div>
       <div className={classes.teamSubHeading}>
         <h2>
@@ -63,8 +60,8 @@ export default withStyles((theme) => ({
     color: "#55C3BA",
     fontWeight: "800",
     display: "flex",
+    justifyContent: "center",
     alignItems: "center",
-    justifyContent: "space-between",
     flexDirection: "column",
 
     [theme.breakpoints[600]]: {
@@ -77,19 +74,17 @@ export default withStyles((theme) => ({
   },
   teamSubHeading: {
     color: "#5A5B5C",
+    textAlign: "center",
     fontSize: "17px",
-    maxWidth: "440px",
     lineHeight: "24px",
     marginTop: "20px",
+    marginBottom: "40px",
     margin: "auto",
-    textAlign: "center",
+    justifyContent: "center",
 
     [theme.breakpoints[600]]: {
-      maxWidth: "320px",
       lineHeight: "30px",
       fontSize: "20px",
-      textAlign: "left",
-      margin: "0",
       marginTop: "20px",
     },
   },
@@ -114,6 +109,12 @@ export default withStyles((theme) => ({
     margin: "auto",
     color: "#55C3BA",
     fontWeight: "600",
+
+    "&:hover": {
+      color: "#FFF",
+      backgroundColor: "#55C3BA",
+      transition: "all .3s ease",
+    },
   },
   teamIncludesContainer: {
     display: "flex",
