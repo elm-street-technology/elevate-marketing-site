@@ -14,7 +14,10 @@ import TestimonialCard from "../components/TestimonialCard";
 import TestimonialCardGrid from "../components/TestimonialCardGrid";
 import HomePageBrokerageCard from "../components/HomePageBrokerageCard";
 import HomePageBrokerageHeading from "../components/HomePageBrokerageHeading";
-import heroImage from "../images/heroImage.jpg";
+import heroImage1600 from "../images/1600.png";
+import heroImage1200 from "../images/1200.png";
+import heroImage900 from "../images/900.png";
+import heroImage600 from "../images/600.png";
 
 class Index extends Component {
   state = {
@@ -36,40 +39,40 @@ class Index extends Component {
       Agents: {
         name: "Agents",
         features: [
-          "Manage MLS Feed",
+          "Manage MLS Feeds",
           "Intelligent KPI Dashboard",
           "Search MLS by list or map",
-          "Manage MLS Feed",
+          "Manage MLS Feeds",
           "Intelligent KPI Dashboard",
           "Search MLS by list or map",
         ],
         icon: "Person",
         color: "#F15953",
         borderColor: "rgba(241, 89, 83, .4)",
-        tagline: "I'm a single agent",
+        tagline: "I'm an agent",
         btnText: "See Agent Features",
       },
       Teams: {
         name: "Teams",
         features: [
-          "Manage Mls Feed",
+          "Manage Mls Feeds",
           "Intelligent KPI Dashboard",
           "Search MLS by list or map",
           "Intelligent KPI Dashboard",
           "Search MLS by list or map",
-          "Manage Mls Feed",
+          "Manage MLS Feeds",
         ],
         icon: "People",
         color: "#55C3BA",
         borderColor: "rgba(85, 195, 186, .4)",
-        tagline: "I'm on a team of agents",
+        tagline: "I lead a team of agents",
         btnText: "See Team Features",
         topTab: "👍 Includes all agents features",
       },
       Brokerages: {
-        name: "Brokerages",
+        name: "Brokers",
         features: [
-          "Manage Mls Feed",
+          "Manage Mls Feeds",
           "Intelligent KPI Dashboard",
           "Search MLS by list or map",
           "Intelligent KPI Dashboard",
@@ -79,7 +82,7 @@ class Index extends Component {
         icon: "PersonAdd",
         color: "#FFC629",
         borderColor: "rgba(255, 198, 41, .4)",
-        tagline: "I'm part of a brokerage",
+        tagline: "I'm a broker",
         btnText: "See Brokerage Features",
         topTab: "🎉  Includes all teams & agents features ",
       },
@@ -88,12 +91,10 @@ class Index extends Component {
       <div className={classNames(classes.root)}>
         <SEO />
         <div className={classes.heroImage}>
-          <Container>
-            <HomePageHero
-              handleRoleChange={this.handleRoleChange}
-              roles={roles}
-            />
-          </Container>
+          <HomePageHero
+            handleRoleChange={this.handleRoleChange}
+            roles={roles}
+          />
         </div>
         <div
           className={classes.roleContainer}
@@ -157,11 +158,34 @@ export default withStyles((theme) => ({
     width: "100%",
   },
   heroImage: {
-    backgroundImage: `url('${heroImage}')`,
+    backgroundImage: `url('${heroImage600}')`,
     backgroundSize: "auto",
     backgroundRepeat: "no-repeat",
-    backgroundAttachment: "fixed",
-    backgroundPosition: "top",
+    backgroundPosition: "center",
+
+    [theme.breakpoints[600]]: {
+      backgroundImage: `url('${heroImage900}')`,
+      height: "100%",
+      backgroundRepeat: "no-repeat",
+      backgroundAttachment: "fixed",
+      backgroundPosition: "top",
+    },
+
+    [theme.breakpoints[900]]: {
+      backgroundImage: `url('${heroImage1200}')`,
+      backgroundSize: "auto",
+      backgroundRepeat: "no-repeat",
+      backgroundAttachment: "fixed",
+      backgroundPosition: "top",
+    },
+
+    [theme.breakpoints[1200]]: {
+      backgroundImage: `url('${heroImage1600}')`,
+      backgroundSize: "auto",
+      backgroundRepeat: "no-repeat",
+      backgroundAttachment: "fixed",
+      backgroundPosition: "top",
+    },
   },
   backgroundSlice: {
     position: "absolute",
@@ -183,7 +207,7 @@ export default withStyles((theme) => ({
     display: "none",
     flexDirection: "column",
     justifyContent: "center",
-    paddingTop: "60px",
+    paddingTop: "80px",
     paddingLeft: "12px",
     paddingRight: "12px",
     paddingBottom: "60px",
@@ -230,13 +254,13 @@ export default withStyles((theme) => ({
   teamContainer: {
     display: "none",
     flexDirection: "column",
-    paddingTop: "75px",
+    paddingTop: "80px",
     paddingLeft: "20px",
     paddingRight: "20px",
     paddingBottom: "80px",
 
     [theme.breakpoints[900]]: {
-      paddingTop: "125px",
+      paddingTop: "100px",
     },
   },
   brokerageContainer: {

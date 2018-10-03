@@ -21,10 +21,11 @@ const HomePageBrokerageHeading = ({ classes, className }) => {
             }}
           />
         </div>
-        <div className={classes.brokerageHeading}>Brokerages</div>
+        <div className={classes.brokerageHeading}>Brokers</div>
       </div>
       <div className={classes.brokerageSubHeading}>
-        Everything you and your team need to increase leads and retain clients.
+        Everything you and your brokerage need to increase leads and retain
+        clients.
       </div>
     </div>
   );

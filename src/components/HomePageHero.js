@@ -18,15 +18,15 @@ const HomePageHero = ({ classes, className, roles, handleRoleChange }) => {
             generating new leads to creating clients for life!
           </div>
           <div className={classes.subHeadingSecondary}>
-            Elevate is the best online product or real estate agents, teams, and
-            brokers. We help you generate leads and create clients for life.
+            Elevate is the best online product for real estate agents, teams,
+            and brokers. We help you generate leads and create clients for life.
           </div>
           <div className={classes.subHeadingTagline}>
             Choose the Elevate that suits you
           </div>
         </div>
-        <HomePageHeroFooter handleRoleChange={handleRoleChange} roles={roles} />
       </div>
+      <HomePageHeroFooter handleRoleChange={handleRoleChange} roles={roles} />
     </div>
   );
 };
@@ -42,6 +42,9 @@ export default withStyles((theme) => ({
     justifyContent: "center",
     flexDirection: "column",
     width: "100%",
+    maxWidth: "1080px",
+    margin: "0 auto",
+    padding: "0 8px",
 
     [theme.breakpoints[900]]: {
       paddingBottom: "0px",
@@ -56,7 +59,7 @@ export default withStyles((theme) => ({
     margin: "40px auto 20px auto",
     textAlign: "center",
 
-    [theme.breakpoints[600]]: {
+    [theme.breakpoints[900]]: {
       fontSize: "32px",
       marginBottom: "60px",
     },
@@ -81,17 +84,19 @@ export default withStyles((theme) => ({
   subHeadingPrimary: {
     display: "none",
 
-    [theme.breakpoints[600]]: {
+    [theme.breakpoints[900]]: {
       display: "flex",
     },
   },
   subHeadingSecondary: {
-    padding: "20px 0",
+    paddingTop: "20px",
+    paddingBottom: "38px",
   },
   subHeadingTagline: {
     color: "#5A5B5C",
     fontWeight: "700",
     fontSize: "24px",
     paddingBottom: "40px",
+    textShadow: "2px 4px 3px rgba(0,0,0,0.08)",
   },
 }))(HomePageHero);

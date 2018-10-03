@@ -56,7 +56,7 @@ export default withStyles((theme) => ({
     },
   },
   teamHeading: {
-    fontSize: "28px",
+    fontSize: "26px",
     color: "#55C3BA",
     fontWeight: "800",
     display: "flex",
@@ -69,7 +69,7 @@ export default withStyles((theme) => ({
     },
 
     [theme.breakpoints[900]]: {
-      fontSize: "36px",
+      fontSize: "30px",
     },
   },
   teamSubHeading: {

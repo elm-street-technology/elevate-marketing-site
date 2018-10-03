@@ -85,6 +85,8 @@ export default withStyles((theme) => ({
     display: "flex",
     flexDirection: "column",
     width: "100%",
+    maxWidth: "1080px",
+    margin: "0 auto",
   },
   footerContainer: {
     display: "grid",
