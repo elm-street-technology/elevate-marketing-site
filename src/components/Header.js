@@ -29,7 +29,7 @@ class Header extends Component {
       <header className={classes.root}>
         <Container>
           <div className={classes.inner}>
-            <Link to="/">
+            <Link className={classes.logo} to="/">
               <svg width={140} viewBox="0 0 200 63">
                 <defs />
                 <path
@@ -81,7 +81,10 @@ export default withStyles((theme) => ({
   inner: {
     display: "flex",
     alignItems: "center",
-    justifyContent: "space-between",
+    justifyContent: "flex-end",
+  },
+  logo: {
+    marginRight: "auto",
   },
   navDesktop: {
     display: "none",
@@ -116,7 +119,6 @@ export default withStyles((theme) => ({
     padding: "14px 16px",
     borderRadius: "4px",
     alignSelf: "flex-end",
-    marginLeft: "auto",
 
     [theme.breakpoints[900]]: {
       display: "block",

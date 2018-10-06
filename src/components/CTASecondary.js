@@ -1,6 +1,7 @@
 import React from "react";
 import classNames from "classnames";
 import withStyles from "elevate-ui/withStyles";
+import Link from "gatsby-link";
 
 const CTASecondary = ({ classes, className }) => (
   <div className={classNames(classes.root, className)}>
@@ -10,7 +11,9 @@ const CTASecondary = ({ classes, className }) => (
         <p className={classes.description}>Schedule a demo call</p>
       </div>
       <div className={classes.ctaRight}>
-        <button className={classes.ctaBtn}>Get started</button>
+        <Link to="/get-started" className={classes.getStartedLink}>
+          <button className={classes.ctaBtn}>Get started</button>
+        </Link>
       </div>
     </div>
   </div>

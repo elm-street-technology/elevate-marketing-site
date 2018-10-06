@@ -57,7 +57,7 @@ export default withStyles((theme) => ({
     display: "flex",
     alignContent: "center",
     justifyContent: "center",
-    backgroundColor: "#44cfa5",
+    backgroundColor: "#55C3BA",
     fontSize: "14px",
     letterSpacing: ".25px",
     color: "#fff",

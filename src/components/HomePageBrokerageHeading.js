@@ -1,25 +1,14 @@
 import React from "react";
 import classNames from "classnames";
 import withStyles from "elevate-ui/withStyles";
-import Icon from "elevate-ui/Icon/Icon";
+import GroupAdd from "elevate-ui/Icon/groupadd";
 
 const HomePageBrokerageHeading = ({ classes, className }) => {
   return (
     <div className={classNames(classes.root, className)}>
       <div className={classes.brokerageHeadingContainer}>
         <div className={classes.iconContainer}>
-          <Icon name={"PersonAdd"} style={{ color: "#FFC629" }} />
-          <div
-            style={{
-              backgroundColor: "#FFC629",
-              opacity: ".2",
-              position: "absolute",
-              width: "100%",
-              height: "100%",
-              top: 0,
-              left: 0,
-            }}
-          />
+          <GroupAdd name={"PersonAdd"} style={{ color: "#FFC629" }} size={36} />
         </div>
         <div className={classes.brokerageHeading}>Brokers</div>
       </div>
@@ -71,9 +60,6 @@ export default withStyles((theme) => ({
     },
   },
   iconContainer: {
-    width: "55px",
-    height: "55px",
-    borderRadius: "50%",
     display: "flex",
     justifyContent: "center",
     alignItems: "center",

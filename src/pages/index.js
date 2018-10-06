@@ -79,7 +79,7 @@ class Index extends Component {
           "Search MLS by list or map",
           "Intelligent KPI Dashboard",
         ],
-        icon: "PersonAdd",
+        icon: "GroupAdd",
         color: "#FFC629",
         borderColor: "rgba(255, 198, 41, .4)",
         tagline: "I'm a broker",
@@ -213,7 +213,6 @@ export default withStyles((theme) => ({
     paddingBottom: "60px",
 
     [theme.breakpoints[900]]: {
-      paddingBottom: "140px",
       paddingTop: "100px",
     },
   },
@@ -291,7 +290,7 @@ export default withStyles((theme) => ({
     textAlign: "center",
     fontSize: "32px",
     fontWeight: "800",
-    color: "#413F48",
+    color: "#5A5B5C",
     width: "100%",
     maxWidth: "900px",
   },

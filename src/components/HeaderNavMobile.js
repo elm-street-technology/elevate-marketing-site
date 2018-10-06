@@ -27,6 +27,18 @@ const HeaderNavMobile = ({ classes, className, onMenuClose }) => {
           <Link className={classes.listItemLink} to="/elevate-ignite">
             <li className={classes.listItem}>Ignite</li>
           </Link>
+          <Link className={classes.listItemLink} to="/elevate-elite">
+            <li className={classes.listItem}>Elite</li>
+          </Link>
+          <Link className={classes.listItemLink} to="/elevate-elite-pro">
+            <li className={classes.listItem}>Elite Pro</li>
+          </Link>
+          <Link className={classes.listItemLink} to="/">
+            <li className={classes.listItem}>CRM</li>
+          </Link>
+          <Link className={classes.listItemLink} to="/">
+            <li className={classes.listItem}>Recruiter</li>
+          </Link>
         </ul>
       </div>
       <div className={classes.link}>
@@ -60,6 +72,20 @@ const HeaderNavMobile = ({ classes, className, onMenuClose }) => {
           </Link>
           <Link className={classes.listItemLink} to="/dmca">
             <li className={classes.listItem}>DCMA Notice</li>
+          </Link>
+        </ul>
+      </div>
+      <div className={classes.link}>
+        <div className={classes.navItem}>Bundles</div>
+        <ul className={classes.dropDown}>
+          <Link className={classes.listItemLink} to="/">
+            <li className={classes.listItem}>Agents</li>
+          </Link>
+          <Link className={classes.listItemLink} to="/">
+            <li className={classes.listItem}>Teams</li>
+          </Link>
+          <Link className={classes.listItemLink} to="/">
+            <li className={classes.listItem}>Brokers</li>
           </Link>
         </ul>
       </div>

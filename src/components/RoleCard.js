@@ -13,18 +13,7 @@ const RoleCard = ({ classes, className, role, handleRoleChange }) => {
         <div className={classes.roleCardInner}>
           <div className={classes.roleTitle}>
             <div className={classes.iconContainer}>
-              <Icon name={role.icon} style={{ color: role.color }} />
-              <div
-                style={{
-                  backgroundColor: role.color,
-                  opacity: ".2",
-                  position: "absolute",
-                  width: "100%",
-                  height: "100%",
-                  top: 0,
-                  left: 0,
-                }}
-              />
+              <Icon name={role.icon} style={{ color: role.color }} size={48} />
             </div>
             <div className={classes.roleHeading}>{role.name}</div>
             <div
@@ -116,9 +105,6 @@ export default withStyles((theme) => ({
     listStlye: "none",
   },
   iconContainer: {
-    width: "55px",
-    height: "55px",
-    borderRadius: "50%",
     display: "flex",
     justifyContent: "center",
     alignItems: "center",

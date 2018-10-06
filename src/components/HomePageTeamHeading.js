@@ -1,7 +1,8 @@
 import React from "react";
 import classNames from "classnames";
 import withStyles from "elevate-ui/withStyles";
-import Icon from "elevate-ui/Icon/Icon";
+import People from "elevate-ui/Icon/people";
+import InfoOutline from "elevate-ui/Icon/infooutline";
 
 const HomePageTeamHeading = ({ classes, className }) => {
   return (
@@ -9,18 +10,7 @@ const HomePageTeamHeading = ({ classes, className }) => {
       <div className={classes.teamHeading}>
         <div className={classes.teamHeadingLeft}>
           <div className={classes.iconContainer}>
-            <Icon name={"People"} style={{ color: "#55C3BA" }} />
-            <div
-              style={{
-                backgroundColor: "#55C3BA",
-                opacity: ".2",
-                position: "absolute",
-                width: "100%",
-                height: "100%",
-                top: 0,
-                left: 0,
-              }}
-            />
+            <People size={32} style={{ color: "#55C3BA" }} />
           </div>
           <div style={{ paddingLeft: "10px" }}>Teams</div>
         </div>
@@ -32,7 +22,7 @@ const HomePageTeamHeading = ({ classes, className }) => {
         </h2>
       </div>
       <div className={classes.teamIncludesContainer}>
-        <Icon name={"InfoOutline"} style={{ color: "#55C3BA" }} />
+        <InfoOutline style={{ color: "#55C3BA" }} />
         <div className={classes.teamIncludes}>
           Includes all Agents features plus
         </div>
@@ -89,9 +79,6 @@ export default withStyles((theme) => ({
     },
   },
   iconContainer: {
-    width: "55px",
-    height: "55px",
-    borderRadius: "50%",
     display: "flex",
     justifyContent: "center",
     alignItems: "center",
