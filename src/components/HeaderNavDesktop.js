@@ -2,7 +2,7 @@ import React from "react";
 import Link from "gatsby-link";
 import withStyles from "elevate-ui/withStyles";
 import classNames from "classnames";
-import ArrowDropDown from "elevate-ui/Icon/ArrowDropDown";
+import ArrowDropDown from "elevate-ui-icons/ArrowDropDown";
 
 const HeaderNavDesktop = ({ classes, className }) => {
   return (

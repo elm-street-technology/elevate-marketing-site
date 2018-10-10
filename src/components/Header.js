@@ -5,7 +5,7 @@ import Container from "./Container";
 import classNames from "classnames";
 import HeaderNavDesktop from "./HeaderNavDesktop";
 import HeaderNavMobile from "./HeaderNavMobile";
-import Dehaze from "elevate-ui/Icon/Dehaze";
+import Dehaze from "elevate-ui-icons/Dehaze";
 import noScroll from "no-scroll";
 
 class Header extends Component {

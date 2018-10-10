@@ -2,7 +2,7 @@ import React from "react";
 import Link from "gatsby-link";
 import withStyles from "elevate-ui/withStyles";
 import classNames from "classnames";
-import Close from "elevate-ui/Icon/Close";
+import Close from "elevate-ui-icons/Close";
 
 const HeaderNavMobile = ({ classes, className, onMenuClose }) => {
   return (

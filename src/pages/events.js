@@ -7,7 +7,7 @@ import EventCardZero from "../components/EventCardZero";
 import Container from "../components/Container";
 import SEO from "../components/SEO";
 import Hexagons from "../images/hexagons.svg";
-import Search from "elevate-ui/Icon/Search";
+import Search from "elevate-ui-icons/Search";
 
 class Events extends Component {
   constructor(props) {

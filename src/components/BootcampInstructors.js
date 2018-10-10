@@ -2,7 +2,7 @@ import React from "react";
 import classNames from "classnames";
 import withStyles from "elevate-ui/withStyles";
 import ReactCardFlipper from "react-card-flipper";
-import ArrowForward from "elevate-ui/Icon/ArrowForward";
+import ArrowForward from "elevate-ui-icons/ArrowForward";
 import Plus from "../images/plus.svg";
 
 const BootcampInstructors = ({ classes, className, instructors }) => {

@@ -2,7 +2,7 @@ import React from "react";
 import classNames from "classnames";
 import withStyles from "elevate-ui/withStyles";
 import TeamsLaptop from "../images/teams-laptop.png";
-import Icon from "elevate-ui/Icon/Icon";
+import Icon from "elevate-ui-icons/Icon";
 
 const HomePageTeamFeatures = ({ classes, className }) => {
   return (

@@ -1,8 +1,8 @@
 import React from "react";
 import classNames from "classnames";
 import withStyles from "elevate-ui/withStyles";
-import People from "elevate-ui/Icon/people";
-import InfoOutline from "elevate-ui/Icon/infooutline";
+import People from "elevate-ui-icons/people";
+import InfoOutline from "elevate-ui-icons/infooutline";
 
 const HomePageTeamHeading = ({ classes, className }) => {
   return (

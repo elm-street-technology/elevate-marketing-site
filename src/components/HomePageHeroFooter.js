@@ -1,8 +1,8 @@
 import React from "react";
 import classNames from "classnames";
-import Person from "elevate-ui/Icon/Person";
-import GroupAdd from "elevate-ui/Icon/GroupAdd";
-import People from "elevate-ui/Icon/People";
+import Person from "elevate-ui-icons/Person";
+import GroupAdd from "elevate-ui-icons/GroupAdd";
+import People from "elevate-ui-icons/People";
 import withStyles from "elevate-ui/withStyles";
 import RoleCard from "../components/RoleCard";
 
