@@ -3,7 +3,10 @@ import withStyles from "elevate-ui/withStyles";
 import AgentLeads from "../images/agent-leads-bundle.png";
 import Security from "elevate-ui-icons/Security";
 
-const BundleSectionStandard = ({ classes }) => {
+const BundleSectionStandard = ({
+  classes,
+  section: { icon, heading, tagline, description, screenshot },
+}) => {
   return (
     <div className={classes.root}>
       <div className={classes.leftContainer}>

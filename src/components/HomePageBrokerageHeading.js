@@ -1,7 +1,7 @@
 import React from "react";
 import classNames from "classnames";
 import withStyles from "elevate-ui/withStyles";
-import GroupAdd from "elevate-ui-icons/groupadd";
+import GroupAdd from "elevate-ui-icons/GroupAdd";
 
 const HomePageBrokerageHeading = ({ classes, className }) => {
   return (

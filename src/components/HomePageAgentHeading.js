@@ -1,7 +1,7 @@
 import React from "react";
 import classNames from "classnames";
 import withStyles from "elevate-ui/withStyles";
-import Person from "elevate-ui-icons/person";
+import Person from "elevate-ui-icons/Person";
 
 const HomePageAgentHeading = ({ classes, className }) => {
   return (

@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import withStyles from "elevate-ui/withStyles";
 import Container from "../components/Container";
-import BundleHero from "../components/Bundlehero";
+import BundleHero from "../components/BundleHero";
 import BundleSectionStandard from "../components/BundleSectionStandard";
 import BundleSectionCentered from "../components/BundleSectionCentered";
 import BundleSectionInverted from "../components/BundleSectionInverted";
