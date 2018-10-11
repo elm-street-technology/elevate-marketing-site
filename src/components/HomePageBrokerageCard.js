@@ -1,7 +1,7 @@
 import React from "react";
 import classNames from "classnames";
 import withStyles from "elevate-ui/withStyles";
-import Icon from "elevate-ui/Icon/Icon";
+import Icon from "elevate-ui-icons/Icon";
 import BrokerDash from "../images/broker-dash-listings.png";
 
 const HomePageBrokerageCard = ({ classes, className, role }) => {
@@ -10,7 +10,7 @@ const HomePageBrokerageCard = ({ classes, className, role }) => {
       <div className={classes.brokerageCard}>
         <div className={classes.brokerageCardLeft}>
           <div className={classes.teamFeatureHead}>
-            <Icon name={"Dashboard"} style={{ color: "00A54D" }} />
+            <Icon name={"Dashboard"} style={{ color: "FFC629" }} />
             <div className={classes.teamFeatureHeading}>Dashboard</div>
           </div>
           <div className={classes.teamFeatureDesc}>
@@ -25,7 +25,7 @@ const HomePageBrokerageCard = ({ classes, className, role }) => {
             </span>
             <div
               style={{
-                backgroundColor: "#00A54D",
+                backgroundColor: "#FFC629",
                 opacity: ".2",
                 position: "absolute",
                 width: "100%",
@@ -55,7 +55,7 @@ export default withStyles((theme) => ({
     alignItems: "center",
   },
   teamFeatureHeading: {
-    color: "#2E2E35",
+    color: "#5A5B5C",
     fontWeight: "700",
     fontSize: "15px",
     paddingLeft: "6px",
@@ -66,7 +66,7 @@ export default withStyles((theme) => ({
     textAlign: "center",
     lineHeight: "45px",
     padding: "0 12px",
-    color: "#00A54D",
+    color: "#FFC629",
     maxWidth: "700px",
     [theme.breakpoints[900]]: {
       fontSize: "30px",
@@ -97,12 +97,13 @@ export default withStyles((theme) => ({
   },
   teamFeatureDesc: {
     fontSize: "13px",
-    color: "#64616E",
+    color: "#5A5B5C",
     paddingTop: "15px",
     paddingLeft: "30px",
     lineHeight: "18px",
   },
   bottomTab: {
+    color: "#5A5B5C",
     display: "flex",
     fontSize: "12px",
     fontWeight: "600",

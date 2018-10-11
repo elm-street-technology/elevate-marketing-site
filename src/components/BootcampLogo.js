@@ -1,7 +1,7 @@
 import React from "react";
 import classNames from "classnames";
 import withStyles from "elevate-ui/withStyles";
-import PeopleOutline from "elevate-ui/Icon/PeopleOutline";
+import PeopleOutline from "elevate-ui-icons/PeopleOutline";
 
 const BootcampFaqs = ({ classes, className }) => {
   return (

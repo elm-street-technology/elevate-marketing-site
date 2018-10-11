@@ -1,30 +1,20 @@
 import React from "react";
 import classNames from "classnames";
 import withStyles from "elevate-ui/withStyles";
-import Icon from "elevate-ui/Icon/Icon";
+import GroupAdd from "elevate-ui-icons/GroupAdd";
 
 const HomePageBrokerageHeading = ({ classes, className }) => {
   return (
     <div className={classNames(classes.root, className)}>
       <div className={classes.brokerageHeadingContainer}>
         <div className={classes.iconContainer}>
-          <Icon name={"PersonAdd"} style={{ color: "#00A54D" }} />
-          <div
-            style={{
-              backgroundColor: "#00A54D",
-              opacity: ".2",
-              position: "absolute",
-              width: "100%",
-              height: "100%",
-              top: 0,
-              left: 0,
-            }}
-          />
+          <GroupAdd name={"PersonAdd"} style={{ color: "#FFC629" }} size={36} />
         </div>
-        <div className={classes.brokerageHeading}>Brokerages</div>
+        <div className={classes.brokerageHeading}>Brokers</div>
       </div>
       <div className={classes.brokerageSubHeading}>
-        The tool brokerage firms reach for to grow their business
+        Everything you and your brokerage need to increase leads and retain
+        clients.
       </div>
     </div>
   );
@@ -47,7 +37,7 @@ export default withStyles((theme) => ({
     textAlign: "center",
     lineHeight: "45px",
     padding: "0 12px",
-    color: "#00A54D",
+    color: "#FFC629",
     maxWidth: "700px",
 
     [theme.breakpoints[900]]: {
@@ -59,20 +49,17 @@ export default withStyles((theme) => ({
     alignSelf: "center",
     paddingTop: "16px",
     fontSize: "20px",
-    color: "#2E2E35",
-    fontWeight: "600",
+    color: "#5A5B5C",
     textAlign: "center",
     maxWidth: "400px",
     lineHeight: "28px",
+    marginBottom: "40px",
 
     [theme.breakpoints[600]]: {
       maxWidth: "700px",
     },
   },
   iconContainer: {
-    width: "55px",
-    height: "55px",
-    borderRadius: "50%",
     display: "flex",
     justifyContent: "center",
     alignItems: "center",

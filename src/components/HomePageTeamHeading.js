@@ -1,7 +1,8 @@
 import React from "react";
 import classNames from "classnames";
 import withStyles from "elevate-ui/withStyles";
-import Icon from "elevate-ui/Icon/Icon";
+import People from "elevate-ui-icons/People";
+import InfoOutline from "elevate-ui-icons/InfoOutline";
 
 const HomePageTeamHeading = ({ classes, className }) => {
   return (
@@ -9,23 +10,9 @@ const HomePageTeamHeading = ({ classes, className }) => {
       <div className={classes.teamHeading}>
         <div className={classes.teamHeadingLeft}>
           <div className={classes.iconContainer}>
-            <Icon name={"People"} style={{ color: "#0092FF" }} />
-            <div
-              style={{
-                backgroundColor: "#0092FF",
-                opacity: ".2",
-                position: "absolute",
-                width: "100%",
-                height: "100%",
-                top: 0,
-                left: 0,
-              }}
-            />
+            <People size={32} style={{ color: "#55C3BA" }} />
           </div>
           <div style={{ paddingLeft: "10px" }}>Teams</div>
-        </div>
-        <div className={classes.teamBtnContainer}>
-          <button className={classes.teamBtn}>More Teams Features</button>
         </div>
       </div>
       <div className={classes.teamSubHeading}>
@@ -35,7 +22,7 @@ const HomePageTeamHeading = ({ classes, className }) => {
         </h2>
       </div>
       <div className={classes.teamIncludesContainer}>
-        <Icon name={"InfoOutline"} style={{ color: "#0092FF" }} />
+        <InfoOutline style={{ color: "#55C3BA" }} />
         <div className={classes.teamIncludes}>
           Includes all Agents features plus
         </div>
@@ -59,12 +46,12 @@ export default withStyles((theme) => ({
     },
   },
   teamHeading: {
-    fontSize: "28px",
-    color: "#0092FF",
+    fontSize: "26px",
+    color: "#55C3BA",
     fontWeight: "800",
     display: "flex",
+    justifyContent: "center",
     alignItems: "center",
-    justifyContent: "space-between",
     flexDirection: "column",
 
     [theme.breakpoints[600]]: {
@@ -72,31 +59,26 @@ export default withStyles((theme) => ({
     },
 
     [theme.breakpoints[900]]: {
-      fontSize: "36px",
+      fontSize: "30px",
     },
   },
   teamSubHeading: {
-    color: "#2E2E35",
+    color: "#5A5B5C",
+    textAlign: "center",
     fontSize: "17px",
-    maxWidth: "440px",
     lineHeight: "24px",
     marginTop: "20px",
+    marginBottom: "40px",
     margin: "auto",
-    textAlign: "center",
+    justifyContent: "center",
 
     [theme.breakpoints[600]]: {
-      maxWidth: "320px",
       lineHeight: "30px",
       fontSize: "20px",
-      textAlign: "left",
-      margin: "0",
       marginTop: "20px",
     },
   },
   iconContainer: {
-    width: "55px",
-    height: "55px",
-    borderRadius: "50%",
     display: "flex",
     justifyContent: "center",
     alignItems: "center",
@@ -108,12 +90,18 @@ export default withStyles((theme) => ({
   },
   teamBtn: {
     borderRadius: "28px",
-    border: "1px solid #0092FF",
+    border: "1px solid #55C3BA",
     padding: "12px 30px",
     fontSize: "14px",
     margin: "auto",
-    color: "#0092FF",
+    color: "#55C3BA",
     fontWeight: "600",
+
+    "&:hover": {
+      color: "#FFF",
+      backgroundColor: "#55C3BA",
+      transition: "all .3s ease",
+    },
   },
   teamIncludesContainer: {
     display: "flex",
@@ -128,7 +116,7 @@ export default withStyles((theme) => ({
     },
   },
   teamIncludes: {
-    color: "#2E2E35",
+    color: "#5A5B5C",
     fontWeight: "700",
     paddingLeft: "6px",
   },

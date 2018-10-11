@@ -103,6 +103,7 @@ export default withStyles((theme) => ({
     alignItems: "center",
   },
   heading: {
+    color: "#2E2E35",
     fontSize: "32px",
     fontWeight: "700",
     marginRight: "auto",
@@ -165,7 +166,7 @@ export default withStyles((theme) => ({
     display: "flex",
     alignContent: "center",
     justifyContent: "center",
-    backgroundColor: "#A373EF",
+    backgroundColor: "#2E7FC2",
     fontSize: "14px",
     letterSpacing: ".25px",
     color: "#fff",

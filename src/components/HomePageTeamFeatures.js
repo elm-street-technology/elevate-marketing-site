@@ -2,7 +2,7 @@ import React from "react";
 import classNames from "classnames";
 import withStyles from "elevate-ui/withStyles";
 import TeamsLaptop from "../images/teams-laptop.png";
-import Icon from "elevate-ui/Icon/Icon";
+import Icon from "elevate-ui-icons/Icon";
 
 const HomePageTeamFeatures = ({ classes, className }) => {
   return (
@@ -11,7 +11,7 @@ const HomePageTeamFeatures = ({ classes, className }) => {
         <div className={classes.teamFeaturesContainer}>
           <div className={classes.teamFeatures}>
             <div className={classes.teamFeatureHead}>
-              <Icon name={"RecordVoiceOver"} style={{ color: "#0092FF" }} />
+              <Icon name={"RecordVoiceOver"} style={{ color: "#55C3BA" }} />
               <div className={classes.teamFeatureHeading}>Lead routing</div>
             </div>
             <div className={classes.teamFeatureDesc}>
@@ -21,7 +21,7 @@ const HomePageTeamFeatures = ({ classes, className }) => {
           </div>
           <div className={classes.teamFeatures}>
             <div className={classes.teamFeatureHead}>
-              <Icon name={"LocationSearching"} style={{ color: "#0092FF" }} />
+              <Icon name={"LocationSearching"} style={{ color: "#55C3BA" }} />
               <div className={classes.teamFeatureHeading}>Lead parsing</div>
             </div>
             <div className={classes.teamFeatureDesc}>
@@ -31,7 +31,7 @@ const HomePageTeamFeatures = ({ classes, className }) => {
           </div>
           <div className={classes.teamFeatures}>
             <div className={classes.teamFeatureHead}>
-              <Icon name={"Dashboard"} style={{ color: "#0092FF" }} />
+              <Icon name={"Dashboard"} style={{ color: "#55C3BA" }} />
               <div className={classes.teamFeatureHeading}>Team dashboard</div>
             </div>
             <div className={classes.teamFeatureDesc}>
@@ -87,7 +87,7 @@ export default withStyles((theme) => ({
     alignItems: "center",
   },
   teamFeatureHeading: {
-    color: "#2E2E35",
+    color: "#5A5B5C",
     fontWeight: "700",
     fontSize: "15px",
     paddingLeft: "6px",
@@ -97,7 +97,7 @@ export default withStyles((theme) => ({
   },
   teamFeatureDesc: {
     fontSize: "13px",
-    color: "#64616E",
+    color: "#5A5B5C",
     paddingTop: "15px",
     paddingLeft: "30px",
     lineHeight: "18px",

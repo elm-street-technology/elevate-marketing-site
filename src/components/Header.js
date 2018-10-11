@@ -5,7 +5,7 @@ import Container from "./Container";
 import classNames from "classnames";
 import HeaderNavDesktop from "./HeaderNavDesktop";
 import HeaderNavMobile from "./HeaderNavMobile";
-import Dehaze from "elevate-ui/Icon/Dehaze";
+import Dehaze from "elevate-ui-icons/Dehaze";
 import noScroll from "no-scroll";
 
 class Header extends Component {
@@ -29,7 +29,7 @@ class Header extends Component {
       <header className={classes.root}>
         <Container>
           <div className={classes.inner}>
-            <Link to="/">
+            <Link className={classes.logo} to="/">
               <svg width={140} viewBox="0 0 200 63">
                 <defs />
                 <path
@@ -81,7 +81,10 @@ export default withStyles((theme) => ({
   inner: {
     display: "flex",
     alignItems: "center",
-    justifyContent: "space-between",
+    justifyContent: "flex-end",
+  },
+  logo: {
+    marginRight: "auto",
   },
   navDesktop: {
     display: "none",
@@ -107,17 +110,15 @@ export default withStyles((theme) => ({
     display: "none",
     alignContent: "center",
     justifyContent: "center",
-    backgroundColor: "transparent",
     fontSize: "14px",
     fontWeight: "700",
     letterSpacing: ".25px",
-    color: theme.colors.primary,
-    border: `1px solid ${theme.colors.primary}`,
+    backgroundColor: theme.colors.primary,
+    color: "#FFF",
     textDecoration: "none",
-    padding: "12px 16px",
+    padding: "14px 16px",
     borderRadius: "4px",
     alignSelf: "flex-end",
-    marginLeft: "auto",
 
     [theme.breakpoints[900]]: {
       display: "block",

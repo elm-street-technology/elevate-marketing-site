@@ -5,12 +5,7 @@ import CallToActionForm from "../components/CallToActionForm";
 
 const CallToAction = ({ classes, className }) => (
   <div className={classNames(classes.root, className)}>
-    <h1 className={classes.heading}>
-      Let us give you the full tour{" "}
-      <span role="img" aria-label="hand waving emoji">
-        👋
-      </span>
-    </h1>
+    <h1 className={classes.heading}>Let us give you the full tour</h1>
     <p className={classes.description}>
       Get a free and in-depth tour from one of our Elevate Agent Success
       coaches.
@@ -25,7 +20,7 @@ export default withStyles((theme) => ({
     flexDirection: "column",
     justifyContent: "center",
     alignContent: "center",
-    backgroundColor: "#FFF4F0",
+    backgroundColor: "#FFF",
     padding: "48px 12px",
   },
   formContainer: {
@@ -36,17 +31,19 @@ export default withStyles((theme) => ({
     margin: "32px auto 0 auto",
   },
   heading: {
-    fontSize: "20px",
+    color: "#5A5B5C",
+    fontSize: "24px",
     fontWeight: "600",
     lineHeight: "1.6",
     textAlign: "center",
 
     [theme.breakpoints[900]]: {
-      fontSize: "24px",
+      fontSize: "28px",
     },
   },
   description: {
-    fontSize: "14px",
+    color: "#5A5B5C",
+    fontSize: "16px",
     lineHeight: "1.6",
     marginTop: "12px",
     textAlign: "center",

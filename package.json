@@ -16,7 +16,7 @@
   "dependencies": {
     "chalk": "^2.4.1",
     "contentful-import": "^7.0.2",
-    "elevate-ui": "^0.9.3",
+    "elevate-ui": "^0.16.0",
     "formik": "^1.0.3",
     "gatsby": "^1.9.272",
     "gatsby-image": "^1.0.54",

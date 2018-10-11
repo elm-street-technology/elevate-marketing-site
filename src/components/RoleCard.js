@@ -1,45 +1,19 @@
 import React from "react";
 import classNames from "classnames";
 import withStyles from "elevate-ui/withStyles";
-import Icon from "elevate-ui/Icon/Icon";
+import Icon from "elevate-ui-icons/Icon";
 
-const RoleCard = ({ classes, className, role }) => {
+const RoleCard = ({ classes, className, role, handleRoleChange }) => {
   return (
-    <div className={classNames(classes.root, className)}>
-      {role.topTab && (
-        <div className={classes.topTab}>
-          <span style={{ zIndex: "1", position: "relative" }}>
-            {role.topTab}
-          </span>
-          <div
-            style={{
-              backgroundColor: role.color,
-              opacity: ".2",
-              position: "absolute",
-              width: "100%",
-              height: "100%",
-              top: 0,
-              left: 0,
-            }}
-          />
-        </div>
-      )}
+    <div
+      className={classNames(classes.root, className)}
+      style={{ borderColor: role.borderColor }}
+    >
       <div className={classes.roleCard}>
         <div className={classes.roleCardInner}>
           <div className={classes.roleTitle}>
             <div className={classes.iconContainer}>
-              <Icon name={role.icon} style={{ color: role.color }} />
-              <div
-                style={{
-                  backgroundColor: role.color,
-                  opacity: ".2",
-                  position: "absolute",
-                  width: "100%",
-                  height: "100%",
-                  top: 0,
-                  left: 0,
-                }}
-              />
+              <Icon name={role.icon} style={{ color: role.color }} size={48} />
             </div>
             <div className={classes.roleHeading}>{role.name}</div>
             <div
@@ -60,10 +34,13 @@ const RoleCard = ({ classes, className, role }) => {
           </div>
         </div>
         <button
+          onClick={() => {
+            handleRoleChange(role.name);
+          }}
           className={classes.roleBtn}
           style={{ backgroundColor: role.color }}
         >
-          {role.btnText}
+          Get Started
         </button>
       </div>
     </div>
@@ -76,23 +53,15 @@ export default withStyles((theme) => ({
     flex: "1",
     flexWrap: "wrap",
     minWidth: "40%",
-    marginLeft: "10px",
-    marginRight: "10px",
-    marginTop: "14px",
-    justifyContent: "space-between",
+    justifyContent: "center",
+    textAlign: "center",
     flexDirection: "column",
-    background: "#fff", // material-design 1dp
     transition: "all 200ms ease-in-out",
     overflow: "hidden",
     userSelect: "none",
-    borderRadius: "12px",
-    boxShadow: "0px 12px 24px rgba(0, 0, 0, .1)",
-
-    [theme.breakpoints[900]]: {
-      width: "340px",
-      minWidth: "0%",
-      marginTop: "0px",
-    },
+    border: "12px solid",
+    borderRadius: "6px 6px 0 0",
+    borderBottom: "none",
   },
   topTab: {
     display: "flex",
@@ -105,24 +74,19 @@ export default withStyles((theme) => ({
   roleTitle: {
     display: "flex",
     flexDirection: "column",
-    fontSize: "18px",
+    fontSize: "20px",
     fontWeight: "700",
     paddingTop: "20px",
     paddingBottom: "20px",
   },
   roleHeading: {
     paddingTop: "12px",
-    paddingLeft: "10px",
-    color: "#2E2E35",
+    color: "#5A5B5C",
   },
   roleSubHeading: {
     textTransform: "uppercase",
-    fontSize: "12px",
+    fontSize: "18px",
     paddingTop: "10px",
-    paddingLeft: "10px",
-  },
-  roleCardInner: {
-    paddingLeft: "12px",
   },
   roleCard: {
     padding: "20px 14px 14px 14px",
@@ -132,8 +96,7 @@ export default withStyles((theme) => ({
   },
   feature: {
     padding: "10px 0",
-    marginLeft: "10px",
-    color: "#2E2E35",
+    color: "#5A5B5C",
     fontWeight: "600",
   },
   featureList: {
@@ -142,24 +105,21 @@ export default withStyles((theme) => ({
     listStlye: "none",
   },
   iconContainer: {
-    width: "55px",
-    height: "55px",
-    borderRadius: "50%",
     display: "flex",
     justifyContent: "center",
     alignItems: "center",
     position: "relative",
     overflow: "hidden",
+    margin: "auto",
   },
   personIcon: {
     fill: "#F15953",
   },
   roleBtn: {
     padding: "12px",
-    width: "100%",
+    width: "50%",
     color: "#FFF",
     borderRadius: "4px",
-    backgroundColor: "#F15953",
     margin: "auto",
     fontSize: "14px",
     fontWeight: "600",
