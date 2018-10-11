@@ -1,26 +1,30 @@
 import React from "react";
 import classNames from "classnames";
 import withStyles from "elevate-ui/withStyles";
-import Laptop from "../images/laptop.png";
-import GroupAdd from "elevate-ui-icons/GroupAdd";
+import * as Icons from "elevate-ui-icons";
 
-const BundleHero = ({ classes, className, bundles }) => {
+const BundleHero = ({ classes, className, hero }) => {
+  if (!hero) {
+    return null;
+  }
+  const IconComponent = Icons[hero.icon];
+
   return (
     <div className={classNames(classes.root)}>
       <div className={classNames(classes.backgroundContainer)}>
         <div className={classes.headingContainer}>
           <div className={classes.headingIcon}>
-            <GroupAdd className={classes.icon} size={26} />
-            {bundles.Brokers.name}
+            <IconComponent className={classes.icon} size={26} />
+            {hero.name}
           </div>
-          <div className={classes.heading}>{bundles.Brokers.hero.tagline}</div>
+          <div className={classes.heading}>{hero.tagline}</div>
           <div className={classes.subHeading}>
-            {bundles.Brokers.hero.description}
+            {hero.description.description}
           </div>
           <img
-            className={classes.laptop}
-            src={Laptop}
-            alt={"laptop with screenshot of app"}
+            className={classes.screenshot}
+            src={hero.screenshot.file.url}
+            alt={"screenshot of bundle"}
           />
         </div>
       </div>
@@ -96,7 +100,7 @@ export default withStyles((theme) => ({
     fill: "#FFC629",
     marginRight: "6px",
   },
-  laptop: {
+  screenshot: {
     maxWidth: "100%",
 
     [theme.breakpoints[1200]]: {

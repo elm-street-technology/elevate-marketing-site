@@ -1,22 +1,17 @@
 import React from "react";
 import withStyles from "elevate-ui/withStyles";
-import GroupAdd from "elevate-ui-icons/GroupAdd";
+import * as Icons from "elevate-ui-icons";
 
-const BundleCard = ({ classes }) => {
+const BundleCard = ({ classes, icon, headline, tagline, description }) => {
+  const Icon = Icons[icon];
   return (
     <div className={classes.root}>
       <div className={classes.icon}>
-        <GroupAdd size={28} />
+        <Icon size={28} />
       </div>
-      <div className={classes.heading}>Asset Management</div>
-      <div className={classes.tagline}>
-        Consolidate all your marketing collateral in one storage space.
-      </div>
-      <div className={classes.description}>
-        Our asset management library makes it simple and fast to store marketing
-        collateral and important documentation and be able to "push" to offices
-        and agents.
-      </div>
+      <div className={classes.heading}>{headline}</div>
+      <div className={classes.tagline}>{tagline}</div>
+      <div className={classes.description}>{description};</div>
     </div>
   );
 };

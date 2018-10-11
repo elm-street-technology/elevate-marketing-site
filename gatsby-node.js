@@ -28,6 +28,31 @@ exports.createPages = ({ graphql, boundActionCreators }) => {
     });
   });
 
+  const loadBundles = new Promise((resolve, reject) => {
+    graphql(`
+      {
+        allContentfulBundle {
+          edges {
+            node {
+              slug
+            }
+          }
+        }
+      }
+    `).then((result) => {
+      result.data.allContentfulBundle.edges.map(({ node }) => {
+        createPage({
+          path: `${node.slug}/`,
+          component: path.resolve(`./src/templates/bundle.js`),
+          context: {
+            slug: node.slug,
+          },
+        });
+      });
+      resolve();
+    });
+  });
+
   const loadPages = new Promise((resolve, reject) => {
     graphql(`
       {
@@ -155,6 +180,7 @@ exports.createPages = ({ graphql, boundActionCreators }) => {
 
   return Promise.all([
     loadBootcamps,
+    loadBundles,
     loadPages,
     loadPosts,
     loadProducts,

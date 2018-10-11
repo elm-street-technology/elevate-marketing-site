@@ -31,10 +31,10 @@ const HeaderNavDesktop = ({ classes, className }) => {
           <Link className={classes.listItemLink} to="elevate-elite-pro">
             <li className={classes.listItem}>Elite Pro</li>
           </Link>
-          <Link className={classes.listItemLink} to="/elevate-ignite">
+          <Link className={classes.listItemLink} to="/crm">
             <li className={classes.listItem}>CRM</li>
           </Link>
-          <Link className={classes.listItemLink} to="/">
+          <Link className={classes.listItemLink} to="/recruiter">
             <li className={classes.listItem}>Recruiter</li>
           </Link>
         </ul>
@@ -85,13 +85,13 @@ const HeaderNavDesktop = ({ classes, className }) => {
           <ArrowDropDown size={20} />
         </div>
         <ul className={classes.dropDown}>
-          <Link className={classes.listItemLink} to="/">
+          <Link className={classes.listItemLink} to="/agents">
             <li className={classes.listItem}>Agents</li>
           </Link>
-          <Link className={classes.listItemLink} to="/">
+          <Link className={classes.listItemLink} to="/teams">
             <li className={classes.listItem}>Teams</li>
           </Link>
-          <Link className={classes.listItemLink} to="/">
+          <Link className={classes.listItemLink} to="/brokers">
             <li className={classes.listItem}>Brokers</li>
           </Link>
         </ul>

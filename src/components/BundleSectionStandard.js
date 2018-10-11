@@ -1,34 +1,30 @@
 import React from "react";
 import withStyles from "elevate-ui/withStyles";
-import AgentLeads from "../images/agent-leads-bundle.png";
-import Security from "elevate-ui-icons/Security";
+import * as Icons from "elevate-ui-icons";
 
 const BundleSectionStandard = ({
   classes,
-  section: { icon, heading, tagline, description, screenshot },
+  icon,
+  heading,
+  tagline,
+  description,
+  screenshot,
 }) => {
+  const Icon = Icons[icon];
   return (
     <div className={classes.root}>
       <div className={classes.leftContainer}>
         <div className={classes.heading}>
-          <Security className={classes.icon} size={24} />
-          Security
+          <Icon className={classes.icon} size={24} />
+          {heading}
         </div>
-        <div className={classes.tagline}>Increase Agent Adoption</div>
-        <div className={classes.description}>
-          The #1 challenge for brokerage level business systems is the lack of
-          agent adoption. We've solved this challenge by providing the brokerage
-          with unparalleled access to key performance indicators and activities
-          while protecting the contact record details for the agent's databases.
-          Research shows that agents will more readily use broker provided tools
-          after they know their contacts, spheres of influence and databases are
-          protected.
-        </div>
+        <div className={classes.tagline}>{tagline}</div>
+        <div className={classes.description}>{description}</div>
       </div>
       <div className={classes.screenshot}>
         <img
           className={classes.screenshotImage}
-          src={AgentLeads}
+          src={screenshot}
           alt={"screenshot"}
           style={{ maxWidth: "100%" }}
         />

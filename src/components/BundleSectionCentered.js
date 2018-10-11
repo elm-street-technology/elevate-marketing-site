@@ -1,28 +1,30 @@
 import React from "react";
 import withStyles from "elevate-ui/withStyles";
-import AgentLeads from "../images/agent-leads-bundle.png";
-import InsertChart from "elevate-ui-icons/InsertChart";
+import * as Icons from "elevate-ui-icons";
 
-const BundleSectionCentered = ({ classes }) => {
+const BundleSectionCentered = ({
+  classes,
+  heading,
+  tagline,
+  icon,
+  screenshot,
+  description,
+}) => {
+  const Icon = Icons[icon];
   return (
     <div className={classes.root}>
       <div className={classes.leftContainer}>
         <div className={classes.heading}>
-          <InsertChart className={classes.icon} size={24} />
-          Insights
+          <Icon className={classes.icon} size={24} />
+          {heading}
         </div>
-        <div className={classes.tagline}>
-          Visibility into Key Performance Indicators that drive revenue
-        </div>
-        <div className={classes.description}>
-          Our card-based dashboard helps you gather more of the important data
-          you need to analyze so you can make smarter business decisions.
-        </div>
+        <div className={classes.tagline}>{tagline}</div>
+        <div className={classes.description}>{description}</div>
       </div>
       <div className={classes.screenshot}>
         <img
           className={classes.screenshotImage}
-          src={AgentLeads}
+          src={screenshot}
           alt={"screenshot"}
           style={{ maxWidth: "100%" }}
         />

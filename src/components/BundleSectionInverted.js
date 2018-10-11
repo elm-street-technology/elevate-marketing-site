@@ -1,30 +1,30 @@
 import React from "react";
 import withStyles from "elevate-ui/withStyles";
-import AgentLeads from "../images/agent-leads-bundle.png";
-import PersonPin from "elevate-ui-icons/PersonPin";
+import * as Icons from "elevate-ui-icons";
 
-const BundleSectionInverted = ({ classes }) => {
+const BundleSectionInverted = ({
+  classes,
+  heading,
+  tagline,
+  icon,
+  screenshot,
+  description,
+}) => {
+  const Icon = Icons[icon];
   return (
     <div className={classes.root}>
       <div className={classes.rightContainer}>
         <div className={classes.heading}>
-          <PersonPin className={classes.icon} size={24} />
-          Lead Routing
+          <Icon className={classes.icon} size={24} />
+          {heading}
         </div>
-        <div className={classes.tagline}>
-          Lead aggregation, routing, and tracking has never been easier
-        </div>
-        <div className={classes.description}>
-          Funnel leads from any source and be confident that 100% of your
-          customers will receive text and email responses within five minutes.
-          Agents have instant access to leads for follow up and the entire
-          process is tracked and measured so you can better manage your ROI.
-        </div>
+        <div className={classes.tagline}>{tagline}</div>
+        <div className={classes.description}>{description}</div>
       </div>
       <div className={classes.screenshot}>
         <img
           className={classes.screenshotImage}
-          src={AgentLeads}
+          src={screenshot}
           alt={"screenshot"}
           style={{ maxWidth: "100%" }}
         />
