@@ -82,12 +82,6 @@ export default withStyles((theme) => ({
     lineHeight: "38px",
     marginBottom: "20px",
   },
-  title: {
-    fontSize: "30px",
-    lineHeight: "36px",
-    fontWeight: "700",
-    margin: "32px 0 24px",
-  },
   description: {
     fontSize: "18px",
     lineHeight: "30px",

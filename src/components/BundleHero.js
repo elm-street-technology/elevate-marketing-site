@@ -4,21 +4,18 @@ import withStyles from "elevate-ui/withStyles";
 import Laptop from "../images/laptop.png";
 import GroupAdd from "elevate-ui-icons/GroupAdd";
 
-const BundleHero = ({ classes, className }) => {
+const BundleHero = ({ classes, className, bundles }) => {
   return (
     <div className={classNames(classes.root)}>
       <div className={classNames(classes.backgroundContainer)}>
         <div className={classes.headingContainer}>
           <div className={classes.headingIcon}>
             <GroupAdd className={classes.icon} size={26} />
-            Brokers
+            {bundles.Brokers.name}
           </div>
-          <div className={classes.heading}>
-            Discover a platform to help you and your agents sell more homes,
-            faster!
-          </div>
+          <div className={classes.heading}>{bundles.Brokers.hero.tagline}</div>
           <div className={classes.subHeading}>
-            Access all your core services in one business operating system.
+            {bundles.Brokers.hero.description}
           </div>
           <img
             className={classes.laptop}
@@ -75,15 +72,14 @@ export default withStyles((theme) => ({
     fontSize: "18px",
     color: "#5A5B5C",
     marginTop: "16px",
-    marginBottom: "20px",
+    marginBottom: "30px",
     lineHeight: "26px",
     textAlign: "center",
-    fontWeight: "600",
+    fontWeight: "500",
 
     [theme.breakpoints[600]]: {
-      marginTop: "14px",
+      marginTop: "10px",
       textAlign: "left",
-      fontWeight: "500",
     },
   },
   headingIcon: {

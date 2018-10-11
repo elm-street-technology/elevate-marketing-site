@@ -38,10 +38,10 @@ export default withStyles((theme) => ({
     display: "flex",
     flexDirection: "column",
     alignItems: "flex-start",
-    margin: "20px 0px",
+    margin: "60px 0px",
 
     [theme.breakpoints[600]]: {
-      margin: "80px 0px",
+      margin: "140px 0px",
     },
 
     [theme.breakpoints[900]]: {

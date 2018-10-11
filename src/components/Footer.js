@@ -261,8 +261,7 @@ export default withStyles((theme) => ({
     flexDirection: "column",
   },
   copyright: {
-    fontSize: "14px",
-    color: "#FFF",
+    maxWidth: "240px",
     marginTop: "8px",
   },
   section: {
