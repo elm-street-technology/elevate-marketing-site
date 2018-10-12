@@ -76,7 +76,7 @@ const HeaderNavMobile = ({ classes, className, onMenuClose }) => {
         </ul>
       </div>
       <div className={classes.link}>
-        <div className={classes.navItem}>Bundles</div>
+        <div className={classes.navItem}>Solutions</div>
         <ul className={classes.dropDown}>
           <Link className={classes.listItemLink} to="/agents">
             <li className={classes.listItem}>Agents</li>
