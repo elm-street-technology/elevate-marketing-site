@@ -81,7 +81,7 @@ const HeaderNavDesktop = ({ classes, className }) => {
       </div>
       <div className={classes.link}>
         <div className={classes.navItem}>
-          Bundles
+          Solutions
           <ArrowDropDown size={20} />
         </div>
         <ul className={classes.dropDown}>
