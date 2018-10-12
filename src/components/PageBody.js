@@ -1,7 +1,7 @@
 import React from "react";
 import classNames from "classnames";
 import withStyles from "elevate-ui/withStyles";
-require("prismjs/themes/prism.css");
+import "prismjs/themes/prism.css";
 
 const PageBody = (props) => {
   return (

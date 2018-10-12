@@ -1,9 +1,9 @@
 import React from "react";
-import classNames from "classnames";
 import withStyles from "elevate-ui/withStyles";
 import Helmet from "react-helmet";
-import blankCanvas from "../images/blankCanvas.png";
 import Link from "gatsby-link";
+
+import blankCanvas from "../images/blankCanvas.png";
 
 const NotFoundPage = ({ classes, className }) => {
   return (

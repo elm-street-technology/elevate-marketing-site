@@ -3,7 +3,6 @@ import classNames from "classnames";
 import withStyles from "elevate-ui/withStyles";
 
 const WebinarCard = ({ classes, className, webinar }) => {
-  const day = new Date(webinar.day);
   return (
     <div className={classNames(classes.root, className)}>
       <div className={classes.top}>

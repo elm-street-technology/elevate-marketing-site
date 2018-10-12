@@ -1,6 +1,7 @@
 import React from "react";
 import classNames from "classnames";
 import withStyles from "elevate-ui/withStyles";
+
 import Avatar from "../images/test-avatar.png";
 import Quotation from "../images/test-quotation.png";
 

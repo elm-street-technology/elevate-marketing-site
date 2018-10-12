@@ -1,6 +1,6 @@
 import React from "react";
 import { Formik, Form, Field } from "formik";
-import Yup from "yup";
+import * as Yup from "yup";
 import withStyles from "elevate-ui/withStyles";
 import Input from "elevate-ui/Input";
 import classNames from "classnames";
@@ -52,15 +52,7 @@ const SignUpForm = ({ classes, className }) => (
             // bad things happened, we don't know what, show generic error flash
           });
       }}
-      render={({
-        values,
-        errors,
-        touched,
-        handleChange,
-        handleBlur,
-        handleSubmit,
-        isSubmitting,
-      }) => (
+      render={({ isSubmitting }) => (
         <Form noValidate style={{ maxWidth: "420px" }}>
           <div className={classes.topRow}>
             <Field
