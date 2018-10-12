@@ -12,7 +12,7 @@ const SocialLinks = ({ classes, className }) => {
     <div className={classNames(classes.root, className)}>
       <a
         className={classNames(classes.icon, classes.facebook)}
-        href="https://example.com"
+        href="https://www.facebook.com/ElevateRET"
         target="_blank"
         rel="noreferrer noopener"
       >
@@ -20,7 +20,7 @@ const SocialLinks = ({ classes, className }) => {
       </a>
       <a
         className={classNames(classes.icon, classes.twitter)}
-        href="https://example.com"
+        href="https://twitter.com/ElmStreetRE"
         target="_blank"
         rel="noreferrer noopener"
       >
@@ -28,7 +28,7 @@ const SocialLinks = ({ classes, className }) => {
       </a>
       <a
         className={classNames(classes.icon, classes.linkedin)}
-        href="https://example.com"
+        href="https://www.linkedin.com/company/elm-street-technology"
         target="_blank"
         rel="noreferrer noopener"
       >
@@ -36,7 +36,7 @@ const SocialLinks = ({ classes, className }) => {
       </a>
       <a
         className={classNames(classes.icon, classes.instagram)}
-        href="https://example.com"
+        href="https://www.instagram.com/elmstreettechnologyre/"
         target="_blank"
         rel="noreferrer noopener"
       >

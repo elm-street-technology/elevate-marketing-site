@@ -22,7 +22,9 @@ const HomePageHeroFooter = ({
             classes.link
           )}
           onClick={() => {
-            handleRoleChange("Agents");
+            if (window) {
+              window.location.href = "/agents";
+            }
           }}
         >
           <Person className={classes.icon} size={22} />
@@ -37,7 +39,9 @@ const HomePageHeroFooter = ({
         </div>
         <div
           onClick={() => {
-            handleRoleChange("Teams");
+            if (window) {
+              window.location.href = "/teams";
+            }
           }}
           className={classNames(
             classes.footerItem,
@@ -57,7 +61,9 @@ const HomePageHeroFooter = ({
         </div>
         <div
           onClick={() => {
-            handleRoleChange("Brokerages");
+            if (window) {
+              window.location.href = "/brokers";
+            }
           }}
           className={classNames(
             classes.footerItem,
