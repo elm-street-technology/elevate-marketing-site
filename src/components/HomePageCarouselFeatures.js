@@ -2,7 +2,7 @@ import React from "react";
 import classNames from "classnames";
 import withStyles from "elevate-ui/withStyles";
 
-const HomePageCarouselFeatures = ({ classes, className, features }) => {
+const HomePageCarouselFeatures = ({ classes, className, features, color }) => {
   return (
     <div className={classNames(classes.root, className)}>
       {features.map((feature) => (

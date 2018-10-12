@@ -4,6 +4,8 @@ import withStyles from "elevate-ui/withStyles";
 import ChevronLeft from "elevate-ui-icons/ChevronLeft";
 import ChevronRight from "elevate-ui-icons/ChevronRight";
 import Person from "elevate-ui-icons/Person";
+import People from "elevate-ui-icons/People";
+import GroupAdd from "elevate-ui-icons/GroupAdd";
 
 import Container from "../components/Container";
 import HomePageCarouselHeading from "../components/HomePageCarouselHeading";
@@ -74,6 +76,7 @@ class HomePageCarousel extends Component<Props> {
             >
               <HomePageCarouselHeading
                 icon={<Person />}
+                color={"#F15953"}
                 heading="Agents"
                 subheading="A platform designed to help you succeed as a real estate agent"
               />
@@ -81,19 +84,19 @@ class HomePageCarousel extends Component<Props> {
                 features={[
                   {
                     screenshot: "https://placehold.it/300x420",
-                    heading: "Lorem Ipsum",
+                    heading: "Agents Ipsum",
                     description:
                       "Suspendisse at sem eget massa malesuada efficitur vitae vel.",
                   },
                   {
                     screenshot: "https://placehold.it/300x420",
-                    heading: "Lorem Ipsum",
+                    heading: "Agents Ipsum",
                     description:
                       "Suspendisse at sem eget massa malesuada efficitur vitae vel.",
                   },
                   {
                     screenshot: "https://placehold.it/300x420",
-                    heading: "Lorem Ipsum",
+                    heading: "Agents Ipsum",
                     description:
                       "Suspendisse at sem eget massa malesuada efficitur vitae vel.",
                   },
@@ -107,27 +110,28 @@ class HomePageCarousel extends Component<Props> {
               )}
             >
               <HomePageCarouselHeading
-                icon={<Person />}
+                color={"#2E7FC2"}
+                icon={<People />}
                 heading="Teams"
-                subheading="A platform designed to help you succeed as a real estate agent"
+                subheading="Everything you and your team needs to increase leads and retain clients"
               />
               <HomePageCarouselFeatures
                 features={[
                   {
                     screenshot: "https://placehold.it/300x420",
-                    heading: "Lorem Ipsum",
+                    heading: "Teams Ipsum",
                     description:
                       "Suspendisse at sem eget massa malesuada efficitur vitae vel.",
                   },
                   {
                     screenshot: "https://placehold.it/300x420",
-                    heading: "Lorem Ipsum",
+                    heading: "Teams Ipsum",
                     description:
                       "Suspendisse at sem eget massa malesuada efficitur vitae vel.",
                   },
                   {
                     screenshot: "https://placehold.it/300x420",
-                    heading: "Lorem Ipsum",
+                    heading: "Teams Ipsum",
                     description:
                       "Suspendisse at sem eget massa malesuada efficitur vitae vel.",
                   },
@@ -141,27 +145,28 @@ class HomePageCarousel extends Component<Props> {
               )}
             >
               <HomePageCarouselHeading
-                icon={<Person />}
+                color={"#55C3BA"}
+                icon={<GroupAdd />}
                 heading="Brokers"
-                subheading="A platform designed to help you succeed as a real estate agent"
+                subheading="Everything you and your brokerage needs to increase leads and retain clients"
               />
               <HomePageCarouselFeatures
                 features={[
                   {
                     screenshot: "https://placehold.it/300x420",
-                    heading: "Lorem Ipsum",
+                    heading: "Brokers Ipsum",
                     description:
                       "Suspendisse at sem eget massa malesuada efficitur vitae vel.",
                   },
                   {
                     screenshot: "https://placehold.it/300x420",
-                    heading: "Lorem Ipsum",
+                    heading: "Brokers Ipsum",
                     description:
                       "Suspendisse at sem eget massa malesuada efficitur vitae vel.",
                   },
                   {
                     screenshot: "https://placehold.it/300x420",
-                    heading: "Lorem Ipsum",
+                    heading: "Brokers Ipsum",
                     description:
                       "Suspendisse at sem eget massa malesuada efficitur vitae vel.",
                   },
