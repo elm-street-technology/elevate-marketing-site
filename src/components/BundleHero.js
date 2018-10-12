@@ -39,9 +39,13 @@ export default withStyles((theme) => ({
     width: "100%",
   },
   backgroundContainer: {
-    background: "linear-gradient(#FFF, rgba(255,198,41,.3))",
+    background: "linear-gradient(#FFF, rgba(255,198,41,.2))",
     backgroundSize: "auto 78%",
     backgroundRepeat: "no-repeat",
+    [theme.breakpoints[900]]: {
+      marginLeft: "calc(-88vw / 3)",
+      marginRight: "calc(-88vw / 3)",
+    },
   },
   headingContainer: {
     display: "flex",
