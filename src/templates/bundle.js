@@ -56,7 +56,7 @@ const BundleTemplate = ({ classes, data: { contentfulBundle } }) => {
             )
           : null}
       </Container>
-      <Container>
+      <Container className={classes.bundleCardContainer}>
         {cards && cards.length
           ? cards.map(({ heading, tagline, icon, description }, idx) => (
               <BundleCard
