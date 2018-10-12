@@ -5,7 +5,7 @@
   "author": "Elm Street Technology",
   "repository": "https://code.knledg.com/elm/elevate-marketing-site",
   "scripts": {
-    "build": "gatsby build",
+    "build": "rm -rf .cache && gatsby build",
     "format": "prettier --write \"src/**/*.js\"",
     "format-check": "prettier -l {,src/**/}*.{js,jsx,json,css}",
     "lint": "eslint --ext .js,.jsx .",
@@ -16,9 +16,10 @@
   "dependencies": {
     "chalk": "^2.4.1",
     "contentful-import": "^7.0.2",
-    "elevate-ui": "^0.9.3",
-    "formik": "^1.0.3",
-    "gatsby": "^1.9.272",
+    "elevate-ui": "^0.16.0",
+    "elevate-ui-icons": "^0.1.0",
+    "formik": "0.11.11",
+    "gatsby": "^1.9.279",
     "gatsby-image": "^1.0.54",
     "gatsby-link": "^1.6.44",
     "gatsby-plugin-canonical-urls": "^1.0.18",

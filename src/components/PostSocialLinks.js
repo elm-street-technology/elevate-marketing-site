@@ -2,11 +2,11 @@ import React from "react";
 import classNames from "classnames";
 import withStyles from "elevate-ui/withStyles";
 
-import Facebook from "elevate-ui/Icon/Facebook";
-import Twitter from "elevate-ui/Icon/Twitter";
-import LinkedIn from "elevate-ui/Icon/LinkedIn";
-import Pinterest from "elevate-ui/Icon/Pinterest";
-import GooglePlus from "elevate-ui/Icon/GooglePlus";
+import Facebook from "elevate-ui-icons/Facebook";
+import Twitter from "elevate-ui-icons/Twitter";
+import LinkedIn from "elevate-ui-icons/LinkedIn";
+import Pinterest from "elevate-ui-icons/Pinterest";
+import GooglePlus from "elevate-ui-icons/GooglePlus";
 
 import config from "../utils/siteConfig";
 

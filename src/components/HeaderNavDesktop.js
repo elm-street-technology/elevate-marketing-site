@@ -2,7 +2,7 @@ import React from "react";
 import Link from "gatsby-link";
 import withStyles from "elevate-ui/withStyles";
 import classNames from "classnames";
-import ArrowDropDown from "elevate-ui/Icon/ArrowDropDown";
+import ArrowDropDown from "elevate-ui-icons/ArrowDropDown";
 
 const HeaderNavDesktop = ({ classes, className }) => {
   return (
@@ -24,6 +24,18 @@ const HeaderNavDesktop = ({ classes, className }) => {
           </Link>
           <Link className={classes.listItemLink} to="/elevate-ignite">
             <li className={classes.listItem}>Ignite</li>
+          </Link>
+          <Link className={classes.listItemLink} to="/elevate-elite">
+            <li className={classes.listItem}>Elite</li>
+          </Link>
+          <Link className={classes.listItemLink} to="elevate-elite-pro">
+            <li className={classes.listItem}>Elite Pro</li>
+          </Link>
+          <Link className={classes.listItemLink} to="/crm">
+            <li className={classes.listItem}>CRM</li>
+          </Link>
+          <Link className={classes.listItemLink} to="/recruiter">
+            <li className={classes.listItem}>Recruiter</li>
           </Link>
         </ul>
       </div>
@@ -67,6 +79,23 @@ const HeaderNavDesktop = ({ classes, className }) => {
           </Link>
         </ul>
       </div>
+      <div className={classes.link}>
+        <div className={classes.navItem}>
+          Bundles
+          <ArrowDropDown size={20} />
+        </div>
+        <ul className={classes.dropDown}>
+          <Link className={classes.listItemLink} to="/agents">
+            <li className={classes.listItem}>Agents</li>
+          </Link>
+          <Link className={classes.listItemLink} to="/teams">
+            <li className={classes.listItem}>Teams</li>
+          </Link>
+          <Link className={classes.listItemLink} to="/brokers">
+            <li className={classes.listItem}>Brokers</li>
+          </Link>
+        </ul>
+      </div>
     </nav>
   );
 };
@@ -74,9 +103,10 @@ const HeaderNavDesktop = ({ classes, className }) => {
 export default withStyles((theme) => ({
   nav: {
     display: "flex",
+    justifyContent: "flex-end",
     alignItems: "center",
-    marginLeft: "48px",
     marginRight: "8px",
+    alignSelf: "flex-end",
 
     "& > * + *": {
       marginLeft: "16px",

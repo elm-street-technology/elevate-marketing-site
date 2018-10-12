@@ -114,7 +114,7 @@ export default withStyles((theme) => ({
     textAlign: "center",
   },
   agentFeatureHeading: {
-    color: "#2E2E35",
+    color: "#5A5B5C",
     fontSize: "15px",
     fontWeight: "700",
     paddingTop: "10px",
@@ -124,7 +124,7 @@ export default withStyles((theme) => ({
     },
   },
   agentFeatureDesc: {
-    color: "#64616E",
+    color: "#5A5B5C",
     fontSize: "13px",
     paddingTop: "10px",
     maxWidth: "80%",

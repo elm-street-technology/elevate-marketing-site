@@ -1,7 +1,7 @@
 import React from "react";
 import classNames from "classnames";
 import withStyles from "elevate-ui/withStyles";
-import Check from "elevate-ui/Icon/Check";
+import Check from "elevate-ui-icons/Check";
 import BootcampLogo from "./BootcampLogo";
 
 const BootcampTopics = ({ classes, className, topics }) => {

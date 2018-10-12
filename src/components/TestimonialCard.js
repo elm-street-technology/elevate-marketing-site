@@ -1,6 +1,7 @@
 import React from "react";
 import classNames from "classnames";
 import withStyles from "elevate-ui/withStyles";
+
 import Avatar from "../images/test-avatar.png";
 import Quotation from "../images/test-quotation.png";
 
@@ -39,7 +40,7 @@ export default withStyles((theme) => ({
     justifyContent: "center",
     padding: "20px 0px 30px 12px",
     maxWidth: "500px",
-    background: "#FAF8F6", // material-design 1dp
+    background: "#ebebeb", // material-design 1dp
     transition: "all 200ms ease-in-out",
     overflow: "hidden",
     userSelect: "none",

@@ -52,15 +52,7 @@ const SignUpForm = ({ classes, className }) => (
             // bad things happened, we don't know what, show generic error flash
           });
       }}
-      render={({
-        values,
-        errors,
-        touched,
-        handleChange,
-        handleBlur,
-        handleSubmit,
-        isSubmitting,
-      }) => (
+      render={({ isSubmitting }) => (
         <Form noValidate style={{ maxWidth: "420px" }}>
           <div className={classes.topRow}>
             <Field
