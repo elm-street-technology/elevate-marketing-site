@@ -1,8 +1,8 @@
 import React from "react";
 import withStyles from "elevate-ui/withStyles";
 
-const Container = ({ children, classes }) => {
-  return <div className={classes.root}>{children}</div>;
+const Container = ({ children, classes, className }) => {
+  return <div className={`${classes.root} ${className || ""}`}>{children}</div>;
 };
 
 export default withStyles((theme) => ({
