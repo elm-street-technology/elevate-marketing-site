@@ -8,12 +8,17 @@ const HomePageCarouselHeading = ({
   icon,
   heading,
   subheading,
+  color,
 }) => {
   return (
     <div className={classNames(classes.root, className)}>
       <div className={classes.iconHeadingContainer}>
-        <div className={classes.icon}>{icon}</div>
-        <div className={classes.agentHeading}>{heading}</div>
+        <div style={{ color }} className={classes.icon}>
+          {icon}
+        </div>
+        <div style={{ color }} className={classes.agentHeading}>
+          {heading}
+        </div>
       </div>
       <div className={classes.agentSubHeading}>{subheading}</div>
     </div>
@@ -58,7 +63,7 @@ export default withStyles((theme) => ({
     lineHeight: "28px",
 
     [theme.breakpoints[600]]: {
-      maxWidth: "700px",
+      maxWidth: "800px",
     },
   },
 }))(HomePageCarouselHeading);
