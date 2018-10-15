@@ -110,7 +110,7 @@ class HomePageCarousel extends Component<Props> {
               )}
             >
               <HomePageCarouselHeading
-                color={"#2E7FC2"}
+                color={"#55C3BA"}
                 icon={<People />}
                 heading="Teams"
                 subheading="Everything you and your team needs to increase leads and retain clients"
@@ -145,7 +145,7 @@ class HomePageCarousel extends Component<Props> {
               )}
             >
               <HomePageCarouselHeading
-                color={"#55C3BA"}
+                color={"#FFC629"}
                 icon={<GroupAdd />}
                 heading="Brokers"
                 subheading="Everything you and your brokerage needs to increase leads and retain clients"
@@ -173,27 +173,6 @@ class HomePageCarousel extends Component<Props> {
                 ]}
               />
             </div>
-
-            {/* <Container>
-              <div
-                className={classNames(
-                  classes.teamContainer,
-                  selectedRole === "Teams" && classes.activeRole
-                )}
-              >
-                <HomePageCarouselHeading />
-                <HomePageCarouselFeatures />
-              </div>
-            </Container>
-            <div
-              className={classNames(
-                classes.brokerageContainer,
-                selectedRole === "Brokerages" && classes.activeRole
-              )}
-            >
-              <HomePageBrokerageHeading />
-              <HomePageBrokerageCard />
-            </div> */}
           </div>
 
           <button
@@ -264,7 +243,6 @@ const styles = (theme) => ({
     paddingTop: "80px",
     paddingLeft: "12px",
     paddingRight: "12px",
-    paddingBottom: "60px",
 
     [theme.breakpoints[900]]: {
       paddingTop: "100px",
@@ -289,7 +267,6 @@ const styles = (theme) => ({
     justifyContent: "center",
     transition: "all 3s ease",
   },
-  inactiveRole: {},
   activeRole: {
     display: "flex",
   },

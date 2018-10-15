@@ -77,6 +77,9 @@ const HeaderNavDesktop = ({ classes, className }) => {
           <Link className={classes.listItemLink} to="/webinars">
             <li className={classes.listItem}>Webinars</li>
           </Link>
+          <Link className={classes.listItemLink} to="/bootcamp">
+            <li className={classes.listItem}>Social Media Bootcamp</li>
+          </Link>
         </ul>
       </div>
       <div className={classes.link}>
@@ -85,15 +88,13 @@ const HeaderNavDesktop = ({ classes, className }) => {
           <ArrowDropDown size={20} />
         </div>
         <ul className={classes.dropDown}>
-          <Link className={classes.listItemLink} to="/terms-of-service">
-            <li className={classes.listItem}>Terms of Service</li>
-          </Link>
-          <Link className={classes.listItemLink} to="/privacy">
-            <li className={classes.listItem}>Privacy Policy</li>
-          </Link>
-          <Link className={classes.listItemLink} to="/dmca">
-            <li className={classes.listItem}>DCMA Notice</li>
-          </Link>
+          <a
+            className={classes.listItemLink}
+            href="https://elmstreettechnology.zendesk.com/hc/en-us"
+            target="_blank"
+          >
+            <li className={classes.listItem}>Help Center</li>
+          </a>
         </ul>
       </div>
     </nav>

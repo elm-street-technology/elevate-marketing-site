@@ -183,6 +183,18 @@ const Footer = ({ classes }) => (
           <Link className={classes.link} to="/elevate-ignite">
             Ignite
           </Link>
+          <Link className={classes.link} to="/elevate-elite">
+            Elite
+          </Link>
+          <Link className={classes.link} to="/elevate-elite-pro">
+            Elite Pro
+          </Link>
+          <Link className={classes.link} to="/elevate-crm">
+            CRM
+          </Link>
+          <Link className={classes.link} to="/elevate-recruiter">
+            Recruiter
+          </Link>
         </div>
         <div className={classes.column}>
           <div className={classes.section}>About</div>
@@ -200,6 +212,9 @@ const Footer = ({ classes }) => (
           </Link>
           <Link className={classes.link} to="/webinars">
             Webinars
+          </Link>
+          <Link className={classes.link} to="/bootcamp">
+            Social Media Bootcamp
           </Link>
         </div>
         <div className={classes.column}>
