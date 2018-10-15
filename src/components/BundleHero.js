@@ -18,9 +18,12 @@ const BundleHero = ({ classes, className, hero }) => {
             {hero.name}
           </div>
           <div className={classes.heading}>{hero.tagline}</div>
-          <div className={classes.subHeading}>
-            {hero.description.description}
-          </div>
+          <div
+            className={classes.subHeading}
+            dangerouslySetInnerHTML={{
+              __html: hero.description.childMarkdownRemark.html,
+            }}
+          />
           <img
             className={classes.screenshot}
             src={hero.screenshot.file.url}

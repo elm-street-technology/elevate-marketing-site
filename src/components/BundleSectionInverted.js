@@ -19,7 +19,12 @@ const BundleSectionInverted = ({
           {heading}
         </div>
         <div className={classes.tagline}>{tagline}</div>
-        <div className={classes.description}>{description}</div>
+        <div
+          className={classes.description}
+          dangerouslySetInnerHTML={{
+            __html: description.childMarkdownRemark.html,
+          }}
+        />
       </div>
       <div className={classes.screenshot}>
         <img

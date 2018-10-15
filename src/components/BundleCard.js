@@ -11,7 +11,12 @@ const BundleCard = ({ classes, icon, headline, tagline, description }) => {
       </div>
       <div className={classes.heading}>{headline}</div>
       <div className={classes.tagline}>{tagline}</div>
-      <div className={classes.description}>{description}</div>
+      <div
+        className={classes.description}
+        dangerouslySetInnerHTML={{
+          __html: description.childMarkdownRemark.html,
+        }}
+      />
     </div>
   );
 };

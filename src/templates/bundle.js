@@ -48,7 +48,7 @@ const BundleTemplate = ({ classes, data: { contentfulBundle } }) => {
                     heading={heading}
                     tagline={tagline}
                     icon={icon}
-                    description={description.description}
+                    description={description}
                     screenshot={screenshot.file.url}
                   />
                 );
@@ -64,7 +64,7 @@ const BundleTemplate = ({ classes, data: { contentfulBundle } }) => {
                 heading={heading}
                 tagline={tagline}
                 icon={icon}
-                description={description.description}
+                description={description}
               />
             ))
           : null}
@@ -89,7 +89,9 @@ export const query = graphql`
         }
         tagline
         description {
-          description
+          childMarkdownRemark {
+            html
+          }
         }
       }
       sections {
@@ -98,7 +100,9 @@ export const query = graphql`
         heading
         tagline
         description {
-          description
+          childMarkdownRemark {
+            html
+          }
         }
         screenshot {
           file {
@@ -112,7 +116,9 @@ export const query = graphql`
         heading
         tagline
         description {
-          description
+          childMarkdownRemark {
+            html
+          }
         }
         icon
       }
@@ -125,6 +131,87 @@ export default withStyles((theme) => ({
     display: "flex",
     flexDirection: "column",
     width: "100%",
+
+    "& h1": {
+      color: "#2E2E35",
+      fontWeight: "700",
+      letterSpacing: ".2px",
+      lineHeight: "1.2",
+      fontSize: "24px",
+      marginTop: "44px",
+      marginBottom: "12px",
+    },
+
+    "& h2": {
+      fontSize: "22px",
+      lineHeight: "1.4",
+      fontWeight: "700",
+      marginTop: "32px",
+      marginBottom: "12px",
+    },
+
+    "& h3": {
+      fontSize: "20px",
+      fontWeight: "700",
+      marginTop: "32px",
+      marginBottom: "12px",
+    },
+
+    "& h4": {
+      fontSize: "18px",
+      fontWeight: "600",
+      marginTop: "24px",
+      marginBottom: "12px",
+    },
+
+    "& a": {
+      color: "#2E2E35",
+      textDecoration: "underline",
+    },
+
+    "& em": {
+      fontStyle: "italic",
+    },
+
+    "& strong": {
+      fontWeight: "700",
+    },
+
+    "& ol": {
+      position: "relative",
+      counterReset: "item",
+    },
+
+    "& ol li": {
+      counterIncrement: "item",
+      paddingLeft: "24px",
+
+      "&:before": {
+        content: 'counter(item) "."',
+        position: "absolute",
+        left: "0",
+        fontWeight: "700",
+      },
+    },
+
+    "& ul": {
+      listStyleType: "disc",
+    },
+
+    "& ul li": {
+      marginLeft: "18px",
+    },
+
+    "& p": {
+      marginTop: "4px",
+      marginBottom: "8px",
+    },
+
+    "& img": {
+      display: "block",
+      maxWidth: "100%",
+      marginBottom: "16px",
+    },
   },
   backgroundContainer: {
     padding: "60px 0px",

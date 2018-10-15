@@ -92,6 +92,7 @@ const HeaderNavDesktop = ({ classes, className }) => {
             className={classes.listItemLink}
             href="https://elmstreettechnology.zendesk.com/hc/en-us"
             target="_blank"
+            rel="noreferrer noopener"
           >
             <li className={classes.listItem}>Help Center</li>
           </a>
