@@ -213,6 +213,9 @@ const Footer = ({ classes }) => (
           <Link className={classes.link} to="/webinars">
             Webinars
           </Link>
+          <Link className={classes.link} to="/webinars">
+            Social Media Bootcamp
+          </Link>
         </div>
         <div className={classes.column}>
           <div className={classes.section}>Support</div>

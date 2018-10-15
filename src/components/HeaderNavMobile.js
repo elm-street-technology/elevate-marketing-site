@@ -73,6 +73,9 @@ const HeaderNavMobile = ({ classes, className, onMenuClose }) => {
           <Link className={classes.listItemLink} to="/webinars">
             <li className={classes.listItem}>Webinars</li>
           </Link>
+          <Link className={classes.listItemLink} to="/bootcamp">
+            <li className={classes.listItem}>Social Media Bootcamp</li>
+          </Link>
         </ul>
       </div>
       <div className={classes.link}>
