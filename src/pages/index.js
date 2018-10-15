@@ -8,10 +8,11 @@ import CTASecondary from "../components/CTASecondary";
 import TestimonialCard from "../components/TestimonialCard";
 import TestimonialCardGrid from "../components/TestimonialCardGrid";
 import HomePageCarousel from "../components/HomePageCarousel";
-import heroImage1600 from "../images/1600.png";
-import heroImage1200 from "../images/1200.png";
-import heroImage900 from "../images/900.png";
-import heroImage600 from "../images/600.png";
+import heroImage2560 from "../images/2560.jpg";
+import heroImage1600 from "../images/1600.jpg";
+import heroImage1200 from "../images/1200.jpg";
+import heroImage900 from "../images/900.jpg";
+import heroImage600 from "../images/600.jpg";
 
 class Index extends Component {
   render() {
@@ -123,6 +124,14 @@ export default withStyles((theme) => ({
 
     [theme.breakpoints[1200]]: {
       backgroundImage: `url('${heroImage1600}')`,
+      backgroundSize: "auto",
+      backgroundRepeat: "no-repeat",
+      backgroundAttachment: "fixed",
+      backgroundPosition: "top",
+    },
+
+    "@media (min-width: 1600px)": {
+      backgroundImage: `url('${heroImage2560}')`,
       backgroundSize: "auto",
       backgroundRepeat: "no-repeat",
       backgroundAttachment: "fixed",
