@@ -81,15 +81,13 @@ const HeaderNavMobile = ({ classes, className, onMenuClose }) => {
       <div className={classes.link}>
         <div className={classes.navItem}>Support</div>
         <ul className={classes.dropDown}>
-          <Link className={classes.listItemLink} to="/terms-of-service">
-            <li className={classes.listItem}>Terms of Service</li>
-          </Link>
-          <Link className={classes.listItemLink} to="/privacy">
-            <li className={classes.listItem}>Privacy Policy</li>
-          </Link>
-          <Link className={classes.listItemLink} to="/dmca">
-            <li className={classes.listItem}>DCMA Notice</li>
-          </Link>
+          <a
+            className={classes.listItemLink}
+            href="https://elmstreettechnology.zendesk.com/hc/en-us"
+            target="_blank"
+          >
+            <li className={classes.listItem}>Help Center</li>
+          </a>
         </ul>
       </div>
       <Link to="/get-started" className={classes.getStartedLink}>
