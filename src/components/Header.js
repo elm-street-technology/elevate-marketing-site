@@ -118,7 +118,6 @@ export default withStyles((theme) => ({
     textDecoration: "none",
     padding: "14px 16px",
     borderRadius: "4px",
-    alignSelf: "flex-end",
 
     [theme.breakpoints[900]]: {
       display: "block",
