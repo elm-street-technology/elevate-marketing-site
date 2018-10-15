@@ -42,6 +42,20 @@ const HeaderNavMobile = ({ classes, className, onMenuClose }) => {
         </ul>
       </div>
       <div className={classes.link}>
+        <div className={classes.navItem}>Solutions</div>
+        <ul className={classes.dropDown}>
+          <Link className={classes.listItemLink} to="/agents">
+            <li className={classes.listItem}>Agents</li>
+          </Link>
+          <Link className={classes.listItemLink} to="/teams">
+            <li className={classes.listItem}>Teams</li>
+          </Link>
+          <Link className={classes.listItemLink} to="/brokers">
+            <li className={classes.listItem}>Brokers</li>
+          </Link>
+        </ul>
+      </div>
+      <div className={classes.link}>
         <div className={classes.navItem}>About</div>
         <ul className={classes.dropDown}>
           <Link className={classes.listItemLink} to="/blog">
@@ -72,20 +86,6 @@ const HeaderNavMobile = ({ classes, className, onMenuClose }) => {
           </Link>
           <Link className={classes.listItemLink} to="/dmca">
             <li className={classes.listItem}>DCMA Notice</li>
-          </Link>
-        </ul>
-      </div>
-      <div className={classes.link}>
-        <div className={classes.navItem}>Solutions</div>
-        <ul className={classes.dropDown}>
-          <Link className={classes.listItemLink} to="/agents">
-            <li className={classes.listItem}>Agents</li>
-          </Link>
-          <Link className={classes.listItemLink} to="/teams">
-            <li className={classes.listItem}>Teams</li>
-          </Link>
-          <Link className={classes.listItemLink} to="/brokers">
-            <li className={classes.listItem}>Brokers</li>
           </Link>
         </ul>
       </div>

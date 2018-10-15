@@ -41,6 +41,23 @@ const HeaderNavDesktop = ({ classes, className }) => {
       </div>
       <div className={classes.link}>
         <div className={classes.navItem}>
+          Solutions
+          <ArrowDropDown size={20} />
+        </div>
+        <ul className={classes.dropDown}>
+          <Link className={classes.listItemLink} to="/agents">
+            <li className={classes.listItem}>Agents</li>
+          </Link>
+          <Link className={classes.listItemLink} to="/teams">
+            <li className={classes.listItem}>Teams</li>
+          </Link>
+          <Link className={classes.listItemLink} to="/brokers">
+            <li className={classes.listItem}>Brokers</li>
+          </Link>
+        </ul>
+      </div>
+      <div className={classes.link}>
+        <div className={classes.navItem}>
           About
           <ArrowDropDown size={20} />
         </div>
@@ -76,23 +93,6 @@ const HeaderNavDesktop = ({ classes, className }) => {
           </Link>
           <Link className={classes.listItemLink} to="/dmca">
             <li className={classes.listItem}>DCMA Notice</li>
-          </Link>
-        </ul>
-      </div>
-      <div className={classes.link}>
-        <div className={classes.navItem}>
-          Solutions
-          <ArrowDropDown size={20} />
-        </div>
-        <ul className={classes.dropDown}>
-          <Link className={classes.listItemLink} to="/agents">
-            <li className={classes.listItem}>Agents</li>
-          </Link>
-          <Link className={classes.listItemLink} to="/teams">
-            <li className={classes.listItem}>Teams</li>
-          </Link>
-          <Link className={classes.listItemLink} to="/brokers">
-            <li className={classes.listItem}>Brokers</li>
           </Link>
         </ul>
       </div>
