@@ -173,27 +173,6 @@ class HomePageCarousel extends Component<Props> {
                 ]}
               />
             </div>
-
-            {/* <Container>
-              <div
-                className={classNames(
-                  classes.teamContainer,
-                  selectedRole === "Teams" && classes.activeRole
-                )}
-              >
-                <HomePageCarouselHeading />
-                <HomePageCarouselFeatures />
-              </div>
-            </Container>
-            <div
-              className={classNames(
-                classes.brokerageContainer,
-                selectedRole === "Brokerages" && classes.activeRole
-              )}
-            >
-              <HomePageBrokerageHeading />
-              <HomePageBrokerageCard />
-            </div> */}
           </div>
 
           <button
@@ -264,7 +243,7 @@ const styles = (theme) => ({
     paddingTop: "80px",
     paddingLeft: "12px",
     paddingRight: "12px",
-    paddingBottom: "60px",
+    // paddingBottom: "60px",
 
     [theme.breakpoints[900]]: {
       paddingTop: "100px",
@@ -289,7 +268,6 @@ const styles = (theme) => ({
     justifyContent: "center",
     transition: "all 3s ease",
   },
-  inactiveRole: {},
   activeRole: {
     display: "flex",
   },

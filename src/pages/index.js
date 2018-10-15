@@ -75,7 +75,7 @@ class Index extends Component {
           <HomePageHero roles={roles} />
         </div>
         <HomePageCarousel />
-        <CallToAction />
+        <CallToAction className={classes.callToAction} />
         <div className={classes.testimonialContainer}>
           <div className={classes.testHeading}>
             <h1>What Our Customers Are Saying</h1>
@@ -153,5 +153,8 @@ export default withStyles((theme) => ({
       paddingBottom: "200px",
       paddingTop: "100px",
     },
+  },
+  callToAction: {
+    paddingTop: "100px",
   },
 }))(Index);
