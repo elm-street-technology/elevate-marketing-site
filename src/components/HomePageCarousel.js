@@ -110,7 +110,7 @@ class HomePageCarousel extends Component<Props> {
               )}
             >
               <HomePageCarouselHeading
-                color={"#2E7FC2"}
+                color={"#55C3BA"}
                 icon={<People />}
                 heading="Teams"
                 subheading="Everything you and your team needs to increase leads and retain clients"
@@ -145,7 +145,7 @@ class HomePageCarousel extends Component<Props> {
               )}
             >
               <HomePageCarouselHeading
-                color={"#55C3BA"}
+                color={"#FFC629"}
                 icon={<GroupAdd />}
                 heading="Brokers"
                 subheading="Everything you and your brokerage needs to increase leads and retain clients"
