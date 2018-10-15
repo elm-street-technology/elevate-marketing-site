@@ -192,7 +192,7 @@ const Footer = ({ classes }) => (
           <Link className={classes.link} to="/elevate-crm">
             CRM
           </Link>
-          <Link className={classes.link} to="/elevate-recruiter/">
+          <Link className={classes.link} to="/elevate-recruiter">
             Recruiter
           </Link>
         </div>
@@ -213,7 +213,7 @@ const Footer = ({ classes }) => (
           <Link className={classes.link} to="/webinars">
             Webinars
           </Link>
-          <Link className={classes.link} to="/webinars">
+          <Link className={classes.link} to="/bootcamp">
             Social Media Bootcamp
           </Link>
         </div>

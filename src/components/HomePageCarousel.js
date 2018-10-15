@@ -243,7 +243,6 @@ const styles = (theme) => ({
     paddingTop: "80px",
     paddingLeft: "12px",
     paddingRight: "12px",
-    // paddingBottom: "60px",
 
     [theme.breakpoints[900]]: {
       paddingTop: "100px",
