@@ -1,4 +1,4 @@
-import React from "react";
+import React, { Component } from "react";
 import withStyles from "elevate-ui/withStyles";
 
 import BlogCardGrid from "../components/BlogCardGrid";
@@ -7,31 +7,55 @@ import Container from "../components/Container";
 import PageTitle from "../components/PageTitle";
 import SEO from "../components/SEO";
 
-const Blog = ({ children, classes, data, tags }) => {
-  const posts = data.allContentfulPost.edges;
+class Blog extends Component {
+  constructor(props) {
+    super(props);
 
-  return (
-    <div className={classes.root}>
-      <SEO />
-      <Container>
-        <PageTitle>The Elevate Blog</PageTitle>
-        <BlogCardGrid>
-          {posts.map(({ node: post }) => (
-            <BlogCard
-              tags={tags}
-              key={post.id}
-              slug={post.slug}
-              image={post.heroImage}
-              title={post.title}
-              date={post.publishDate}
-              excerpt={post.body}
-            />
-          ))}
-        </BlogCardGrid>
-      </Container>
-    </div>
-  );
-};
+    this.state = {
+      availablePosts: 6,
+    };
+  }
+
+  handleLoadPosts = () => {
+    this.setState((state) => ({
+      availablePosts: state.availablePosts + 6,
+    }));
+  };
+
+  render() {
+    const { classes, tags, data } = this.props;
+    const { availablePosts } = this.state;
+    const posts = data.allContentfulPost.edges;
+    return (
+      <div className={classes.root}>
+        <SEO />
+        <Container>
+          <PageTitle className={classes.title}>The Elevate Blog</PageTitle>
+          <BlogCardGrid>
+            {posts.slice(0, availablePosts).map(({ node: post }) => (
+              <BlogCard
+                tags={tags}
+                key={post.id}
+                slug={post.slug}
+                image={post.heroImage}
+                title={post.title}
+                date={post.publishDate}
+                excerpt={post.body}
+              />
+            ))}
+          </BlogCardGrid>
+          <div className={classes.btnContainer}>
+            {posts.length >= availablePosts ? (
+              <button className={classes.btn} onClick={this.handleLoadPosts}>
+                Load more posts
+              </button>
+            ) : null}
+          </div>
+        </Container>
+      </div>
+    );
+  }
+}
 
 export const query = graphql`
   query indexQuery {
@@ -75,5 +99,22 @@ export default withStyles((theme) => ({
     width: "100%",
     padding: "0 8px",
     margin: "72px auto 96px auto",
+  },
+  title: {
+    display: "flex",
+    justifyContent: "center",
+    width: "100%",
+  },
+  btnContainer: {
+    display: "flex",
+    justifyContent: "center",
+    maxWidth: "100%",
+  },
+  btn: {
+    color: "#5A5B5C",
+    fontWeight: "600",
+    padding: "16px 80px",
+    border: "2px solid #5A5B5C",
+    borderRadius: "8px",
   },
 }))(Blog);
