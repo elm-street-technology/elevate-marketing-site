@@ -26,14 +26,16 @@ const BundleSectionInverted = ({
           }}
         />
       </div>
-      <div className={classes.screenshot}>
-        <img
-          className={classes.screenshotImage}
-          src={screenshot}
-          alt={"screenshot"}
-          style={{ maxWidth: "100%" }}
-        />
-      </div>
+      {screenshot ? (
+        <div className={classes.screenshot}>
+          <img
+            className={classes.screenshotImage}
+            src={screenshot}
+            alt={"screenshot"}
+            style={{ maxWidth: "100%" }}
+          />
+        </div>
+      ) : null}
     </div>
   );
 };

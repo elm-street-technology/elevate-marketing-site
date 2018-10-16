@@ -11,25 +11,25 @@ const BundleHero = ({ classes, className, hero }) => {
 
   return (
     <div className={classNames(classes.root)}>
-      <div className={classNames(classes.backgroundContainer)}>
-        <div className={classes.headingContainer}>
-          <div className={classes.headingIcon}>
-            <IconComponent className={classes.icon} size={26} />
-            {hero.name}
-          </div>
-          <div className={classes.heading}>{hero.tagline}</div>
-          <div
-            className={classes.subHeading}
-            dangerouslySetInnerHTML={{
-              __html: hero.description.childMarkdownRemark.html,
-            }}
-          />
+      <div className={classes.headingContainer}>
+        <div className={classes.headingIcon}>
+          <IconComponent className={classes.icon} size={26} />
+          {hero.name}
+        </div>
+        <div className={classes.heading}>{hero.tagline}</div>
+        <div
+          className={classes.subHeading}
+          dangerouslySetInnerHTML={{
+            __html: hero.description.childMarkdownRemark.html,
+          }}
+        />
+        {hero.screenshot && hero.screenshot.file && hero.screenshot.file.url ? (
           <img
             className={classes.screenshot}
             src={hero.screenshot.file.url}
             alt={"screenshot of bundle"}
           />
-        </div>
+        ) : null}
       </div>
     </div>
   );
@@ -40,15 +40,6 @@ export default withStyles((theme) => ({
     display: "flex",
     flexDirection: "column",
     width: "100%",
-  },
-  backgroundContainer: {
-    background: "linear-gradient(#FFF, rgba(255,198,41,.2))",
-    backgroundSize: "auto 78%",
-    backgroundRepeat: "no-repeat",
-    [theme.breakpoints[900]]: {
-      marginLeft: "calc(-88vw / 3)",
-      marginRight: "calc(-88vw / 3)",
-    },
   },
   headingContainer: {
     display: "flex",
