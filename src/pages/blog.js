@@ -14,7 +14,7 @@ const Blog = ({ children, classes, data, tags }) => {
     <div className={classes.root}>
       <SEO />
       <Container>
-        <PageTitle>The Elevate Blog</PageTitle>
+        <PageTitle className={classes.title}>The Elevate Blog</PageTitle>
         <BlogCardGrid>
           {posts.map(({ node: post }) => (
             <BlogCard
@@ -75,5 +75,10 @@ export default withStyles((theme) => ({
     width: "100%",
     padding: "0 8px",
     margin: "72px auto 96px auto",
+  },
+  title: {
+    display: "flex",
+    justifyContent: "center",
+    width: "100%",
   },
 }))(Blog);
