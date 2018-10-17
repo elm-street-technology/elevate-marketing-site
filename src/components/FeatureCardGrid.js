@@ -10,6 +10,7 @@ export default withStyles((theme) => ({
   root: {
     display: "grid",
     justifyContent: "center",
+    alignItems: "flex-start",
     gridTemplateColumns: "repeat(1, 1fr)",
     gridColumnGap: "40px",
     gridRowGap: "48px",
