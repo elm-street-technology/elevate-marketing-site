@@ -49,7 +49,9 @@ const BundleTemplate = ({ classes, data: { contentfulBundle } }) => {
                     tagline={tagline}
                     icon={icon}
                     description={description}
-                    screenshot={screenshot.file.url}
+                    screenshot={
+                      screenshot && screenshot.file && screenshot.file.url
+                    }
                   />
                 );
               }
