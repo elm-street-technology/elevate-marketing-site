@@ -19,7 +19,7 @@ const ProductSectionSecondary = ({
   return (
     <div className={classNames(classes.root, className)}>
       <Container>
-        <div className={classes.product}>{product}</div>
+        {product ? <div className={classes.product}>{product}</div> : null}
         <div className={classes.title}>{title}</div>
         <div
           className={classes.description}
@@ -67,7 +67,7 @@ export default withStyles((theme) => ({
     paddingLeft: "8px",
   },
   screenshot: {
-    display: "inline-flex",
+    display: "flex",
     alignItems: "center",
     margin: "48px 8px 24px",
     boxShadow: "0 8px 12px rgba(0,0,0,0.1)",
