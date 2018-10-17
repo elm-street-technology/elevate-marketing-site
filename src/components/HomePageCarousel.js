@@ -19,6 +19,10 @@ import team1 from "../images/team-1.png";
 import team2 from "../images/team-2.png";
 import team3 from "../images/team-3.png";
 
+import broker1 from "../images/broker-1.png";
+import broker2 from "../images/broker-2.png";
+import broker3 from "../images/broker-3.png";
+
 type Props = {
   classes: Object,
   className: string,
@@ -92,9 +96,9 @@ class HomePageCarousel extends Component<Props> {
                 features={[
                   {
                     screenshot: agent1,
-                    heading: "Social Media Management",
+                    heading: "Social Media",
                     description:
-                      "With 150,000 blog posts syndicated to over 20,000 social media channels, we know social. Our experts build your brand while you build relationships.",
+                      "With 150k blog posts syndicated to over 20k social media channels, we know social. We build your brand while you build relationships.",
                   },
                   {
                     screenshot: agent2,
@@ -104,9 +108,9 @@ class HomePageCarousel extends Component<Props> {
                   },
                   {
                     screenshot: agent3,
-                    heading: "2.3m Pageviews Per Month",
+                    heading: "2.3m Pageviews / Mo",
                     description:
-                      "A platform with simple communication, where leads consume rich content daily.",
+                      "A platform facilitating intuitive communication, where leads consume rich content daily. Receive alerts when we detect a life event.",
                   },
                 ]}
               />
@@ -135,7 +139,7 @@ class HomePageCarousel extends Component<Props> {
                     screenshot: team2,
                     heading: "MLS Health",
                     description:
-                      "Easily determine avg DOM, list-to-sold price diffs. Pull market reports, create CMAs, find homes by neighborhood. Supplemental demographic, school, and tax data provided.",
+                      "Easily determine avg DOM, list-to-sold price diffs. Market reports, trend analysis, CMAs. Supplemental demographic, school, and tax data.",
                   },
                   {
                     screenshot: team3,
@@ -161,22 +165,22 @@ class HomePageCarousel extends Component<Props> {
               <HomePageCarouselFeatures
                 features={[
                   {
-                    screenshot: "https://placehold.it/300x420",
-                    heading: "Brokers Ipsum",
+                    screenshot: broker1,
+                    heading: "Pipeline Mgmt",
                     description:
-                      "Suspendisse at sem eget massa malesuada efficitur vitae vel.",
+                      "See the health of your lead pipeline, office GCI, and individual agent performance",
                   },
                   {
-                    screenshot: "https://placehold.it/300x420",
-                    heading: "Brokers Ipsum",
+                    screenshot: broker2,
+                    heading: "Lead Routing",
                     description:
-                      "Suspendisse at sem eget massa malesuada efficitur vitae vel.",
+                      "Sync leads from any source and route them to different offices, teams or agents using our dynamic Rules system",
                   },
                   {
-                    screenshot: "https://placehold.it/300x420",
-                    heading: "Brokers Ipsum",
+                    screenshot: broker3,
+                    heading: "ROI",
                     description:
-                      "Suspendisse at sem eget massa malesuada efficitur vitae vel.",
+                      "Determine which sources are providing the highest quality leads to hone your ROI.",
                   },
                 ]}
               />
