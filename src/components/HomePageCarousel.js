@@ -15,6 +15,10 @@ import agent1 from "../images/agent-1.png";
 import agent2 from "../images/agent-2.png";
 import agent3 from "../images/agent-3.png";
 
+import team1 from "../images/team-1.png";
+import team2 from "../images/team-2.png";
+import team3 from "../images/team-3.png";
+
 type Props = {
   classes: Object,
   className: string,
@@ -122,22 +126,22 @@ class HomePageCarousel extends Component<Props> {
               <HomePageCarouselFeatures
                 features={[
                   {
-                    screenshot: "https://placehold.it/300x420",
-                    heading: "Teams Ipsum",
+                    screenshot: team1,
+                    heading: "Listing Pulse",
                     description:
-                      "Suspendisse at sem eget massa malesuada efficitur vitae vel.",
+                      "At a glance, determine your team's listing pipeline with our Listing Pulse.",
                   },
                   {
-                    screenshot: "https://placehold.it/300x420",
-                    heading: "Teams Ipsum",
+                    screenshot: team2,
+                    heading: "MLS Health",
                     description:
-                      "Suspendisse at sem eget massa malesuada efficitur vitae vel.",
+                      "Easily determine avg DOM, list-to-sold price diffs. Pull market reports, create CMAs, find homes by neighborhood. Supplemental demographic, school, and tax data provided.",
                   },
                   {
-                    screenshot: "https://placehold.it/300x420",
-                    heading: "Teams Ipsum",
+                    screenshot: team3,
+                    heading: "Gross Commission Income",
                     description:
-                      "Suspendisse at sem eget massa malesuada efficitur vitae vel.",
+                      "Annual performance KPIs with breakdown by team members.",
                   },
                 ]}
               />
