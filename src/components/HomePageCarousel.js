@@ -11,6 +11,10 @@ import Container from "../components/Container";
 import HomePageCarouselHeading from "../components/HomePageCarouselHeading";
 import HomePageCarouselFeatures from "../components/HomePageCarouselFeatures";
 
+import agent1 from "../images/agent-1.png";
+import agent2 from "../images/agent-2.png";
+import agent3 from "../images/agent-3.png";
+
 type Props = {
   classes: Object,
   className: string,
@@ -78,27 +82,27 @@ class HomePageCarousel extends Component<Props> {
                 icon={<Person />}
                 color={"#F15953"}
                 heading="Agents"
-                subheading="A platform designed to help you succeed as a real estate agent"
+                subheading="We manage the digital so you can help clients find their dream homes"
               />
               <HomePageCarouselFeatures
                 features={[
                   {
-                    screenshot: "https://placehold.it/300x420",
-                    heading: "Agents Ipsum",
+                    screenshot: agent1,
+                    heading: "Social Media Management",
                     description:
-                      "Suspendisse at sem eget massa malesuada efficitur vitae vel.",
+                      "With 150,000 blog posts syndicated to over 20,000 social media channels, we know social. Our experts build your brand while you build relationships.",
                   },
                   {
-                    screenshot: "https://placehold.it/300x420",
-                    heading: "Agents Ipsum",
+                    screenshot: agent2,
+                    heading: "Fast Mobile Sites",
                     description:
-                      "Suspendisse at sem eget massa malesuada efficitur vitae vel.",
+                      "Avg. page load time is just over 200ms. Fast, secure sites rank higher and provide a superior user experience.",
                   },
                   {
-                    screenshot: "https://placehold.it/300x420",
-                    heading: "Agents Ipsum",
+                    screenshot: agent3,
+                    heading: "2.3m Pageviews Per Month",
                     description:
-                      "Suspendisse at sem eget massa malesuada efficitur vitae vel.",
+                      "A platform with simple communication, where leads consume rich content daily.",
                   },
                 ]}
               />

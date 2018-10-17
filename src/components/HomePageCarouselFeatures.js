@@ -29,6 +29,7 @@ export default withStyles((theme) => ({
     margin: "0 auto",
     justifyContent: "space-between",
     flexDirection: "column",
+    alignItems: "flex-start",
 
     [theme.breakpoints[600]]: {
       maxWidth: "1100px",

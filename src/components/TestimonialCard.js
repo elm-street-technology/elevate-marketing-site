@@ -2,19 +2,29 @@ import React from "react";
 import classNames from "classnames";
 import withStyles from "elevate-ui/withStyles";
 
-import Avatar from "../images/test-avatar.png";
 import Quotation from "../images/test-quotation.png";
 
-const TestimonialCard = ({ children, classes, className }) => {
+const TestimonialCard = ({
+  children,
+  classes,
+  className,
+  avatar,
+  name,
+  title,
+  testimonial,
+}) => {
   return (
     <div className={classNames(classes.root, className)}>
-      <div className={classes.testImage}>
-        <img
-          style={{ width: "60px" }}
-          src={Avatar}
-          alt={"testimonial author"}
-        />
-      </div>
+      {avatar ? (
+        <div className={classes.testImage}>
+          <img
+            style={{ width: "60px" }}
+            src={avatar}
+            alt={"testimonial author"}
+          />
+        </div>
+      ) : null}
+
       <div className={classes.testRight}>
         <div className={classes.quotation}>
           <img
@@ -23,12 +33,9 @@ const TestimonialCard = ({ children, classes, className }) => {
             alt={"quotation marks"}
           />
         </div>
-        <div className={classes.testAuthor}>Prince Jones</div>
-        <div className={classes.testTitle}>MBA-ISM / Realtor</div>
-        <div className={classes.testBody}>
-          The Elevate platform help me save time and money with many aspects
-          with my social media.
-        </div>
+        <div className={classes.testAuthor}>{name}</div>
+        <div className={classes.testTitle}>{title}</div>
+        <div className={classes.testBody}>{testimonial}</div>
       </div>
     </div>
   );

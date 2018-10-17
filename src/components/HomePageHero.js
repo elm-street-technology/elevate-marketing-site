@@ -18,11 +18,13 @@ const HomePageHero = ({ classes, className, roles, handleRoleChange }) => {
             generating new leads to creating clients for life!
           </div>
           <div className={classes.subHeadingSecondary}>
-            Elevate is the best online product for real estate agents, teams,
-            and brokers. We help you generate leads and create clients for life.
+            With 60+ integrated MLS', 25m listings, and half a million leads,
+            Elevate is the best platform for real estate agents, teams, and
+            brokers.
           </div>
           <div className={classes.subHeadingTagline}>
-            Choose the Elevate that suits you
+            <div>Digital tools to</div>
+            <div>Elevate your potential</div>
           </div>
         </div>
       </div>
