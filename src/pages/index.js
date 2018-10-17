@@ -101,13 +101,13 @@ class Index extends Component {
               avatar=""
               name="Bob Cross"
               title="Broker"
-              testimonial="I'm glad I invested in Elm Street Technology. You've done a great job in assistant in web page hits, producing new leads and keeping in touch with my client base on a weekly basis through my social media. The results have been most impressive. You now have a Client for Life!"
+              testimonial="I'm glad I invested in Elm Street Technology. You've done a great job in assisting in web page hits, producing new leads and keeping in touch with my client base on a weekly basis through my social media. The results have been most impressive. You now have a Client for Life!"
             />
             <TestimonialCard
               avatar=""
               name="Sherlock Fenderson"
               title="Realtor®"
-              testimonial="I have been a Realtor® for more than 12 years now and for most of those years, Elevate has been my go-to internet website and CRM provider. As I have grown in the real estate business, it has been a vital tool in assitant me with my growth. Elevate's service is excellent! Price-wise, I don't know if Elevate can be beat for the service provided at the price. I have checked and tried, but no one compares. I recommend Elevate to any agent for their business."
+              testimonial="I have been a Realtor® for more than 12 years now and for most of those years, Elevate has been my go-to internet website and CRM provider. As I have grown in the real estate business, it has been a vital tool in assisting me with my growth. Elevate's service is excellent! Price-wise, I don't know if Elevate can be beat for the service provided at the price. I have checked and tried, but no one compares. I recommend Elevate to any agent for their business."
             />
           </TestimonialCardGrid>
         </div>
