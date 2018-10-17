@@ -67,7 +67,7 @@ export default withStyles((theme) => ({
     paddingLeft: "8px",
   },
   screenshot: {
-    display: "flex",
+    display: "inline-flex",
     alignItems: "center",
     margin: "48px 8px 24px",
     boxShadow: "0 8px 12px rgba(0,0,0,0.1)",
