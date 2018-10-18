@@ -1,6 +1,6 @@
 import React from "react";
 
-import EUIButton from "elevate-ui/button";
+import EUIButton from "elevate-ui/Button";
 
 const Button = ({ href, children, backgroundColor }) => {
   return (
