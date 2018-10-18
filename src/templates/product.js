@@ -3,18 +3,25 @@ import Helmet from "react-helmet";
 import withStyles from "elevate-ui/withStyles";
 
 import config from "../utils/siteConfig";
-import renderComponent from "../utils/render-component";
-// import ProductSectionSecondary from "../components/ProductSectionSecondary";
-// import ProductSectionTertiary from "../components/ProductSectionTertiary";
+import Container from "../components/Container";
+import CallToAction from "../components/CallToAction";
+import ProductHero from "../components/ProductHero";
+import ProductSectionPrimary from "../components/ProductSectionPrimary";
+import ProductSectionSecondary from "../components/ProductSectionSecondary";
+import ProductSectionTertiary from "../components/ProductSectionTertiary";
+// import SEO from '../components/SEO'
 
 const Product = ({ classes, data: { contentfulProduct } }) => {
   const {
-    // secondaryInformation,
+    heroImage,
+    heroText,
+    primaryFeatures,
+    primaryInformation,
+    secondaryInformation,
     // slug,
-    // tertiaryInformation,
-    // tertiaryFeatures,
+    tertiaryInformation,
+    tertiaryFeatures,
     title,
-    sections,
   } = contentfulProduct;
   // const postNode = contentfulProduct;
 
@@ -25,7 +32,33 @@ const Product = ({ classes, data: { contentfulProduct } }) => {
       </Helmet>
       {/* <SEO pagePath={slug} postNode={postNode} pageSEO /> */}
       <div>
-        {sections.map((section, idx) => renderComponent(section, classes, idx))}
+        <ProductHero
+          className={classes.hero}
+          heroImage={heroImage}
+          heroText={heroText}
+          product={title}
+        />
+        <Container>
+          <ProductSectionPrimary
+            className={classes.primarySection}
+            features={primaryFeatures}
+            product={title}
+            section={primaryInformation}
+          />
+        </Container>
+        <CallToAction />
+        <ProductSectionSecondary
+          className={classes.secondarySection}
+          product={title}
+          section={secondaryInformation}
+        />
+        <Container>
+          <ProductSectionTertiary
+            className={classes.tertiarySection}
+            features={tertiaryFeatures}
+            section={tertiaryInformation}
+          />
+        </Container>
       </div>
     </div>
   );
@@ -34,6 +67,16 @@ const Product = ({ classes, data: { contentfulProduct } }) => {
 export const query = graphql`
   query productQuery($slug: String!) {
     contentfulProduct(slug: { eq: $slug }) {
+      heroImage {
+        file {
+          url
+        }
+      }
+      heroText {
+        childMarkdownRemark {
+          html
+        }
+      }
       primaryInformation {
         title
         description {
