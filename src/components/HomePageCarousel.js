@@ -110,7 +110,7 @@ class HomePageCarousel extends Component<Props> {
                     screenshot: agent3,
                     heading: "2.3m Pageviews / Mo",
                     description:
-                      "A platform facilitating intuitive communication, where leads consume rich content daily. Receive alerts when we detect a life event.",
+                      "A platform facilitating intuitive communication. Easily see who your most engaged leads are with our algorithmic lead score.",
                   },
                 ]}
               />

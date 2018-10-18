@@ -4,24 +4,9 @@ import withStyles from "elevate-ui/withStyles";
 
 import Container from "../components/Container";
 import config from "../utils/siteConfig";
-
+import renderComponent from "../utils/render-component";
 import BundleHero from "../components/BundleHero";
-import BundleSectionStandard from "../components/BundleSectionStandard";
-import BundleSectionCentered from "../components/BundleSectionCentered";
-import BundleSectionInverted from "../components/BundleSectionInverted";
 import BundleCard from "../components/BundleCard";
-
-function getComponentByAlignment(alignment) {
-  switch (alignment) {
-    case "inverted":
-      return BundleSectionInverted;
-    case "centered":
-      return BundleSectionCentered;
-    case "standard":
-    default:
-      return BundleSectionStandard;
-  }
-}
 
 const BundleTemplate = ({ classes, data: { contentfulBundle } }) => {
   const { title, sections, cards, hero } = contentfulBundle;
@@ -36,26 +21,7 @@ const BundleTemplate = ({ classes, data: { contentfulBundle } }) => {
       </Container>
       <Container>
         {sections && sections.length
-          ? sections.map(
-              (
-                { icon, heading, tagline, description, screenshot, alignment },
-                idx
-              ) => {
-                const Component = getComponentByAlignment(alignment);
-                return (
-                  <Component
-                    key={idx}
-                    heading={heading}
-                    tagline={tagline}
-                    icon={icon}
-                    description={description}
-                    screenshot={
-                      screenshot && screenshot.file && screenshot.file.url
-                    }
-                  />
-                );
-              }
-            )
+          ? sections.map((section, idx) => renderComponent(section, idx))
           : null}
       </Container>
       <Container className={classes.bundleCardContainer}>
@@ -75,43 +41,67 @@ const BundleTemplate = ({ classes, data: { contentfulBundle } }) => {
   );
 };
 
+/*
+        ... on ContentfulMarkdownWysiwig {
+          childMarkdownRemark {
+            html
+          }
+        }
+
+        ... on ContentfulFeatures {
+          icon
+          backgroundColor
+          title
+          description
+        }
+
+        ... on ContentfulButton {
+          text
+          href
+          backgroundColor
+        }
+*/
+
 export const query = graphql`
   query bundleQuery($slug: String!) {
     contentfulBundle(slug: { eq: $slug }) {
       title
       slug
-      hero {
-        icon
-        name
-        color
-        screenshot {
-          file {
-            url
-          }
-        }
-        tagline
-        description {
-          childMarkdownRemark {
-            html
-          }
-        }
-      }
       sections {
-        id
-        icon
-        heading
-        tagline
-        description {
-          childMarkdownRemark {
-            html
+        __typename
+        ... on ContentfulBundleSection {
+          icon
+          heading
+          tagline
+          description {
+            childMarkdownRemark {
+              html
+            }
+          }
+          screenshot {
+            file {
+              url
+            }
+          }
+          alignment
+        }
+
+        ... on ContentfulBorderTitleBlock {
+          title {
+            childMarkdownRemark {
+              html
+            }
+          }
+          borderColor
+        }
+
+        ... on ContentfulParallax {
+          backgroundImage {
+            file {
+              url
+            }
           }
         }
-        screenshot {
-          file {
-            url
-          }
-        }
-        alignment
       }
       cards {
         id
