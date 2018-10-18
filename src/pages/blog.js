@@ -111,10 +111,10 @@ export default withStyles((theme) => ({
     maxWidth: "100%",
   },
   btn: {
-    color: "#5A5B5C",
+    color: "#EF5A57",
     fontWeight: "600",
     padding: "16px 80px",
-    border: "2px solid #5A5B5C",
+    border: "2px solid #EF5A57",
     borderRadius: "8px",
   },
 }))(Blog);
