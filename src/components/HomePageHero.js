@@ -18,9 +18,8 @@ const HomePageHero = ({ classes, className, roles, handleRoleChange }) => {
             generating new leads to creating clients for life!
           </div>
           <div className={classes.subHeadingSecondary}>
-            With 60+ integrated MLS', 25m listings, and half a million leads,
-            Elevate is the best platform for real estate agents, teams, and
-            brokers.
+            From generating leads to creating clients for life, Elevate combines
+            everything you need in one operating system.
           </div>
           <div className={classes.subHeadingTagline}>
             <div>Digital tools to</div>
