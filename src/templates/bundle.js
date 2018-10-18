@@ -21,7 +21,9 @@ const BundleTemplate = ({ classes, data: { contentfulBundle } }) => {
       </Container>
       <Container>
         {sections && sections.length
-          ? sections.map((section, idx) => renderComponent(section, idx))
+          ? sections.map((section, idx) =>
+              renderComponent(section, classes, idx)
+            )
           : null}
       </Container>
       <Container className={classes.bundleCardContainer}>
@@ -78,7 +80,7 @@ export const query = graphql`
               html
             }
           }
-          screenshot {
+          screenshots {
             file {
               url
             }
@@ -87,6 +89,8 @@ export const query = graphql`
         }
 
         ... on ContentfulParallax {
+          title
+          tagline
           backgroundImage {
             file {
               url

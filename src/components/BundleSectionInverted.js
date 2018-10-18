@@ -8,6 +8,7 @@ const BundleSectionInverted = ({
   tagline,
   icon,
   screenshot,
+  screenshots,
   description,
 }) => {
   const Icon = Icons[icon];
@@ -26,14 +27,17 @@ const BundleSectionInverted = ({
           }}
         />
       </div>
-      {screenshot ? (
+      {screenshots && screenshots.length ? (
         <div className={classes.screenshot}>
-          <img
-            className={classes.screenshotImage}
-            src={screenshot}
-            alt={"screenshot"}
-            style={{ maxWidth: "100%" }}
-          />
+          {screenshots.map((screenshot, idx) => (
+            <img
+              key={idx}
+              className={classes.screenshotImage}
+              src={screenshot}
+              alt={"screenshot"}
+              style={{ maxWidth: "100%" }}
+            />
+          ))}
         </div>
       ) : null}
     </div>

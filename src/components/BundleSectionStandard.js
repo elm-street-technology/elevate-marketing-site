@@ -9,6 +9,7 @@ const BundleSectionStandard = ({
   tagline,
   description,
   screenshot,
+  screenshots,
 }) => {
   const Icon = Icons[icon];
   return (
@@ -26,14 +27,17 @@ const BundleSectionStandard = ({
           }}
         />
       </div>
-      {screenshot ? (
+      {screenshots && screenshots.length ? (
         <div className={classes.screenshot}>
-          <img
-            className={classes.screenshotImage}
-            src={screenshot}
-            alt={"screenshot"}
-            style={{ maxWidth: "100%" }}
-          />
+          {screenshots.map((screenshot, idx) => (
+            <img
+              key={idx}
+              className={classes.screenshotImage}
+              src={screenshot}
+              alt={"screenshot"}
+              style={{ maxWidth: "100%" }}
+            />
+          ))}
         </div>
       ) : null}
     </div>
@@ -103,12 +107,17 @@ export default withStyles((theme) => ({
     display: "flex",
     justifyContent: "flex-end",
     alignItems: "center",
+    flexDirection: "column",
     boxShadow: "0 8px 12px rgba(0,0,0,0.15)",
 
     [theme.breakpoints[900]]: {
       maxWidth: "600px",
       alignItems: "center",
     },
+  },
+  screenshotImage: {
+    marginBottom: "8px",
+    padding: "8px",
   },
   icon: {
     fill: "#2E7FC2",

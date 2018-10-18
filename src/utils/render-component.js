@@ -46,7 +46,13 @@ export default function renderSection(section, classes, idx) {
           tagline={section.tagline}
           icon={section.icon}
           description={section.description}
-          screenshot={get(section, "screenshot.file.url")}
+          screenshots={
+            section.screenshots && section.screenshots.length
+              ? section.screenshots.map((screenshot) =>
+                  get(screenshot, "file.url")
+                )
+              : []
+          }
         />
       );
 
