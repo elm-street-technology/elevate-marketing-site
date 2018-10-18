@@ -86,15 +86,6 @@ export const query = graphql`
           alignment
         }
 
-        ... on ContentfulBorderTitleBlock {
-          title {
-            childMarkdownRemark {
-              html
-            }
-          }
-          borderColor
-        }
-
         ... on ContentfulParallax {
           backgroundImage {
             file {
