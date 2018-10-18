@@ -19,13 +19,9 @@ const BundleTemplate = ({ classes, data: { contentfulBundle } }) => {
       <Container>
         <BundleHero hero={hero} />
       </Container>
-      <Container>
-        {sections && sections.length
-          ? sections.map((section, idx) =>
-              renderComponent(section, classes, idx)
-            )
-          : null}
-      </Container>
+      {sections && sections.length
+        ? sections.map((section, idx) => renderComponent(section, classes, idx))
+        : null}
       <Container className={classes.bundleCardContainer}>
         {cards && cards.length
           ? cards.map(({ heading, tagline, icon, description }, idx) => (
@@ -91,6 +87,7 @@ export const query = graphql`
         ... on ContentfulParallax {
           title
           tagline
+          icon
           backgroundImage {
             file {
               url

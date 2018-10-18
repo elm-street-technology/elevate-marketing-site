@@ -40,20 +40,22 @@ export default function renderSection(section, classes, idx) {
     case "ContentfulBundleSection":
       const Component = getComponentByAlignment(section.alignment);
       return (
-        <Component
-          key={idx}
-          heading={section.heading}
-          tagline={section.tagline}
-          icon={section.icon}
-          description={section.description}
-          screenshots={
-            section.screenshots && section.screenshots.length
-              ? section.screenshots.map((screenshot) =>
-                  get(screenshot, "file.url")
-                )
-              : []
-          }
-        />
+        <Container>
+          <Component
+            key={idx}
+            heading={section.heading}
+            tagline={section.tagline}
+            icon={section.icon}
+            description={section.description}
+            screenshots={
+              section.screenshots && section.screenshots.length
+                ? section.screenshots.map((screenshot) =>
+                    get(screenshot, "file.url")
+                  )
+                : []
+            }
+          />
+        </Container>
       );
 
     case "ContentfulBorderTitleBlock":
