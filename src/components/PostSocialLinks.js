@@ -49,18 +49,21 @@ const PostSocialLinks = ({ classes, className, post }: Props) => {
       >
         <LinkedIn size={32} />
       </a>
-      <a
-        className={classNames(classes.icon, classes.pinterest)}
-        href={`https://pinterest.com/pin/create/bookmarklet/?media=${
-          post.heroImage.file.url
-        }?itok=cNTqvOf8&url=${config.siteUrl}/${
-          post.slug
-        }&is_video=false&description=${post.title}`}
-        target="_blank"
-        rel="noreferrer noopener"
-      >
-        <Pinterest size={32} />
-      </a>
+      {post.heroImage ? (
+        <a
+          className={classNames(classes.icon, classes.pinterest)}
+          href={`https://pinterest.com/pin/create/bookmarklet/?media=${
+            post.heroImage.file.url
+          }?itok=cNTqvOf8&url=${config.siteUrl}/${
+            post.slug
+          }&is_video=false&description=${post.title}`}
+          target="_blank"
+          rel="noreferrer noopener"
+        >
+          <Pinterest size={32} />
+        </a>
+      ) : null}
+
       <a
         className={classNames(classes.icon, classes.google)}
         href={`https://plus.google.com/share?url=${config.siteUrl}/${
