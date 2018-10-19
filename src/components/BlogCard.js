@@ -8,11 +8,14 @@ const BlogCard = (props) => {
   return (
     <div className={props.classes.root}>
       <Link to={`/${props.slug}/`}>
-        <Img
-          className={props.classes.postImage}
-          sizes={props.image.sizes}
-          backgroundColor={"#eeeeee"}
-        />
+        {props.image ? (
+          <Img
+            className={props.classes.postImage}
+            sizes={props.image.sizes}
+            backgroundColor={"#eeeeee"}
+          />
+        ) : null}
+
         <div className={props.classes.postTitle}>{props.title}</div>
         <div className={props.classes.postDate}>{props.date}</div>
         <div
