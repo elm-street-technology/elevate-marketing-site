@@ -47,18 +47,22 @@ const Product = ({ classes, data: { contentfulProduct } }) => {
           />
         </Container>
         <CallToAction />
-        <ProductSectionSecondary
-          className={classes.secondarySection}
-          product={title}
-          section={secondaryInformation}
-        />
-        <Container>
-          <ProductSectionTertiary
-            className={classes.tertiarySection}
-            features={tertiaryFeatures}
-            section={tertiaryInformation}
+        {secondaryInformation ? (
+          <ProductSectionSecondary
+            className={classes.secondarySection}
+            product={title}
+            section={secondaryInformation}
           />
-        </Container>
+        ) : null}
+        {tertiaryInformation ? (
+          <Container>
+            <ProductSectionTertiary
+              className={classes.tertiarySection}
+              features={tertiaryFeatures}
+              section={tertiaryInformation}
+            />
+          </Container>
+        ) : null}
       </div>
     </div>
   );
