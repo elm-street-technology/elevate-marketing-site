@@ -1,0 +1,15 @@
+# Netlify rules
+
+# Handle 301 redirects for old pages
+[[redirects]]
+  from = "/privacy.asp"
+  to = "/privacy"
+  status = 301
+[[redirects]]
+  from = "/terms-of-service.asp"
+  to = "/terms-of-service"
+  status = 301
+[[redirects]]
+  from = "/DMCA.asp"
+  to = "/dmca"
+  status = 301
