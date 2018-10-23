@@ -1,6 +1,36 @@
 # Netlify rules
 
-# Handle 301 redirects for old pages
+# Handle 301 redirects for old pages: https://www.netlify.com/docs/redirects/
+[[redirects]]
+  from = "/elevateDMS/"
+  to = "/elevate-dms"
+  status = 301
+[[redirects]]
+  from = "/elevateIDX/"
+  to = "/elevate-idx"
+  status = 301
+[[redirects]]
+  from = "/elevateSP/"
+  to = "/elevate-social-pro"
+  status = 301
+[[redirects]]
+  from = "/getStarted/"
+  to = "/get-started"
+  status = 301
+[[redirects]]
+  from = "/support/"
+  to = "https://elmstreettechnology.zendesk.com/hc/en-us"
+  status = 301
+
+[[redirects]]
+  from = "/about-us/testimonials.asp"
+  to = "/testimonials"
+  status = 301
+[[redirects]]
+  from = "/about-us/coverage.asp"
+  to = "/markets"
+  status = 301
+
 [[redirects]]
   from = "/privacy.asp"
   to = "/privacy"
@@ -13,3 +43,20 @@
   from = "/DMCA.asp"
   to = "/dmca"
   status = 301
+
+[[redirects]]
+  from = "/blog.asp"
+  to = "/blog"
+  status = 301
+
+# Redirect query params: https://www.netlify.com/docs/redirects/#query-params
+[[redirects]]
+  from = "/blog.asp"
+  to = "/blog/tag/:tag"
+  status = 301
+  query = {tag = ":tag"}
+[[redirects]]
+  from = "/blog.asp"
+  to = "/blog/tag/:cat"
+  status = 301
+  query = {cat = ":cat"}
