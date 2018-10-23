@@ -13,6 +13,13 @@ import heroImage1600 from "../images/1600.jpg";
 import heroImage1200 from "../images/1200.jpg";
 import heroImage900 from "../images/900.jpg";
 import heroImage600 from "../images/600.jpg";
+import heroVideo from "../images/hero-video.mp4";
+import Link from "gatsby-link";
+
+import GroupAdd from "elevate-ui-icons/GroupAdd";
+import Forum from "elevate-ui-icons/Forum";
+import DeviceHub from "elevate-ui-icons/DeviceHub";
+import PieChart from "elevate-ui-icons/PieChart";
 
 class Index extends Component {
   render() {
@@ -72,13 +79,100 @@ class Index extends Component {
         tagline: "I'm a broker",
       },
     };
+
+    roles.Agents.features = [
+      "Increase your day-to-day productivity",
+      "Lead the pack with an unparalleled marketing strategy & toolset that helps you build your online brand & close more business…all while giving you extra time every day for the things that matter most.",
+    ];
+
     return (
       <div className={classNames(classes.root)}>
         <SEO />
-        <div className={classes.heroImage}>
-          <HomePageHero roles={roles} />
+        <div style={{ position: "relative" }}>
+          <video
+            autoPlay={true}
+            muted={true}
+            loop={true}
+            id="myVideo"
+            className={classes.hero2}
+          >
+            <source src={heroVideo} type="video/mp4" />
+          </video>
+          <div className={classes.hero2Content}>
+            <HomePageHero roles={roles} isAlternate={true} />
+          </div>
         </div>
-        <HomePageCarousel />
+
+        <div
+          style={{
+            margin: "20px auto",
+            padding: "30px",
+            fontSize: "20px",
+            width: "100%",
+            display: "flex",
+            flexDirection: "column",
+            justifyContent: "center",
+            textAlign: "center",
+          }}
+        >
+          <div className={classes.moreThan}>MORE THAN...</div>
+          <div
+            style={{
+              display: "flex",
+              justifyContent: "space-around",
+              margin: "30px 20px",
+              fontSize: "20px",
+              width: "100%",
+            }}
+          >
+            <div style={{ flexGrow: 1 }}>
+              <GroupAdd size={72} className={classes.icon} />
+              <div style={{ fontSize: "16px" }}>a CRM</div>
+            </div>
+            <div style={{ flexGrow: 1 }}>
+              <DeviceHub size={72} className={classes.icon} />
+              <div style={{ fontSize: "16px" }}>lead management</div>
+            </div>
+            <div style={{ flexGrow: 1 }}>
+              <Forum size={72} className={classes.icon} />
+              <div style={{ fontSize: "16px" }}>digital marketing</div>
+            </div>
+            <div style={{ flexGrow: 1 }}>
+              <PieChart size={72} className={classes.icon} />
+              <div style={{ fontSize: "16px" }}>performance metrics</div>
+            </div>
+          </div>
+
+          <div
+            className={classes.moreThan}
+            style={{ marginBottom: "16px", marginTop: "24px" }}
+          >
+            MORE THAN...
+          </div>
+          <div
+            style={{ fontWeight: "bold", color: "#4a4a4a", fontSize: "16px" }}
+          >
+            any other technology company in the space
+          </div>
+          <div
+            style={{ marginTop: "16px", color: "#4a4a4a", fontSize: "16px" }}
+          >
+            Elevate is the{" "}
+            <span style={{ fontWeight: "bold" }}>
+              ONLY pure productivity platform
+            </span>{" "}
+            to hit
+            <div>
+              the real estate market with a goal to make all other solutions
+              obsolete.
+            </div>
+          </div>
+          <Link to="/get-started" className={classes.getStartedLink}>
+            Schedule A Demo
+          </Link>
+        </div>
+
+        <HomePageCarousel isAlternate={true} />
         <CallToAction className={classes.callToAction} />
         <div className={classes.testimonialContainer}>
           <div className={classes.testHeading}>
@@ -89,25 +183,25 @@ class Index extends Component {
               avatar=""
               name="Prince Jones"
               title="MBA-ISM / Realtor®"
-              testimonial="The Elevate platform help me save time and money with many aspects with my social media... Social media is huge folks... There are 4000 realtors in my area if you want to make it to the top 5 percent then you have to do the work. There is an old saying that is linked directly to doing the work, and that saying is work smarter not harder."
+              testimonial="Social media is a big deal in real estate, and the Elevate Productivity Platform and coaching team has saved me valuable time and money, while helping me stand out from the 4,000 other real estate agents in my local area."
             />
             <TestimonialCard
               avatar=""
               name="The Sohaei Team"
               title="Team"
-              testimonial="The standard and professionalism [of service] are well above my satisfaction. Elm Street Technology communication is well above the industry standard and they are there for you...Not only are we satisfied with the quality of the website but the customer support both Anna and I have received to this point. A positive experience all around."
+              testimonial="The service and professionalism of the entire Elevate team is well above any experience we’ve had in the industry.  They are the perfect blend of cutting-edge technology mixed with stellar customer support and coaching."
             />
             <TestimonialCard
               avatar=""
               name="Bob Cross"
               title="Broker"
-              testimonial="I'm glad I invested in Elm Street Technology. You've done a great job in assisting in web page hits, producing new leads and keeping in touch with my client base on a weekly basis through my social media. The results have been most impressive. You now have a Client for Life!"
+              testimonial="Impressive results from the start. Not only have I been able to increase website traffic and capture more leads with my new website, Elevate has helped increase my entire online social presence.  I’m a client for life!"
             />
             <TestimonialCard
               avatar=""
               name="Sherlock Fenderson"
               title="Realtor®"
-              testimonial="I have been a Realtor® for more than 12 years now and for most of those years, Elevate has been my go-to internet website and CRM provider. As I have grown in the real estate business, it has been a vital tool in assisting me with my growth. Elevate's service is excellent! Price-wise, I don't know if Elevate can be beat for the service provided at the price. I have checked and tried, but no one compares. I recommend Elevate to any agent for their business."
+              testimonial="I’ve been a successful Realtor® for more than 12-years and Elevate is my go-to productivity platform for everything lead management and web presence.  It’s a vital tool that I use daily to drive my business growth.  I highly recommend Elevate for anyone looking to grow their business."
             />
           </TestimonialCardGrid>
         </div>
@@ -123,43 +217,30 @@ export default withStyles((theme) => ({
     flexDirection: "column",
     width: "100%",
   },
-  heroImage: {
-    backgroundImage: `url('${heroImage600}')`,
-    backgroundSize: "auto",
-    backgroundRepeat: "no-repeat",
-    backgroundPosition: "center",
-
-    [theme.breakpoints[600]]: {
-      backgroundImage: `url('${heroImage900}')`,
-      height: "100%",
-      backgroundRepeat: "no-repeat",
-      backgroundAttachment: "fixed",
-      backgroundPosition: "top",
-    },
+  hero2: {
+    minWidth: "100%",
 
     [theme.breakpoints[900]]: {
-      backgroundImage: `url('${heroImage1200}')`,
-      backgroundSize: "auto",
-      backgroundRepeat: "no-repeat",
-      backgroundAttachment: "fixed",
-      backgroundPosition: "top",
+      minHeight: "100%",
     },
+  },
+  moreThan: {
+    fontSize: "16px",
+    color: theme.colors.secondary,
+    fontWeight: "bold",
+    marginBottom: "4px",
 
-    [theme.breakpoints[1200]]: {
-      backgroundImage: `url('${heroImage1600}')`,
-      backgroundSize: "auto",
-      backgroundRepeat: "no-repeat",
-      backgroundAttachment: "fixed",
-      backgroundPosition: "top",
+    [theme.breakpoints[900]]: {
+      fontSize: "26px",
     },
-
-    "@media (min-width: 1600px)": {
-      backgroundImage: `url('${heroImage2560}')`,
-      backgroundSize: "auto",
-      backgroundRepeat: "no-repeat",
-      backgroundAttachment: "fixed",
-      backgroundPosition: "top",
-    },
+  },
+  hero2Content: {
+    position: "absolute",
+    bottom: 0,
+    background: "rgba(0, 0, 0, 0.29)",
+    color: "#fff",
+    width: "100%",
+    top: 0,
   },
   testHeading: {
     margin: "0 auto",
@@ -188,5 +269,34 @@ export default withStyles((theme) => ({
   },
   callToAction: {
     paddingTop: "100px",
+  },
+  red: {
+    color: theme.colors.primary,
+  },
+  icon: {
+    width: "56px",
+    height: "56px",
+    display: "flex",
+    alignItems: "center",
+    justifyContent: "center",
+    margin: "4px auto 8px auto",
+    color: theme.colors.white,
+    backgroundColor: theme.colors.secondary,
+    borderRadius: "50%",
+    padding: "12px",
+  },
+  getStartedLink: {
+    width: "250px",
+    alignContent: "center",
+    justifyContent: "center",
+    fontSize: "14px",
+    fontWeight: "700",
+    letterSpacing: ".25px",
+    backgroundColor: theme.colors.secondary,
+    color: "#FFF",
+    textDecoration: "none",
+    padding: "14px 16px",
+    borderRadius: "4px",
+    margin: "16px auto",
   },
 }))(Index);

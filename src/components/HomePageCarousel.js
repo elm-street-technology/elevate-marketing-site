@@ -61,9 +61,190 @@ class HomePageCarousel extends Component<Props> {
     });
   };
 
-  render() {
+  renderAlternate() {
     const { classes, className } = this.props;
     const { selectedRole } = this.state;
+
+    return (
+      <div className={classNames(classes.root, className)}>
+        <div className={classes.carousel}>
+          <button
+            onClick={this.handleCarouselPrevious}
+            className={classNames(
+              classes.carouselArrow,
+              classes.carouselArrowLeft
+            )}
+          >
+            <ChevronLeft size={48} />
+          </button>
+          <div
+            className={classes.carouselContent}
+            ref={(div) => (this.carouselContent = div)}
+          >
+            <div
+              className={classNames(
+                classes.agentContainer,
+                selectedRole === "Agents" && classes.activeRole
+              )}
+            >
+              <HomePageCarouselHeading
+                icon={<Person />}
+                color={"#F15953"}
+                heading="Agents"
+                subheading="Increase your day-to-day productivity"
+              />
+              <HomePageCarouselFeatures
+                features={[
+                  {
+                    screenshot: agent1,
+                    heading: "Social Media",
+                    description:
+                      "Lead the pack with an unparalled marketing strategy & toolset that helps you build your online brand & close more business... all while giving you extra time every day for the things that matter most",
+                  },
+                  {
+                    screenshot: agent2,
+                    heading: "Explore",
+                    description:
+                      "More than a CRM. More than a lead management solution. More than performance metrics. More than any other technology company in the space. ELEVATE is the only pure productivity platform to hit the real estate market, with a goal to make all the other solutions obsolete.",
+                  },
+                  {
+                    screenshot: agent3,
+                    heading: "Let's do it",
+                    description:
+                      "Enhance your productivity, take a personal tour today",
+                  },
+                ]}
+              />
+            </div>
+            <div
+              className={classNames(
+                classes.agentContainer,
+                selectedRole === "Teams" && classes.activeRole
+              )}
+            >
+              <HomePageCarouselHeading
+                color={"#55C3BA"}
+                icon={<People />}
+                heading="Teams"
+                subheading="Everything you and your team needs to increase leads and retain clients"
+              />
+              <HomePageCarouselFeatures
+                features={[
+                  {
+                    screenshot: team1,
+                    heading: "Listing Pulse",
+                    description:
+                      "At a glance, determine your team's listing pipeline with our Listing Pulse.",
+                  },
+                  {
+                    screenshot: team2,
+                    heading: "MLS Health",
+                    description:
+                      "Easily determine avg DOM, list-to-sold price diffs. Market reports, trend analysis, CMAs. Supplemental demographic, school, and tax data.",
+                  },
+                  {
+                    screenshot: team3,
+                    heading: "Gross Commission Income",
+                    description:
+                      "Annual performance KPIs with breakdown by team members.",
+                  },
+                ]}
+              />
+            </div>
+            <div
+              className={classNames(
+                classes.agentContainer,
+                selectedRole === "Brokerages" && classes.activeRole
+              )}
+            >
+              <HomePageCarouselHeading
+                color={"#FFC629"}
+                icon={<GroupAdd />}
+                heading="Brokers"
+                subheading="Everything you and your brokerage needs to increase leads and retain clients"
+              />
+              <HomePageCarouselFeatures
+                features={[
+                  {
+                    screenshot: broker1,
+                    heading: "Pipeline Mgmt",
+                    description:
+                      "See the health of your lead pipeline, office GCI, and individual agent performance",
+                  },
+                  {
+                    screenshot: broker2,
+                    heading: "Lead Routing",
+                    description:
+                      "Sync leads from any source and route them to different offices, teams or agents using our dynamic Rules system",
+                  },
+                  {
+                    screenshot: broker3,
+                    heading: "ROI",
+                    description:
+                      "Determine which sources are providing the highest quality leads to hone your ROI.",
+                  },
+                ]}
+              />
+            </div>
+          </div>
+
+          <button
+            onClick={this.handleCarouselNext}
+            className={classNames(
+              classes.carouselArrow,
+              classes.carouselArrowRight
+            )}
+          >
+            <ChevronRight size={48} />
+          </button>
+        </div>
+        <div className={classes.carouselDots}>
+          <button
+            className={classes.dotButton}
+            onClick={() => this.handleRoleChange("Agents")}
+          >
+            <div
+              className={classNames(
+                classes.dot,
+                selectedRole === "Agents" && classes.activeDot
+              )}
+            />
+          </button>
+          <button
+            className={classes.dotButton}
+            onClick={() => this.handleRoleChange("Teams")}
+          >
+            <div
+              className={classNames(
+                classes.dot,
+                selectedRole === "Teams" && classes.activeDot
+              )}
+            />
+          </button>
+          <button
+            className={classes.dotButton}
+            onClick={() => this.handleRoleChange("Brokerages")}
+          >
+            <div
+              className={classNames(
+                classes.dot,
+                selectedRole === "Brokerages" && classes.activeDot
+              )}
+            />
+          </button>
+        </div>
+      </div>
+    );
+  }
+
+  render() {
+    const { classes, className, isAlternate } = this.props;
+    const { selectedRole } = this.state;
+
+    if (isAlternate) {
+      return this.renderAlternate();
+    }
+
     return (
       <div className={classNames(classes.root, className)}>
         <div className={classes.carousel}>

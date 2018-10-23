@@ -7,13 +7,20 @@ const CTASecondary = ({ classes, className }) => (
   <div className={classNames(classes.root, className)}>
     <div className={classes.ctaContainer}>
       <div className={classes.ctaLeft}>
-        <h1 className={classes.heading}>Let's get you started</h1>
-        <p className={classes.description}>Schedule a demo call</p>
+        <div className={classes.heading}>
+          Explore the 1st Productivity Platform in Real Estate
+        </div>
+        <Link to="/get-started" className={classes.getStartedLink}>
+          <button className={classes.ctaBtn}>Schedule a Demo</button>
+        </Link>
       </div>
       <div className={classes.ctaRight}>
-        <Link to="/get-started" className={classes.getStartedLink}>
-          <button className={classes.ctaBtn}>Get started</button>
-        </Link>
+        <div>Talk to an Elevate Coach today</div>
+        <div>
+          <a href="tel:18445469275" className={classes.call}>
+            844.546.9275
+          </a>
+        </div>
       </div>
     </div>
   </div>
@@ -23,7 +30,6 @@ export default withStyles((theme) => ({
   root: {
     display: "flex",
     justifyContent: "center",
-    alignContent: "center",
     backgroundColor: "#55C3BA",
     padding: "40px 12px",
 
@@ -36,7 +42,7 @@ export default withStyles((theme) => ({
     flexDirection: "column",
     textAlign: "center",
     justifyContent: "space-between",
-    alignItems: "center",
+    alignItems: "flex-start",
     width: "60%",
 
     [theme.breakpoints[900]]: {
@@ -46,13 +52,16 @@ export default withStyles((theme) => ({
     },
   },
   heading: {
-    color: "#FFF",
-    fontSize: "20px",
+    color: "#FFF !important",
+    fontSize: "16px",
     lineHeight: "1.6",
     fontWeight: "600",
+    marginTop: "0px !important",
+    marginBottom: "8px",
 
     [theme.breakpoints[900]]: {
-      fontSize: "28px",
+      fontSize: "20px",
+      marginBottom: "0px",
     },
   },
   description: {
@@ -67,20 +76,40 @@ export default withStyles((theme) => ({
     },
   },
   ctaBtn: {
-    backgroundColor: "#E46457",
-    padding: "10px 50px",
+    backgroundColor: "#29978c",
     fontSize: "16px",
     color: "#FFF",
     borderRadius: "6px",
     fontWeight: "600",
+    padding: "16px 20px",
+    marginBottom: "16px",
 
     [theme.breakpoints[900]]: {
-      padding: "16px 60px",
       fontSize: "20px",
     },
   },
   ctaLeft: {
+    color: "#FFF",
     display: "flex",
     flexDirection: "column",
+  },
+  ctaRight: {
+    textAlign: "center",
+    color: "#FFF",
+    fontSize: "16px",
+    fontWeight: "bold",
+
+    [theme.breakpoints[900]]: {
+      fontSize: "20px",
+      textAlign: "right",
+    },
+  },
+  call: {
+    display: "block",
+    marginTop: "8px",
+    color: "#FFF !important",
+    textDecoration: "none !important",
+    fontSize: "30px",
+    fontWeight: "bold",
   },
 }))(CTASecondary);

@@ -2,92 +2,98 @@ import React from "react";
 import classNames from "classnames";
 import withStyles from "elevate-ui/withStyles";
 import HomePageHeroFooter from "../components/HomePageHeroFooter";
+import Logo from "../components/Logo";
+import Link from "gatsby-link";
 
 const HomePageHero = ({ classes, className, roles, handleRoleChange }) => {
   return (
-    <div className={classNames(classes.root)}>
-      <div className={classes.headingContainer}>
-        <div className={classes.heading}>
-          Online Technology and Marketing Services for Agents and Brokers Made
-          Easy
+    <div className={classNames(classes.root2)}>
+      <div className={classes.headingContainer2}>
+        <div className={classes.heading2}>
+          <span>explore</span>
+          <span style={{ paddingTop: "8px", paddingLeft: "8px" }}>
+            <Logo />
+          </span>
         </div>
-        <div className={classes.subHeading}>
-          <div className={classes.subHeadingPrimary}>
-            Elevate is the only fully integrated single system on the market
-            today that does everything real estate professionals need — from
-            generating new leads to creating clients for life!
+        <div className={classes.subHeading2}>
+          <div className={classes.subHeadingPrimary2}>
+            the 1st Productivity Platform in Real Estate
           </div>
           <div className={classes.subHeadingSecondary}>
-            From generating leads to creating clients for life, Elevate combines
-            everything you need in one operating system.
-          </div>
-          <div className={classes.subHeadingTagline}>
-            <div>Digital tools to</div>
-            <div>Elevate your potential</div>
+            <Link to="/get-started" className={classes.getStartedLink}>
+              Schedule Your Personal Demo
+            </Link>
           </div>
         </div>
       </div>
-      <HomePageHeroFooter handleRoleChange={handleRoleChange} roles={roles} />
+      <HomePageHeroFooter
+        handleRoleChange={handleRoleChange}
+        roles={roles}
+        isAlternate={true}
+      />
     </div>
   );
 };
 
 export default withStyles((theme) => ({
-  root: {
+  root2: {
     display: "flex",
     flexDirection: "column",
     width: "100%",
+    flexGrow: 1,
+    height: "100%",
   },
-  headingContainer: {
+  headingContainer2: {
     display: "flex",
     justifyContent: "center",
     flexDirection: "column",
     width: "100%",
-    maxWidth: "1080px",
     margin: "0 auto",
     padding: "0 8px",
+    flexGrow: 1,
 
     [theme.breakpoints[900]]: {
       paddingBottom: "0px",
+      maxWidth: "1080px",
     },
   },
-  heading: {
+  heading2: {
+    display: "flex",
+    alignItems: "center",
     fontSize: "28px",
     fontWeight: "800",
-    color: "#5A5B5C",
+    color: "#FFF",
     lineHeight: "1.3",
     maxWidth: "710px",
-    margin: "40px auto 20px auto",
+    margin: "0 auto 20px auto",
     textAlign: "center",
 
     [theme.breakpoints[900]]: {
       fontSize: "32px",
-      marginBottom: "60px",
     },
   },
-  subHeading: {
-    fontSize: "18px",
-    color: "#5A5B5C",
+  subHeading2: {
+    fontSize: "16px",
+    color: "#FFF",
     marginTop: "16px",
     marginBottom: "20px",
-    lineHeight: "26px",
+    lineHeight: "3px",
     textAlign: "center",
-    fontWeight: "600",
+    display: "flex",
+    flexDirection: "column",
+    justifyContent: "center",
+    alignItems: "center",
 
     [theme.breakpoints[600]]: {
-      maxWidth: "450px",
       marginBottom: "36px",
       marginTop: "14px",
-      textAlign: "left",
-      fontWeight: "500",
+      fontWeight: "600",
+      fontSize: "22px",
     },
   },
-  subHeadingPrimary: {
-    display: "none",
-
-    [theme.breakpoints[900]]: {
-      display: "flex",
-    },
+  subHeadingPrimary2: {
+    display: "flex",
+    height: "40px",
   },
   subHeadingSecondary: {
     paddingTop: "20px",
@@ -99,5 +105,17 @@ export default withStyles((theme) => ({
     fontSize: "24px",
     paddingBottom: "40px",
     textShadow: "2px 4px 3px rgba(0,0,0,0.08)",
+  },
+  getStartedLink: {
+    alignContent: "center",
+    justifyContent: "center",
+    fontSize: "14px",
+    fontWeight: "700",
+    letterSpacing: ".25px",
+    backgroundColor: theme.colors.secondary,
+    color: "#FFF",
+    textDecoration: "none",
+    padding: "14px 16px",
+    borderRadius: "4px",
   },
 }))(HomePageHero);
