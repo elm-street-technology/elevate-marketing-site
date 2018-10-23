@@ -1,5 +1,6 @@
 import React from "react";
 import Helmet from "react-helmet";
+import Link from "gatsby-link";
 import withStyles from "elevate-ui/withStyles";
 import phone from "../images/phone.png";
 import workChat from "../images/work-chat.png";
@@ -33,7 +34,9 @@ const Testimonial = ({ classes, data: { contentfulTestimonial } }) => {
           <div className={classes.headingLeft}>
             <div className={classes.heading}>{title}</div>
             <div className={classes.subHeading}>{tagline}</div>
-            <button className={classes.mainBtn}>Request a demo</button>
+            <Link to="/get-started" className={classes.mainBtn}>
+              Request a demo
+            </Link>
           </div>
           <div className={classes.headingRight}>
             <img
