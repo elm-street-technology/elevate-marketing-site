@@ -146,21 +146,30 @@ export default withStyles((theme) => ({
     display: "flex",
     alignItems: "center",
     justifyContent: "flex-end",
-    backgroundPosition: "-40px center",
+    backgroundPosition: "center",
     backgroundRepeat: "no-repeat",
-    backgroundSize: "512px",
+    backgroundSize: "contain",
     minHeight: "360px",
+
+    [theme.breakpoints[900]]: {
+      backgroundPosition: "60px center",
+    },
   },
   heroText: {
+    display: "none",
     maxWidth: "560px",
     fontSize: "36px",
-    lineHeight: "48px",
+    lineHeight: "52px",
     fontWeight: "700",
     textAlign: "center",
     paddingBottom: "120px",
 
     "& em": {
       fontStyle: "italic",
+    },
+
+    [theme.breakpoints[900]]: {
+      display: "flex",
     },
   },
   signup: {},
