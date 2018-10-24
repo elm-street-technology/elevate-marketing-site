@@ -6,12 +6,12 @@ module.exports = {
   publisher: "Elm Street Technology", // Organization name used for SEO schema
   siteDescription:
     "Real Estate Web Design - Social Media Marketing for Real Estate Agents - Responsive Real Estate Websites - IDX Integration",
-  siteUrl: "https://www.yourelevate.com", // Site domain. Do not include a trailing slash! If you wish to use a path prefix you can read more about that here: https://www.gatsbyjs.org/docs/path-prefix/
+  siteUrl: "https://www.tryelevate.com", // Site domain. Do not include a trailing slash! If you wish to use a path prefix you can read more about that here: https://www.gatsbyjs.org/docs/path-prefix/
   author: "Elm Street Technology", // Author for RSS author segment and SEO schema
-  authorUrl: "https://www.yourelevate.com/about", // URL used for author and publisher schema, can be a social profile or other personal site
-  userTwitter: "@twitter", // Change for Twitter Cards
+  authorUrl: "https://www.tryelevate.com/about", // URL used for author and publisher schema, can be a social profile or other personal site
+  userTwitter: "@ElmStreetRE", // Change for Twitter Cards
   shortTitle: "Try Elevate", // Used for App manifest e.g. Mobile Home Screen
-  shareImage: "/logos/share.jpg", // Open Graph Default Share Image. 1200x1200 is recommended
+  shareImage: "/logos/logo-512.jpg", // Open Graph Default Share Image. 1200x1200 is recommended
   shareImageWidth: 900, // Change to the width of your default share image
   shareImageHeight: 600, // Change to the height of your default share image
   siteLogo: "/logos/logo-512.png", // Logo used for SEO, RSS, and App manifest
