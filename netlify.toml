@@ -21,6 +21,10 @@
   from = "/support/"
   to = "https://elmstreettechnology.zendesk.com/hc/en-us"
   status = 301
+[[redirects]]
+  from = "/Support/"
+  to = "https://elmstreettechnology.zendesk.com/hc/en-us"
+  status = 301
 
 [[redirects]]
   from = "/about-us/testimonials.asp"
