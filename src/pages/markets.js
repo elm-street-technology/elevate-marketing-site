@@ -4,6 +4,7 @@ import withStyles from "elevate-ui/withStyles";
 import Container from "../components/Container";
 import SEO from "../components/SEO";
 import CircuitBoard from "../images/circuit-board.svg";
+import MLSHeatMap from "../images/mls-heat-map.jpg";
 
 const Markets = ({ classes, data }) => {
   const markets = data.allContentfulMarket.edges;
@@ -25,6 +26,14 @@ const Markets = ({ classes, data }) => {
           <div className={classes.heading}>Areas we serve</div>
           <div className={classes.subheading}>
             Available in {marketCount} markets across the US
+          </div>
+          <div className={classes.fullWidth}>
+            <img
+              src={MLSHeatMap}
+              alt="MLS Heat Map"
+              title="MLS Heat Map"
+              className={classes.mlsHeatMap}
+            />
           </div>
           <div className={classes.table}>
             <div className={classes.tableThead}>
@@ -101,6 +110,13 @@ export default withStyles((theme) => ({
     [theme.breakpoints[900]]: {
       padding: "60px 72px",
     },
+  },
+  fullWidth: {
+    width: "100%",
+  },
+  mlsHeatMap: {
+    marginTop: "16px",
+    width: "100%",
   },
   heading: {
     fontSize: "28px",
