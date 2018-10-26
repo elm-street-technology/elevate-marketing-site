@@ -27,7 +27,7 @@ const Markets = ({ classes, data }) => {
           <div className={classes.subheading}>
             Available in {marketCount} markets across the US
           </div>
-          <div className={classes.fullWidth}>
+          <div className={classes.mlsHeatMapContainer}>
             <img
               src={MLSHeatMap}
               alt="MLS Heat Map"
@@ -111,11 +111,11 @@ export default withStyles((theme) => ({
       padding: "60px 72px",
     },
   },
-  fullWidth: {
-    width: "100%",
+  mlsHeatMapContainer: {
+    width: "75%",
+    margin: "16px auto 0 auto",
   },
   mlsHeatMap: {
-    marginTop: "16px",
     width: "100%",
   },
   heading: {
@@ -124,10 +124,12 @@ export default withStyles((theme) => ({
     marginRight: "auto",
     marginBottom: "16px",
     color: "#2E2E35",
+    textAlign: "center",
   },
   subheading: {
     color: "#64616E",
     fontSize: "22px",
+    textAlign: "center",
   },
   table: {
     paddingTop: "62px",
