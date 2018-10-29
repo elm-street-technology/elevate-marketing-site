@@ -11,7 +11,6 @@ import SolutionsGrid from "../components/SolutionsGrid";
 import GridTitle from "../components/GridTitle";
 import GridCard from "../components/GridCard";
 import TestimonialCardGrid from "../components/TestimonialCardGrid";
-import HomePageCarousel from "../components/HomePageCarousel";
 import heroVideo from "../images/hero-video.mp4";
 import Link from "gatsby-link";
 
@@ -211,7 +210,6 @@ class Index extends Component {
           </SolutionsGrid>
         </div>
 
-        <HomePageCarousel isAlternate={true} />
         <CallToAction className={classes.callToAction} />
         <div className={classes.testimonialContainer}>
           <div className={classes.testHeading}>
