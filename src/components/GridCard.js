@@ -5,9 +5,7 @@ import withStyles from "elevate-ui/withStyles";
 const GridCard = ({ classes, text, color }) => {
   return (
     <div className={classes.root}>
-      <div className={classes.inner}>
-        <div className={classes.title}>{text}</div>
-      </div>
+      <div className={classes.inner}>{text}</div>
     </div>
   );
 };
@@ -30,9 +28,6 @@ export default withStyles((theme) => ({
     },
   },
   inner: {
-    display: "flex",
-    flexDirection: "column",
-    alignItems: "center",
     color: "#fff",
     textAlign: "center",
     lineHeight: "1.5",
