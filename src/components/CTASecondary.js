@@ -62,17 +62,6 @@ export default withStyles((theme) => ({
       marginBottom: "0px",
     },
   },
-  description: {
-    fontSize: "14px",
-    lineHeight: "1.6",
-    marginTop: "6px",
-    marginBottom: "12px",
-    color: "#FFF",
-
-    [theme.breakpoints[900]]: {
-      fontSize: "18px",
-    },
-  },
   ctaBtn: {
     backgroundColor: "#29978c",
     fontSize: "16px",
