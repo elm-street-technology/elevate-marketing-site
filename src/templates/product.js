@@ -9,6 +9,7 @@ import ProductHero from "../components/ProductHero";
 import ProductSectionPrimary from "../components/ProductSectionPrimary";
 import ProductSectionSecondary from "../components/ProductSectionSecondary";
 import ProductSectionTertiary from "../components/ProductSectionTertiary";
+import CTASecondary from "../components/CTASecondary";
 // import SEO from '../components/SEO'
 
 const Product = ({ classes, data: { contentfulProduct } }) => {
@@ -64,6 +65,7 @@ const Product = ({ classes, data: { contentfulProduct } }) => {
           </Container>
         ) : null}
       </div>
+      <CTASecondary />
     </div>
   );
 };

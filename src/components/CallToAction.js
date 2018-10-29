@@ -5,10 +5,9 @@ import CallToActionForm from "../components/CallToActionForm";
 
 const CallToAction = ({ classes, className }) => (
   <div className={classNames(classes.root, className)}>
-    <h1 className={classes.heading}>Let us give you the full tour</h1>
+    <h1 className={classes.heading}>Take a tour</h1>
     <p className={classes.description}>
-      Get a free and in-depth tour from one of our Elevate Agent Success
-      coaches.
+      Explore pure productivity with an Elevate Success Coach today
     </p>
     <CallToActionForm className={classes.form} />
   </div>

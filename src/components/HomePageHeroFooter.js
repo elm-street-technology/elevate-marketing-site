@@ -11,6 +11,7 @@ const HomePageHeroFooter = ({
   className,
   roles,
   handleRoleChange,
+  isAlternate,
 }) => {
   return (
     <div className={classNames(classes.root)}>
@@ -34,6 +35,7 @@ const HomePageHeroFooter = ({
               className={classes.roleCard}
               role={roles.Agents}
               handleRoleChange={handleRoleChange}
+              isAlternate={isAlternate}
             />
           </div>
         </div>

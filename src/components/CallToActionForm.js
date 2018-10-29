@@ -74,7 +74,7 @@ class CTAForm extends React.Component {
               className={classes.button}
               disabled={isSubmitting}
             >
-              Request a demo
+              Schedule a Demo
             </button>
           </Form>
         )}
@@ -113,7 +113,7 @@ export default withStyles((theme) => ({
     fontSize: "13px",
     fontWeight: "700",
     height: "48px",
-    backgroundColor: "#F15953",
+    backgroundColor: theme.colors.secondary,
     color: "#fff",
     padding: "0px 10px",
     margin: "0",

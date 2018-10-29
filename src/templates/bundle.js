@@ -7,6 +7,7 @@ import config from "../utils/siteConfig";
 import renderComponent from "../utils/render-component";
 import BundleHero from "../components/BundleHero";
 import BundleCard from "../components/BundleCard";
+import CTASecondary from "../components/CTASecondary";
 
 const BundleTemplate = ({ classes, data: { contentfulBundle } }) => {
   const { title, sections, cards, hero } = contentfulBundle;
@@ -35,6 +36,7 @@ const BundleTemplate = ({ classes, data: { contentfulBundle } }) => {
             ))
           : null}
       </Container>
+      <CTASecondary />
     </div>
   );
 };
