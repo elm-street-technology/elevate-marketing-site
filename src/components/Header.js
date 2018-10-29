@@ -63,6 +63,9 @@ class Header extends Component {
 
 export default withStyles((theme) => ({
   root: {
+    zIndex: "9999",
+    position: "fixed",
+    top: "0",
     display: "flex",
     alignItems: "center",
     width: "100%",
