@@ -1,49 +1,96 @@
 import React from "react";
 import classNames from "classnames";
 import withStyles from "elevate-ui/withStyles";
-import HomePageHeroFooter from "../components/HomePageHeroFooter";
+import HomePageHeroRoles from "../components/HomePageHeroRoles";
 import Logo from "../components/Logo";
 import Link from "gatsby-link";
+import heroVideo from "../images/homepage-hero-2048-1080.mp4";
+import heroVideoFallback from "../images/1200.jpg";
 
-const HomePageHero = ({ classes, className, roles, handleRoleChange }) => {
+const HomePageHero = ({
+  classes,
+  className,
+  roles,
+  handleRoleChange,
+  theme,
+}) => {
   return (
-    <div className={classNames(classes.root2)}>
-      <div className={classes.headingContainer2}>
-        <div className={classes.heading2}>
-          <span>explore</span>
-          <span style={{ paddingTop: "8px", paddingLeft: "8px" }}>
-            <Logo />
-          </span>
-        </div>
-        <div className={classes.subHeading2}>
-          <div className={classes.subHeadingPrimary2}>
+    <div className={classNames(classes.root)}>
+      <video
+        autoPlay={true}
+        muted={true}
+        loop={true}
+        id="myVideo"
+        className={classes.video}
+      >
+        <source src={heroVideo} type="video/mp4" />
+        <img
+          src={heroVideoFallback}
+          alt="Office of real estate agents celebrating"
+        />
+      </video>
+      <div className={classes.hero}>
+        <div className={classes.heroContent}>
+          <div className={classes.heading}>
+            <span>explore</span>
+            <span style={{ paddingTop: "8px", paddingLeft: "8px" }}>
+              <Logo textColor="#fff" triangleColor={theme.colors.primary} />
+            </span>
+          </div>
+          <div className={classes.subHeading}>
             the 1st Productivity Platform in Real Estate
           </div>
-          <div className={classes.subHeadingSecondary}>
-            <Link to="/get-started" className={classes.getStartedLink}>
-              Schedule Your Personal Demo
-            </Link>
-          </div>
+          <Link to="/get-started" className={classes.link}>
+            Schedule Your Personal Demo
+          </Link>
         </div>
+        <HomePageHeroRoles
+          handleRoleChange={handleRoleChange}
+          roles={roles}
+          isAlternate={true}
+        />
       </div>
-      <HomePageHeroFooter
-        handleRoleChange={handleRoleChange}
-        roles={roles}
-        isAlternate={true}
-      />
     </div>
   );
 };
 
 export default withStyles((theme) => ({
-  root2: {
+  root: {
+    position: "relative",
     display: "flex",
     flexDirection: "column",
     width: "100%",
-    flexGrow: 1,
-    height: "100%",
+    height: "100vh",
+    maxHeight: "720px",
+    overflow: "hidden",
   },
-  headingContainer2: {
+  video: {
+    display: "none",
+    position: "absolute",
+    width: "100%",
+    height: "100%",
+    top: 0,
+    right: 0,
+    bottom: 0,
+    left: 0,
+    objectFit: "cover",
+
+    [theme.breakpoints[900]]: {
+      display: "block",
+    },
+  },
+  hero: {
+    position: "absolute",
+    top: 0,
+    bottom: 0,
+    width: "100%",
+    height: "100%",
+    display: "flex",
+    flexDirection: "column",
+    background: "rgba(0, 0, 0, 0.50)",
+    color: "#fff",
+  },
+  heroContent: {
     display: "flex",
     justifyContent: "center",
     flexDirection: "column",
@@ -57,65 +104,40 @@ export default withStyles((theme) => ({
       maxWidth: "1080px",
     },
   },
-  heading2: {
+  heading: {
     display: "flex",
     alignItems: "center",
-    fontSize: "28px",
-    fontWeight: "800",
-    color: "#FFF",
-    lineHeight: "1.3",
-    maxWidth: "710px",
-    margin: "0 auto 20px auto",
+    fontSize: "36px",
+    lineHeight: "46px",
+    fontWeight: "600",
+    color: "#fff",
+    margin: "0 auto",
     textAlign: "center",
-
-    [theme.breakpoints[900]]: {
-      fontSize: "32px",
-    },
   },
-  subHeading2: {
+  subHeading: {
     fontSize: "16px",
-    color: "#FFF",
-    marginTop: "16px",
-    marginBottom: "20px",
-    lineHeight: "3px",
+    lineHeight: "24px",
+    fontWeight: "600",
+    color: "#fff",
     textAlign: "center",
     display: "flex",
-    flexDirection: "column",
     justifyContent: "center",
     alignItems: "center",
-
-    [theme.breakpoints[600]]: {
-      marginBottom: "36px",
-      marginTop: "14px",
-      fontWeight: "600",
-      fontSize: "22px",
-    },
+    marginTop: "8px",
+    marginBottom: "32px",
   },
-  subHeadingPrimary2: {
-    display: "flex",
-    height: "40px",
-  },
-  subHeadingSecondary: {
-    paddingTop: "20px",
-    paddingBottom: "38px",
-  },
-  subHeadingTagline: {
-    color: "#5A5B5C",
-    fontWeight: "700",
-    fontSize: "24px",
-    paddingBottom: "40px",
-    textShadow: "2px 4px 3px rgba(0,0,0,0.08)",
-  },
-  getStartedLink: {
+  link: {
+    display: "inline-flex",
     alignContent: "center",
     justifyContent: "center",
     fontSize: "14px",
     fontWeight: "700",
     letterSpacing: ".25px",
-    backgroundColor: theme.colors.secondary,
-    color: "#FFF",
     textDecoration: "none",
+    color: "#FFF",
+    backgroundColor: theme.colors.secondary,
     padding: "14px 16px",
     borderRadius: "4px",
+    margin: "0 auto",
   },
 }))(HomePageHero);

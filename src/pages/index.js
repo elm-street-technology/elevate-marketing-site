@@ -11,7 +11,6 @@ import SolutionsGrid from "../components/SolutionsGrid";
 import GridTitle from "../components/GridTitle";
 import GridCard from "../components/GridCard";
 import TestimonialCardGrid from "../components/TestimonialCardGrid";
-import heroVideo from "../images/hero-video.mp4";
 import Link from "gatsby-link";
 
 import GroupAdd from "elevate-ui-icons/GroupAdd";
@@ -101,21 +100,7 @@ class Index extends Component {
     return (
       <div className={classNames(classes.root)}>
         <SEO />
-        <div style={{ position: "relative" }}>
-          <video
-            autoPlay={true}
-            muted={true}
-            loop={true}
-            id="myVideo"
-            className={classes.hero2}
-          >
-            <source src={heroVideo} type="video/mp4" />
-          </video>
-          <div className={classes.hero2Content}>
-            <HomePageHero roles={roles} isAlternate={true} />
-          </div>
-        </div>
-
+        <HomePageHero roles={roles} isAlternate={true} />
         <div
           style={{
             margin: "20px auto",
