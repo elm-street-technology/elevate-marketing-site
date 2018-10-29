@@ -31,7 +31,6 @@ export default withStyles((theme) => ({
     backgroundColor: "#55C3BA",
     padding: "40px 12px",
     justifyContent: "center",
-    color: "#FFF",
   },
   inner: {
     display: "flex",
@@ -51,7 +50,7 @@ export default withStyles((theme) => ({
     },
   },
   heading: {
-    color: "#FFF !important",
+    color: "#FFF",
     fontSize: "16px",
     lineHeight: "1.6",
     fontWeight: "600",
@@ -89,8 +88,8 @@ export default withStyles((theme) => ({
   call: {
     display: "block",
     marginTop: "8px",
-    color: "#FFF !important",
-    textDecoration: "none !important",
+    color: "#FFF",
+    textDecoration: "none",
     fontSize: "30px",
     fontWeight: "bold",
   },
