@@ -1,11 +1,10 @@
 import React from "react";
-import classNames from "classnames";
 import withStyles from "elevate-ui/withStyles";
 import Link from "gatsby-link";
 
-const CTASecondary = ({ classes, className }) => (
-  <div className={classNames(classes.root, className)}>
-    <div className={classes.ctaContainer}>
+const CTASecondary = ({ classes }) => (
+  <div className={classes.root}>
+    <div className={classes.inner}>
       <div className={classes.ctaLeft}>
         <div className={classes.heading}>
           Explore the 1st Productivity Platform in Real Estate
@@ -29,50 +28,37 @@ const CTASecondary = ({ classes, className }) => (
 export default withStyles((theme) => ({
   root: {
     display: "flex",
-    justifyContent: "center",
     backgroundColor: "#55C3BA",
     padding: "40px 12px",
-
-    [theme.breakpoints[900]]: {
-      padding: "60px 12px",
-    },
+    justifyContent: "center",
   },
-  ctaContainer: {
+  inner: {
     display: "flex",
+    justifyContent: "center",
     flexDirection: "column",
+    width: "100%",
+    maxWidth: "1080px",
     textAlign: "center",
-    justifyContent: "space-between",
-    alignItems: "flex-start",
-    width: "60%",
+    fontWeight: "600",
 
     [theme.breakpoints[900]]: {
       flexDirection: "row",
+      alignItems: "center",
+      justifyContent: "space-between",
       textAlign: "left",
       fontSize: "28px",
     },
   },
   heading: {
-    color: "#FFF !important",
+    color: "#FFF",
     fontSize: "16px",
     lineHeight: "1.6",
     fontWeight: "600",
-    marginTop: "0px !important",
-    marginBottom: "8px",
+    paddingBottom: "12px",
 
     [theme.breakpoints[900]]: {
       fontSize: "20px",
       marginBottom: "0px",
-    },
-  },
-  description: {
-    fontSize: "14px",
-    lineHeight: "1.6",
-    marginTop: "6px",
-    marginBottom: "12px",
-    color: "#FFF",
-
-    [theme.breakpoints[900]]: {
-      fontSize: "18px",
     },
   },
   ctaBtn: {
@@ -88,16 +74,11 @@ export default withStyles((theme) => ({
       fontSize: "20px",
     },
   },
-  ctaLeft: {
-    color: "#FFF",
-    display: "flex",
-    flexDirection: "column",
-  },
+
   ctaRight: {
     textAlign: "center",
     color: "#FFF",
     fontSize: "16px",
-    fontWeight: "bold",
 
     [theme.breakpoints[900]]: {
       fontSize: "20px",
@@ -107,8 +88,8 @@ export default withStyles((theme) => ({
   call: {
     display: "block",
     marginTop: "8px",
-    color: "#FFF !important",
-    textDecoration: "none !important",
+    color: "#FFF",
+    textDecoration: "none",
     fontSize: "30px",
     fontWeight: "bold",
   },
