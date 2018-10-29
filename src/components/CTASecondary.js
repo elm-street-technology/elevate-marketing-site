@@ -34,19 +34,19 @@ export default withStyles((theme) => ({
   },
   inner: {
     display: "flex",
-    width: "100%",
     justifyContent: "center",
-    maxWidth: "1080px",
     flexDirection: "column",
+    width: "100%",
+    maxWidth: "1080px",
     textAlign: "center",
     fontWeight: "600",
 
     [theme.breakpoints[900]]: {
       flexDirection: "row",
-      textAlign: "left",
-      fontSize: "28px",
       alignItems: "center",
       justifyContent: "space-between",
+      textAlign: "left",
+      fontSize: "28px",
     },
   },
   heading: {
