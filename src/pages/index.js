@@ -6,13 +6,12 @@ import HomePageHero from "../components/HomePageHero";
 import CallToAction from "../components/CallToAction";
 import CTASecondary from "../components/CTASecondary";
 import TestimonialCard from "../components/TestimonialCard";
+import gridBackgroundImg from "../images/index_area_bg.jpg";
+import SolutionsGrid from "../components/SolutionsGrid";
+import GridTitle from "../components/GridTitle";
+import GridCard from "../components/GridCard";
 import TestimonialCardGrid from "../components/TestimonialCardGrid";
 import HomePageCarousel from "../components/HomePageCarousel";
-import heroImage2560 from "../images/2560.jpg";
-import heroImage1600 from "../images/1600.jpg";
-import heroImage1200 from "../images/1200.jpg";
-import heroImage900 from "../images/900.jpg";
-import heroImage600 from "../images/600.jpg";
 import heroVideo from "../images/hero-video.mp4";
 import Link from "gatsby-link";
 
@@ -40,6 +39,11 @@ class Index extends Component {
         color: "#F15953",
         borderColor: "rgba(241, 89, 83, .4)",
         tagline: "I'm an agent",
+        grid: [
+          "I need help with my marketing: website, social, email",
+          "I want to close more leads faster",
+          "I'd like to help with providing great content to my audience",
+        ],
       },
       Teams: {
         name: "Teams",
@@ -58,6 +62,11 @@ class Index extends Component {
         color: "#55C3BA",
         borderColor: "rgba(85, 195, 186, .4)",
         tagline: "I lead a team of agents",
+        grid: [
+          "I want at-a-glance insight into what's happening across my brokerage",
+          "I need assistance recruiting & retaining clients",
+          "I want to streamline lead routing & internal management processes",
+        ],
       },
       Brokerages: {
         name: "Brokers",
@@ -77,6 +86,11 @@ class Index extends Component {
         color: "#FFC629",
         borderColor: "rgba(255, 198, 41, .4)",
         tagline: "I'm a broker",
+        grid: [
+          "We want to streamline lead routing & internal communication",
+          "We want to better understand what drives our revenue",
+          "We want to save time & money on marketing efforts",
+        ],
       },
     };
 
@@ -170,6 +184,31 @@ class Index extends Component {
           <Link to="/get-started" className={classes.getStartedLink}>
             Schedule A Demo
           </Link>
+        </div>
+
+        <div className={classes.solutionsGridContainer}>
+          <div className={classes.solutionsHeading}>
+            How can we help you be more productive today?
+          </div>
+          <SolutionsGrid>
+            {Object.keys(roles).map((role, i) => {
+              const roleObject = roles[role];
+              return (
+                <div>
+                  <GridTitle
+                    name={roleObject.name}
+                    color={roleObject.color}
+                    icon={roleObject.icon}
+                  />
+                  {roleObject.grid.map((gridItem) => {
+                    return (
+                      <GridCard text={gridItem} color={roleObject.color} />
+                    );
+                  })}
+                </div>
+              );
+            })}
+          </SolutionsGrid>
         </div>
 
         <HomePageCarousel isAlternate={true} />
@@ -298,5 +337,18 @@ export default withStyles((theme) => ({
     padding: "14px 16px",
     borderRadius: "4px",
     margin: "16px auto",
+  },
+  solutionsGridContainer: {
+    backgroundImage: `url("${gridBackgroundImg}")`,
+    backgroundSize: "cover",
+  },
+  solutionsHeading: {
+    textAlign: "center",
+    textShadow: "0px 4px 3px rgba(0,0,0,0.05)",
+    color: "#fff",
+    fontWeight: "700",
+    fontSize: "22px",
+    marginTop: "60px",
+    lineHeight: "1.5",
   },
 }))(Index);
