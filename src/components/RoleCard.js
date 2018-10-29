@@ -3,7 +3,13 @@ import classNames from "classnames";
 import withStyles from "elevate-ui/withStyles";
 import Icon from "elevate-ui-icons/Icon";
 
-const RoleCard = ({ classes, className, role, handleRoleChange }) => {
+const RoleCard = ({
+  classes,
+  className,
+  role,
+  handleRoleChange,
+  isAlternate,
+}) => {
   return (
     <div
       className={classNames(classes.root, className)}
@@ -15,13 +21,21 @@ const RoleCard = ({ classes, className, role, handleRoleChange }) => {
             <div className={classes.iconContainer}>
               <Icon name={role.icon} style={{ color: role.color }} size={48} />
             </div>
-            <div className={classes.roleHeading}>{role.name}</div>
-            <div
-              className={classes.roleSubHeading}
-              style={{ color: role.color }}
-            >
-              {role.tagline}
+            <div className={classes.roleHeading}>
+              {isAlternate ? (
+                <span style={{ color: role.color }}>{role.tagline}</span>
+              ) : (
+                role.name
+              )}
             </div>
+            {isAlternate ? null : (
+              <div
+                className={classes.roleSubHeading}
+                style={{ color: role.color }}
+              >
+                {role.tagline}
+              </div>
+            )}
           </div>
           <div>
             <ul className={classes.featureList}>
@@ -40,7 +54,7 @@ const RoleCard = ({ classes, className, role, handleRoleChange }) => {
           className={classes.roleBtn}
           style={{ backgroundColor: role.color }}
         >
-          Get Started
+          {isAlternate ? "Explore" : "Get Started"}
         </button>
       </div>
     </div>

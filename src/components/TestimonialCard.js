@@ -44,9 +44,11 @@ const TestimonialCard = ({
 export default withStyles((theme) => ({
   root: {
     display: "flex",
+    flexDirection: "column",
+    textAlign: "center",
     justifyContent: "center",
     padding: "20px 0px 30px 12px",
-    maxWidth: "500px",
+    maxWidth: "350px",
     background: "#ebebeb", // material-design 1dp
     transition: "all 200ms ease-in-out",
     overflow: "hidden",
@@ -59,7 +61,7 @@ export default withStyles((theme) => ({
     paddingRight: "10px",
   },
   testAuthor: {
-    color: "#64616E",
+    color: theme.colors.secondary,
     fontSize: "20px",
     fontWeight: "700",
     paddingBottom: "8px",
@@ -82,7 +84,6 @@ export default withStyles((theme) => ({
     flexDirection: "column",
   },
   quotation: {
-    alignSelf: "flex-end",
-    marginRight: "20px",
+    marginBottom: "16px",
   },
 }))(TestimonialCard);

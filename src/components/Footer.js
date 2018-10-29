@@ -170,51 +170,31 @@ const Footer = ({ classes }) => (
           </div>
         </div>
         <div className={classes.column}>
-          <div className={classes.section}>Products</div>
-          <Link className={classes.link} to="/elevate-dms">
-            DMS
+          <div className={classes.section}>Solutions</div>
+          <Link className={classes.link} to="/agents">
+            Agents
           </Link>
-          <Link className={classes.link} to="/elevate-social-pro">
-            Social Pro
+          <Link className={classes.link} to="/brokers">
+            Brokers
           </Link>
-          <Link className={classes.link} to="/elevate-idx">
-            IDX
-          </Link>
-          <Link className={classes.link} to="/elevate-ignite">
-            Ignite
-          </Link>
-          <Link className={classes.link} to="/elevate-elite">
-            Elite
-          </Link>
-          <Link className={classes.link} to="/elevate-elite-pro">
-            Elite Pro
-          </Link>
-          <Link className={classes.link} to="/elevate-crm">
-            CRM
-          </Link>
-          <Link className={classes.link} to="/elevate-recruiter">
-            Recruiter
+          <Link className={classes.link} to="/teams">
+            Teams
           </Link>
         </div>
         <div className={classes.column}>
-          <div className={classes.section}>About</div>
-          <Link className={classes.link} to="/blog">
-            Blog
-          </Link>
+          <div className={classes.section}>Explore</div>
           <Link className={classes.link} to="/testimonials">
             Testimonials
           </Link>
           <Link className={classes.link} to="/markets">
-            Markets
+            MLS Markets
           </Link>
           <Link className={classes.link} to="/events">
-            Events
+            Upcoming Events
           </Link>
-          <Link className={classes.link} to="/webinars">
-            Webinars
-          </Link>
+
           <Link className={classes.link} to="/bootcamp">
-            Social Media Bootcamp
+            Social Media Boot Camp
           </Link>
         </div>
         <div className={classes.column}>
@@ -226,6 +206,12 @@ const Footer = ({ classes }) => (
           >
             Help Center
           </a>
+          <Link className={classes.link} to="/webinars">
+            Webinars
+          </Link>
+          <Link className={classes.link} to="/blog">
+            Blog
+          </Link>
           <Link className={classes.link} to="/terms-of-service">
             Terms of Service
           </Link>
