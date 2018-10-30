@@ -109,35 +109,26 @@ class Index extends Component {
             width: "100%",
             display: "flex",
             flexDirection: "column",
-            justifyContent: "center",
             textAlign: "center",
           }}
         >
           <div className={classes.moreThan}>MORE THAN...</div>
-          <div
-            style={{
-              display: "flex",
-              justifyContent: "space-around",
-              margin: "30px 20px",
-              fontSize: "20px",
-              width: "100%",
-            }}
-          >
-            <div style={{ flexGrow: 1 }}>
+          <div className={classes.moreThanContainer}>
+            <div>
               <GroupAdd size={72} className={classes.icon} />
-              <div style={{ fontSize: "16px" }}>a CRM</div>
+              <div className={classes.moreThanText}>a CRM</div>
             </div>
-            <div style={{ flexGrow: 1 }}>
+            <div>
               <DeviceHub size={72} className={classes.icon} />
-              <div style={{ fontSize: "16px" }}>lead management</div>
+              <div className={classes.moreThanText}>lead management</div>
             </div>
-            <div style={{ flexGrow: 1 }}>
+            <div>
               <Forum size={72} className={classes.icon} />
-              <div style={{ fontSize: "16px" }}>digital marketing</div>
+              <div className={classes.moreThanText}>digital marketing</div>
             </div>
-            <div style={{ flexGrow: 1 }}>
+            <div>
               <PieChart size={72} className={classes.icon} />
-              <div style={{ fontSize: "16px" }}>performance metrics</div>
+              <div className={classes.moreThanText}>performance metrics</div>
             </div>
           </div>
 
@@ -319,5 +310,29 @@ export default withStyles((theme) => ({
     fontSize: "22px",
     marginTop: "60px",
     lineHeight: "1.5",
+  },
+  moreThanText: {
+    color: "#4a4a4a",
+    fontSize: "16px",
+    fontWeight: "700",
+  },
+  moreThanContainer: {
+    display: "grid",
+    gridGap: "40px",
+    margin: "40px auto",
+    fontSize: "20px",
+    maxWidth: "400px",
+    width: "100%",
+
+    [theme.breakpoints[600]]: {
+      gridGap: "40px",
+      gridTemplateColumns: "repeat(2, minmax(180px, 1fr))",
+    },
+
+    [theme.breakpoints[900]]: {
+      maxWidth: "800px",
+      gridGap: "0px",
+      gridTemplateColumns: "repeat(4, minmax(180px, 1fr))",
+    },
   },
 }))(Index);
