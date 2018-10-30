@@ -102,6 +102,8 @@ class Index extends Component {
       <div className={classNames(classes.root)}>
         <SEO />
         <HomePageHero roles={roles} isAlternate={true} />
+
+        <DefinitionSection />
         <div
           style={{
             margin: "20px auto",
