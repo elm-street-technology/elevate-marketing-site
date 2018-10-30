@@ -58,7 +58,10 @@ export default withStyles((theme) => ({
   right: {
     display: "flex",
     flexDirection: "column",
-    maxWidth: "500px",
+
+    [theme.breakpoints[900]]: {
+      marginLeft: "100px",
+    },
   },
   heading: {
     fontSize: "36px",
