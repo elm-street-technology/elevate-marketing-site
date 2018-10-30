@@ -10,6 +10,7 @@ import gridBackgroundImg from "../images/index_area_bg.jpg";
 import SolutionsGrid from "../components/SolutionsGrid";
 import GridTitle from "../components/GridTitle";
 import GridCard from "../components/GridCard";
+import DefinitionSection from "../components/DefinitionSection";
 import TestimonialCardGrid from "../components/TestimonialCardGrid";
 import HomePageCarousel from "../components/HomePageCarousel";
 import heroVideo from "../images/hero-video.mp4";
@@ -117,6 +118,7 @@ class Index extends Component {
           </div>
         </div>
 
+        <DefinitionSection />
         <div
           style={{
             margin: "20px auto",
