@@ -57,5 +57,6 @@ export default withStyles((theme) => ({
   },
   children: {
     flex: "1",
+    marginTop: "80px", // Header height
   },
 }))(Template);
