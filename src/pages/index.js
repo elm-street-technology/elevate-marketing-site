@@ -10,6 +10,7 @@ import gridBackgroundImg from "../images/index_area_bg.jpg";
 import SolutionsGrid from "../components/SolutionsGrid";
 import GridTitle from "../components/GridTitle";
 import GridCard from "../components/GridCard";
+import DefinitionSection from "../components/DefinitionSection";
 import TestimonialCardGrid from "../components/TestimonialCardGrid";
 import Link from "gatsby-link";
 
@@ -101,6 +102,8 @@ class Index extends Component {
       <div className={classNames(classes.root)}>
         <SEO />
         <HomePageHero roles={roles} isAlternate={true} />
+
+        <DefinitionSection />
         <div
           style={{
             margin: "20px auto",
