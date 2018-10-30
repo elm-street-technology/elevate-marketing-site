@@ -239,13 +239,6 @@ export default withStyles((theme) => ({
     flexDirection: "column",
     width: "100%",
   },
-  hero2: {
-    minWidth: "100%",
-
-    [theme.breakpoints[900]]: {
-      minHeight: "100%",
-    },
-  },
   moreThan: {
     fontSize: "16px",
     color: theme.colors.secondary,
@@ -255,14 +248,6 @@ export default withStyles((theme) => ({
     [theme.breakpoints[900]]: {
       fontSize: "26px",
     },
-  },
-  hero2Content: {
-    position: "absolute",
-    bottom: 0,
-    background: "rgba(0, 0, 0, 0.29)",
-    color: "#fff",
-    width: "100%",
-    top: 0,
   },
   testHeading: {
     margin: "0 auto",

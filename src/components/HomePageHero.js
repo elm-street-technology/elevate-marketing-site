@@ -5,7 +5,8 @@ import HomePageHeroRoles from "../components/HomePageHeroRoles";
 import Logo from "../components/Logo";
 import Link from "gatsby-link";
 import heroVideo from "../images/homepage-hero-2048-1080.mp4";
-import heroVideoFallback from "../images/1200.jpg";
+import heroImage600 from "../images/600.jpg";
+import heroImage1200 from "../images/1200.jpg";
 
 const HomePageHero = ({
   classes,
@@ -21,14 +22,19 @@ const HomePageHero = ({
         muted={true}
         loop={true}
         id="myVideo"
-        className={classes.video}
+        className={classNames(classes.background, classes.video)}
       >
         <source src={heroVideo} type="video/mp4" />
         <img
-          src={heroVideoFallback}
+          src={heroImage1200}
           alt="Office of real estate agents celebrating"
         />
       </video>
+      <img
+        className={classNames(classes.background, classes.image)}
+        src={heroImage600}
+        alt="Office of real estate agents celebrating"
+      />
       <div className={classes.hero}>
         <div className={classes.heroContent}>
           <div className={classes.heading}>
@@ -60,12 +66,11 @@ export default withStyles((theme) => ({
     display: "flex",
     flexDirection: "column",
     width: "100%",
-    height: "100vh",
+    height: "calc(100vh - 80px)", // Header height
     maxHeight: "720px",
     overflow: "hidden",
   },
-  video: {
-    display: "none",
+  background: {
     position: "absolute",
     width: "100%",
     height: "100%",
@@ -74,9 +79,19 @@ export default withStyles((theme) => ({
     bottom: 0,
     left: 0,
     objectFit: "cover",
+  },
+  video: {
+    display: "none",
 
-    [theme.breakpoints[900]]: {
+    [theme.breakpoints[600]]: {
       display: "block",
+    },
+  },
+  image: {
+    display: "block",
+
+    [theme.breakpoints[600]]: {
+      display: "none",
     },
   },
   hero: {
