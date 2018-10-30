@@ -12,8 +12,6 @@ import GridTitle from "../components/GridTitle";
 import GridCard from "../components/GridCard";
 import DefinitionSection from "../components/DefinitionSection";
 import TestimonialCardGrid from "../components/TestimonialCardGrid";
-import HomePageCarousel from "../components/HomePageCarousel";
-import heroVideo from "../images/hero-video.mp4";
 import Link from "gatsby-link";
 
 import GroupAdd from "elevate-ui-icons/GroupAdd";
@@ -103,22 +101,7 @@ class Index extends Component {
     return (
       <div className={classNames(classes.root)}>
         <SEO />
-        <div style={{ position: "relative" }}>
-          <video
-            autoPlay={true}
-            muted={true}
-            loop={true}
-            id="myVideo"
-            className={classes.hero2}
-          >
-            <source src={heroVideo} type="video/mp4" />
-          </video>
-          <div className={classes.hero2Content}>
-            <HomePageHero roles={roles} isAlternate={true} />
-          </div>
-        </div>
-
-        <DefinitionSection />
+        <HomePageHero roles={roles} isAlternate={true} />
         <div
           style={{
             margin: "20px auto",
@@ -213,7 +196,6 @@ class Index extends Component {
           </SolutionsGrid>
         </div>
 
-        <HomePageCarousel isAlternate={true} />
         <CallToAction className={classes.callToAction} />
         <div className={classes.testimonialContainer}>
           <div className={classes.testHeading}>
@@ -258,13 +240,6 @@ export default withStyles((theme) => ({
     flexDirection: "column",
     width: "100%",
   },
-  hero2: {
-    minWidth: "100%",
-
-    [theme.breakpoints[900]]: {
-      minHeight: "100%",
-    },
-  },
   moreThan: {
     fontSize: "16px",
     color: theme.colors.secondary,
@@ -274,14 +249,6 @@ export default withStyles((theme) => ({
     [theme.breakpoints[900]]: {
       fontSize: "26px",
     },
-  },
-  hero2Content: {
-    position: "absolute",
-    bottom: 0,
-    background: "rgba(0, 0, 0, 0.29)",
-    color: "#fff",
-    width: "100%",
-    top: 0,
   },
   testHeading: {
     margin: "0 auto",
@@ -294,9 +261,10 @@ export default withStyles((theme) => ({
     maxWidth: "900px",
   },
   testimonialContainer: {
-    justifyContent: "center",
     display: "flex",
+    justifyContent: "center",
     flexDirection: "column",
+    alignItems: "center",
     paddingLeft: "12px",
     paddingRight: "12px",
     paddingTop: "75px",

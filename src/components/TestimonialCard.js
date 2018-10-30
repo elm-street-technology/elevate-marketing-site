@@ -26,13 +26,15 @@ const TestimonialCard = ({
       ) : null}
 
       <div className={classes.testRight}>
-        <div className={classes.quotation}>
-          <img
-            style={{ width: "24px" }}
-            src={Quotation}
-            alt={"quotation marks"}
-          />
-        </div>
+        <svg
+          className={classes.quotation}
+          xmlns="http://www.w3.org/2000/svg"
+          width="48"
+          height="48"
+          viewBox="0 0 24 24"
+        >
+          <path d="M6 17h3l2-4V7H5v6h3zm8 0h3l2-4V7h-6v6h3z" />
+        </svg>
         <div className={classes.testAuthor}>{name}</div>
         <div className={classes.testTitle}>{title}</div>
         <div className={classes.testBody}>{testimonial}</div>
@@ -46,15 +48,11 @@ export default withStyles((theme) => ({
     display: "flex",
     flexDirection: "column",
     textAlign: "center",
-    justifyContent: "center",
-    padding: "20px 0px 30px 12px",
-    maxWidth: "350px",
-    background: "#ebebeb", // material-design 1dp
+    background: "#f4f4f4",
     transition: "all 200ms ease-in-out",
     overflow: "hidden",
-    userSelect: "none",
     borderRadius: "16px",
-    boxShadow: "0px 12px 24px rgba(0, 0, 0, .1)",
+    padding: "30px 40px 40px",
   },
   testImage: {
     marginTop: "20px",
@@ -74,16 +72,17 @@ export default withStyles((theme) => ({
   },
   testBody: {
     color: "#64616E",
-    fontSize: "16px",
-    fontWeight: "600",
-    lineHeight: "26px",
-    paddingRight: "24px",
+    fontSize: "15px",
+    lineHeight: "1.7",
   },
   testRight: {
     display: "flex",
     flexDirection: "column",
+    alignItems: "center",
   },
   quotation: {
-    marginBottom: "16px",
+    marginBottom: "8px",
+    fill: theme.colors.secondary,
+    width: "60px",
   },
 }))(TestimonialCard);
