@@ -290,9 +290,10 @@ export default withStyles((theme) => ({
     maxWidth: "900px",
   },
   testimonialContainer: {
-    justifyContent: "center",
     display: "flex",
+    justifyContent: "center",
     flexDirection: "column",
+    alignItems: "center",
     paddingLeft: "12px",
     paddingRight: "12px",
     paddingTop: "75px",
