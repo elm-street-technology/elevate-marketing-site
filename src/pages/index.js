@@ -25,15 +25,9 @@ class Index extends Component {
     const roles = {
       Agents: {
         name: "Agents",
-        features: [
-          "Advanced, Lightning Fast MLS Search",
-          "Behavior-driven Lead Intel",
-          "Automated, Smart Communication",
-          "Social Media + Brand Management",
-          "Insane Lead-Gen Conversions",
-          "Compelling Webblogging Content",
-          "Pipeline Management And Assistive Tasking",
-        ],
+        descriptionHeading: "Increase your day-to-day productivity",
+        description:
+          "Lead the pack with an unparalleled marketing strategy & toolset that helps you build your online brand & close more business…all while giving you extra time every day for the things that matter most.",
         icon: "Person",
         color: "#F15953",
         borderColor: "rgba(241, 89, 83, .4)",
@@ -46,17 +40,9 @@ class Index extends Component {
       },
       Teams: {
         name: "Teams",
-        features: [
-          "Behavior-driven Lead Intel",
-          "Automated, Smart Communication",
-          "Social Media + Brand Management",
-          "Pipeline Management And Assistive Tasking",
-          "Best-of-breed Lead Routing",
-          "Team Insights",
-          "Strategic GCI Reporting",
-          "Team Recruiter",
-          "Team Asset + Marketing Mgmt",
-        ],
+        descriptionHeading: "Excel at agent adoption & retention",
+        description:
+          "Arm yourself and your agents with easy-to-access, revenue-driving data that helps support smarter business decisions.",
         icon: "People",
         color: "#55C3BA",
         borderColor: "rgba(85, 195, 186, .4)",
@@ -69,18 +55,9 @@ class Index extends Component {
       },
       Brokerages: {
         name: "Brokers",
-        features: [
-          "Behavior-driven Lead Intel",
-          "Automated, Smart Communication",
-          "Social Media + Brand Management",
-          "Compelling Webblogging Content",
-          "Pipeline Management And Assistive Tasking",
-          "Best-of-breed Lead Routing",
-          "Strategic GCI Reporting",
-          "Office Insights",
-          "Agent Recruiter",
-          "Office Asset + Marketing Mgmt",
-        ],
+        descriptionHeading: "Streamline all aspects of your business",
+        description:
+          "Take the guess work out of your daily business operations, agent productivity and brand presence with ONE solution that is easy-to-implement and includes fanatical ongoing training & support.",
         icon: "GroupAdd",
         color: "#FFC629",
         borderColor: "rgba(255, 198, 41, .4)",
@@ -92,11 +69,6 @@ class Index extends Component {
         ],
       },
     };
-
-    roles.Agents.features = [
-      "Increase your day-to-day productivity",
-      "Lead the pack with an unparalleled marketing strategy & toolset that helps you build your online brand & close more business…all while giving you extra time every day for the things that matter most.",
-    ];
 
     return (
       <div className={classNames(classes.root)}>

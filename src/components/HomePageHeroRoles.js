@@ -169,9 +169,8 @@ export default withStyles((theme) => ({
     visibility: "hidden",
     opacity: "0",
     position: "absolute",
-    transform: "translateY(-54.4%)",
+    bottom: "42px",
     transition: "all .3s ease-in-out",
-    overflow: "hidden",
     zIndex: "999",
   },
 }))(HomePageHeroRoles);
