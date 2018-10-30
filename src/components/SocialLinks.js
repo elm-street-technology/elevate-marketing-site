@@ -12,7 +12,7 @@ const SocialLinks = ({ classes, className }) => {
     <div className={classNames(classes.root, className)}>
       <a
         className={classNames(classes.icon, classes.facebook)}
-        href="https://www.facebook.com/ElevateRET"
+        href="https://www.facebook.com/TryElevateRE/"
         target="_blank"
         rel="noreferrer noopener"
       >
@@ -20,7 +20,7 @@ const SocialLinks = ({ classes, className }) => {
       </a>
       <a
         className={classNames(classes.icon, classes.twitter)}
-        href="https://twitter.com/ElmStreetRE"
+        href="https://twitter.com/TryElevateRE"
         target="_blank"
         rel="noreferrer noopener"
       >
@@ -28,7 +28,7 @@ const SocialLinks = ({ classes, className }) => {
       </a>
       <a
         className={classNames(classes.icon, classes.linkedin)}
-        href="https://www.linkedin.com/company/elm-street-technology"
+        href="https://www.linkedin.com/showcase/tryelevatere/"
         target="_blank"
         rel="noreferrer noopener"
       >
@@ -36,7 +36,7 @@ const SocialLinks = ({ classes, className }) => {
       </a>
       <a
         className={classNames(classes.icon, classes.instagram)}
-        href="https://www.instagram.com/elmstreettechnologyre/"
+        href="https://www.instagram.com/tryelevatere/"
         target="_blank"
         rel="noreferrer noopener"
       >
