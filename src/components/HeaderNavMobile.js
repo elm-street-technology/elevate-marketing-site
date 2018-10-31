@@ -52,6 +52,24 @@ const HeaderNavMobile = ({ classes, className, onMenuClose }) => {
           </Link>
         </ul>
       </div>
+      <div className={classes.link}>
+        <div className={classes.navItem}>Support</div>
+        <ul className={classes.dropDown}>
+          <a
+            className={classes.listItemLink}
+            href="https://elmstreettechnology.zendesk.com/hc/en-us"
+            target="_blank"
+          >
+            <li className={classes.listItem}>Help Center</li>
+          </a>
+          <Link className={classes.listItemLink} to="/webinars">
+            <li className={classes.listItem}>Webinars</li>
+          </Link>
+          <Link className={classes.listItemLink} to="/blog">
+            <li className={classes.listItem}>Blog</li>
+          </Link>
+        </ul>
+      </div>
 
       <div className={classes.link}>
         <div className={classes.navItem}>Explore</div>
@@ -71,24 +89,6 @@ const HeaderNavMobile = ({ classes, className, onMenuClose }) => {
           </Link>
           <Link className={classes.listItemLink} to="/markets">
             <li className={classes.listItem}>MLS Markets</li>
-          </Link>
-        </ul>
-      </div>
-      <div className={classes.link}>
-        <div className={classes.navItem}>Support</div>
-        <ul className={classes.dropDown}>
-          <a
-            className={classes.listItemLink}
-            href="https://elmstreettechnology.zendesk.com/hc/en-us"
-            target="_blank"
-          >
-            <li className={classes.listItem}>Help Center</li>
-          </a>
-          <Link className={classes.listItemLink} to="/webinars">
-            <li className={classes.listItem}>Webinars</li>
-          </Link>
-          <Link className={classes.listItemLink} to="/blog">
-            <li className={classes.listItem}>Blog</li>
           </Link>
         </ul>
       </div>
@@ -172,8 +172,8 @@ export default withStyles((theme) => ({
     fontSize: "14px",
     fontWeight: "700",
     letterSpacing: ".25px",
-    color: theme.colors.primary,
-    border: `1px solid ${theme.colors.primary}`,
+    color: theme.colors.secondary,
+    border: `1px solid ${theme.colors.secondary}`,
     textDecoration: "none",
     padding: "12px 16px",
     borderRadius: "4px",
