@@ -1,7 +1,8 @@
 import React from "react";
 import classNames from "classnames";
 import withStyles from "elevate-ui/withStyles";
-import CallToActionForm from "../components/CallToActionForm";
+import Link from "gatsby-link";
+import Button from "elevate-ui/Button";
 
 const CallToAction = ({ classes, className }) => (
   <div className={classNames(classes.root, className)}>
@@ -9,7 +10,11 @@ const CallToAction = ({ classes, className }) => (
     <p className={classes.description}>
       Explore pure productivity with an Elevate Success Coach today
     </p>
-    <CallToActionForm className={classes.form} />
+    <Link className={classes.form} to="/get-started">
+      <Button innerClassName={classes.button} color="secondary">
+        Schedule a Demo
+      </Button>
+    </Link>
   </div>
 );
 
@@ -27,7 +32,13 @@ export default withStyles((theme) => ({
   },
   form: {
     maxWidth: "360px",
-    margin: "32px auto 0 auto",
+    margin: "20px auto 0 auto",
+    textDecoration: "none",
+  },
+  button: {
+    fontSize: "14px",
+    fontWeight: "700",
+    padding: "14px 32px",
   },
   heading: {
     color: "#5A5B5C",
