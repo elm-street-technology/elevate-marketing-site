@@ -37,7 +37,12 @@ const TestimonialCard = ({
         </svg>
         <div className={classes.testAuthor}>{name}</div>
         <div className={classes.testTitle}>{title}</div>
-        <div className={classes.testBody}>{testimonial}</div>
+        <div
+          className={classes.testBody}
+          dangerouslySetInnerHTML={{
+            __html: testimonial,
+          }}
+        />
       </div>
     </div>
   );
@@ -74,6 +79,10 @@ export default withStyles((theme) => ({
     color: "#64616E",
     fontSize: "15px",
     lineHeight: "1.7",
+
+    "& strong": {
+      fontWeight: "700",
+    },
   },
   testRight: {
     display: "flex",
