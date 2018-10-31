@@ -181,6 +181,32 @@ const Footer = ({ classes }) => (
             Teams
           </Link>
         </div>
+
+        <div className={classes.column}>
+          <div className={classes.section}>Products</div>
+          <Link className={classes.link} to="/elevate-dms">
+            DMS
+          </Link>
+          <Link className={classes.link} to="/elevate-social-pro">
+            Social Pro
+          </Link>
+          <Link className={classes.link} to="/elevate-idx">
+            IDX
+          </Link>
+          <Link className={classes.link} to="/elevate-ignite">
+            Ignite
+          </Link>
+          <Link className={classes.link} to="/elevate-elite">
+            Elite
+          </Link>
+          <Link className={classes.link} to="/crm">
+            CRM
+          </Link>
+          <Link className={classes.link} to="/recruiter">
+            Recruiter
+          </Link>
+        </div>
+
         <div className={classes.column}>
           <div className={classes.section}>Explore</div>
           <Link className={classes.link} to="/testimonials">
@@ -254,7 +280,7 @@ export default withStyles((theme) => ({
     gridRowGap: "32px",
 
     [theme.breakpoints[900]]: {
-      gridTemplateColumns: "repeat(4, 1fr)",
+      gridTemplateColumns: "repeat(5, 1fr)",
     },
   },
   column: {
@@ -273,7 +299,8 @@ export default withStyles((theme) => ({
   link: {
     color: "#FFF",
     textDecoration: "none",
-    marginTop: "12px",
+    marginTop: "15px",
+    lineHeight: "1.4",
   },
   social: {
     marginTop: "24px",
