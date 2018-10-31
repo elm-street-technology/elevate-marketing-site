@@ -30,9 +30,6 @@ const RoleCard = ({
             </div>
           </div>
           <div className={classes.descriptionContainer}>
-            <div className={classes.descriptionHeading}>
-              {role.descriptionHeading}
-            </div>
             <p className={classes.description}>{role.description}</p>
           </div>
         </div>
@@ -65,30 +62,21 @@ export default withStyles((theme) => ({
     borderBottom: "none",
     // height: "440px",
   },
-  topTab: {
-    display: "flex",
-    fontSize: "13px",
-    fontWeight: "600",
-    justifyContent: "center",
-    padding: "14px 0",
-    position: "relative",
-  },
   roleTitle: {
     display: "flex",
     flexDirection: "column",
     fontSize: "20px",
     fontWeight: "700",
-    paddingTop: "20px",
-    paddingBottom: "20px",
+    padding: "10px 0px",
   },
   roleHeading: {
     paddingTop: "12px",
     color: "#5A5B5C",
   },
   roleSubHeading: {
-    textTransform: "uppercase",
     fontSize: "18px",
     paddingTop: "10px",
+    lineHeight: "1.4",
   },
   roleCard: {
     padding: "20px 14px 14px 14px",
@@ -96,19 +84,12 @@ export default withStyles((theme) => ({
     flexDirection: "column",
     justifyContent: "center",
   },
-  descriptionHeading: {
-    color: "#5A5B5C",
-    fontWeight: "600",
-    paddingBottom: "14px",
-    lineHeight: "1.4",
-  },
   description: {
-    padding: "10px 0",
+    padding: "6px 10px",
     color: "#5A5B5C",
-    fontWeight: "600",
     fontSize: "14px",
     marginBottom: "20px",
-    lineHeight: "1.4",
+    lineHeight: "1.6",
   },
   iconContainer: {
     display: "flex",
@@ -116,9 +97,6 @@ export default withStyles((theme) => ({
     alignItems: "center",
     position: "relative",
     margin: "auto",
-  },
-  personIcon: {
-    fill: "#F15953",
   },
   roleBtn: {
     padding: "12px",

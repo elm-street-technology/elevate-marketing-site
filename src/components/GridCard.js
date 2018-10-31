@@ -6,7 +6,12 @@ const GridCard = ({ classes, text, color, page }) => {
   return (
     <Link style={{ textDecoration: "none" }} to={page}>
       <div className={classes.root}>
-        <div className={classes.inner}>{text}</div>
+        <div
+          className={classes.inner}
+          dangerouslySetInnerHTML={{
+            __html: text,
+          }}
+        />
       </div>
     </Link>
   );
@@ -34,7 +39,10 @@ export default withStyles((theme) => ({
     textAlign: "center",
     lineHeight: "1.5",
     margin: "auto",
-    fontWeight: "600",
     maxWidth: "200px",
+
+    "& strong": {
+      fontWeight: "700",
+    },
   },
 }))(GridCard);

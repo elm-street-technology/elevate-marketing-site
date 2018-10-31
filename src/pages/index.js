@@ -25,49 +25,46 @@ class Index extends Component {
     const roles = {
       Agents: {
         name: "Agents",
-        descriptionHeading: "Increase your day-to-day productivity",
+        tagline: "Increase your day-to-day productivity",
         description:
           "Lead the pack with an unparalleled marketing strategy & toolset that helps you build your online brand & close more business…all while giving you extra time every day for the things that matter most.",
         icon: "Person",
         color: "#F15953",
         borderColor: "rgba(241, 89, 83, .4)",
-        tagline: "I'm an agent",
         grid: [
-          "I need help with my marketing: website, social, email",
-          "I want to close more leads faster",
-          "I'd like to help with providing great content to my audience",
+          "<p>I need help with my <strong>marketing: website, social, email</strong></p>",
+          "<p>I want to <strong>engage with & close more leads, faster</strong></p>",
+          "<p>I want to <strong>provide great content</strong> to my audience</p>",
         ],
         page: "/agents",
       },
       Teams: {
         name: "Teams",
-        descriptionHeading: "Excel at agent adoption & retention",
+        tagline: "Excel at agent adoption & retention",
         description:
           "Arm yourself and your agents with easy-to-access, revenue-driving data that helps support smarter business decisions.",
         icon: "People",
         color: "#55C3BA",
         borderColor: "rgba(85, 195, 186, .4)",
-        tagline: "I lead a team of agents",
         grid: [
-          "I want at-a-glance insight into what's happening across my brokerage",
-          "I need assistance recruiting & retaining clients",
-          "I want to streamline lead routing & internal management processes",
+          "<p>We want to <strong>streamline lead routing</strong> & internal communication</p>",
+          "<p>We want to better understand what <strong>drives our revenue</strong></p>",
+          "<p>We want to save time & money on <strong>recruiting and retention</strong></p>",
         ],
         page: "/teams",
       },
       Brokerages: {
         name: "Brokers",
-        descriptionHeading: "Streamline all aspects of your business",
+        tagline: "Streamline all aspects of your business",
         description:
           "Take the guess work out of your daily business operations, agent productivity and brand presence with ONE solution that is easy-to-implement and includes fanatical ongoing training & support.",
         icon: "GroupAdd",
         color: "#FFC629",
         borderColor: "rgba(255, 198, 41, .4)",
-        tagline: "I'm a broker",
         grid: [
-          "We want to streamline lead routing & internal communication",
-          "We want to better understand what drives our revenue",
-          "We want to save time & money on marketing efforts",
+          "<p>I want <strong>at-a-glance insight</strong> into what’s happening across my brokerage</p>",
+          "<p>I want assistance <strong>recruiting & retaining</strong> agents</p>",
+          "<p>I want to streamline lead routing & <strong>internal management processes</strong></p>",
         ],
         page: "/brokers",
       },
@@ -109,21 +106,7 @@ class Index extends Component {
               <div className={classes.moreThanText}>performance metrics</div>
             </div>
           </div>
-
-          <div
-            className={classes.moreThan}
-            style={{ marginBottom: "16px", marginTop: "24px" }}
-          >
-            MORE THAN...
-          </div>
-          <div
-            style={{ fontWeight: "bold", color: "#4a4a4a", fontSize: "16px" }}
-          >
-            any other technology company in the space
-          </div>
-          <div
-            style={{ marginTop: "16px", color: "#4a4a4a", fontSize: "16px" }}
-          >
+          <div className={classes.moreThanCTA}>
             Elevate is the{" "}
             <span style={{ fontWeight: "bold" }}>
               ONLY pure productivity platform
@@ -133,9 +116,12 @@ class Index extends Component {
               the real estate market with a goal to make all other solutions
               obsolete.
             </div>
+            <div style={{ marginTop: "20px" }}>
+              Are you ready to increase your productivity?
+            </div>
           </div>
           <Link to="/get-started" className={classes.getStartedLink}>
-            Schedule A Demo
+            Show me how
           </Link>
         </div>
 
@@ -316,5 +302,11 @@ export default withStyles((theme) => ({
       gridGap: "0px",
       gridTemplateColumns: "repeat(4, minmax(180px, 1fr))",
     },
+  },
+  moreThanCTA: {
+    marginTop: "16px",
+    color: "#4a4a4a",
+    fontSize: "20px",
+    lineHeight: "1.4",
   },
 }))(Index);
