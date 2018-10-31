@@ -2,7 +2,6 @@ import React from "react";
 import classNames from "classnames";
 import withStyles from "elevate-ui/withStyles";
 import Link from "gatsby-link";
-import Button from "elevate-ui/Button";
 
 const CallToAction = ({ classes, className }) => (
   <div className={classNames(classes.root, className)}>
@@ -11,9 +10,7 @@ const CallToAction = ({ classes, className }) => (
       Explore pure productivity with an Elevate Success Coach today
     </p>
     <Link className={classes.form} to="/get-started">
-      <Button innerClassName={classes.button} color="secondary">
-        Schedule a Demo
-      </Button>
+      <button className={classes.button}>Schedule a Demo</button>
     </Link>
   </div>
 );
@@ -36,6 +33,9 @@ export default withStyles((theme) => ({
     textDecoration: "none",
   },
   button: {
+    backgroundColor: theme.colors.secondary,
+    borderRadius: "4px",
+    color: "#fff",
     fontSize: "14px",
     fontWeight: "700",
     padding: "14px 32px",
