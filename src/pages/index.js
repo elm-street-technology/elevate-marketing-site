@@ -36,6 +36,7 @@ class Index extends Component {
           "<p>I want to <strong>engage with & close more leads, faster</strong></p>",
           "<p>I want to <strong>provide great content</strong> to my audience</p>",
         ],
+        page: "/agents",
       },
       Teams: {
         name: "Teams",
@@ -50,6 +51,7 @@ class Index extends Component {
           "<p>We want to better understand what <strong>drives our revenue</strong></p>",
           "<p>We want to save time & money on <strong>recruiting and retention</strong></p>",
         ],
+        page: "/teams",
       },
       Brokerages: {
         name: "Brokers",
@@ -64,6 +66,7 @@ class Index extends Component {
           "<p>I want assistance <strong>recruiting & retaining</strong> agents</p>",
           "<p>I want to streamline lead routing & <strong>internal management processes</strong></p>",
         ],
+        page: "/brokers",
       },
     };
 
@@ -138,7 +141,11 @@ class Index extends Component {
                   />
                   {roleObject.grid.map((gridItem) => {
                     return (
-                      <GridCard text={gridItem} color={roleObject.color} />
+                      <GridCard
+                        text={gridItem}
+                        color={roleObject.color}
+                        page={roleObject.page}
+                      />
                     );
                   })}
                 </div>
