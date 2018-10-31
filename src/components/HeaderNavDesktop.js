@@ -107,7 +107,7 @@ export default withStyles((theme) => ({
     display: "flex",
     justifyContent: "flex-end",
     alignItems: "center",
-    marginRight: "8px",
+    marginRight: "16px",
     alignSelf: "flex-end",
 
     "& > * + *": {

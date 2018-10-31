@@ -20,11 +20,10 @@ const GetStarted = ({ children, classes, data, tags }) => {
 
       <Container>
         <h1 className={classes.heading}>
-          Start Ramping Up Your Online Marketing Now!
+          Are you ready to increase your productivity?
         </h1>
         <h2 className={classes.subHeading}>
-          Fill out this form and an Elevate Agent Success coach will be in touch
-          shortly!
+          Let an Elevate Success Coach help you streamline your day-to-day.
         </h2>
         <SignUpForm />
         {/* <div className={classes.closingContainer}>
