@@ -170,7 +170,7 @@ class Index extends Component {
               avatar=""
               name="The Sohaei Team"
               title="Team"
-              testimonial="<p>The <strong>service and professionalism</strong> of the entire Elevate team is well above any experience we’ve had in the industry.  They are the perfect blend of <strong>cutting-edge technology</strong> mixed with <strong>stellar customer support and coaching.<strong></p>"
+              testimonial="<p>The <strong>service and professionalism</strong> of the entire Elevate team is well above any experience we’ve had in the industry.  They are the perfect blend of <strong>cutting-edge technology</strong> mixed with <strong>stellar customer support and coaching.</strong></p>"
             />
             <TestimonialCard
               avatar=""
@@ -182,7 +182,7 @@ class Index extends Component {
               avatar=""
               name="Sherlock Fenderson"
               title="Realtor®"
-              testimonial="<p>I’ve been a successful Realtor® for more than 12-years and Elevate is my <strong>go-to productivity platform</strong> for everything lead management and web presence.  It’s a <strong>vital tool that I use daily</strong> to <strong>drive my business growth</strong>.  I highly recommend Elevate for anyone looking to grow their business."
+              testimonial="<p>I’ve been a successful Realtor® for more than 12-years and Elevate is my <strong>go-to productivity platform</strong> for everything lead management and web presence.  It’s a <strong>vital tool that I use daily</strong> to <strong>drive my business growth</strong>.  I highly recommend Elevate for anyone looking to grow their business.</p>"
             />
           </TestimonialCardGrid>
         </div>
