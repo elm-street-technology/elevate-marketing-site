@@ -106,21 +106,7 @@ class Index extends Component {
               <div className={classes.moreThanText}>performance metrics</div>
             </div>
           </div>
-
-          <div
-            className={classes.moreThan}
-            style={{ marginBottom: "16px", marginTop: "24px" }}
-          >
-            MORE THAN...
-          </div>
-          <div
-            style={{ fontWeight: "bold", color: "#4a4a4a", fontSize: "16px" }}
-          >
-            any other technology company in the space
-          </div>
-          <div
-            style={{ marginTop: "16px", color: "#4a4a4a", fontSize: "16px" }}
-          >
+          <div className={classes.moreThanCTA}>
             Elevate is the{" "}
             <span style={{ fontWeight: "bold" }}>
               ONLY pure productivity platform
@@ -130,9 +116,12 @@ class Index extends Component {
               the real estate market with a goal to make all other solutions
               obsolete.
             </div>
+            <div style={{ marginTop: "20px" }}>
+              Are you ready to increase your productivity?
+            </div>
           </div>
           <Link to="/get-started" className={classes.getStartedLink}>
-            Schedule A Demo
+            Show me how
           </Link>
         </div>
 
@@ -309,5 +298,11 @@ export default withStyles((theme) => ({
       gridGap: "0px",
       gridTemplateColumns: "repeat(4, minmax(180px, 1fr))",
     },
+  },
+  moreThanCTA: {
+    marginTop: "16px",
+    color: "#4a4a4a",
+    fontSize: "20px",
+    lineHeight: "1.4",
   },
 }))(Index);
