@@ -9,8 +9,8 @@ const CallToAction = ({ classes, className }) => (
     <p className={classes.description}>
       Explore pure productivity with an Elevate Success Coach today
     </p>
-    <Link className={classes.form} to="/get-started">
-      <button className={classes.button}>Schedule a Demo</button>
+    <Link className={classes.button} to="/get-started">
+      Schedule a Demo
     </Link>
   </div>
 );
@@ -27,12 +27,9 @@ export default withStyles((theme) => ({
   formContainer: {
     display: "flex",
   },
-  form: {
-    maxWidth: "360px",
+  button: {
     margin: "20px auto 0 auto",
     textDecoration: "none",
-  },
-  button: {
     backgroundColor: theme.colors.secondary,
     borderRadius: "4px",
     color: "#fff",
