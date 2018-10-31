@@ -2,11 +2,13 @@ import React from "react";
 import Link from "gatsby-link";
 import withStyles from "elevate-ui/withStyles";
 
-const GridCard = ({ classes, text, color }) => {
+const GridCard = ({ classes, text, color, page }) => {
   return (
-    <div className={classes.root}>
-      <div className={classes.inner}>{text}</div>
-    </div>
+    <Link style={{ textDecoration: "none" }} to={page}>
+      <div className={classes.root}>
+        <div className={classes.inner}>{text}</div>
+      </div>
+    </Link>
   );
 };
 
