@@ -212,11 +212,12 @@ export default withStyles((theme) => ({
     margin: "0 auto",
     marginBottom: "20px",
     textAlign: "center",
-    fontSize: "32px",
+    fontSize: "30px",
     fontWeight: "800",
     color: "#5A5B5C",
     width: "100%",
     maxWidth: "900px",
+    lineHeight: "1.3",
   },
   testimonialContainer: {
     display: "flex",
