@@ -21,30 +21,19 @@ const RoleCard = ({
             <div className={classes.iconContainer}>
               <Icon name={role.icon} style={{ color: role.color }} size={48} />
             </div>
-            <div className={classes.roleHeading}>
-              {isAlternate ? (
-                <span style={{ color: role.color }}>{role.tagline}</span>
-              ) : (
-                role.name
-              )}
+            <div className={classes.roleHeading}>{role.name}</div>
+            <div
+              className={classes.roleSubHeading}
+              style={{ color: role.color }}
+            >
+              {role.tagline}
             </div>
-            {isAlternate ? null : (
-              <div
-                className={classes.roleSubHeading}
-                style={{ color: role.color }}
-              >
-                {role.tagline}
-              </div>
-            )}
           </div>
-          <div>
-            <ul className={classes.featureList}>
-              {role.features.map((feature, i) => (
-                <li key={i} className={classes.feature}>
-                  {feature}
-                </li>
-              ))}
-            </ul>
+          <div className={classes.descriptionContainer}>
+            <div className={classes.descriptionHeading}>
+              {role.descriptionHeading}
+            </div>
+            <p className={classes.description}>{role.description}</p>
           </div>
         </div>
         <button
@@ -54,7 +43,7 @@ const RoleCard = ({
           className={classes.roleBtn}
           style={{ backgroundColor: role.color }}
         >
-          {isAlternate ? "Explore" : "Get Started"}
+          Explore
         </button>
       </div>
     </div>
@@ -71,11 +60,10 @@ export default withStyles((theme) => ({
     textAlign: "center",
     flexDirection: "column",
     transition: "all 200ms ease-in-out",
-    overflow: "hidden",
-    userSelect: "none",
     border: "12px solid",
     borderRadius: "6px 6px 0 0",
     borderBottom: "none",
+    // height: "440px",
   },
   topTab: {
     display: "flex",
@@ -108,22 +96,25 @@ export default withStyles((theme) => ({
     flexDirection: "column",
     justifyContent: "center",
   },
-  feature: {
+  descriptionHeading: {
+    color: "#5A5B5C",
+    fontWeight: "600",
+    paddingBottom: "14px",
+    lineHeight: "1.4",
+  },
+  description: {
     padding: "10px 0",
     color: "#5A5B5C",
     fontWeight: "600",
-  },
-  featureList: {
     fontSize: "14px",
     marginBottom: "20px",
-    listStlye: "none",
+    lineHeight: "1.4",
   },
   iconContainer: {
     display: "flex",
     justifyContent: "center",
     alignItems: "center",
     position: "relative",
-    overflow: "hidden",
     margin: "auto",
   },
   personIcon: {
