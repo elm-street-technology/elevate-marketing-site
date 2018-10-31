@@ -208,22 +208,6 @@ const Footer = ({ classes }) => (
         </div>
 
         <div className={classes.column}>
-          <div className={classes.section}>Explore</div>
-          <Link className={classes.link} to="/testimonials">
-            Testimonials
-          </Link>
-          <Link className={classes.link} to="/markets">
-            MLS Markets
-          </Link>
-          <Link className={classes.link} to="/events">
-            Upcoming Events
-          </Link>
-
-          <Link className={classes.link} to="/bootcamp">
-            Social Media Boot Camp
-          </Link>
-        </div>
-        <div className={classes.column}>
           <div className={classes.section}>Support</div>
           <a
             className={classes.link}
@@ -246,6 +230,23 @@ const Footer = ({ classes }) => (
           </Link>
           <Link className={classes.link} to="/dmca">
             DMCA Notice
+          </Link>
+        </div>
+
+        <div className={classes.column}>
+          <div className={classes.section}>Explore</div>
+          <Link className={classes.link} to="/testimonials">
+            Testimonials
+          </Link>
+          <Link className={classes.link} to="/markets">
+            MLS Markets
+          </Link>
+          <Link className={classes.link} to="/events">
+            Upcoming Events
+          </Link>
+
+          <Link className={classes.link} to="/bootcamp">
+            Social Media Boot Camp
           </Link>
           <SocialLinks className={classes.social} />
         </div>
