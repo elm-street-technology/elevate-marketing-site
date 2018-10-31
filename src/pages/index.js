@@ -33,9 +33,9 @@ class Index extends Component {
         borderColor: "rgba(241, 89, 83, .4)",
         tagline: "I'm an agent",
         grid: [
-          "I need help with my marketing: website, social, email",
-          "I want to close more leads faster",
-          "I'd like to help with providing great content to my audience",
+          "<p>I need help with my <strong>marketing: website, social, email</strong></p>",
+          "<p>I want to <strong>engage with & close more leads, faster</strong></p>",
+          "<p>I want to <strong>provide great content</strong> to my audience</p>",
         ],
       },
       Teams: {
@@ -48,9 +48,9 @@ class Index extends Component {
         borderColor: "rgba(85, 195, 186, .4)",
         tagline: "I lead a team of agents",
         grid: [
-          "I want at-a-glance insight into what's happening across my brokerage",
-          "I need assistance recruiting & retaining clients",
-          "I want to streamline lead routing & internal management processes",
+          "<p>We want to <strong>streamline lead routing</strong> & internal communication</p>",
+          "<p>We want to better understand what <strong>drives our revenue</strong></p>",
+          "<p>We want to save time & money on <strong>recruiting and retention</strong></p>",
         ],
       },
       Brokerages: {
@@ -63,9 +63,9 @@ class Index extends Component {
         borderColor: "rgba(255, 198, 41, .4)",
         tagline: "I'm a broker",
         grid: [
-          "We want to streamline lead routing & internal communication",
-          "We want to better understand what drives our revenue",
-          "We want to save time & money on marketing efforts",
+          "<p>I want <strong>at-a-glance insight</strong> into what’s happening across my brokerage</p>",
+          "<p>I want assistance <strong>recruiting & retaining</strong> agents</p>",
+          "<p>I want to streamline lead routing & <strong>internal management processes</strong></p>",
         ],
       },
     };

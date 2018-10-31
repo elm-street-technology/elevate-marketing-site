@@ -5,7 +5,12 @@ import withStyles from "elevate-ui/withStyles";
 const GridCard = ({ classes, text, color }) => {
   return (
     <div className={classes.root}>
-      <div className={classes.inner}>{text}</div>
+      <div
+        className={classes.inner}
+        dangerouslySetInnerHTML={{
+          __html: text,
+        }}
+      />
     </div>
   );
 };
@@ -32,7 +37,10 @@ export default withStyles((theme) => ({
     textAlign: "center",
     lineHeight: "1.5",
     margin: "auto",
-    fontWeight: "600",
     maxWidth: "200px",
+
+    "& strong": {
+      fontWeight: "700",
+    },
   },
 }))(GridCard);
