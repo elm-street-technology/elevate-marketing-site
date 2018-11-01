@@ -10,8 +10,7 @@ export default withStyles((theme) => ({
   root: {
     display: "grid",
     margin: "auto",
-    paddingBottom: "60px",
-    paddingTop: "24px",
+    padding: "24px 16px 60px",
 
     maxWidth: "1080px",
     gridGap: "30px",
