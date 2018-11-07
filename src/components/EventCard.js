@@ -28,15 +28,15 @@ const EventCard = ({ classes, className, event }) => {
         </div>
         <div className={classes.title}>{event.title}</div>
         <div className={classes.location}>{event.location}</div>
+        <a
+          href={event.registrationUrl}
+          target="_blank"
+          rel="noopener noreferrer"
+          className={classes.registerLink}
+        >
+          Register
+        </a>
       </div>
-      <a
-        href={event.registrationUrl}
-        target="_blank"
-        rel="noopener noreferrer"
-        className={classes.registerLink}
-      >
-        Register
-      </a>
     </div>
   );
 };
@@ -82,6 +82,8 @@ export default withStyles((theme) => ({
     borderBottomRightRadius: "4px",
   },
   details: {
+    display: "flex",
+    flexDirection: "column",
     borderLeft: "1px solid #cecece",
     padding: "8px 0 8px 16px",
     marginLeft: "16px",
@@ -96,7 +98,9 @@ export default withStyles((theme) => ({
     margin: "8px 0",
   },
   location: {
+    marginTop: "6px",
     fontSize: "16px",
+    lineHeight: "1.375em",
   },
   registerLink: {
     display: "flex",
@@ -110,7 +114,7 @@ export default withStyles((theme) => ({
     fontWeight: "600",
     padding: "12px 16px",
     borderRadius: "6px",
-    alignSelf: "flex-end",
-    marginLeft: "4px",
+    marginTop: "18px",
+    maxWidth: "90px",
   },
 }))(EventCard);
