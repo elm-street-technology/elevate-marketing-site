@@ -98,7 +98,7 @@ export default withStyles((theme) => ({
     margin: "8px 0",
   },
   location: {
-    marginTop: 6,
+    marginTop: "6px",
     fontSize: "16px",
     lineHeight: "1.375em",
   },
@@ -114,7 +114,7 @@ export default withStyles((theme) => ({
     fontWeight: "600",
     padding: "12px 16px",
     borderRadius: "6px",
-    marginTop: 18,
-    maxWidth: 90,
+    marginTop: "18px",
+    maxWidth: "90px",
   },
 }))(EventCard);
