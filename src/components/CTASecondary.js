@@ -16,8 +16,8 @@ const CTASecondary = ({ classes }) => (
       <div className={classes.ctaRight}>
         <div>Talk to an Elevate Coach today</div>
         <div>
-          <a href="tel:18445469275" className={classes.call}>
-            844.546.9275
+          <a href="tel:18883783868" className={classes.call}>
+            888.378.3868
           </a>
         </div>
       </div>
