@@ -40,8 +40,8 @@ class SignUpForm extends Component {
             </Typography>
             <Typography type="heading4" gutterTop>
               Can’t wait? Talk NOW at{" "}
-              <a href="tel:18445469275" className={classes.link}>
-                844.546.9275
+              <a href="tel:18883783868" className={classes.link}>
+                888.378.3868
               </a>
             </Typography>
           </Alert>
@@ -116,8 +116,8 @@ class SignUpForm extends Component {
                 style={{ textAlign: "center", marginBottom: "32px" }}
               >
                 Talk NOW at{" "}
-                <a href="tel:18445469275" className={classes.link}>
-                  844.546.9275
+                <a href="tel:18883783868" className={classes.link}>
+                  888.378.3868
                 </a>{" "}
                 or schedule a demo:
               </Typography>
