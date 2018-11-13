@@ -92,7 +92,7 @@ const Migration = ({ classes, data }) => {
 
             <div style={{textAlign:"center"}}>
               <div className={classes.heading}>Have Questions Now?</div>
-              <button className={classes.getStartedLink}>
+              <button className={classes.getStartedLink} onClick={() => { if (zE) zE.activate() }}>
                 Chat with Success Coach
               </button>
             </div>
