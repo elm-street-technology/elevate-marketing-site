@@ -25,7 +25,8 @@ const Migration = ({ classes }) => {
           <div className={classes.column}> 
             <div className={classes.grayText}>
               <div className={classes.heading}>What is Elevate?</div>
-              Developed by Elm Street Technology, Elevate is the <span className={classes.bold}>1st true Productivity Platform for real estate</span> and the next 
+              Developed by <a target="_blank" href="https://elmstreettechnology.com/">Elm Street Technology</a>, 
+              <a target="_blank" href="https://tryelevate.com/">Elevate</a> is the <span className={classes.bold}>1st true Productivity Platform for real estate</span> and the next 
               evolution of all of the features and functionality that you love with Listingbook...plus many more.
             </div>
             <br/>
