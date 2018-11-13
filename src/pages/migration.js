@@ -130,6 +130,11 @@ const Migration = ({ classes, data }) => {
               oallowfullscreen msallowfullscreen width="100%" height="290"></iframe>
               <script src="//fast.wistia.net/assets/external/iframe-api-v1.js"></script>
             </div>
+            <div style={{fontSize:"12px",paddingRight:"30px",paddingLeft:"30px"}}>
+              <span className={classes.bold}>An Introduction to Elevate CRM</span>
+              <div style={{float:"right",display:"inline"}}>runtime:  20:12</div>
+
+            </div>
           </div>
           <div className={classes.column}>
             <div>
@@ -138,6 +143,11 @@ const Migration = ({ classes, data }) => {
               name="wistia_embed" allowfullscreen mozallowfullscreen webkitallowfullscreen
               oallowfullscreen msallowfullscreen width="100%" height="290"></iframe>
               <script src="//fast.wistia.net/assets/external/iframe-api-v1.js"></script>
+            </div>
+            <div style={{fontSize:"12px",paddingRight:"30px",paddingLeft:"30px"}}>
+              <span className={classes.bold}>An Introduction to the Site Editor</span>
+              <div style={{float:"right",display:"inline"}}>runtime:  13:14</div>
+
             </div>
           </div>
         </div>
