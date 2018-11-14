@@ -6,6 +6,12 @@ import SEO from "../components/SEO";
 import Logo from "../components/Logo";
 import Hr from "elevate-ui/Hr";
 
+import Chat from "elevate-ui-icons/Chat";
+import QuestionAnswer from "elevate-ui-icons/QuestionAnswer";
+import ViewCarousel from "elevate-ui-icons/ViewCarousel";
+import PlayCircleFilled from "elevate-ui-icons/PlayCircleFilled";
+import LiveTv from "elevate-ui-icons/LiveTv";
+
 const Migration = ({ classes }) => {
 
   return (
@@ -36,7 +42,7 @@ const Migration = ({ classes }) => {
             as well as sales &amp; support strategies.  In the meantime, please explore this page for an introduction to Elevate.
             <div style={{paddingTop:"30px"}}>
              <a target="_blank" href="/assets/Elevate_Listingbook_Feature_Comparison.pdf" className={classes.getStartedLink}>
-              View Feature Comparison Chart
+              <ViewCarousel color="#FFFFFF" size={34} className={classes.iconPosition}/> View Feature Comparison Chart
             </a>
             </div>
             <div>
@@ -50,7 +56,7 @@ const Migration = ({ classes }) => {
             </div>
             <div>
              <a target="_blank" href="https://elmstreettechnology.zendesk.com/hc/en-us/sections/360002618972-Listingbook-to-Elevate-" className={classes.getStartedLink}>
-              FAQ's and Getting Started Guide
+              <QuestionAnswer color="#FFFFFF" size={28} className={classes.iconPosition} style={{top:"9px",right:"5px"}}/> FAQ's and Getting Started Guide
             </a>
             </div>
 
@@ -65,10 +71,12 @@ const Migration = ({ classes }) => {
                 Start here…
                 </div>
                 <div style={{paddingTop:"30px",paddingBottom:"30px"}}>
-                <a target="_blank" href="https://elmstreettechnology.zendesk.com/hc/en-us/articles/360018375372-Listingbook-to-Elevate-FAQs" className={classes.getStartedLink}>Frequently Asked Questions</a>
+                <a target="_blank" href="https://elmstreettechnology.zendesk.com/hc/en-us/articles/360018375372-Listingbook-to-Elevate-FAQs" className={classes.getStartedLink}>
+                  <QuestionAnswer color="#FFFFFF" size={28} className={classes.iconPosition} style={{top:"9px",right:"5px"}}/> Frequently Asked Questions</a>
                 </div>
                 <div >
-                <a target="_blank" href="https://elmstreettechnology.zendesk.com/hc/en-us/articles/360018360772-Upgrade-from-Listingbook-Getting-Started-With-Elevate" className={classes.getStartedLink}>Getting Started with Elevate</a>
+                <a target="_blank" href="https://elmstreettechnology.zendesk.com/hc/en-us/articles/360018360772-Upgrade-from-Listingbook-Getting-Started-With-Elevate" className={classes.getStartedLink}>
+                  <PlayCircleFilled color="#FFFFFF" size={34} className={classes.iconPosition}/> Getting Started with Elevate</a>
                 </div>
             </div>
             <div className={classes.infoboxTeal}>
@@ -78,7 +86,9 @@ const Migration = ({ classes }) => {
               </div>
                 <div style={{paddingTop:"30px"}}>
                 <a target="_blank" href="https://elmstreettechnology.zendesk.com/hc/en-us/articles/360019751351-Live-Training-Webinars-for-Former-Listingbook-Agents" 
-                    className={classes.darkTealLink} style={{backgroundColor:"#3e928b"}}>Sign Up Now</a>
+                    className={classes.darkTealLink} style={{backgroundColor:"#3e928b"}}>
+                    <LiveTv color="#FFFFFF" size={30} className={classes.iconPosition} style={{top:"8px",right:"6px"}}/>
+                    Sign Up Now</a>
                 </div>
                 <div style={{paddingTop:"30px"}}>
                 <span className={classes.bold} style={{color:"#FFFFFF"}}>Can’t attend a live training?</span>
@@ -91,9 +101,9 @@ const Migration = ({ classes }) => {
 
             <div style={{textAlign:"center"}}>
               <div className={classes.heading}>Have Questions Now?</div>
-              <button className={classes.getStartedLink} onClick={() => { if (window.zE) window.zE.activate() }}>
-                Chat with Success Coach
-              </button>
+              <a href="" className={classes.getStartedLink} onClick={() => { if (window.zE) window.zE.activate() }}>
+                <Chat color="#FFFFFF" size={28} className={classes.iconPosition} style={{top:"10px"}}/> Chat with Success Coach
+              </a>
             </div>
 
           </div>
@@ -261,5 +271,10 @@ export default withStyles((theme) => ({
     borderWidth: "1px",
     borderColor: theme.colors.gray400,
   },
+  iconPosition:{
+    position: "relative",
+    top:"12px",
+    right:"4px"
+  }
 
 }))(Migration);
