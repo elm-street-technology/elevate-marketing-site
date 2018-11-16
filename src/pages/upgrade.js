@@ -12,7 +12,7 @@ import ViewCarousel from "elevate-ui-icons/ViewCarousel";
 import PlayCircleFilled from "elevate-ui-icons/PlayCircleFilled";
 import LiveTv from "elevate-ui-icons/LiveTv";
 
-const Migration = ({ classes }) => {
+const Upgrade = ({ classes }) => {
 
   return (
     <div className={classes.root}>
@@ -21,7 +21,7 @@ const Migration = ({ classes }) => {
         <div className={classes.top}>
           <div className={classes.centerHeading}>
             <div className={classes.heading}>Everything you need to know…</div>
-            <div className={classes.bold}>about migrating from Listingbook to Elevate</div>
+            <div className={classes.bold}>about upgrading from Listingbook to Elevate</div>
           </div>
         </div>
       </Container>
@@ -36,9 +36,9 @@ const Migration = ({ classes }) => {
               evolution of all of the features and functionality that you love with Listingbook...plus many more.
             </div>
             <br/>
-            <div className={classes.bold}>What does this migration mean if I’m an MLS?</div>
+            <div className={classes.bold}>What does this upgrade mean if I’m an MLS?</div>
             You will receive all of the technology and support that you’ve always received, along with many new enhancements.  
-            All migrations will take place by December 31, 2018, and the Elevate team will work closely with you on your communication rollout, 
+            All upgrades will take place by December 31, 2018, and the Elevate team will work closely with you on your communication rollout, 
             as well as sales &amp; support strategies.  In the meantime, please explore this page for an introduction to Elevate.
             <div style={{paddingTop:"30px"}}>
              <a target="_blank" href="/assets/Elevate_Listingbook_Feature_Comparison.pdf" className={classes.getStartedLink}>
@@ -48,10 +48,10 @@ const Migration = ({ classes }) => {
             <div>
             <Hr style={{ marginTop: "40px",marginBottom: "40px" }}/>
             </div>
-            <div className={classes.bold}>What does this migration mean if I’m an agent?</div>
+            <div className={classes.bold}>What does this upgrade mean if I’m an agent?</div>
             <div style={{paddingBottom:"30px"}}>
             You will receive all of the technology and support that you’ve always received, but with more features, more power, 
-            and more ease-of-use.  All migrations will take place by December 31, 2018, and the Elevate team will communicate 
+            and more ease-of-use.  All upgrades will take place by December 31, 2018, and the Elevate team will communicate 
             with you throughout this process with more definitive timelines.  In the meantime, please explore this page for an introduction to Elevate.
             </div>
             <div>
@@ -277,4 +277,4 @@ export default withStyles((theme) => ({
     right:"4px"
   }
 
-}))(Migration);
+}))(Upgrade);

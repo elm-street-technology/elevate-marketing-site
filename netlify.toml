@@ -64,3 +64,8 @@
   to = "/blog/tag/:cat"
   status = 301
   query = {cat = ":cat"}
+
+[[redirects]]
+  from = "/migration"
+  to = "/upgrade"
+  status = 301
