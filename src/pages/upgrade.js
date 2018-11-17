@@ -5,7 +5,7 @@ import Container from "../components/Container";
 import SEO from "../components/SEO";
 import Logo from "../components/Logo";
 import Hr from "elevate-ui/Hr";
-
+import WistiaVideo from "../components/WistiaVideo";
 import Chat from "elevate-ui-icons/Chat";
 import QuestionAnswer from "elevate-ui-icons/QuestionAnswer";
 import ViewCarousel from "elevate-ui-icons/ViewCarousel";
@@ -46,7 +46,7 @@ const Upgrade = ({ classes }) => {
             </a>
             </div>
             <div>
-            <Hr style={{ marginTop: "40px",marginBottom: "40px" }}/>
+            <Hr style={{ marginTop: "40px",marginBottom: "40px"}}/>
             </div>
             <div className={classes.bold}>What does this upgrade mean if I’m an agent?</div>
             <div style={{paddingBottom:"30px"}}>
@@ -129,11 +129,7 @@ const Upgrade = ({ classes }) => {
         <div className={classes.top}>
           <div className={classes.column}>
             <div className={classes.videoBorder}>
-              <iframe src="//fast.wistia.net/embed/iframe/ecdwsmxj9y?videoFoam=true"
-              allowtransparency="true" frameborder="0" scrolling="no" className="wistia_embed"
-              name="wistia_embed" allowfullscreen mozallowfullscreen webkitallowfullscreen
-              oallowfullscreen msallowfullscreen width="100%" height="290"></iframe>
-              <script src="//fast.wistia.net/assets/external/iframe-api-v1.js"></script>
+              <WistiaVideo hashedId="ecdwsmxj9y"/>
             </div>
             <div style={{fontSize:"12px",paddingRight:"30px",paddingLeft:"30px"}}>
               <span className={classes.bold}>An Introduction to Elevate CRM</span>
@@ -143,11 +139,7 @@ const Upgrade = ({ classes }) => {
           </div>
           <div className={classes.column}>
             <div className={classes.videoBorder}>
-              <iframe src="//fast.wistia.net/embed/iframe/xhsd39wnip?videoFoam=true"
-              allowtransparency="true" frameborder="0" scrolling="no" className="wistia_embed"
-              name="wistia_embed" allowfullscreen mozallowfullscreen webkitallowfullscreen
-              oallowfullscreen msallowfullscreen width="100%" height="290"></iframe>
-              <script src="//fast.wistia.net/assets/external/iframe-api-v1.js"></script>
+              <WistiaVideo hashedId="xhsd39wnip"/>
             </div>
             <div style={{fontSize:"12px",paddingRight:"30px",paddingLeft:"30px"}}>
               <span className={classes.bold}>An Introduction to the Site Editor</span>
