@@ -4,11 +4,14 @@ class WistiaVideo extends Component {
   constructor(props) {
     super(props);
     const { hashedId, ...embedOptions } = { ...this.props }
-    window._wq = window._wq || [];
-    window._wq.push({
-      id: hashedId,
-      options: embedOptions
-    });
+    if(typeof window !== 'undefined'){
+      window._wq = window._wq || [];
+      window._wq.push({
+        id: hashedId,
+        options: embedOptions
+      });
+    }
+    
   }
 
   render() {
