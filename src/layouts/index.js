@@ -34,10 +34,6 @@ const Template = ({ children, classes }) => {
           <Footer />
         </div>
       </ThemeProvider>
-      <script
-        id="ze-snippet"
-        src="https://static.zdassets.com/ekr/snippet.js?key=4ee92cc2-6d3c-4fc6-bceb-d9926c37cfae"
-      />
     </div>
   );
 };
