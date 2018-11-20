@@ -38,7 +38,7 @@ const Upgrade = ({ classes }) => {
             <br/>
             <div className={classes.bold}>What does this upgrade mean if I’m an MLS?</div>
             You will receive all of the technology and support that you’ve always received, along with many new enhancements.  
-            All upgrades will take place by December 31, 2018, and the Elevate team will work closely with you on your communication rollout, 
+            All upgrades will take place over the coming weeks, and the Elevate team will work closely with you on your communication rollout, 
             as well as sales &amp; support strategies.  In the meantime, please explore this page for an introduction to Elevate.
             <div style={{paddingTop:"30px"}}>
              <a target="_blank" href="/assets/Elevate_Listingbook_Feature_Comparison.pdf" className={classes.getStartedLink}>
@@ -51,7 +51,7 @@ const Upgrade = ({ classes }) => {
             <div className={classes.bold}>What does this upgrade mean if I’m an agent?</div>
             <div style={{paddingBottom:"30px"}}>
             You will receive all of the technology and support that you’ve always received, but with more features, more power, 
-            and more ease-of-use.  All upgrades will take place by December 31, 2018, and the Elevate team will communicate 
+            and more ease-of-use.  All upgrades will take place over the coming weeks, and the Elevate team will communicate 
             with you throughout this process with more definitive timelines.  In the meantime, please explore this page for an introduction to Elevate.
             </div>
             <div>
