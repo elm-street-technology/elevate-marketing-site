@@ -101,6 +101,15 @@ class SignUpForm extends Component {
               .then((res) => {
                 if (res.message === "ok") {
                   this.setState({ formState: "success" });
+
+                  if (window.fbq) {
+                    window.fbq("track", "Lead");
+                  }
+                  if (window.gtag) {
+                    window.gtag("event", "conversion", {
+                      send_to: "AW-980447970/2_aHCOnsjo8BEOLlwdMD",
+                    });
+                  }
                 } else {
                   this.setState({ formState: "error" });
                 }
