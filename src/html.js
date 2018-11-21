@@ -85,6 +85,7 @@ module.exports = class HTML extends React.Component {
               src="https://www.facebook.com/tr?id=114107129188408&ev=PageView&noscript=1"
             />
           </noscript>
+          <script src="https://leadsbridge.com/pixels/1d72310edc006dadf2190caad5802983.js" />
         </body>
       </html>
     );
