@@ -95,7 +95,7 @@ const Upgrade = ({ classes }) => {
                 </div>
                 No worries, here’s a recording…
                 <div style={{paddingTop:"30px"}} >
-                  <a target="_blank" href="#" className={classes.grayLink}>Coming Soon</a>
+                  <a target="_blank" href="https://tryelevate.wistia.com/projects/ibbj6zglui" className={classes.darkTealLink} style={{backgroundColor:"#3e928b"}}>On Demand Recordings</a>
                 </div>
             </div>
 
