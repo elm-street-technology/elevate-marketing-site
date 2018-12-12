@@ -82,7 +82,7 @@ const Upgrade = ({ classes }) => {
             <div className={classes.infoboxTeal}>
               <div>
                 <div className={classes.heading} style={{color:"#FFFFFF"}}>ATTEND A WEBINAR</div>
-                <span className={classes.bold}>Live training webinars every <br/>Monday at 10am &amp; 4pm EST</span>
+                <span className={classes.bold}>Live training webinars weekly.<br/>View our upcoming schedule & register TODAY. </span>
               </div>
                 <div style={{paddingTop:"30px"}}>
                 <a target="_blank" href="https://elmstreettechnology.zendesk.com/hc/en-us/articles/360019751351-Live-Training-Webinars-for-Former-Listingbook-Agents" 
@@ -147,6 +147,11 @@ const Upgrade = ({ classes }) => {
               <div style={{float:"right",display:"inline"}}>runtime:  13:14</div>
 
             </div>
+          </div>
+        </div>
+        <div className={classes.section}>
+          <div style={{ paddingTop: "10px" }} className={classes.centerHeading} >
+            <a target="_blank" className={classes.getStartedLink} href="https://tryelevate.wistia.com/projects/ibbj6zglui" >View More Videos</a>
           </div>
         </div>
       </Container>
