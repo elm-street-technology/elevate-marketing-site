@@ -82,7 +82,7 @@ const Upgrade = ({ classes }) => {
             <div className={classes.infoboxTeal}>
               <div>
                 <div className={classes.heading} style={{color:"#FFFFFF"}}>ATTEND A WEBINAR</div>
-                <span className={classes.bold}>Live training webinars weekly.<br/>View our upcoming schedule & register TODAY. </span>
+                <span className={classes.bold}>Live training webinars weekly.</span><br/>View our upcoming schedule & register TODAY. 
               </div>
                 <div style={{paddingTop:"30px"}}>
                 <a target="_blank" href="https://elmstreettechnology.zendesk.com/hc/en-us/articles/360019751351-Live-Training-Webinars-for-Former-Listingbook-Agents" 
