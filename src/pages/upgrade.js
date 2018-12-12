@@ -115,7 +115,7 @@ const Upgrade = ({ classes }) => {
         <div className={classes.top}>
           <div className={classes.centerHeading}>
             <div className={classes.heading}>
-              <div style={{ display: "inline", top: "-8px", marginRight: "6px", position: "relative" }}> Start exploring elevate</div>
+              <div style={{ display: "inline", top: "-8px", marginRight: "6px", position: "relative" }}> Start exploring </div>
               <Logo />
               <div style={{ display: "inline", top: "-8px", marginRight: "6px", position: "relative" }}> today!</div>
             </div>
