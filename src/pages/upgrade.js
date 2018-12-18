@@ -59,7 +59,7 @@ const Upgrade = ({ classes }) => {
                   <a target="_blank" href="https://tryelevate.wistia.com/projects/ibbj6zglui"
                     className={classes.darkTealLink} style={{ backgroundColor: "#3e928b" }}>
                     <LiveTv color="#FFFFFF" size={30} className={classes.iconPosition} style={{ top: "8px", right: "6px" }} />
-                    watch now</a>
+                    Watch Now</a>
                 </div>
             </div>
             
@@ -78,7 +78,7 @@ const Upgrade = ({ classes }) => {
               </div>
               <div>
                 <a target="_blank" href="https://elmstreettechnology.zendesk.com/hc/en-us/articles/360018375372-Listingbook-to-Elevate-FAQs" className={classes.getStartedLink}>
-                  <QuestionAnswer color="#FFFFFF" size={28} className={classes.iconPosition} style={{top:"9px",right:"5px"}}/> view faq
+                  <QuestionAnswer color="#FFFFFF" size={28} className={classes.iconPosition} style={{top:"9px",right:"5px"}}/> View FAQ
                 </a>
               </div>
             </div>
@@ -103,14 +103,14 @@ const Upgrade = ({ classes }) => {
                 <a target="_blank" href="https://elmstreettechnology.zendesk.com/hc/en-us/articles/360019751351-Live-Training-Webinars-for-Former-Listingbook-Agents" 
                     className={classes.darkTealLink} style={{backgroundColor:"#3e928b"}}>
                     <LiveTv color="#FFFFFF" size={30} className={classes.iconPosition} style={{top:"8px",right:"6px"}}/>
-                    register today</a>
+                    Register Today</a>
                 </div>
                 <div style={{paddingTop:"30px"}}>
                 <span className={classes.bold} style={{color:"#FFFFFF"}}>Can’t attend a live training?</span>
                 </div>
                 No worries, we’ve got recordings for you:
                 <div style={{paddingTop:"30px"}} >
-                  <a target="_blank" href="https://tryelevate.wistia.com/projects/ibbj6zglui" className={classes.darkTealLink} style={{backgroundColor:"#3e928b"}}>on demand recordings</a>
+                  <a target="_blank" href="https://tryelevate.wistia.com/projects/ibbj6zglui" className={classes.darkTealLink} style={{backgroundColor:"#3e928b"}}>On Demand Recordings</a>
                 </div>
             </div>
 
@@ -136,7 +136,7 @@ const Upgrade = ({ classes }) => {
               Just <span className={classes.bold}> share the link below with your clients </span> to direct them to a special FAQ experience we've created just for them.
             <div style={{ paddingTop: "30px" }}>
                 <a target="_blank" href="https://elmstreettechnology.zendesk.com/hc/en-us/sections/360003180791-Listingbook-to-Elevate-Upgrade-for-Clients" className={classes.getStartedLink}>
-                  share this link with your clients
+                  Share this link with your clients
             </a>
               </div>
 
@@ -152,7 +152,7 @@ const Upgrade = ({ classes }) => {
               View a side-by-side comparision of all of the features & functionality between the old (Listingbook) and the new (Elevate)!
             <div style={{ paddingTop: "30px" }}>
                 <a target="_blank" href="/assets/Elevate_Listingbook_Feature_Comparison.pdf" className={classes.getStartedLink}>
-                  <ViewCarousel color="#FFFFFF" size={34} className={classes.iconPosition} /> feature comparison chart
+                  <ViewCarousel color="#FFFFFF" size={34} className={classes.iconPosition} /> Feature Comparison Chart
                 </a>
               </div>
 
