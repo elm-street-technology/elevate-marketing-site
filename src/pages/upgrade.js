@@ -52,7 +52,7 @@ const Upgrade = ({ classes }) => {
               <div className={classes.heading}>Getting Started Videos</div>
                 <div>
                 Explore everything that is Elevate
-                  with these easy-to-digest videos
+                  with these <span className={classes.bold}> easy-to-digest videos </span>
                   designed to introduce you to all of the new features & functionality that you and your clients will LOVE.
                 </div>
                 <div style={{ paddingTop: "30px" }}>
@@ -133,7 +133,7 @@ const Upgrade = ({ classes }) => {
             <div style={{ paddingTop: "10px" }} className={classes.centerHeading} >
               <div className={classes.heading}>Talking to your clients about their NEW experience with Elevate</div>
               Your clients will LOVE everything that Elevate has to offer and we've made it easy for you to share it with them.  
-              Just share the link below with your clients to direct them to a special FAQ experience we've created just for them.
+              Just <span className={classes.bold}> share the link below with your clients </span> to direct them to a special FAQ experience we've created just for them.
             <div style={{ paddingTop: "30px" }}>
                 <a target="_blank" href="https://elmstreettechnology.zendesk.com/hc/en-us/sections/360003180791-Listingbook-to-Elevate-Upgrade-for-Clients" className={classes.getStartedLink}>
                   share this link with your clients
