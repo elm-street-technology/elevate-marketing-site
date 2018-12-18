@@ -97,7 +97,7 @@ const Upgrade = ({ classes }) => {
                           will work for you & your clients.
 
                 </div>
-                <span className={classes.bold}>Live training webinars weekly.</span><br/>View our upcoming schedule & register TODAY. 
+                <br/>View our upcoming schedule & register TODAY. 
               </div>
                 <div style={{paddingTop:"30px"}}>
                 <a target="_blank" href="https://elmstreettechnology.zendesk.com/hc/en-us/articles/360019751351-Live-Training-Webinars-for-Former-Listingbook-Agents" 
