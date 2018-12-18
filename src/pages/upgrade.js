@@ -29,22 +29,13 @@ const Upgrade = ({ classes }) => {
                <span className={classes.bold}> 1st true Productivity Platform for real estate </span> 
                and the next evolution of all of the features &amp; functionality that you love with Listingbook...plus much more.  
             </div>
-          </div>
-        </div>
-      </Container>
-      <Container>
-        <div className={classes.section}></div>
-        <div className={classes.top}>
-          <div className={classes.centerHeading}>
-            <div className={classes.heading}>
-              <div style={{ display: "inline", top: "-8px", marginRight: "6px", position: "relative" }}> Start exploring </div>
-              <Logo />
-              <div style={{ display: "inline", top: "-8px", marginRight: "6px", position: "relative" }}> ...</div>
+            <div>
+              <Hr style={{ marginTop: "40px", marginBottom: "40px" }} />
             </div>
-            
           </div>
         </div>
       </Container>
+      
       <Container>
         <div className={classes.top}>
           <div className={classes.column} style={{ height:"670px"}}> 
@@ -145,18 +136,44 @@ const Upgrade = ({ classes }) => {
         </div>
       </Container>
       <Container>
+        <div className={classes.section}></div>
         <div className={classes.top}>
-          <div className={classes.section} style={{width:"100%"}}>
-            <div style={{ paddingTop: "10px" }} className={classes.centerHeading} >
-              <div className={classes.heading}>Listingbook vs Elevate</div>
-              View a side-by-side comparision of all of the features & functionality between the old (Listingbook) and the new (Elevate)!
-            <div style={{ paddingTop: "30px" }}>
-                <a target="_blank" href="/assets/Elevate_Listingbook_Feature_Comparison.pdf" className={classes.getStartedLink}>
-                  <ViewCarousel color="#FFFFFF" size={34} className={classes.iconPosition} /> Feature Comparison Chart
-                </a>
-              </div>
+          <div className={classes.centerHeading}>
+            <div className={classes.heading}>
+              <div style={{ display: "inline", top: "-8px", marginRight: "6px", position: "relative" }}> Start exploring </div>
+              <Logo />
+              <div style={{ display: "inline", top: "-8px", marginRight: "6px", position: "relative" }}> ...</div>
+            </div>
+
+          </div>
+        </div>
+      </Container>
+      <Container>
+        <div className={classes.top}>
+          <div className={classes.column}>
+            <div className={classes.videoBorder}>
+              <WistiaVideo hashedId="ecdwsmxj9y" />
+            </div>
+            <div style={{ fontSize: "12px", paddingRight: "30px", paddingLeft: "30px" }}>
+              <span className={classes.bold}>An Introduction to Elevate CRM</span>
+              <div style={{ float: "right", display: "inline" }}>runtime:  20:12</div>
 
             </div>
+          </div>
+          <div className={classes.column}>
+            <div className={classes.videoBorder}>
+              <WistiaVideo hashedId="xhsd39wnip" />
+            </div>
+            <div style={{ fontSize: "12px", paddingRight: "30px", paddingLeft: "30px" }}>
+              <span className={classes.bold}>An Introduction to the Site Editor</span>
+              <div style={{ float: "right", display: "inline" }}>runtime:  13:14</div>
+
+            </div>
+          </div>
+        </div>
+        <div className={classes.section}>
+          <div style={{ paddingTop: "10px" }} className={classes.centerHeading} >
+            <a target="_blank" className={classes.getStartedLink} href="https://tryelevate.wistia.com/projects/ibbj6zglui" >View More Videos</a>
           </div>
         </div>
       </Container>
