@@ -225,6 +225,9 @@ const Footer = ({ classes }) => (
           <Link className={classes.link} to="/terms-of-service">
             Terms of Service
           </Link>
+          <Link className={classes.link} to="/pricing-and-refund-policy">
+            Pricing &amp; Refund Policy
+          </Link>
           <Link className={classes.link} to="/privacy">
             Privacy Policy
           </Link>
