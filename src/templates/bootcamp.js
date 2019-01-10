@@ -8,6 +8,7 @@ import BootcampFaqs from "../components/BootcampFaqs";
 import BootcampSignup from "../components/BootcampSignup";
 import BootcampTopics from "../components/BootcampTopics";
 import BootcampInstructors from "../components/BootcampInstructors";
+import SMBCLogo from "../images/smbcLogo.jpg";
 // import SEO from '../components/SEO'
 
 const Bootcamp = ({ classes, data: { contentfulBootcamp } }) => {
@@ -31,25 +32,23 @@ const Bootcamp = ({ classes, data: { contentfulBootcamp } }) => {
       </Helmet>
       {/* <SEO pagePath={slug} postNode={postNode} pageSEO /> */}
 
-      <div className={classes.hero}>
-        <Container>
-          <div
-            className={classes.heroImage}
-            style={{ backgroundImage: `url('${heroImage.file.url}')` }}
-          >
-            <div
-              className={classes.heroText}
-              dangerouslySetInnerHTML={{
-                __html:
-                  heroText &&
-                  heroText.childMarkdownRemark &&
-                  heroText.childMarkdownRemark.html,
-              }}
-            />
-          </div>
-        </Container>
-      </div>
       <Container>
+        <div style={{textAlign:"center",paddingTop:"40px"}}>
+          <iframe width="800" height="450" src="https://www.youtube.com/embed/klUhBTht0ZA" 
+          frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </div>
+        <div className={classes.titleText}>
+          Free Social Media Seminar <span style={{ color:"#f3574e"}}>Exclusively</span> for Real Estate Professionals
+        </div>
+        <div style={{ textAlign: "center",paddingBottom:"40px" }}>
+          <img src={SMBCLogo} width="500" />
+        </div>
+      </Container>
+
+      
+      <Container>
+        
+        
         <BootcampFaqs className={classes.faqs} faqs={faqs} />
       </Container>
       <BootcampSignup
@@ -171,6 +170,14 @@ export default withStyles((theme) => ({
     [theme.breakpoints[900]]: {
       display: "flex",
     },
+  },
+  titleText: {
+    fontSize: "36px",
+    lineHeight: "52px",
+    fontWeight: "700",
+    textAlign: "center",
+    paddingBottom: "60px",
+    paddingTop: "40px"
   },
   signup: {},
   faqs: {
