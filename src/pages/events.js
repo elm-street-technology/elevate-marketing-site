@@ -71,6 +71,15 @@ class Events extends Component {
       <div className={classes.root}>
         <SEO />
         <Container>
+          <div style={{ textAlign: "center" }}>
+            <iframe width="800" height="450" src="https://www.youtube.com/embed/klUhBTht0ZA?autoplay=1&rel=0"
+              frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+          </div>
+          <div className={classes.titleText}>
+            Register for the #1 Social Media Boot Camp for real estate professionals
+        </div>
+        </Container>
+        <Container>
           <div className={classes.top}>
             <div className={classes.heading}>Upcoming Events</div>
             <Link className={classes.bootcampLink} to="/bootcamp">
@@ -237,5 +246,13 @@ export default withStyles((theme) => ({
     bottom: "0",
     width: "100%",
     height: "10vw",
+  },
+  titleText: {
+    fontSize: "28px",
+    lineHeight: "52px",
+    fontWeight: "700",
+    textAlign: "center",
+    paddingBottom: "60px",
+    paddingTop: "40px"
   },
 }))(Events);
