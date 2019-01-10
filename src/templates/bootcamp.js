@@ -34,7 +34,7 @@ const Bootcamp = ({ classes, data: { contentfulBootcamp } }) => {
 
       <Container>
         <div style={{textAlign:"center",paddingTop:"40px"}}>
-          <iframe width="800" height="450" src="https://www.youtube.com/embed/klUhBTht0ZA?autoplay=1&rel=0" 
+          <iframe width="800" height="450" src="https://www.youtube.com/embed/fGRZ8-mLwnQ?autoplay=1&rel=0"
           frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
         </div>
         <div className={classes.titleText}>
@@ -44,11 +44,7 @@ const Bootcamp = ({ classes, data: { contentfulBootcamp } }) => {
           <img src={SMBCLogo} width="500" />
         </div>
       </Container>
-
-      
       <Container>
-        
-        
         <BootcampFaqs className={classes.faqs} faqs={faqs} />
       </Container>
       <BootcampSignup
