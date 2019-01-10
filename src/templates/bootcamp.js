@@ -34,7 +34,7 @@ const Bootcamp = ({ classes, data: { contentfulBootcamp } }) => {
 
       <Container>
         <div style={{textAlign:"center",paddingTop:"40px"}}>
-          <iframe width="800" height="450" src="https://www.youtube.com/embed/klUhBTht0ZA" 
+          <iframe width="800" height="450" src="https://www.youtube.com/embed/klUhBTht0ZA?autoplay=1" 
           frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
         </div>
         <div className={classes.titleText}>
