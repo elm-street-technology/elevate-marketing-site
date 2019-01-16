@@ -32,8 +32,11 @@ const Calendlythankyou = ({ classes }) => {
           <div className={classes.centerHeading}>
             <div className={classes.heading}>Thank YOU</div>
             <div className={classes.grayText}>
-                <div style={{ display: "inline", top: "-12px", marginRight: "6px", position: "relative" }}>We're excited to connect with you and share the power of </div>
-                <Logo />
+                <div>We're excited to connect with you and share the power of </div>
+                          <div style={{ marginTop: "30px", marginBottom: "10px" }}>
+                              <Logo height="120" width="390" />
+                          </div>
+                
                 <div className={classes.subHeading}>
                      Capture, Nurture & Convert Leads. 
                 </div>
