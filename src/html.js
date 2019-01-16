@@ -31,20 +31,6 @@ module.exports = class HTML extends React.Component {
           />
           {this.props.headComponents}
           {css}
-        </head>
-        <body {...this.props.bodyAttributes}>
-          {this.props.preBodyComponents}
-          <div
-            key={`body`}
-            id="___gatsby"
-            dangerouslySetInnerHTML={{ __html: this.props.body }}
-          />
-          {this.props.postBodyComponents}
-
-          <script
-            id="ze-snippet"
-            src="https://static.zdassets.com/ekr/snippet.js?key=4ee92cc2-6d3c-4fc6-bceb-d9926c37cfae"
-          />
           <script
             async
             src="https://www.googletagmanager.com/gtag/js?id=AW-980447970"
@@ -76,6 +62,22 @@ module.exports = class HTML extends React.Component {
               `,
             }}
           />
+        </head>
+        <body {...this.props.bodyAttributes}>
+          {this.props.preBodyComponents}
+          <div
+            key={`body`}
+            id="___gatsby"
+            dangerouslySetInnerHTML={{ __html: this.props.body }}
+          />
+          {this.props.postBodyComponents}
+
+          <script
+            id="ze-snippet"
+            src="https://static.zdassets.com/ekr/snippet.js?key=4ee92cc2-6d3c-4fc6-bceb-d9926c37cfae"
+          />
+          
+          
           <noscript>
             <img
               alt="Facebook Pixel"
