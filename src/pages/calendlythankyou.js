@@ -11,6 +11,21 @@ const Calendlythankyou = ({ classes }) => {
 
   return (
     <div className={classes.root}>
+        <script
+            dangerouslySetInnerHTML={{
+                __html: `
+            gtag('event', 'conversion', {'send_to': 'AW-980447970/2_aHCOnsjo8BEOLlwdMD'});
+            `,
+            }}
+        />
+          <script
+              dangerouslySetInnerHTML={{
+                  __html: `
+            fbq('track', 'Lead');
+            fbq('track', 'CompleteRegistration');
+            `,
+              }}
+          />
       <SEO />
       <Container>
         <div className={classes.top}>
