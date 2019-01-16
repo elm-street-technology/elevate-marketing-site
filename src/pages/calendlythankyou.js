@@ -5,27 +5,16 @@ import Container from "../components/Container";
 import SEO from "../components/SEO";
 import Logo from "../components/Logo";
 import Hr from "elevate-ui/Hr";
+import FbTracking from "../components/FbTracking";
+import GoogleTracking from "../components/GoogleTracking";
 
 
 const Calendlythankyou = ({ classes }) => {
 
   return (
     <div className={classes.root}>
-        <script
-            dangerouslySetInnerHTML={{
-                __html: `
-            gtag('event', 'conversion', {'send_to': 'AW-980447970/2_aHCOnsjo8BEOLlwdMD'});
-            `,
-            }}
-        />
-          <script
-              dangerouslySetInnerHTML={{
-                  __html: `
-            fbq('track', 'Lead');
-            fbq('track', 'CompleteRegistration');
-            `,
-              }}
-          />
+      <FbTracking />
+      <GoogleTracking />
       <SEO />
       <Container>
         <div className={classes.top}>

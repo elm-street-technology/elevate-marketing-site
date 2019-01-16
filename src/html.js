@@ -31,6 +31,9 @@ module.exports = class HTML extends React.Component {
           />
           {this.props.headComponents}
           {css}
+          
+        </head>
+        <body {...this.props.bodyAttributes}>
           <script
             async
             src="https://www.googletagmanager.com/gtag/js?id=AW-980447970"
@@ -62,8 +65,8 @@ module.exports = class HTML extends React.Component {
               `,
             }}
           />
-        </head>
-        <body {...this.props.bodyAttributes}>
+
+
           {this.props.preBodyComponents}
           <div
             key={`body`}
