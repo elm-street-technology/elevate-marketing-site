@@ -6,7 +6,7 @@ class FbTracking extends Component {
         console.log('FbTracking mounted');
         if (window.fbq) {
             window.fbq("track", "Lead");
-            window.fbq('track', 'CompleteRegistration');
+            //window.fbq('track', 'CompleteRegistration');
         }       
     }
 
