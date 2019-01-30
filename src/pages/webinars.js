@@ -6,6 +6,8 @@ import WebinarCard from "../components/WebinarCard";
 import Container from "../components/Container";
 import SEO from "../components/SEO";
 import OverlappingHexagons from "../images/overlapping-hexagons.svg";
+import Header from "../components/Header";
+import Footer from "../components/Footer";
 
 const days = [
   "Every Monday",
@@ -24,6 +26,7 @@ const Webinars = ({ classes, data }) => {
   );
   return (
     <div className={classes.root}>
+      <Header />
       <SEO />
       <Container>
         <div className={classes.top}>
@@ -70,6 +73,7 @@ const Webinars = ({ classes, data }) => {
           <polygon fill="white" points="0,100 100,0 100,100" />
         </svg>
       </div>
+      <Footer />
     </div>
   );
 };

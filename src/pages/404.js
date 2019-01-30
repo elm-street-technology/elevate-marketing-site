@@ -3,11 +3,15 @@ import withStyles from "elevate-ui/withStyles";
 import Helmet from "react-helmet";
 import Link from "gatsby-link";
 
+import Header from "../components/Header";
+import Footer from "../components/Footer";
+
 import blankCanvas from "../images/blankCanvas.png";
 
 const NotFoundPage = ({ classes, className }) => {
   return (
     <div>
+      <Header />
       <Helmet>
         <title>404 - Page Not Found</title>
         <meta name="description" content="Page not found" />
@@ -32,6 +36,7 @@ const NotFoundPage = ({ classes, className }) => {
           </div>
         </div>
       </div>
+      <Footer />
     </div>
   );
 };

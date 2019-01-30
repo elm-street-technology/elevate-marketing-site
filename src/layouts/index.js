@@ -29,9 +29,9 @@ const Template = ({ children, classes }) => {
 
       <ThemeProvider>
         <div className={classes.root}>
-          <Header />
+          
           <div className={classes.children}>{children()}</div>
-          <Footer />
+          
         </div>
       </ThemeProvider>
     </div>

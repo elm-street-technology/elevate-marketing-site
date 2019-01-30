@@ -11,6 +11,8 @@ import Container from "../components/Container";
 import TestimonialMain from "../components/TestimonialMain";
 import TestimonialAdditional from "../components/TestimonialAdditional";
 import CallToAction from "../components/CallToAction";
+import Header from "../components/Header";
+import Footer from "../components/Footer";
 
 const Testimonial = ({ classes, data: { contentfulTestimonial } }) => {
   const {
@@ -24,6 +26,7 @@ const Testimonial = ({ classes, data: { contentfulTestimonial } }) => {
 
   return (
     <div className={classes.root}>
+      <Header />
       <Helmet>
         <title>{`${title} - ${config.siteTitle}`}</title>
       </Helmet>
@@ -96,6 +99,7 @@ const Testimonial = ({ classes, data: { contentfulTestimonial } }) => {
         </div>
       </Container>
       <CallToAction />
+      <Footer />
     </div>
   );
 };

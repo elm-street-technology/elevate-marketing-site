@@ -1,7 +1,8 @@
 import React from "react";
 import Helmet from "react-helmet";
 import withStyles from "elevate-ui/withStyles";
-
+import Header from "../components/Header";
+import Footer from "../components/Footer";
 import Container from "../components/Container";
 import config from "../utils/siteConfig";
 import renderComponent from "../utils/render-component";
@@ -13,30 +14,34 @@ const BundleTemplate = ({ classes, data: { contentfulBundle } }) => {
   const { title, sections, cards, hero } = contentfulBundle;
 
   return (
-    <div className={classes.root}>
+    <div>
+      <Header />
       <Helmet>
         <title>{`${title} - ${config.siteTitle}`}</title>
       </Helmet>
-      <Container>
-        <BundleHero hero={hero} />
-      </Container>
-      {sections && sections.length
-        ? sections.map((section, idx) => renderComponent(section, classes, idx))
-        : null}
-      <Container className={classes.bundleCardContainer}>
-        {cards && cards.length
-          ? cards.map(({ heading, tagline, icon, description }, idx) => (
-              <BundleCard
-                key={idx}
-                heading={heading}
-                tagline={tagline}
-                icon={icon}
-                description={description}
-              />
-            ))
+      <div className={classes.root}>
+        <Container>
+          <BundleHero hero={hero} />
+        </Container>
+        {sections && sections.length
+          ? sections.map((section, idx) => renderComponent(section, classes, idx))
           : null}
-      </Container>
-      <CTASecondary />
+        <Container className={classes.bundleCardContainer}>
+          {cards && cards.length
+            ? cards.map(({ heading, tagline, icon, description }, idx) => (
+                <BundleCard
+                  key={idx}
+                  heading={heading}
+                  tagline={tagline}
+                  icon={icon}
+                  description={description}
+                />
+              ))
+            : null}
+        </Container>
+        <CTASecondary />
+      </div>
+      <Footer />
     </div>
   );
 };

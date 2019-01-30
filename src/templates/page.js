@@ -8,21 +8,24 @@ import PageTitle from "../components/PageTitle";
 import PageBody from "../components/PageBody";
 import SEO from "../components/SEO";
 
+
 const PageTemplate = ({ classes, data: { contentfulPage } }) => {
   const { title, slug, body } = contentfulPage;
   const postNode = contentfulPage;
 
   return (
     <div className={classes.root}>
+      <Header />
       <Helmet>
         <title>{`${title} - ${config.siteTitle}`}</title>
       </Helmet>
       <SEO pagePath={slug} postNode={postNode} pageSEO />
-
+      <h1> test </h1>
       <Container>
         <PageTitle>{title}</PageTitle>
         <PageBody body={body} />
       </Container>
+      <Footer />
     </div>
   );
 };

@@ -19,6 +19,9 @@ import Forum from "elevate-ui-icons/Forum";
 import DeviceHub from "elevate-ui-icons/DeviceHub";
 import PieChart from "elevate-ui-icons/PieChart";
 
+import Header from "../components/Header";
+import Footer from "../components/Footer";
+
 class Index extends Component {
   render() {
     const { classes } = this.props;
@@ -72,6 +75,7 @@ class Index extends Component {
 
     return (
       <div className={classNames(classes.root)}>
+        <Header />
         <SEO />
         <HomePageHero roles={roles} isAlternate={true} />
 
@@ -187,6 +191,7 @@ class Index extends Component {
           </TestimonialCardGrid>
         </div>
         <CTASecondary />
+        <Footer />
       </div>
     );
   }

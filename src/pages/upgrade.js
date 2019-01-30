@@ -11,11 +11,14 @@ import QuestionAnswer from "elevate-ui-icons/QuestionAnswer";
 import ViewCarousel from "elevate-ui-icons/ViewCarousel";
 import PlayCircleFilled from "elevate-ui-icons/PlayCircleFilled";
 import LiveTv from "elevate-ui-icons/LiveTv";
+import Header from "../components/Header";
+import Footer from "../components/Footer";
 
 const Upgrade = ({ classes }) => {
 
   return (
     <div className={classes.root}>
+      <Header />
       <SEO />
       <Container>
         <div className={classes.top}>
@@ -177,6 +180,7 @@ const Upgrade = ({ classes }) => {
           </div>
         </div>
       </Container>
+      <Footer />
     </div>
   );
 };

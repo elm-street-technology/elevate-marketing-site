@@ -5,6 +5,8 @@ import config from "../utils/siteConfig";
 import Container from "../components/Container";
 import SignUpForm from "../components/SignUpForm";
 import SEO from "../components/SEO";
+import Header from "../components/Header";
+import Footer from "../components/Footer";
 
 const GetStarted = ({ children, classes, data, tags }) => {
   const postNode = {
@@ -13,6 +15,7 @@ const GetStarted = ({ children, classes, data, tags }) => {
 
   return (
     <div className={classes.root}>
+      <Header />
       <Helmet>
         <title>{`Get Started - ${config.siteTitle}`}</title>
       </Helmet>
@@ -36,6 +39,7 @@ const GetStarted = ({ children, classes, data, tags }) => {
           </a>
         </div> */}
       </Container>
+      <Footer />
     </div>
   );
 };

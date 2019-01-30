@@ -2,7 +2,8 @@ import React from "react";
 import sortBy from "lodash/sortBy";
 import Helmet from "react-helmet";
 import withStyles from "elevate-ui/withStyles";
-
+import Header from "../components/Header";
+import Footer from "../components/Footer";
 import config from "../utils/siteConfig";
 import BlogCard from "../components/BlogCard";
 import BlogCardGrid from "../components/BlogCardGrid";
@@ -16,6 +17,7 @@ const TagTemplate = ({ classes, data: { contentfulTag } }) => {
 
   return (
     <div className={classes.root}>
+      <Header />
       <Helmet>
         <title>{`Tag: ${title} - ${config.siteTitle}`}</title>
         <meta
@@ -40,6 +42,7 @@ const TagTemplate = ({ classes, data: { contentfulTag } }) => {
           ))}
         </BlogCardGrid>
       </Container>
+      <Footer />
     </div>
   );
 };

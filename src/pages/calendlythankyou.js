@@ -7,12 +7,15 @@ import Logo from "../components/Logo";
 import Hr from "elevate-ui/Hr";
 import FbTracking from "../components/FbTracking";
 import GoogleTracking from "../components/GoogleTracking";
+import Header from "../components/Header";
+import Footer from "../components/Footer";
 
 
 const Calendlythankyou = ({ classes }) => {
 
   return (
     <div className={classes.root}>
+      <Header />
       <FbTracking />
       <GoogleTracking />
       <SEO />
@@ -41,6 +44,7 @@ const Calendlythankyou = ({ classes }) => {
           </div>
         </div>
       </Container>
+      <Footer />
     </div>
   );
 };
