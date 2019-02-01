@@ -6,99 +6,117 @@ import ArrowDropDown from "elevate-ui-icons/ArrowDropDown";
 
 const HeaderNavDesktop = ({ classes, className }) => {
   return (
-    <nav className={classNames(classes.nav, className)}>
-      <div className={classes.link}>
-        <div className={classes.navItem}>
-          Solutions
-          <ArrowDropDown size={20} />
-        </div>
-        <ul className={classes.dropDown}>
-          <Link className={classes.listItemLink} to="/agents">
-            <li className={classes.listItem}>Agents</li>
-          </Link>
-          <Link className={classes.listItemLink} to="/teams">
-            <li className={classes.listItem}>Teams</li>
-          </Link>
-          <Link className={classes.listItemLink} to="/brokers">
-            <li className={classes.listItem}>Brokers</li>
-          </Link>
-        </ul>
+    <div>
+      <div style={{height:"52px"}}>
+      <Link to="/get-started" className={classes.TourLink}>
+              Take a Tour
+            </Link>
+      <Link to="/get-started" className={classes.getStartedLink}>
+              Schedule Demo
+            </Link>
       </div>
-      <div className={classes.link}>
-        <div className={classes.navItem}>
-          Products
-          <ArrowDropDown size={20} />
+      <nav className={classNames(classes.nav, className)}>
+        <div className={classes.link}>
+          <div className={classes.navItem}>
+            Solutions
+            <ArrowDropDown size={20} />
+          </div>
+          <ul className={classes.dropDown}>
+            <Link className={classes.listItemLink} to="/agents">
+              <li className={classes.listItem}>IDX Websites</li>
+            </Link>
+            <Link className={classes.listItemLink} to="/teams">
+              <li className={classes.listItem}>Social Media Marketing</li>
+            </Link>
+            <Link className={classes.listItemLink} to="/brokers">
+              <li className={classes.listItem}>Email Marketing</li>
+            </Link>
+            <Link className={classes.listItemLink} to="/brokers">
+              <li className={classes.listItem}>Lead Genration</li>
+            </Link>
+            <Link className={classes.listItemLink} to="/brokers">
+              <li className={classes.listItem}>CRM</li>
+            </Link>
+            <Link className={classes.listItemLink} to="/brokers">
+              <li className={classes.listItem}>Creative Services</li>
+            </Link>
+          </ul>
         </div>
-        <ul className={classes.dropDown}>
-          <Link className={classes.listItemLink} to="/elevate-dms">
-            <li className={classes.listItem}>DMS</li>
-          </Link>
-          <Link className={classes.listItemLink} to="/elevate-social-pro">
-            <li className={classes.listItem}>Social Pro</li>
-          </Link>
-          <Link className={classes.listItemLink} to="/elevate-idx">
-            <li className={classes.listItem}>IDX</li>
-          </Link>
-          <Link className={classes.listItemLink} to="/elevate-ignite">
-            <li className={classes.listItem}>Ignite</li>
-          </Link>
-          <Link className={classes.listItemLink} to="/elevate-elite">
-            <li className={classes.listItem}>Elite</li>
-          </Link>
-          <Link className={classes.listItemLink} to="/crm">
-            <li className={classes.listItem}>CRM</li>
-          </Link>
-          <Link className={classes.listItemLink} to="/recruiter">
-            <li className={classes.listItem}>Recruiter</li>
-          </Link>
-        </ul>
-      </div>
-      <div className={classes.link}>
-        <div className={classes.navItem}>
-          Support
-          <ArrowDropDown size={20} />
-        </div>
-        <ul className={classes.dropDown}>
-          <a
-            className={classes.listItemLink}
-            href="https://elmstreettechnology.zendesk.com/hc/en-us"
-            target="_blank"
-            rel="noreferrer noopener"
-          >
-            <li className={classes.listItem}>Help Center</li>
-          </a>
-          <Link className={classes.listItemLink} to="/webinars">
-            <li className={classes.listItem}>Webinars</li>
-          </Link>
-          <Link className={classes.listItemLink} to="/blog">
-            <li className={classes.listItem}>Blog</li>
-          </Link>
-        </ul>
-      </div>
-      <div className={classes.link}>
-        <div className={classes.navItem}>
-          Explore
-          <ArrowDropDown size={20} />
-        </div>
-        <ul className={classes.dropDown}>
+        <div className={classes.link}>
+          <div className={classes.navItem}>
+            Elevate University
+            <ArrowDropDown size={20} />
+          </div>
+          <ul className={classes.dropDown}>
           <Link className={classes.listItemLink} to="/bootcamp">
-            <li className={classes.listItem}>Social Media Boot Camp</li>
-          </Link>
-          <Link className={classes.listItemLink} to="/events">
-            <li className={classes.listItem}>Upcoming Events</li>
-          </Link>
-          <Link className={classes.listItemLink} to="/testimonials">
-            <li className={classes.listItem}>Happy Clients</li>
-          </Link>
-          <Link className={classes.listItemLink} to="/get-started">
-            <li className={classes.listItem}>Schedule a Demo</li>
-          </Link>
-          <Link className={classes.listItemLink} to="/markets">
-            <li className={classes.listItem}>MLS Markets</li>
-          </Link>
-        </ul>
-      </div>
-    </nav>
+              <li className={classes.listItem}>Social Media Boot Camp</li>
+            </Link>
+            <Link className={classes.listItemLink} to="/elevate-social-pro">
+              <li className={classes.listItem}>Lead Generation Boot Camp</li>
+            </Link>
+            <Link className={classes.listItemLink} to="/elevate-idx">
+              <li className={classes.listItem}>Webinar Series</li>
+            </Link>
+            <Link className={classes.listItemLink} to="/elevate-ignite">
+              <li className={classes.listItem}>Speaking Engagements</li>
+            </Link>
+            <Link className={classes.listItemLink} to="/elevate-elite">
+              <li className={classes.listItem}>3sixtyfive Blog</li>
+            </Link>
+          </ul>
+        </div>
+        <div className={classes.link}>
+          <div className={classes.navItem}>
+            Support
+            <ArrowDropDown size={20} />
+          </div>
+          <ul className={classes.dropDown}>
+            <a
+              className={classes.listItemLink}
+              href="https://elmstreettechnology.zendesk.com/hc/en-us"
+              target="_blank"
+              rel="noreferrer noopener"
+            >
+              <li className={classes.listItem}>Help Center</li>
+            </a>
+            <Link className={classes.listItemLink} to="/webinars">
+              <li className={classes.listItem}>Training Webinars</li>
+            </Link>
+            <Link className={classes.listItemLink} to="/blog">
+              <li className={classes.listItem}>Live Chat</li>
+            </Link>
+          </ul>
+        </div>
+        <div className={classes.link}>
+          <div className={classes.navItem}>
+            Explore
+            <ArrowDropDown size={20} />
+          </div>
+          <ul className={classes.dropDown}>
+            <Link className={classes.listItemLink} to="/bootcamp">
+              <li className={classes.listItem}>About Us</li>
+            </Link>
+            <Link className={classes.listItemLink} to="/events">
+              <li className={classes.listItem}>MLS Markets</li>
+            </Link>
+            <Link className={classes.listItemLink} to="/testimonials">
+              <li className={classes.listItem}>Happy Clients</li>
+            </Link>
+            <Link className={classes.listItemLink} to="/get-started">
+              <li className={classes.listItem}>Partnerships &amp; Alliances</li>
+            </Link>
+            <Link className={classes.listItemLink} to="/markets">
+              <li className={classes.listItem}>Job Opportunities</li>
+            </Link>
+          </ul>
+        </div>
+        <div className={classes.link}>
+        <div className={classes.navItem}>
+            Connect
+          </div>
+          </div>
+      </nav>
+    </div>
   );
 };
 
@@ -124,6 +142,7 @@ export default withStyles((theme) => ({
     position: "relative",
     textDecoration: "none",
     fontSize: "18px",
+    letterSpacing: ".25px",
     fontWeight: "500",
     color: "#64616E",
     display: "block",
@@ -141,9 +160,10 @@ export default withStyles((theme) => ({
   },
   listItem: {
     clear: "both",
-    padding: "20px",
+    padding: "25px",
     width: "100%",
-    fontSize: "15px",
+    letterSpacing: ".25px",
+    fontSize: "16px",
     borderTop: "1px solid rgba(236,236,236, .6)",
 
     "&:hover": {
@@ -160,7 +180,7 @@ export default withStyles((theme) => ({
     borderRadius: "6px",
     boxShadow: "0 1px 3px 0 rgba(0,0,0,.05), 0 5px 20px 0 rgba(0,0,0,.15)",
     listStyle: "none",
-    minWidth: "220px",
+    minWidth: "290px",
     margin: "0",
     paddingLeft: "0px",
     visibility: "hidden",
@@ -172,5 +192,34 @@ export default withStyles((theme) => ({
     transition: "all .3s ease-in-out",
     overflow: "hidden",
     zIndex: "999",
+  },
+
+  TourLink: {
+    alignContent: "center",
+    justifyContent: "center",
+    fontSize: "16px",
+    fontWeight: "500",
+    letterSpacing: ".25px",
+    backgroundColor: theme.colors.secondary,
+    color: "#FFF",
+    textDecoration: "none",
+    padding: "14px 16px",
+    borderRadius: "3px",
+    float: "right",
+  },
+
+  getStartedLink: {
+    alignContent: "center",
+    justifyContent: "center",
+    fontSize: "16px",
+    fontWeight: "500",
+    letterSpacing: ".25px",
+    marginRight: "15px",
+    backgroundColor: theme.colors.secondary,
+    color: "#FFF",
+    textDecoration: "none",
+    padding: "14px 16px",
+    borderRadius: "3px",
+    float: "right",
   },
 }))(HeaderNavDesktop);

@@ -44,9 +44,7 @@ class Header extends Component {
               )}
               onMenuClose={this.onMenuClose}
             />
-            <Link to="/get-started" className={classes.getStartedLink}>
-              Schedule Demo
-            </Link>
+            
           </div>
         </Container>
         <button
@@ -69,8 +67,11 @@ export default withStyles((theme) => ({
     display: "flex",
     alignItems: "center",
     width: "100%",
-    height: "80px",
+    height: "40px",
     backgroundColor: "#fff",
+    [theme.breakpoints[900]]: {
+      height: "128px",
+    },
   },
   inner: {
     display: "flex",
@@ -100,23 +101,7 @@ export default withStyles((theme) => ({
       display: "none",
     },
   },
-  getStartedLink: {
-    display: "none",
-    alignContent: "center",
-    justifyContent: "center",
-    fontSize: "14px",
-    fontWeight: "700",
-    letterSpacing: ".25px",
-    backgroundColor: theme.colors.secondary,
-    color: "#FFF",
-    textDecoration: "none",
-    padding: "14px 16px",
-    borderRadius: "4px",
-
-    [theme.breakpoints[900]]: {
-      display: "block",
-    },
-  },
+  
 
   navMobile: {
     visibility: "hidden",
