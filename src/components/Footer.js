@@ -265,7 +265,7 @@ export default withStyles((theme) => ({
     alignItems: "center",
     justifyContent: "center",
     width: "100%",
-    backgroundColor: "#5A5B5C",
+    backgroundColor: "#4c4e50",
     padding: "48px 16px",
 
     [theme.breakpoints[900]]: {

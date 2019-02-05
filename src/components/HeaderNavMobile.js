@@ -16,84 +16,68 @@ const HeaderNavMobile = ({ classes, className, onMenuClose }) => {
         <div className={classes.navItem}>Solutions</div>
         <ul className={classes.dropDown}>
           <Link className={classes.listItemLink} to="/agents">
-            <li className={classes.listItem}>Agents</li>
+            <li className={classes.listItem}>Social Media Boot Camp</li>
           </Link>
           <Link className={classes.listItemLink} to="/teams">
-            <li className={classes.listItem}>Teams</li>
+            <li className={classes.listItem}>Lead Generation Boot Camp</li>
           </Link>
           <Link className={classes.listItemLink} to="/brokers">
-            <li className={classes.listItem}>Brokers</li>
+            <li className={classes.listItem}>Webinar Series</li>
           </Link>
-        </ul>
-      </div>
-      <div className={classes.link}>
-        <div className={classes.navItem}>Products</div>
-        <ul className={classes.dropDown}>
-          <Link className={classes.listItemLink} to="/elevate-dms">
-            <li className={classes.listItem}>DMS</li>
+          <Link className={classes.listItemLink} to="/brokers">
+            <li className={classes.listItem}>Speaking Engagements</li>
           </Link>
-          <Link className={classes.listItemLink} to="/elevate-social-pro">
-            <li className={classes.listItem}>Social Pro</li>
-          </Link>
-          <Link className={classes.listItemLink} to="/elevate-idx">
-            <li className={classes.listItem}>IDX</li>
-          </Link>
-          <Link className={classes.listItemLink} to="/elevate-ignite">
-            <li className={classes.listItem}>Ignite</li>
-          </Link>
-          <Link className={classes.listItemLink} to="/elevate-elite">
-            <li className={classes.listItem}>Elite</li>
-          </Link>
-          <Link className={classes.listItemLink} to="/crm">
-            <li className={classes.listItem}>CRM</li>
-          </Link>
-          <Link className={classes.listItemLink} to="/recruiter">
-            <li className={classes.listItem}>Recruiter</li>
+          <Link className={classes.listItemLink} to="/brokers">
+            <li className={classes.listItem}>3sixtyfive Blog</li>
           </Link>
         </ul>
       </div>
       <div className={classes.link}>
         <div className={classes.navItem}>Support</div>
         <ul className={classes.dropDown}>
-          <a
+        <a
             className={classes.listItemLink}
             href="https://elmstreettechnology.zendesk.com/hc/en-us"
             target="_blank"
           >
             <li className={classes.listItem}>Help Center</li>
           </a>
-          <Link className={classes.listItemLink} to="/webinars">
-            <li className={classes.listItem}>Webinars</li>
+          <Link className={classes.listItemLink} to="/elevate-social-pro">
+            <li className={classes.listItem}>Training Webinars</li>
           </Link>
-          <Link className={classes.listItemLink} to="/blog">
-            <li className={classes.listItem}>Blog</li>
+          <Link className={classes.listItemLink} to="/elevate-idx">
+            <li className={classes.listItem}>Live Chat</li>
           </Link>
         </ul>
       </div>
-
       <div className={classes.link}>
         <div className={classes.navItem}>Explore</div>
         <ul className={classes.dropDown}>
-          <Link className={classes.listItemLink} to="/bootcamp">
-            <li className={classes.listItem}>Social Media Boot Camp</li>
+        <Link className={classes.listItemLink} to="/markets">
+            <li className={classes.listItem}>About Us</li>
           </Link>
-          <Link className={classes.listItemLink} to="/events">
-            <li className={classes.listItem}>Upcoming Events</li>
+          <Link className={classes.listItemLink} to="/webinars">
+            <li className={classes.listItem}>MLS Markets</li>
           </Link>
-
-          <Link className={classes.listItemLink} to="/testimonials">
+          <Link className={classes.listItemLink} to="/blog">
             <li className={classes.listItem}>Happy Clients</li>
           </Link>
-          <Link className={classes.listItemLink} to="/get-started">
-            <li className={classes.listItem}>Schedule a Demo</li>
+          <Link className={classes.listItemLink} to="/blog">
+            <li className={classes.listItem}>Partnerships &amp; Alliances</li>
           </Link>
-          <Link className={classes.listItemLink} to="/markets">
-            <li className={classes.listItem}>MLS Markets</li>
+          <Link className={classes.listItemLink} to="/blog">
+            <li className={classes.listItem}>Job Opportunities</li>
           </Link>
         </ul>
       </div>
-      <Link to="/get-started" className={classes.getStartedLink}>
-        Get Started
+      <div className={classes.link}>Connect</div>
+      
+      <Link to="/get-started" className={classes.ctabutton}>
+        Schedule a Demo
+      </Link>
+
+      <Link to="/get-started" className={classes.ctabutton}>
+        Take a Tour
       </Link>
     </nav>
   );
@@ -179,5 +163,23 @@ export default withStyles((theme) => ({
     borderRadius: "4px",
     alignSelf: "center",
     marginTop: "20px",
+  },
+
+  ctabutton: {
+    alignContent: "center",
+    justifyContent: "center",
+    fontSize: "16px",
+    textAlign:"center",
+    fontWeight: "500",
+    minWidth: "200px",
+    letterSpacing: ".25px",
+    backgroundColor: theme.colors.secondary,
+    color: "#FFF",
+    display: "block",
+    marginTop:"30px",
+    maxWidth: "200px",
+    textDecoration: "none",
+    padding: "12px 14px",
+    borderRadius: "3px",
   },
 }))(HeaderNavMobile);
