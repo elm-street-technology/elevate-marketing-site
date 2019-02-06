@@ -31,10 +31,8 @@ const BgSection = ({
                     </Link>
                 </div>
                 <div className={classes.flexItem2}>
-
-                    {secImage && (
-                        <img src={secImage} className={classes.image} alt={secTitle} />
-                    )}
+                    {secImage && (<img src={secImage} className={classes.image} 
+                        alt={secTitle} />)}
                 </div>
             </div>
                 </Container>
@@ -61,7 +59,7 @@ export default withStyles((theme) => ({
         width: "100%",
         height: "100%",
         paddingTop:"10px",
-        
+        display: "block",
     },
     leftheading: {
         color: "#ffffff",
@@ -116,13 +114,14 @@ export default withStyles((theme) => ({
         display: "-webkit-flex",
         display: "flex",
         flexWrap: "wrap",
-
+        alignItems: "stretch",
     },
     flexItem: {
+        height: "100%",
         maxWidth: "100%",
         width: "100%",
         paddingTop: "45px",
-        padding: "40px",
+        paddingBottom: "45px",
 
 
         [theme.breakpoints[900]]: {
@@ -130,7 +129,7 @@ export default withStyles((theme) => ({
             width: "50%",
             paddingTop: "65px",
             paddingRight: "25px",
-            padding: "0px",
+            
         },
     },
 
@@ -139,12 +138,12 @@ export default withStyles((theme) => ({
         width: "100%",
         paddingTop: "48px",
         padding: "0px",
-
+        margin:"0",
+        alignSelf: "flex-end",
 
         [theme.breakpoints[900]]: {
-            height: "50%",
             width: "50%",
-            paddingTop: "68px",
+            paddingTop: "65px",
             padding: "0px",
         },
     }

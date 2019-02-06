@@ -12,6 +12,8 @@ import BgSection from "../components/BgSection";
 import TestImage from "../images/600.jpg";
 import WideImage from "../images/1200.jpg";
 import exImage from "../images/example.png";
+import exImage2 from "../images/example2.png";
+import exImage3 from "../images/example3.png";
 import bgImage from "../images/examplebg.jpg";
 
 const Demo = ({ classes }) => {
@@ -42,6 +44,11 @@ const Demo = ({ classes }) => {
           Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
         </BgSection>
 
+
+        <BgSection bgImage={bgImage} secTitle="Section Header" secLink="/upgrade" secButton="Upgrade Button Text" secImage={exImage3}>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+        </BgSection>
+
       <Footer />
     </div>
   );
@@ -57,7 +64,7 @@ export default withStyles((theme) => ({
   root: {
     position: "relative",
     paddingTop: "0px",
-    paddingBottom: "192px",
+    paddingBottom: "0px",
 
     [theme.breakpoints[900]]: {
         paddingTop: "48px",
