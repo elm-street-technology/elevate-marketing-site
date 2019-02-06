@@ -7,7 +7,7 @@ import ArrowDropDown from "elevate-ui-icons/ArrowDropDown";
 const HeaderNavDesktop = ({ classes, className }) => {
   return (
     <div>
-      <div style={{height:"52px"}}>
+      <div style={{height:"52px"}} className={classes.hideMobile}>
       <Link to="/get-started" className={classes.TourLink}>
               Take a Tour
             </Link>
@@ -132,6 +132,13 @@ export default withStyles((theme) => ({
       marginLeft: "16px",
     },
   },
+  hideMobile:{
+    display:"none",
+    textAlign: "right",
+    [theme.breakpoints[900]]: {
+      display:"block",
+    },
+  },
   navItem: {
     display: "flex",
   },
@@ -205,7 +212,7 @@ export default withStyles((theme) => ({
     textDecoration: "none",
     padding: "12px 14px",
     borderRadius: "3px",
-    float: "right",
+    display: "inline-block",
   },
 
   getStartedLink: {
@@ -214,12 +221,13 @@ export default withStyles((theme) => ({
     fontSize: "16px",
     fontWeight: "500",
     letterSpacing: ".25px",
+    margin:"10px",
     marginRight: "15px",
     backgroundColor: theme.colors.secondary,
     color: "#FFF",
     textDecoration: "none",
     padding: "12px 14px",
     borderRadius: "3px",
-    float: "right",
+    display: "inline-block",
   },
 }))(HeaderNavDesktop);

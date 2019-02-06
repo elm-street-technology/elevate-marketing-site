@@ -9,8 +9,8 @@ import SocialLinks from "./SocialLinks";
 const Footer = ({ classes }) => (
   <div className={classes.root}>
     <Container>
-      <div className={classes.grid}>
-        <div className={classNames(classes.column, classes.logo)}>
+      <div >
+        <div className={classNames(classes.logo)}>
           <Link to="/">
             <svg width={140} viewBox="0 0 200 63">
               <defs />
@@ -169,94 +169,56 @@ const Footer = ({ classes }) => (
             </a>
           </div>
         </div>
-        <div className={classes.column}>
-          <div className={classes.section}>Solutions</div>
-          <Link className={classes.link} to="/agents">
-            Agents
-          </Link>
-          <Link className={classes.link} to="/brokers">
-            Brokers
-          </Link>
-          <Link className={classes.link} to="/teams">
-            Teams
-          </Link>
-        </div>
+        
 
-        <div className={classes.column}>
-          <div className={classes.section}>Products</div>
-          <Link className={classes.link} to="/elevate-dms">
-            DMS
-          </Link>
-          <Link className={classes.link} to="/elevate-social-pro">
-            Social Pro
-          </Link>
-          <Link className={classes.link} to="/elevate-idx">
-            IDX
-          </Link>
-          <Link className={classes.link} to="/elevate-ignite">
-            Ignite
-          </Link>
-          <Link className={classes.link} to="/elevate-elite">
-            Elite
-          </Link>
-          <Link className={classes.link} to="/crm">
-            CRM
-          </Link>
-          <Link className={classes.link} to="/recruiter">
-            Recruiter
-          </Link>
-        </div>
+        
 
-        <div className={classes.column}>
-          <div className={classes.section}>Support</div>
-          <a
-            className={classes.link}
-            href="https://elmstreettechnology.zendesk.com/hc/en-us"
-            target="_blank"
-          >
-            Help Center
-          </a>
-          <Link className={classes.link} to="/webinars">
-            Webinars
-          </Link>
-          <Link className={classes.link} to="/blog">
-            Blog
-          </Link>
-          <Link className={classes.link} to="/terms-of-service">
-            Terms of Service
-          </Link>
-          <Link className={classes.link} to="/pricing-and-refund-policy">
-            Pricing &amp; Refund Policy
-          </Link>
-          <Link className={classes.link} to="/privacy">
-            Privacy Policy
-          </Link>
-          <Link className={classes.link} to="/dmca">
-            DMCA Notice
-          </Link>
-        </div>
+        
 
-        <div className={classes.column}>
-          <div className={classes.section}>Explore</div>
-          <Link className={classes.link} to="/testimonials">
-            Testimonials
-          </Link>
-          <Link className={classes.link} to="/markets">
-            MLS Markets
-          </Link>
-          <Link className={classes.link} to="/events">
-            Upcoming Events
-          </Link>
+    
+ <div>
+   <SocialLinks className={classes.social} />
+ </div>
 
-          <Link className={classes.link} to="/bootcamp">
-            Social Media Boot Camp
-          </Link>
-          <SocialLinks className={classes.social} />
-        </div>
-      </div>
-    </Container>
-  </div>
+<div>
+Terms of Use Pricing &amp; Refund Policy Privacy Policy DMCA Notice
+</div>
+
+<div>
+<Link to="/get-started" className={classes.ctabutton}>
+              Take a Tour
+            </Link>
+
+<Link to="/get-started" className={classes.ctabutton}>
+              Schedule a Demo
+            </Link>
+
+<Link to="/get-started" className={classes.ctabutton}>
+              Login
+            </Link>
+</div>
+
+<div>
+      <Container>
+                <div className={classes.flexContainer}>
+                <div className={classes.flexItem}>
+                
+                
+                </div>
+                </div>
+
+                <div className={classes.flexContainer}>
+                <div className={classes.flexItem}>gggg</div>
+                </div>
+      </Container>
+</div>
+
+</div>
+</Container>
+</div>
 );
+
+
 
 export default withStyles((theme) => ({
   root: {
@@ -276,21 +238,7 @@ export default withStyles((theme) => ({
       padding: "96px 64px",
     },
   },
-  grid: {
-    width: "100%",
-    display: "grid",
-    gridTemplateColumns: "repeat(1, 1fr)",
-    gridColumnGap: "44px",
-    gridRowGap: "32px",
 
-    [theme.breakpoints[900]]: {
-      gridTemplateColumns: "repeat(5, 1fr)",
-    },
-  },
-  column: {
-    display: "flex",
-    flexDirection: "column",
-  },
   copyright: {
     maxWidth: "240px",
     marginTop: "8px",
@@ -309,4 +257,44 @@ export default withStyles((theme) => ({
   social: {
     marginTop: "24px",
   },
+
+  flexContainer: {
+    padding: "0",
+    margin: '0',
+
+    display: "-webkit-box",
+    display: "-moz-box",
+    display: "-ms-flexbox",
+    display: "-webkit-flex",
+    display: "flex",
+    flexWrap: "wrap",
+
+},
+flexItem: {
+    width: "100%",
+    paddingTop: "45px",
+    padding: "40px",
+
+
+    [theme.breakpoints[900]]: {
+  
+    },
+},
+
+  ctabutton: {
+    alignContent: "center",
+    justifyContent: "center",
+    fontSize: "16px",
+    textAlign: "center",
+    fontWeight: "500",
+    minWidth: "300px",
+    letterSpacing: ".25px",
+    backgroundColor: theme.colors.secondary,
+    color: "#FFF",
+    marginTop: "30px",
+    maxWidth: "300px",
+    textDecoration: "none",
+    padding: "12px 14px",
+    borderRadius: "3px",
+},
 }))(Footer);

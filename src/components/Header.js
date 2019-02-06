@@ -67,7 +67,7 @@ export default withStyles((theme) => ({
     display: "flex",
     alignItems: "center",
     width: "100%",
-    height: "40px",
+    height: "70px",
     backgroundColor: "#fff",
     [theme.breakpoints[900]]: {
       height: "128px",

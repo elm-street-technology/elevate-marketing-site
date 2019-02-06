@@ -43,12 +43,22 @@ export default withStyles((theme) => ({
     root: {
         display: "flex",
         flexDirection: "column",
-        minHeight: "400px",
+        minHeight: "200px",
         overflow: "hidden",
+
+        [theme.breakpoints[900]]: {
+            minHeight: "400px",
+        },
     },
     image:{
-        paddingLeft:"15px",
-        
+        padding:"15px",
+        width: "100%",
+        height: "100%",
+
+        [theme.breakpoints[900]]: {
+            padding: "45px",
+
+        },  
     },
     leftheading: {
         color: "#4bbbb1",
@@ -106,11 +116,15 @@ export default withStyles((theme) => ({
     flexItem: {
         maxWidth: "100%",
         width: "100%",
+        paddingRight: "0px",
+        paddingBottom: "25px",
 
 
         [theme.breakpoints[900]]: {
             maxWidth: "50%",
             width: "50%",
+            paddingRight: "20px",
+            paddingBottom: "0px",
         },
     }
 }))(Section2Col);

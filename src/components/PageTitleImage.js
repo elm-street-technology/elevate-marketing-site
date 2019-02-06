@@ -15,12 +15,14 @@ const PageTitleImage = ({
       
       <div className={classNames(classes.root, className)}>
           <div className={classes.titlearea} style={{ backgroundImage: "url(" + image + ")" }}>
-            <Container>
-                <h1 className={classes.titleheading}>{title}</h1>
-                <p className={classes.titlesubtext}>
-                {children}
-                </p>
-            </Container>
+            <div className={classes.overlay}>
+                <Container>
+                    <h1 className={classes.titleheading}>{title}</h1>
+                    <p className={classes.titlesubtext}>
+                    {children}
+                    </p>
+                </Container>
+            </div>
         </div>
     </div>
   );
@@ -30,8 +32,19 @@ export default withStyles((theme) => ({
     root: {
         display: "flex",
         flexDirection: "column",
-        minHeight: "400px",
+        minHeight: "200px",
         overflow: "hidden",
+        [theme.breakpoints[900]]: {
+            minHeight: "400px",
+        },
+    },
+    overlay: {
+        backgroundColor: "rgba(54, 54, 54, 0.5)",
+        padding: "55px",
+
+        [theme.breakpoints[900]]: {
+            padding: "125px",
+        },
     },
     image:{
         paddingLeft:"15px",
@@ -66,11 +79,7 @@ export default withStyles((theme) => ({
         backgroundColor: "#404548",
         backgroundRepeat: "no-repeat",
         backgroundSize: "100%",
-        padding: "55px",
-
-        [theme.breakpoints[900]]: {
-            padding: "125px",
-        },
+        
     },
     flexContainer: {
         padding: "0",

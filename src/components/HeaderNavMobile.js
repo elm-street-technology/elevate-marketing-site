@@ -72,6 +72,7 @@ const HeaderNavMobile = ({ classes, className, onMenuClose }) => {
       </div>
       <div className={classes.link}>Connect</div>
       
+      <div style={{textAlign:"center"}}>
       <Link to="/get-started" className={classes.ctabutton}>
         Schedule a Demo
       </Link>
@@ -79,6 +80,7 @@ const HeaderNavMobile = ({ classes, className, onMenuClose }) => {
       <Link to="/get-started" className={classes.ctabutton}>
         Take a Tour
       </Link>
+      </div>
     </nav>
   );
 };
@@ -181,5 +183,6 @@ export default withStyles((theme) => ({
     textDecoration: "none",
     padding: "12px 14px",
     borderRadius: "3px",
+    display: "inline-block",
   },
 }))(HeaderNavMobile);

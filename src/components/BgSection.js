@@ -4,31 +4,42 @@ import withStyles from "elevate-ui/withStyles";
 import Link from "gatsby-link";
 import Container from "./Container";
 
-const Section1Col = ({
+const BgSection = ({
   children,
   classes,
   className,
+  image,
+  secImage,
   secTitle,
   secLink,
   secButton,
+  bgImage
 }) => {
   return (
       
-    <div className={classNames(classes.root, className)}>
-          <Container>
-            <div>
-                <h1 className={classes.centerheading}>Section Header</h1>
-                <p className={classes.centersubtext} >
-                {children}
-                </p>
-                  <div className={classes.buttoncontainer}>
+      <div className={classNames(classes.root, className)}>
+          <div className={classes.titlearea} style={{ backgroundImage: "url(" + bgImage + ")" }}>
+            
+                <Container>
+                <div className={classes.flexContainer}>
+                <div className={classes.flexItem}>
+                    <h1 className={classes.leftheading}>{secTitle}</h1>
+                    <p className={classes.leftsubtext}>
+                    {children}</p>
                     <Link to={secLink} className={classes.ctabutton}>
                         {secButton}
                     </Link>
                 </div>
-            </div>
-          </Container>
+                <div className={classes.flexItem2}>
 
+                    {secImage && (
+                        <img src={secImage} className={classes.image} alt={secTitle} />
+                    )}
+                </div>
+            </div>
+                </Container>
+
+        </div>
     </div>
   );
 };
@@ -37,38 +48,44 @@ export default withStyles((theme) => ({
     root: {
         display: "flex",
         flexDirection: "column",
-        minHeight: "250px",
+        minHeight: "200px",
         overflow: "hidden",
+
+        [theme.breakpoints[900]]: {
+            minHeight: "400px",
+        },
     },
-    centerheading: {
-        color: "#4bbbb1",
+
+    image:{
+        paddingLeft:"15px",
+        width: "100%",
+        height: "100%",
+        paddingTop:"10px",
+        
+    },
+    leftheading: {
+        color: "#ffffff",
         fontSize: "30px",
         fontWeight: "700",
         letterSpacing: ".25px",
         fontWeight: "600",
         lineHeight: "1.6",
-        textAlign: "center",
 
         [theme.breakpoints[900]]: {
             fontSize: "28px",
         },
     },
-    centersubtext: {
-        color: "#5A5B5C",
+    leftsubtext: {
+        color: "#ffffff",
         fontWeight: "500",
         fontSize: "18px",
         letterSpacing: ".25px",
         lineHeight: "1.6",
         marginbottom: "20px",
-        textAlign: "center",
-
+        textAlign: "justify",
         [theme.breakpoints[900]]: {
             fontSize: "16px",
         },
-    },
-    buttoncontainer:{
-        textAlign: "center",
-        contentAlign: "center"
     },
     ctabutton: {
         alignContent: "center",
@@ -80,13 +97,15 @@ export default withStyles((theme) => ({
         letterSpacing: ".25px",
         backgroundColor: theme.colors.secondary,
         color: "#FFF",
-        display: "inline-block",
+        display: "block",
         marginTop: "30px",
         maxWidth: "300px",
         textDecoration: "none",
         padding: "12px 14px",
         borderRadius: "3px",
     },
+
+
     flexContainer: {
         padding: "0",
         margin: '0',
@@ -102,11 +121,31 @@ export default withStyles((theme) => ({
     flexItem: {
         maxWidth: "100%",
         width: "100%",
+        paddingTop: "45px",
+        padding: "40px",
 
 
         [theme.breakpoints[900]]: {
             maxWidth: "50%",
             width: "50%",
+            paddingTop: "65px",
+            paddingRight: "25px",
+            padding: "0px",
+        },
+    },
+
+    flexItem2: {
+        height: "100%",
+        width: "100%",
+        paddingTop: "48px",
+        padding: "0px",
+
+
+        [theme.breakpoints[900]]: {
+            height: "50%",
+            width: "50%",
+            paddingTop: "68px",
+            padding: "0px",
         },
     }
-}))(Section1Col);
+}))(BgSection);
