@@ -1,7 +1,8 @@
 import React from "react";
 import Helmet from "react-helmet";
 import withStyles from "elevate-ui/withStyles";
-
+import Header from "../components/Header";
+import Footer from "../components/Footer";
 import config from "../utils/siteConfig";
 import Container from "../components/Container";
 import PageTitle from "../components/PageTitle";
