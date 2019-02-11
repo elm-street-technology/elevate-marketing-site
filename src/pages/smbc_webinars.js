@@ -17,7 +17,8 @@ const days = [
   "Every Sunday",
 ];
 
-const Webinars = ({ classes, data }) => {
+const Smbc_webinars = ({ classes, data }) => {
+    console.log(data.allContentfulWebinar);
   const webinars = data.allContentfulWebinar.edges;
   const orderedWebinars = [...webinars].sort(
     (a, b) => days.indexOf(a.node.day) > days.indexOf(b.node.day)
@@ -75,8 +76,8 @@ const Webinars = ({ classes, data }) => {
 };
 
 export const query = graphql`
-  query webinarQuery {
-    allContentfulWebinar(limit: 1000,filter: {eventType: {eq: "Training"}}) {
+  query smbcWebinarQuery {
+    allContentfulWebinar(filter: {eventType: {eq: "SMBC Encore"}}) {
       edges {
         node {
           day
@@ -85,7 +86,7 @@ export const query = graphql`
           id
           registrationUrl
           time
-          title
+          title  
         }
       }
     }
@@ -178,4 +179,4 @@ export default withStyles((theme) => ({
     alignSelf: "flex-start",
     marginLeft: "4px",
   },
-}))(Webinars);
+}))(Smbc_webinars);
