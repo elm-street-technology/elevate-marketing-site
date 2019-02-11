@@ -19,10 +19,17 @@ const days = [
 
 const Smbc_webinars = ({ classes, data }) => {
     console.log(data.allContentfulWebinar);
-  const webinars = data.allContentfulWebinar.edges;
-  const orderedWebinars = [...webinars].sort(
-    (a, b) => days.indexOf(a.node.day) > days.indexOf(b.node.day)
-  );
+
+    var webinars = [];
+    var orderedWebinars = [];
+
+    if (data.allContentfulWebinar !== null) {
+        webinars = data.allContentfulWebinar.edges;
+        orderedWebinars = [...webinars].sort(
+            (a, b) => days.indexOf(a.node.day) > days.indexOf(b.node.day)
+        );
+    }
+
   return (
     <div className={classes.root}>
       <SEO />
