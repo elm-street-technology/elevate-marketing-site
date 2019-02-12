@@ -2,10 +2,12 @@ import React from "react";
 import Link from "gatsby-link";
 import withStyles from "elevate-ui/withStyles";
 import WebinarCardGrid from "../components/WebinarCardGrid";
-import WebinarCard from "../components/WebinarCard";
+import SmbcWebinarCard from "../components/SmbcWebinarCard";
 import Container from "../components/Container";
 import SEO from "../components/SEO";
 import OverlappingHexagons from "../images/overlapping-hexagons.svg";
+import YellowArrow from "../images/yellowArrow.png";
+import SMBCLogo from "../images/smbcLogo.jpg";
 
 const days = [
   "Every Monday",
@@ -35,31 +37,43 @@ const Smbc_webinars = ({ classes, data }) => {
       <SEO />
       <Container>
         <div className={classes.top}>
-          <div className={classes.heading}>Upcoming Webinars</div>
-          <Link className={classes.bootcampLink} to="/bootcamp">
-            Learn about our Social Media Bootcamp →
-          </Link>
-        </div>
-        <WebinarCardGrid className={classes.grid}>
-          {orderedWebinars.map(({ node: webinar }) => {
-            return <WebinarCard key={webinar.id} webinar={webinar} />;
-          })}
-        </WebinarCardGrid>
-        <div className={classes.pastContainer}>
-          <div className={classes.past}>Past Webinars</div>
-          <div className={classes.pastDesc}>
-            Updated upon the completion of the weekly webinars
-          </div>
-          <a
-            href={"https://tryelevate.wistia.com/projects/u8p4ih0dk6"}
-            target="_blank"
-            rel="noopener noreferrer"
-            className={classes.pastLink}
-          >
-            View Recordings
-          </a>
+                  <div style={{textAlign:"center"}}><img src={SMBCLogo} width="400" /></div>
+                  <div className={classes.heading}>
+                      
+                  REGISTER TODAY.  IT'S FREE!</div>
+                  <div className={classes.subheading}>Exclusive Social Media Boot Camp Webinar</div>
         </div>
       </Container>
+      <div style={{ backgroundColor:"#5cc3b9"}}>
+        <Container>
+            <div style={{paddingTop:"20px",textAlign:"center",fontSize:"18px",lineHeight:"2em"}}>
+                Lead by 17-year real estate technology veteran, Sean Price, we'll help you build your online business with<br/> great tips, tricks & social media marketing strategies.<br/>
+                <span style={{fontWeight:"700"}}>Space is limited, so register TODAY!</span>
+            </div>
+            <WebinarCardGrid className={classes.grid}>
+            {orderedWebinars.map(({ node: webinar }) => {
+                return <SmbcWebinarCard key={webinar.id} webinar={webinar} />;
+            })}
+            </WebinarCardGrid>
+        </Container>
+      </div>
+
+          <div style={{ backgroundColor: "#ef5c58" }}>
+          <Container>
+                  <div style={{padding:"20px",textAlign:"center"}}>
+                      <img src={YellowArrow} style={{ width:"80px"}} />
+                      <div style={{ fontSize: "24px", color:"#FFFF00", fontWeight:"700",padding:"20px"}}>WANT A SNEAK PEAK?</div>
+                  <div style={{color:"#FFFFFF"}}>Watch our promotional video to see just what
+                    the Social Media Boot Camps are all about!</div>
+                    <div style={{ textAlign: "center", paddingTop: "40px" }}>
+                      <iframe width="800" height="450" src="https://www.youtube.com/embed/emAjb5GZI88?autoplay=1&rel=0"
+                          frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                  </div>
+                </div>
+          </Container>
+      </div>
+
+
       <div className={classes.backgroundSlice}>
         <svg
           className={classes.backgroundTopSlice}
@@ -90,10 +104,11 @@ export const query = graphql`
           day
           description
           eventType
+          expires
           id
           registrationUrl
           time
-          title  
+          title 
         }
       }
     }
@@ -103,12 +118,10 @@ export const query = graphql`
 export default withStyles((theme) => ({
   root: {
     position: "relative",
-    paddingTop: "96px",
-    paddingBottom: "192px",
+    paddingTop: "30px",
+    paddingBottom: "0px",
   },
   top: {
-    display: "flex",
-    flexWrap: "wrap",
     alignItems: "center",
   },
   heading: {
@@ -116,7 +129,19 @@ export default withStyles((theme) => ({
     fontSize: "32px",
     fontWeight: "700",
     marginRight: "auto",
+    textAlign:"center",
+    paddingBottom:"20px",
+    paddingTop:"40px"
   },
+    subheading: {
+        color: "#2E2E35",
+        fontSize: "24px",
+        fontWeight: "700",
+        marginRight: "auto",
+        textAlign: "center",
+        padding:"10px",
+        paddingBottom:"30px"
+    },
   bootcampLink: {
     color: "inherit",
     textDecoration: "none",
@@ -127,8 +152,8 @@ export default withStyles((theme) => ({
     },
   },
   grid: {
-    paddingTop: "96px",
-    paddingBottom: "120px",
+    paddingTop: "50px",
+    paddingBottom: "70px",
   },
   backgroundSlice: {
     position: "absolute",
