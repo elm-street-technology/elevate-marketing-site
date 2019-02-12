@@ -50,7 +50,7 @@ const boot_camp_extras = ({ classes }) => {
 It takes about 24-hours for us to process your order.  Once processed, you will hear from our Success Team with next steps.
 <br /><br />
 Get a head-start on ‘all things Elevate’ by registering for an <a target="_blank" href="https://tryelevate.com/webinars/">upcoming training webinar</a>, <a target="_blank" href="https://elmstreettechnology.zendesk.com/hc/en-us">visiting our help center</a>,
-<br />&amp; <a target="_blank" href="https://tryelevate.com">downloading our ‘Getting Started’ guide.</a>
+<br />&amp; <a target="_blank" href="/assets/elevate_getting_started_ebook.pdf">downloading our ‘Getting Started’ guide.</a>
                 </div>
                 <div style={{ paddingTop: "30px", }}>
 
@@ -60,7 +60,7 @@ Get a head-start on ‘all things Elevate’ by registering for an <a target="_b
                 <a target="_blank" href="https://elmstreettechnology.zendesk.com/hc/en-us" className={classes.getStartedLink}>
                   Elevate Help Center
                     </a>
-                <a target="_blank" href="https://tryelevate.com" className={classes.getStartedLink}>
+                <a target="_blank" href="/assets/elevate_getting_started_ebook.pdf" className={classes.getStartedLink}>
                   Getting Started Guide
                     </a>
                 </div>
@@ -83,7 +83,7 @@ Get a head-start on ‘all things Elevate’ by registering for an <a target="_b
                 </div>
               </div>
                 <div>
-                <a target="_blank" href="https://tryelevate.com" className={classes.getStartedLink2}>
+                <a target="_blank" href="https://calendly.com/estsean/15min-1/02-12-2019" className={classes.getStartedLink2}>
                   Schedule NOW
                     </a>
                 </div>
@@ -99,7 +99,7 @@ Get a head-start on ‘all things Elevate’ by registering for an <a target="_b
                 Want a repeat of your Boot Camp education session?  Dial into one of our upcoming one-hour webinars for another round of tips, tricks &amp; strategies to rock your marketing.
 
                 </div>
-                <a target="_blank" href="https://tryelevate.com" className={classes.getStartedLink}>
+                <a target="_blank" href="/smbc_webinars/" className={classes.getStartedLink}>
                   Register TODAY
                     </a>
               </div>
@@ -126,7 +126,7 @@ Get a head-start on ‘all things Elevate’ by registering for an <a target="_b
         <div className={classes.top}>
           <div className={classes.column} style={{ textAlign: "center", paddingBottom: "35px" }}>
           <div style={{ textAlign: "center",paddingBottom:"20px" }}>
-          <img src={Emails} width="300" />
+          <img src={Emails} style={{ width:"100%", maxWidth:"400px"}}/>
         </div>
             
           <div className={classes.heading2} style={{color:"#ffffff"}}>6 Emails Every Real Estate<br />
@@ -135,14 +135,14 @@ Get a head-start on ‘all things Elevate’ by registering for an <a target="_b
                 Easy to implement, proven to deliver emails designed
                 to nurture past, present &amp; future clients.
                 </div>
-                <a target="_blank" href="https://elmstreettechnology.zendesk.com/hc/en-us" className={classes.getStartedLink2}>
+                <a target="_blank" href="/assets/6emails_elevate.pdf" className={classes.getStartedLink2}>
                   Download PDF
                     </a>
 
             </div>
           <div className={classes.column} style={{ textAlign: "center", paddingBottom: "35px" }}>
           <div style={{ textAlign: "center",paddingBottom:"20px" }}>
-          <img src={Dose} width="300" />
+          <img src={Dose} style={{ width:"100%", maxWidth:"400px"}}/>
         </div>
           <div className={classes.heading2} style={{color:"#ffffff"}}>Daily Dose of<br />
          Marketing Awesomeness</div>
