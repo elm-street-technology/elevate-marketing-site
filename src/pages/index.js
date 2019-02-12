@@ -44,62 +44,13 @@ import Footer from "../components/Footer";
 class Index extends Component {
   render() {
     const { classes } = this.props;
-    const roles = {
-      Agents: {
-        name: "Agents",
-        tagline: "Increase your day-to-day productivity",
-        description:
-          "Lead the pack with an unparalleled marketing strategy & toolset that helps you build your online brand & close more business…all while giving you extra time every day for the things that matter most.",
-        icon: "Person",
-        color: "#F15953",
-        borderColor: "rgba(241, 89, 83, .4)",
-        grid: [
-          "<p>I need help with my <strong>marketing: website, social, email</strong></p>",
-          "<p>I want to <strong>engage with & close more leads, faster</strong></p>",
-          "<p>I want to <strong>provide great content</strong> to my audience</p>",
-        ],
-        page: "/agents",
-      },
-      Teams: {
-        name: "Teams",
-        tagline: "Excel at agent adoption & retention",
-        description:
-          "Arm yourself and your agents with easy-to-access, revenue-driving data that helps support smarter business decisions.",
-        icon: "People",
-        color: "#55C3BA",
-        borderColor: "rgba(85, 195, 186, .4)",
-        grid: [
-          "<p>We want to <strong>streamline lead routing</strong> & internal communication</p>",
-          "<p>We want to better understand what <strong>drives our revenue</strong></p>",
-          "<p>We want to save time & money on <strong>recruiting and retention</strong></p>",
-        ],
-        page: "/teams",
-      },
-      Brokerages: {
-        name: "Brokers",
-        tagline: "Streamline all aspects of your business",
-        description:
-          "Take the guess work out of your daily business operations, agent productivity and brand presence with ONE solution that is easy-to-implement and includes fanatical ongoing training & support.",
-        icon: "GroupAdd",
-        color: "#FFC629",
-        borderColor: "rgba(255, 198, 41, .4)",
-        grid: [
-          "<p>I want <strong>at-a-glance insight</strong> into what’s happening across my brokerage</p>",
-          "<p>I want assistance <strong>recruiting & retaining</strong> agents</p>",
-          "<p>I want to streamline lead routing & <strong>internal management processes</strong></p>",
-        ],
-        page: "/brokers",
-      },
-    };
-
-
-
+    
 
     return (
       <div className={classNames(classes.root)}>
         <Header />
         <SEO />
-        <HomePageHero roles={roles} isAlternate={true} />
+        <HomePageHero isAlternate={true} />
 
         
 

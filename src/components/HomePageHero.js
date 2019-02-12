@@ -17,7 +17,10 @@ const HomePageHero = ({
   return (
     <div className={classNames(classes.root)}>
 
-<div style={{ backgroundImage: "url(" + heroImage1200 + ")", height:"100%", }}>
+      <div style={{ backgroundImage: "url(" + heroImage1200 + ")", height: "100%", backgroundRepeat: "no-repeat",
+          backgroundSize: "cover",
+          backgroundPositionY: "top",
+          backgroundPositionX: "center"}}>
             <div className={classes.overlay}>
             
             <div className={classes.heroContent}>
@@ -193,11 +196,13 @@ centersubtext: {
 
 overlay: {
   backgroundColor: "rgba(54, 54, 54, 0.5)",
-  padding: "55px",
+  paddingLeft: "35px",
+  paddingRight: "35px",
+  paddingTop: "135px",
   height:"100%",
 
   [theme.breakpoints[900]]: {
-      padding: "125px",
+      padding: "225px",
   },
 },
 image:{
