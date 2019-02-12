@@ -47,36 +47,28 @@ const Smbc_webinars = ({ classes, data }) => {
                       
                   REGISTER TODAY.  IT'S FREE!</div>
                   <div className={classes.subheading}>Exclusive Social Media Boot Camp Webinar</div>
+          <div style={{ textAlign: "center", paddingTop: "40px", paddingBottom: "40px"}}>
+            <iframe width="800" height="450" src="https://www.youtube.com/embed/emAjb5GZI88?autoplay=1&rel=0"
+              frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+          </div>
         </div>
       </Container>
       <div style={{ backgroundColor:"#5cc3b9"}}>
         <Container>
-            <div style={{paddingTop:"20px",textAlign:"center",fontSize:"18px",lineHeight:"2em"}}>
-                Lead by 17-year real estate technology veteran, Sean Price, we'll help you build your online business with<br/> great tips, tricks & social media marketing strategies.<br/>
-                <span style={{fontWeight:"700"}}>Space is limited, so register TODAY!</span>
-            </div>
+            
             <WebinarCardGrid className={classes.grid}>
             {orderedWebinars.map(({ node: webinar }) => {
                 return <SmbcWebinarCard key={webinar.id} webinar={webinar} />;
             })}
             </WebinarCardGrid>
+          <div style={{ paddingBottom:"30px",textAlign: "center", fontSize: "18px", lineHeight: "2em" }}>
+            Lead by 17-year real estate technology veteran, Sean Price, we'll help you build your online business with<br /> great tips, tricks & social media marketing strategies.<br />
+            <span style={{ fontWeight: "700" }}>Space is limited, so register TODAY!</span>
+          </div>
         </Container>
       </div>
 
-          <div style={{ backgroundColor: "#ef5c58" }}>
-          <Container>
-                  <div style={{padding:"20px",textAlign:"center"}}>
-                      <img src={YellowArrow} style={{ width:"80px"}} />
-                      <div style={{ fontSize: "24px", color:"#FFFF00", fontWeight:"700",padding:"20px"}}>WANT A SNEAK PEAK?</div>
-                  <div style={{color:"#FFFFFF"}}>Watch our promotional video to see just what
-                    the Social Media Boot Camps are all about! </div>
-                    <div style={{ textAlign: "center", paddingTop: "40px" }}>
-                      <iframe width="800" height="450" src="https://www.youtube.com/embed/emAjb5GZI88?autoplay=1&rel=0"
-                          frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-                  </div>
-                </div>
-          </Container>
-      </div>
+          
 
 
       <div className={classes.backgroundSlice}>
@@ -162,7 +154,7 @@ export default withStyles((theme) => ({
   },
   grid: {
     paddingTop: "50px",
-    paddingBottom: "70px",
+    paddingBottom: "40px",
   },
   backgroundSlice: {
     position: "absolute",
