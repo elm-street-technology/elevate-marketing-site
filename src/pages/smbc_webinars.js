@@ -64,7 +64,7 @@ const Smbc_webinars = ({ classes, data }) => {
                       <img src={YellowArrow} style={{ width:"80px"}} />
                       <div style={{ fontSize: "24px", color:"#FFFF00", fontWeight:"700",padding:"20px"}}>WANT A SNEAK PEAK?</div>
                   <div style={{color:"#FFFFFF"}}>Watch our promotional video to see just what
-                    the Social Media Boot Camps are all about!</div>
+                    the Social Media Boot Camps are all about! </div>
                     <div style={{ textAlign: "center", paddingTop: "40px" }}>
                       <iframe width="800" height="450" src="https://www.youtube.com/embed/emAjb5GZI88?autoplay=1&rel=0"
                           frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
