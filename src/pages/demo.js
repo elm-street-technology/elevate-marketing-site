@@ -29,14 +29,25 @@ const Demo = ({ classes }) => {
       </PageTitleImage>
 
       <div style={{ margin: "45px", }}>
-        <Section2Col secTitle="Section Header" secLink="/upgrade" secButton="Upgrade Button Text" secImage={TestImage}>
+        <Section2Col secTitle="Section Header" secImage={TestImage}>
           Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+          <Link to="/upgrade" className={classes.ctabutton}>
+          Upgrade Button Text2
+                    </Link>
+                    <Link to="/upgrade" className={classes.ctabutton}>
+          Upgrade Button Text3
+                    </Link>
         </Section2Col>
       </div>
     
       <div style={{ margin: "45px", }}>
-        <Section1Col secTitle="Center Heder" secLink="/upgrade" secButton="Click Me">
+        <Section1Col secTitle="Center Header">
           Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+        
+          <Link to="/upgrade" className={classes.ctabutton}>
+          Upgrade Button Text3
+                    </Link>
+
         </Section1Col>
       </div>
 
@@ -70,7 +81,23 @@ export default withStyles((theme) => ({
         paddingTop: "48px",
     },
   },
- 
+  ctabutton: {
+    alignContent: "center",
+    justifyContent: "center",
+    fontSize: "16px",
+    textAlign: "center",
+    fontWeight: "500",
+    minWidth: "300px",
+    letterSpacing: ".25px",
+    backgroundColor: theme.colors.secondary,
+    color: "#FFF",
+    display: "block",
+    marginTop: "30px",
+    maxWidth: "300px",
+    textDecoration: "none",
+    padding: "12px 14px",
+    borderRadius: "3px",
+},
 
 
 

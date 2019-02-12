@@ -23,9 +23,7 @@ const Section2Col = ({
                     <h1 className={classes.leftheading}>{secTitle}</h1>
                     <p className={classes.leftsubtext}>
                     {children}</p>
-                    <Link to={secLink} className={classes.ctabutton}>
-                        {secButton}
-                    </Link>
+
                 </div>
                 <div className={classes.flexItem}>
 
@@ -79,28 +77,12 @@ export default withStyles((theme) => ({
         letterSpacing: ".25px",
         lineHeight: "1.6",
         marginbottom: "20px",
-        textAlign: "justify",
+        textAlign: "left",
         [theme.breakpoints[900]]: {
             fontSize: "16px",
         },
     },
-    ctabutton: {
-        alignContent: "center",
-        justifyContent: "center",
-        fontSize: "16px",
-        textAlign: "center",
-        fontWeight: "500",
-        minWidth: "300px",
-        letterSpacing: ".25px",
-        backgroundColor: theme.colors.secondary,
-        color: "#FFF",
-        display: "block",
-        marginTop: "30px",
-        maxWidth: "300px",
-        textDecoration: "none",
-        padding: "12px 14px",
-        borderRadius: "3px",
-    },
+    
     flexContainer: {
         padding: "0",
         margin: '0',

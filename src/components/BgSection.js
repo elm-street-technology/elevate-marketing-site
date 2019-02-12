@@ -22,7 +22,7 @@ const BgSection = ({
             
                 <Container>
                 <div className={classes.flexContainer}>
-                <div className={classes.flexItem}>
+                <div className={classes.flexItem} style={{paddingLeft:"20px", paddingRight:"20px", paddingTop:"45px"}}>
                     <h1 className={classes.leftheading}>{secTitle}</h1>
                     <p className={classes.leftsubtext}>
                     {children}</p>
@@ -80,7 +80,7 @@ export default withStyles((theme) => ({
         letterSpacing: ".25px",
         lineHeight: "1.6",
         marginbottom: "20px",
-        textAlign: "justify",
+        textAlign: "left",
         [theme.breakpoints[900]]: {
             fontSize: "16px",
         },

@@ -4,26 +4,37 @@ import withStyles from "elevate-ui/withStyles";
 import Link from "gatsby-link";
 import Container from "./Container";
 
-const Section1Col = ({
+const Section2ColReverse = ({
   children,
   classes,
   className,
+  secImage,
   secTitle,
   secLink,
   secButton,
 }) => {
+    console.log(secImage);
   return (
       
     <div className={classNames(classes.root, className)}>
-          <Container>
-            <div>
-                <h1 className={classes.centerheading}>{secTitle}</h1>
-                <p className={classes.centersubtext}>
-                {children}
-                </p>
-            </div>
-          </Container>
+        <Container>
+            <div className={classes.flexContainer}>
+                <div className={classes.flexItem}>
 
+                    {secImage && (
+                        <img src={secImage} className={classes.image} alt={secTitle} />
+                    )}
+
+                </div>
+                <div className={classes.flexItem}>
+
+                        <h1 className={classes.leftheading}>{secTitle}</h1>
+                            <p className={classes.leftsubtext}>
+                            {children}</p>
+                    
+                </div>
+            </div>
+        </Container>
     </div>
   );
 };
@@ -32,56 +43,48 @@ export default withStyles((theme) => ({
     root: {
         display: "flex",
         flexDirection: "column",
-        minHeight: "250px",
+        minHeight: "200px",
         overflow: "hidden",
+
+        [theme.breakpoints[900]]: {
+            minHeight: "400px",
+        },
     },
-    centerheading: {
+    image:{
+        padding:"15px",
+        width: "100%",
+        height: "100%",
+
+        [theme.breakpoints[900]]: {
+            padding: "45px",
+
+        },  
+    },
+    leftheading: {
         color: "#4bbbb1",
         fontSize: "30px",
         fontWeight: "700",
         letterSpacing: ".25px",
         fontWeight: "600",
         lineHeight: "1.6",
-        textAlign: "center",
 
         [theme.breakpoints[900]]: {
             fontSize: "28px",
         },
     },
-    centersubtext: {
+    leftsubtext: {
         color: "#5A5B5C",
         fontWeight: "500",
         fontSize: "18px",
         letterSpacing: ".25px",
         lineHeight: "1.6",
         marginbottom: "20px",
-        textAlign: "center",
-
+        textAlign: "left",
         [theme.breakpoints[900]]: {
             fontSize: "16px",
         },
     },
-    buttoncontainer:{
-        textAlign: "center",
-        contentAlign: "center"
-    },
-    ctabutton: {
-        alignContent: "center",
-        justifyContent: "center",
-        fontSize: "16px",
-        textAlign: "center",
-        fontWeight: "500",
-        minWidth: "300px",
-        letterSpacing: ".25px",
-        backgroundColor: theme.colors.secondary,
-        color: "#FFF",
-        display: "inline-block",
-        marginTop: "30px",
-        maxWidth: "300px",
-        textDecoration: "none",
-        padding: "12px 14px",
-        borderRadius: "3px",
-    },
+    
     flexContainer: {
         padding: "0",
         margin: '0',
@@ -97,11 +100,15 @@ export default withStyles((theme) => ({
     flexItem: {
         maxWidth: "100%",
         width: "100%",
+        paddingRight: "0px",
+        paddingBottom: "25px",
 
 
         [theme.breakpoints[900]]: {
             maxWidth: "50%",
             width: "50%",
+            paddingRight: "20px",
+            paddingBottom: "0px",
         },
     }
-}))(Section1Col);
+}))(Section2ColReverse);
