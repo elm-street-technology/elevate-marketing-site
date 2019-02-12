@@ -28,8 +28,13 @@ const Smbc_webinars = ({ classes, data }) => {
     if (data.allContentfulWebinar !== null) {
         webinars = data.allContentfulWebinar.edges;
         orderedWebinars = [...webinars].sort(
-            (a, b) => days.indexOf(a.node.day) > days.indexOf(b.node.day)
+            (a, b) => {
+            //var d1 = new Date(a.node.expires);
+            //var d2 = new Date(b.node.expires);
+            //return d1.getTime() - d2.getTime();
+            }
         );
+        console.log(orderedWebinars);
     }
 
   return (
@@ -98,7 +103,11 @@ const Smbc_webinars = ({ classes, data }) => {
 
 export const query = graphql`
   query smbcWebinarQuery {
-    allContentfulWebinar(filter: {eventType: {eq: "SMBC Encore"}}) {
+    allContentfulWebinar(
+        limit:2
+        filter: {eventType: {eq: "SMBC Encore"}}
+        sort: { fields: [expires], order: ASC }
+        ) {
       edges {
         node {
           day
