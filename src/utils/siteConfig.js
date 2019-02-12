@@ -1,11 +1,11 @@
 module.exports = {
   siteTitle:
-    "Elevate | Elm Street Technology - Real Estate Web Design - Social Media Marketing for Real Estate Agents - Responsive Real Estate Websites - IDX Integration",
+    "Elevate | Elm Street Technology - Lead generation, nurturing & follow-up - Social Media Marketing for Real Estate Agents - Responsive Real Estate Websites - IDX Integration",
   siteTitleAlt:
-    "Try Elevate | Real Estate Web Design - Social Media Marketing for Real Estate Agents - Responsive Real Estate Websites - IDX Integration", // This allows an alternative site title for SEO schema.
+    "Try Elevate | Lead generation, nurturing & follow-up - Social Media Marketing for Real Estate Agents - Responsive Real Estate Websites - IDX Integration", // This allows an alternative site title for SEO schema.
   publisher: "Elm Street Technology", // Organization name used for SEO schema
   siteDescription:
-    "Real Estate Web Design - Social Media Marketing for Real Estate Agents - Responsive Real Estate Websites - IDX Integration",
+    "Lead generation, nurturing & follow-up - Social Media Marketing for Real Estate Agents - Responsive Real Estate Websites - IDX Integration",
   siteUrl: "https://www.tryelevate.com", // Site domain. Do not include a trailing slash! If you wish to use a path prefix you can read more about that here: https://www.gatsbyjs.org/docs/path-prefix/
   author: "Elm Street Technology", // Author for RSS author segment and SEO schema
   authorUrl: "https://www.tryelevate.com/about", // URL used for author and publisher schema, can be a social profile or other personal site

@@ -76,11 +76,12 @@ const Webinars = ({ classes, data }) => {
 
 export const query = graphql`
   query webinarQuery {
-    allContentfulWebinar(limit: 1000) {
+    allContentfulWebinar(limit: 1000,filter: {eventType: {eq: "Training"}}) {
       edges {
         node {
           day
           description
+          eventType
           id
           registrationUrl
           time

@@ -35,6 +35,7 @@
     "gatsby-source-filesystem": "^1.5.39",
     "gatsby-transformer-remark": "^1.7.44",
     "lodash": "^4.17.10",
+    "moment-timezone": "0.5.23",
     "no-scroll": "^2.1.1",
     "path": "^0.12.7",
     "prismjs": "^1.15.0",
