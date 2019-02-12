@@ -236,7 +236,7 @@ class Index extends Component {
 
 
         <Container>
-                <div style={{textAlign:"center", paddingTop:"45px", paddingBottom:"10px",}}>
+                <div style={{textAlign:"center", paddingTop:"45px", paddingBottom:"50px",}}>
 
                    
                 <div className={classes.centerheading}>The power of <span style={{ fontWeight: "bold" }}>SUCCESS</span></div>
@@ -250,38 +250,9 @@ class Index extends Component {
 
 
 
-        <CallToAction className={classes.callToAction} />
-        <div className={classes.testimonialContainer}>
-          <div className={classes.testHeading}>
-            <h1>What Our Customers Are Saying</h1>
-          </div>
-          <TestimonialCardGrid>
-            <TestimonialCard
-              avatar=""
-              name="Prince Jones"
-              title="MBA-ISM / Realtor®"
-              testimonial="<p>Social media is a big deal in real estate, and the Elevate Productivity Platform and coaching team has <strong>saved me valuable time and money</strong>, while helping me stand out from the 4,000 other real estate agents in my local area.</p>"
-            />
-            <TestimonialCard
-              avatar=""
-              name="The Sohaei Team"
-              title="Team"
-              testimonial="<p>The <strong>service and professionalism</strong> of the entire Elevate team is well above any experience we’ve had in the industry.  They are the perfect blend of <strong>cutting-edge technology</strong> mixed with <strong>stellar customer support and coaching.</strong></p>"
-            />
-            <TestimonialCard
-              avatar=""
-              name="Bob Cross"
-              title="Broker"
-              testimonial="<p>Impressive results from the start. Not only have I been able to <strong>increase website traffic and capture more leads</strong> with my new website, Elevate has helped increase my entire online social presence.  I’m a client for life!</p>"
-            />
-            <TestimonialCard
-              avatar=""
-              name="Sherlock Fenderson"
-              title="Realtor®"
-              testimonial="<p>I’ve been a successful Realtor® for more than 12-years and Elevate is my <strong>go-to productivity platform</strong> for everything lead management and web presence.  It’s a <strong>vital tool that I use daily</strong> to <strong>drive my business growth</strong>.  I highly recommend Elevate for anyone looking to grow their business.</p>"
-            />
-          </TestimonialCardGrid>
-        </div>
+        
+        
+        
         <CTASecondary />
         <Footer />
       </div>
