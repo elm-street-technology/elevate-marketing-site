@@ -42,7 +42,7 @@ const Smbc_webinars = ({ classes, data }) => {
       <SEO />
       <Container>
         <div className={classes.top}>
-                  <div style={{textAlign:"center"}}><img src={SMBCLogo} width="400" /></div>
+                  
                   <div className={classes.heading}>
                       
                   REGISTER TODAY.  IT'S FREE!</div>
