@@ -1,7 +1,8 @@
 import React from "react";
 import Helmet from "react-helmet";
 import withStyles from "elevate-ui/withStyles";
-
+import Header from "../components/Header";
+import Footer from "../components/Footer";
 import config from "../utils/siteConfig";
 import Container from "../components/Container";
 import CallToAction from "../components/CallToAction";
@@ -27,12 +28,13 @@ const Product = ({ classes, data: { contentfulProduct } }) => {
   // const postNode = contentfulProduct;
 
   return (
-    <div className={classes.root}>
+    <div>
+      <Header />
       <Helmet>
         <title>{`${title} - ${config.siteTitle}`}</title>
       </Helmet>
       {/* <SEO pagePath={slug} postNode={postNode} pageSEO /> */}
-      <div>
+      <div className={classes.root}>
         <ProductHero
           className={classes.hero}
           heroImage={heroImage}
@@ -66,6 +68,7 @@ const Product = ({ classes, data: { contentfulProduct } }) => {
         ) : null}
       </div>
       <CTASecondary />
+      <Footer />
     </div>
   );
 };

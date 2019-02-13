@@ -1,6 +1,7 @@
 import React from "react";
 import withStyles from "elevate-ui/withStyles";
-
+import Header from "../components/Header";
+import Footer from "../components/Footer";
 import Container from "../components/Container";
 import SEO from "../components/SEO";
 import CircuitBoard from "../images/circuit-board.svg";
@@ -20,6 +21,7 @@ const Markets = ({ classes, data }) => {
         backgroundRepeat: "repeat",
       }}
     >
+      <Header />
       <SEO />
       <Container>
         <div className={classes.container}>
@@ -75,6 +77,7 @@ const Markets = ({ classes, data }) => {
           </div>
         </div>
       </Container>
+      <Footer />
     </div>
   );
 };

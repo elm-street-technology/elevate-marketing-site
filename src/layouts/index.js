@@ -2,8 +2,7 @@ import React from "react";
 import Helmet from "react-helmet";
 import ThemeProvider from "elevate-ui/ThemeProvider";
 import config from "../utils/siteConfig";
-import Header from "../components/Header";
-import Footer from "../components/Footer";
+
 import favicon from "../images/favicon.png";
 import withStyles from "elevate-ui/withStyles";
 
@@ -29,9 +28,9 @@ const Template = ({ children, classes }) => {
 
       <ThemeProvider>
         <div className={classes.root}>
-          <Header />
+          
           <div className={classes.children}>{children()}</div>
-          <Footer />
+          
         </div>
       </ThemeProvider>
     </div>

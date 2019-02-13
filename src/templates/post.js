@@ -2,7 +2,8 @@ import React from "react";
 import find from "lodash/find";
 import Helmet from "react-helmet";
 import withStyles from "elevate-ui/withStyles";
-
+import Header from "../components/Header";
+import Footer from "../components/Footer";
 import config from "../utils/siteConfig";
 import Hero from "../components/Hero";
 import Container from "../components/Container";
@@ -27,6 +28,7 @@ const PostTemplate = ({
 
   return (
     <div className={classes.root}>
+      <Header />
       <Helmet>
         <title>{`${title} - ${config.siteTitle}`}</title>
       </Helmet>
@@ -39,6 +41,7 @@ const PostTemplate = ({
         <PostSocialLinks className={classes.social} post={contentfulPost} />
         <PostPagination previous={postIndex.previous} next={postIndex.next} />
       </Container>
+      <Footer />
     </div>
   );
 };

@@ -8,6 +8,8 @@ import Container from "../components/Container";
 import SEO from "../components/SEO";
 import Hexagons from "../images/hexagons.svg";
 import Search from "elevate-ui-icons/Search";
+import Header from "../components/Header";
+import Footer from "../components/Footer";
 
 class Events extends Component {
   constructor(props) {
@@ -69,6 +71,7 @@ class Events extends Component {
     const { activeEvents, filteredEvents, filteredInputValue } = this.state;
     return (
       <div className={classes.root}>
+        <Header />
         <SEO />
         <Container>
           <div style={{ textAlign: "center" }}>
@@ -138,6 +141,7 @@ class Events extends Component {
             <polygon fill="white" points="0,100 100,0 100,100" />
           </svg>
         </div>
+        <Footer />
       </div>
     );
   }

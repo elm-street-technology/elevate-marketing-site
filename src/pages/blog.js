@@ -1,11 +1,13 @@
 import React, { Component } from "react";
 import withStyles from "elevate-ui/withStyles";
-
+import Header from "../components/Header";
+import Footer from "../components/Footer";
 import BlogCardGrid from "../components/BlogCardGrid";
 import BlogCard from "../components/BlogCard";
 import Container from "../components/Container";
 import PageTitle from "../components/PageTitle";
 import SEO from "../components/SEO";
+
 
 class Blog extends Component {
   constructor(props) {
@@ -28,6 +30,7 @@ class Blog extends Component {
     const posts = data.allContentfulPost.edges;
     return (
       <div className={classes.root}>
+        <Header />
         <SEO />
         <Container>
           <PageTitle className={classes.title}>The Elevate Blog</PageTitle>
@@ -52,6 +55,7 @@ class Blog extends Component {
             ) : null}
           </div>
         </Container>
+        <Footer />
       </div>
     );
   }

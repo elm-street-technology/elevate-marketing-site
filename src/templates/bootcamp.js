@@ -10,6 +10,8 @@ import BootcampTopics from "../components/BootcampTopics";
 import BootcampInstructors from "../components/BootcampInstructors";
 import SMBCLogo from "../images/smbcLogo.jpg";
 // import SEO from '../components/SEO'
+import Header from "../components/Header";
+import Footer from "../components/Footer";
 
 const Bootcamp = ({ classes, data: { contentfulBootcamp } }) => {
   const {
@@ -25,6 +27,7 @@ const Bootcamp = ({ classes, data: { contentfulBootcamp } }) => {
 
   return (
     <div className={classes.root}>
+      <Header />
       <Helmet>
         <title>{`${heroText &&
           heroText.childMarkdownRemark &&
@@ -60,6 +63,7 @@ const Bootcamp = ({ classes, data: { contentfulBootcamp } }) => {
           instructors={instructors}
         />
       </Container>
+      <Footer />
     </div>
   );
 };
