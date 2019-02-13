@@ -10,6 +10,33 @@ const Footer = ({ classes }) => (
   <div className={classes.root}>
     
       <Container>
+
+      <div className={classes.flexContainer}>
+          <div className={classes.flexItem3}>
+                    <Link to="/get-started" className={classes.ctabutton}>
+                    Take a Tour
+                    </Link>
+          </div>
+          <div className={classes.flexItem3}>
+                    <Link to="/get-started" className={classes.ctabutton}>
+                    Schedule a Demo
+                    </Link>
+          </div>
+          <div className={classes.flexItem3}>
+                    <Link to="/get-started" className={classes.ctabutton}>
+                    Login
+                    </Link>
+          </div>
+          <div className={classes.flexItem3} style={{alignContent:"center", marginTop:"20px"}}>
+          <div style={{alignContent:"center", }}>
+                    <span style={{color:"#bdc0c2", lineHeight:"24px", alignContent:"center"}}>Talk to an Elevate Coach today</span><br />
+                    <span style={{color:"#ffffff", fontSize:"28px", fontWeight: "bold", letterSpacing:"1px"}}>888.378.3868</span>
+              </div>      
+          </div>
+      </div>
+          
+          
+
         <div className={classes.flexContainer}>
           <div className={classes.flexItem}>
           <div className={classNames(classes.logo)}>
@@ -191,17 +218,7 @@ const Footer = ({ classes }) => (
                     <Link to="/get-started" className={classes.footercta}>Privacy Policy</Link>
                     <Link to="/get-started" className={classes.footercta}>DMCA Notice</Link>
                   </div>
-                  <div className={classes.centerMobile}>
-                    <Link to="/get-started" className={classes.ctabutton}>
-                    Take a Tour
-                    </Link>
-                    <Link to="/get-started" className={classes.ctabutton}>
-                    Schedule a Demo
-                    </Link>
-                    <Link to="/get-started" className={classes.ctabutton}>
-                    Login
-                    </Link>
-                  </div>
+                 
                 </div>
               </div>
       </Container>
@@ -219,7 +236,7 @@ export default withStyles((theme) => ({
     justifyContent: "center",
     width: "100%",
     backgroundColor: "#4c4e50",
-    padding: "48px 16px",
+    padding: "40px 16px",
 
     [theme.breakpoints[900]]: {
       padding: "64px 24px",
@@ -259,8 +276,8 @@ export default withStyles((theme) => ({
   flexContainer: {
     padding: "0",
     margin: '0',
-    paddingTop: "45px",
-    padding: "40px",
+    paddingTop: "25px",
+    padding: "20px",
     display: "-webkit-box",
     display: "-moz-box",
     display: "-ms-flexbox",
@@ -278,6 +295,17 @@ flexItem: {
     [theme.breakpoints[900]]: {
       width: "30%",
     },
+},
+
+flexItem3: {
+  alignContent: "center",
+  width: "100%",
+  
+
+
+  [theme.breakpoints[900]]: {
+    width: "25%",
+  },
 },
 
 flexItem2: {
@@ -337,7 +365,8 @@ footercta: {
   fontWeight: "500",
   letterSpacing: ".25px",
   color: "#bdc0c2",
-  marginTop: "30px",
+  marginTop: "20px",
+  marginLeft:"0px",
   display: "block",
   margin: "5px",
   textDecoration: "none",

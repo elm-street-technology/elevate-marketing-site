@@ -166,7 +166,7 @@ class Index extends Component {
         <div>
         <Section1Col secTitle="Online Webinars">
         Can’t make one of our in-person Boot Camps? No worries!<br />
-        Join one of our weekly webinars where we cram as much of our great education<br />
+        Join one of our upcoming webinars where we cram as much of our great education<br />
         into a one-hour deep dive.  Business suit NOT required!
         
           <div style={{ textAlign: "center", }}>
@@ -204,7 +204,7 @@ class Index extends Component {
         
         
         
-        <CTASecondary />
+        
         <Footer />
       </div>
     );
