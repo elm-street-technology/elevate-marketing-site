@@ -27,7 +27,7 @@ const Footer = ({ classes }) => (
                     Login
                     </Link>
           </div>
-          <div className={classes.flexItem3} style={{alignContent:"center", marginTop:"20px"}}>
+        <div className={classes.flexItem3} style={{ alignContent: "center", marginTop: "20px", textAlign: "center"}}>
           <div style={{alignContent:"center", }}>
                     <span style={{color:"#bdc0c2", lineHeight:"24px", alignContent:"center"}}>Talk to an Elevate Coach today</span><br />
                     <span style={{color:"#ffffff", fontSize:"28px", fontWeight: "bold", letterSpacing:"1px"}}>888.378.3868</span>

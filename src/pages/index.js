@@ -3,6 +3,7 @@ import withStyles from "elevate-ui/withStyles";
 import classNames from "classnames";
 import SEO from "../components/SEO";
 import HomePageHero from "../components/HomePageHero";
+import HomePageHeroVid from "../components/HomePageHeroVid";
 import CallToAction from "../components/CallToAction";
 import CTASecondary from "../components/CTASecondary";
 import TestimonialCard from "../components/TestimonialCard";
@@ -50,7 +51,7 @@ class Index extends Component {
       <div className={classNames(classes.root)}>
         <Header />
         <SEO />
-        <HomePageHero isAlternate={true} />
+        <HomePageHeroVid isAlternate={true} />
 
         
 
