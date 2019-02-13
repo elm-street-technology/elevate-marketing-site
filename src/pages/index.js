@@ -204,7 +204,7 @@ class Index extends Component {
         
         
         
-        <CTASecondary />
+        
         <Footer />
       </div>
     );
