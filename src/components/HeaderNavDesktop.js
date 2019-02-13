@@ -32,7 +32,7 @@ const HeaderNavDesktop = ({ classes, className }) => {
               <li className={classes.listItem}>Email Marketing</li>
             </Link>
             <Link className={classes.listItemLink} to="/brokers">
-              <li className={classes.listItem}>Lead Genration</li>
+              <li className={classes.listItem}>Lead Generation</li>
             </Link>
             <Link className={classes.listItemLink} to="/brokers">
               <li className={classes.listItem}>CRM</li>
