@@ -243,7 +243,7 @@ export default withStyles((theme) => ({
     },
 
     [theme.breakpoints[1200]]: {
-      padding: "96px 64px",
+      padding: "56px 54px",
     },
   },
 
