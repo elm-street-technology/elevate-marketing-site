@@ -28,8 +28,7 @@ const Footer = ({ classes }) => (
             <a
               className={classes.link}
               href={"https://www.elmstreettechnology.com/"}
-            
-            >
+                  >
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 180 24">
                 <defs>
                   <linearGradient
