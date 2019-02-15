@@ -19,6 +19,21 @@ const Upgrade = ({ classes }) => {
       <SEO />
       <Container>
         <div className={classes.top}>
+
+          <div style={{
+            padding: "10px",
+            backgroundColor: "#51c4bba6",
+          marginBottom: "30px",lineHeight:"2em"}}>
+            <div style={{fontWeight:"700",width:"100%",textAlign:"center",fontSize:"24px"}}>IMPORTANT</div>
+            <div style={{ textAlign: "center"}}>The ‘old’ Listingbook login is no longer active for the following MLS markets:<br/>
+              <span style={{fontWeight:"700"}}>TAR, BAREIS, MRED, SANDICOR, CARETS, Wilmington, SABOR, JSMLS, ARMLS, MARISMO, MIREAL, SWFLAMLS, NEFMLS, SEFLAMLS</span></div>
+            <div style={{ textAlign: "center" }}>
+              Please follow instruction provided via email and/or your morning report,  <a target="_blank" href="https://elmstreettechnology.zendesk.com/hc/en-us/articles/360019751351-Live-Training-Webinars-for-Former-Listingbook-Agents"
+                >register for an upcoming training webinar</a>, <br/>
+              or <a href="" onClick={(e) => { e.preventDefault(); if (window.zE) window.zE.activate() }}>chat with an Elevate Success Coach now</a>.</div>
+          </div>
+
+
           <div className={classes.centerHeading}>
             <div className={classes.heading}>Everything you need to know…</div>
             <div className={classes.bold}>about upgrading from Listingbook to Elevate</div>
@@ -108,7 +123,7 @@ const Upgrade = ({ classes }) => {
             <div className={classes.infoboxGray}>
               <div style={{textAlign:"center"}}>
                 <div className={classes.heading}>Have Questions Now?</div>
-                <a href="" className={classes.getStartedLink} onClick={() => { if (window.zE) window.zE.activate() }}>
+                <a href="" className={classes.getStartedLink} onClick={(e) => { e.preventDefault(); if (window.zE) window.zE.activate() }}>
                   <Chat color="#FFFFFF" size={28} className={classes.iconPosition} style={{top:"10px"}}/> Chat with Success Coach
                 </a>
               </div>
