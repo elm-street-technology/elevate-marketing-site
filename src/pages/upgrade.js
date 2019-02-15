@@ -21,8 +21,8 @@ const Upgrade = ({ classes }) => {
         <div className={classes.top}>
 
           <div style={{
-            padding: "10px",
-            backgroundColor: "#51c4bba6",
+            padding: "20px",
+            backgroundColor: "rgba(242, 86, 77, 0.28);",
           marginBottom: "30px",lineHeight:"2em"}}>
             <div style={{fontWeight:"700",width:"100%",textAlign:"center",fontSize:"24px"}}>IMPORTANT</div>
             <div style={{ textAlign: "center"}}>The ‘old’ Listingbook login is no longer active for the following MLS markets:<br/>
