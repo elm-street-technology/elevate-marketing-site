@@ -19,6 +19,23 @@ const Upgrade = ({ classes }) => {
       <SEO />
       <Container>
         <div className={classes.top}>
+
+          <div style={{
+            padding: "20px",
+            backgroundColor: "#f159535e",
+          marginBottom: "30px",lineHeight:"2em"}}>
+            <div style={{fontWeight:"700",width:"100%",textAlign:"center",fontSize:"24px",paddingBottom:"10px"}}>IMPORTANT</div>
+            <div style={{ textAlign: "center" }}>The following MLSes have been upgraded to Elevate and will no longer be able to log in at Listingbook.com:<br/>
+              <span style={{ fontWeight: "700" }}>ARMLS, BAREIS, CARETS, FMLS, JSMLS, MARISMO, MIREAL, MRED, NEFMLS, SABOR, SDAR, SEFLAMLS, SWFLAMLS, TAR, Wilmington</span></div>
+            <div style={{ textAlign: "center" }}>
+              Please follow instructions to log in to your new Elevate account provided via email and/or your new Elevate morning report. <br/>
+              <a href="https://elmstreettechnology.zendesk.com/hc/en-us/articles/360018375372-Listingbook-to-Elevate-FAQs#help-login" target="_blank">
+              Click here</a> for more info on logging in to Elevate, 
+              or <a href="" onClick={(e) => { e.preventDefault(); if (window.zE) window.zE.activate() }}>chat with an Elevate Success Coach now</a>.
+              </div>
+          </div>
+
+
           <div className={classes.centerHeading}>
             <div className={classes.heading}>Everything you need to know…</div>
             <div className={classes.bold}>about upgrading from Listingbook to Elevate</div>
@@ -108,7 +125,7 @@ const Upgrade = ({ classes }) => {
             <div className={classes.infoboxGray}>
               <div style={{textAlign:"center"}}>
                 <div className={classes.heading}>Have Questions Now?</div>
-                <a href="" className={classes.getStartedLink} onClick={() => { if (window.zE) window.zE.activate() }}>
+                <a href="" className={classes.getStartedLink} onClick={(e) => { e.preventDefault(); if (window.zE) window.zE.activate() }}>
                   <Chat color="#FFFFFF" size={28} className={classes.iconPosition} style={{top:"10px"}}/> Chat with Success Coach
                 </a>
               </div>
