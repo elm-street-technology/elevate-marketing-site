@@ -26,7 +26,8 @@ const Upgrade = ({ classes }) => {
           marginBottom: "30px",lineHeight:"2em"}}>
             <div style={{fontWeight:"700",width:"100%",textAlign:"center",fontSize:"24px",paddingBottom:"10px"}}>IMPORTANT</div>
             <div style={{ textAlign: "center" }}>The following MLSes have been upgraded to Elevate and will no longer be able to log in at Listingbook.com:<br/>
-              <span style={{ fontWeight: "700" }}>ARMLS, BAREIS, CARETS, FMLS, JSMLS, MARISMO, MIREAL, MRED, NEFMLS, SABOR, SDAR, SEFLAMLS, SWFLAMLS, TAR, Wilmington</span></div>
+              <span style={{ fontWeight: "700" }}>ARMLS, BAREIS, CARETS, FMLS, JSMLS, MARISMO, MIREAL, MRED, NEFMLS, SABOR, SDAR, SEFLAMLS, SWFLAMLS, TAR, Wilmington, 
+              MRIS, Orlando, LIBOR, CRMLS, HGAR</span></div>
             <div style={{ textAlign: "center" }}>
               Please follow instructions to log in to your new Elevate account provided via email and/or your new Elevate morning report. <br/>
               <a href="https://elmstreettechnology.zendesk.com/hc/en-us/articles/360018375372-Listingbook-to-Elevate-FAQs#help-login" target="_blank">
