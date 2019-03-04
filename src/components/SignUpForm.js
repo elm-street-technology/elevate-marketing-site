@@ -67,6 +67,8 @@ class SignUpForm extends Component {
             role: "",
             roleOther: "",
             interests: [],
+            form: "contact_form",
+            list: 46483,
           }}
           validationSchema={() =>
             Yup.object().shape({
@@ -88,7 +90,7 @@ class SignUpForm extends Component {
               roleOther: values.role === "Other" ? values.roleOther : "", // Just in case the user had typed in roleOther then changed their role to something else
             };
             return fetch(
-              "https://relegate.herokuapp.com/marketing/request-a-demo",
+              "https://easyemerge.com/plugins/elevate_form.php",
               {
                 method: "POST",
                 headers: {
