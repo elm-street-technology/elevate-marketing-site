@@ -13,7 +13,7 @@ exports.onRouteUpdate = ({ location, prevLocation }) => {
 
     var new_element = document.createElement('SCRIPT');
     new_element.id = 'LFTracking';
-    new_element.src = 'https://api.leadfollow.io/v1/tag/sifitag/e458aec0-1e87-0137-e105-06a9ed4ca31b';
+    new_element.src = 'https://api-leadfollow.herokuapp.com/v1/tag/sifitag/bb35c8f0-1904-0137-5992-067f653fa718';
     if (document.body != null) { 
         document.body.appendChild(new_element); 
     }
