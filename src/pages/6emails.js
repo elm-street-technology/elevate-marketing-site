@@ -9,13 +9,13 @@ import LandingHeader from "../images/6emails_landing_header.jpg";
 
 const SixEmails = ({ children, classes, data, tags }) => {
   const postNode = {
-    title: `Get Started - ${config.siteTitle}`,
+    title: `6 Emails Every Real Estate Agent Should Be Sending (Free Download) - ${config.siteTitle}`,
   };
 
   return (
     <div className={classes.root}>
       <Helmet>
-        <title>{`Get Started - ${config.siteTitle}`}</title>
+              <title>{`6 Emails Every Real Estate Agent Should Be Sending (Free Download) - ${config.siteTitle}`}</title>
       </Helmet>
       <SEO postNode={postNode} pagePath="contact" customTitle />
 
