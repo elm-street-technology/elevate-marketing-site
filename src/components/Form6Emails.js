@@ -31,18 +31,18 @@ class Form6Emails extends Component {
           }}
         >
           <Alert color="success">
+                                  
+                      
             <Typography type="heading3" gutterBottom>
-              We’re here to help!
+              Thank you! Click on the link below to download a free copy of "6 Emails Every Real Estate Agent Should Be Sending" now.
             </Typography>
             <Typography type="heading6" gutterBottom>
-              An Elevate Success Coach will reach out to you asap to start you
-              on the path to pure productivity.
+              Download Now
             </Typography>
             <Typography type="heading4" gutterTop>
-              Can’t wait? Talk NOW at{" "}
-              <a href="tel:18883783868" className={classes.link}>
-                888.378.3868
-              </a>
+              One of our Marketing Success Coaches will be contacting you to see how we can help you take your marketing to the next level! 
+                If you'd like to speak with someone now, feel free to call us directly at 
+              <a href="tel:18449720260" className={classes.link}>844.972.0260</a>.
             </Typography>
           </Alert>
         </div>
@@ -68,7 +68,6 @@ class Form6Emails extends Component {
             roleOther: "",
             interests: [],
             form: "contact_form",
-            list: 46483,
           }}
           validationSchema={() =>
             Yup.object().shape({
@@ -218,7 +217,6 @@ export default withStyles((theme) => ({
     flexDirection: "column",
     width: "100%",
     maxWidth: "500px",
-    backgroundColor: "#FFF !important",
     margin: "0 auto",
   },
   link: {

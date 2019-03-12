@@ -20,12 +20,15 @@ const SixEmails = ({ children, classes, data, tags }) => {
       <SEO postNode={postNode} pagePath="contact" customTitle />
 
       <Container>
-        <div className={classes.landingHeaderStyle}>
-            <img src={LandingHeader} />
+        <div >
+                  <div style={{ width: "900px", backgroundColor: "#d0d5d7", paddingBottom: "40px",marginBottom:"40px", marginRight:"auto",marginLeft:"auto"}}>
+                <div className={classes.landingHeaderStyle}>
+                    <img src={LandingHeader} />
+                </div>
+
+                <Form6Emails />
+            </div>
         </div>
-
-        <Form6Emails />
-
       </Container>
     </div>
   );
