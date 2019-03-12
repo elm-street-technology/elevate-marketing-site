@@ -21,12 +21,13 @@ const SixEmails = ({ children, classes, data, tags }) => {
 
       <Container>
         <div >
-                  <div style={{ width: "900px", backgroundColor: "#d0d5d7", paddingBottom: "40px",marginBottom:"40px", marginRight:"auto",marginLeft:"auto"}}>
+            <div style={{ maxWidth: "900px", backgroundColor: "#d0d5d7", paddingBottom: "40px",marginBottom:"40px", marginRight:"auto",marginLeft:"auto"}}>
                 <div className={classes.landingHeaderStyle}>
-                    <img src={LandingHeader} />
+                    <img src={LandingHeader} style={{width:"100%"}} />
                 </div>
-
-                <Form6Emails />
+                <div style={{ paddingLeft: "10px", paddingRight: "10px"}}>
+                    <Form6Emails />
+                </div>
             </div>
         </div>
       </Container>
