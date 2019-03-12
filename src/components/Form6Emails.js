@@ -25,26 +25,25 @@ class Form6Emails extends Component {
       return (
         <div
           style={{
-            maxWidth: "400px",
+            maxWidth: "600px",
             textAlign: "center",
             margin: "24px auto",
           }}
         >
-          <Alert color="success">
+          <div >
                                   
                       
             <Typography type="heading3" gutterBottom>
               Thank you! Click on the link below to download a free copy of "6 Emails Every Real Estate Agent Should Be Sending" now.
             </Typography>
-            <Typography type="heading6" gutterBottom>
-              Download Now
+            <Typography type="heading6" gutterBottom style={{marginTop:"40px",marginBottom:"40px"}}>
+                      <a target="_blank" href="/assets/6emails_elevate.pdf" className={classes.signUpBtn}>Download Now</a>
             </Typography>
-            <Typography type="heading4" gutterTop>
+            <Typography type="heading5" gutterTop>
               One of our Marketing Success Coaches will be contacting you to see how we can help you take your marketing to the next level! 
-                If you'd like to speak with someone now, feel free to call us directly at 
-              <a href="tel:18449720260" className={classes.link}>844.972.0260</a>.
+                If you'd like to speak with someone now, feel free to call us directly at <a href="tel:18449720260" className={classes.link}>844.972.0260</a>.
             </Typography>
-          </Alert>
+          </div>
         </div>
       );
     } else if (formState === "error") {
@@ -66,8 +65,7 @@ class Form6Emails extends Component {
             phone: "",
             role: "",
             roleOther: "",
-            interests: [],
-            form: "contact_form",
+            form: "6emails_form",
           }}
           validationSchema={() =>
             Yup.object().shape({
@@ -80,7 +78,6 @@ class Form6Emails extends Component {
               phone: Yup.string().required("Phone is required"),
               role: Yup.string(),
               roleOther: Yup.string(),
-              interests: Yup.array(),
             })
           }
           onSubmit={(values, { setSubmitting }) => {
@@ -246,6 +243,8 @@ export default withStyles((theme) => ({
     backgroundColor: theme.colors.secondary,
     borderRadius: "6px",
     padding: "12px",
-    margin: "14px 0",
+    margin: "30px",
+    textDecoration: "none",
+
   },
 }))(Form6Emails);
