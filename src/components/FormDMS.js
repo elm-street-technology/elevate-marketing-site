@@ -9,7 +9,7 @@ import RadioGroup from "elevate-ui/RadioGroup";
 import Typography from "elevate-ui/Typography";
 import withStyles from "elevate-ui/withStyles";
 
-class SignUpForm extends Component {
+class FormDMS extends Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -25,26 +25,22 @@ class SignUpForm extends Component {
       return (
         <div
           style={{
-            maxWidth: "400px",
+            maxWidth: "600px",
             textAlign: "center",
             margin: "24px auto",
           }}
         >
-          <Alert color="success">
+          <div >
+                                  
+                      
             <Typography type="heading3" gutterBottom>
-              We’re here to help!
+              Got it!
             </Typography>
-            <Typography type="heading6" gutterBottom>
-              An Elevate Success Coach will reach out to you asap to start you
-              on the path to pure productivity.
+            <Typography type="heading5" gutterTop>
+        We’ll reach out to you asap via email or telephone.<br/>
+You can also speak to a member of our lead generation team immediately by calling <a href="tel:18449720260" className={classes.link}>844.972.0260</a>.
             </Typography>
-            <Typography type="heading4" gutterTop>
-              Can’t wait? Talk NOW at{" "}
-              <a href="tel:18883783868" className={classes.link}>
-                888.378.3868
-              </a>
-            </Typography>
-          </Alert>
+          </div>
         </div>
       );
     } else if (formState === "error") {
@@ -69,11 +65,8 @@ class SignUpForm extends Component {
             company: "",
             email: "",
             phone: "",
-            role: "",
-            roleOther: "",
-            interests: [],
-            form: "contact_form",
-            list: 46483,
+            mls_number: "",
+            form: "dms_form",
           }}
           validationSchema={() =>
             Yup.object().shape({
@@ -84,9 +77,7 @@ class SignUpForm extends Component {
                 .email("Invalid email address")
                 .required("Email is required"),
               phone: Yup.string().required("Phone is required"),
-              role: Yup.string(),
-              roleOther: Yup.string(),
-              interests: Yup.array(),
+              mls_number: Yup.string()
             })
           }
           onSubmit={(values, { setSubmitting }) => {
@@ -131,16 +122,6 @@ class SignUpForm extends Component {
           }}
           render={({ values, isSubmitting }) => (
             <Form noValidate>
-              <Typography
-                type="heading6"
-                style={{ textAlign: "center", marginBottom: "32px" }}
-              >
-                Talk NOW at{" "}
-                <a href="tel:18057197394" className={classes.link}>
-                  805.719.7394
-                </a>{" "}
-                or schedule a demo:
-              </Typography>
               <div className={classes.topRow}>
                 <Field
                   id="firstname"
@@ -179,73 +160,19 @@ class SignUpForm extends Component {
                 component={Input}
                 className={classes.field}
               />
-              <Field
-                id="role"
-                name="role"
-                label="I am a(n)"
-                component={RadioGroup}
-                display="inline"
-                items={[
-                  {
-                    label: "Agent",
-                    value: "Agent",
-                  },
-                  {
-                    label: "Team",
-                    value: "Team",
-                  },
-                  {
-                    label: "Broker",
-                    value: "Broker",
-                  },
-                  {
-                    label: "Other (please specify)*",
-                    value: "Other",
-                  },
-                ]}
-                className={classes.field}
-              />
-              {values.role === "Other" && (
-                <Field
-                  id="roleOther"
-                  name="roleOther"
-                  label="Other"
-                  component={Input}
-                  className={classes.field}
-                  autoFocus
-                />
-              )}
-              <Field
-                id="interests"
-                name="interests"
-                label="I am interested in:  (select all that apply)"
-                component={CheckboxGroup}
-                items={[
-                  {
-                    label: "Managing my leads from start to close",
-                    value: "Managing my leads from start to close",
-                  },
-                  {
-                    label: "Capturing more leads through online marketing",
-                    value: "Capturing more leads through online marketing",
-                  },
-                  {
-                    label: "Consolidating my technology into ONE location",
-                    value: "Consolidating my technology into ONE location",
-                  },
-                  {
-                    label: "Closing more deals through smart insights",
-                    value: "Closing more deals through smart insights",
-                  },
-                ]}
-                className={classes.field}
-              />
+                  <Field
+                      id="mls_number"
+                      name="mls_number"
+                      label="MLS #"
+                      component={Input}
+                      className={classes.field}
+                  />
               <button
                 type="submit"
                 className={classes.signUpBtn}
                 disabled={isSubmitting}
               >
-                Please contact me
+                Tell Me More
               </button>
             </Form>
           )}
@@ -261,7 +188,6 @@ export default withStyles((theme) => ({
     flexDirection: "column",
     width: "100%",
     maxWidth: "500px",
-    backgroundColor: "#FFF !important",
     margin: "0 auto",
   },
   link: {
@@ -291,6 +217,9 @@ export default withStyles((theme) => ({
     backgroundColor: theme.colors.secondary,
     borderRadius: "6px",
     padding: "12px",
-    margin: "14px 0",
+    marginTop: "30px",
+    marginBottom: "30px",
+    textDecoration: "none",
+
   },
-}))(SignUpForm);
+}))(FormDMS);

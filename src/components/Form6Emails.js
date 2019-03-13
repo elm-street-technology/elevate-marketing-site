@@ -9,7 +9,7 @@ import RadioGroup from "elevate-ui/RadioGroup";
 import Typography from "elevate-ui/Typography";
 import withStyles from "elevate-ui/withStyles";
 
-class SignUpForm extends Component {
+class Form6Emails extends Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -25,26 +25,25 @@ class SignUpForm extends Component {
       return (
         <div
           style={{
-            maxWidth: "400px",
+            maxWidth: "600px",
             textAlign: "center",
             margin: "24px auto",
           }}
         >
-          <Alert color="success">
+          <div >
+                                  
+                      
             <Typography type="heading3" gutterBottom>
-              We’re here to help!
+              Thank you! Click on the link below to download a free copy of "6 Emails Every Real Estate Agent Should Be Sending" now.
             </Typography>
-            <Typography type="heading6" gutterBottom>
-              An Elevate Success Coach will reach out to you asap to start you
-              on the path to pure productivity.
+            <Typography type="heading6" gutterBottom style={{marginTop:"40px",marginBottom:"40px"}}>
+                      <a target="_blank" href="/assets/6emails_elevate.pdf" className={classes.signUpBtn}>Download Now</a>
             </Typography>
-            <Typography type="heading4" gutterTop>
-              Can’t wait? Talk NOW at{" "}
-              <a href="tel:18883783868" className={classes.link}>
-                888.378.3868
-              </a>
+            <Typography type="heading5" gutterTop>
+              One of our Marketing Success Coaches will be contacting you to see how we can help you take your marketing to the next level! 
+                If you'd like to speak with someone now, feel free to call us directly at <a href="tel:18449720260" className={classes.link}>844.972.0260</a>.
             </Typography>
-          </Alert>
+          </div>
         </div>
       );
     } else if (formState === "error") {
@@ -71,9 +70,7 @@ class SignUpForm extends Component {
             phone: "",
             role: "",
             roleOther: "",
-            interests: [],
-            form: "contact_form",
-            list: 46483,
+            form: "6emails_form",
           }}
           validationSchema={() =>
             Yup.object().shape({
@@ -86,7 +83,6 @@ class SignUpForm extends Component {
               phone: Yup.string().required("Phone is required"),
               role: Yup.string(),
               roleOther: Yup.string(),
-              interests: Yup.array(),
             })
           }
           onSubmit={(values, { setSubmitting }) => {
@@ -131,16 +127,6 @@ class SignUpForm extends Component {
           }}
           render={({ values, isSubmitting }) => (
             <Form noValidate>
-              <Typography
-                type="heading6"
-                style={{ textAlign: "center", marginBottom: "32px" }}
-              >
-                Talk NOW at{" "}
-                <a href="tel:18057197394" className={classes.link}>
-                  805.719.7394
-                </a>{" "}
-                or schedule a demo:
-              </Typography>
               <div className={classes.topRow}>
                 <Field
                   id="firstname"
@@ -215,37 +201,12 @@ class SignUpForm extends Component {
                   autoFocus
                 />
               )}
-              <Field
-                id="interests"
-                name="interests"
-                label="I am interested in:  (select all that apply)"
-                component={CheckboxGroup}
-                items={[
-                  {
-                    label: "Managing my leads from start to close",
-                    value: "Managing my leads from start to close",
-                  },
-                  {
-                    label: "Capturing more leads through online marketing",
-                    value: "Capturing more leads through online marketing",
-                  },
-                  {
-                    label: "Consolidating my technology into ONE location",
-                    value: "Consolidating my technology into ONE location",
-                  },
-                  {
-                    label: "Closing more deals through smart insights",
-                    value: "Closing more deals through smart insights",
-                  },
-                ]}
-                className={classes.field}
-              />
               <button
                 type="submit"
                 className={classes.signUpBtn}
                 disabled={isSubmitting}
               >
-                Please contact me
+                Download
               </button>
             </Form>
           )}
@@ -261,7 +222,6 @@ export default withStyles((theme) => ({
     flexDirection: "column",
     width: "100%",
     maxWidth: "500px",
-    backgroundColor: "#FFF !important",
     margin: "0 auto",
   },
   link: {
@@ -291,6 +251,9 @@ export default withStyles((theme) => ({
     backgroundColor: theme.colors.secondary,
     borderRadius: "6px",
     padding: "12px",
-    margin: "14px 0",
+    marginTop: "30px",
+    marginBottom: "30px",
+    textDecoration: "none",
+
   },
-}))(SignUpForm);
+}))(Form6Emails);
