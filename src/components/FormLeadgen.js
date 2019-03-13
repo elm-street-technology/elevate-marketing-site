@@ -9,7 +9,7 @@ import RadioGroup from "elevate-ui/RadioGroup";
 import Typography from "elevate-ui/Typography";
 import withStyles from "elevate-ui/withStyles";
 
-class Form6Emails extends Component {
+class FormLeadgen extends Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -34,14 +34,11 @@ class Form6Emails extends Component {
                                   
                       
             <Typography type="heading3" gutterBottom>
-              Thank you! Click on the link below to download a free copy of "6 Emails Every Real Estate Agent Should Be Sending" now.
-            </Typography>
-            <Typography type="heading6" gutterBottom style={{marginTop:"40px",marginBottom:"40px"}}>
-                      <a target="_blank" href="/assets/6emails_elevate.pdf" className={classes.signUpBtn}>Download Now</a>
+              Got it!
             </Typography>
             <Typography type="heading5" gutterTop>
-              One of our Marketing Success Coaches will be contacting you to see how we can help you take your marketing to the next level! 
-                If you'd like to speak with someone now, feel free to call us directly at <a href="tel:18449720260" className={classes.link}>844.972.0260</a>.
+        We’ll reach out to you asap via email or telephone.<br/>
+You can also speak to a member of our lead generation team immediately by calling <a href="tel:18449720260" className={classes.link}>844.972.0260</a>.
             </Typography>
           </div>
         </div>
@@ -63,9 +60,10 @@ class Form6Emails extends Component {
             company: "",
             email: "",
             phone: "",
-            role: "",
-            roleOther: "",
-            form: "6emails_form",
+            market1: "",
+            market2: "",
+            market3: "",
+            form: "leadgen_form",
                     utm_campaign: window.utm_tags.campaign,
                     utm_source: window.utm_tags.source,
                     utm_medium: window.utm_tags.medium,
@@ -80,14 +78,13 @@ class Form6Emails extends Component {
                 .email("Invalid email address")
                 .required("Email is required"),
               phone: Yup.string().required("Phone is required"),
-              role: Yup.string(),
-              roleOther: Yup.string(),
+              mls_number: Yup.string()
             })
           }
           onSubmit={(values, { setSubmitting }) => {
             const body = {
               ...values,
-              roleOther: values.role === "Other" ? values.roleOther : "", // Just in case the user had typed in roleOther then changed their role to something else
+              markets: "Interested Markets: "+values.market1 + "," + values.market2 + "," + values.market3, // Just in case the user had typed in roleOther then changed their role to something else
             };
             return fetch(
               "https://easyemerge.com/plugins/elevate_form.php",
@@ -160,48 +157,34 @@ class Form6Emails extends Component {
                 component={Input}
                 className={classes.field}
               />
-              <Field
-                id="role"
-                name="role"
-                label="I am a(n)"
-                component={RadioGroup}
-                display="inline"
-                items={[
-                  {
-                    label: "Agent",
-                    value: "Agent",
-                  },
-                  {
-                    label: "Team",
-                    value: "Team",
-                  },
-                  {
-                    label: "Broker",
-                    value: "Broker",
-                  },
-                  {
-                    label: "Other (please specify)*",
-                    value: "Other",
-                  },
-                ]}
-                className={classes.field}
-              />
-              {values.role === "Other" && (
-                <Field
-                  id="roleOther"
-                  name="roleOther"
-                  label="Other"
-                  component={Input}
-                  className={classes.field}
-                  autoFocus
-                />
-              )}
+                  <div style={{width:"100%",textAlign:"center"}}>What are your top 3 markets of interest?</div>
+                  <Field
+                      id="market1"
+                      name="market1"
+                      label="City/State"
+                      component={Input}
+                      className={classes.field}
+                  />
+                  <Field
+                      id="market2"
+                      name="market2"
+                      label="City/State"
+                      component={Input}
+                      className={classes.field}
+                  />
+                  <Field
+                      id="market3"
+                      name="market3"
+                      label="City/State"
+                      component={Input}
+                      className={classes.field}
+                  />
               <button
                 type="submit"
                 className={classes.signUpBtn}
                 disabled={isSubmitting}
               >
-                Download
+                Check Availability
               </button>
             </Form>
           )}
@@ -251,4 +234,4 @@ export default withStyles((theme) => ({
     textDecoration: "none",
 
   },
-}))(Form6Emails);
+}))(FormLeadgen);
