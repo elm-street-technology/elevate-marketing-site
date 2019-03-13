@@ -67,10 +67,7 @@ You can also speak to a member of our lead generation team immediately by callin
             market2: "",
             market3: "",
             form: "leadgen_form",
-            utm_campaign: (window.utm_tags) ? window.utm_tags.campaign:"",
-            utm_source: (window.utm_tags) ? window.utm_tags.source:"",
-            utm_medium: (window.utm_tags) ? window.utm_tags.medium:"",
-            utm_term: (window.utm_tags) ? window.utm_tags.term:""
+            
           }}
           validationSchema={() =>
             Yup.object().shape({
@@ -87,7 +84,11 @@ You can also speak to a member of our lead generation team immediately by callin
           onSubmit={(values, { setSubmitting }) => {
             const body = {
               ...values,
-              markets: "Interested Markets: "+values.market1 + "," + values.market2 + "," + values.market3, // Just in case the user had typed in roleOther then changed their role to something else
+              markets: "Interested Markets: "+values.market1 + "," + values.market2 + "," + values.market3,
+              utm_campaign: (window.utm_tags) ? window.utm_tags.campaign : "",
+              utm_source: (window.utm_tags) ? window.utm_tags.source : "",
+              utm_medium: (window.utm_tags) ? window.utm_tags.medium : "",
+              utm_term: (window.utm_tags) ? window.utm_tags.term : ""
             };
             return fetch(
               "https://easyemerge.com/plugins/elevate_form.php",
