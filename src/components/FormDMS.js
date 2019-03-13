@@ -67,10 +67,6 @@ You can also speak to a member of our lead generation team immediately by callin
             phone: "",
             mls_number: "",
             form: "dms_form",
-            utm_campaign: window.utm_tags.campaign,
-            utm_source: window.utm_tags.source,
-            utm_medium: window.utm_tags.medium,
-            utm_term: window.utm_tags.term
           }}
           validationSchema={() =>
             Yup.object().shape({
@@ -88,6 +84,10 @@ You can also speak to a member of our lead generation team immediately by callin
             const body = {
               ...values,
               roleOther: values.role === "Other" ? values.roleOther : "", // Just in case the user had typed in roleOther then changed their role to something else
+              utm_campaign: (window.utm_tags) ? window.utm_tags.campaign : "",
+              utm_source: (window.utm_tags) ? window.utm_tags.source : "",
+              utm_medium: (window.utm_tags) ? window.utm_tags.medium : "",
+              utm_term: (window.utm_tags) ? window.utm_tags.term : ""
             };
             return fetch(
               "https://easyemerge.com/plugins/elevate_form.php",

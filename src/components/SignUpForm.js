@@ -74,10 +74,6 @@ class SignUpForm extends Component {
             interests: [],
             form: "contact_form",
             list: 46483,
-            utm_campaign: window.utm_tags.campaign,
-            utm_source: window.utm_tags.source,
-            utm_medium: window.utm_tags.medium,
-            utm_term: window.utm_tags.term
           }}
           validationSchema={() =>
             Yup.object().shape({
@@ -97,6 +93,10 @@ class SignUpForm extends Component {
             const body = {
               ...values,
               roleOther: values.role === "Other" ? values.roleOther : "", // Just in case the user had typed in roleOther then changed their role to something else
+              utm_campaign: (window.utm_tags) ? window.utm_tags.campaign : "",
+              utm_source: (window.utm_tags) ? window.utm_tags.source : "",
+              utm_medium: (window.utm_tags) ? window.utm_tags.medium : "",
+              utm_term: (window.utm_tags) ? window.utm_tags.term : ""
             };
             return fetch(
               "https://easyemerge.com/plugins/elevate_form.php",
