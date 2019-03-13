@@ -69,10 +69,10 @@ class SignUpForm extends Component {
             interests: [],
             form: "contact_form",
             list: 46483,
-            utm_campaign: window.utm_tags.campaign,
-            utm_source: window.utm_tags.source,
-            utm_medium: window.utm_tags.medium,
-            utm_term: window.utm_tags.term
+            utm_campaign: window ? window.utm_tags.campaign : "",
+            utm_source: window ? window.utm_tags.source : "",
+            utm_medium: window ? window.utm_tags.medium : "",
+            utm_term: window ? window.utm_tags.term : ""
           }}
           validationSchema={() =>
             Yup.object().shape({

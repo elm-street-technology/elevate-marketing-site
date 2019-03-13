@@ -1,18 +1,20 @@
 "use strict";
 
 // Capturing and storing UTM tags for form use
-window.utm_tags = {};
-if(getParameter('utm_campaign') != ''){
-    window.utm_tags.campaign = getParameter('utm_campaign')
-}
-if (getParameter('utm_source') != '') {
-    window.utm_tags.source = getParameter('utm_source')
-}
-if (getParameter('utm_medium') != '') {
-    window.utm_tags.medium = getParameter('utm_medium')
-}
-if (getParameter('utm_term') != '') {
-    window.utm_tags.term = getParameter('utm_term')
+if(window){
+    window.utm_tags = {};
+    if(getParameter('utm_campaign') != ''){
+        window.utm_tags.campaign = getParameter('utm_campaign')
+    }
+    if (getParameter('utm_source') != '') {
+        window.utm_tags.source = getParameter('utm_source')
+    }
+    if (getParameter('utm_medium') != '') {
+        window.utm_tags.medium = getParameter('utm_medium')
+    }
+    if (getParameter('utm_term') != '') {
+        window.utm_tags.term = getParameter('utm_term')
+    }
 }
 
 exports.onRouteUpdate = ({ location, prevLocation }) => {
