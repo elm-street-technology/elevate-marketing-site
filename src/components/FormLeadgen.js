@@ -84,7 +84,7 @@ You can also speak to a member of our lead generation team immediately by callin
           onSubmit={(values, { setSubmitting }) => {
             const body = {
               ...values,
-              markets: "Interested Markets: "+values.market1 + "," + values.market2 + "," + values.market3,
+              notes: (values.demorequest == true) ? "Requested demo, Interested Markets: " + values.market1 + "," + values.market2 + "," + values.market3 : "Interested Markets: "+values.market1 + "," + values.market2 + "," + values.market3,
               utm_campaign: (window.utm_tags) ? window.utm_tags.campaign : "",
               utm_source: (window.utm_tags) ? window.utm_tags.source : "",
               utm_medium: (window.utm_tags) ? window.utm_tags.medium : "",
@@ -123,6 +123,12 @@ You can also speak to a member of our lead generation team immediately by callin
           }}
           render={({ values, isSubmitting }) => (
             <Form noValidate>
+              <div style={{ marginBottom: "30px" }}>
+                <div className={classes.headingLarge}>Limited Availability</div>
+                <div className={classes.headingSmall}>Exclusive Buyer/Seller Leads in Markets Across the U.S.</div>
+                <div className={classes.headingText} style={{ marginTop: "10px" }}>First Come. First Served.</div>
+              </div>
+              <div style={{ maxWidth: "500px", marginLeft: "auto", marginRight: "auto" }}>
               <div className={classes.topRow}>
                 <Field
                   id="firstname"
@@ -157,11 +163,11 @@ You can also speak to a member of our lead generation team immediately by callin
               <Field
                 id="company"
                 name="company"
-                label="Affiliation"
+                label="Affiliation (optional)"
                 component={Input}
                 className={classes.field}
               />
-                  <div style={{width:"100%",textAlign:"center"}}>What are your top 3 markets of interest?</div>
+                  <div style={{width:"100%",textAlign:"center"}}>What are your top 3 markets of interest? (optional)</div>
                   <Field
                       id="market1"
                       name="market1"
@@ -183,6 +189,14 @@ You can also speak to a member of our lead generation team immediately by callin
                       component={Input}
                       className={classes.field}
                   />
+                  Schedule an Elevate Demo:
+                <Field
+                  id="demorequest"
+                  name="demorequest"
+                  type="checkbox"
+                  value="yes"
+                  className={classes.checkfield}
+                />
               <button
                 type="submit"
                 className={classes.signUpBtn}
@@ -190,6 +204,7 @@ You can also speak to a member of our lead generation team immediately by callin
               >
                 Check Availability
               </button>
+              </div>
             </Form>
           )}
         />
@@ -203,8 +218,9 @@ export default withStyles((theme) => ({
     display: "flex",
     flexDirection: "column",
     width: "100%",
-    maxWidth: "500px",
+    maxWidth: "700px",
     margin: "0 auto",
+    textAlign: "center"
   },
   link: {
     color: "inherit",
@@ -237,5 +253,29 @@ export default withStyles((theme) => ({
     marginBottom: "30px",
     textDecoration: "none",
 
+  },
+  headingSmall: {
+    fontSize: "20px",
+    textTransform: "uppercase",
+    fontWeight: "600",
+    color: "#55c3ba",
+    textAlign: "center",
+    padding: "3px"
+  },
+  headingLarge: {
+    fontSize: "40px",
+    textTransform: "uppercase",
+    fontWeight: "700",
+    color: "#55c3ba",
+    textAlign: "center",
+    padding: "3px"
+  },
+  headingText: {
+    fontSize:"20px",
+    fontWeight:"700",
+    color: "#777777",
+    textAlign: "center",
+    padding: "3px",
+    lineHeight: "1.4em"
   },
 }))(FormLeadgen);

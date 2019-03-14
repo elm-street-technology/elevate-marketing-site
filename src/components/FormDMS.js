@@ -38,7 +38,7 @@ class FormDMS extends Component {
             </Typography>
             <Typography type="heading5" gutterTop>
         We’ll reach out to you asap via email or telephone.<br/>
-You can also speak to a member of our lead generation team immediately by calling <a href="tel:18449720260" className={classes.link}>844.972.0260</a>.
+You can also speak to a member of our team immediately by calling <a href="tel:18449720260" className={classes.link}>844.972.0260</a>.
             </Typography>
           </div>
         </div>
@@ -82,7 +82,8 @@ You can also speak to a member of our lead generation team immediately by callin
               utm_campaign: (window.utm_tags) ? window.utm_tags.campaign : "",
               utm_source: (window.utm_tags) ? window.utm_tags.source : "",
               utm_medium: (window.utm_tags) ? window.utm_tags.medium : "",
-              utm_term: (window.utm_tags) ? window.utm_tags.term : ""
+              utm_term: (window.utm_tags) ? window.utm_tags.term : "",
+              notes: (values.demorequest == true) ? "Requested demo" : ""
             };
             return fetch(
               "https://easyemerge.com/plugins/elevate_form.php",
@@ -117,6 +118,15 @@ You can also speak to a member of our lead generation team immediately by callin
           }}
           render={({ values, isSubmitting }) => (
             <Form noValidate>
+              <div style={{marginBottom:"30px"}}>
+                <div className={classes.headingSmall}>Looking for</div>
+                <div className={classes.headingLarge}>One Single Source</div>
+                <div className={classes.headingSmall}>For all of your digital marketing needs?</div>
+                <div className={classes.headingText} style={{marginTop:"20px"}}>Email Marketing.  Social Media Marketing.  IDX Websites.  Lead Generation.  Lead Scrubbing.<br/>
+Let us show you how we make your marketing super easy...<br/>
+and super successful:</div>
+                </div>
+              <div style={{ maxWidth: "500px",marginLeft:"auto",marginRight:"auto"}}>
               <div className={classes.topRow}>
                 <Field
                   id="firstname"
@@ -151,17 +161,25 @@ You can also speak to a member of our lead generation team immediately by callin
               <Field
                 id="company"
                 name="company"
-                label="Affiliation"
+                label="Affiliation (optional)"
                 component={Input}
                 className={classes.field}
               />
                   <Field
                       id="mls_number"
                       name="mls_number"
-                      label="MLS #"
+                      label="MLS # (optional)"
                       component={Input}
                       className={classes.field}
                   />
+                Schedule an Elevate Demo:
+              <Field
+                  id="demorequest"
+                  name="demorequest"
+                  type="checkbox"
+                  value="yes"
+                  className={classes.checkfield}
+                />
               <button
                 type="submit"
                 className={classes.signUpBtn}
@@ -169,6 +187,7 @@ You can also speak to a member of our lead generation team immediately by callin
               >
                 Tell Me More
               </button>
+              </div>
             </Form>
           )}
         />
@@ -182,8 +201,9 @@ export default withStyles((theme) => ({
     display: "flex",
     flexDirection: "column",
     width: "100%",
-    maxWidth: "500px",
+    maxWidth: "700px",
     margin: "0 auto",
+    textAlign: "center"
   },
   link: {
     color: "inherit",
@@ -202,6 +222,35 @@ export default withStyles((theme) => ({
     "& > * + *": {
       marginLeft: "12px",
     },
+  },
+  headingSmall:{
+    fontSize:"20px",
+    textTransform:"uppercase",
+    fontWeight:"600",
+    color:"#777777",
+    textAlign:"center",
+    padding:"3px"
+  },
+  headingLarge:{
+    fontSize: "40px",
+    textTransform: "uppercase",
+    fontWeight: "700",
+    color: "#55c3ba",
+    textAlign:"center",
+    padding:"3px"
+  },
+  headingText:{
+    color: "#777777",
+    textAlign: "center",
+    padding: "3px",
+    lineHeight: "1.4em"
+  },
+  checkfield: {
+    width: "20px",
+    height: "20px",
+    position: "relative",
+    top: "4px",
+    marginLeft: "10px"
   },
   signUpBtn: {
     width: "100%",

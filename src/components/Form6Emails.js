@@ -85,7 +85,8 @@ class Form6Emails extends Component {
               utm_campaign: (window.utm_tags) ? window.utm_tags.campaign : "",
               utm_source: (window.utm_tags) ? window.utm_tags.source : "",
               utm_medium: (window.utm_tags) ? window.utm_tags.medium : "",
-              utm_term: (window.utm_tags) ? window.utm_tags.term : ""
+              utm_term: (window.utm_tags) ? window.utm_tags.term : "",
+              notes: (values.demorequest == true) ? "Requested demo" : ""
             };
             return fetch(
               "https://easyemerge.com/plugins/elevate_form.php",
@@ -120,6 +121,7 @@ class Form6Emails extends Component {
           }}
           render={({ values, isSubmitting }) => (
             <Form noValidate>
+              <div style={{ maxWidth: "500px", marginLeft: "auto", marginRight: "auto" }}>
               <div className={classes.topRow}>
                 <Field
                   id="firstname"
@@ -154,14 +156,14 @@ class Form6Emails extends Component {
               <Field
                 id="company"
                 name="company"
-                label="Affiliation"
+                label="Affiliation (optional)"
                 component={Input}
                 className={classes.field}
               />
               <Field
                 id="role"
                 name="role"
-                label="I am a(n)"
+                label="I am a(n)  &nbsp;&nbsp;(optional)"
                 component={RadioGroup}
                 display="inline"
                 items={[
@@ -194,6 +196,14 @@ class Form6Emails extends Component {
                   autoFocus
                 />
               )}
+              Schedule an Elevate Demo: 
+              <Field 
+                id="demorequest"
+                name="demorequest"
+                type="checkbox"
+                value="yes"
+                className={classes.checkfield}
+                />
               <button
                 type="submit"
                 className={classes.signUpBtn}
@@ -201,6 +211,7 @@ class Form6Emails extends Component {
               >
                 Download
               </button>
+              </div>
             </Form>
           )}
         />
@@ -216,6 +227,7 @@ export default withStyles((theme) => ({
     width: "100%",
     maxWidth: "500px",
     margin: "0 auto",
+    textAlign: "center"
   },
   link: {
     color: "inherit",
@@ -225,6 +237,13 @@ export default withStyles((theme) => ({
     border: "2px solid #ECECEC",
     height: "50px",
     fontWeight: "600",
+  },
+  checkfield:{
+    width:"20px",
+    height:"20px",
+    position: "relative",
+    top: "4px",
+    marginLeft: "10px"
   },
   topRow: {
     display: "flex",

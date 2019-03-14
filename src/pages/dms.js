@@ -65,6 +65,5 @@ export default withStyles((theme) => ({
   },
   landingHeaderStyle:{
     textAlign:"center",
-    marginBottom:"30px"
   },
 }))(Dms);
