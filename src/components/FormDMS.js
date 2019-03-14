@@ -51,11 +51,6 @@ You can also speak to a member of our lead generation team immediately by callin
       );
     }
 
-    if (!window) {
-      var window = {};
-      window.utm_tags = {};
-    }
-
     return (
       <div className={classNames(classes.root, className)}>
         <Formik

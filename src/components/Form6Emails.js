@@ -54,11 +54,6 @@ class Form6Emails extends Component {
       );
     }
 
-    if (!window) {
-      var window = {};
-      window.utm_tags = {};
-    }
-
     return (
       <div className={classNames(classes.root, className)}>
         <Formik
@@ -68,8 +63,6 @@ class Form6Emails extends Component {
             company: "",
             email: "",
             phone: "",
-            role: "",
-            roleOther: "",
             form: "6emails_form",
             list: 57290,
           }}
