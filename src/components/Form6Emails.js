@@ -89,7 +89,6 @@ class Form6Emails extends Component {
           onSubmit={(values, { setSubmitting }) => {
             const body = {
               ...values,
-              roleOther: values.role === "Other" ? values.roleOther : "", // Just in case the user had typed in roleOther then changed their role to something else
               utm_campaign: (window.utm_tags) ? window.utm_tags.campaign : "",
               utm_source: (window.utm_tags) ? window.utm_tags.source : "",
               utm_medium: (window.utm_tags) ? window.utm_tags.medium : "",
