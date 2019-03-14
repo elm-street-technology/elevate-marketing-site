@@ -71,6 +71,7 @@ class Form6Emails extends Component {
             role: "",
             roleOther: "",
             form: "6emails_form",
+            list: 57290,
           }}
           validationSchema={() =>
             Yup.object().shape({
