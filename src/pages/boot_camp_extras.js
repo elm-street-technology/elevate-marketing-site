@@ -36,12 +36,10 @@ const boot_camp_extras = ({ classes }) => {
       
       <Container>
         <div className={classes.top}>
-          <div className={classes.column} style={{ height:"780px"}}> 
+          <div className={classes.column} style={{ height:"880px"}}> 
             <div className={classes.grayText} style={{ textAlign: "center" }}>
               <div className={classes.heading2}>
-              <div style={{ textAlign: "center",paddingBottom:"10px" }}>
-          <img src={SMBCLogo} width="300" />
-        </div>
+              
               Subscribed to one or more<br />
               Elevate solution at our Boot Camp?</div>
                 <div>
@@ -63,6 +61,15 @@ Get a head-start on ‘all things Elevate’ by registering for an <a target="_b
                 <a target="_blank" href="/assets/elevate_getting_started_ebook.pdf" className={classes.getStartedLink}>
                   Getting Started Guide
                     </a>
+                    <br />
+                    <div className={classes.heading2}>Received a FREE month?</div>
+                    <div className={classes.bold}>Here's how it works...</div>
+                    
+1. Your account will be processed &amp; billed within 24-hours.<br /><br />
+2. An Elevate Coach will be in contact within<br />
+2 business days to schedule on boarding.<br /><br />
+3.Your FREE month will be applied<br />
+to Month 2 (excludes Elite Customers).<br /><br />
                 </div>
             </div>
             
@@ -96,7 +103,7 @@ Get a head-start on ‘all things Elevate’ by registering for an <a target="_b
               <div style={{textAlign:"center"}}>
                 <div className={classes.heading2}>Join an 'Encore' Webinar</div>
                 <div style={{color:"#FFFFFF"}}>
-                Want a repeat of your Boot Camp education session?  Dial into one of our upcoming one-hour webinars for another round of tips, tricks &amp; strategies to rock your marketing.
+                Loved your Boot Camp education session? Dial into one of our upcoming one-hour webinars for MORE tips, tricks &amp; strategies to rock your marketing &amp; drive your lead gen.
 
                 </div>
                 <a target="_blank" href="/smbc_webinars/" className={classes.getStartedLink}>
@@ -278,7 +285,7 @@ export default withStyles((theme) => ({
     backgroundColor: "#1f194c",
     color: theme.colors.gray800,
     textDecoration: "none",
-    padding: "40px 10px",
+    padding: "40px 25px 25px 25px",
     borderRadius: "4px",
     margin: "30px auto",
     textAlign: "center",
