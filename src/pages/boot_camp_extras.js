@@ -61,7 +61,7 @@ Get a head-start on ‘all things Elevate’ by registering for an <a target="_b
                 <a target="_blank" href="/assets/elevate_getting_started_ebook.pdf" className={classes.getStartedLink}>
                   Getting Started Guide
                     </a>
-                <a target="_blank" href="/Lead_gen_basics.pdf" className={classes.getStartedLink}>
+                <a target="_blank" href="/assets/Lead_gen_basics.pdf" className={classes.getStartedLink}>
                   Lead Generation Basics Guide
                     </a>
                     <br />
