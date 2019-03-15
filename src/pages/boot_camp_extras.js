@@ -61,7 +61,7 @@ Get a head-start on ‘all things Elevate’ by registering for an <a target="_b
                 <a target="_blank" href="/assets/elevate_getting_started_ebook.pdf" className={classes.getStartedLink}>
                   Getting Started Guide
                     </a>
-                <a target="_blank" href="/assets/Lead_gen_basics.pdf" className={classes.getStartedLink}>
+                <a target="_blank" href="/assets/lead_gen_basics.pdf" className={classes.getStartedLink}>
                   Lead Generation Basics Guide
                     </a>
                     <br />
@@ -84,7 +84,7 @@ to Month 2 (excludes Elite Customers).<br /><br />
             <div className={classes.infoboxTeal}>
               <div>
               <div style={{ textAlign: "center",paddingBottom:"10px" }}>
-          <img src={Tour} width="60" />
+          <img src={Tour} width="80" />
         </div>
                 <div className={classes.heading2} style={{color:"#FFFFFF"}}>Take a Tour of Elevate</div>
                 <div style={{color:"#FFFFFF"}}>
@@ -101,7 +101,7 @@ to Month 2 (excludes Elite Customers).<br /><br />
 
             <div className={classes.infoboxGray}>
             <div style={{ textAlign: "center",paddingBottom:"10px" }}>
-          <img src={Encore} width="60" />
+          <img src={Encore} width="80" />
         </div>
               <div style={{textAlign:"center"}}>
                 <div className={classes.heading2}>Join an 'Encore' Webinar</div>
