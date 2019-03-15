@@ -36,7 +36,7 @@ const boot_camp_extras = ({ classes }) => {
       
       <Container>
         <div className={classes.top}>
-          <div className={classes.column} style={{ height:"880px"}}> 
+          <div className={classes.column} style={{ height:"980px"}}> 
             <div className={classes.grayText} style={{ textAlign: "center" }}>
               <div className={classes.heading2}>
               
@@ -60,6 +60,9 @@ Get a head-start on ‘all things Elevate’ by registering for an <a target="_b
                     </a>
                 <a target="_blank" href="/assets/elevate_getting_started_ebook.pdf" className={classes.getStartedLink}>
                   Getting Started Guide
+                    </a>
+                <a target="_blank" href="/Lead_gen_basics.pdf" className={classes.getStartedLink}>
+                  Lead Generation Basics Guide
                     </a>
                     <br />
                     <div className={classes.heading2}>Received a FREE month?</div>
