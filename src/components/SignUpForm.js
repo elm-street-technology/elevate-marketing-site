@@ -55,11 +55,6 @@ class SignUpForm extends Component {
       );
     }
 
-    if (!window) {
-      var window = {};
-      window.utm_tags = {};
-    }
-
     return (
       <div className={classNames(classes.root, className)}>
         <Formik
@@ -93,6 +88,7 @@ class SignUpForm extends Component {
             const body = {
               ...values,
               roleOther: values.role === "Other" ? values.roleOther : "", // Just in case the user had typed in roleOther then changed their role to something else
+              interestStr: values.interests.join(","),
               utm_campaign: (window.utm_tags) ? window.utm_tags.campaign : "",
               utm_source: (window.utm_tags) ? window.utm_tags.source : "",
               utm_medium: (window.utm_tags) ? window.utm_tags.medium : "",
