@@ -29,9 +29,8 @@ const boot_camp_extras = ({ classes }) => {
         <div className={classes.top}>
           <div className={classes.centerHeading}>
             <div className={classes.heading}><strong>Welcome to Elevate</strong></div>
-            <div className={classes.bold}>We’re excited to have you joining the Elevate family, and we look forward to working with you!
-While we get your experience up and running, here are some things for you to check out!
-And keep an eye out for our setup progress reports!
+            <div className={classes.bold}>You have just taken your first steps to success, and we’re excited to take the journey with you!
+Check out our Getting Started guide &amp; bonus content while we get your new account up and running.
 </div>
             <div>
               <Hr style={{ marginTop: "40px", marginBottom: "40px" }} />
@@ -86,7 +85,7 @@ While you are waiting for your Success Coach to contact you, download our Elevat
                 <div className={classes.heading2} style={{color:"#FFFFFF"}}>Register for an<br />
                 Upcoming Training Webinar</div>
                 <div style={{color:"#FFFFFF"}}>
-                Schedule your personal walk-through with an Elevate Success Coach to learn how you can capture, nurture &amp; convert more business...today.
+                Join a live walk-through with an Elevate Success Coach to learn how you can capture, nurture &amp; convert more business...today.
 
 
                 </div>
@@ -159,7 +158,7 @@ While you are waiting for your Success Coach to contact you, download our Elevat
           to Feed Your Brain</div>
                 <div> 
                 Download our social media guide full<br />
-                of awesome ideas from your Elevate team to.
+                of awesome ideas from your Elevate team.
                 </div>
                 <a target="_blank" href="/assets/elevatesocialmediaebook.pdf" className={classes.getStartedLink2}>
                   Download Guide
