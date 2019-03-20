@@ -17,6 +17,7 @@ import Encore from "../images/encore_icon.png";
 import Webinar from "../images/webinar_icon.png";
 import Emails from "../images/6emails_pic.png";
 import Dose from "../images/dose_pic.png";
+import Social from "../images/social_pic.jpg";
 import Bar from "../images/bar.gif";
 import Freebg from "../images/free_bg.jpg";
 const boot_camp_extras = ({ classes }) => {
@@ -152,7 +153,7 @@ While you are waiting for your Success Coach to contact you, download our ‘Get
             </div>
           <div className={classes.column} style={{ textAlign: "center", paddingBottom: "35px" }}>
           <div style={{ textAlign: "center",paddingBottom:"20px" }}>
-          <img src={Dose} style={{ width:"100%", maxWidth:"400px"}}/>
+          <img src={Social} style={{ width:"100%", maxWidth:"400px"}}/>
         </div>
           <div className={classes.heading2} style={{color:"#ffffff"}}>Some Bonus Tips to<br />
           Feed Your Brain</div>
