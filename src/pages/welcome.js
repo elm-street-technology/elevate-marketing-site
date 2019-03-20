@@ -157,7 +157,8 @@ While you are waiting for your Success Coach to contact you, download our ‘Get
           <div className={classes.heading2} style={{color:"#ffffff"}}>Some Bonus Tips to<br />
           Feed Your Brain</div>
                 <div> 
-                Download our social media guide full of awesome ideas from your Elevate team to.
+                Download our social media guide full<br />
+                of awesome ideas from your Elevate team to.
                 </div>
                 <a target="_blank" href="http://3sixtyfive.agency/" className={classes.getStartedLink2}>
                   Download Guide
