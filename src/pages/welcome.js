@@ -154,14 +154,13 @@ While you are waiting for your Success Coach to contact you, download our ‘Get
           <div style={{ textAlign: "center",paddingBottom:"20px" }}>
           <img src={Dose} style={{ width:"100%", maxWidth:"400px"}}/>
         </div>
-          <div className={classes.heading2} style={{color:"#ffffff"}}>Daily Dose of<br />
-         Marketing Awesomeness</div>
+          <div className={classes.heading2} style={{color:"#ffffff"}}>Some Bonus Tips to<br />
+          Feed Your Brain</div>
                 <div> 
-                Every morning, we’ll send a marketing tip,<br />
-                trick or insight direct to your inbox.
+                Download our social media guide full of awesome ideas from your Elevate team to.
                 </div>
                 <a target="_blank" href="http://3sixtyfive.agency/" className={classes.getStartedLink2}>
-                  Sign Up
+                  Download Guide
                     </a>
           </div>
           </div>
