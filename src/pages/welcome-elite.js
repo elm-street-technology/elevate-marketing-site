@@ -160,7 +160,7 @@ While you are waiting for your Success Coach to contact you, download our Elevat
                 Download our social media guide full<br />
                 of awesome ideas from your Elevate team to.
                 </div>
-                <a target="_blank" href="http://3sixtyfive.agency/" className={classes.getStartedLink2}>
+                <a target="_blank" href="/assets/elevatesocialmediaebook.pdf" className={classes.getStartedLink2}>
                   Download Guide
                     </a>
           </div>
