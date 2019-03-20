@@ -126,7 +126,7 @@ You can also speak to a member of our lead generation team immediately by callin
               <div style={{ marginBottom: "30px" }}>
                 <div className={classes.headingLarge}>Limited Availability</div>
                 <div className={classes.headingSmall}>Exclusive Buyer/Seller Leads in Markets Across the U.S.</div>
-                <div className={classes.headingText} style={{ marginTop: "10px" }}>First Come. First Served.</div>
+                <div className={classes.headingText} style={{ marginTop: "10px" }}>Captured. Engaged. Qualified. We do the work for you!</div>
               </div>
               <div style={{ maxWidth: "500px", marginLeft: "auto", marginRight: "auto" }}>
               <div className={classes.topRow}>

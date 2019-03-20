@@ -22,10 +22,8 @@ const Dms = ({ children, classes, data, tags }) => {
 
       <Container>
         <div >
-                  <div style={{ maxWidth: "900px", backgroundColor: "#ece8ea", marginRight:"auto",marginLeft:"auto"}}>
-                <div className={classes.landingHeaderStyle}>
-                    <img src={LandingHeader} style={{width:"100%"}} />
-                </div>
+                  <div style={{ maxWidth: "900px", backgroundColor: "#ece8ea", marginRight:"auto",marginLeft:"auto",paddingTop:"35px"}}>
+                
                 <div style={{ paddingLeft: "10px", paddingRight: "10px"}}>
                     <FormLeadgen />
                 </div>
