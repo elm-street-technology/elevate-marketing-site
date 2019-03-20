@@ -29,7 +29,7 @@ const boot_camp_extras = ({ classes }) => {
         <div className={classes.top}>
           <div className={classes.centerHeading}>
             <div className={classes.heading}><strong>Welcome to Elevate</strong></div>
-            <div className={classes.bold}>You have just taken your first steps to success, and we’re excited to take the journey with you!
+            <div className={classes.bold}>You have just taken your first steps to success, and we’re excited to take the journey with you!<br />
 Check out our Getting Started guide &amp; bonus content while we get your new account up and running.
 </div>
             <div>
