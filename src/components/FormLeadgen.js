@@ -175,7 +175,7 @@ You can also speak to a member of our lead generation team immediately by callin
               <Field id="market1" name="market1" label="City/State" component={Input} className={classes.field} onBlur={this.setFormVal}/>
               <Field id="market2" name="market2" label="City/State" component={Input} className={classes.field} onBlur={this.setFormVal}/>
               <Field id="market3" name="market3" label="City/State" component={Input} className={classes.field} onBlur={this.setFormVal}/>
-                Schedule an Elevate Demo:
+                Schedule 15 minutes with a Lead Generation Specialist:
                 <Field id="demorequest" name="demorequest" type="checkbox" value="yes" className={classes.checkfield} onClick={this.showCalForm} />
                 {this.state.showCalForm && <div dangerouslySetInnerHTML={{ __html: this.state.calEmbed }} />}
                 {!this.state.showCalForm && <button type="submit" className={classes.signUpBtn} disabled={isSubmitting}>
