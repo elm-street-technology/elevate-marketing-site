@@ -18,20 +18,26 @@ const Upgrade = ({ classes }) => {
     <div className={classes.root}>
       <SEO />
       <Container>
-        <div className={classes.top}>
+        <div className={classes.top} style={{textAlign: "center",}}>
 
           <div style={{
-            padding: "20px",
+            padding: "25px",
             backgroundColor: "#f159535e",
           marginBottom: "30px",lineHeight:"2em"}}>
             <div style={{fontWeight:"700",width:"100%",textAlign:"center",fontSize:"24px",paddingBottom:"10px"}}>IMPORTANT</div>
-            <div style={{ textAlign: "center" }}>The following MLSes have been upgraded to Elevate and will no longer be able to log in at Listingbook.com:<br/>
-              <span style={{ fontWeight: "700" }}>ARMLS, BAREIS, CARETS, FMLS, JSMLS, MARISMO, MIREAL, MRED, NEFMLS, SABOR, SDAR, SEFLAMLS, SWFLAMLS, TAR, Wilmington, 
-              MRIS, Orlando, LIBOR, CRMLS, HGAR</span></div>
+            <div style={{ textAlign: "center" }}>Except for Triad, <span className={classes.bold}>ALL</span> Listingbook agents and their clients have now been <span className={classes.bold}>upgraded to Elevate.</span> You and your clients will no longer be able to log in at Listingbook.com. <span className={classes.bold}>For TRIAD USERS ONLY, click the link below:</span></div>
+
+            <div style={{ paddingTop: "25px", paddingBottom: "25px", }}>
+                <a target="_blank" href="https://triadlistingbook.com/home" className={classes.getStartedLink2}>
+                  Triad Users Login
+            </a>
+              </div>
+
             <div style={{ textAlign: "center" }}>
-              Please follow instructions to log in to your new Elevate account provided via email and/or your new Elevate morning report. <br/>
+              For all other MLSes, please follow instructions to login to your new Elevate account<br />
+              provided via email and/or your new Elevate morning report.<br/>
               <a href="https://elmstreettechnology.zendesk.com/hc/en-us/articles/360018375372-Listingbook-to-Elevate-FAQs#help-login" target="_blank">
-              Click here</a> for more info on logging in to Elevate, 
+              Click here</a> for more info on logging in to Elevate,<br />
               or <a href="" onClick={(e) => { e.preventDefault(); if (window.zE) window.zE.activate() }}>chat with an Elevate Success Coach now</a>.
               </div>
           </div>
@@ -42,8 +48,8 @@ const Upgrade = ({ classes }) => {
             <div className={classes.bold}>about upgrading from Listingbook to Elevate</div>
             <div className={classes.grayText}>
               <br/>
-              Welcome to Elevate!  Developed by <a target="_blank" href="https://elmstreettechnology.com/">Elm Street Technology</a>,
-              <a target="_blank" href="https://tryelevate.com/">Elevate</a> is the  
+              Welcome to Elevate!  Developed by <a target="_blank" href="https://elmstreettechnology.com/">Elm Street Technology</a>, 
+              <a target="_blank" href="https://tryelevate.com/"> Elevate</a> is the  
                <span className={classes.bold}> 1st true Productivity Platform for real estate </span> 
                and the next evolution of all of the features &amp; functionality that you love with Listingbook...plus much more.  
             </div>
@@ -246,6 +252,20 @@ export default withStyles((theme) => ({
     letterSpacing: ".25px",
     backgroundColor: theme.colors.secondary,
     color: "#FFF",
+    textDecoration: "none",
+    padding: "14px 16px",
+    borderRadius: "4px",
+    margin: "16px auto",
+  },
+  getStartedLink2: {
+    width: "250px",
+    alignContent: "center",
+    justifyContent: "center",
+    fontSize: "14px",
+    fontWeight: "700",
+    letterSpacing: ".25px",
+    backgroundColor: "#FFF",
+    color: "#f15953",
     textDecoration: "none",
     padding: "14px 16px",
     borderRadius: "4px",
