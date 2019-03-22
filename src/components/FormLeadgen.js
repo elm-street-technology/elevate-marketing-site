@@ -35,7 +35,7 @@ class FormLeadgen extends Component {
     console.log(e.target);
 
     if(e.target.checked){
-      var interestedMarkets = "Interested markets: "+this.state.market1+"|"+this.state.market2+"|"+this.state.market3;
+      var interestedMarkets = "Interested markets: "+this.state.market1+" - "+this.state.market2+" - "+this.state.market3;
       var thisCompany = "Company: "+this.state.company;
       var eventDesc = encodeURIComponent(thisCompany+", "+interestedMarkets);
 
