@@ -8,6 +8,8 @@ import Input from "elevate-ui/Input";
 import RadioGroup from "elevate-ui/RadioGroup";
 import Typography from "elevate-ui/Typography";
 import withStyles from "elevate-ui/withStyles";
+import Datetime from "elevate-ui/Datetime";
+import moment from "moment";
 
 class FormLeadgen extends Component {
   constructor(props) {
@@ -69,9 +71,31 @@ class FormLeadgen extends Component {
     this.setState(tempObj);
   }
 
+  
+
   render() {
     const { formState } = this.state;
     const { classes, className } = this.props;
+
+    var valid = function (current) {
+      return current.day() !== 0 && current.day() !== 6;
+    };
+
+    var renderDay = function(props, currentDate, selectedDate) {
+
+      if(currentDate.month() == moment().month()){
+        if (currentDate.date() < moment().date()) {
+          if(props.className == "rdtDay"){
+            props.className = "rdtDay rdtDisabled";
+          }
+        }
+      }
+      if(currentDate.month() < moment().month()){
+          props.className = "rdtDay rdtDisabled";
+      }
+
+      return <td {...props}>{currentDate.date()}</td>;
+    };
 
     if (formState === "success") {
       return (
@@ -103,7 +127,7 @@ You can also speak to a member of our lead generation team immediately by callin
       );
     }
 
-      
+    
 
     return <div className={classNames(classes.root, className)}>
         <Formik initialValues={{ firstname: "", lastname: "", company: "", email: "", phone: "", market1: "", market2: "", market3: "", form: "leadgen_form", list: 57292 }} validationSchema={() => Yup.object().shape(
@@ -149,7 +173,7 @@ You can also speak to a member of our lead generation team immediately by callin
               .catch((err) => {
                 this.setState({ formState: "error" });
               });
-          }} render={({ values, isSubmitting }) => <Form noValidate>
+          }} render={({ values, isSubmitting, handleBlur, handleChange }) => <Form noValidate>
               <div style={{ marginBottom: "30px" }}>
                 <div className={classes.headingLarge}>
                   Limited Availability
@@ -168,21 +192,50 @@ You can also speak to a member of our lead generation team immediately by callin
                 </div>
                 <Field id="email" name="email" label="Email" component={Input} className={classes.field} onBlur={this.setFormVal} />
                 <Field id="phone" name="phone" label="Phone" component={Input} className={classes.field} type="tel" onBlur={this.setFormVal} />
-              <Field id="company" name="company" label="Affiliation (optional)" component={Input} className={classes.field} onBlur={this.setFormVal}/>
+                <Field id="company" name="company" label="Affiliation (optional)" component={Input} className={classes.field} onBlur={this.setFormVal} />
                 <div style={{ width: "100%", textAlign: "center" }}>
                   What are your top 3 markets of interest? (optional)
                 </div>
-              <Field id="market1" name="market1" label="City/State" component={Input} className={classes.field} onBlur={this.setFormVal}/>
-              <Field id="market2" name="market2" label="City/State" component={Input} className={classes.field} onBlur={this.setFormVal}/>
-              <Field id="market3" name="market3" label="City/State" component={Input} className={classes.field} onBlur={this.setFormVal}/>
+                <Field id="market1" name="market1" label="City/State" component={Input} className={classes.field} onBlur={this.setFormVal} />
+                <Field id="market2" name="market2" label="City/State" component={Input} className={classes.field} onBlur={this.setFormVal} />
+                <Field id="market3" name="market3" label="City/State" component={Input} className={classes.field} onBlur={this.setFormVal} />
                 Schedule 15 minutes with a Lead Generation Specialist:
                 <Field id="demorequest" name="demorequest" type="checkbox" value="yes" className={classes.checkfield} onClick={this.showCalForm} />
-                {this.state.showCalForm && <div dangerouslySetInnerHTML={{ __html: this.state.calEmbed }} />}
-                {!this.state.showCalForm && <button type="submit" className={classes.signUpBtn} disabled={isSubmitting}>
+                {this.state.showCalForm && <div>
+                  
+                    <div className={classes.topRow}>
+                      <Field id="meetingdate" name="meetingdate" label="Call Date" component={Datetime} timeFormat={false} isValidDate={valid} renderDay={renderDay} />
+                  <div style={{ margin: "8px auto 16px"}}>
+                      <label for="meetingdate" className={classes.selectlabel}>Call Time</label>
+                      <select name="meetingtime" value={values.meetingtime} onChange={handleChange} onBlur={handleBlur} style={{ display: "block" }} className={classes.selectfield}>
+                        <option value="" label="Select a time slot" />
+                      <option value="9:00am (EDT)">9:00am (EDT)</option>
+                      <option value="9:30am (EDT)">9:30am (EDT)</option>
+                      <option value="10:00am (EDT)">10:00am (EDT)</option>
+                      <option value="10:30am (EDT)">10:30am (EDT)</option>
+                      <option value="11:00am (EDT)">11:00am (EDT)</option>
+                      <option value="11:30am (EDT)">11:30am (EDT)</option>
+                        <option value="12:00pm (EDT)">12:00pm (EDT)</option>
+                        <option value="12:30pm (EDT)">12:30pm (EDT)</option>
+                        <option value="1:00pm (EDT)">1:00pm (EDT)</option>
+                        <option value="1:30pm (EDT)">1:30pm (EDT)</option>
+                        <option value="2:00pm (EDT)">2:00pm (EDT)</option>
+                        <option value="2:30pm (EDT)">2:30pm (EDT)</option>
+                        <option value="3:00pm (EDT)">3:00pm (EDT)</option>
+                        <option value="3:30pm (EDT)">3:30pm (EDT)</option>
+                        <option value="4:00pm (EDT)">4:00pm (EDT)</option>
+                        <option value="4:30pm (EDT)">4:30pm (EDT)</option>
+                      <option value="5:00pm (EDT)">5:00pm (EDT)</option>
+                      <option value="5:30pm (EDT)">5:30pm (EDT)</option>
+                      </select>
+                      </div>
+                    </div>
+                  </div>}
+                <button type="submit" className={classes.signUpBtn} disabled={isSubmitting}>
                     Check Availability
-                  </button>}
+                  </button>
               </div>
-            <div dangerouslySetInnerHTML={{ __html: `<script type="text/javascript" src="https://assets.calendly.com/assets/external/widget.js"></script>`}} />
+              <div dangerouslySetInnerHTML={{ __html: `<script type="text/javascript" src="https://assets.calendly.com/assets/external/widget.js"></script>` }} />
             </Form>} />
       </div>;
   }
@@ -197,16 +250,34 @@ export default withStyles((theme) => ({
     width: "100%",
     maxWidth: "700px",
     margin: "0 auto",
-    textAlign: "center"
+    textAlign: "center",
   },
   link: {
     color: "inherit",
+  },
+  rdtDay: {
+    backgroundColor: "#CCC",
   },
   field: {
     borderRadius: "6px",
     border: "2px solid #ECECEC",
     height: "50px",
     fontWeight: "600",
+  },
+  selectfield: {
+    borderRadius: "6px",
+    border: "2px solid #ECECEC",
+    height: "40px"
+  },
+  selectlabel:{
+    width: "100%",
+    color: "#888f96",
+    display: "flex",
+    fontSize: "14px",
+    alignItems: "center",
+  lineHeight: "18px",
+  fontWeight: "700",
+  marginBottom: "4px",
   },
   topRow: {
     display: "flex",
@@ -229,7 +300,6 @@ export default withStyles((theme) => ({
     marginTop: "30px",
     marginBottom: "30px",
     textDecoration: "none",
-
   },
   headingSmall: {
     fontSize: "20px",
@@ -237,7 +307,7 @@ export default withStyles((theme) => ({
     fontWeight: "600",
     color: "#55c3ba",
     textAlign: "center",
-    padding: "3px"
+    padding: "3px",
   },
   headingLarge: {
     fontSize: "40px",
@@ -245,14 +315,14 @@ export default withStyles((theme) => ({
     fontWeight: "700",
     color: "#55c3ba",
     textAlign: "center",
-    padding: "3px"
+    padding: "3px",
   },
   headingText: {
-    fontSize:"20px",
-    fontWeight:"700",
+    fontSize: "20px",
+    fontWeight: "700",
     color: "#777777",
     textAlign: "center",
     padding: "3px",
-    lineHeight: "1.4em"
+    lineHeight: "1.4em",
   },
 }))(FormLeadgen);
