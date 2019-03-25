@@ -29,6 +29,13 @@ const boot_camp_extras = ({ classes }) => {
           <div className={classes.centerHeading}>
             <div className={classes.heading}>Thanks for <strong>ATTENDING</strong> our educational event</div>
             <div className={classes.bold}>Keep the learning going with these extras...created just for you.</div>
+            
+            <div>But first...please give us a review &amp; let us know what you thought of our Boot Camp Educational Series:
+            
+            <a target="_blank" href="https://www.facebook.com/TryElevateRE/reviews/" className={classes.getStartedLink}>
+                  Show us the Love
+                    </a>
+            </div>
             <div>
               <Hr style={{ marginTop: "40px", marginBottom: "40px" }} />
             </div>
