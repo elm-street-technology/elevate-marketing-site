@@ -13,9 +13,11 @@ import PlayCircleFilled from "elevate-ui-icons/PlayCircleFilled";
 import CheckCircle from "elevate-ui-icons/CheckCircle";
 import SMBCLogo from "../images/smbcLogo.jpg";
 import Tour from "../images/tour_icon.png";
+import Web from "../images/webinar_icon.png";
 import Encore from "../images/encore_icon.png";
 import Emails from "../images/6emails_pic.png";
 import Dose from "../images/dose_pic.png";
+import Leadpic from "../images/leadpic.jpg";
 import Freebg from "../images/free_bg.jpg";
 const boot_camp_extras = ({ classes }) => {
 
@@ -25,8 +27,8 @@ const boot_camp_extras = ({ classes }) => {
       <Container>
         <div className={classes.top}>
           <div className={classes.centerHeading}>
-            <div className={classes.heading}>Thanks for <strong>ATTENDING</strong></div>
-            <div className={classes.bold}>Keep the learning experience going with these extras...created just for you.</div>
+            <div className={classes.heading}>Thanks for <strong>ATTENDING</strong> our educational event</div>
+            <div className={classes.bold}>Keep the learning going with these extras...created just for you.</div>
             <div>
               <Hr style={{ marginTop: "40px", marginBottom: "40px" }} />
             </div>
@@ -38,17 +40,17 @@ const boot_camp_extras = ({ classes }) => {
         <div className={classes.top}>
           <div className={classes.column} style={{ height:"980px"}}> 
             <div className={classes.grayText} style={{ textAlign: "center" }}>
-              <div className={classes.heading2}>
+              <div className={classes.heading}>
               
-              Subscribed to one or more<br />
-              Elevate solution at our Boot Camp?</div>
+              Are you are NEW<br />
+              Elevate subscriber?</div>
                 <div>
-                <div className={classes.bold}>You are a smart cookie!  Here's what happens next...</div>
+                <div className={classes.bold}>Welcome, you smart cookie!  Here’s what happens next...</div>
                 
-It takes about 24-hours for us to process your order.  Once processed, you will hear from our Success Team with next steps.
+                It takes about 24-hrs to process your order.  Once processed, you will hear from our Success Team with next steps.
 <br /><br />
-Get a head-start on ‘all things Elevate’ by registering for an <a target="_blank" href="https://tryelevate.com/webinars/">upcoming training webinar</a>, <a target="_blank" href="https://elmstreettechnology.zendesk.com/hc/en-us">visiting our help center</a>,
-<br />&amp; <a target="_blank" href="/assets/elevate_getting_started_ebook.pdf">downloading our ‘Getting Started’ guide.</a>
+Get a head-start on “all things Elevate”<br />
+with our helpful resources:
                 </div>
                 <div style={{ paddingTop: "30px", }}>
 
@@ -61,18 +63,17 @@ Get a head-start on ‘all things Elevate’ by registering for an <a target="_b
                 <a target="_blank" href="/assets/elevate_getting_started_ebook.pdf" className={classes.getStartedLink}>
                   Getting Started Guide
                     </a>
-                <a target="_blank" href="/assets/lead_gen_basics.pdf" className={classes.getStartedLink}>
-                  Lead Generation Basics Guide
-                    </a>
                     <br />
-                    <div className={classes.heading2}>Received a FREE month?</div>
+                    <div className={classes.heading}>Received a<br />
+                    FREE month?</div>
                     <div className={classes.bold}>Here's how it works...</div>
                     
-1. Your account will be processed &amp; billed within 24-hours.<br /><br />
-2. An Elevate Coach will be in contact within<br />
-2 business days to schedule on boarding.<br /><br />
-3.Your FREE month will be applied<br />
-to Month 2 (excludes Elite Customers).<br /><br />
+1. Your account will be processed &amp; billed within 24 hrs.<br /><br />
+2. Once processed, an Elevate Coach<br />
+   will be in contact within 2-business days<br />
+   to schedule onboarding.<br /><br />
+3. Your FREE month will be applied to your<br />
+2nd month (excludes Elite subscribers)<br /><br />
                 </div>
             </div>
             
@@ -81,10 +82,15 @@ to Month 2 (excludes Elite Customers).<br /><br />
           </div>
           
           <div className={classes.column}>
+
+          <div className={classes.heading2} style={{textAlign: "center",}}>
+              
+              Thinking of joining Elevate?</div>
+
             <div className={classes.infoboxTeal}>
               <div>
               <div style={{ textAlign: "center",paddingBottom:"10px" }}>
-          <img src={Tour} width="80" />
+          <img src={Tour} width="45" />
         </div>
                 <div className={classes.heading2} style={{color:"#FFFFFF"}}>Take a Tour of Elevate</div>
                 <div style={{color:"#FFFFFF"}}>
@@ -101,12 +107,12 @@ to Month 2 (excludes Elite Customers).<br /><br />
 
             <div className={classes.infoboxGray}>
             <div style={{ textAlign: "center",paddingBottom:"10px" }}>
-          <img src={Encore} width="80" />
+          <img src={Encore} width="45" />
         </div>
               <div style={{textAlign:"center"}}>
-                <div className={classes.heading2}>Join an 'Encore' Webinar</div>
+                <div className={classes.heading2}>Join an Upcoming Webinar</div>
                 <div style={{color:"#FFFFFF"}}>
-                Loved your Boot Camp education session? Dial into one of our upcoming one-hour webinars for MORE tips, tricks &amp; strategies to rock your marketing &amp; drive your lead gen.
+                Loved your Elevate educational experience?  Dial into one of our upcoming one-hour webinars for MORE tips, tricks &amp; strategies to rock your marketing &amp; drive your lead gen.
 
                 </div>
                 <a target="_blank" href="/smbc_webinars/" className={classes.getStartedLink}>
@@ -114,6 +120,26 @@ to Month 2 (excludes Elite Customers).<br /><br />
                     </a>
               </div>
             </div>
+
+            <div className={classes.infoboxTeal}>
+              <div>
+              <div style={{ textAlign: "center",paddingBottom:"10px" }}>
+          <img src={Web} width="45" />
+        </div>
+                <div className={classes.heading2} style={{color:"#FFFFFF"}}>Check us out LIVE</div>
+                <div style={{color:"#FFFFFF"}}>
+                The Elevate Boot Camp series provides tips, tricks &amp; strategies in an energetic two-hour session designed to energize &amp; empower agents across the US.
+
+                </div>
+              </div>
+                <div>
+                <a target="_blank" href="/smbc_webinars/" className={classes.getStartedLink2}>
+                Upcoming TOUR Schedule
+                    </a>
+                </div>
+            </div>
+
+
 
           </div>
 
@@ -134,25 +160,24 @@ to Month 2 (excludes Elite Customers).<br /><br />
       
       
         <div className={classes.top}>
-          <div className={classes.column} style={{ textAlign: "center", paddingBottom: "35px" }}>
+          <div className={classes.column3} style={{ textAlign: "center", paddingBottom: "35px" }}>
           <div style={{ textAlign: "center",paddingBottom:"20px" }}>
-          <img src={Emails} style={{ width:"100%", maxWidth:"400px"}}/>
+          <img src={Emails} style={{ width:"100%", maxWidth:"300px"}}/>
         </div>
             
           <div className={classes.heading2} style={{color:"#ffffff"}}>6 Emails Every Real Estate<br />
           Agent Should Be Sending</div>
                 <div> 
-                Easy to implement, proven to deliver emails designed
-                to nurture past, present &amp; future clients.
+                Easy to implement, proven to deliver emails designed to nurture your clients.
                 </div>
                 <a target="_blank" href="/assets/6emails_elevate.pdf" className={classes.getStartedLink2}>
                   Download PDF
                     </a>
 
             </div>
-          <div className={classes.column} style={{ textAlign: "center", paddingBottom: "35px" }}>
+          <div className={classes.column3} style={{ textAlign: "center", paddingBottom: "35px" }}>
           <div style={{ textAlign: "center",paddingBottom:"20px" }}>
-          <img src={Dose} style={{ width:"100%", maxWidth:"400px"}}/>
+          <img src={Dose} style={{ width:"100%", maxWidth:"300px"}}/>
         </div>
           <div className={classes.heading2} style={{color:"#ffffff"}}>Daily Dose of<br />
          Marketing Awesomeness</div>
@@ -164,6 +189,24 @@ to Month 2 (excludes Elite Customers).<br /><br />
                   Sign Up
                     </a>
           </div>
+
+          <div className={classes.column3} style={{ textAlign: "center", paddingBottom: "35px" }}>
+          <div style={{ textAlign: "center",paddingBottom:"20px" }}>
+          <img src={Leadpic} style={{ width:"100%", maxWidth:"300px"}}/>
+        </div>
+          <div className={classes.heading2} style={{color:"#ffffff"}}>Basics of<br />
+          Lead Generation</div>
+                <div> 
+                A step-by-step guide to setting<br />
+                up successful lead generation.
+                </div>
+                <a target="_blank" href="/assets/lead_gen_basics.pdf" className={classes.getStartedLink2}>
+                  Download Guide
+                    </a>
+          </div>
+
+
+
           </div>
       </Container>
       </div>
@@ -190,6 +233,7 @@ export default withStyles((theme) => ({
   heading: {
     color: theme.colors.secondary,
     fontSize: "32px",
+    lineHeight: "40px",
     fontWeight: "700",
     marginRight: "auto",
     paddingBottom: "20px",
@@ -216,6 +260,15 @@ export default withStyles((theme) => ({
     paddingLeft:"10px",
     verticalAlign: "top",
   },
+
+  column3:{
+    width:"350px",
+    maxWidth: "100%",
+    paddingRight:"10px",
+    paddingLeft:"10px",
+    verticalAlign: "top",
+  },
+
   getStartedLink: {
     minWidth: "300px",
     maxWidth: "300px",
@@ -299,7 +352,7 @@ export default withStyles((theme) => ({
     backgroundColor: theme.colors.secondary,
     color: theme.colors.gray800,
     textDecoration: "none",
-    padding: "40px 10px",
+    padding: "40px 25px 25px 25px",
     borderRadius: "4px",
     margin: "30px auto",
     textAlign: "center",
