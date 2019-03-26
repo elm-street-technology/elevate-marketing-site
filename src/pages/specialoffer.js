@@ -64,6 +64,7 @@ const specialoffer = ({ classes }) => {
                 <div className={classes.bold} style={{color:"#ef5b4d"}}>- IDX Website</div>
                 <div className={classes.bold} style={{color:"#ef5b4d"}}>- Blog</div>
                 <div className={classes.bold} style={{color:"#ef5b4d"}}>- Social Media Services</div>
+                <div className={classes.bold} style={{color:"#ef5b4d"}}>- Email Marketing</div>
                 <div className={classes.bold} style={{color:"#f7960a"}}>- Pay-Per-Click Lead Generation</div>
                 <span style={{color:"#f7960a"}}>(Google, Bing, Yahoo)</span><br />
                 <div className={classes.bold} style={{color:"#f7960a"}}>- Advanced CRM</div>
@@ -90,6 +91,7 @@ const specialoffer = ({ classes }) => {
                 <div className={classes.bold} style={{color:"#ef5b4d"}}>- IDX Website</div>
                 <div className={classes.bold} style={{color:"#ef5b4d"}}>- Blog</div>
                 <div className={classes.bold} style={{color:"#ef5b4d"}}>- Social Media Services</div>
+                <div className={classes.bold} style={{color:"#ef5b4d"}}>- Email Marketing</div>
                 <div className={classes.bold} style={{color:"#f7960a"}}>- Pay-Per-Click Lead Generation</div>
                 <span style={{color:"#f7960a"}}>(Google, Bing, Yahoo)</span><br />
                 <div className={classes.bold} style={{color:"#f7960a"}}>- Advanced CRM</div>
