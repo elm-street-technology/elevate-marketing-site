@@ -14,6 +14,7 @@ import CheckCircle from "elevate-ui-icons/CheckCircle";
 import SMBCLogo from "../images/smbcLogo.jpg";
 import Tour from "../images/tour_icon.png";
 import Web from "../images/webinar_icon.png";
+import Star from "../images/star.png";
 import Encore from "../images/encore_icon.png";
 import Emails from "../images/6emails_pic.png";
 import Dose from "../images/dose_pic.png";
@@ -33,7 +34,7 @@ const boot_camp_extras = ({ classes }) => {
             <div>But first...please give us a review &amp; let us know what you thought of our Boot Camp Educational Series:
             
             <a target="_blank" href="https://www.facebook.com/TryElevateRE/reviews/" className={classes.getStartedLink}>
-                  Show us the Love
+                  Share the LOVE
                     </a>
             </div>
             <div>
@@ -45,11 +46,14 @@ const boot_camp_extras = ({ classes }) => {
       
       <Container>
         <div className={classes.top}>
-          <div className={classes.column} style={{ height:"980px"}}> 
+          <div className={classes.column} style={{ height:"1300px"}}> 
             <div className={classes.grayText} style={{ textAlign: "center" }}>
+            <div style={{ textAlign: "center",paddingBottom:"10px" }}>
+          <img src={Star} width="45" />
+        </div>
               <div className={classes.heading}>
               
-              Are you are NEW<br />
+              Are you a NEW<br />
               Elevate subscriber?</div>
                 <div>
                 <div className={classes.bold}>Welcome, you smart cookie!  Here’s what happens next...</div>
@@ -71,6 +75,10 @@ with our helpful resources:
                   Getting Started Guide
                     </a>
                     <br />
+                    <div className={classes.infoboxGray2}>
+                    <div style={{ textAlign: "center",paddingBottom:"10px" }}>
+          <img src={Star} width="45" />
+        </div>
                     <div className={classes.heading}>Received a<br />
                     FREE month?</div>
                     <div className={classes.bold}>Here's how it works...</div>
@@ -81,6 +89,7 @@ with our helpful resources:
    to schedule onboarding.<br /><br />
 3. Your FREE month will be applied to your<br />
 2nd month (excludes Elite subscribers)<br /><br />
+</div>
                 </div>
             </div>
             
@@ -90,7 +99,7 @@ with our helpful resources:
           
           <div className={classes.column}>
 
-          <div className={classes.heading2} style={{textAlign: "center",}}>
+          <div className={classes.heading} style={{textAlign: "center",}}>
               
               Thinking of joining Elevate?</div>
 
@@ -261,10 +270,10 @@ export default withStyles((theme) => ({
     fontWeight:"700",
   },
   column:{
-    width:"530px",
+    width:"525px",
     maxWidth: "100%",
-    paddingRight:"10px",
-    paddingLeft:"10px",
+    paddingRight:"18px",
+    paddingLeft:"18px",
     verticalAlign: "top",
   },
 
@@ -346,6 +355,17 @@ export default withStyles((theme) => ({
     alignContent: "center",
     justifyContent: "center",
     backgroundColor: "#1f194c",
+    color: theme.colors.gray800,
+    textDecoration: "none",
+    padding: "40px 25px 25px 25px",
+    borderRadius: "4px",
+    margin: "30px auto",
+    textAlign: "center",
+  },
+  infoboxGray2: {
+    alignContent: "center",
+    justifyContent: "center",
+    backgroundColor: "#e4e8ea",
     color: theme.colors.gray800,
     textDecoration: "none",
     padding: "40px 25px 25px 25px",
