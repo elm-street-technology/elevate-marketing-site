@@ -24,8 +24,8 @@ const Upgrade = ({ classes }) => {
             padding: "25px",
             backgroundColor: "#f159535e",
           marginBottom: "30px",lineHeight:"2em"}}>
-            <div style={{fontWeight:"700",width:"100%",textAlign:"center",fontSize:"24px",paddingBottom:"10px"}}>IMPORTANT ANNOUNCEMENT</div>
-            <div style={{ textAlign: "center" }}>Excluding Triad, ALL Listingbook agents &amp; their clients have now been upgraded to Elevate.
+            <div style={{fontWeight:"700",width:"100%",textAlign:"center",fontSize:"24px",paddingBottom:"10px"}}>IMPORTANT ANNOUNCEMENT FOR LISTINGBOOK AGENTS</div>
+            <div style={{ textAlign: "center" }}>Excluding Triad MLS, ALL Listingbook agents &amp; their clients have now been upgraded to Elevate.
 You can NO LONGER log in at Listingbook.com.  Please follow login instruction for your NEW Elevate account<br />
 via email / text communication and/or your Elevate morning report.
 <br /><br />
@@ -37,7 +37,7 @@ via email / text communication and/or your Elevate morning report.
             </a>
 </div>
 <br />
-<div className={classes.bold}>TRIAD USERS ONLY, click the link below:</div>
+<div className={classes.bold}>TRIAD MLS USERS ONLY, click the link below:</div>
 
             <div style={{ paddingTop: "25px", paddingBottom: "25px", }}>
                 <a target="_blank" href="https://triadlistingbook.com/home" className={classes.getStartedLink2}>
@@ -47,8 +47,11 @@ via email / text communication and/or your Elevate morning report.
           </div>
 
 
-          <div className={classes.centerHeading} style={{paddingTop:"15px"}}>
-            <div className={classes.heading}>New to Elevate?</div>
+
+          <div className={classes.centerHeading}>
+          <div style={{textAlign: "center", fontSize:"12px"}}>Migrated MLSes:  SMART, TAR, BAREIS, MRED, SANDICOR, CARETS, Wilmington, SABOR, JSMLS, ARMLS,<br />
+MARISMO, MIREAL, SWFLAMLS, NEFMLS, SEFMLAMLS, MRIS, Orlando, LIBOR, CRMLS, HGAR.</div>
+            <div className={classes.heading} style={{paddingTop:"45px"}}>New to Elevate?</div>
             <div className={classes.bold}>Here’s everything you need to know about your upgrade to Elevate.</div>
            <br />
           </div>
