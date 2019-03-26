@@ -25,7 +25,7 @@ class FormLeadgen extends Component {
       market2: '',
       market3: '',
       company: '',
-      calEmbed: ''
+      calEmbed: '',
     };
 
     this.showCalForm = this.showCalForm.bind(this);
@@ -142,9 +142,21 @@ You can also speak to a member of our lead generation team immediately by callin
                 mls_number: Yup.string(),
               }
             )} onSubmit={(values, { setSubmitting }) => {
-            const body = { ...values, notes: values.demorequest == true ? "Requested demo, Interested Markets: " + values.market1 + "," + values.market2 + "," + values.market3 : "Interested Markets: " + values.market1 + "," + values.market2 + "," + values.market3, utm_campaign: window.utm_tags ? window.utm_tags.campaign : "", utm_source: window.utm_tags ? window.utm_tags.source : "", utm_medium: window.utm_tags ? window.utm_tags.medium : "", utm_term: window.utm_tags ? window.utm_tags.term : "" };
+            //console.log(values.meetingdate);
+            if(values.meetingdate != undefined){
+              var meeting_request = values.meetingdate.format("YYYY-MM-DD") + "T" + values.meetingtime.replace(" (EDT)", "") + "-04:00"
+            }
+            else{
+              var meeting_request = '';
+            }
+            const body = { ...values, notes: values.demorequest == true ? "Requested demo, Interested Markets: " + values.market1 + "," + values.market2 + "," + values.market3 : "Interested Markets: " + values.market1 + "," + values.market2 + "," + values.market3, 
+            utm_campaign: window.utm_tags ? window.utm_tags.campaign : "", 
+            utm_source: window.utm_tags ? window.utm_tags.source : "", 
+            utm_medium: window.utm_tags ? window.utm_tags.medium : "", 
+            utm_term: window.utm_tags ? window.utm_tags.term : "", 
+            demo_request_date: meeting_request};
             return fetch(
-              "https://easyemerge.com/plugins/elevate_form.php",
+              "https://easyemerge.com/plugins/elevate_form2.php",
               {
                 method: "POST",
                 headers: {
@@ -202,38 +214,39 @@ You can also speak to a member of our lead generation team immediately by callin
                 Schedule 15 minutes with a Lead Generation Specialist:
                 <Field id="demorequest" name="demorequest" type="checkbox" value="yes" className={classes.checkfield} onClick={this.showCalForm} />
                 {this.state.showCalForm && <div>
-                  
                     <div className={classes.topRow}>
                       <Field id="meetingdate" name="meetingdate" label="Call Date" component={Datetime} timeFormat={false} isValidDate={valid} renderDay={renderDay} />
-                  <div style={{ margin: "8px auto 16px"}}>
-                      <label for="meetingdate" className={classes.selectlabel}>Call Time</label>
-                      <select name="meetingtime" value={values.meetingtime} onChange={handleChange} onBlur={handleBlur} style={{ display: "block" }} className={classes.selectfield}>
-                        <option value="" label="Select a time slot" />
-                      <option value="9:00am (EDT)">9:00am (EDT)</option>
-                      <option value="9:30am (EDT)">9:30am (EDT)</option>
-                      <option value="10:00am (EDT)">10:00am (EDT)</option>
-                      <option value="10:30am (EDT)">10:30am (EDT)</option>
-                      <option value="11:00am (EDT)">11:00am (EDT)</option>
-                      <option value="11:30am (EDT)">11:30am (EDT)</option>
-                        <option value="12:00pm (EDT)">12:00pm (EDT)</option>
-                        <option value="12:30pm (EDT)">12:30pm (EDT)</option>
-                        <option value="1:00pm (EDT)">1:00pm (EDT)</option>
-                        <option value="1:30pm (EDT)">1:30pm (EDT)</option>
-                        <option value="2:00pm (EDT)">2:00pm (EDT)</option>
-                        <option value="2:30pm (EDT)">2:30pm (EDT)</option>
-                        <option value="3:00pm (EDT)">3:00pm (EDT)</option>
-                        <option value="3:30pm (EDT)">3:30pm (EDT)</option>
-                        <option value="4:00pm (EDT)">4:00pm (EDT)</option>
-                        <option value="4:30pm (EDT)">4:30pm (EDT)</option>
-                      <option value="5:00pm (EDT)">5:00pm (EDT)</option>
-                      <option value="5:30pm (EDT)">5:30pm (EDT)</option>
-                      </select>
+                      <div style={{ margin: "8px auto 16px" }}>
+                        <label for="meetingtime" className={classes.selectlabel}>
+                          Call Time
+                        </label>
+                        <select name="meetingtime" value={values.meetingtime} onChange={handleChange} onBlur={handleBlur} style={{ display: "block" }} className={classes.selectfield}>
+                          <option value="" label="Select a time slot" />
+                          <option value="09:00:00">9:00am (EDT)</option>
+                          <option value="09:30:00">9:30am (EDT)</option>
+                          <option value="10:00:00">10:00am (EDT)</option>
+                          <option value="10:30:00">10:30am (EDT)</option>
+                          <option value="11:00:00">11:00am (EDT)</option>
+                          <option value="11:30:00">11:30am (EDT)</option>
+                          <option value="12:00:00">12:00pm (EDT)</option>
+                          <option value="12:30:00">12:30pm (EDT)</option>
+                          <option value="13:00:00">1:00pm (EDT)</option>
+                          <option value="13:30:00">1:30pm (EDT)</option>
+                          <option value="14:00:00">2:00pm (EDT)</option>
+                          <option value="14:30:00">2:30pm (EDT)</option>
+                          <option value="15:00:00">3:00pm (EDT)</option>
+                          <option value="15:30:00">3:30pm (EDT)</option>
+                          <option value="16:00:00">4:00pm (EDT)</option>
+                          <option value="16:30:00">4:30pm (EDT)</option>
+                          <option value="17:00:00">5:00pm (EDT)</option>
+                          <option value="17:30:00">5:30pm (EDT)</option>
+                        </select>
                       </div>
                     </div>
                   </div>}
                 <button type="submit" className={classes.signUpBtn} disabled={isSubmitting}>
-                    Check Availability
-                  </button>
+                  Check Availability
+                </button>
               </div>
               <div dangerouslySetInnerHTML={{ __html: `<script type="text/javascript" src="https://assets.calendly.com/assets/external/widget.js"></script>` }} />
             </Form>} />
