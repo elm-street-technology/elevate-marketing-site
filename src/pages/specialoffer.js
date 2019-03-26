@@ -112,7 +112,19 @@ const specialoffer = ({ classes }) => {
 
           </div>
       </Container>
+
+
+<div style={{ textAlign: "center", padding: "35px" }}>
+<div className={classes.bold}>30 Day Money Back Guarantee!</div>
+Applicable Tax in the following states: MA, CT, NY, IL, TX, CA, AZ, TN, PA
+</div>
+
+
     </div>
+
+
+
+
   );
 };
 
