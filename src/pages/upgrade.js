@@ -18,38 +18,42 @@ const Upgrade = ({ classes }) => {
     <div className={classes.root}>
       <SEO />
       <Container>
-        <div className={classes.top}>
+        <div className={classes.top} style={{textAlign: "center",}}>
 
           <div style={{
-            padding: "20px",
+            padding: "25px",
             backgroundColor: "#f159535e",
           marginBottom: "30px",lineHeight:"2em"}}>
-            <div style={{fontWeight:"700",width:"100%",textAlign:"center",fontSize:"24px",paddingBottom:"10px"}}>IMPORTANT</div>
-            <div style={{ textAlign: "center" }}>The following MLSes have been upgraded to Elevate and will no longer be able to log in at Listingbook.com:<br/>
-              <span style={{ fontWeight: "700" }}>ARMLS, BAREIS, CARETS, FMLS, JSMLS, MARISMO, MIREAL, MRED, NEFMLS, SABOR, SDAR, SEFLAMLS, SWFLAMLS, TAR, Wilmington, 
-              MRIS, Orlando, LIBOR, CRMLS, HGAR</span></div>
-            <div style={{ textAlign: "center" }}>
-              Please follow instructions to log in to your new Elevate account provided via email and/or your new Elevate morning report. <br/>
-              <a href="https://elmstreettechnology.zendesk.com/hc/en-us/articles/360018375372-Listingbook-to-Elevate-FAQs#help-login" target="_blank">
-              Click here</a> for more info on logging in to Elevate, 
-              or <a href="" onClick={(e) => { e.preventDefault(); if (window.zE) window.zE.activate() }}>chat with an Elevate Success Coach now</a>.
+            <div style={{fontWeight:"700",width:"100%",textAlign:"center",fontSize:"24px",paddingBottom:"10px"}}>IMPORTANT ANNOUNCEMENT FOR LISTINGBOOK AGENTS</div>
+            <div style={{ textAlign: "center" }}>Excluding Triad MLS, ALL Listingbook agents &amp; their clients have now been upgraded to Elevate.
+You can NO LONGER log in at Listingbook.com.  Please follow login instruction for your NEW Elevate account<br />
+via email / text communication and/or your Elevate morning report.
+<br /><br />
+<a target="_blank" href="https://elmstreettechnology.zendesk.com/hc/en-us/articles/360018375372-Listingbook-to-Elevate-FAQs#help-login" className={classes.getStartedLink2}>
+                  Login to Elevate
+            </a>&nbsp;&nbsp;
+            <a href="" onClick={(e) => { e.preventDefault(); if (window.zE) window.zE.activate() }} className={classes.getStartedLink2}>
+                  Chat with Coach
+            </a>
+</div>
+<br />
+<div className={classes.bold}>TRIAD MLS USERS ONLY, click the link below:</div>
+
+            <div style={{ paddingTop: "25px", paddingBottom: "25px", }}>
+                <a target="_blank" href="https://triadlistingbook.com/home" className={classes.getStartedLink2}>
+                  Triad Users Login
+            </a>
               </div>
           </div>
 
 
+
           <div className={classes.centerHeading}>
-            <div className={classes.heading}>Everything you need to know…</div>
-            <div className={classes.bold}>about upgrading from Listingbook to Elevate</div>
-            <div className={classes.grayText}>
-              <br/>
-              Welcome to Elevate!  Developed by <a target="_blank" href="https://elmstreettechnology.com/">Elm Street Technology</a>,
-              <a target="_blank" href="https://tryelevate.com/">Elevate</a> is the  
-               <span className={classes.bold}> 1st true Productivity Platform for real estate </span> 
-               and the next evolution of all of the features &amp; functionality that you love with Listingbook...plus much more.  
-            </div>
-            <div>
-              <Hr style={{ marginTop: "40px", marginBottom: "40px" }} />
-            </div>
+          <div style={{textAlign: "center", fontSize:"12px"}}>Migrated MLSes:  SMART, TAR, BAREIS, MRED, SANDICOR, CARETS, Wilmington, SABOR, JSMLS, ARMLS,<br />
+MARISMO, MIREAL, SWFLAMLS, NEFMLS, SEFMLAMLS, MRIS, Orlando, LIBOR, CRMLS, HGAR.</div>
+            <div className={classes.heading} style={{paddingTop:"45px"}}>New to Elevate?</div>
+            <div className={classes.bold}>Here’s everything you need to know about your upgrade to Elevate.</div>
+           <br />
           </div>
         </div>
       </Container>
@@ -62,7 +66,7 @@ const Upgrade = ({ classes }) => {
                 <div>
                 Explore everything that is Elevate
                   with these <span className={classes.bold}> easy-to-digest videos </span>
-                  designed to introduce you to all of the new features & functionality that you and your clients will LOVE.
+                  designed to introduce you to all of the new features &amp; functionality that you and your clients will LOVE.
                 </div>
                 <div style={{ paddingTop: "30px" }}>
                   <a target="_blank" href="https://tryelevate.wistia.com/projects/ibbj6zglui"
@@ -76,13 +80,9 @@ const Upgrade = ({ classes }) => {
             <Hr style={{ marginTop: "40px",marginBottom: "40px"}}/>
             </div>
             <div style={{ textAlign: "center" }}>
-              <div className={classes.heading}>FAQ</div>
+              <div className={classes.heading}>FAQ for You</div>
               <div style={{paddingBottom:"30px"}}>
-                Want to understand how the transition
-                  from Listingbook to Elevate
-                  will occur? Curious about what will
-                  happen to your client's information?
-                <span className={classes.bold}> We've got the answers!</span>
+              Here are quick answers to your most important questions about Elevate and your client’s information.
     
               </div>
               <div>
@@ -103,10 +103,10 @@ const Upgrade = ({ classes }) => {
                           of Elevate. We will <span className={classes.bold}> answer all
                           of your burning questions </span>
                           about how this exciting new solution
-                          will work for you & your clients.
+                          will work for you &amp; your clients.
 
                 </div>
-                <br/>View our upcoming schedule & register TODAY. 
+                <br/>View our upcoming schedule &amp; register TODAY. 
               </div>
                 <div style={{paddingTop:"30px"}}>
                 <a target="_blank" href="https://elmstreettechnology.zendesk.com/hc/en-us/articles/360019751351-Live-Training-Webinars-for-Former-Listingbook-Agents" 
@@ -122,78 +122,37 @@ const Upgrade = ({ classes }) => {
                   <a target="_blank" href="https://tryelevate.wistia.com/projects/ibbj6zglui" className={classes.darkTealLink} style={{backgroundColor:"#3e928b"}}>On Demand Recordings</a>
                 </div>
             </div>
+            <div style={{ textAlign: "center" }}>
+              <div className={classes.heading}>FAQ for Your Clients</div>
+              <div style={{paddingBottom:"30px"}}>
+              We’ve created a special FAQ experiences<br />
+              for you to share with your clients.<br />
+              <div className={classes.bold}>Just share the link below...</div>
+              </div>
+              <div>
+                <a target="_blank" href="https://elmstreettechnology.zendesk.com/hc/en-us/sections/360003180791-Listingbook-to-Elevate-Upgrade-for-Clients" className={classes.getStartedLink}>
+                  <QuestionAnswer color="#FFFFFF" size={28} className={classes.iconPosition} style={{top:"9px",right:"5px"}}/> View Client FAQ
+                </a>
+                <br /><br />
+              </div>
+            </div>
 
-            <div className={classes.infoboxGray}>
+          </div>
+
+        </div>
+      </Container>
+      <Container>
+      <div className={classes.infoboxGray}>
               <div style={{textAlign:"center"}}>
-                <div className={classes.heading}>Have Questions Now?</div>
+                <div className={classes.heading}>Chat with us NOW</div>
+                The Elevate Success Team is here to help you every step of the way.<br />
+                <div className={classes.bold}>How can we help you today?</div>
+                <br />
                 <a href="" className={classes.getStartedLink} onClick={(e) => { e.preventDefault(); if (window.zE) window.zE.activate() }}>
                   <Chat color="#FFFFFF" size={28} className={classes.iconPosition} style={{top:"10px"}}/> Chat with Success Coach
                 </a>
               </div>
             </div>
-
-          </div>
-
-        </div>
-      </Container>
-      <Container>
-        <div className={classes.top}>
-          <div className={classes.section}>
-            <div style={{ paddingTop: "10px" }} className={classes.centerHeading} >
-              <div className={classes.heading}>Talking to your clients about their NEW experience with Elevate</div>
-              Your clients will LOVE everything that Elevate has to offer and we've made it easy for you to share it with them.  
-              Just <span className={classes.bold}> share the link below with your clients </span> to direct them to a special FAQ experience we've created just for them.
-            <div style={{ paddingTop: "30px" }}>
-                <a target="_blank" href="https://elmstreettechnology.zendesk.com/hc/en-us/sections/360003180791-Listingbook-to-Elevate-Upgrade-for-Clients" className={classes.getStartedLink}>
-                  Share this link with your clients
-            </a>
-              </div>
-
-            </div>
-          </div>
-        </div>
-      </Container>
-      <Container>
-        <div className={classes.section}></div>
-        <div className={classes.top}>
-          <div className={classes.centerHeading}>
-            <div className={classes.heading}>
-              <div style={{ display: "inline", top: "-8px", marginRight: "6px", position: "relative" }}> Start exploring </div>
-              <Logo />
-              <div style={{ display: "inline", top: "-8px", marginRight: "6px", position: "relative" }}> ...</div>
-            </div>
-
-          </div>
-        </div>
-      </Container>
-      <Container>
-        <div className={classes.top}>
-          <div className={classes.column}>
-            <div className={classes.videoBorder}>
-              <WistiaVideo hashedId="ecdwsmxj9y" />
-            </div>
-            <div style={{ fontSize: "12px", paddingRight: "30px", paddingLeft: "30px" }}>
-              <span className={classes.bold}>An Introduction to Elevate CRM</span>
-              <div style={{ float: "right", display: "inline" }}>runtime:  20:12</div>
-
-            </div>
-          </div>
-          <div className={classes.column}>
-            <div className={classes.videoBorder}>
-              <WistiaVideo hashedId="xhsd39wnip" />
-            </div>
-            <div style={{ fontSize: "12px", paddingRight: "30px", paddingLeft: "30px" }}>
-              <span className={classes.bold}>An Introduction to the Site Editor</span>
-              <div style={{ float: "right", display: "inline" }}>runtime:  13:14</div>
-
-            </div>
-          </div>
-        </div>
-        <div className={classes.section}>
-          <div style={{ paddingTop: "10px" }} className={classes.centerHeading} >
-            <a target="_blank" className={classes.getStartedLink} href="https://tryelevate.wistia.com/projects/ibbj6zglui" >View More Videos</a>
-          </div>
-        </div>
       </Container>
     </div>
   );
@@ -204,7 +163,7 @@ export default withStyles((theme) => ({
   root: {
     position: "relative",
     paddingTop: "96px",
-    paddingBottom: "192px",
+    paddingBottom: "102px",
     lineHeight: "1.75em",
   },
   top: {
@@ -246,6 +205,20 @@ export default withStyles((theme) => ({
     letterSpacing: ".25px",
     backgroundColor: theme.colors.secondary,
     color: "#FFF",
+    textDecoration: "none",
+    padding: "14px 16px",
+    borderRadius: "4px",
+    margin: "16px auto",
+  },
+  getStartedLink2: {
+    width: "250px",
+    alignContent: "center",
+    justifyContent: "center",
+    fontSize: "14px",
+    fontWeight: "700",
+    letterSpacing: ".25px",
+    backgroundColor: "#FFF",
+    color: "#f15953",
     textDecoration: "none",
     padding: "14px 16px",
     borderRadius: "4px",
