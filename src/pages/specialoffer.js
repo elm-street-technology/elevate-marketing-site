@@ -34,6 +34,7 @@ const specialoffer = ({ classes }) => {
       
       
         <div className={classes.top}>
+        <div className={classes.infoboxGray2}>
           <div className={classes.column3} style={{ textAlign: "center", paddingBottom: "35px", }}>
           <div style={{ textAlign: "center",paddingBottom:"20px" }}>
           <img src={Ignite} style={{ width:"100%", maxWidth:"200px"}}/>
@@ -56,7 +57,10 @@ const specialoffer = ({ classes }) => {
                     </a>
 
             </div>
+            </div>
+            <div className={classes.infoboxGray2}>
           <div className={classes.column3} style={{ textAlign: "center", paddingBottom: "35px" }}>
+          
           <div style={{ textAlign: "center",paddingBottom:"20px" }}>
           <img src={Elite} style={{ width:"100%", maxWidth:"200px"}}/>
         </div>
@@ -81,7 +85,9 @@ const specialoffer = ({ classes }) => {
                   Subscribe NOW
                     </a>
           </div>
+          </div>
 
+          <div className={classes.infoboxGray2}>
           <div className={classes.column3} style={{ textAlign: "center", paddingBottom: "35px" }}>
           <div style={{ textAlign: "center",paddingBottom:"20px" }}>
           <img src={Pro} style={{ width:"100%", maxWidth:"200px"}}/>
@@ -109,16 +115,17 @@ const specialoffer = ({ classes }) => {
                   Subscribe NOW
                     </a>
           </div>
-
+          </div>
 
 
           </div>
       </Container>
 
 
-<div style={{ textAlign: "center", padding: "35px" }}>
+<div style={{ textAlign: "center", paddingBottom: "35px" }}>
 <div className={classes.bold}>30 Day Money Back Guarantee!</div>
-Applicable Tax in the following states: MA, CT, NY, IL, TX, CA, AZ, TN, PA
+Applicable Tax in the following states:<br />
+MA, CT, NY, IL, TX, CA, AZ, TN, PA
 </div>
 
 
@@ -178,7 +185,7 @@ export default withStyles((theme) => ({
   },
 
   column3:{
-    width:"350px",
+    width:"300px",
     maxWidth: "100%",
     paddingRight:"10px",
     paddingLeft:"10px",
@@ -316,10 +323,10 @@ export default withStyles((theme) => ({
   infoboxGray2: {
     alignContent: "center",
     justifyContent: "center",
-    backgroundColor: "#e4e8ea",
+    backgroundColor: "#fafafa",
     color: theme.colors.gray800,
     textDecoration: "none",
-    padding: "40px 25px 25px 25px",
+    padding: "30px 15px 15px 15px",
     borderRadius: "4px",
     margin: "30px auto",
     textAlign: "center",
