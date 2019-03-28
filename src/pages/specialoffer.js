@@ -46,8 +46,8 @@ const specialoffer = ({ classes }) => {
                 <div className={classes.bold} style={{color:"#f7960a"}}>- Advanced CRM</div>
                 <div className={classes.bold} style={{color:"#f7960a"}}>- CMA Wizard</div>
                 <br /><br />
-                <div className={classes.bold} style={{fontSize:"65px", paddingBottom:"20px", color:"#f7960a"}}>$549</div>
-                <span style={{color:"#f7960a"}}>(a savings of $100)</span>
+                <div className={classes.bold} style={{fontSize:"50px", paddingBottom:"20px", color:"#f7960a"}}>$549/m</div>
+                <span style={{color:"#f7960a"}}>(a savings of $100/m)</span>
                 <br /><br />
                 <div className={classes.bold} style={{color:"#f7960a"}}>One-Time Setup Fee: $200</div>
                 <span style={{color:"#f7960a"}}>(Normally $1000)</span>
@@ -74,8 +74,8 @@ const specialoffer = ({ classes }) => {
                 <div className={classes.bold} style={{color:"#f7960a"}}>- Advanced CRM</div>
                 <div className={classes.bold} style={{color:"#f7960a"}}>- CMA Wizard</div>
 <br /><br />
-<div className={classes.bold} style={{fontSize:"65px", paddingBottom:"20px", color:"#ef5b4d"}}>$749</div>
-<span style={{color:"#ef5b4d"}}>(a savings of $100)</span>
+<div className={classes.bold} style={{fontSize:"50px", paddingBottom:"20px", color:"#ef5b4d"}}>$749/m</div>
+<span style={{color:"#ef5b4d"}}>(a savings of $100/m)</span>
 
                 <br /><br />
                 <div className={classes.bold} style={{color:"#ef5b4d"}}>One-Time Setup Fee: $200</div>
@@ -104,8 +104,8 @@ const specialoffer = ({ classes }) => {
                 <div className={classes.bold} style={{color:"#f7960a"}}>- CMA Wizard</div>
                 <br /><br />
 
-                <div className={classes.bold} style={{fontSize:"65px", paddingBottom:"20px", color:"#524493"}}>$1049</div>
-<span style={{color:"#524493"}}>(a savings of $100)</span>
+                <div className={classes.bold} style={{fontSize:"50px", paddingBottom:"20px", color:"#524493"}}>$1049/m</div>
+<span style={{color:"#524493"}}>(a savings of $100/m)</span>
 
                 <br /><br />
                 <div className={classes.bold} style={{color:"#524493"}}>One-Time Setup Fee: $200</div>
