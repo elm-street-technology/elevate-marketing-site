@@ -3,13 +3,37 @@ import Helmet from "react-helmet";
 import ThemeProvider from "elevate-ui/ThemeProvider";
 import config from "../utils/siteConfig";
 import Header from "../components/Header";
+import HeaderWelcome from "../components/HeaderWelcome";
 import Footer from "../components/Footer";
+import FooterWelcome from "../components/FooterWelcome";
 import favicon from "../images/favicon.png";
 import withStyles from "elevate-ui/withStyles";
 
-const Template = ({ children, classes }) => {
-  return (
-    <div>
+const Template = ({ children, classes, location }) => {
+  console.log(location);
+
+  function ChooseFooter(){
+    if (location.pathname == "/welcome" || location.pathname == "/welcome/" ||
+      location.pathname == "/welcome_elite" || location.pathname == "/welcome_elite/"){
+      return <FooterWelcome />;
+    }
+    else{
+      return <Footer />;
+    }
+  }
+
+  function ChooseHeader(){
+    if (location.pathname == "/welcome" || location.pathname == "/welcome/" ||
+      location.pathname == "/welcome_elite" || location.pathname == "/welcome_elite/") {
+      return <HeaderWelcome />;
+    }
+    else {
+      return <Header />;
+    }
+  }
+
+
+  return <div>
       <Helmet>
         <title>{config.siteTitle}</title>
         <meta charSet="utf-8" />
@@ -21,21 +45,17 @@ const Template = ({ children, classes }) => {
         <meta property="og:locale" content="en_US" />
         <meta property="og:type" content="website" />
         <meta property="og:site_name" content={config.siteTitle} />
-        <link
-          href="https://fonts.googleapis.com/css?family=Open+Sans:400,600,700,800"
-          rel="stylesheet"
-        />
+        <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,600,700,800" rel="stylesheet" />
       </Helmet>
 
       <ThemeProvider>
         <div className={classes.root}>
-          <Header />
+          <ChooseHeader />
           <div className={classes.children}>{children()}</div>
-          <Footer />
+          <ChooseFooter />
         </div>
       </ThemeProvider>
-    </div>
-  );
+    </div>;
 };
 
 export default withStyles((theme) => ({

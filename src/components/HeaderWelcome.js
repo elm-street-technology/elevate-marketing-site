@@ -9,7 +9,7 @@ import Dehaze from "elevate-ui-icons/Dehaze";
 import noScroll from "no-scroll";
 import Logo from "./Logo";
 
-class Header extends Component {
+class HeaderWelcome extends Component {
   state = {
     isMenuOpen: false,
   };
@@ -285,4 +285,4 @@ export default withStyles((theme) => ({
   navMobileUnderlayOpen: {
     visibility: "visible",
   },
-}))(Header);
+}))(HeaderWelcome);
