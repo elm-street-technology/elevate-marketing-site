@@ -75,7 +75,7 @@ videos in your <a target="_blank" href="https://elmstreettechnology.zendesk.com/
 <div style={{ textAlign: "center",paddingBottom:"5px" }}>
           <img src={Email} style={{ width:"100%", maxWidth:"80px"}}/>
         </div>
-<div className={classes.bold}>Check out the free <a target="_blank" href="/assets/6emails_elevate.pdf" style={{color:"#5cc0b7", textDecoration:"none",}}>Social Media<br />
+<div className={classes.bold}>Check out more free <a target="_blank" href="/assets/6emails_elevate.pdf" style={{color:"#5cc0b7", textDecoration:"none",}}>Social Media<br />
 &amp; Marketing tips.</a></div>
         </div>
 
