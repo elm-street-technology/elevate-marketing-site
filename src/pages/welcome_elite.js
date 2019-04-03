@@ -17,6 +17,10 @@ import Encore from "../images/encore_icon.png";
 import Webinar from "../images/webinar_icon.png";
 import Emails from "../images/6emails_pic.png";
 import Dose from "../images/dose_pic.png";
+import Email from "../images/email.jpg";
+import DL from "../images/dl.jpg";
+import Help from "../images/help.jpg";
+import Live from "../images/live.jpg";
 import Social from "../images/social_pic.jpg";
 import Vid from "../images/vidmock.jpg";
 import Bar from "../images/bar.gif";
@@ -39,19 +43,43 @@ const welcome_elite = ({ classes }) => {
       
       <Container>
         <div className={classes.top}>
-          <div className={classes.column2} style={{ height:"620px", paddingTop:"20px",}}> 
+          <div className={classes.column2} style={{ height:"950px", paddingTop:"20px",}}> 
             <div className={classes.grayText} style={{ textAlign: "center" }}>
 
-           
-              <div className={classes.heading}>What happens next?</div>
+            <div className={classes.heading}>Your Fulfillment Manager<br />
+              Will Reach Out Shortly</div>
                 <div>
                 
-                <div className={classes.bold}>Watch &amp; Learn.</div>
+                <div className={classes.bold}>In the meantime you can...</div>
                 <br />
                 <div style={{ textAlign: "center" }}>
-          <img src={Vid} style={{ width:"100%", maxWidth:"650px"}}/><br /><br />
+                <div style={{ textAlign: "center",paddingBottom:"5px" }}>
+          <img src={DL} style={{ width:"100%", maxWidth:"80px"}}/>
+        </div>
+                <div className={classes.bold}>Download our <a target="_blank" href="/assets/elevate_elite_ebook.pdf" style={{color:"#5cc0b7", textDecoration:"none",}}>eBook</a> to learn about<br />
+                the getting started process.</div>
+                <br />
+                <div style={{ textAlign: "center",paddingBottom:"5px" }}>
+          <img src={Live} style={{ width:"100%", maxWidth:"80px"}}/>
+        </div>
+                <div className={classes.bold}>Schedule a <a href="/webinars" style={{color:"#5cc0b7", textDecoration:"none",}}>Live Walk-Through</a><br />
+with a success coach.</div>
+<br />
+<div style={{ textAlign: "center",paddingBottom:"5px" }}>
+          <img src={Help} style={{ width:"100%", maxWidth:"80px"}}/>
+        </div>
+<div className={classes.bold}>Explore the on-demand training<br />
+videos in your <a target="_blank" href="https://elmstreettechnology.zendesk.com/hc/en-us" style={{color:"#5cc0b7", textDecoration:"none",}}>Help Center.</a></div>
+<br />
+<div style={{ textAlign: "center",paddingBottom:"5px" }}>
+          <img src={Email} style={{ width:"100%", maxWidth:"80px"}}/>
+        </div>
+<div className={classes.bold}>Check out the free <a target="_blank" href="/assets/6emails_elevate.pdf" style={{color:"#5cc0b7", textDecoration:"none",}}>Social Media<br />
+&amp; Marketing tips.</a></div>
+              
 
-          video run-time:  XX minutes
+
+
         </div>
 
 </div>

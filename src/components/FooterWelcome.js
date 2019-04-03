@@ -7,10 +7,8 @@ import config from "../utils/siteConfig";
 import SocialLinks from "./SocialLinks";
 
 const FooterWelcome = ({ classes }) => (
-  <div className={classes.root}>
-    <Container>
-      <div className={classes.grid}>
-        <div className={classNames(classes.column, classes.logo)}>
+  <div className={classes.root} style={{alignItems:"center"}}>
+    <Container style={{textAlign:"center", marginLeft:"auto", marginRight:"auto",}}>
           <Link to="/">
             <svg width={140} viewBox="0 0 200 63">
               <defs />
@@ -24,7 +22,7 @@ const FooterWelcome = ({ classes }) => (
               />
             </svg>
           </Link>
-          <div className={classes.copyright}>
+          <div className={classes.copyright} style={{textAlign:"center", marginLeft:"auto", marginRight:"auto",}}>
             <a
               className={classes.link}
               href={"https://www.elmstreettechnology.com/"}
@@ -166,113 +164,33 @@ const FooterWelcome = ({ classes }) => (
                 />
               </svg>
             </a>
-          </div>
-        </div>
-        <div className={classes.column}>
-          <div className={classes.section}>Solutions</div>
-          <Link className={classes.link} to="/agents">
-            Agents
-          </Link>
-          <Link className={classes.link} to="/brokers">
-            Brokers
-          </Link>
-          <Link className={classes.link} to="/teams">
-            Teams
-          </Link>
-        </div>
+      
+</div>
 
-        <div className={classes.column}>
-          <div className={classes.section}>Products</div>
-          <Link className={classes.link} to="/elevate-dms">
-            DMS
-          </Link>
-          <Link className={classes.link} to="/elevate-social-pro">
-            Social Pro
-          </Link>
-          <Link className={classes.link} to="/elevate-idx">
-            IDX
-          </Link>
-          <Link className={classes.link} to="/elevate-ignite">
-            Ignite
-          </Link>
-          <Link className={classes.link} to="/elevate-elite">
-            Elite
-          </Link>
-          <Link className={classes.link} to="/crm">
-            CRM
-          </Link>
-          <Link className={classes.link} to="/recruiter">
-            Recruiter
-          </Link>
-        </div>
 
-        <div className={classes.column}>
-          <div className={classes.section}>Support</div>
-          <a
-            className={classes.link}
-            href="https://elmstreettechnology.zendesk.com/hc/en-us"
-            target="_blank"
-          >
-            Help Center
-          </a>
-          <Link className={classes.link} to="/webinars">
-            Webinars
-          </Link>
-          <Link className={classes.link} to="/blog">
-            Blog
-          </Link>
-          <Link className={classes.link} to="/terms-of-service">
-            Terms of Service
-          </Link>
-          <Link className={classes.link} to="/pricing-and-refund-policy">
-            Pricing &amp; Refund Policy
-          </Link>
-          <Link className={classes.link} to="/privacy">
-            Privacy Policy
-          </Link>
-          <Link className={classes.link} to="/dmca">
-            DMCA Notice
-          </Link>
-        </div>
 
-        <div className={classes.column}>
-          <div className={classes.section}>Explore</div>
-          <Link className={classes.link} to="/testimonials">
-            Testimonials
-          </Link>
-          <Link className={classes.link} to="/markets">
-            MLS Markets
-          </Link>
-          <Link className={classes.link} to="/events">
-            Upcoming Events
-          </Link>
-
-          <Link className={classes.link} to="/bootcamp">
-            Social Media Boot Camp
-          </Link>
-          <SocialLinks className={classes.social} />
-        </div>
-      </div>
     </Container>
   </div>
 );
 
 export default withStyles((theme) => ({
   root: {
-    display: "flex",
-    flexDirection: "column",
-    alignItems: "center",
+    textAlign: "center",
     justifyContent: "center",
     width: "100%",
     backgroundColor: "#5A5B5C",
-    padding: "48px 16px",
+    padding: "35px 16px",
 
     [theme.breakpoints[900]]: {
       padding: "64px 24px",
+      textAlign: "center",
+      justifyContent: "center",
     },
 
     [theme.breakpoints[1200]]: {
-      padding: "96px 64px",
+      padding: "56px 64px",
+      textAlign: "center",
+      justifyContent: "center",
     },
   },
   grid: {
@@ -293,6 +211,7 @@ export default withStyles((theme) => ({
   copyright: {
     maxWidth: "240px",
     marginTop: "8px",
+    textAlign: "center",
   },
   section: {
     fontWeight: "700",
