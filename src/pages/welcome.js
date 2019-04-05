@@ -22,6 +22,7 @@ import Email from "../images/email.jpg";
 import DL from "../images/dl.jpg";
 import Help from "../images/help.jpg";
 import Live from "../images/live.jpg";
+import Welcome from "../images/welcome.gif";
 import Vid from "../images/vidmock.jpg";
 import Bar from "../images/bar.gif";
 import Freebg from "../images/free_bg.jpg";
@@ -44,44 +45,9 @@ const welcome = ({ classes }) => {
       <Container>
         <div className={classes.top}>
           <div className={classes.column2} style={{ height:"950px", paddingTop:"20px",}}> 
-            <div className={classes.grayText} style={{ textAlign: "center" }}>
 
-           
-              <div className={classes.heading}>Your Fulfillment Manager<br />
-              Will Reach Out Shortly</div>
-                <div>
-                
-                <div className={classes.bold}>In the meantime you can...</div>
-                <br />
-                <div style={{ textAlign: "center" }}>
-                <div style={{ textAlign: "center",paddingBottom:"5px" }}>
-          <img src={DL} style={{ width:"100%", maxWidth:"80px"}}/>
-        </div>
-                <div className={classes.bold}>Download our <a target="_blank" href="/assets/elevate_getting_started_ebook.pdf" style={{color:"#5cc0b7", textDecoration:"none",}}>eBook</a> to learn about<br />
-                the getting started process.</div>
-                <br />
-                <div style={{ textAlign: "center",paddingBottom:"5px" }}>
-          <img src={Live} style={{ width:"100%", maxWidth:"80px"}}/>
-        </div>
-                <div className={classes.bold}>Schedule a <a href="/webinars" style={{color:"#5cc0b7", textDecoration:"none",}}>Live Walk-Through</a><br />
-with a success coach.</div>
-<br />
-<div style={{ textAlign: "center",paddingBottom:"5px" }}>
-          <img src={Help} style={{ width:"100%", maxWidth:"80px"}}/>
-        </div>
-<div className={classes.bold}>Explore the on-demand training<br />
-videos in your <a target="_blank" href="https://elmstreettechnology.zendesk.com/hc/en-us" style={{color:"#5cc0b7", textDecoration:"none",}}>Help Center.</a></div>
-<br />
-<div style={{ textAlign: "center",paddingBottom:"5px" }}>
-          <img src={Email} style={{ width:"100%", maxWidth:"80px"}}/>
-        </div>
-<div className={classes.bold}>Check out more free <a target="_blank" href="/assets/6emails_elevate.pdf" style={{color:"#5cc0b7", textDecoration:"none",}}>Social Media<br />
-&amp; Marketing tips.</a></div>
-        </div>
-
-</div>
-
-            </div>
+          <img src={Welcome} style={{ width:"100%", maxWidth:"675px"}}/>
+            
             
             
 
