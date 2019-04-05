@@ -40,8 +40,8 @@ class SignUpForm extends Component {
             </Typography>
             <Typography type="heading4" gutterTop>
               Can’t wait? Talk NOW at{" "}
-              <a href="tel:18883783868" className={classes.link}>
-                888.378.3868
+              <a href="tel:18057197394" className={classes.link}>
+                805.719.7394
               </a>
             </Typography>
           </Alert>
