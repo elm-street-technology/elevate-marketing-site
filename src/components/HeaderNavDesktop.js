@@ -22,16 +22,16 @@ const HeaderNavDesktop = ({ classes, className }) => {
             <ArrowDropDown size={20} />
           </div>
           <ul className={classes.dropDown}>
-            <Link className={classes.listItemLink} to="/agents">
+            <Link className={classes.listItemLink} to="/idx_websites">
               <li className={classes.listItem}>IDX Websites</li>
             </Link>
-            <Link className={classes.listItemLink} to="/teams">
+            <Link className={classes.listItemLink} to="/social_media_marketing">
               <li className={classes.listItem}>Social Media Marketing</li>
             </Link>
-            <Link className={classes.listItemLink} to="/brokers">
+            <Link className={classes.listItemLink} to="/email_marketing">
               <li className={classes.listItem}>Email Marketing</li>
             </Link>
-            <Link className={classes.listItemLink} to="/brokers">
+            <Link className={classes.listItemLink} to="/lead_generation">
               <li className={classes.listItem}>Lead Generation</li>
             </Link>
             <Link className={classes.listItemLink} to="/brokers">
@@ -51,18 +51,22 @@ const HeaderNavDesktop = ({ classes, className }) => {
           <Link className={classes.listItemLink} to="/bootcamp">
               <li className={classes.listItem}>Social Media Boot Camp</li>
             </Link>
-            <Link className={classes.listItemLink} to="/elevate-social-pro">
+            <Link className={classes.listItemLink} to="/lead_generation">
               <li className={classes.listItem}>Lead Generation Boot Camp</li>
             </Link>
-            <Link className={classes.listItemLink} to="/elevate-idx">
+            <Link className={classes.listItemLink} to="/webinar_series">
               <li className={classes.listItem}>Webinar Series</li>
             </Link>
             <Link className={classes.listItemLink} to="/elevate-ignite">
               <li className={classes.listItem}>Speaking Engagements</li>
             </Link>
-            <Link className={classes.listItemLink} to="/elevate-elite">
+            <a
+            className={classes.listItemLink}
+            href="http://3sixtyfive.agency/blog/"
+            target="_blank"
+          >
               <li className={classes.listItem}>3sixtyfive Blog</li>
-            </Link>
+            </a>
           </ul>
         </div>
         <div className={classes.link}>
@@ -82,9 +86,14 @@ const HeaderNavDesktop = ({ classes, className }) => {
             <Link className={classes.listItemLink} to="/webinars">
               <li className={classes.listItem}>Training Webinars</li>
             </Link>
-            <Link className={classes.listItemLink} to="/blog">
+            <a
+              className={classes.listItemLink}
+              href="https://elmstreettechnology.zendesk.com/hc/en-us"
+              target="_blank"
+              rel="noreferrer noopener"
+            >
               <li className={classes.listItem}>Live Chat</li>
-            </Link>
+            </a>
           </ul>
         </div>
         <div className={classes.link}>
