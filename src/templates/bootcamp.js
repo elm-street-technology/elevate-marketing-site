@@ -8,7 +8,7 @@ import BootcampFaqs from "../components/BootcampFaqs";
 import BootcampSignup from "../components/BootcampSignup";
 import BootcampTopics from "../components/BootcampTopics";
 import PageTitleImage from "../components/PageTitleImage";
-import WideImage from "../images/1200.jpg";
+import WideImage from "../images/bootbg.jpg";
 import Link from "gatsby-link";
 import BootcampInstructors from "../components/BootcampInstructors";
 import SMBCLogo from "../images/smbcLogo.jpg";
@@ -102,7 +102,7 @@ const Bootcamp = ({ classes, data: { contentfulBootcamp } }) => {
                 <div className={classes.leftsubtext}>Agents will learn tips, tricks &amp; strategies in a fast-paced, easy-to-digest environment that will help them grow their online brand through intelligent, thoughtful marketing.</div>
                 <br />
                 <div className={classes.leftsubheading}>How long is the event?</div>
-                <div className={classes.leftsubtext}>Our onsite event usually runs about 2-hours, complete with breakfast and/or lunch, Q&amp;A and exciting giveaways (like an Amazon Fire Tablet to help agents stay mobile).</div>
+                <div className={classes.leftsubtext}>Our onsite event usually runs about 2-hours and 15 minutes.</div>
                 </div>
                 <div className={classes.flexItem} style={{padding:"25px",}}>
                 <div className={classes.leftsubheading}>Is there a cost to participate?</div>

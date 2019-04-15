@@ -10,26 +10,26 @@ import Section1Col from "../components/Section1Col";
 import PageTitleImage from "../components/PageTitleImage";
 import BgSection from "../components/BgSection";
 import TestImage from "../images/600.jpg";
-import WideImage from "../images/leadbg.jpg";
+import WideImage from "../images/1200.jpg";
 import exImage from "../images/example.png";
 import exImage2 from "../images/example2.png";
 import exImage3 from "../images/example3.png";
 import bgImage from "../images/examplebg.jpg";
 
-const lead_generation = ({ classes }) => {
+const job_opportunities = ({ classes }) => {
 
   return (
     <div className={classes.root}>
       <Header />
       <SEO />
 
-      <PageTitleImage title="The power of CAPTURING" image={WideImage}>
-     Next text here.
+      <PageTitleImage title="The power of YOU" image={WideImage}>
+      We love smart people.
       </PageTitleImage>
 
       <div style={{ margin: "45px", }}>
         <Section2Col secTitle="Section Header" secImage={TestImage}>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+          Our company was founded on the premise of bringing the best technology and the best people together to create one truly unique and powerful experience.
           <Link to="/upgrade" className={classes.ctabutton}>
           Upgrade Button Text2
                     </Link>
@@ -102,4 +102,4 @@ export default withStyles((theme) => ({
 
 
 
-}))(lead_generation);
+}))(job_opportunities);

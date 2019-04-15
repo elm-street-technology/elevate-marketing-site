@@ -24,7 +24,7 @@ const HeaderNavMobile = ({ classes, className, onMenuClose }) => {
           <Link className={classes.listItemLink} to="/webinar_series">
             <li className={classes.listItem}>Webinar Series</li>
           </Link>
-          <Link className={classes.listItemLink} to="/brokers">
+          <Link className={classes.listItemLink} to="/speaking_engagements">
             <li className={classes.listItem}>Speaking Engagements</li>
           </Link>
           <a
@@ -61,24 +61,24 @@ const HeaderNavMobile = ({ classes, className, onMenuClose }) => {
       <div className={classes.link}>
         <div className={classes.navItem}>Explore</div>
         <ul className={classes.dropDown}>
-        <Link className={classes.listItemLink} to="/markets">
+        <Link className={classes.listItemLink} to="/who_we_are">
             <li className={classes.listItem}>About Us</li>
           </Link>
-          <Link className={classes.listItemLink} to="/webinars">
+          <Link className={classes.listItemLink} to="/mls_markets">
             <li className={classes.listItem}>MLS Markets</li>
           </Link>
-          <Link className={classes.listItemLink} to="/blog">
+          <Link className={classes.listItemLink} to="/happy_clients">
             <li className={classes.listItem}>Happy Clients</li>
           </Link>
-          <Link className={classes.listItemLink} to="/blog">
+          <Link className={classes.listItemLink} to="/partnerships">
             <li className={classes.listItem}>Partnerships &amp; Alliances</li>
           </Link>
-          <Link className={classes.listItemLink} to="/blog">
+          <Link className={classes.listItemLink} to="/job_opportunities">
             <li className={classes.listItem}>Job Opportunities</li>
           </Link>
         </ul>
       </div>
-      <div className={classes.link}>Connect</div>
+      <div className={classes.link}><Link className={classes.listItemLink} to="/connect">Connect</Link></div>
       
       <div style={{textAlign:"center"}}>
       <Link to="/get-started" className={classes.ctabutton}>

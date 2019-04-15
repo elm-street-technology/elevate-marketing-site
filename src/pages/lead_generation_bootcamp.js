@@ -10,23 +10,23 @@ import Section1Col from "../components/Section1Col";
 import PageTitleImage from "../components/PageTitleImage";
 import BgSection from "../components/BgSection";
 import TestImage from "../images/600.jpg";
-import WideImage from "../images/webinarsbg.jpg";
+import WideImage from "../images/leadbg.jpg";
 import exImage from "../images/example.png";
 import exImage2 from "../images/example2.png";
 import exImage3 from "../images/example3.png";
 import Slidegif from "../images/slide.gif";
 import bgImage from "../images/examplebg.jpg";
 
-const Demo = ({ classes }) => {
+const lead_generation_bootcamp = ({ classes }) => {
 
   return (
     <div className={classes.root}>
       <Header />
       <SEO />
 
-      <PageTitleImage title="The power of LEARNING" image={WideImage}>
-      Explore our <span style={{ fontWeight: "bold" }}>online education series</span><br />
-      from the comfort of your couch!
+      <PageTitleImage title="The power of SHARING" image={WideImage}>
+      The latest in Elevate’s boot camp series, agents learn the secrets of <span style={{ fontWeight: "bold" }}>capturing and converting online leads</span><br />
+      from industry experts sharing their expertise.
       </PageTitleImage>
 
 
@@ -35,26 +35,32 @@ const Demo = ({ classes }) => {
 
 
 
+      <div style={{paddingTop:"30px", paddingBottom:"60px",}}>
+        <Container>
+            <div className={classes.flexContainer}>
+                <div className={classes.flexItem}>
 
+                   
+                <iframe width="100%" height="350" src="https://www.youtube.com/embed/fGRZ8-mLwnQ?autoplay=1&rel=0"
+          frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    
 
-
-      <div style={{ paddingTop:"35px", paddingLeft:"25px", paddingright:"25px",}}>
-        <div>
-        <Section1Col>
-        Can’t make one of our in-person Boot Camps? No worries!<br />
-        Join one of our upcoming webinars where we cram as much of our great education<br />
-        into a one-hour deep dive.  Business suit NOT required!
-        
-          <div style={{ textAlign: "center", }}>
+                </div>
+                <div className={classes.flexItem} style={{paddingLeft:"25px", paddingRight:"25px", paddingBottom:"25px"}}>
+                <div className={classes.leftsubtext}>Developed by popular demand, the “Secrets of Lead Generation” Boot Camp deep dives into capturing, nurturing &amp; converting more leads...faster.
+                <br /><br />
+                <span style={{ fontWeight: "bold" }}>Are we coming to your town?</span>
                 <Link to="/upgrade" className={classes.ctabutton}>
-                  Register TODAY</Link>
-                  <br /><br />
-                <img src={Slidegif} style={{width:"100%", maxWidth:"1100px", display:"block", marginLeft:"auto", marginRight:"auto", paddingTop:"13px",}}/>
-          </div>
-          
-        </Section1Col>
-      </div>
-      </div>
+                  View Upcoming Schedule</Link>
+                </div>
+
+                </div>
+            </div>
+        </Container>
+        </div>
+
+
+
 
 
 
@@ -68,7 +74,7 @@ const Demo = ({ classes }) => {
 
                    
                 <div className={classes.centerheading}><span style={{ fontWeight: "bold" }}>Frequently Asked Questions</span></div>
-                <div className={classes.centersubtext}>about our Webinar Series</div>
+                <div className={classes.centersubtext}>about our Boot Camp Series</div>
                     
 
                 </div>
@@ -81,13 +87,13 @@ const Demo = ({ classes }) => {
             <div className={classes.flexContainer}>
                 <div className={classes.flexItem} style={{padding:"25px",}}>  
                 <div className={classes.leftsubheading}>Who should attend?</div>
-                <div className={classes.leftsubtext}>Our Webinars are designed to energize, educate &amp; empower real estate agents across the U.S.</div>
+                <div className={classes.leftsubtext}>Our Boot Camps are designed to energize, educate &amp; empower real estate agents across the U.S.</div>
                 <br />
                 <div className={classes.leftsubheading}>What will we learn?</div>
                 <div className={classes.leftsubtext}>Agents will learn tips, tricks &amp; strategies in a fast-paced, easy-to-digest environment that will help them grow their online brand through intelligent, thoughtful marketing.</div>
                 <br />
                 <div className={classes.leftsubheading}>How long is the event?</div>
-                <div className={classes.leftsubtext}>Our webinars run 1-hour.</div>
+                <div className={classes.leftsubtext}>Our Boot Camp usually runs about 2-hours and 15 minutes.</div>
                 </div>
                 <div className={classes.flexItem} style={{padding:"25px",}}>
                 <div className={classes.leftsubheading}>Is there a cost to participate?</div>
@@ -202,6 +208,33 @@ export default withStyles((theme) => ({
         fontSize: "16px",
     },
   },
+
+  leftsubtext: {
+    color: "#5A5B5C",
+    fontWeight: "500",
+    fontSize: "18px",
+    letterSpacing: ".25px",
+    lineHeight: "1.6",
+    marginbottom: "20px",
+    textAlign: "left",
+    [theme.breakpoints[900]]: {
+        fontSize: "16px",
+    },
+  },
+
+  leftheading: {
+    color: "#4bbbb1",
+    fontSize: "30px",
+    fontWeight: "700",
+    letterSpacing: ".25px",
+    fontWeight: "600",
+    lineHeight: "1.6",
+  
+    [theme.breakpoints[900]]: {
+        fontSize: "28px",
+    },
+  },
+
   ctabutton: {
     alignContent: "center",
     justifyContent: "center",
@@ -224,4 +257,4 @@ export default withStyles((theme) => ({
 
 
 
-}))(Demo);
+}))(lead_generation_bootcamp);

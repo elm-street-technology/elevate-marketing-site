@@ -34,12 +34,16 @@ const HeaderNavDesktop = ({ classes, className }) => {
             <Link className={classes.listItemLink} to="/lead_generation">
               <li className={classes.listItem}>Lead Generation</li>
             </Link>
-            <Link className={classes.listItemLink} to="/brokers">
+            <Link className={classes.listItemLink} to="/crm">
               <li className={classes.listItem}>CRM</li>
             </Link>
-            <Link className={classes.listItemLink} to="/brokers">
+            <a
+            className={classes.listItemLink}
+            href="http://3sixtyfive.agency/"
+            target="_blank"
+          >
               <li className={classes.listItem}>Creative Services</li>
-            </Link>
+            </a>
           </ul>
         </div>
         <div className={classes.link}>
@@ -57,7 +61,7 @@ const HeaderNavDesktop = ({ classes, className }) => {
             <Link className={classes.listItemLink} to="/webinar_series">
               <li className={classes.listItem}>Webinar Series</li>
             </Link>
-            <Link className={classes.listItemLink} to="/elevate-ignite">
+            <Link className={classes.listItemLink} to="/speaking_engagements">
               <li className={classes.listItem}>Speaking Engagements</li>
             </Link>
             <a
@@ -102,26 +106,26 @@ const HeaderNavDesktop = ({ classes, className }) => {
             <ArrowDropDown size={20} />
           </div>
           <ul className={classes.dropDown}>
-            <Link className={classes.listItemLink} to="/bootcamp">
+            <Link className={classes.listItemLink} to="/who_we_are">
               <li className={classes.listItem}>About Us</li>
             </Link>
-            <Link className={classes.listItemLink} to="/events">
+            <Link className={classes.listItemLink} to="/mls_markets">
               <li className={classes.listItem}>MLS Markets</li>
             </Link>
-            <Link className={classes.listItemLink} to="/testimonials">
+            <Link className={classes.listItemLink} to="/happy_clients">
               <li className={classes.listItem}>Happy Clients</li>
             </Link>
-            <Link className={classes.listItemLink} to="/get-started">
+            <Link className={classes.listItemLink} to="/partnerships">
               <li className={classes.listItem}>Partnerships &amp; Alliances</li>
             </Link>
-            <Link className={classes.listItemLink} to="/markets">
+            <Link className={classes.listItemLink} to="/job_opportunities">
               <li className={classes.listItem}>Job Opportunities</li>
             </Link>
           </ul>
         </div>
         <div className={classes.link}>
         <div className={classes.navItem}>
-            Connect
+        <Link className={classes.listItemLink} to="/connect">Connect</Link>
           </div>
           </div>
       </nav>
