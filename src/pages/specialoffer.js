@@ -53,14 +53,14 @@ const specialoffer = ({ classes }) => {
           <img src={Social_pro} style={{ width:"100%", maxWidth:"200px"}}/>
         </div>
             
-                <div className={classes.productCol}> 
-                <div className={classes.bold} style={{color:"#56595B"}}>- SOCIAL MEDIA SERVICES</div>
-                <span style={{color:"#56595B"}}><span className={classes.bold}>MLS Feed Listing Pushes:</span><br />
-                  • Facebook<br />
-                  • LinkedIn<br />
-                  • Twitter<br />
-                  • YouTube</span><br />
-                <div className={classes.bold} style={{color:"#56595B"}}>- BLOG</div>
+                <div className={classes.productCol} style={{ textAlign: "left", paddingLeft:"20px", paddingRight:"20px" }}>
+                <div className={classes.bold} style={{color:"#56595B"}}>• BLOG</div>
+                <div className={classes.bold} style={{color:"#56595B"}}>• SOCIAL MEDIA SERVICES:</div>
+                <span style={{color:"#56595B"}}><span className={classes.bold}> MLS Feed Listing Pushes:</span><br />
+                   • Facebook<br />
+                   • LinkedIn<br />
+                   • Twitter<br />
+                   • YouTube</span><br />
                 </div>
 
                 <div>
@@ -69,7 +69,8 @@ w/ FREE month</div>
 <br />
                 <div className={classes.bold} style={{color:"#56595B", fontSize:"20px", paddingBottom:"10px",}}>MONTHLY</div>
                 <div className={classes.bold} style={{fontSize:"40px", color:"#56595B",paddingBottom:"10px",}}>$80/m</div>
-                <span className={classes.bold} style={{color:"#56595B"}}>$100 Set-Up</span>
+                <span className={classes.bold} style={{color:"#56595B"}}>$100 Set-Up</span><br />
+                <span style={{color:"#56595B"}}>(Normally $500)</span>
                 <br />
                 <a target="_blank" href="" className={classes.getStartedLinksp}>
                   Subscribe NOW
@@ -92,18 +93,18 @@ w/ FREE month</div>
           <div style={{ textAlign: "center",paddingBottom:"20px" }}>
           <img src={Dms} style={{ width:"100%", maxWidth:"200px"}}/>
         </div>
-                <div className={classes.productCol}>
-                <div className={classes.bold} style={{color:"#5BC1B8"}}>- EMAIL MARKETING CAMPAIGNS</div>
-                <div className={classes.bold} style={{color:"#5BC1B8"}}>- IDX WEBSITE</div>
-                <div className={classes.bold} style={{color:"#5BC1B8"}}>- ADVANCED PRODUCTIVITY CRM</div>
-                <div className={classes.bold} style={{color:"#5BC1B8"}}>- CMA WIZARD</div>
-                <div className={classes.bold} style={{color:"#56595B"}}>- SOCIAL MEDIA SERVICES</div>
+                <div className={classes.productCol} style={{ textAlign: "left", paddingLeft:"20px", paddingRight:"20px"}}>
+                <div className={classes.bold} style={{color:"#5BC1B8"}}>• EMAIL MARKETING CAMPAIGNS</div>
+                <div className={classes.bold} style={{color:"#5BC1B8"}}>• IDX WEBSITE</div>
+                <div className={classes.bold} style={{color:"#5BC1B8"}}>• ADV. PRODUCTIVITY CRM</div>
+                <div className={classes.bold} style={{color:"#5BC1B8"}}>• CMA WIZARD</div>
+                <div className={classes.bold} style={{color:"#56595B"}}>• BLOG</div>
+                <div className={classes.bold} style={{color:"#56595B"}}>• SOCIAL MEDIA SERVICES:</div>
                 <span style={{color:"#56595B"}}><span className={classes.bold}>MLS Feed Listing Pushes:</span><br />
                   • Facebook<br />
                   • LinkedIn<br />
                   • Twitter<br />
                   • YouTube</span><br />
-                <div className={classes.bold} style={{color:"#56595B"}}>- BLOG</div>
                 </div>
 
                 <div>
@@ -139,23 +140,24 @@ w/ FREE month</div>
           <div style={{ textAlign: "center",paddingBottom:"20px" }}>
           <img src={Elite} style={{ width:"100%", maxWidth:"200px"}}/>
         </div>
-                <div className={classes.productCol}> 
-                <div className={classes.bold} style={{color:"#EE5A55"}}>- LEAD GENERATION</div>
+                <div className={classes.productCol} style={{ textAlign: "left", paddingLeft:"20px", paddingRight:"20px"}}> 
+                <div className={classes.bold} style={{color:"#EE5A55"}}>• LEAD GENERATION:</div>
                 <span style={{color:"#EE5A55"}}>
                 •	Pay-Per-Click Campaigns in<br />
                 Google, Bing &amp; Yahoo<br />
                 •	Facebook Ads</span><br />
-                <div className={classes.bold} style={{color:"#5BC1B8"}}>- EMAIL MARKETING CAMPAIGNS</div>
-                <div className={classes.bold} style={{color:"#5BC1B8"}}>- IDX WEBSITE</div>
-                <div className={classes.bold} style={{color:"#5BC1B8"}}>- ADVANCED PRODUCTIVITY CRM</div>
-                <div className={classes.bold} style={{color:"#5BC1B8"}}>- CMA WIZARD</div>
-                <div className={classes.bold} style={{color:"#56595B"}}>- SOCIAL MEDIA SERVICES</div>
+                <div className={classes.bold} style={{color:"#5BC1B8"}}>• EMAIL MARKETING CAMPAIGNS</div>
+                <div className={classes.bold} style={{color:"#5BC1B8"}}>• IDX WEBSITE</div>
+                <div className={classes.bold} style={{color:"#5BC1B8"}}>• ADV. PRODUCTIVITY CRM</div>
+                <div className={classes.bold} style={{color:"#5BC1B8"}}>• CMA WIZARD</div>
+                <div className={classes.bold} style={{color:"#56595B"}}>• BLOG</div>
+                <div className={classes.bold} style={{color:"#56595B"}}>• SOCIAL MEDIA SERVICES:</div>
                 <span style={{color:"#56595B"}}><span className={classes.bold}>MLS Feed Listing Pushes:</span><br />
                   • Facebook<br />
                   • LinkedIn<br />
                   • Twitter<br />
                   • YouTube</span><br />
-                <div className={classes.bold} style={{color:"#56595B"}}>- BLOG</div>
+                
                 </div>
 
 
