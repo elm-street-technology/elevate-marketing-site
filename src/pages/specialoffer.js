@@ -53,7 +53,7 @@ const specialoffer = ({ classes }) => {
           <img src={Social_pro} style={{ width:"100%", maxWidth:"200px"}}/>
         </div>
             
-                <div> 
+                <div className={classes.productCol}> 
                 <div className={classes.bold} style={{color:"#56595B"}}>- SOCIAL MEDIA SERVICES</div>
                 <span style={{color:"#56595B"}}><span className={classes.bold}>MLS Feed Listing Pushes:</span><br />
                   • Facebook<br />
@@ -61,10 +61,12 @@ const specialoffer = ({ classes }) => {
                   • Twitter<br />
                   • YouTube</span><br />
                 <div className={classes.bold} style={{color:"#56595B"}}>- BLOG</div>
-                <br />
-                Annual Agreement 
-w/ FREE month
-<br /><br />
+                </div>
+
+                <div>
+                  <div >Annual Agreement 
+w/ FREE month</div>
+<br />
                 <div className={classes.bold} style={{color:"#56595B", fontSize:"20px", paddingBottom:"10px",}}>MONTHLY</div>
                 <div className={classes.bold} style={{fontSize:"40px", color:"#56595B",paddingBottom:"10px",}}>$80/m</div>
                 <span className={classes.bold} style={{color:"#56595B"}}>$100 Set-Up</span>
@@ -76,10 +78,11 @@ w/ FREE month
                     <div className={classes.bold} style={{color:"#56595B", fontSize:"20px", paddingBottom:"10px",}}>ANNUAL</div>
                 <div className={classes.bold} style={{fontSize:"40px", color:"#56595B",paddingBottom:"10px",}}>$864</div>
                 <span className={classes.bold} style={{color:"#56595B"}}>$0 Set-Up</span>
-                </div>
+                <br />
                 <a target="_blank" href="" className={classes.getStartedLinksp}>
                   Subscribe NOW
                     </a>
+                    </div>
 
             </div>
             </div>
@@ -89,7 +92,7 @@ w/ FREE month
           <div style={{ textAlign: "center",paddingBottom:"20px" }}>
           <img src={Dms} style={{ width:"100%", maxWidth:"200px"}}/>
         </div>
-                <div>
+                <div className={classes.productCol}>
                 <div className={classes.bold} style={{color:"#5BC1B8"}}>- EMAIL MARKETING CAMPAIGNS</div>
                 <div className={classes.bold} style={{color:"#5BC1B8"}}>- IDX WEBSITE</div>
                 <div className={classes.bold} style={{color:"#5BC1B8"}}>- ADVANCED PRODUCTIVITY CRM</div>
@@ -101,28 +104,33 @@ w/ FREE month
                   • Twitter<br />
                   • YouTube</span><br />
                 <div className={classes.bold} style={{color:"#56595B"}}>- BLOG</div>
-                <br />
-                <span style={{color:"#5BC1B8"}}>Annual Agreement 
-w/ FREE month</span>
-<br /><br />
-<div className={classes.bold} style={{color:"#5BC1B8", fontSize:"20px", paddingBottom:"10px",}}>MONTHLY</div>
-                <div className={classes.bold} style={{fontSize:"40px", color:"#5BC1B8",paddingBottom:"10px",}}>$150/m</div>
-                <span style={{color:"#5BC1B8"}}>(Normally $199/m)</span><br />
-                <span className={classes.bold} style={{color:"#5BC1B8"}}>$200 Set-Up</span><br />
-                <span style={{color:"#5BC1B8"}}>(Normally $700)</span>
-                <br />
-                <a target="_blank" href="" className={classes.getStartedLinkdms}>
-                  Subscribe NOW
-                    </a>
-
-                    <div className={classes.bold} style={{color:"#5BC1B8", fontSize:"20px", paddingBottom:"10px",}}>ANNUAL</div>
-                <div className={classes.bold} style={{fontSize:"40px", color:"#5BC1B8",paddingBottom:"10px",}}>$1,620</div>
-                <span style={{color:"#5BC1B8"}}>(Normally $2,149)</span><br />
-                <span className={classes.bold} style={{color:"#5BC1B8"}}>$0 Set-Up</span>
                 </div>
-                <a target="_blank" href="" className={classes.getStartedLinkdms}>
-                  Subscribe NOW
-                    </a>
+
+                <div>
+                  <div style={{color:"#5BC1B8",}}>Annual Agreement w/ FREE month</div>
+                  <br />
+                  <div className={classes.bold} style={{color:"#5BC1B8", fontSize:"20px", paddingBottom:"10px",}}>MONTHLY</div>
+                                  <div className={classes.bold} style={{fontSize:"40px", color:"#5BC1B8",paddingBottom:"10px",}}>$150/m</div>
+                                  <span style={{color:"#5BC1B8"}}>(Normally $199/m)</span><br />
+                                  <span className={classes.bold} style={{color:"#5BC1B8"}}>$200 Set-Up</span><br />
+                                  <span style={{color:"#5BC1B8"}}>(Normally $700)</span>
+                                  <br />
+                                  <a target="_blank" href="" className={classes.getStartedLinkdms}>
+                                    Subscribe NOW
+                                      </a>
+
+                                      <div className={classes.bold} style={{color:"#5BC1B8", fontSize:"20px", paddingBottom:"10px",}}>ANNUAL</div>
+                                  <div className={classes.bold} style={{fontSize:"40px", color:"#5BC1B8",paddingBottom:"10px",}}>$1,620</div>
+                                  <span style={{color:"#5BC1B8"}}>(Normally $2,149)</span><br />
+                                  <span className={classes.bold} style={{color:"#5BC1B8"}}>$0 Set-Up</span>
+                                  <br />
+                                  <a target="_blank" href="" className={classes.getStartedLinkdms}>
+                                    Subscribe NOW
+                                      </a>
+                  </div>
+
+
+
           </div>
           </div>
 
@@ -131,7 +139,7 @@ w/ FREE month</span>
           <div style={{ textAlign: "center",paddingBottom:"20px" }}>
           <img src={Elite} style={{ width:"100%", maxWidth:"200px"}}/>
         </div>
-                <div> 
+                <div className={classes.productCol}> 
                 <div className={classes.bold} style={{color:"#EE5A55"}}>- LEAD GENERATION</div>
                 <span style={{color:"#EE5A55"}}>
                 •	Pay-Per-Click Campaigns in<br />
@@ -148,11 +156,14 @@ w/ FREE month</span>
                   • Twitter<br />
                   • YouTube</span><br />
                 <div className={classes.bold} style={{color:"#56595B"}}>- BLOG</div>
-                <br />
-                <span style={{color:"#EE5A55"}}>6 Month Agreement</span>
-<br /><br />
+                </div>
 
-<div className={classes.bold} style={{color:"#EE5A55", fontSize:"20px", paddingBottom:"10px",}}>MONTHLY</div>
+
+                <div>
+                <span style={{color:"#EE5A55"}}>6 Month Agreement</span>
+                <br /><br />
+
+                <div className={classes.bold} style={{color:"#EE5A55", fontSize:"20px", paddingBottom:"10px",}}>MONTHLY</div>
                 <div className={classes.bold} style={{fontSize:"40px", color:"#EE5A55",paddingBottom:"10px",}}>$749/m</div>
                 <span style={{color:"#EE5A55"}}>(Normally $899/m)</span><br />
                 <span className={classes.bold} style={{color:"#EE5A55"}}>$500 Set-Up</span><br />
@@ -163,10 +174,12 @@ w/ FREE month</span>
                     </a>
                     <div className={classes.bold} style={{color:"#524493", fontSize:"20px"}}>+ LEAD SCRUBBING</div>
                 <span className={classes.bold} style={{color:"#524493"}}>$300/m</span>
-                </div>
+                <br />
                 <a target="_blank" href="" className={classes.getStartedLinkpro}>
                   Subscribe NOW
                     </a>
+                </div>
+                
           </div>
           </div>
 
@@ -551,6 +564,12 @@ export default withStyles((theme) => ({
     position: "relative",
     top:"12px",
     right:"4px"
-  }
+  },
+  productCol: {
+    minHeight: "160px",
 
+    [theme.breakpoints[900]]: {
+      minHeight: "500px",
+    },
+  },
 }))(specialoffer);
