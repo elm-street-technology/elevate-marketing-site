@@ -53,10 +53,10 @@ const specialoffer = ({ classes }) => {
           <img src={Social_pro} style={{ width:"100%", maxWidth:"200px"}}/>
         </div>
             
-                <div className={classes.productCol} style={{ textAlign: "left", paddingLeft:"20px", paddingRight:"20px" }}>
+                <div className={classes.productCol} style={{ textAlign: "left", paddingLeft:"10px", paddingRight:"10px" }}>
                 <div className={classes.bold} style={{color:"#56595B"}}>• BLOG</div>
                 <div className={classes.bold} style={{color:"#56595B"}}>• SOCIAL MEDIA SERVICES:</div>
-                <span style={{color:"#56595B"}}><span className={classes.bold}> MLS Feed Listing Pushes:</span><br />
+                <span style={{color:"#56595B", fontSize:"14px", lineHeight:"16px"}}><span className={classes.bold}> MLS Feed Listing Pushes:</span><br />
                    • Facebook<br />
                    • LinkedIn<br />
                    • Twitter<br />
@@ -93,14 +93,14 @@ w/ FREE month</div>
           <div style={{ textAlign: "center",paddingBottom:"20px" }}>
           <img src={Dms} style={{ width:"100%", maxWidth:"200px"}}/>
         </div>
-                <div className={classes.productCol} style={{ textAlign: "left", paddingLeft:"20px", paddingRight:"20px"}}>
+                <div className={classes.productCol} style={{ textAlign: "left", paddingLeft:"10px", paddingRight:"10px"}}>
                 <div className={classes.bold} style={{color:"#5BC1B8"}}>• EMAIL MARKETING CAMPAIGNS</div>
                 <div className={classes.bold} style={{color:"#5BC1B8"}}>• IDX WEBSITE</div>
                 <div className={classes.bold} style={{color:"#5BC1B8"}}>• ADV. PRODUCTIVITY CRM</div>
                 <div className={classes.bold} style={{color:"#5BC1B8"}}>• CMA WIZARD</div>
                 <div className={classes.bold} style={{color:"#56595B"}}>• BLOG</div>
                 <div className={classes.bold} style={{color:"#56595B"}}>• SOCIAL MEDIA SERVICES:</div>
-                <span style={{color:"#56595B"}}><span className={classes.bold}>MLS Feed Listing Pushes:</span><br />
+                <span style={{color:"#56595B", fontSize:"14px", lineHeight:"16px"}}><span className={classes.bold}>MLS Feed Listing Pushes:</span><br />
                   • Facebook<br />
                   • LinkedIn<br />
                   • Twitter<br />
@@ -140,9 +140,9 @@ w/ FREE month</div>
           <div style={{ textAlign: "center",paddingBottom:"20px" }}>
           <img src={Elite} style={{ width:"100%", maxWidth:"200px"}}/>
         </div>
-                <div className={classes.productCol} style={{ textAlign: "left", paddingLeft:"20px", paddingRight:"20px"}}> 
+                <div className={classes.productCol} style={{ textAlign: "left", paddingLeft:"10px", paddingRight:"10px"}}> 
                 <div className={classes.bold} style={{color:"#EE5A55"}}>• LEAD GENERATION:</div>
-                <span style={{color:"#EE5A55"}}>
+                <span style={{color:"#EE5A55", fontSize:"14px", lineHeight:"16px"}}>
                 •	Pay-Per-Click Campaigns in<br />
                 Google, Bing &amp; Yahoo<br />
                 •	Facebook Ads</span><br />
@@ -152,7 +152,7 @@ w/ FREE month</div>
                 <div className={classes.bold} style={{color:"#5BC1B8"}}>• CMA WIZARD</div>
                 <div className={classes.bold} style={{color:"#56595B"}}>• BLOG</div>
                 <div className={classes.bold} style={{color:"#56595B"}}>• SOCIAL MEDIA SERVICES:</div>
-                <span style={{color:"#56595B"}}><span className={classes.bold}>MLS Feed Listing Pushes:</span><br />
+                <span style={{color:"#56595B", fontSize:"14px", lineHeight:"16px"}}><span className={classes.bold}>MLS Feed Listing Pushes:</span><br />
                   • Facebook<br />
                   • LinkedIn<br />
                   • Twitter<br />
