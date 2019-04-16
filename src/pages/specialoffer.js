@@ -65,13 +65,13 @@ const specialoffer = ({ classes }) => {
 
                 <div>
                   <div className={classes.bold} style={{color:"#56595B", textAlign: "center"}}>12 MONTH AGREEMENT<br /> 
-INCLUDES 1 FREE MONTH
+                  <span style={{color:"#f88616"}}>INCLUDES 1 FREE MONTH</span>
 </div>
 <br />
 <div style={{color:"#56595B", textAlign: "center",}}>
-<div className={classes.bold} style={{color:"#56595B", fontSize:"20px",}}>MONTHLY</div>
-<div className={classes.bold} style={{color:"#56595B", fontSize:"20px",}}>$80/m</div>
-<div className={classes.bold}>One Time Set-Up: <span style={{textDecoration:"line-through"}}>$500</span> <span style={{color:"#f88616"}}>$100</span></div>
+<div className={classes.bold} style={{color:"#56595B",}}>MONTHLY</div>
+<div style={{color:"#56595B",}}>$80/m</div>
+<div>One Time Set-Up: <span style={{textDecoration:"line-through"}}>$500</span> <span style={{color:"#f88616"}} className={classes.bold}>$100</span></div>
 </div>
               
                
@@ -80,9 +80,9 @@ INCLUDES 1 FREE MONTH
                     </a>
                     
                     <div style={{color:"#56595B", textAlign: "center",}}>
-<div className={classes.bold} style={{color:"#56595B", fontSize:"20px",}}>ANNUAL PRE-PAY</div>
-<div className={classes.bold} style={{color:"#56595B", fontSize:"20px",}}>$864/12m</div>
-<div className={classes.bold}>$0 Set-Up</div>
+<div className={classes.bold} style={{color:"#56595B",}}>ANNUAL PRE-PAY</div>
+<div style={{color:"#56595B",}}>$864/12m</div>
+<div>$0 Set-Up</div>
 </div>
                 <a target="_blank" href="" className={classes.getStartedLinksp}>
                   Subscribe NOW
