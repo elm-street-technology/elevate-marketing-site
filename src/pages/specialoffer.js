@@ -165,12 +165,11 @@ const specialoffer = ({ classes }) => {
 
 
                 <div>
-                <span className={classes.bold} style={{color:"#EE5A55"}}>6 MONTH<br />
-                AGREEMENT</span>
+                <span className={classes.bold} style={{color:"#EE5A55"}}>6 MONTH AGREEMENT</span>
                 <br /><br />
 
 
-                <div className={classes.bold} style={{color:"#EE5A55",}}>MONTHLY</div>
+                <div className={classes.bold} style={{color:"#EE5A55", paddingTop:"28px"}}>MONTHLY</div>
 <div style={{color:"#EE5A55",}}><span style={{textDecoration:"line-through"}}>$899/m</span> <span style={{color:"#f88616"}} className={classes.bold}>$749/m</span></div>
 <div style={{color:"#EE5A55",}}>One Time Set-Up: <span style={{textDecoration:"line-through"}}>$800</span> <span style={{color:"#f88616"}} className={classes.bold}>$500</span></div>
 
@@ -178,12 +177,12 @@ const specialoffer = ({ classes }) => {
                 <a target="_blank" href="https://elmstreettechnology.recurly.com/subscribe/elevateelite" className={classes.getStartedLinkelite}>
                   Subscribe NOW
                     </a>
-                    <div className={classes.bold} style={{color:"#524493",}}>+ LEAD SCRUBBING</div>
-                <span style={{color:"#524493"}}>$300/m</span>
+                    <div className={classes.bold} style={{color:"#EE5A55",}}>+ LEAD SCRUBBING</div>
+                <span style={{color:"#EE5A55"}}>$300/m</span>
                 <br />
-                <a target="_blank" href="https://elmstreettechnology.recurly.com/subscribe/elevateelitepro" className={classes.getStartedLinkpro}>
+                <div style={{paddingTop:"28px"}}><a target="_blank" href="https://elmstreettechnology.recurly.com/subscribe/elevateelitepro" className={classes.getStartedLinkelite}>
                   Subscribe NOW
-                    </a>
+                    </a></div>
                 </div>
                 
           </div>
