@@ -34,7 +34,7 @@ const specialoffer = ({ classes }) => {
         <div className={classes.top}>
           <div className={classes.centerHeading} style={{paddingBottom:"35px"}}>
             <div className={classes.heading}><strong>A Special Offer from Elevate</strong></div>
-            <div className={classes.bold}>expires Friday, April 19th at 6pm PST
+            <div className={classes.bold}>Expires Friday, April 19th at 6pm PST
             
 </div>
           </div>
@@ -75,7 +75,7 @@ const specialoffer = ({ classes }) => {
 </div>
               
                
-                <a target="_blank" href="" className={classes.getStartedLinksp}>
+                <a target="_blank" href="https://elmstreettechnology.recurly.com/subscribe/elevatesocialpro" className={classes.getStartedLinksp}>
                   Subscribe NOW
                     </a>
                     
@@ -84,7 +84,7 @@ const specialoffer = ({ classes }) => {
 <div style={{color:"#56595B",}}>$864/12m</div>
 <div>$0 Set-Up</div>
 </div>
-                <a target="_blank" href="" className={classes.getStartedLinksp}>
+                <a target="_blank" href="https://elmstreettechnology.recurly.com/subscribe/annualesp" className={classes.getStartedLinksp}>
                   Subscribe NOW
                     </a>
                     </div>
@@ -112,24 +112,23 @@ const specialoffer = ({ classes }) => {
                 </div>
 
                 <div>
-                  <div style={{color:"#5BC1B8",}}>Annual Agreement w/ FREE month</div>
+                <div className={classes.bold} style={{color:"#5BC1B8", textAlign: "center"}}>12 MONTH AGREEMENT<br /> 
+                  <span style={{color:"#f88616"}}>INCLUDES 1 FREE MONTH</span>
+</div>
                   <br />
-                  <div className={classes.bold} style={{color:"#5BC1B8", fontSize:"20px", paddingBottom:"10px",}}>MONTHLY</div>
-                                  <div className={classes.bold} style={{fontSize:"40px", color:"#5BC1B8",paddingBottom:"10px",}}>$150/m</div>
-                                  <span style={{color:"#5BC1B8"}}>(Normally $199/m)</span><br />
-                                  <span className={classes.bold} style={{color:"#5BC1B8"}}>$200 Set-Up</span><br />
-                                  <span style={{color:"#5BC1B8"}}>(Normally $700)</span>
-                                  <br />
-                                  <a target="_blank" href="" className={classes.getStartedLinkdms}>
+                  <div className={classes.bold} style={{color:"#5BC1B8",}}>MONTHLY</div>
+<div style={{color:"#5BC1B8",}}><span style={{textDecoration:"line-through"}}>$199/m</span> <span style={{color:"#f88616"}} className={classes.bold}>$150/m</span></div>
+<div style={{color:"#5BC1B8",}}>One Time Set-Up: <span style={{textDecoration:"line-through"}}>$700</span> <span style={{color:"#f88616"}} className={classes.bold}>$200</span></div>
+
+
+                                  <a target="_blank" href="https://elmstreettechnology.recurly.com/subscribe/edigitalmarketingsystem" className={classes.getStartedLinkdms}>
                                     Subscribe NOW
                                       </a>
 
-                                      <div className={classes.bold} style={{color:"#5BC1B8", fontSize:"20px", paddingBottom:"10px",}}>ANNUAL</div>
-                                  <div className={classes.bold} style={{fontSize:"40px", color:"#5BC1B8",paddingBottom:"10px",}}>$1,620</div>
-                                  <span style={{color:"#5BC1B8"}}>(Normally $2,149)</span><br />
-                                  <span className={classes.bold} style={{color:"#5BC1B8"}}>$0 Set-Up</span>
-                                  <br />
-                                  <a target="_blank" href="" className={classes.getStartedLinkdms}>
+                                      <div className={classes.bold} style={{color:"#5BC1B8",}}>ANNUAL PRE-PAY</div>
+<div style={{color:"#5BC1B8",}}><span style={{textDecoration:"line-through"}}>$2,149/m</span> <span style={{color:"#f88616"}} className={classes.bold}>$1,620/12m</span></div>
+<div style={{color:"#5BC1B8",}}>$0 Set-Up</div>
+                                  <a target="_blank" href="https://elmstreettechnology.recurly.com/subscribe/annualdms" className={classes.getStartedLinkdms}>
                                     Subscribe NOW
                                       </a>
                   </div>
@@ -166,22 +165,23 @@ const specialoffer = ({ classes }) => {
 
 
                 <div>
-                <span style={{color:"#EE5A55"}}>6 Month Agreement</span>
+                <span className={classes.bold} style={{color:"#EE5A55"}}>6 MONTH<br />
+                AGREEMENT</span>
                 <br /><br />
 
-                <div className={classes.bold} style={{color:"#EE5A55", fontSize:"20px", paddingBottom:"10px",}}>MONTHLY</div>
-                <div className={classes.bold} style={{fontSize:"40px", color:"#EE5A55",paddingBottom:"10px",}}>$749/m</div>
-                <span style={{color:"#EE5A55"}}>(Normally $899/m)</span><br />
-                <span className={classes.bold} style={{color:"#EE5A55"}}>$500 Set-Up</span><br />
-                <span style={{color:"#EE5A55"}}>(Normally $800)</span>
-                <br />
-                <a target="_blank" href="" className={classes.getStartedLinkelite}>
+
+                <div className={classes.bold} style={{color:"#EE5A55",}}>MONTHLY</div>
+<div style={{color:"#EE5A55",}}><span style={{textDecoration:"line-through"}}>$899/m</span> <span style={{color:"#f88616"}} className={classes.bold}>$749/m</span></div>
+<div style={{color:"#EE5A55",}}>One Time Set-Up: <span style={{textDecoration:"line-through"}}>$800</span> <span style={{color:"#f88616"}} className={classes.bold}>$500</span></div>
+
+                
+                <a target="_blank" href="https://elmstreettechnology.recurly.com/subscribe/elevateelite" className={classes.getStartedLinkelite}>
                   Subscribe NOW
                     </a>
-                    <div className={classes.bold} style={{color:"#524493", fontSize:"20px"}}>+ LEAD SCRUBBING</div>
-                <span className={classes.bold} style={{color:"#524493"}}>$300/m</span>
+                    <div className={classes.bold} style={{color:"#524493",}}>+ LEAD SCRUBBING</div>
+                <span style={{color:"#524493"}}>$300/m</span>
                 <br />
-                <a target="_blank" href="" className={classes.getStartedLinkpro}>
+                <a target="_blank" href="https://elmstreettechnology.recurly.com/subscribe/elevateelitepro" className={classes.getStartedLinkpro}>
                   Subscribe NOW
                     </a>
                 </div>
@@ -195,8 +195,7 @@ const specialoffer = ({ classes }) => {
 
 
 <div style={{ textAlign: "center", padding: "35px", fontSize:"12px", lineHeight:"18px" }}>
-Sales tax charged where applicable. Please note that setup fees are non-refundable. By completing this agreement, you confirm and affirm that you have read, understood and agree to the full Terms of Service of the Elevate product you are purchasing. You agree to pay Elm Street Technology the fees for
-the Elevate Products as indicated by the attached agreement. Visit TryElevate.com for full Terms of Service, Refund Policy, Privacy Policy &amp; DMCA Notice. Questions? - 877.218.9771<br /><br />
+Sales tax charged where applicable.  Please note that setup fees are non-refundable.  <a target="_blank" href="http://tryelevate.com/terms-of-service/" >Full Terms of Service</a><br /><br />
 </div>
 
 
@@ -429,8 +428,8 @@ export default withStyles((theme) => ({
     marginBottom: "20px",
   },
   getStartedLinkdms: {
-    minWidth: "250px",
-    maxWidth: "250px",
+    minWidth: "200px",
+    maxWidth: "200px",
     alignContent: "center",
     justifyContent: "center",
     fontSize: "14px",
@@ -440,14 +439,14 @@ export default withStyles((theme) => ({
     backgroundColor: "#5BC1B8",
     color: "#FFF",
     textDecoration: "none",
-    padding: "14px 16px",
+    padding: "12px 14px",
     borderRadius: "4px",
-    margin: "16px auto",
+    margin: "14px auto",
     marginBottom: "20px",
   },
   getStartedLinkelite: {
-    minWidth: "250px",
-    maxWidth: "250px",
+    minWidth: "200px",
+    maxWidth: "200px",
     alignContent: "center",
     justifyContent: "center",
     fontSize: "14px",
@@ -457,14 +456,14 @@ export default withStyles((theme) => ({
     backgroundColor: "#EE5A55",
     color: "#FFF",
     textDecoration: "none",
-    padding: "14px 16px",
+    padding: "12px 14px",
     borderRadius: "4px",
-    margin: "16px auto",
+    margin: "14px auto",
     marginBottom: "20px",
   },
   getStartedLinkpro: {
-    minWidth: "250px",
-    maxWidth: "250px",
+    minWidth: "200px",
+    maxWidth: "200px",
     alignContent: "center",
     justifyContent: "center",
     fontSize: "14px",
@@ -474,9 +473,9 @@ export default withStyles((theme) => ({
     backgroundColor: "#524493",
     color: "#FFF",
     textDecoration: "none",
-    padding: "14px 16px",
+    padding: "12px 14px",
     borderRadius: "4px",
-    margin: "16px auto",
+    margin: "14px auto",
     marginBottom: "20px",
   },
 
