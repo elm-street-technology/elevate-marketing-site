@@ -75,7 +75,7 @@ const welcome_elite = ({ classes }) => {
               <div style={{textAlign:"center"}}>
                 <div className={classes.heading2}>Training Webinars</div>
                 <div style={{color:"#FFFFFF"}}>
-                Join a live walk-through with an Elevate Success Coach to explore your new service.
+                Join a live walk-through with our Elevate Success Team to explore your new service.
 
                 </div>
                 <a target="_blank" href="https://tryelevate.com/webinars/" className={classes.getStartedLink}>

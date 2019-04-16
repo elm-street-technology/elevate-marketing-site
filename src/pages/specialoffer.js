@@ -13,15 +13,16 @@ import PlayCircleFilled from "elevate-ui-icons/PlayCircleFilled";
 import CheckCircle from "elevate-ui-icons/CheckCircle";
 import SMBCLogo from "../images/smbcLogo.jpg";
 import Elite from "../images/elite.jpg";
-import Ignite from "../images/ignite.jpg";
-import Pro from "../images/pro.jpg";
+import Social_pro from "../images/social_pro.jpg";
+import Dms from "../images/dms.jpg";
 import Tour from "../images/tour_icon.png";
 import Web from "../images/webinar_icon.png";
+import Social from "../images/social_pic.jpg";
+import Email from "../images/email.jpg";
 import Star from "../images/star.png";
 import Encore from "../images/encore_icon.png";
 import Emails from "../images/6emails_pic.png";
 import Dose from "../images/dose_pic.png";
-import Leadpic from "../images/leadpic.jpg";
 import Freebg from "../images/free_bg.jpg";
 const specialoffer = ({ classes }) => {
 
@@ -29,6 +30,18 @@ const specialoffer = ({ classes }) => {
     <div className={classes.root}>
       <SEO />
     
+      <Container>
+        <div className={classes.top}>
+          <div className={classes.centerHeading} style={{paddingBottom:"35px"}}>
+            <div className={classes.heading}><strong>A Special Offer from Elevate</strong></div>
+            <div className={classes.bold}>expires Friday, April 19th at 6pm PST
+            
+</div>
+          </div>
+        </div>
+      </Container>
+
+
    
       <Container>
       
@@ -37,22 +50,34 @@ const specialoffer = ({ classes }) => {
         <div className={classes.infoboxGray2}>
           <div className={classes.column3} style={{ textAlign: "center", paddingBottom: "35px", }}>
           <div style={{ textAlign: "center",paddingBottom:"20px" }}>
-          <img src={Ignite} style={{ width:"100%", maxWidth:"200px"}}/>
+          <img src={Social_pro} style={{ width:"100%", maxWidth:"200px"}}/>
         </div>
             
                 <div> 
-                <div className={classes.bold} style={{color:"#f7960a"}}>- Pay-Per-Click Lead Generation</div>
-                <span style={{color:"#f7960a"}}>(Google, Bing, Yahoo)</span><br />
-                <div className={classes.bold} style={{color:"#f7960a"}}>- Advanced CRM</div>
-                <div className={classes.bold} style={{color:"#f7960a"}}>- CMA Wizard</div>
-                <br /><br />
-                <div className={classes.bold} style={{fontSize:"50px", paddingBottom:"20px", color:"#f7960a"}}>$549/m</div>
-                <span style={{color:"#f7960a"}}>(a savings of $100/m)</span>
-                <br /><br />
-                <div className={classes.bold} style={{color:"#f7960a"}}>One-Time Setup Fee: $200</div>
-                <span style={{color:"#f7960a"}}>(Normally $1000)</span>
+                <div className={classes.bold} style={{color:"#56595B"}}>- SOCIAL MEDIA SERVICES</div>
+                <span style={{color:"#56595B"}}><span className={classes.bold}>MLS Feed Listing Pushes:</span><br />
+                  • Facebook<br />
+                  • LinkedIn<br />
+                  • Twitter<br />
+                  • YouTube</span><br />
+                <div className={classes.bold} style={{color:"#56595B"}}>- BLOG</div>
+                <br />
+                Annual Agreement 
+w/ FREE month
+<br /><br />
+                <div className={classes.bold} style={{color:"#56595B", fontSize:"20px", paddingBottom:"10px",}}>MONTHLY</div>
+                <div className={classes.bold} style={{fontSize:"40px", color:"#56595B",paddingBottom:"10px",}}>$80/m</div>
+                <span className={classes.bold} style={{color:"#56595B"}}>$100 Set-Up</span>
+                <br />
+                <a target="_blank" href="" className={classes.getStartedLinksp}>
+                  Subscribe NOW
+                    </a>
+                    
+                    <div className={classes.bold} style={{color:"#56595B", fontSize:"20px", paddingBottom:"10px",}}>ANNUAL</div>
+                <div className={classes.bold} style={{fontSize:"40px", color:"#56595B",paddingBottom:"10px",}}>$864</div>
+                <span className={classes.bold} style={{color:"#56595B"}}>$0 Set-Up</span>
                 </div>
-                <a target="_blank" href="https://elmstreettechnology.recurly.com/subscribe/ignite" className={classes.getStartedLinkignite}>
+                <a target="_blank" href="" className={classes.getStartedLinksp}>
                   Subscribe NOW
                     </a>
 
@@ -62,26 +87,40 @@ const specialoffer = ({ classes }) => {
           <div className={classes.column3} style={{ textAlign: "center", paddingBottom: "35px" }}>
           
           <div style={{ textAlign: "center",paddingBottom:"20px" }}>
-          <img src={Elite} style={{ width:"100%", maxWidth:"200px"}}/>
+          <img src={Dms} style={{ width:"100%", maxWidth:"200px"}}/>
         </div>
                 <div>
-                <div className={classes.bold} style={{color:"#ef5b4d"}}>- IDX Website</div>
-                <div className={classes.bold} style={{color:"#ef5b4d"}}>- Blog</div>
-                <div className={classes.bold} style={{color:"#ef5b4d"}}>- Social Media Services</div>
-                <div className={classes.bold} style={{color:"#ef5b4d"}}>- Email Marketing</div>
-                <div className={classes.bold} style={{color:"#f7960a"}}>- Pay-Per-Click Lead Generation</div>
-                <span style={{color:"#f7960a"}}>(Google, Bing, Yahoo)</span><br />
-                <div className={classes.bold} style={{color:"#f7960a"}}>- Advanced CRM</div>
-                <div className={classes.bold} style={{color:"#f7960a"}}>- CMA Wizard</div>
+                <div className={classes.bold} style={{color:"#5BC1B8"}}>- EMAIL MARKETING CAMPAIGNS</div>
+                <div className={classes.bold} style={{color:"#5BC1B8"}}>- IDX WEBSITE</div>
+                <div className={classes.bold} style={{color:"#5BC1B8"}}>- ADVANCED PRODUCTIVITY CRM</div>
+                <div className={classes.bold} style={{color:"#5BC1B8"}}>- CMA WIZARD</div>
+                <div className={classes.bold} style={{color:"#56595B"}}>- SOCIAL MEDIA SERVICES</div>
+                <span style={{color:"#56595B"}}><span className={classes.bold}>MLS Feed Listing Pushes:</span><br />
+                  • Facebook<br />
+                  • LinkedIn<br />
+                  • Twitter<br />
+                  • YouTube</span><br />
+                <div className={classes.bold} style={{color:"#56595B"}}>- BLOG</div>
+                <br />
+                <span style={{color:"#5BC1B8"}}>Annual Agreement 
+w/ FREE month</span>
 <br /><br />
-<div className={classes.bold} style={{fontSize:"50px", paddingBottom:"20px", color:"#ef5b4d"}}>$749/m</div>
-<span style={{color:"#ef5b4d"}}>(a savings of $100/m)</span>
+<div className={classes.bold} style={{color:"#5BC1B8", fontSize:"20px", paddingBottom:"10px",}}>MONTHLY</div>
+                <div className={classes.bold} style={{fontSize:"40px", color:"#5BC1B8",paddingBottom:"10px",}}>$150/m</div>
+                <span style={{color:"#5BC1B8"}}>(Normally $199/m)</span><br />
+                <span className={classes.bold} style={{color:"#5BC1B8"}}>$200 Set-Up</span><br />
+                <span style={{color:"#5BC1B8"}}>(Normally $700)</span>
+                <br />
+                <a target="_blank" href="" className={classes.getStartedLinkdms}>
+                  Subscribe NOW
+                    </a>
 
-                <br /><br />
-                <div className={classes.bold} style={{color:"#ef5b4d"}}>One-Time Setup Fee: $200</div>
-                <span style={{color:"#ef5b4d"}}>(Normally $1000)</span>
+                    <div className={classes.bold} style={{color:"#5BC1B8", fontSize:"20px", paddingBottom:"10px",}}>ANNUAL</div>
+                <div className={classes.bold} style={{fontSize:"40px", color:"#5BC1B8",paddingBottom:"10px",}}>$1,620</div>
+                <span style={{color:"#5BC1B8"}}>(Normally $2,149)</span><br />
+                <span className={classes.bold} style={{color:"#5BC1B8"}}>$0 Set-Up</span>
                 </div>
-                <a target="_blank" href="https://elmstreettechnology.recurly.com/subscribe/elevateelite" className={classes.getStartedLinkelite}>
+                <a target="_blank" href="" className={classes.getStartedLinkdms}>
                   Subscribe NOW
                     </a>
           </div>
@@ -90,28 +129,42 @@ const specialoffer = ({ classes }) => {
           <div className={classes.infoboxGray2}>
           <div className={classes.column3} style={{ textAlign: "center", paddingBottom: "35px" }}>
           <div style={{ textAlign: "center",paddingBottom:"20px" }}>
-          <img src={Pro} style={{ width:"100%", maxWidth:"200px"}}/>
+          <img src={Elite} style={{ width:"100%", maxWidth:"200px"}}/>
         </div>
                 <div> 
-                <div className={classes.bold} style={{color:"#524493"}}>- Lead Scrubbing Concierge</div>
-                <div className={classes.bold} style={{color:"#ef5b4d"}}>- IDX Website</div>
-                <div className={classes.bold} style={{color:"#ef5b4d"}}>- Blog</div>
-                <div className={classes.bold} style={{color:"#ef5b4d"}}>- Social Media Services</div>
-                <div className={classes.bold} style={{color:"#ef5b4d"}}>- Email Marketing</div>
-                <div className={classes.bold} style={{color:"#f7960a"}}>- Pay-Per-Click Lead Generation</div>
-                <span style={{color:"#f7960a"}}>(Google, Bing, Yahoo)</span><br />
-                <div className={classes.bold} style={{color:"#f7960a"}}>- Advanced CRM</div>
-                <div className={classes.bold} style={{color:"#f7960a"}}>- CMA Wizard</div>
-                <br /><br />
+                <div className={classes.bold} style={{color:"#EE5A55"}}>- LEAD GENERATION</div>
+                <span style={{color:"#EE5A55"}}>
+                •	Pay-Per-Click Campaigns in<br />
+                Google, Bing &amp; Yahoo<br />
+                •	Facebook Ads</span><br />
+                <div className={classes.bold} style={{color:"#5BC1B8"}}>- EMAIL MARKETING CAMPAIGNS</div>
+                <div className={classes.bold} style={{color:"#5BC1B8"}}>- IDX WEBSITE</div>
+                <div className={classes.bold} style={{color:"#5BC1B8"}}>- ADVANCED PRODUCTIVITY CRM</div>
+                <div className={classes.bold} style={{color:"#5BC1B8"}}>- CMA WIZARD</div>
+                <div className={classes.bold} style={{color:"#56595B"}}>- SOCIAL MEDIA SERVICES</div>
+                <span style={{color:"#56595B"}}><span className={classes.bold}>MLS Feed Listing Pushes:</span><br />
+                  • Facebook<br />
+                  • LinkedIn<br />
+                  • Twitter<br />
+                  • YouTube</span><br />
+                <div className={classes.bold} style={{color:"#56595B"}}>- BLOG</div>
+                <br />
+                <span style={{color:"#EE5A55"}}>6 Month Agreement</span>
+<br /><br />
 
-                <div className={classes.bold} style={{fontSize:"50px", paddingBottom:"20px", color:"#524493"}}>$1049/m</div>
-<span style={{color:"#524493"}}>(a savings of $100/m)</span>
-
-                <br /><br />
-                <div className={classes.bold} style={{color:"#524493"}}>One-Time Setup Fee: $200</div>
-                <span style={{color:"#524493"}}>(Normally $1000)</span>
+<div className={classes.bold} style={{color:"#EE5A55", fontSize:"20px", paddingBottom:"10px",}}>MONTHLY</div>
+                <div className={classes.bold} style={{fontSize:"40px", color:"#EE5A55",paddingBottom:"10px",}}>$749/m</div>
+                <span style={{color:"#EE5A55"}}>(Normally $899/m)</span><br />
+                <span className={classes.bold} style={{color:"#EE5A55"}}>$500 Set-Up</span><br />
+                <span style={{color:"#EE5A55"}}>(Normally $800)</span>
+                <br />
+                <a target="_blank" href="" className={classes.getStartedLinkelite}>
+                  Subscribe NOW
+                    </a>
+                    <div className={classes.bold} style={{color:"#524493", fontSize:"20px"}}>+ LEAD SCRUBBING</div>
+                <span className={classes.bold} style={{color:"#524493"}}>$300/m</span>
                 </div>
-                <a target="_blank" href="https://elmstreettechnology.recurly.com/subscribe/elevateelitepro" className={classes.getStartedLinkpro}>
+                <a target="_blank" href="" className={classes.getStartedLinkpro}>
                   Subscribe NOW
                     </a>
           </div>
@@ -122,15 +175,129 @@ const specialoffer = ({ classes }) => {
       </Container>
 
 
-<div style={{ textAlign: "center", paddingBottom: "35px" }}>
-<div className={classes.bold}>30 Day Money Back Guarantee!</div>
-Applicable Tax in the following states:<br />
-MA, CT, NY, IL, TX, CA, AZ, TN, PA
+<div style={{ textAlign: "center", padding: "35px", fontSize:"12px", lineHeight:"18px" }}>
+Sales tax charged where applicable. Please note that setup fees are non-refundable. By completing this agreement, you confirm and affirm that you have read, understood and agree to the full Terms of Service of the Elevate product you are purchasing. You agree to pay Elm Street Technology the fees for
+the Elevate Products as indicated by the attached agreement. Visit TryElevate.com for full Terms of Service, Refund Policy, Privacy Policy &amp; DMCA Notice. Questions? - 877.218.9771<br /><br />
 </div>
+
+
+
+<div style={{backgroundColor:"#fafafa",}}>
+      <Container>
+            <div className={classes.section}></div>
+        <div className={classes.top}>
+          <div className={classes.centerHeading} style={{paddingBottom:"55px",}}>
+            <div className={classes.heading}>
+            Trying to decide which Elevate solution is right for you?
+            </div>
+            Schedule 15-minutes of one-on-one with an Elevate coach
+            <br />
+            <br />
+            <div dangerouslySetInnerHTML={{
+            __html: '<iframe style="height:740px" src="https://calendly.com/estsean/15min-1?embed_domain=&amp;embed_type=Inline" width="100%" height="100%" frameborder="0"></iframe>',
+          }}>
+            </div>
+          </div>
+
+          </div>
+          </Container>
+        </div>
+
+
+
+
+
+
+
+
+<div style={{backgroundColor:"gray",backgroundImage:"url("+Freebg+")"}}>
+      <Container>
+            <div className={classes.section}></div>
+        <div className={classes.top}>
+          <div className={classes.centerHeading} style={{paddingBottom:"55px",}}>
+            <div className={classes.heading} style={{color:"#ffffff"}}>
+            FREE Marketing Goodies
+            </div>
+            Keep the learning going!
+          </div>
+        </div>
+      
+      
+        <div className={classes.top}>
+          <div className={classes.column3a} style={{ textAlign: "center", paddingBottom: "35px" }}>
+          <div style={{ textAlign: "center",paddingBottom:"20px" }}>
+          <img src={Dose} style={{ width:"100%", maxWidth:"300px"}}/>
+        </div>
+            
+          <div className={classes.heading2} style={{color:"#ffffff"}}>Daily Marketing Tips<br />
+free daily email
+</div>
+                <div> 
+                Sign up to receive your daily dose<br />
+                of marketing awesomeness<br />
+                delivered straight to your inbox.
+                </div>
+                <a target="_blank" href="http://3sixtyfive.agency/" className={classes.getStartedLink2}>
+                  Register Today
+                    </a>
+                
+
+            </div>
+          <div className={classes.column3a} style={{ textAlign: "center", paddingBottom: "35px" }}>
+          <div style={{ textAlign: "center",paddingBottom:"20px" }}>
+          <img src={Emails} style={{ width:"100%", maxWidth:"300px"}}/>
+        </div>
+          <div className={classes.heading2} style={{color:"#ffffff"}}>Email Marketing Tips<br />
+free download
+</div>
+                <div> 
+                6 emails every real estate agent<br />
+                should be sending to nurture past,<br />
+                present &amp; future clients.
+                </div>
+                <a target="_blank" href="/assets/6emails_elevate.pdf" className={classes.getStartedLink2}>
+                  Download PDF
+                    </a>
+          </div>
+
+          <div className={classes.column3a} style={{ textAlign: "center", paddingBottom: "35px" }}>
+          <div style={{ textAlign: "center",paddingBottom:"20px" }}>
+          <img src={Social} style={{ width:"100%", maxWidth:"300px"}}/>
+        </div>
+          <div className={classes.heading2} style={{color:"#ffffff"}}>Social Media Boot Camp<br />
+Takeaways
+</div>
+                <div> 
+                Quick tips, tricks<br />
+                &amp; takeaways from our<br />
+                Social Media Boot Camp Webinar.
+                </div>
+                <a target="_blank" href="/assets/elevatesocialmediaebook.pdf" className={classes.getStartedLink2}>
+                  Download PDF
+                    </a>
+          </div>
+
+
+
+          </div>
+      </Container>
+      </div>
+
+
+
+
+
+
+
 
 
     </div>
 
+
+
+
+
+  
 
 
 
@@ -183,9 +350,25 @@ export default withStyles((theme) => ({
     paddingLeft:"18px",
     verticalAlign: "top",
   },
+  
+  column2:{
+    width:"710px",
+    maxWidth: "100%",
+    paddingRight:"10px",
+    paddingLeft:"10px",
+    verticalAlign: "top",
+  },
 
   column3:{
     width:"300px",
+    maxWidth: "100%",
+    paddingRight:"10px",
+    paddingLeft:"10px",
+    verticalAlign: "top",
+  },
+
+  column3a:{
+    width:"350px",
     maxWidth: "100%",
     paddingRight:"10px",
     paddingLeft:"10px",
@@ -209,7 +392,7 @@ export default withStyles((theme) => ({
     margin: "16px auto",
     marginBottom: "20px",
   },
-  getStartedLinkignite: {
+  getStartedLinksp: {
     minWidth: "250px",
     maxWidth: "250px",
     alignContent: "center",
@@ -218,7 +401,24 @@ export default withStyles((theme) => ({
     fontWeight: "700",
     display: "block",
     letterSpacing: ".25px",
-    backgroundColor: "#f7960a",
+    backgroundColor: "#56595B",
+    color: "#FFF",
+    textDecoration: "none",
+    padding: "14px 16px",
+    borderRadius: "4px",
+    margin: "16px auto",
+    marginBottom: "20px",
+  },
+  getStartedLinkdms: {
+    minWidth: "250px",
+    maxWidth: "250px",
+    alignContent: "center",
+    justifyContent: "center",
+    fontSize: "14px",
+    fontWeight: "700",
+    display: "block",
+    letterSpacing: ".25px",
+    backgroundColor: "#5BC1B8",
     color: "#FFF",
     textDecoration: "none",
     padding: "14px 16px",
@@ -235,7 +435,7 @@ export default withStyles((theme) => ({
     fontWeight: "700",
     display: "block",
     letterSpacing: ".25px",
-    backgroundColor: "#ef5b4d",
+    backgroundColor: "#EE5A55",
     color: "#FFF",
     textDecoration: "none",
     padding: "14px 16px",
