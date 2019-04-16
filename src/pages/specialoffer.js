@@ -64,22 +64,26 @@ const specialoffer = ({ classes }) => {
                 </div>
 
                 <div>
-                  <div >Annual Agreement 
-w/ FREE month</div>
+                  <div className={classes.bold} style={{color:"#56595B", textAlign: "center"}}>12 MONTH AGREEMENT<br /> 
+INCLUDES 1 FREE MONTH
+</div>
 <br />
-                <div className={classes.bold} style={{color:"#56595B", fontSize:"20px", paddingBottom:"10px",}}>MONTHLY</div>
-                <div className={classes.bold} style={{fontSize:"40px", color:"#56595B",paddingBottom:"10px",}}>$80/m</div>
-                <span className={classes.bold} style={{color:"#56595B"}}>$100 Set-Up</span><br />
-                <span style={{color:"#56595B"}}>(Normally $500)</span>
-                <br />
+<div style={{color:"#56595B", textAlign: "center",}}>
+<div className={classes.bold} style={{color:"#56595B", fontSize:"20px",}}>MONTHLY</div>
+<div className={classes.bold} style={{color:"#56595B", fontSize:"20px",}}>$80/m</div>
+<div className={classes.bold}>One Time Set-Up: <span style={{textDecoration:"line-through"}}>$500</span> <span style={{color:"#f88616"}}>$100</span></div>
+</div>
+              
+               
                 <a target="_blank" href="" className={classes.getStartedLinksp}>
                   Subscribe NOW
                     </a>
                     
-                    <div className={classes.bold} style={{color:"#56595B", fontSize:"20px", paddingBottom:"10px",}}>ANNUAL</div>
-                <div className={classes.bold} style={{fontSize:"40px", color:"#56595B",paddingBottom:"10px",}}>$864</div>
-                <span className={classes.bold} style={{color:"#56595B"}}>$0 Set-Up</span>
-                <br />
+                    <div style={{color:"#56595B", textAlign: "center",}}>
+<div className={classes.bold} style={{color:"#56595B", fontSize:"20px",}}>ANNUAL PRE-PAY</div>
+<div className={classes.bold} style={{color:"#56595B", fontSize:"20px",}}>$864/12m</div>
+<div className={classes.bold}>$0 Set-Up</div>
+</div>
                 <a target="_blank" href="" className={classes.getStartedLinksp}>
                   Subscribe NOW
                     </a>
@@ -205,7 +209,7 @@ the Elevate Products as indicated by the attached agreement. Visit TryElevate.co
             <div className={classes.heading}>
             Trying to decide which Elevate solution is right for you?
             </div>
-            Schedule 15-minutes of one-on-one with an Elevate coach
+            Schedule 15-minutes of one-on-one time with an Elevate coach.
             <br />
             <br />
             <div dangerouslySetInnerHTML={{
@@ -408,8 +412,8 @@ export default withStyles((theme) => ({
     marginBottom: "20px",
   },
   getStartedLinksp: {
-    minWidth: "250px",
-    maxWidth: "250px",
+    minWidth: "200px",
+    maxWidth: "200px",
     alignContent: "center",
     justifyContent: "center",
     fontSize: "14px",
@@ -419,9 +423,9 @@ export default withStyles((theme) => ({
     backgroundColor: "#56595B",
     color: "#FFF",
     textDecoration: "none",
-    padding: "14px 16px",
+    padding: "12px 14px",
     borderRadius: "4px",
-    margin: "16px auto",
+    margin: "14px auto",
     marginBottom: "20px",
   },
   getStartedLinkdms: {
