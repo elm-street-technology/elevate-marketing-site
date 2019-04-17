@@ -23,6 +23,7 @@ import Star from "../images/star.png";
 import Encore from "../images/encore_icon.png";
 import Emails from "../images/6emails_pic.png";
 import Dose from "../images/dose_pic.png";
+import Line from "../images/line.png";
 import Freebg from "../images/free_bg.jpg";
 const specialoffer = ({ classes }) => {
 
@@ -64,6 +65,8 @@ const specialoffer = ({ classes }) => {
                 </div>
 
                 <div>
+                <img src={Line} style={{ width:"100%", maxWidth:"200px"}}/>
+                <br />
                   <div className={classes.bold} style={{color:"#56595B", textAlign: "center"}}>12 MONTH AGREEMENT<br /> 
                   <span style={{color:"#f88616"}}>INCLUDES 1 FREE MONTH</span>
 </div>
@@ -112,6 +115,8 @@ const specialoffer = ({ classes }) => {
                 </div>
 
                 <div>
+                <img src={Line} style={{ width:"100%", maxWidth:"200px"}}/>
+                <br />
                 <div className={classes.bold} style={{color:"#5BC1B8", textAlign: "center"}}>12 MONTH AGREEMENT<br /> 
                   <span style={{color:"#f88616"}}>INCLUDES 1 FREE MONTH</span>
 </div>
@@ -165,6 +170,8 @@ const specialoffer = ({ classes }) => {
 
 
                 <div>
+                <img src={Line} style={{ width:"100%", maxWidth:"200px"}}/>
+                <br />
                 <span className={classes.bold} style={{color:"#EE5A55"}}>6 MONTH AGREEMENT</span>
                 <br /><br />
 
@@ -289,7 +296,7 @@ Takeaways
                 &amp; takeaways from our<br />
                 Social Media Boot Camp Webinar.
                 </div>
-                <a target="_blank" href="/assets/elevatesocialmediaebook.pdf" className={classes.getStartedLink2}>
+                <a target="_blank" href="/assets/elevate_socialmedia_tips.pdf" className={classes.getStartedLink2}>
                   Download PDF
                     </a>
           </div>
