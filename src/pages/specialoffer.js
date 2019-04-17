@@ -184,7 +184,7 @@ const specialoffer = ({ classes }) => {
                 <a target="_blank" href="https://elmstreettechnology.recurly.com/subscribe/elevateelite" className={classes.getStartedLinkelite}>
                   Subscribe NOW
                     </a>
-                    <div className={classes.bold} style={{color:"#EE5A55",}}>+ LEAD SCRUBBING</div>
+                    <div className={classes.bold} style={{color:"#EE5A55",}}>ADD LEAD SCRUBBING</div>
                 <span style={{color:"#EE5A55"}}>$300/m</span>
                 <br />
                 <div style={{paddingTop:"28px"}}><a target="_blank" href="https://elmstreettechnology.recurly.com/subscribe/elevateelitepro" className={classes.getStartedLinkelite}>

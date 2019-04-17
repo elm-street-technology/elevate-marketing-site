@@ -16,6 +16,7 @@ import Tour from "../images/tour_icon.png";
 import Web from "../images/webinar_icon.png";
 import Star from "../images/star.png";
 import Encore from "../images/encore_icon.png";
+import Social from "../images/social_pic.jpg";
 import Emails from "../images/6emails_pic.png";
 import Dose from "../images/dose_pic.png";
 import Leadpic from "../images/leadpic.jpg";
@@ -115,7 +116,7 @@ with our helpful resources:
                 </div>
               </div>
                 <div>
-                <a target="_blank" href="https://calendly.com/estsean/15min-1/02-12-2019" className={classes.getStartedLink2}>
+                <a target="_blank" href="https://calendly.com/estsean/15-min-demo" className={classes.getStartedLink2}>
                   Schedule NOW
                     </a>
                 </div>
@@ -208,16 +209,17 @@ with our helpful resources:
 
           <div className={classes.column3} style={{ textAlign: "center", paddingBottom: "35px" }}>
           <div style={{ textAlign: "center",paddingBottom:"20px" }}>
-          <img src={Leadpic} style={{ width:"100%", maxWidth:"300px"}}/>
+          <img src={Social} style={{ width:"100%", maxWidth:"300px"}}/>
         </div>
-          <div className={classes.heading2} style={{color:"#ffffff"}}>Basics of<br />
-          Lead Generation</div>
+          <div className={classes.heading2} style={{color:"#ffffff"}}>Social Media Boot Camp<br />
+Takeaways
+</div>
                 <div> 
-                A step-by-step guide to setting<br />
-                up successful lead generation.
+                Quick tips, tricks &amp; takeaways from our<br />
+                Social Media Boot Camp Webinar.
                 </div>
-                <a target="_blank" href="/assets/lead_gen_basics.pdf" className={classes.getStartedLink2}>
-                  Download Guide
+                <a target="_blank" href="/assets/elevate_socialmedia_tips.pdf" className={classes.getStartedLink2}>
+                  Download PDF
                     </a>
           </div>
 
