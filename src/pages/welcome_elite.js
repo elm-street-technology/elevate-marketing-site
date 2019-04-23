@@ -64,7 +64,7 @@ const welcome_elite = ({ classes }) => {
                 </span>
               </div>
                 <div>
-                <a target="_blank" href="/assets/elevate_elite_ebook.pdf" className={classes.getStartedLink2}>
+                <a target="_blank" href="/assets/elevate_welcome_ebook.pdf" className={classes.getStartedLink2}>
                  Download PDF
                     </a>
                 </div>
