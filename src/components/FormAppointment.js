@@ -16,53 +16,15 @@ class FormAppointment extends Component {
     super(props);
     this.state = {
       formState: null,
-      showCalForm: true,
       firstname: '',
       lastname: '',
       email: '',
       phone: '',
-      market1: '',
-      market2: '',
-      market3: '',
-      company: '',
-      calEmbed: '',
     };
 
-    this.showCalForm = this.showCalForm.bind(this);
     this.setFormVal = this.setFormVal.bind(this);
   }
 
-  showCalForm(e) {
-    console.log('showcalform');
-    console.log(e.target);
-
-    if(e.target.checked){
-      var interestedMarkets = "Interested markets: "+this.state.market1+" - "+this.state.market2+" - "+this.state.market3;
-      var thisCompany = "Company: "+this.state.company;
-      var eventDesc = encodeURIComponent(thisCompany+", "+interestedMarkets);
-
-      var tempCode = `
-      <!-- Calendly inline widget begin -->
-      <iframe style="height:740px" src="https://calendly.com/estsean/15min-1?embed_domain=&amp;embed_type=Inline&amp;name=`;
-      
-      tempCode += encodeURIComponent(this.state.firstname+" "+this.state.lastname);
-      tempCode += `&amp;email=`;
-      tempCode += encodeURIComponent(this.state.email);
-      tempCode += `&amp;a1=`;
-      tempCode += this.state.phone.replace(/\D/g, '');
-      tempCode += `&amp;a2=`;
-      tempCode += eventDesc;
-      tempCode += `" width="100%" height="100%" frameborder="0"></iframe>
-          <!--Calendly inline widget end-- >
-      `;
-      this.setState({ calEmbed: tempCode});
-
-      this.setState({ showCalForm: true});
-    }
-    else{
-      this.setState({ showCalForm: false});
-    }
-  }
 
   setFormVal(e){
     console.log(e.target.name);
@@ -147,7 +109,7 @@ You can also speak to a member of our lead generation team immediately by callin
             else{
               var meeting_request = '';
             }
-            const body = { ...values, notes: values.demorequest == true ? "Requested demo, Interested Markets: " + values.market1 + "," + values.market2 + "," + values.market3 : "Interested Markets: " + values.market1 + "," + values.market2 + "," + values.market3, 
+            const body = { ...values,  
             utm_campaign: window.utm_tags ? window.utm_tags.campaign : "", 
             utm_source: window.utm_tags ? window.utm_tags.source : "", 
             utm_medium: window.utm_tags ? window.utm_tags.medium : "", 
@@ -191,7 +153,7 @@ You can also speak to a member of our lead generation team immediately by callin
                 </div>
                 <Field id="email" name="email" label="Email" component={Input} className={classes.field} onBlur={this.setFormVal} />
                 <Field id="phone" name="phone" label="Phone" component={Input} className={classes.field} type="tel" onBlur={this.setFormVal} />
-                {this.state.showCalForm && <div>
+                <div>
                     <div className={classes.topRow}>
                           <div style={{ width: "60%", display: "inline-block"}}>
                       <Field id="meetingdate" name="meetingdate" label="Requested Call Date" component={Datetime} timeFormat={false} isValidDate={valid} renderDay={renderDay} 
@@ -226,12 +188,11 @@ You can also speak to a member of our lead generation team immediately by callin
                         </div>
                        </div>
                     </div>
-                  </div>}
+                  </div>
                 <button type="submit" className={classes.signUpBtn} disabled={isSubmitting}>
                   Schedule Call
                 </button>
               </div>
-              <div dangerouslySetInnerHTML={{ __html: `<script type="text/javascript" src="https://assets.calendly.com/assets/external/widget.js"></script>` }} />
             </Form>} />
       </div>;
   }
