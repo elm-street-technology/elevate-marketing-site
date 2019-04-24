@@ -4,6 +4,7 @@ import withStyles from "elevate-ui/withStyles";
 import Container from "../components/Container";
 import SEO from "../components/SEO";
 import Logo from "../components/Logo";
+import FormAppointment from "../components/FormAppointment";
 import Hr from "elevate-ui/Hr";
 import WistiaVideo from "../components/WistiaVideo";
 import Chat from "elevate-ui-icons/Chat";
@@ -191,10 +192,9 @@ Sales tax charged where applicable.  Please note that setup fees are non-refunda
             Schedule 15-minutes of one-on-one time with an Elevate coach.
             <br />
             <br />
-            <div dangerouslySetInnerHTML={{
-            __html: '<iframe style="height:740px" src="https://calendly.com/estsean/15min-1?embed_domain=&amp;embed_type=Inline" width="100%" height="100%" frameborder="0"></iframe>',
-          }}>
-            </div>
+            
+          <FormAppointment />
+            
           </div>
 
           </div>
