@@ -29,7 +29,8 @@ import Emails from "../images/6emails_pic.png";
 import Dose from "../images/dose_pic.png";
 import Line from "../images/line.png";
 import Freebg from "../images/free_bg.jpg";
-const leadgenspecialoffer = ({ classes }) => {
+
+const leadGenSpecialOffer = ({ classes }) => {
 
   return (
     <div className={classes.root}>
@@ -574,4 +575,4 @@ export default withStyles((theme) => ({
       minHeight: "350px",
     },
   },
-}))(leadgenspecialoffer);
+}))(leadGenSpecialOffer);
