@@ -187,7 +187,7 @@ Sales tax charged where applicable.  Please note that setup fees are non-refunda
         <div className={classes.top}>
           <div className={classes.centerHeading} style={{paddingBottom:"55px",}}>
             <div className={classes.heading}>
-            Trying to decide which Elevate solution is right for you?
+            Request Personal Demo
             </div>
             Schedule 15-minutes of one-on-one time with an Elevate coach.
             <br />
