@@ -4,6 +4,7 @@ import withStyles from "elevate-ui/withStyles";
 import Container from "../components/Container";
 import SEO from "../components/SEO";
 import Logo from "../components/Logo";
+import FormAppointment from "../components/FormAppointment";
 import Hr from "elevate-ui/Hr";
 import WistiaVideo from "../components/WistiaVideo";
 import Chat from "elevate-ui-icons/Chat";
@@ -28,7 +29,8 @@ import Emails from "../images/6emails_pic.png";
 import Dose from "../images/dose_pic.png";
 import Line from "../images/line.png";
 import Freebg from "../images/free_bg.jpg";
-const leadgenspecialoffer = ({ classes }) => {
+
+const leadGenSpecialOffer = ({ classes }) => {
 
   return (
     <div className={classes.root}>
@@ -186,15 +188,14 @@ Sales tax charged where applicable.  Please note that setup fees are non-refunda
         <div className={classes.top}>
           <div className={classes.centerHeading} style={{paddingBottom:"55px",}}>
             <div className={classes.heading}>
-            Trying to decide which Elevate solution is right for you?
+            Request Personal Demo
             </div>
             Schedule 15-minutes of one-on-one time with an Elevate coach.
             <br />
             <br />
-            <div dangerouslySetInnerHTML={{
-            __html: '<iframe style="height:740px" src="https://calendly.com/estsean/15min-1?embed_domain=&amp;embed_type=Inline" width="100%" height="100%" frameborder="0"></iframe>',
-          }}>
-            </div>
+            
+          <FormAppointment />
+            
           </div>
 
           </div>
@@ -574,4 +575,4 @@ export default withStyles((theme) => ({
       minHeight: "350px",
     },
   },
-}))(leadgenspecialoffer);
+}))(leadGenSpecialOffer);
