@@ -22,7 +22,11 @@ const ExitSurvey = ({ children, classes, data, tags }) => {
         <div >
             <div style={{ maxWidth: "900px", paddingBottom: "40px",marginBottom:"40px", marginRight:"auto",marginLeft:"auto"}}>
                 <div style={{ paddingLeft: "10px", paddingRight: "10px"}}>
-                    <FormExit />
+                  <div style={{textAlign:"center"}}>
+                  <p style={{fontSize:"26px",fontWeight:"700"}}>Exit Survey</p>
+                  <div style={{padding:"10px",marginBottom:"20px"}}>Please take a minute to complete our exit survey.</div>
+              </div>
+                  <FormExit />
                 </div>
             </div>
         </div>

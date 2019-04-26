@@ -8,19 +8,31 @@ import Input from "elevate-ui/Input";
 import RadioGroup from "elevate-ui/RadioGroup";
 import Typography from "elevate-ui/Typography";
 import withStyles from "elevate-ui/withStyles";
+import _ from 'lodash';
+import url from 'url';
 
 class FormExit extends Component {
   constructor(props) {
     super(props);
+
+    let urlObj = url.parse(window.location.href, true);
+    var presetEmail = '';
+    if (urlObj.query.e != undefined) {
+      presetEmail = urlObj.query.e
+    }
+
     this.state = {
       formState: null,
       showOtherProduct: false,
       showUnhappyReason: false,
       showWhereFound: false,
+      presetEmail: presetEmail,
     };
     this.handleOtherProduct = this.handleOtherProduct.bind(this);
     this.handleUnhappyReason = this.handleUnhappyReason.bind(this);
     this.handleWhereFound = this.handleWhereFound.bind(this);
+
+    
   }
 
   handleOtherProduct(e) {
@@ -48,7 +60,7 @@ class FormExit extends Component {
         >
           <div>
             <Typography type="heading3" gutterBottom>
-              Thank you for submitting your survey.
+              Thank you for submitting this survey.
             </Typography>
           
           </div>
@@ -62,10 +74,13 @@ class FormExit extends Component {
       );
     }
 
+    
+
     return (
       <div className={classNames(classes.root, className)}>
         <Formik
-          initialValues={{ email: "" }}
+          initialValues={{ email: this.state.presetEmail, survey: 645, customer: 6180, sendmail: 0,
+                            opt63978: '', opt63979: '', opt63981: '', opt63980: '', opt63982: '' }}
           validationSchema={() =>
             Yup.object().shape({
               email: Yup.string()
@@ -74,27 +89,34 @@ class FormExit extends Component {
             })
           }
           onSubmit={(values, { setSubmitting }) => {
+            console.log(values);
             const body = { ...values };
-            return fetch("https://easyemerge.com/plugins/elevate_form.php", {
+            let formData = new FormData();
+            const elements = Object.entries(body)
+            for (const element of elements) {
+              console.log(element);
+              formData.append(element[0], element[1]);
+            }
+
+            console.log(formData);
+
+            return fetch("https://secure.systememerge.com/plugins/submit_survey.php", {
               method: "POST",
-              headers: {
-                "Content-Type": "application/json; charset=utf-8",
-              },
-              body: JSON.stringify(body),
+              body: formData,
             })
               .then((response) => response.json())
               .then((res) => {
-                if (res.message === "ok") {
+                //if (res.message === "ok") {
                   this.setState({ formState: "success" });
-                } else {
-                  this.setState({ formState: "error" });
-                }
+                //} else {
+                 // this.setState({ formState: "error" });
+                //}
               })
               .catch((err) => {
-                this.setState({ formState: "error" });
+                this.setState({ formState: "success" });
               });
           }}
-          render={({ values, isSubmitting, props }) => (
+          render={({ values, isSubmitting}) => (
             <Form noValidate>
               <div
                 style={{
@@ -109,93 +131,99 @@ class FormExit extends Component {
                   label="Email"
                   component={Input}
                   className={classes.field}
+                  type="hidden"
                 />
-                <div style={{ textAlign: "left", lineHeight: "1.4em" }}>
+                <div style={{ textAlign: "left", lineHeight: "1.4em", paddingTop: "20px" }}>
                   <span className={classes.labelStyle}>
                     Reason for Cancellation
                   </span>
                   <div>
-                    <input type="checkbox" name="opt63978[]" value="7531" /> I have
+                    <Field type="radio" name="opt63978" value="7531" /> I have
                     closed / left my business &nbsp;
                   </div>
                   <div>
-                    <input type="checkbox" name="opt63978[]" value="7532" /> I no
+                    <Field type="radio" name="opt63978" value="7532" /> I no
                     longer need this product / service &nbsp;
                   </div>
                   <div>
                     <Field
-                      type="checkbox"
-                      name="opt63978[]"
+                      type="radio"
+                      name="opt63978"
                       value="7533"
-                      onChange={this.handleOtherProduct}
-                    />
-                    I am using another product &nbsp;
+                      onClick={this.handleOtherProduct}
+                    /> I am using another product &nbsp;
                     {this.state.showOtherProduct ? (
-                      <input
+                      <div>
+                      <Field
                         type="text"
                         id="opt63980"
                         name="opt63980"
-                        value=""
                         placeholder="Which product are you using?"
+                        className={classes.field} style={{ width: "100%" }}
                       />
+                      </div>
                     ) : (
                       ""
                     )}
                   </div>
                   <div>
                     <Field
-                      type="checkbox"
-                      name="opt63978[]"
+                      type="radio"
+                      name="opt63978"
                       value="7534"
-                      onChange={this.handleUnhappyReason}
+                      onClick={this.handleUnhappyReason}
                     /> I am
                     unhappy with this product / service &nbsp;
 
                     {this.state.showUnhappyReason ? (
-                      <input
-                        ype="text"
+                      <div>
+                      <Field
+                        type="text"
                         id="opt63981"
                         name="opt63981"
-                        value=""
                         placeholder="Reason why?"
+                          className={classes.field} style={{ width: "100%" }}
                       />
+                      </div>
                     ) : (
                         ""
                       )}
                   </div>
                 </div>
-                <div style={{ textAlign: "left", lineHeight: "1.4em" }}>
+                <div style={{ textAlign: "left", lineHeight: "1.4em", paddingTop: "20px" }}>
                   <span className={classes.labelStyle}>
                     How did you originally hear about Elevate?
                   </span>
                   <div>
-                    <input type="checkbox" name="opt63979[]" value="7535" /> I
+                    <Field type="radio" name="opt63979" value="7535" /> I
                     attended an educational boot camp
                   </div>
                   <div>
-                    <input type="checkbox" name="opt63979[]" value="7536" /> I
+                    <Field type="radio" name="opt63979" value="7536" /> I
                     received an email and/or social media invitation
                   </div>
                   <div>
-                    <input type="checkbox" name="opt63979[]" value="7537" /> I met
+                    <Field type="radio" name="opt63979" value="7537" /> I met
                     the team at a tradeshow / event
                   </div>
                   <div>
                     <Field
-                      type="checkbox"
-                      name="opt63979[]"
+                      type="radio"
+                      name="opt63979"
                       value="7538"
-                      onChange={this.handleWhereFound}
+                      onClick={this.handleWhereFound}
                     /> Other
 
                     {this.state.showWhereFound ? (
-                      <input
+                      <div>
+                      <Field
                         type="text"
                         id="opt63982"
                         name="opt63982"
-                        value=""
                         placeholder="Where did you find us?"
+                        className={classes.field} style={{ width: "100%" }}
                       />
+                      </div>
                     ) : (
                         ""
                       )}
@@ -203,11 +231,11 @@ class FormExit extends Component {
 
                   </div>
                 </div>
-                <div style={{ textAlign: "left", lineHeight: "1.4em" }}>
+                <div style={{ textAlign: "left", lineHeight: "1.4em",paddingTop:"20px" }}>
                   <span className={classes.labelStyle}>
                     Comments / Suggestions
                   </span>
-                  <textarea rows="4" id="opt63983" name="opt63983" />
+                  <Field component="textarea" rows="4" id="opt63983" name="opt63983" className={classes.field} style={{width:"100%",height:"120px"}}/>
                 </div>
                 <button
                   type="submit"
@@ -241,7 +269,7 @@ export default withStyles((theme) => ({
     width: "100%",
     color: "#888f96",
     display: "flex",
-    fontSize: "14px",
+    fontSize: "18px",
     alignItems: "center",
     lineHeight: "18px",
     fontWeight: "700",
@@ -252,6 +280,8 @@ export default withStyles((theme) => ({
     border: "2px solid #ECECEC",
     height: "50px",
     fontWeight: "600",
+    fontSize: "14px",
+    padding: "4px"
   },
   checkfield:{
     width:"20px",
