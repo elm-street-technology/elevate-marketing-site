@@ -15,6 +15,7 @@ class FormExit extends Component {
   constructor(props) {
     super(props);
 
+    // Checking to see if the email was submitted
     var presetEmail = '';
     if (typeof window !== 'undefined'){
       let urlObj = url.parse(window.location.href, true);
