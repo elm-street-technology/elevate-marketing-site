@@ -15,10 +15,12 @@ class FormExit extends Component {
   constructor(props) {
     super(props);
 
-    let urlObj = url.parse(window.location.href, true);
     var presetEmail = '';
-    if (urlObj.query.e != undefined) {
-      presetEmail = urlObj.query.e
+    if (typeof window !== 'undefined'){
+      let urlObj = url.parse(window.location.href, true);
+      if (urlObj.query.e != undefined) {
+        presetEmail = urlObj.query.e;
+      }
     }
 
     this.state = {
@@ -79,8 +81,7 @@ class FormExit extends Component {
     return (
       <div className={classNames(classes.root, className)}>
         <Formik
-          initialValues={{ email: this.state.presetEmail, survey: 645, customer: 6180, sendmail: 0,
-                            opt63978: '', opt63979: '', opt63981: '', opt63980: '', opt63982: '' }}
+          initialValues={{ email: this.state.presetEmail, survey: 645, customer: 6180, sendmail: 0, opt63978: '', opt63979: '', opt63981: '', opt63980: '', opt63982: '' }}
           validationSchema={() =>
             Yup.object().shape({
               email: Yup.string()
@@ -89,16 +90,12 @@ class FormExit extends Component {
             })
           }
           onSubmit={(values, { setSubmitting }) => {
-            console.log(values);
             const body = { ...values };
             let formData = new FormData();
             const elements = Object.entries(body)
             for (const element of elements) {
-              console.log(element);
               formData.append(element[0], element[1]);
             }
-
-            console.log(formData);
 
             return fetch("https://secure.systememerge.com/plugins/submit_survey.php", {
               method: "POST",
@@ -106,11 +103,7 @@ class FormExit extends Component {
             })
               .then((response) => response.json())
               .then((res) => {
-                //if (res.message === "ok") {
                   this.setState({ formState: "success" });
-                //} else {
-                 // this.setState({ formState: "error" });
-                //}
               })
               .catch((err) => {
                 this.setState({ formState: "success" });
