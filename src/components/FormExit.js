@@ -60,7 +60,7 @@ class FormExit extends Component {
         >
           <div>
             <Typography type="heading3" gutterBottom>
-              Thank you for submitting this survey.
+              Thank you for submitting this survey. We hope you will consider Elevate in the future.
             </Typography>
           
           </div>
