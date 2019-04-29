@@ -40,7 +40,7 @@ const leadGenSpecialOffer = ({ classes }) => {
         <div className={classes.top}>
           <div className={classes.centerHeading} style={{paddingBottom:"35px"}}>
             <div className={classes.heading}><strong>A Special Offer from Elevate</strong></div>
-            <div className={classes.bold}>Expires Friday, April 26th at 6pm PST.
+            <div className={classes.bold}>EXTENDED BY POPULAR DEMAND! Expires Tuesday, April 30th at 6pm PST.
             
 </div>
           </div>
