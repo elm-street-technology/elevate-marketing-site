@@ -115,9 +115,8 @@ const social_media_bareis = ({ classes }) => {
             N. Solano County Association of REALTORS<br />
             3690 Hilborn Rd. Fairfield, CA<br />
             <br />
-            <span className={classes.bold} style={{color:"#55c3ba",}}>Register For Your Desired Time:<br />
-            Boot Camp #1: 9:30am - 11:45am<br />
-            Boot Camp #2: 12:30pm - 2:45pm<br /></span>
+            <span className={classes.bold} style={{color:"#55c3ba",}}>
+            Boot Camp: 9:30am - 11:45am<br /></span>
             <a target="_blank" href="https://www.eventbrite.com/e/bareis-fairfield-ca-social-media-boot-camp-for-real-estate-professionals-registration-59861133261" className={classes.getStartedLink}>
                  Register Now
                     </a>
