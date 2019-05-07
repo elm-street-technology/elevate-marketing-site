@@ -36,7 +36,7 @@ const specialoffer = ({ classes }) => {
         <div className={classes.top}>
           <div className={classes.centerHeading} style={{paddingBottom:"35px"}}>
             <div className={classes.heading}><strong>A Special Offer from Elevate</strong></div>
-            <div className={classes.bold}>Expires Friday, April 19th at 6pm PST
+            <div className={classes.bold}>Expires Friday, May 10th at 6pm PST
             
 </div>
           </div>
