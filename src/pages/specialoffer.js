@@ -6,6 +6,7 @@ import SEO from "../components/SEO";
 import Logo from "../components/Logo";
 import Hr from "elevate-ui/Hr";
 import WistiaVideo from "../components/WistiaVideo";
+import FormAppointment2 from "../components/FormAppointment2";
 import Chat from "elevate-ui-icons/Chat";
 import QuestionAnswer from "elevate-ui-icons/QuestionAnswer";
 import ViewCarousel from "elevate-ui-icons/ViewCarousel";
@@ -206,26 +207,25 @@ Sales tax charged where applicable.  Please note that setup fees are non-refunda
 
 
 
-<div style={{backgroundColor:"#fafafa",}}>
-      <Container>
-            <div className={classes.section}></div>
-        <div className={classes.top}>
-          <div className={classes.centerHeading} style={{paddingBottom:"55px",}}>
-            <div className={classes.heading}>
-            Trying to decide which Elevate solution is right for you?
+      <div style={{ backgroundColor: "#fafafa", }}>
+        <Container>
+          <div className={classes.section}></div>
+          <div className={classes.top}>
+            <div className={classes.centerHeading} style={{ paddingBottom: "55px", }}>
+              <div className={classes.heading}>
+                Request Personal Demo
             </div>
-            Schedule 15-minutes of one-on-one time with an Elevate coach.
+              Schedule 15-minutes of one-on-one time with an Elevate coach.
             <br />
-            <br />
-            <div dangerouslySetInnerHTML={{
-            __html: '<iframe style="height:740px" src="https://calendly.com/estsean/15-min-demo?embed_domain=&amp;embed_type=Inline" width="100%" height="100%" frameborder="0"></iframe>',
-          }}>
+              <br />
+
+              <FormAppointment2 />
+
             </div>
-          </div>
 
           </div>
-          </Container>
-        </div>
+        </Container>
+      </div>
 
 
 
