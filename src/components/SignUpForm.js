@@ -271,7 +271,22 @@ class SignUpForm extends Component {
                 ]}
                 className={classes.field}
               />
+              {values.interests === "Lead Generation, Parsing & Scrubbing Services" && (
+                <div>
+                  <div style={{ width: "100%", textAlign: "center" }}>
+                    What are your top 3 markets of interest? (optional)
+                  </div>
+                  <Field id="market1" name="market1" label="City/State" component={Input} className={classes.field} onBlur={this.setFormVal} />
+                  <Field id="market2" name="market2" label="City/State" component={Input} className={classes.field} onBlur={this.setFormVal} />
+                  <Field id="market3" name="market3" label="City/State" component={Input} className={classes.field} onBlur={this.setFormVal} />
+                </div>
+              )}
+
+
+
+              <div className={classes.selectlabel} style={{marginTop:"40px"}}>
               Select date / time to speak to an Elevate Sales Representative:
+              </div>
 
                 <div>
                 <div className={classes.topRow}>
@@ -311,7 +326,7 @@ class SignUpForm extends Component {
               >
                 Tell Me More about Elevate
               </button>
-              <div style={{ fontSize: "11px" }}>
+              <div style={{ fontSize: "11px",textAlign: "center" }}>
                 By submitting this form, you are requesting to be contacted by a member of the Elevate Sales Team.<br />
                 Existing subscribers seeking support, please visit the <a href="https://elmstreettechnology.zendesk.com/hc/en-us">Elevate Help Center</a>.
               </div>
@@ -328,7 +343,7 @@ export default withStyles((theme) => ({
     display: "flex",
     flexDirection: "column",
     width: "100%",
-    maxWidth: "500px",
+    maxWidth: "600px",
     backgroundColor: "#FFF !important",
     margin: "0 auto",
   },
