@@ -54,17 +54,16 @@ class SignUpForm extends Component {
         >
           <Alert color="success">
             <Typography type="heading3" gutterBottom>
-              We’re here to help!
+              AWESOME.
             </Typography>
             <Typography type="heading6" gutterBottom>
-              An Elevate Success Coach will reach out to you asap to start you
-              on the path to pure productivity.
+              An Elevate sales representative will be in touch with you shortly.
             </Typography>
             <Typography type="heading4" gutterTop>
-              Can’t wait? Talk NOW at{" "}
+              If you'd like to speak to a sales representative NOW, please call{" "}
               <a href="tel:18057197394" className={classes.link}>
                 805.719.7394
-              </a>
+              </a>.
             </Typography>
           </Alert>
         </div>
@@ -89,7 +88,7 @@ class SignUpForm extends Component {
             role: "",
             roleOther: "",
             interests: [],
-            form: "contact_form",
+            form: "contact_formNew",
             list: 46483,
           }}
           validationSchema={() =>
@@ -116,7 +115,7 @@ class SignUpForm extends Component {
             const body = {
               ...values,
               roleOther: values.role === "Other" ? values.roleOther : "", // Just in case the user had typed in roleOther then changed their role to something else
-              interestStr: values.interests.join(","),
+              interestStr: values.interests.join(",") + ", Interested Markets: " + values.market1 + ", " + values.market2 + "," + values.market3,
               utm_campaign: (window.utm_tags) ? window.utm_tags.campaign : "",
               utm_source: (window.utm_tags) ? window.utm_tags.source : "",
               utm_medium: (window.utm_tags) ? window.utm_tags.medium : "",
