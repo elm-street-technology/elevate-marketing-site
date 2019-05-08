@@ -158,7 +158,7 @@ class SignUpForm extends Component {
             <Form noValidate>
               <Typography
                 type="heading6"
-                style={{ textAlign: "center", marginBottom: "32px" }}
+                style={{ textAlign: "center", marginBottom: "32px", color: "#55c3ba" }}
               >
                 Schedule your personal walk-through or call <a href="tel:18057197394" className={classes.link}>
                   805.719.7394
@@ -346,7 +346,6 @@ export default withStyles((theme) => ({
     maxWidth: "600px",
     backgroundColor: "#FFF !important",
     margin: "0 auto",
-    fontSize: '16px'
   },
   link: {
     color: "inherit",

@@ -52,7 +52,7 @@ export default withStyles((theme) => ({
     fontSize: "28px",
     fontWeight: "800",
     letterSpacing: ".14px",
-    color: "#2E2E35",
+    color: "#44ada4",
     textAlign: "center",
     marginBottom: "12px",
   },
