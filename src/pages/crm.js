@@ -22,7 +22,7 @@ const Crm = ({ children, classes, data, tags }) => {
 
       <Container>
         <div >
-                  <div style={{ maxWidth: "900px", backgroundColor: "#c9ced1", marginRight:"auto",marginLeft:"auto"}}>
+          <div style={{ maxWidth: "900px", backgroundColor: "#e9ecee", marginRight:"auto",marginLeft:"auto"}}>
                 <div className={classes.landingHeaderStyle}>
                     <img src={LandingHeader} style={{width:"100%"}} />
                 </div>
