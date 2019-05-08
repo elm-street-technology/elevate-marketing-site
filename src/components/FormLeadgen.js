@@ -113,8 +113,8 @@ class FormLeadgen extends Component {
               Got it!
             </Typography>
             <Typography type="heading5" gutterTop>
-        We’ll reach out to you asap via email or telephone.<br/>
-You can also speak to a member of our lead generation team immediately by calling <a href="tel:18449720260" className={classes.link}>844.972.0260</a>.
+        We'll check availability & reach out to you asap via email or telephone.<br/>
+              You can also speak to a lead generation specialist immediately by calling  <a href="tel:18057197394" className={classes.link}>805.719.7394</a>.
             </Typography>
           </div>
         </div>
@@ -130,7 +130,7 @@ You can also speak to a member of our lead generation team immediately by callin
     
 
     return <div className={classNames(classes.root, className)}>
-        <Formik initialValues={{ firstname: "", lastname: "", company: "", email: "", phone: "", market1: "", market2: "", market3: "", form: "leadgen_form", list: 57292 }} validationSchema={() => Yup.object().shape(
+        <Formik initialValues={{ firstname: "", lastname: "", company: "", email: "", phone: "", market1: "", market2: "", market3: "", form: "leadgen_formNew", list: 57292 }} validationSchema={() => Yup.object().shape(
               {
                 firstname: Yup.string().required("First name is required"),
                 lastname: Yup.string().required("Last name is required"),
@@ -188,13 +188,14 @@ You can also speak to a member of our lead generation team immediately by callin
           }} render={({ values, isSubmitting, handleBlur, handleChange }) => <Form noValidate>
               <div style={{ marginBottom: "30px" }}>
                 <div className={classes.headingLarge}>
-                  Limited Availability
+                  LIMITED AVAILABILITY ON EXCLUSIVE BUYER / SELLER LEADS
                 </div>
                 <div className={classes.headingSmall}>
-                  Exclusive Buyer/Seller Leads in Markets Across the U.S.
+                  Exclusive leads in markets across the U.S.
                 </div>
                 <div className={classes.headingText} style={{ marginTop: "10px" }}>
-                  Captured. Engaged. Qualified. We do the work for you!
+                  First Come. First Served.<br/>
+Check availability today.
                 </div>
               </div>
               <div style={{ maxWidth: "500px", marginLeft: "auto", marginRight: "auto" }}>
@@ -248,7 +249,10 @@ You can also speak to a member of our lead generation team immediately by callin
                   Check Availability
                 </button>
               </div>
-              <div dangerouslySetInnerHTML={{ __html: `<script type="text/javascript" src="https://assets.calendly.com/assets/external/widget.js"></script>` }} />
+            <div style={{ fontSize: "11px" }}>
+              By submitting this form, you are requesting to be contacted by a member of the Elevate Sales Team.<br />
+              Existing subscribers seeking support, please visit the <a href="https://elmstreettechnology.zendesk.com/hc/en-us">Elevate Help Center</a>.
+              </div>
             </Form>} />
       </div>;
   }

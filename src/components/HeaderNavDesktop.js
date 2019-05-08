@@ -45,7 +45,7 @@ const HeaderNavDesktop = ({ classes, className }) => {
           <Link className={classes.listItemLink} to="/elevate-elite">
             <li className={classes.listItem}>Elite</li>
           </Link>
-          <Link className={classes.listItemLink} to="/crm">
+          <Link className={classes.listItemLink} to="/elevate-crm">
             <li className={classes.listItem}>CRM</li>
           </Link>
           <Link className={classes.listItemLink} to="/recruiter">

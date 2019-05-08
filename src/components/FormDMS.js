@@ -8,6 +8,8 @@ import Input from "elevate-ui/Input";
 import RadioGroup from "elevate-ui/RadioGroup";
 import Typography from "elevate-ui/Typography";
 import withStyles from "elevate-ui/withStyles";
+import Datetime from "elevate-ui/Datetime";
+import moment from "moment";
 
 class FormDMS extends Component {
   constructor(props) {
@@ -20,6 +22,26 @@ class FormDMS extends Component {
   render() {
     const { formState } = this.state;
     const { classes, className } = this.props;
+
+    var valid = function (current) {
+      return current.day() !== 0 && current.day() !== 6;
+    };
+
+    var renderDay = function (props, currentDate, selectedDate) {
+
+      if (currentDate.month() == moment().month()) {
+        if (currentDate.date() < moment().date()) {
+          if (props.className == "rdtDay") {
+            props.className = "rdtDay rdtDisabled";
+          }
+        }
+      }
+      if (currentDate.month() < moment().month()) {
+        props.className = "rdtDay rdtDisabled";
+      }
+
+      return <td {...props}>{currentDate.date()}</td>;
+    };
 
     if (formState === "success") {
       return (
@@ -34,11 +56,11 @@ class FormDMS extends Component {
                                   
                       
             <Typography type="heading3" gutterBottom>
-              Got it!
+              Fantastic!
             </Typography>
             <Typography type="heading5" gutterTop>
         We’ll reach out to you asap via email or telephone.<br/>
-You can also speak to a member of our team immediately by calling <a href="tel:18449720260" className={classes.link}>844.972.0260</a>.
+              You can also speak to a member of our sales team immediately by calling  <a href="tel:18057197394" className={classes.link}>805.719.7394</a>.
             </Typography>
           </div>
         </div>
@@ -61,8 +83,10 @@ You can also speak to a member of our team immediately by calling <a href="tel:1
             email: "",
             phone: "",
             mls_number: "",
-            form: "dms_form",
+            form: "dms_form2",
             list: 57291,
+            meetingdate: '',
+            meetingtime: '',
           }}
           validationSchema={() =>
             Yup.object().shape({
@@ -77,13 +101,19 @@ You can also speak to a member of our team immediately by calling <a href="tel:1
             })
           }
           onSubmit={(values, { setSubmitting }) => {
+            if (values.meetingdate != undefined) {
+              var meeting_request = values.meetingdate.format("YYYY-MM-DD") + "T" + values.meetingtime.replace(" (EDT)", "") + "-04:00"
+            }
+            else {
+              var meeting_request = '';
+            }
             const body = {
               ...values,
               utm_campaign: (window.utm_tags) ? window.utm_tags.campaign : "",
               utm_source: (window.utm_tags) ? window.utm_tags.source : "",
               utm_medium: (window.utm_tags) ? window.utm_tags.medium : "",
               utm_term: (window.utm_tags) ? window.utm_tags.term : "",
-              notes: (values.demorequest == true) ? "Requested demo" : ""
+              demo_request_date: meeting_request
             };
             return fetch(
               "https://easyemerge.com/plugins/elevate_form.php",
@@ -116,15 +146,14 @@ You can also speak to a member of our team immediately by calling <a href="tel:1
                 this.setState({ formState: "error" });
               });
           }}
-          render={({ values, isSubmitting }) => (
+          render={({ values, isSubmitting,handleBlur, handleChange }) => (
             <Form noValidate>
               <div style={{marginBottom:"30px"}}>
                 <div className={classes.headingSmall}>Looking for</div>
                 <div className={classes.headingLarge}>One Single Source</div>
                 <div className={classes.headingSmall}>For all of your digital marketing needs?</div>
-                <div className={classes.headingText} style={{marginTop:"20px"}}>Email Marketing.  Social Media Marketing.  IDX Websites.  Lead Generation.  Lead Scrubbing.<br/>
-Let us show you how we make your marketing super easy...<br/>
-and super successful:</div>
+                <div className={classes.headingText} style={{ marginTop: "20px" }}>Email Marketing.  Social Media Marketing.  IDX Websites.  Lead Generation.  Lead Scrubbing.<br/>
+Let us show you how we make your marketing super easy...</div>
                 </div>
               <div style={{ maxWidth: "500px",marginLeft:"auto",marginRight:"auto"}}>
               <div className={classes.topRow}>
@@ -173,20 +202,49 @@ and super successful:</div>
                       className={classes.field}
                   />
                 Schedule an Elevate Demo:
-              <Field
-                  id="demorequest"
-                  name="demorequest"
-                  type="checkbox"
-                  value="yes"
-                  className={classes.checkfield}
-                />
+
+                <div>
+                  <div className={classes.topRow}>
+                    <Field id="meetingdate" name="meetingdate" label="Call Date" component={Datetime} timeFormat={false} isValidDate={valid} renderDay={renderDay} />
+                    <div style={{ margin: "8px auto 16px" }}>
+                      <label for="meetingtime" className={classes.selectlabel}>
+                        Call Time
+                        </label>
+                      <select name="meetingtime" value={values.meetingtime} onChange={handleChange} onBlur={handleBlur} style={{ display: "block" }} className={classes.selectfield}>
+                        <option value="" label="Select a time slot" />
+                        <option value="09:00:00">9:00am (EDT)</option>
+                        <option value="09:30:00">9:30am (EDT)</option>
+                        <option value="10:00:00">10:00am (EDT)</option>
+                        <option value="10:30:00">10:30am (EDT)</option>
+                        <option value="11:00:00">11:00am (EDT)</option>
+                        <option value="11:30:00">11:30am (EDT)</option>
+                        <option value="12:00:00">12:00pm (EDT)</option>
+                        <option value="12:30:00">12:30pm (EDT)</option>
+                        <option value="13:00:00">1:00pm (EDT)</option>
+                        <option value="13:30:00">1:30pm (EDT)</option>
+                        <option value="14:00:00">2:00pm (EDT)</option>
+                        <option value="14:30:00">2:30pm (EDT)</option>
+                        <option value="15:00:00">3:00pm (EDT)</option>
+                        <option value="15:30:00">3:30pm (EDT)</option>
+                        <option value="16:00:00">4:00pm (EDT)</option>
+                        <option value="16:30:00">4:30pm (EDT)</option>
+                        <option value="17:00:00">5:00pm (EDT)</option>
+                        <option value="17:30:00">5:30pm (EDT)</option>
+                      </select>
+                    </div>
+                  </div>
+                </div>
               <button
                 type="submit"
                 className={classes.signUpBtn}
                 disabled={isSubmitting}
               >
-                Tell Me More
+                Contact Me TODAY
               </button>
+              </div>
+              <div style={{fontSize:"11px"}}>
+                By submitting this form, you are requesting to be contacted by a member of the Elevate Sales Team.<br/>
+                Existing subscribers seeking support, please visit the <a href="https://elmstreettechnology.zendesk.com/hc/en-us">Elevate Help Center</a>.
               </div>
             </Form>
           )}
@@ -265,5 +323,20 @@ export default withStyles((theme) => ({
     marginBottom: "30px",
     textDecoration: "none",
 
+  },
+  selectfield: {
+    borderRadius: "6px",
+    border: "2px solid #ECECEC",
+    height: "40px"
+  },
+  selectlabel: {
+    width: "100%",
+    color: "#888f96",
+    display: "flex",
+    fontSize: "14px",
+    alignItems: "center",
+    lineHeight: "18px",
+    fontWeight: "700",
+    marginBottom: "4px",
   },
 }))(FormDMS);
