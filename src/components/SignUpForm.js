@@ -271,7 +271,7 @@ class SignUpForm extends Component {
                 ]}
                 className={classes.field}
               />
-              {values.interests === "Lead Generation, Parsing & Scrubbing Services" && (
+              {values.interests.includes("Lead Generation, Parsing & Scrubbing Services") && (
                 <div>
                   <div style={{ width: "100%", textAlign: "center" }}>
                     What are your top 3 markets of interest? (optional)
@@ -346,6 +346,7 @@ export default withStyles((theme) => ({
     maxWidth: "600px",
     backgroundColor: "#FFF !important",
     margin: "0 auto",
+    fontSize: '16px'
   },
   link: {
     color: "inherit",
