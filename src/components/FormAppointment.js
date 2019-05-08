@@ -103,7 +103,7 @@ You can also speak to a member of our lead generation team immediately by callin
               }
             )} onSubmit={(values, { setSubmitting }) => {
             //console.log(values.meetingdate);
-            if(values.meetingdate != undefined){
+            if (typeof values.meetingdate.format === "function") {
               var meeting_request = values.meetingdate.format("YYYY-MM-DD") + "T" + values.meetingtime.replace(" (EDT)", "") + "-04:00"
             }
             else{
