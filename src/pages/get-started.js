@@ -20,10 +20,10 @@ const GetStarted = ({ children, classes, data, tags }) => {
 
       <Container>
         <h1 className={classes.heading}>
-          Are you ready to increase your productivity?
+          The power of ELEVATE
         </h1>
         <h2 className={classes.subHeading}>
-          Let an Elevate Success Coach help you streamline your day-to-day.
+          Explore the 1st true productivity platform in real estate to capture, nurture & convert leads.
         </h2>
         <SignUpForm />
         {/* <div className={classes.closingContainer}>

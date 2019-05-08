@@ -8,6 +8,8 @@ import Input from "elevate-ui/Input";
 import RadioGroup from "elevate-ui/RadioGroup";
 import Typography from "elevate-ui/Typography";
 import withStyles from "elevate-ui/withStyles";
+import Datetime from "elevate-ui/Datetime";
+import moment from "moment";
 
 class SignUpForm extends Component {
   constructor(props) {
@@ -20,6 +22,26 @@ class SignUpForm extends Component {
   render() {
     const { formState } = this.state;
     const { classes, className } = this.props;
+
+    var valid = function (current) {
+      return current.day() !== 0 && current.day() !== 6;
+    };
+
+    var renderDay = function (props, currentDate, selectedDate) {
+
+      if (currentDate.month() == moment().month()) {
+        if (currentDate.date() < moment().date()) {
+          if (props.className == "rdtDay") {
+            props.className = "rdtDay rdtDisabled";
+          }
+        }
+      }
+      if (currentDate.month() < moment().month()) {
+        props.className = "rdtDay rdtDisabled";
+      }
+
+      return <td {...props}>{currentDate.date()}</td>;
+    };
 
     if (formState === "success") {
       return (
@@ -85,6 +107,12 @@ class SignUpForm extends Component {
             })
           }
           onSubmit={(values, { setSubmitting }) => {
+            if (values.meetingdate != undefined) {
+              var meeting_request = values.meetingdate.format("YYYY-MM-DD") + "T" + values.meetingtime.replace(" (EDT)", "") + "-04:00"
+            }
+            else {
+              var meeting_request = '';
+            }
             const body = {
               ...values,
               roleOther: values.role === "Other" ? values.roleOther : "", // Just in case the user had typed in roleOther then changed their role to something else
@@ -92,7 +120,8 @@ class SignUpForm extends Component {
               utm_campaign: (window.utm_tags) ? window.utm_tags.campaign : "",
               utm_source: (window.utm_tags) ? window.utm_tags.source : "",
               utm_medium: (window.utm_tags) ? window.utm_tags.medium : "",
-              utm_term: (window.utm_tags) ? window.utm_tags.term : ""
+              utm_term: (window.utm_tags) ? window.utm_tags.term : "",
+              demo_request_date: meeting_request
             };
             return fetch(
               "https://easyemerge.com/plugins/elevate_form.php",
@@ -125,17 +154,16 @@ class SignUpForm extends Component {
                 this.setState({ formState: "error" });
               });
           }}
-          render={({ values, isSubmitting }) => (
+          render={({ values, isSubmitting, handleBlur, handleChange }) => (
             <Form noValidate>
               <Typography
                 type="heading6"
                 style={{ textAlign: "center", marginBottom: "32px" }}
               >
-                Talk NOW at{" "}
-                <a href="tel:18057197394" className={classes.link}>
+                Schedule your personal walk-through or call <a href="tel:18057197394" className={classes.link}>
                   805.719.7394
-                </a>{" "}
-                or schedule a demo:
+                </a> to speak to a sales representative today.
+                
               </Typography>
               <div className={classes.topRow}>
                 <Field
@@ -171,7 +199,14 @@ class SignUpForm extends Component {
               <Field
                 id="company"
                 name="company"
-                label="Affiliation"
+                label="Affiliation (optional)"
+                component={Input}
+                className={classes.field}
+              />
+              <Field
+                id="mls_number"
+                name="mls_number"
+                label="MLS # (optional)"
                 component={Input}
                 className={classes.field}
               />
@@ -218,31 +253,68 @@ class SignUpForm extends Component {
                 component={CheckboxGroup}
                 items={[
                   {
-                    label: "Managing my leads from start to close",
-                    value: "Managing my leads from start to close",
+                    label: "Digital Marketing Services (Website, Email, Social, Text, Blog, SEO)",
+                    value: "Digital Marketing Services (Website, Email, Social, Text, Blog, SEO)",
                   },
                   {
-                    label: "Capturing more leads through online marketing",
-                    value: "Capturing more leads through online marketing",
+                    label: "Lead Generation, Parsing & Scrubbing Services",
+                    value: "Lead Generation, Parsing & Scrubbing Services",
                   },
                   {
-                    label: "Consolidating my technology into ONE location",
-                    value: "Consolidating my technology into ONE location",
+                    label: "CRM Solutions",
+                    value: "CRM Solutions",
                   },
                   {
-                    label: "Closing more deals through smart insights",
-                    value: "Closing more deals through smart insights",
+                    label: "Custom Creative / Marketing Services",
+                    value: "Custom Creative / Marketing Services",
                   },
                 ]}
                 className={classes.field}
               />
+              Select date / time to speak to an Elevate Sales Representative:
+
+                <div>
+                <div className={classes.topRow}>
+                  <Field id="meetingdate" name="meetingdate" label="Call Date" component={Datetime} timeFormat={false} isValidDate={valid} renderDay={renderDay} />
+                  <div style={{ margin: "8px auto 16px" }}>
+                    <label for="meetingtime" className={classes.selectlabel}>
+                      Call Time
+                        </label>
+                    <select name="meetingtime" value={values.meetingtime} onChange={handleChange} onBlur={handleBlur} style={{ display: "block" }} className={classes.selectfield}>
+                      <option value="" label="Select a time slot" />
+                      <option value="09:00:00">9:00am (EDT)</option>
+                      <option value="09:30:00">9:30am (EDT)</option>
+                      <option value="10:00:00">10:00am (EDT)</option>
+                      <option value="10:30:00">10:30am (EDT)</option>
+                      <option value="11:00:00">11:00am (EDT)</option>
+                      <option value="11:30:00">11:30am (EDT)</option>
+                      <option value="12:00:00">12:00pm (EDT)</option>
+                      <option value="12:30:00">12:30pm (EDT)</option>
+                      <option value="13:00:00">1:00pm (EDT)</option>
+                      <option value="13:30:00">1:30pm (EDT)</option>
+                      <option value="14:00:00">2:00pm (EDT)</option>
+                      <option value="14:30:00">2:30pm (EDT)</option>
+                      <option value="15:00:00">3:00pm (EDT)</option>
+                      <option value="15:30:00">3:30pm (EDT)</option>
+                      <option value="16:00:00">4:00pm (EDT)</option>
+                      <option value="16:30:00">4:30pm (EDT)</option>
+                      <option value="17:00:00">5:00pm (EDT)</option>
+                      <option value="17:30:00">5:30pm (EDT)</option>
+                    </select>
+                  </div>
+                </div>
+              </div>
               <button
                 type="submit"
                 className={classes.signUpBtn}
                 disabled={isSubmitting}
               >
-                Please contact me
+                Tell Me More about Elevate
               </button>
+              <div style={{ fontSize: "11px" }}>
+                By submitting this form, you are requesting to be contacted by a member of the Elevate Sales Team.<br />
+                Existing subscribers seeking support, please visit the <a href="https://elmstreettechnology.zendesk.com/hc/en-us">Elevate Help Center</a>.
+              </div>
             </Form>
           )}
         />
@@ -288,5 +360,20 @@ export default withStyles((theme) => ({
     borderRadius: "6px",
     padding: "12px",
     margin: "14px 0",
+  },
+  selectfield: {
+    borderRadius: "6px",
+    border: "2px solid #ECECEC",
+    height: "40px"
+  },
+  selectlabel: {
+    width: "100%",
+    color: "#888f96",
+    display: "flex",
+    fontSize: "14px",
+    alignItems: "center",
+    lineHeight: "18px",
+    fontWeight: "700",
+    marginBottom: "4px",
   },
 }))(SignUpForm);
