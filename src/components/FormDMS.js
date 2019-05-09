@@ -102,11 +102,11 @@ class FormDMS extends Component {
           }
           onSubmit={(values, { setSubmitting }) => {
             //if (values.meetingdate != undefined) {
-            if (typeof values.meetingdate.format === "function") {
-              var meeting_request = values.meetingdate.format("YYYY-MM-DD") + "T" + values.meetingtime.replace(" (EDT)", "") + "-04:00"
-            }
-            else {
-              var meeting_request = '';
+            var meeting_request = '';
+            if (meetingdate in values) {
+              if (typeof values.meetingdate.format === "function") {
+                meeting_request = values.meetingdate.format("YYYY-MM-DD") + "T" + values.meetingtime.replace(" (EDT)", "") + "-04:00"
+              }
             }
             const body = {
               ...values,

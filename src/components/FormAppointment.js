@@ -103,11 +103,11 @@ You can also speak to a member of our lead generation team immediately by callin
               }
             )} onSubmit={(values, { setSubmitting }) => {
             //console.log(values.meetingdate);
-            if (typeof values.meetingdate.format === "function") {
-              var meeting_request = values.meetingdate.format("YYYY-MM-DD") + "T" + values.meetingtime.replace(" (EDT)", "") + "-04:00"
-            }
-            else{
-              var meeting_request = '';
+            var meeting_request = '';
+            if (meetingdate in values) {
+              if (typeof values.meetingdate.format === "function") {
+                meeting_request = values.meetingdate.format("YYYY-MM-DD") + "T" + values.meetingtime.replace(" (EDT)", "") + "-04:00"
+              }
             }
             const body = { ...values,  
             utm_campaign: window.utm_tags ? window.utm_tags.campaign : "", 

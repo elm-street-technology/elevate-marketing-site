@@ -143,11 +143,11 @@ class FormLeadgen extends Component {
               }
             )} onSubmit={(values, { setSubmitting }) => {
             //console.log(values.meetingdate);
-            if (typeof values.meetingdate.format === "function") {
-              var meeting_request = values.meetingdate.format("YYYY-MM-DD") + "T" + values.meetingtime.replace(" (EDT)", "") + "-04:00"
-            }
-            else{
-              var meeting_request = '';
+            var meeting_request = '';
+            if (meetingdate in values) {
+              if (typeof values.meetingdate.format === "function") {
+                meeting_request = values.meetingdate.format("YYYY-MM-DD") + "T" + values.meetingtime.replace(" (EDT)", "") + "-04:00"
+              }
             }
             const body = { ...values, notes: values.demorequest == true ? "Requested demo, Interested Markets: " + values.market1 + "," + values.market2 + "," + values.market3 : "Interested Markets: " + values.market1 + "," + values.market2 + "," + values.market3, 
             utm_campaign: window.utm_tags ? window.utm_tags.campaign : "", 
