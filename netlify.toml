@@ -69,3 +69,8 @@
   from = "/migration"
   to = "/upgrade"
   status = 301
+
+[[redirects]]
+  from = "/liveevents"
+  to = "/events"
+  status = 301
