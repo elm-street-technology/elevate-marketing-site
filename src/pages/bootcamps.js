@@ -4,6 +4,9 @@ import Helmet from "react-helmet";
 import Link from "gatsby-link";
 
 const Bootcamps = ({ classes, className }) => {
+  if (window.ga) {
+    ga('send', 'event', 'Events', 'redirect', 'bootcamps');
+  }
   window.location.href = "https://tryelevate.com/events/";
 
   return (
