@@ -1,90 +1,266 @@
-import React from "react";
-import withStyles from "elevate-ui/withStyles";
-import Helmet from "react-helmet";
+import React, { Component } from "react";
 import Link from "gatsby-link";
+import Helmet from "react-helmet";
+import config from "../utils/siteConfig";
+import withStyles from "elevate-ui/withStyles";
+import EventCardGrid from "../components/EventCardGrid";
+import EventCard from "../components/EventCard";
+import EventCardZero from "../components/EventCardZero";
+import Container from "../components/Container";
+import SEO from "../components/SEO";
+import Hexagons from "../images/hexagons.svg";
+import Search from "elevate-ui-icons/Search";
 
-const Liveevents = ({ classes, className }) => {
-  if (typeof (window) !== 'undefined') {
-    if (window.ga) {
-        window.ga('send', 'event', 'Events', 'redirect', 'liveevents');
-    }
-    window.location.href = "https://tryelevate.com/events/";
+class Liveevents extends Component {
+  constructor(props) {
+    super(props);
+
+    const { data } = this.props;
+    const events = data.allContentfulEvent.edges;
+
+    const activeEvents = [];
+    events.forEach(({ node: event }) => {
+      const datetime = new Date(event.datetime);
+      const now = new Date();
+      if (datetime < now) {
+        return;
+      }
+      return activeEvents.push(event);
+    });
+
+    this.state = {
+      activeEvents,
+      filteredEvents: activeEvents,
+      filteredInputValue: "",
+    };
   }
-  
 
-  return (
-    <div>
-      <Helmet>
-        <title>Events</title>
-        <meta name="description" content="" />
-      </Helmet>
+  onInputChange = (e) => {
+    const value = e.target.value;
+    const { activeEvents } = this.state;
 
-      <div className={classes.container}>
-        <div className={classes.inner}>
-          <div className={classes.content}>
-            <p className={classes.body}>             
-            </p>
-            <Link to="/events" className={classes.link}>
-              View our Bootcamp Events
+    const filteredEvents = activeEvents.filter((event) => {
+      // Check the input string against the event title and location
+      if (
+        (event.title &&
+          event.title.toLowerCase().includes(value.toLowerCase())) ||
+        (event.location &&
+          event.location.toLowerCase().includes(value.toLowerCase()))
+      ) {
+        return true;
+      }
+      return false;
+    });
+
+    this.setState({
+      filteredEvents,
+      filteredInputValue: value,
+    });
+  };
+
+  onInputClear = () => {
+    const { activeEvents } = this.state;
+    this.setState({
+      filteredEvents: activeEvents,
+      filteredInputValue: "",
+    });
+  };
+
+  render() {
+    const { classes } = this.props;
+    const { activeEvents, filteredEvents, filteredInputValue } = this.state;
+    return (
+      <div className={classes.root}>
+        <Helmet>
+          <title>{`Social media & lead gen tips, tricks & shortcuts - ${config.siteTitle}`}</title>
+          <meta name="og:title" content={`Social media & lead gen tips, tricks & shortcuts - ${config.siteTitle}`}/>
+          <meta name="description" content={`Social media & lead gen tips, tricks & shortcuts - ${config.siteTitle}`} />
+        </Helmet>
+        <SEO customTitle customDescription={`Social media & lead gen tips, tricks & shortcuts - ${config.siteTitle}`} />
+
+        <Container>
+          <div style={{ textAlign: "center" }}>
+            <iframe width="800" height="450" src="https://www.youtube.com/embed/klUhBTht0ZA?autoplay=1&rel=0"
+              frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+          </div>
+          <div className={classes.titleText}>
+            Register for the #1 Social Media Boot Camp for real estate professionals
+        </div>
+        </Container>
+        <Container>
+          <div className={classes.top}>
+            <div className={classes.heading}>Upcoming Events</div>
+            <Link className={classes.bootcampLink} to="/bootcamp">
+              Learn about our Social Media Bootcamp →
             </Link>
           </div>
+          <div className={classes.inputWrapper}>
+            <input
+              className={classes.input}
+              onChange={this.onInputChange}
+              value={filteredInputValue}
+              placeholder="Type an MLS to search... (e.g. FMLS)"
+            />
+            <Search size={36} className={classes.inputIcon} />
+          </div>
+          {!(activeEvents && activeEvents.length) ? (
+            <EventCardZero className={classes.grid}>
+              <div>There are no scheduled upcoming events.</div>
+              <div>Check back again soon.</div>
+            </EventCardZero>
+          ) : !(filteredEvents && filteredEvents.length) ? (
+            <EventCardZero className={classes.grid}>
+              <div>
+                There are no scheduled events for "{filteredInputValue}"
+              </div>
+              <button
+                className={classes.resetButton}
+                onClick={this.onInputClear}
+              >
+                Show all events
+              </button>
+            </EventCardZero>
+          ) : (
+            <EventCardGrid className={classes.grid}>
+              {filteredEvents.map((event) => (
+                <EventCard key={event.id} event={event} />
+              ))}
+            </EventCardGrid>
+          )}
+        </Container>
+        <div className={classes.backgroundSlice}>
+          <svg
+            className={classes.backgroundTopSlice}
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 100 100"
+            preserveAspectRatio="none"
+          >
+            <polygon fill="white" points="0,100 100,0 100,100" />
+          </svg>
+          <svg
+            className={classes.backgroundBottomSlice}
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 100 100"
+            preserveAspectRatio="none"
+          >
+            <polygon fill="white" points="0,100 100,0 100,100" />
+          </svg>
         </div>
       </div>
-    </div>
-  );
-};
+    );
+  }
+}
+export const query = graphql`
+  query eventQueryL {
+    allContentfulEvent(limit: 1000, sort: { fields: [datetime], order: ASC }) {
+      edges {
+        node {
+          datetime
+          id
+          location
+          registrationUrl
+          title
+        }
+      }
+    }
+  }
+`;
 
 export default withStyles((theme) => ({
-  container: {
-    margin: "100px auto 180px auto",
-    display: "flex",
-    justifyContent: "center",
-    alignContent: "center",
-    flexDirection: "column",
-    maxWidth: "400px",
-    textAlign: "center",
+  root: {
+    position: "relative",
+    paddingTop: "96px",
+    paddingBottom: "192px",
   },
-  inner: {
+  top: {
     display: "flex",
-    flexDirection: "column",
+    flexWrap: "wrap",
     alignItems: "center",
-  },
-  image: {
-    maxWidth: "400px",
-    maxHeight: "300px",
   },
   heading: {
-    color: "#5A5B5C",
-    fontSize: "44px",
-    fontWeight: "600",
-    marginBottom: "10px",
-  },
-  body: {
-    fontSize: "18px",
-    fontWeight: "500",
-    marginBottom: "24px",
-  },
-  content: {
-    color: "#5A5B5C",
-    display: "flex",
-    flexDirection: "column",
-    lineHeight: "1.3",
-    alignItems: "center",
-  },
-  subHeading: {
-    fontSize: "18px",
+    fontSize: "32px",
     fontWeight: "700",
-    marginBottom: "20px",
+    marginRight: "auto",
   },
-  link: {
-    color: "#FFF",
-    textAlign: "center",
-    fontWeight: "700",
+  bootcampLink: {
+    color: "inherit",
     textDecoration: "none",
-    fontSize: "18px",
-    // border: "2px solid #2E7FC2",
-    backgroundColor: "#F15953",
+    padding: "12px 0",
+
+    "&:hover": {
+      textDecoration: "underline",
+    },
+  },
+  inputWrapper: {
+    position: "relative",
+    display: "flex",
+    alignItems: "center",
+    maxWidth: "600px",
+    margin: "64px auto 0",
+  },
+  input: {
+    display: "flex",
+    width: "100%",
+    height: "52px",
+    border: "1px solid rgba(100, 97, 110, .36)",
+    color: "#64616E",
+    fontSize: "16px",
+    fontFamily: "inherit",
+    fontWeight: "600",
+    borderRadius: "4px",
+    padding: "18px 48px 18px 12px",
+  },
+  inputIcon: {
+    position: "absolute",
+    top: "0",
+    right: "0",
+    color: "rgba(100, 97, 110, .36)",
+    margin: "8px",
+  },
+  resetButton: {
+    fontFamily: "inherit",
+    fontWeight: "600",
+    background: "rgba(100, 97, 110, .1)",
     borderRadius: "6px",
-    padding: "14px 60px",
+    padding: "12px",
+    marginTop: "24px",
+  },
+  grid: {
+    marginTop: "32px",
+  },
+  backgroundSlice: {
+    position: "absolute",
+    top: "200px",
+    bottom: "0",
+    right: "0",
+    left: "0",
+    width: "100%",
+    height: "400px",
+    backgroundImage: `url('${Hexagons}')`,
+    opacity: "0.5",
+    zIndex: "-1",
+  },
+
+  backgroundTopSlice: {
+    position: "absolute",
+    top: "-1px",
+    width: "100%",
+    height: "10vw",
+    transform: "rotate(180deg)",
+  },
+
+  backgroundBottomSlice: {
+    position: "absolute",
+    bottom: "0",
+    width: "100%",
+    height: "10vw",
+  },
+  titleText: {
+    fontSize: "28px",
+    lineHeight: "52px",
+    fontWeight: "700",
+    textAlign: "center",
+    paddingBottom: "60px",
+    paddingTop: "40px"
   },
 }))(Liveevents);
