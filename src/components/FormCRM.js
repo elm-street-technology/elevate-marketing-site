@@ -144,7 +144,7 @@ class FormCRM extends Component {
             )} onSubmit={(values, { setSubmitting }) => {
             //console.log(values.meetingdate);
             var meeting_request = '';
-            if (meetingdate in values) {
+            if (Object.values(values).indexOf('meetingdate') > -1) {
               if (typeof values.meetingdate.format === "function") {
                 meeting_request = values.meetingdate.format("YYYY-MM-DD") + "T" + values.meetingtime.replace(" (EDT)", "") + "-04:00"
               }
