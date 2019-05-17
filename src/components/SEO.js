@@ -4,7 +4,7 @@ import config from "../utils/siteConfig";
 
 class SEO extends Component {
   render() {
-    const { postNode, pagePath, postSEO, pageSEO, customTitle } = this.props;
+    const { postNode, pagePath, postSEO, pageSEO, customTitle, customDescription } = this.props;
     let title;
     let description;
     let image;
@@ -21,8 +21,12 @@ class SEO extends Component {
     pageUrl = config.siteUrl;
 
     if (customTitle) {
-      title = postNode.title;
+      title = customTitle;
       pageUrl = config.siteUrl + "/" + pagePath + "/";
+    }
+
+    if (customDescription){
+      description = customDescription;
     }
 
     // Replace with Page Parameters if post or page

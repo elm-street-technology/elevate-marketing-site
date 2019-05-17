@@ -1,5 +1,7 @@
 import React, { Component } from "react";
 import Link from "gatsby-link";
+import Helmet from "react-helmet";
+import config from "../utils/siteConfig";
 import withStyles from "elevate-ui/withStyles";
 import EventCardGrid from "../components/EventCardGrid";
 import EventCard from "../components/EventCard";
@@ -69,7 +71,13 @@ class Events extends Component {
     const { activeEvents, filteredEvents, filteredInputValue } = this.state;
     return (
       <div className={classes.root}>
-        <SEO />
+        <Helmet>
+          <title>{`Social media & lead gen tips, tricks & shortcuts - ${config.siteTitle}`}</title>
+          <meta name="og:title" content={`Social media & lead gen tips, tricks & shortcuts - ${config.siteTitle}`}/>
+          <meta name="description" content={`Social media & lead gen tips, tricks & shortcuts - ${config.siteTitle}`} />
+        </Helmet>
+        <SEO customTitle customDescription={`Social media & lead gen tips, tricks & shortcuts - ${config.siteTitle}`} />
+
         <Container>
           <div style={{ textAlign: "center" }}>
             <iframe width="800" height="450" src="https://www.youtube.com/embed/klUhBTht0ZA?autoplay=1&rel=0"
