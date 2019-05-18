@@ -144,18 +144,25 @@ class FormLeadgen extends Component {
             )} onSubmit={(values, { setSubmitting }) => {
             //console.log(values.meetingdate);
             var meeting_request = '';
-            //if (meetingdate in values) {
-            if (Object.values(values).indexOf('meetingdate') > -1) {
-              if (typeof values.meetingdate.format === "function") {
-                meeting_request = values.meetingdate.format("YYYY-MM-DD") + "T" + values.meetingtime.replace(" (EDT)", "") + "-04:00"
+
+            Object.keys(values).forEach(function (key, index) {
+              // key: the name of the object key
+              // index: the ordinal position of the key within the object 
+              if(key == 'meetingdate'){
+                if (typeof values.meetingdate.format === "function") {
+                  meeting_request = values.meetingdate.format("YYYY-MM-DD") + "T" + values.meetingtime.replace(" (EDT)", "") + "-04:00"
+                }
               }
-            }
-            const body = { ...values, notes: values.demorequest == true ? "Requested demo, Interested Markets: " + values.market1 + "," + values.market2 + "," + values.market3 : "Interested Markets: " + values.market1 + "," + values.market2 + "," + values.market3, 
-            utm_campaign: window.utm_tags ? window.utm_tags.campaign : "", 
-            utm_source: window.utm_tags ? window.utm_tags.source : "", 
-            utm_medium: window.utm_tags ? window.utm_tags.medium : "", 
-            utm_term: window.utm_tags ? window.utm_tags.term : "", 
-            demo_request_date: meeting_request};
+            });
+
+            const body = { ...values, 
+              demo_request_date: meeting_request,
+              notes: "Interested Markets: " + values.market1 + "," + values.market2 + "," + values.market3, 
+              utm_campaign: window.utm_tags ? window.utm_tags.campaign : "", 
+              utm_source: window.utm_tags ? window.utm_tags.source : "", 
+              utm_medium: window.utm_tags ? window.utm_tags.medium : "", 
+              utm_term: window.utm_tags ? window.utm_tags.term : "", 
+            };
             return fetch(
               "https://easyemerge.com/plugins/elevate_form.php",
               {

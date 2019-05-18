@@ -107,11 +107,15 @@ class SignUpForm extends Component {
           }
           onSubmit={(values, { setSubmitting }) => {
             var meeting_request = '';
-            if (Object.values(values).indexOf('meetingdate') > -1) {
-              if (typeof values.meetingdate.format === "function") {
-                meeting_request = values.meetingdate.format("YYYY-MM-DD") + "T" + values.meetingtime.replace(" (EDT)", "") + "-04:00"
+            Object.keys(values).forEach(function (key, index) {
+              // key: the name of the object key
+              // index: the ordinal position of the key within the object 
+              if (key == 'meetingdate') {
+                if (typeof values.meetingdate.format === "function") {
+                  meeting_request = values.meetingdate.format("YYYY-MM-DD") + "T" + values.meetingtime.replace(" (EDT)", "") + "-04:00"
+                }
               }
-            }
+            });
             const body = {
               ...values,
               roleOther: values.role === "Other" ? values.roleOther : "", // Just in case the user had typed in roleOther then changed their role to something else
