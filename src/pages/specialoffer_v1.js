@@ -36,7 +36,7 @@ const specialoffer = ({ classes }) => {
         <div className={classes.top}>
           <div className={classes.centerHeading} style={{paddingBottom:"35px"}}>
             <div className={classes.heading}><strong>A Special Offer from Elevate</strong></div>
-            <div className={classes.bold}>Expires Friday, May 24th at 6pm PST
+            <div className={classes.bold}>Expires Friday, May 10th at 6pm PST
             
 </div>
           </div>
@@ -144,7 +144,57 @@ const specialoffer = ({ classes }) => {
           </div>
           </div>
 
+          <div className={classes.infoboxGray2}>
+          <div className={classes.column3} style={{ textAlign: "center", paddingBottom: "35px" }}>
+          <div style={{ textAlign: "center",paddingBottom:"20px" }}>
+          <img src={Elite} style={{ width:"100%", maxWidth:"200px"}}/>
+        </div>
+                <div className={classes.productCol} style={{ textAlign: "left", paddingLeft:"10px", paddingRight:"10px"}}> 
+                <div className={classes.bold} style={{color:"#EE5A55"}}>• LEAD GENERATION:</div>
+                <span style={{color:"#EE5A55", fontSize:"14px", lineHeight:"16px"}}>
+                •	Pay-Per-Click Campaigns in<br />
+                Google, Bing &amp; Yahoo<br />
+                •	Facebook Ads</span><br />
+                <div className={classes.bold} style={{color:"#5BC1B8"}}>• EMAIL MARKETING CAMPAIGNS</div>
+                <div className={classes.bold} style={{color:"#5BC1B8"}}>• IDX WEBSITE</div>
+                <div className={classes.bold} style={{color:"#5BC1B8"}}>• ADV. PRODUCTIVITY CRM</div>
+                <div className={classes.bold} style={{color:"#5BC1B8"}}>• CMA WIZARD</div>
+                <div className={classes.bold} style={{color:"#56595B"}}>• BLOG</div>
+                <div className={classes.bold} style={{color:"#56595B"}}>• SOCIAL MEDIA SERVICES:</div>
+                <span style={{color:"#56595B", fontSize:"14px", lineHeight:"16px"}}><span className={classes.bold}>MLS Feed Listing Pushes:</span><br />
+                  • Facebook<br />
+                  • LinkedIn<br />
+                  • Twitter<br />
+                  • YouTube</span><br />
+                
+                </div>
 
+
+                <div>
+                <img src={Line} style={{ width:"100%", maxWidth:"200px"}}/>
+                <br />
+                <span className={classes.bold} style={{color:"#EE5A55"}}>6 MONTH AGREEMENT</span>
+                <br /><br />
+
+
+                <div className={classes.bold} style={{color:"#EE5A55", paddingTop:"28px"}}>MONTHLY</div>
+<div style={{color:"#EE5A55",}}><span style={{textDecoration:"line-through"}}>$899/m</span> <span style={{color:"#f88616"}} className={classes.bold}>$749/m</span></div>
+<div style={{color:"#EE5A55",}}>One Time Set-Up: <span style={{textDecoration:"line-through"}}>$800</span> <span style={{color:"#f88616"}} className={classes.bold}>$500</span></div>
+
+                
+                <a target="_blank" href="https://elmstreettechnology.recurly.com/subscribe/elevateelite" className={classes.getStartedLinkelite}>
+                  Subscribe NOW
+                    </a>
+                    <div className={classes.bold} style={{color:"#EE5A55",}}>ADD LEAD SCRUBBING</div>
+                <span style={{color:"#EE5A55"}}>$300/m</span>
+                <br />
+                <div style={{paddingTop:"28px"}}><a target="_blank" href="https://elmstreettechnology.recurly.com/subscribe/elevateelitepro" className={classes.getStartedLinkelite}>
+                  Subscribe NOW
+                    </a></div>
+                </div>
+                
+          </div>
+          </div>
 
 
           </div>
@@ -163,10 +213,9 @@ Sales tax charged where applicable.  Please note that setup fees are non-refunda
           <div className={classes.top}>
             <div className={classes.centerHeading} style={{ paddingBottom: "55px", }}>
               <div className={classes.heading}>
-              Schedule Your Online Audit
+                Request Personal Demo
             </div>
-            Schedule 15-minutes with an Elevate Success Coach to review<br />
-            YOUR online website &amp; social channels to see how you can improve your online marketing success.
+              Schedule 15-minutes of one-on-one time with an Elevate coach.
             <br />
               <br />
 
@@ -335,7 +384,7 @@ export default withStyles((theme) => ({
   },
 
   column3:{
-    width:"430px",
+    width:"300px",
     maxWidth: "100%",
     paddingRight:"10px",
     paddingLeft:"10px",
@@ -531,7 +580,7 @@ export default withStyles((theme) => ({
     minHeight: "160px",
 
     [theme.breakpoints[900]]: {
-      minHeight: "350px",
+      minHeight: "500px",
     },
   },
 }))(specialoffer);
