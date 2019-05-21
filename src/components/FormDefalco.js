@@ -158,13 +158,13 @@ class FormDefalco extends Component {
             });
 
             var notes = '';
-            if(values.product_social_pro){
-              notes += "Social Pro, ";
+            if(values.product_dms){
+              notes += "DMS, ";
             }
-            if(values.product_ignite){
-              notes += "Ignite";
+            if (values.product_elite){
+              notes += "Elite";
             }
-            notes += " Markets: " + values.market1 + "," + values.market2 + "," + values.market3;
+            notes += " | Markets: " + values.market1 + "," + values.market2 + "," + values.market3;
 
             const body = { ...values, 
               demo_request_date: meeting_request,
@@ -226,14 +226,14 @@ class FormDefalco extends Component {
                   I am interested in: (select all that apply)
                 </div>
                 <div>
-                <Field id="product_social_pro" name="product_social_pro" type="checkbox" value="social_pro" className={classes.checkfield} />
-                <div className={classes.checkboxDesc}><span style={{fontWeight:"700"}}>Social Pro</span> - "Help me with my social media marketing!"</div>
+                <Field id="product_dms" name="product_dms" type="checkbox" value="dms" className={classes.checkfield} style={{verticalAlign:"top"}} />
+                <div className={classes.checkboxDesc}><span style={{ fontWeight: "700" }}>DMS</span> - A gorgeous IDX website with MLS listings &amp; lifestyle content automatically posted to your blog, Facebook, Twitter, LinkedIn &amp; YouTube.</div>
                 </div>
                 <div>
-                <Field id="product_ignite" name="product_ignite" type="checkbox" value="ignite" className={classes.checkfield} />
-                <div className={classes.checkboxDesc}><span style={{ fontWeight: "700" }}>Ignite</span> - "Send me lots of buyer / seller leads!"</div>
+                <Field id="product_elite" name="product_elite" type="checkbox" value="elite" className={classes.checkfield} />
+                <div className={classes.checkboxDesc}><span style={{ fontWeight: "700" }}>Elite</span> - "Send me lots of buyer / seller leads!"</div>
                 </div>
-                <div style={{ width: "100%", textAlign: "center",marginTop:"40px" }} className={classes.grayLabel}>
+                <div style={{ width: "100%", textAlign: "center",marginTop:"30px" }} className={classes.grayLabel}>
                   What are your top 3 markets of interest for leads? (optional)
                 </div>
                 <Field id="market1" name="market1" label="City/State" component={Input} className={classes.field} onBlur={this.setFormVal} />
@@ -350,5 +350,6 @@ export default withStyles((theme) => ({
     width:"390px",
     textAlign: "left",
     paddingLeft:"10px",
+    marginBottom:"10px"
   }
 }))(FormDefalco);
