@@ -10,6 +10,7 @@ import Typography from "elevate-ui/Typography";
 import withStyles from "elevate-ui/withStyles";
 import Datetime from "elevate-ui/Datetime";
 import moment from "moment";
+import Starburst from "../images/agent_starburst.png";
 
 class FormDefalco extends Component {
   constructor(props) {
@@ -225,13 +226,14 @@ class FormDefalco extends Component {
               <div style={{ width: "100%", textAlign: "center",marginBottom:"10px",marginTop:"40px" }} className={classes.grayLabel}>
                   I am interested in: (select all that apply)
                 </div>
-                <div>
-                <Field id="product_dms" name="product_dms" type="checkbox" value="dms" className={classes.checkfield} style={{verticalAlign:"top"}} />
-                <div className={classes.checkboxDesc}><span style={{ fontWeight: "700" }}>DMS</span> - "Help build my online marketing success"</div>
+                <div style={{float:"right",width:"108px"}}><img src={Starburst} style={{width:"100%"}}/></div>
+              <div style={{ marginTop:"26px",marginBottom: "20px"}}>
+                  <Field id="product_dms" name="product_dms" type="checkbox" value="dms" className={classes.checkfield} style={{verticalAlign:"top"}} />
+                  <div className={classes.checkboxDesc}><span style={{ fontWeight: "700" }}>DMS</span> - "Help build my online marketing success"</div>
                 </div>
                 <div>
-                <Field id="product_elite" name="product_elite" type="checkbox" value="elite" className={classes.checkfield} />
-                <div className={classes.checkboxDesc}><span style={{ fontWeight: "700" }}>Elite</span> - "Send me lots of buyer / seller leads!"</div>
+                  <Field id="product_elite" name="product_elite" type="checkbox" value="elite" className={classes.checkfield} />
+                  <div className={classes.checkboxDesc}><span style={{ fontWeight: "700" }}>Elite</span> - "Send me lots of buyer / seller leads!"</div>
                 </div>
                 <div style={{ width: "100%", textAlign: "center",marginTop:"30px" }} className={classes.grayLabel}>
                   What are your top 3 markets of interest for leads? (optional)
