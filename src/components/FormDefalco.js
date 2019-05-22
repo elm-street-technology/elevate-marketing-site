@@ -227,7 +227,7 @@ class FormDefalco extends Component {
                 </div>
                 <div>
                 <Field id="product_dms" name="product_dms" type="checkbox" value="dms" className={classes.checkfield} style={{verticalAlign:"top"}} />
-                <div className={classes.checkboxDesc}><span style={{ fontWeight: "700" }}>DMS</span> - A gorgeous IDX website with MLS listings &amp; lifestyle content automatically posted to your blog, Facebook, Twitter, LinkedIn &amp; YouTube.</div>
+                <div className={classes.checkboxDesc}><span style={{ fontWeight: "700" }}>DMS</span> - "Help build my online marketing success"</div>
                 </div>
                 <div>
                 <Field id="product_elite" name="product_elite" type="checkbox" value="elite" className={classes.checkfield} />
