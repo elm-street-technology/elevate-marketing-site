@@ -26,6 +26,7 @@ import Emails from "../images/6emails_pic.png";
 import Dose from "../images/dose_pic.png";
 import Line from "../images/line.png";
 import Freebg from "../images/free_bg.jpg";
+import Starburst from "../images/agent_starburst.png";
 const specialoffer = ({ classes }) => {
 
   return (
@@ -95,9 +96,10 @@ const specialoffer = ({ classes }) => {
 
             </div>
             </div>
-            <div className={classes.infoboxGray2}>
-          <div className={classes.column3} style={{ textAlign: "center", paddingBottom: "35px" }}>
           
+            <div className={classes.infoboxGray2}>
+          <div className={classes.column3} style={{ textAlign: "center", paddingBottom: "35px",position:"relative" }}>
+              <div style={{ position:"absolute", width: "150px",right:"-50px",top:"-40px" }}><img src={Starburst} style={{ width: "100%" }} /></div>
           <div style={{ textAlign: "center",paddingBottom:"20px" }}>
           <img src={Dms} style={{ width:"100%", maxWidth:"200px"}}/>
         </div>

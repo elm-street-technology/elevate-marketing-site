@@ -10,7 +10,6 @@ import Typography from "elevate-ui/Typography";
 import withStyles from "elevate-ui/withStyles";
 import Datetime from "elevate-ui/Datetime";
 import moment from "moment";
-import Starburst from "../images/agent_starburst.png";
 
 class FormDefalco extends Component {
   constructor(props) {
@@ -226,8 +225,8 @@ class FormDefalco extends Component {
               <div style={{ width: "100%", textAlign: "center",marginBottom:"10px",marginTop:"40px" }} className={classes.grayLabel}>
                   I am interested in: (select all that apply)
                 </div>
-                <div style={{float:"right",width:"108px"}}><img src={Starburst} style={{width:"100%"}}/></div>
-              <div style={{ marginTop:"26px",marginBottom: "20px"}}>
+                
+              <div style={{ marginTop:"16px",marginBottom: "10px"}}>
                   <Field id="product_dms" name="product_dms" type="checkbox" value="dms" className={classes.checkfield} style={{verticalAlign:"top"}} />
                   <div className={classes.checkboxDesc}><span style={{ fontWeight: "700" }}>DMS</span> - "Help build my online marketing success"</div>
                 </div>
