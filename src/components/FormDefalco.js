@@ -347,7 +347,7 @@ export default withStyles((theme) => ({
   checkboxDesc:{
     display:"inline-block",
     fontSize:"14px",
-    width:"390px",
+    width:"330px",
     textAlign: "left",
     paddingLeft:"10px",
     marginBottom:"10px"
