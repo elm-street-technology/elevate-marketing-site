@@ -9,6 +9,7 @@ import EventCardZero from "../components/EventCardZero";
 import Container from "../components/Container";
 import SEO from "../components/SEO";
 import Hexagons from "../images/hexagons.svg";
+import Logo from "../images/generic_bootcamp_logo.png";
 import Search from "elevate-ui-icons/Search";
 
 class Events extends Component {
@@ -80,19 +81,16 @@ class Events extends Component {
 
         <Container>
           <div style={{ textAlign: "center" }}>
-            <iframe width="800" height="450" src="https://www.youtube.com/embed/klUhBTht0ZA?autoplay=1&rel=0"
-              frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            <img src={Logo} className={classes.logoStyle}/>
           </div>
           <div className={classes.titleText}>
-            Register for the #1 Social Media Boot Camp for real estate professionals
+            Join an Upcoming Webinar or Live Boot Camp Event Near You!
         </div>
         </Container>
         <Container>
           <div className={classes.top}>
-            <div className={classes.heading}>Upcoming Events</div>
-            <Link className={classes.bootcampLink} to="/bootcamp">
-              Learn about our Social Media Bootcamp →
-            </Link>
+            <div className={classes.heading} style={{ marginRight: "auto", marginLeft: "auto",textAlign:"center" }}>Upcoming Webinars &amp; Live Events</div>
+            
           </div>
           <div className={classes.inputWrapper}>
             <input
@@ -127,6 +125,16 @@ class Events extends Component {
               ))}
             </EventCardGrid>
           )}
+          
+        </Container>
+        <Container>
+          <div className={classes.top} style={{
+            float:"right",
+            marginTop:"40px"}}>
+            <Link className={classes.bootcampLink} to="/bootcamp">
+              Learn about our Social Media Bootcamp →
+            </Link>
+          </div>
         </Container>
         <div className={classes.backgroundSlice}>
           <svg
@@ -169,7 +177,7 @@ export const query = graphql`
 export default withStyles((theme) => ({
   root: {
     position: "relative",
-    paddingTop: "96px",
+    paddingTop: "40px",
     paddingBottom: "192px",
   },
   top: {
@@ -240,7 +248,12 @@ export default withStyles((theme) => ({
     opacity: "0.5",
     zIndex: "-1",
   },
-
+  logoStyle:{
+    width:"80%",
+    [theme.breakpoints[900]]: {
+      width: "40%"
+    },
+  },
   backgroundTopSlice: {
     position: "absolute",
     top: "-1px",
@@ -257,7 +270,7 @@ export default withStyles((theme) => ({
   },
   titleText: {
     fontSize: "28px",
-    lineHeight: "52px",
+    lineHeight: "36px",
     fontWeight: "700",
     textAlign: "center",
     paddingBottom: "60px",
