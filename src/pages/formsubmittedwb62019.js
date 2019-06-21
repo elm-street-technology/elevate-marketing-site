@@ -71,7 +71,7 @@ const FormSubmittedWB62019 = ({ children, classes, data, tags }) => {
 };
 
 function LoadRecip(){
-    if(window){
+    if (typeof window!= 'undefined') {
         window.onload = function (e) {
             findRecipient();
 
