@@ -60,8 +60,8 @@ const FormSubmittedWB62019 = ({ children, classes, data, tags }) => {
                 </form>
                 <div className={classes.subHeading}>
                           <br/>
-                          <a href="mail:bdaughtry@tryelevate.com">bdaughtry@tryelevate.com</a><br/>
-                            XXX-XXX-XXXX
+                          <a href="mailto:bdaughtry@tryelevate.com" style={{textDecoration:"none"}}>bdaughtry@tryelevate.com</a><br/>
+                            833.823.7524
                 </div>
             </div>
         </div>
