@@ -38,6 +38,14 @@ module.exports = class HTML extends React.Component {
             async
             src="https://www.googletagmanager.com/gtag/js?id=AW-980447970"
           />
+          <script 
+            async
+            src="https://easyemerge.com/landing_src/emerge.js"
+          />
+          <script
+            async
+            src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/core.js"
+          />
           <script
             dangerouslySetInnerHTML={{
               __html: `
