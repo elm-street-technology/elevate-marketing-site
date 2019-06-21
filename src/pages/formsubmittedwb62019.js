@@ -71,20 +71,22 @@ const FormSubmittedWB62019 = ({ children, classes, data, tags }) => {
 };
 
 function LoadRecip(){
-    window.onload = function (e) {
-        findRecipient();
+    if(window){
+        window.onload = function (e) {
+            findRecipient();
 
-        $("#savePhone").click(function () {
-            var first_name = $("#first_name").val();
-            var last_name = $("#last_name").val();
-            var email = $("#email").val();
-            var phone = $("#phone").val();
-            var recipient_id = $("#recipient_id").val();
-            createNotification(recipient_id, first_name, last_name, email, phone, 'Win Back Campaign Contact Request', 'A new user has completed the Win Back form', ShowThankyouMessage);
-        });
+            $("#savePhone").click(function () {
+                var first_name = $("#first_name").val();
+                var last_name = $("#last_name").val();
+                var email = $("#email").val();
+                var phone = $("#phone").val();
+                var recipient_id = $("#recipient_id").val();
+                createNotification(recipient_id, first_name, last_name, email, phone, 'Win Back Campaign Contact Request', 'A new user has completed the Win Back form', ShowThankyouMessage);
+            });
 
 
-    };
+        };
+    }
 
     return null;
 }
