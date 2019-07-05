@@ -43,7 +43,7 @@ const Webinars = ({ classes, data }) => {
             Updated upon the completion of the weekly webinars
           </div>
           <a
-            href={"https://tryelevate.wistia.com/projects/u8p4ih0dk6"}
+            href={"https://tryelevate.wistia.com/projects/u8p4ih0dk6/channel"}
             target="_blank"
             rel="noopener noreferrer"
             className={classes.pastLink}
