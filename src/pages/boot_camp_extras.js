@@ -34,7 +34,7 @@ const boot_camp_extras = ({ classes }) => {
             
             <div>But first...please give us a review &amp; let us know what you thought of our Boot Camp Educational Series:
             
-            <a target="_blank" href="https://www.facebook.com/TryElevateRE/reviews/" className={classes.getStartedLink}>
+            <a target="_blank" href="https://www.facebook.com/TryElevateRE/" className={classes.getStartedLink}>
                   Share the LOVE
                     </a>
             </div>
