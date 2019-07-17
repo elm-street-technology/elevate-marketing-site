@@ -84,13 +84,21 @@ class Events extends Component {
             <img src={Logo} className={classes.logoStyle}/>
           </div>
           <div className={classes.titleText}>
-            Join an Upcoming Webinar or Live Boot Camp Event Near You!
+            Select an event you are interested in:
         </div>
         </Container>
         <Container>
           <div className={classes.top}>
-            <div className={classes.heading} style={{ marginRight: "auto", marginLeft: "auto",textAlign:"center" }}>Upcoming Webinars &amp; Live Events</div>
-            
+            {/* <div className={classes.heading} style={{ marginRight: "auto", marginLeft: "auto",textAlign:"center" }}>Upcoming Webinars &amp; Live Events</div> */}
+            <div style={{width:"31%", height:"180px", backgroundColor:"#CCCCCC", margin:"10px", textAlign:"center"}}>
+              logo
+            </div>
+            <div style={{ width: "31%", height: "180px", backgroundColor: "#CCCCCC", margin: "10px", textAlign: "center" }}>
+              logo
+            </div>
+            <div style={{ width: "31%", height: "180px", backgroundColor: "#CCCCCC", margin: "10px", textAlign: "center" }}>
+              logo
+            </div>
           </div>
           <div className={classes.inputWrapper}>
             <input
@@ -100,7 +108,16 @@ class Events extends Component {
               placeholder="Type an MLS to search... (e.g. FMLS)"
             />
             <Search size={36} className={classes.inputIcon} />
+            <select className={classes.input} style={{width:"30%",marginLeft:"10px"}}>
+              <option>Any State</option>
+              <option>AL</option>
+              <option>AK</option>
+            </select>
           </div>
+          
+
+
+
           {!(activeEvents && activeEvents.length) ? (
             <EventCardZero className={classes.grid}>
               <div>There are no scheduled upcoming events.</div>
@@ -221,7 +238,7 @@ export default withStyles((theme) => ({
   inputIcon: {
     position: "absolute",
     top: "0",
-    right: "0",
+    right: "140px",
     color: "rgba(100, 97, 110, .36)",
     margin: "8px",
   },
@@ -273,7 +290,7 @@ export default withStyles((theme) => ({
     lineHeight: "36px",
     fontWeight: "700",
     textAlign: "center",
-    paddingBottom: "60px",
+    paddingBottom: "24px",
     paddingTop: "40px"
   },
 }))(Events);
