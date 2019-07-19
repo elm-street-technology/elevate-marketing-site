@@ -11,11 +11,8 @@ import SEO from "../components/SEO";
 import Hexagons from "../images/hexagons.svg";
 import Logo from "../images/generic_bootcamp_logo.png";
 import Search from "elevate-ui-icons/Search";
-import SMBCLogo from "../images/socialmedia_bootcamp_logo1.png";
-import LGBCLogo from "../images/leadgen_bootcamp_logo2.png";
-import WebinarsLogo from "../images/edu_webinar_logo3.png";
 
-class Events extends Component {
+class EventsLG extends Component {
   constructor(props) {
     super(props);
 
@@ -91,24 +88,6 @@ class Events extends Component {
         </div>
         </Container>
         <Container>
-          <div className={classes.top}>
-            {/* <div className={classes.heading} style={{ marginRight: "auto", marginLeft: "auto",textAlign:"center" }}>Upcoming Webinars &amp; Live Events</div> */}
-            <div style={{width:"31%", height:"180px", margin:"10px", textAlign:"center"}}>
-              <Link className={classes.bootcampLink} to="/events_sm">
-                <img src={SMBCLogo} className={classes.subLogoStyle} />
-              </Link>
-            </div>
-            <div style={{ width: "31%", height: "180px", margin: "10px", textAlign: "center" }}>
-              <Link className={classes.bootcampLink} to="/events_lg">
-                <img src={LGBCLogo} className={classes.subLogoStyle} />
-              </Link>
-            </div>
-            <div style={{ width: "31%", height: "180px", margin: "10px", textAlign: "center" }}>
-              <Link className={classes.bootcampLink} to="/events_webinars">
-                <img src={WebinarsLogo} className={classes.subLogoStyle} />
-              </Link>
-            </div>
-          </div>
           <div className={classes.inputWrapper}>
             <input
               className={classes.input}
@@ -234,7 +213,7 @@ class Events extends Component {
   }
 }
 export const query = graphql`
-  query eventQuery {
+  query eventLGQuery {
     allContentfulEvent(limit: 1000, sort: { fields: [datetime], order: ASC }) {
       edges {
         node {
@@ -329,9 +308,6 @@ export default withStyles((theme) => ({
       width: "40%"
     },
   },
-  subLogoStyle:{
-    width:"90%",
-  },
   backgroundTopSlice: {
     position: "absolute",
     top: "-1px",
@@ -354,4 +330,4 @@ export default withStyles((theme) => ({
     paddingBottom: "24px",
     paddingTop: "40px"
   },
-}))(Events);
+}))(EventsLG);
