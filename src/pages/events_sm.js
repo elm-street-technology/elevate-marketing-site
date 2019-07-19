@@ -33,25 +33,45 @@ class EventsSM extends Component {
       activeEvents,
       filteredEvents: activeEvents,
       filteredInputValue: "",
+      filteredInputValueState: '',
     };
   }
 
   onInputChange = (e) => {
+    console.log(e.target.name);
     const value = e.target.value;
     const { activeEvents } = this.state;
 
-    const filteredEvents = activeEvents.filter((event) => {
-      // Check the input string against the event title and location
-      if (
-        (event.title &&
-          event.title.toLowerCase().includes(value.toLowerCase())) ||
-        (event.location &&
-          event.location.toLowerCase().includes(value.toLowerCase()))
-      ) {
-        return true;
-      }
-      return false;
-    });
+    if(e.target.name == 'keyword'){
+      var filteredEvents = filteredEvents.filter((event) => {
+        // Check the input string against the event title and location
+        if (
+          (event.title &&
+            event.title.toLowerCase().includes(value.toLowerCase())) ||
+          (event.location &&
+            event.location.toLowerCase().includes(value.toLowerCase())) ||
+          (event.mls &&
+            event.mls.toLowerCase().includes(value.toLowerCase()))
+        ) {
+          return true;
+        }
+        return false;
+      });
+    }
+    if(e.target.name == 'state'){
+      var filteredEvents = filteredEvents.filter((event) => {
+        // Check the input string against the event title and location
+        if (
+          (event.state &&
+            event.state.toLowerCase().includes(value.toLowerCase()))
+        ) {
+          return true;
+        }
+        return false;
+      });
+    }
+
+    
 
     this.setState({
       filteredEvents,
@@ -94,9 +114,10 @@ class EventsSM extends Component {
               onChange={this.onInputChange}
               value={filteredInputValue}
               placeholder="Type an MLS to search... (e.g. FMLS)"
+              name="keyword"
             />
             <Search size={36} className={classes.inputIcon} />
-            <select className={classes.input} style={{width:"30%",marginLeft:"10px"}}>
+            <select className={classes.input} style={{width:"30%",marginLeft:"10px"}} name="state">
               <option>Any State</option>
               <option value="AK">AK</option>
               <option value="AL">AL</option>
@@ -214,7 +235,7 @@ class EventsSM extends Component {
 }
 export const query = graphql`
   query eventSMQuery {
-    allContentfulEvent(limit: 1000, sort: { fields: [datetime], order: ASC }) {
+    allContentfulEvent(limit: 1000, filter: {eventType: {eq: "SM"}}, sort: { fields: [datetime], order: ASC }) {
       edges {
         node {
           datetime
@@ -222,6 +243,9 @@ export const query = graphql`
           location
           registrationUrl
           title
+          mls
+          state
+          physicalAddress
         }
       }
     }

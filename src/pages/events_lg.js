@@ -214,7 +214,7 @@ class EventsLG extends Component {
 }
 export const query = graphql`
   query eventLGQuery {
-    allContentfulEvent(limit: 1000, sort: { fields: [datetime], order: ASC }) {
+    allContentfulEvent(limit: 1000, filter: {eventType: {eq: "LG"}}, sort: { fields: [datetime], order: ASC }) {
       edges {
         node {
           datetime
@@ -222,6 +222,9 @@ export const query = graphql`
           location
           registrationUrl
           title
+          mls
+          state
+          physicalAddress
         }
       }
     }
