@@ -11,6 +11,7 @@ import SEO from "../components/SEO";
 import Hexagons from "../images/hexagons.svg";
 import Logo from "../images/generic_bootcamp_logo.png";
 import Search from "elevate-ui-icons/Search";
+import eventsbg from "../images/events_bg.jpg";
 import SMBCLogo from "../images/socialmedia_bootcamp_logo1.png";
 import LGBCLogo from "../images/leadgen_bootcamp_logo2.png";
 import WebinarsLogo from "../images/edu_webinar_logo3.png";
@@ -82,6 +83,7 @@ class Events extends Component {
         </Helmet>
         <SEO customTitle customDescription={`Social media & lead gen tips, tricks & shortcuts - ${config.siteTitle}`} />
 
+        <div className={classes.eventsBackground}>
         <Container>
           <div style={{ textAlign: "center" }}>
             <img src={Logo} className={classes.logoStyle}/>
@@ -90,6 +92,7 @@ class Events extends Component {
             Select an event you are interested in:
         </div>
         </Container>
+        </div>
         <Container>
           <div className={classes.top}>
             {/* <div className={classes.heading} style={{ marginRight: "auto", marginLeft: "auto",textAlign:"center" }}>Upcoming Webinars &amp; Live Events</div> */}
@@ -311,18 +314,6 @@ export default withStyles((theme) => ({
   grid: {
     marginTop: "32px",
   },
-  backgroundSlice: {
-    position: "absolute",
-    top: "200px",
-    bottom: "0",
-    right: "0",
-    left: "0",
-    width: "100%",
-    height: "400px",
-    backgroundImage: `url('${Hexagons}')`,
-    opacity: "0.5",
-    zIndex: "-1",
-  },
   logoStyle:{
     width:"80%",
     [theme.breakpoints[900]]: {
@@ -332,20 +323,7 @@ export default withStyles((theme) => ({
   subLogoStyle:{
     width:"90%",
   },
-  backgroundTopSlice: {
-    position: "absolute",
-    top: "-1px",
-    width: "100%",
-    height: "10vw",
-    transform: "rotate(180deg)",
-  },
 
-  backgroundBottomSlice: {
-    position: "absolute",
-    bottom: "0",
-    width: "100%",
-    height: "10vw",
-  },
   titleText: {
     fontSize: "28px",
     lineHeight: "36px",
@@ -353,5 +331,12 @@ export default withStyles((theme) => ({
     textAlign: "center",
     paddingBottom: "24px",
     paddingTop: "40px"
+  },
+
+  eventsBackground: {
+    backgroundImage: `url('${eventsbg}')`,
+    backgroundSize: "cover",
+    backgroundPosition: "absolute",
+    width:"100%",
   },
 }))(Events);

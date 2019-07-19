@@ -8,8 +8,8 @@ import EventCard from "../components/EventCard";
 import EventCardZero from "../components/EventCardZero";
 import Container from "../components/Container";
 import SEO from "../components/SEO";
+import smbg from "../images/sm_bg.jpg";
 import Hexagons from "../images/hexagons.svg";
-import Logo from "../images/generic_bootcamp_logo.png";
 import Search from "elevate-ui-icons/Search";
 
 class EventsSM extends Component {
@@ -79,14 +79,25 @@ class EventsSM extends Component {
         </Helmet>
         <SEO customTitle customDescription={`Social media & lead gen tips, tricks & shortcuts - ${config.siteTitle}`} />
 
+        <div className={classes.smBackground}>
         <Container>
           <div style={{ textAlign: "center" }}>
-            <img src={Logo} className={classes.logoStyle}/>
+            <iframe width="800" height="450" src="https://www.youtube.com/embed/bHTQ31OzZY8?autoplay=1&rel=0"
+              frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
           </div>
           <div className={classes.titleText}>
+            Social Media Boot Camp
+        </div>
+        <div className={classes.BodyText}>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor<br />
+          incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud<br />
+          exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+        </div>
+          <div className={classes.titleSubText}>
             Select an event you are interested in:
         </div>
         </Container>
+        </div>
         <Container>
           <div className={classes.inputWrapper}>
             <input
@@ -290,44 +301,47 @@ export default withStyles((theme) => ({
   grid: {
     marginTop: "32px",
   },
-  backgroundSlice: {
-    position: "absolute",
-    top: "200px",
-    bottom: "0",
-    right: "0",
-    left: "0",
-    width: "100%",
-    height: "400px",
-    backgroundImage: `url('${Hexagons}')`,
-    opacity: "0.5",
-    zIndex: "-1",
-  },
+
   logoStyle:{
     width:"80%",
     [theme.breakpoints[900]]: {
       width: "40%"
     },
   },
-  backgroundTopSlice: {
-    position: "absolute",
-    top: "-1px",
-    width: "100%",
-    height: "10vw",
-    transform: "rotate(180deg)",
-  },
 
-  backgroundBottomSlice: {
-    position: "absolute",
-    bottom: "0",
-    width: "100%",
-    height: "10vw",
-  },
   titleText: {
     fontSize: "28px",
     lineHeight: "36px",
     fontWeight: "700",
     textAlign: "center",
+    color: "#55c3ba",
     paddingBottom: "24px",
     paddingTop: "40px"
+  },
+
+  titleSubText: {
+    fontSize: "18px",
+    lineHeight: "30px",
+    fontWeight: "700",
+    textAlign: "center",
+    color: "#55c3ba",
+    paddingTop: "30px",
+  },
+
+  BodyText: {
+    fontSize: "16px",
+    lineHeight: "22px",
+    fontWeight: "300",
+    textAlign: "center",
+    color: "#56585a",
+    paddingRight: "45px",
+    paddingLeft: "45px",
+  },
+
+  smBackground: {
+    backgroundImage: `url('${smbg}')`,
+    backgroundSize: "cover",
+    backgroundPosition: "absolute",
+    width:"100%",
   },
 }))(EventsSM);
