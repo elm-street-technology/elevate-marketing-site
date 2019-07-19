@@ -233,7 +233,7 @@ export default withStyles((theme) => ({
   inputIcon: {
     position: "absolute",
     top: "0",
-    right: "140px",
+    right: "0",
     color: "rgba(100, 97, 110, .36)",
     margin: "8px",
   },

@@ -33,29 +33,56 @@ class EventsLG extends Component {
       activeEvents,
       filteredEvents: activeEvents,
       filteredInputValue: "",
+      filteredInputValueState: ""
     };
   }
 
   onInputChange = (e) => {
+    console.log(e.target.name);
     const value = e.target.value;
     const { activeEvents } = this.state;
 
-    const filteredEvents = activeEvents.filter((event) => {
-      // Check the input string against the event title and location
-      if (
-        (event.title &&
-          event.title.toLowerCase().includes(value.toLowerCase())) ||
-        (event.location &&
-          event.location.toLowerCase().includes(value.toLowerCase()))
-      ) {
-        return true;
-      }
-      return false;
-    });
+    var filteredEvents = activeEvents;
+
+    if (e.target.name == 'keyword') {
+      filteredEvents = filteredEvents.filter((event) => {
+        // Check the input string against the event title and location
+        if (
+          (event.title &&
+            event.title.toLowerCase().includes(value.toLowerCase())) ||
+          (event.location &&
+            event.location.toLowerCase().includes(value.toLowerCase())) ||
+          (event.mls &&
+            event.mls.toLowerCase().includes(value.toLowerCase()))
+        ) {
+          return true;
+        }
+        return false;
+      });
+      this.setState({
+        filteredInputValue: value,
+      });
+    }
+    if (e.target.name == 'state') {
+      filteredEvents = filteredEvents.filter((event) => {
+        if (
+          (event.state &&
+            event.state.toLowerCase().includes(value.toLowerCase())) ||
+          (event.state && value == 'Any State')
+        ) {
+          return true;
+        }
+        return false;
+      });
+      this.setState({
+        filteredInputValueState: value,
+      });
+    }
+
+
 
     this.setState({
-      filteredEvents,
-      filteredInputValue: value,
+      filteredEvents
     });
   };
 
@@ -64,6 +91,7 @@ class EventsLG extends Component {
     this.setState({
       filteredEvents: activeEvents,
       filteredInputValue: "",
+      filteredInputValueState: ""
     });
   };
 
@@ -105,9 +133,11 @@ class EventsLG extends Component {
               onChange={this.onInputChange}
               value={filteredInputValue}
               placeholder="Type an MLS to search... (e.g. FMLS)"
+              name="keyword"
             />
             <Search size={36} className={classes.inputIcon} />
-            <select className={classes.input} style={{width:"30%",marginLeft:"10px"}}>
+            <select className={classes.input} style={{ width: "30%", marginLeft: "10px" }} name="state" onChange={this.onInputChange}
+              value={this.state.filteredInputValueState}>
               <option>Any State</option>
               <option value="AK">AK</option>
               <option value="AL">AL</option>
@@ -174,7 +204,12 @@ class EventsLG extends Component {
           ) : !(filteredEvents && filteredEvents.length) ? (
             <EventCardZero className={classes.grid}>
               <div>
-                There are no scheduled events for "{filteredInputValue}"
+                Don't see an upcoming event in your area? No worries, you can still get: 
+                  <ul>
+                    <li>Schedule Audit with a Coach</li>
+                    <li>Receive Notification of Next Event in Your Area</li>
+                    <li><Link to="/events_webinars">Register for an Upcoming Webinar</Link></li>
+                  </ul>
               </div>
               <button
                 className={classes.resetButton}
@@ -197,7 +232,7 @@ class EventsLG extends Component {
             float:"right",
             marginTop:"40px"}}>
             <Link className={classes.bootcampLink} to="/bootcamp">
-              Learn about our Social Media Bootcamp →
+              Learn about our Lead Generation Bootcamp →
             </Link>
           </div>
         </Container>
