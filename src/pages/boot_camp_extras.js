@@ -46,58 +46,69 @@ const boot_camp_extras = ({ classes }) => {
       </Container>
       
       <Container>
-        <div className={classes.top}>
-          <div className={classes.column} style={{ height:"350px"}}> 
-            <div className={classes.grayText} style={{ textAlign: "center" }}>
-            <div style={{ textAlign: "center",paddingBottom:"25px" }}>
-          <img src={Star} width="45" />
-        </div>
-              <div className={classes.heading}>
-              
-              Are you a NEW<br />
-              Elevate subscriber?</div>
-                <div>
-                <div className={classes.bold}>Welcome, you smart cookie!<br />
-                Here’s what happens next...</div>
-                
-                It takes about 24-hrs to process your order.  Once processed, you will hear from our Success Team with next steps.
-<br /><br />
-                </div>
-                
+            <div className={classes.top}>
+                  <div className={classes.centerHeading}>
+
+                          <div className={classes.grayText} style={{ textAlign: "center" }}>
+                                <div style={{ textAlign: "center",paddingBottom:"25px" }}>
+                                <img src={Star} width="45" />
+                                </div>
+                                <div className={classes.heading}>  
+                                Are you a NEW Elevate subscriber?</div>
+                                <div>
+                                    <div className={classes.bold}>Welcome, you smart cookie! Here’s what happens next...</div>
+                                    It takes about 24-hrs to process your order.  Once processed, you will hear from our Success Team with next steps.
+                                    <br /><br />
+                                </div>
+                         </div>
+                  </div>
             </div>
+      </Container>
             
-            
-
-          </div>
-          
-          <div className={classes.column}>
-          <div style={{ textAlign: "center",paddingBottom:"25px" }}>
-
-          <div className={classes.grayText}><strong>Get a head-start on “all things Elevate”<br />
-with our helpful resources:</strong></div>
-
-<div style={{ paddingTop: "18px", }}>
-
-                <a target="_blank" href="https://tryelevate.com/webinars/" className={classes.getStartedLink}>
-                  Training Webinars
-                    </a>
-                <a target="_blank" href="https://elmstreettechnology.zendesk.com/hc/en-us" className={classes.getStartedLink}>
-                  Elevate Help Center
-                    </a>
-                <a target="_blank" href="/assets/elevate_getting_started_ebook.pdf" className={classes.getStartedLink}>
-                  Getting Started Guide
-                    </a>
-                </div>
-
-
-  
-
-                </div>
+      <Container>
+            <div className={classes.top}>
+                  <div className={classes.centerHeading}>
+                          <div className={classes.grayText}>
+                          <div className={classes.bold}>Get a head-start on “all things Elevate” with our helpful resources:</div>
+                          <br />
+                          </div>
 
           </div>
 
         </div>
       </Container>
+
+      <div>
+      <Container>
+        
+      
+      
+        <div className={classes.top}>
+          <div className={classes.column3} style={{ textAlign: "center", paddingBottom: "10px" }}>
+          
+                                    <a target="_blank" href="/assets/elevate_getting_started_ebook.pdf" className={classes.getStartedLink}>
+                                    Getting Started Guide
+                                  </a>
+                                
+
+            </div>
+          <div className={classes.column3} style={{ textAlign: "center", paddingBottom: "10px" }}>
+          <a target="_blank" href="https://elmstreettechnology.zendesk.com/hc/en-us" className={classes.getStartedLink}>
+                                    Elevate Help Center
+                                    </a>
+          </div>
+
+          <div className={classes.column3} style={{ textAlign: "center", paddingBottom: "10px" }}>
+          <a target="_blank" href="https://tryelevate.com/webinars/" className={classes.getStartedLink}>
+                                    Training Webinars
+                                    </a>
+          </div>
+
+
+
+          </div>
+      </Container>
+      </div>
 
 
       <Container>
