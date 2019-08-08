@@ -134,7 +134,7 @@ class FormRefer extends Component {
                 component={Input}
                 className={classes.field}
               />
-              <hr />
+              
               <div className={classes.topRow}>
                 <div className={classes.friendNumber}>1.</div>
                 <Field

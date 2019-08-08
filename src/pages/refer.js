@@ -5,6 +5,7 @@ import config from "../utils/siteConfig";
 import Container from "../components/Container";
 import FormRefer from "../components/FormRefer";
 import SEO from "../components/SEO";
+import power from "../images/refer_power.png";
 import LandingHeader from "../images/6emails_landing_header.jpg";
 
 const Refer = ({ children, classes, data, tags }) => {
@@ -19,16 +20,30 @@ const Refer = ({ children, classes, data, tags }) => {
       </Helmet>
       <SEO postNode={postNode} pagePath="contact" customTitle />
 
+
+      <Container>
+        <div className={classes.top} style={{paddingRight:"25px", paddingLeft:"25px"}}>
+          <div className={classes.centerHeading}>
+            <div style={{ textAlign: "center",paddingBottom:"15px" }}>
+            <img src={power} width="250" />
+            </div>
+            <div className={classes.heading}>SHARE THE POWER OF ELEVATE</div>
+            <div style={{paddingBottom:"35px", lineHeight:"24px"}}><div className={classes.bold}>Share the love &amp; refer your fellow real estate colleagues to Elevate.</div>
+            For any referrals who subscribe to Elevate's DMS or Elite programs,<br />
+            you'll receive a $100 credit to your account. Nice!</div>
+            
+          </div>
+        </div>
+      </Container>
+
+
+
+
       <Container>
         <div >
-            <div style={{ maxWidth: "900px", backgroundColor: "#d0d5d7", paddingBottom: "40px",marginBottom:"40px", marginRight:"auto",marginLeft:"auto"}}>
+            <div style={{ maxWidth: "900px", backgroundColor: "#f7f7f7", paddingBottom: "40px", marginBottom:"40px", marginRight:"auto",marginLeft:"auto", paddingTop:"10px"}}>
                 <div className={classes.landingHeaderStyle}>
                     {/* <img src={LandingHeader} style={{width:"100%"}} /> */}
-                </div>
-                <div>
-                    Share the power of ELEVATE
-
-                    Share the love &amp; refer your fellow real estate colleagues to Elevate. For any referrals who subscribe to Elevate's DMS or Elite programs, you'll receive a $100 credit to your account. Nice!
                 </div>
                 <div style={{ paddingLeft: "10px", paddingRight: "10px"}}>
                     <FormRefer />
@@ -46,7 +61,7 @@ export default withStyles((theme) => ({
     flexDirection: "column",
     width: "100%",
     padding: "0 8px",
-    margin: "70px auto",
+    margin: "50px auto",
   },
   heading: {
     fontSize: "28px",
@@ -67,5 +82,29 @@ export default withStyles((theme) => ({
   landingHeaderStyle:{
     textAlign:"center",
     marginBottom:"30px"
+  },
+
+  centerHeading:{
+    alignItems: "center",
+    width: "100%",
+    textAlign: "center",
+  },
+
+  heading: {
+    color: theme.colors.secondary,
+    fontSize: "32px",
+    lineHeight: "40px",
+    fontWeight: "700",
+    marginRight: "auto",
+    paddingBottom: "20px",
+  },
+
+  top: {
+    display: "flex",
+    flexWrap: "wrap",
+    alignItems: "top",
+  },
+  bold:{
+    fontWeight:"700",
   },
 }))(Refer);
