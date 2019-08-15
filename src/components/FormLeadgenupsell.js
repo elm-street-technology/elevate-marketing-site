@@ -202,7 +202,7 @@ class FormLeadgenupsell extends Component {
                 Want FREE buyer / seller leads?
                 </div>
                 <div className={classes.headingText} style={{ marginTop: "10px" }}>
-                Offer expires Friday, August 30th at 6pm PST.
+                Upgrade your Elevate account (by Friday, Aug. 30th) to include one of our lead generation solutions & receive an ADDITIONAL $50/m in lead generation ad spend for ONE FULL YEAR (giving you an average of 3 - 5 FREE leads per month on top of all of the rest!).
                 </div>
               </div>
               <div style={{ maxWidth: "500px", marginLeft: "auto", marginRight: "auto" }}>
@@ -252,6 +252,10 @@ class FormLeadgenupsell extends Component {
                       </div>
                     </div>
                   </div>}
+                  <div style={{ fontSize: "11px", paddingTop:"16px" }}>
+                  Offer expires Friday, August 30th at 6pm PST.<br />
+                  Offer only valid for active Elevate subscribers of Social Pro or DMS.
+              </div>
                 <button type="submit" className={classes.signUpBtn} disabled={isSubmitting}>
                   Check Availability
                 </button>
@@ -344,6 +348,7 @@ export default withStyles((theme) => ({
   headingText: {
     fontSize: "16px",
     fontWeight: "300",
+    lineHeight: "24px",
     color: "#777777",
     textAlign: "center",
     padding: "3px",
