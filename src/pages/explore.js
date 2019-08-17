@@ -4,7 +4,7 @@ import withStyles from "elevate-ui/withStyles";
 import Container from "../components/Container";
 import SEO from "../components/SEO";
 import Logo from "../components/Logo";
-import FormAppointment from "../components/FormAppointment";
+import FormExplore from "../components/FormExplore";
 import Hr from "elevate-ui/Hr";
 import WistiaVideo from "../components/WistiaVideo";
 import Chat from "elevate-ui-icons/Chat";
@@ -152,7 +152,7 @@ const leadGenSpecialOffer = ({ classes }) => {
             <br />
             <br />
             
-          <FormAppointment />
+          <FormExplore />
             
           </div>
 

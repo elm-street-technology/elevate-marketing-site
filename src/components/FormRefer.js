@@ -77,7 +77,7 @@ class FormRefer extends Component {
               notes: (values.demorequest == true) ? "Requested demo" : ""
             };
             return fetch(
-              "https://easyemerge.com/plugins/elevate_form2.php",
+              "https://easyemerge.com/plugins/elevate_form.php",
               {
                 method: "POST",
                 headers: {
