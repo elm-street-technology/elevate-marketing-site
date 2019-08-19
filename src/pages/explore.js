@@ -99,7 +99,7 @@ const leadGenSpecialOffer = ({ classes }) => {
     <div className={classes.column40p}>
 <Container>
         <div className={classes.infoboxGray2}>
-          <div className={classes.column3} style={{ textAlign: "center", paddingBottom: "35px", }}>
+          <div className={classes.column3} style={{ textAlign: "center", paddingBottom: "30px", }}>
                     <div style={{ textAlign: "center",paddingBottom:"20px" }}>
                     <img src={Exsearch} style={{ width:"100%", maxWidth:"150px"}}/>
                     </div>
@@ -119,7 +119,7 @@ const leadGenSpecialOffer = ({ classes }) => {
 
 
         <div className={classes.infoboxGray2}>
-            <div className={classes.column3} style={{ textAlign: "center", paddingBottom: "35px" }}>
+            <div className={classes.column3} style={{ textAlign: "center", paddingBottom: "30px" }}>
           
                     <div style={{ textAlign: "center",paddingBottom:"20px" }}>
                     <img src={Exhost} style={{ width:"100%", maxWidth:"150px"}}/>
@@ -138,15 +138,16 @@ const leadGenSpecialOffer = ({ classes }) => {
 
 
         <div className={classes.infoboxGray2}>
-          <div className={classes.column3} style={{ textAlign: "center", paddingBottom: "35px" }}>
+          <div className={classes.column3} style={{ textAlign: "center", paddingBottom: "30px" }}>
                     <div style={{ textAlign: "center",paddingBottom:"20px" }}>
                     <img src={Exschedule} style={{ width:"100%", maxWidth:"150px"}}/>
                     </div>
 
                     <div style={{ textAlign: "center", paddingLeft:"10px", paddingRight:"10px"}}> 
-                    Talk one-on-one with an<br />
-                    Elevate Success Coach by<br />
-                    completing the “Request a Personal Demo”<br />
+                    Talk one-on-one with<br />
+                    an Elevate Success Coach<br />
+                    by completing the<br />
+                    “Request a Personal Demo”<br />
                     form on this page.<br />
                     
                     </div>
