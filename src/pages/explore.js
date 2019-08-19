@@ -49,12 +49,12 @@ const leadGenSpecialOffer = ({ classes }) => {
  <div style={{backgroundColor:"white",backgroundImage:"url("+Topbg+")", backgroundPosition:"bottom"}}>
           <Container>
                 <div className={classes.top}>
-                    <div className={classes.centerHeading} style={{paddingBottom:"35px"}}>
+                    <div className={classes.centerHeading} style={{paddingBottom:"35px", paddingTop:"65px"}}>
                                         <div style={{ textAlign: "center",paddingBottom:"10px" }}>
-                                        <img src={Explore_title} style={{ width:"100%", maxWidth:"270px"}}/>
+                                        <img src={Explore_title} style={{ width:"100%", maxWidth:"280px"}}/>
                                         </div>
-                                        <div style={{paddingBottom:"35px"}}>Explore lead generation, online marketing<br />
-                                        &amp; office productivity for brokers, agents &amp; teams.
+                                        <div style={{paddingBottom:"35px"}}>Lead generation. Intuitive CRM.  Email, text &amp; social marketing.<br />
+                                        Custom marketing campaigns. And so much more.
                                         </div>
                     </div>
                 </div>
@@ -66,14 +66,17 @@ const leadGenSpecialOffer = ({ classes }) => {
                 <div className={classes.top}>
                     <div className={classes.centerHeading} style={{paddingBottom:"5px", paddingTop:"45px"}}>
                                 <div className={classes.heading2} style={{color:"#48b8ac"}}>
-                                HOW CAN WE HELP YOU TODAY?
+                                How can we help YOU today?
                                 </div>
                     </div>
                 </div>
          </Container>
 
-   
-<Container>     
+
+<Container>
+
+
+
 <div className={classes.top}>
         <div className={classes.infoboxGray2}>
           <div className={classes.column3} style={{ textAlign: "center", paddingBottom: "35px", }}>
@@ -81,9 +84,9 @@ const leadGenSpecialOffer = ({ classes }) => {
                     <img src={Exsearch} style={{ width:"100%", maxWidth:"150px"}}/>
                     </div>
             
-                    <div className={classes.productCol} style={{ textAlign: "center", paddingLeft:"10px", paddingRight:"10px" }}>
-                    Search upcoming<br />
-                    boot camps in my area.<br />
+                    <div style={{ textAlign: "center", paddingLeft:"10px", paddingRight:"10px" }}>
+                    Want to register for an<br />
+                    upcoming boot camp in your area?<br />
 
                     <a target="_blank" href="https://tryelevate.com/events/" className={classes.getStartedLinkpro}>
                     Search NOW
@@ -102,9 +105,11 @@ const leadGenSpecialOffer = ({ classes }) => {
                     <img src={Exhost} style={{ width:"100%", maxWidth:"150px"}}/>
                     </div>
 
-                    <div className={classes.productCol} style={{ textAlign: "left", paddingLeft:"10px", paddingRight:"10px"}}>
-                    a boot camp in my MLS<br />
-                    and/or office.
+                    <div style={{ textAlign: "center", paddingLeft:"10px", paddingRight:"10px"}}>
+                    Interested in hosting an<br/>
+                    educational boot camp in your<br/>
+                    MLS and/or office?<br/><br/>
+                    CALL 844.812.8914
                     </div>
 
 
@@ -118,12 +123,11 @@ const leadGenSpecialOffer = ({ classes }) => {
                     <img src={Exschedule} style={{ width:"100%", maxWidth:"150px"}}/>
                     </div>
 
-                    <div className={classes.productCol} style={{ textAlign: "left", paddingLeft:"10px", paddingRight:"10px"}}> 
-                    a 15-minute demo of Elevate.<br /><br />
-                    a lead generation<br />
-                    coaching session.<br /><br />
-                    an audit of my website<br />
-                    and social media.<br />
+                    <div style={{ textAlign: "center", paddingLeft:"10px", paddingRight:"10px"}}> 
+                    Talk one-on-one with an<br />
+                    Elevate Success Coach by<br />
+                    completing the “Request a Personal Demo”<br />
+                    form on this page.<br />
                     
                     </div>
 
@@ -176,7 +180,7 @@ const leadGenSpecialOffer = ({ classes }) => {
                                 <img src={Exarrow} style={{ width:"100%", maxWidth:"35px"}}/>
                                 </div>
                                 <div className={classes.heading} style={{color:"#48b8ac"}}>
-                                SPECIAL OFFERS FOR YOU!
+                                Special offers for YOU!
                                 </div>
                             </div>
                             </div>
@@ -225,7 +229,7 @@ const leadGenSpecialOffer = ({ classes }) => {
                 <img src={Exp3} style={{ width:"100%", maxWidth:"300px"}}/>
                 </div>
                 <div className={classes.heading2} style={{color:"#48b8ac"}}>
-                Need a FREE<br />
+                Want a FREE<br />
                 Website/Social Audit?
                 </div>
 
@@ -244,9 +248,10 @@ const leadGenSpecialOffer = ({ classes }) => {
           <div className={classes.top}>
                             <div className={classes.centerHeading} style={{paddingBottom:"45px",}}>
                                 <div className={classes.heading2} style={{color:"#48b8ac"}}>
-                                ARE YOU INTERESTED?</div>
+                                Are YOU interested?</div>
                                 <div style={{color:"#ffffff"}}> 
-                                Call 844.812.8914 &amp; speak with an Elevate Success Coach!
+                                Fill out the "Request a Personal Demo" form above or call 844.812.8914 to speak to an Elevate Success Coach today.<br />
+                                We’re excited to help you and your business grow!
                                 </div>
 
                             </div>
@@ -279,7 +284,7 @@ const leadGenSpecialOffer = ({ classes }) => {
 export default withStyles((theme) => ({
   root: {
     position: "relative",
-    paddingTop: "56px",
+    paddingTop: "20px",
     paddingBottom: "0px",
     lineHeight: "1.75em",
   },
