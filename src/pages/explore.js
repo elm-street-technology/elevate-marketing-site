@@ -5,9 +5,6 @@ import Container from "../components/Container";
 import SEO from "../components/SEO";
 import Logo from "../components/Logo";
 import FormExplore from "../components/FormExplore";
-import Hr from "elevate-ui/Hr";
-import WistiaVideo from "../components/WistiaVideo";
-import Chat from "elevate-ui-icons/Chat";
 import QuestionAnswer from "elevate-ui-icons/QuestionAnswer";
 import ViewCarousel from "elevate-ui-icons/ViewCarousel";
 import PlayCircleFilled from "elevate-ui-icons/PlayCircleFilled";
@@ -192,7 +189,7 @@ const leadGenSpecialOffer = ({ classes }) => {
       
       
 <div className={classes.top}>
-          <div className={classes.column3a} style={{ textAlign: "center", paddingBottom: "45px" }}>
+          <div className={classes.column50p} style={{ textAlign: "center", paddingBottom: "45px" }}>
                 <div style={{ textAlign: "center",paddingBottom:"20px" }}>
                 <img src={Exp1} style={{ width:"100%", maxWidth:"300px"}}/>
                 </div>
@@ -211,7 +208,7 @@ const leadGenSpecialOffer = ({ classes }) => {
           </div>
 
 
-          <div className={classes.column3a} style={{ textAlign: "center", paddingBottom: "45px" }}>
+          <div className={classes.column50p} style={{ textAlign: "center", paddingBottom: "45px" }}>
                 <div style={{ textAlign: "center",paddingBottom:"20px" }}>
                 <img src={Exp2} style={{ width:"100%", maxWidth:"300px"}}/>
                 </div>
@@ -229,7 +226,7 @@ const leadGenSpecialOffer = ({ classes }) => {
           </div>
 
 
-          <div className={classes.column3a} style={{ textAlign: "center", paddingBottom: "45px" }}>
+          <div className={classes.column50p} style={{ textAlign: "center", paddingBottom: "45px" }}>
                 <div style={{ textAlign: "center",paddingBottom:"20px" }}>
                 <img src={Exp3} style={{ width:"100%", maxWidth:"300px"}}/>
                 </div>
@@ -366,7 +363,7 @@ export default withStyles((theme) => ({
   },
 
   column3a:{
-    width:"350px",
+    width:"330px",
     maxWidth: "100%",
     paddingRight:"10px",
     paddingLeft:"10px",
