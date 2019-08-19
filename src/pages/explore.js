@@ -73,11 +73,34 @@ const leadGenSpecialOffer = ({ classes }) => {
          </Container>
 
 
-<Container>
+
 
 
 
 <div className={classes.top}>
+  <div className={classes.column60p}>
+    <div style={{backgroundColor:"#ffffff",}}>
+          <Container>
+                <div className={classes.section}></div>
+            <div className={classes.top}>
+              <div className={classes.centerHeading} style={{paddingBottom:"55px",}}>
+                <div className={classes.heading}>
+                Request Personal Demo
+                </div>
+                Schedule 15-minutes of one-on-one time with an Elevate coach.
+                <br />
+                <br />
+                
+              <FormExplore />
+                
+              </div>
+
+              </div>
+              </Container>
+            </div>
+    </div>
+    <div className={classes.column40p}>
+<Container>
         <div className={classes.infoboxGray2}>
           <div className={classes.column3} style={{ textAlign: "center", paddingBottom: "35px", }}>
                     <div style={{ textAlign: "center",paddingBottom:"20px" }}>
@@ -134,35 +157,17 @@ const leadGenSpecialOffer = ({ classes }) => {
                 
           </div>
         </div>
-
-
-</div>
- </Container>
-
-
-
-
-
-
-<div style={{backgroundColor:"#ffffff",}}>
-      <Container>
-            <div className={classes.section}></div>
-        <div className={classes.top}>
-          <div className={classes.centerHeading} style={{paddingBottom:"55px",}}>
-            <div className={classes.heading}>
-            Request Personal Demo
-            </div>
-            Schedule 15-minutes of one-on-one time with an Elevate coach.
-            <br />
-            <br />
-            
-          <FormExplore />
-            
-          </div>
-
-          </div>
-          </Container>
+        </Container>
         </div>
+</div>
+ 
+
+
+
+
+
+
+
 
 
 
@@ -292,6 +297,24 @@ export default withStyles((theme) => ({
     display: "flex",
     flexWrap: "wrap",
     alignItems: "top",
+    maxWidth: "960px",
+    marginRight: "auto",
+    marginLeft: "auto"
+  },
+  column50p: {
+    flex: "1",
+    marginLeft:'10px',
+    marginRight:'10px'
+  },
+  column60p: {
+    flex: "6",
+    marginLeft:'10px',
+    marginRight:'10px'
+  },
+  column40p: {
+    flex: "4",
+    marginLeft:'10px',
+    marginRight:'10px'
   },
   section:{
     paddingTop: "50px",
@@ -336,7 +359,6 @@ export default withStyles((theme) => ({
   },
 
   column3:{
-    width:"300px",
     maxWidth: "100%",
     paddingRight:"10px",
     paddingLeft:"10px",
