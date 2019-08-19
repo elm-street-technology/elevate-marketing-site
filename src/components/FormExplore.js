@@ -160,8 +160,8 @@ class SignUpForm extends Component {
                 type="heading6"
                 style={{ textAlign: "center", marginBottom: "32px", color: "#55c3ba" }}
               >
-                Schedule your personal walk-through or call <a href="tel:18057197394" className={classes.link}>
-                  805.719.7394
+                Schedule your personal walk-through or call <a href="tel:18448128914" className={classes.link}>
+                844.812.8914
                 </a> to speak to a sales representative today.
                 
               </Typography>
