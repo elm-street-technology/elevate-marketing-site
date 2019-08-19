@@ -36,7 +36,7 @@ class FormRefer extends Component {
                 Thank YOU, {this.state.firstName}
             </Typography>
             <Typography type="heading5" gutterTop>
-                We will reach out to your friends &amp; colleagues and let you know when they join Elevate. Feel free to return to tryelevate.com/refer any time you have others to invite..
+                We will reach out to your friends &amp; colleagues and let you know when they join Elevate. Feel free to return to tryelevate.com/refer any time you have others to invite.
             </Typography>
           </div>
         </div>
@@ -353,7 +353,7 @@ export default withStyles((theme) => ({
     },
   },
   signUpBtn: {
-    width: "100%",
+    width: "50%",
     fontSize: "20px",
     lineHeight: "26px",
     fontWeight: "600",
@@ -364,6 +364,7 @@ export default withStyles((theme) => ({
     marginTop: "30px",
     marginBottom: "30px",
     textDecoration: "none",
-
+    marginLeft:"auto",
+    marginRight:"auto"
   },
 }))(FormRefer);
