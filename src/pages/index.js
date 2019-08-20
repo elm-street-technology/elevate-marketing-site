@@ -144,7 +144,7 @@ class Index extends Component {
                 <div className={classes.flexItem}>
 
                    
-                <iframe width="100%" height="350" src="https://www.youtube.com/embed/fGRZ8-mLwnQ?autoplay=1&rel=0"
+                <iframe width="100%" height="350" src="https://www.youtube.com/embed/fGRZ8-mLwnQ?rel=0"
           frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                     
 
@@ -182,7 +182,7 @@ class Index extends Component {
       </div>
 */}
 
-        <BgSectionExternal bgImage={Blogbg} secTitle="3sixtyfive Blog" secLink="http://3sixtyfive.agency/blog/" secButton="Feed Your Brain" secImage={Blogpic}>
+        <BgSectionExternal bgImage={Blogbg} secTitle="3sixtyfive.agency Blog" secLink="http://3sixtyfive.agency/blog" secButton="Feed Your Brain" secImage={Blogpic}>
         Join the smarty pants at our full-service creative &amp; digital marketing agency as they interview &amp; interact with marketing minds across industries, and provide tons of insightful, entertaining &amp; inspiring content to help you grow.
         </BgSectionExternal>
 
