@@ -18,6 +18,7 @@ import Section2Col from "../components/Section2Col";
 import Section1Col from "../components/Section1Col";
 import Section2ColReverse from "../components/Section2ColReverse";
 import BgSection from "../components/BgSection";
+import BgSectionExternal from "../components/BgSectionExternal";
 import TestImage from "../images/600.jpg";
 import Blogbg from "../images/365_bg.jpg";
 import Blogpic from "../images/365_blogpic.png";
@@ -128,7 +129,7 @@ class Index extends Component {
                    
                 <div className={classes.centerheading}>The power of <span style={{ fontWeight: "bold" }}>EDUCATION</span></div>
                 <div className={classes.centersubtext}>Energetic onsite &amp; <span style={{ fontWeight: "bold" }}>online education, training
-                &amp; webinars</span>to help brokers, agents &amp; teams excel.</div>
+                &amp; webinars</span> to help brokers, agents &amp; teams excel.</div>
                     
 
                 </div>
@@ -152,9 +153,9 @@ class Index extends Component {
                 <div className={classes.leftheading}>The Boot Camp Experience</div>
                 <div className={classes.leftsubtext}>Designed to energize &amp; empower agents across the U.S., the Elevate Boot Camp series provides tips, tricks &amp; strategies on everything from social media marketing, lead generation, nurturing &amp; conversion, and much more.</div>
 
-                <Link to="/upgrade" className={classes.ctabutton}>
+                <Link to="/events" className={classes.ctabutton}>
                   Upcoming Tour Schedule</Link>
-                  <Link to="/upgrade" className={classes.ctabutton}>
+                  <Link to="/bootcamp" className={classes.ctabutton}>
                   Learn More</Link>
                     
                 </div>
@@ -162,7 +163,7 @@ class Index extends Component {
         </Container>
         </div>
 
-
+{/*
       <div style={{ backgroundColor:"#f7f7f7", paddingTop:"45px", paddingLeft:"25px", paddingright:"25px",}}>
         <div>
         <Section1Col secTitle="Online Webinars">
@@ -179,11 +180,11 @@ class Index extends Component {
         </Section1Col>
       </div>
       </div>
+*/}
 
-
-        <BgSection bgImage={Blogbg} secTitle="3sixtyfive Blog" secLink="http://3sixtyfive.agency/blog/" secButton="Feed Your Brain" secImage={Blogpic}>
+        <BgSectionExternal bgImage={Blogbg} secTitle="3sixtyfive Blog" secLink="http://3sixtyfive.agency/blog/" secButton="Feed Your Brain" secImage={Blogpic}>
         Join the smarty pants at our full-service creative &amp; digital marketing agency as they interview &amp; interact with marketing minds across industries, and provide tons of insightful, entertaining &amp; inspiring content to help you grow.
-        </BgSection>
+        </BgSectionExternal>
 
 
 

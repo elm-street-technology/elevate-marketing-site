@@ -4,7 +4,7 @@ import withStyles from "elevate-ui/withStyles";
 
 const GridCardIndex = ({ classes, children, page }) => {
   return (
-    <Link style={{ textDecoration: "none" }} to={page}>
+
       <div className={classes.root}>
         <div
           className={classes.inner}
@@ -12,7 +12,7 @@ const GridCardIndex = ({ classes, children, page }) => {
         {children}
         </div>
       </div>
-    </Link>
+
   );
 };
 
@@ -25,13 +25,17 @@ export default withStyles((theme) => ({
     border: "4px solid #fff",
     marginBottom: "30px",
     borderRadius: "6px",
+    
 
     "&:hover": {
       backgroundColor: (props) => props.color || "transparent",
       transition: ".3s all ease",
-      cursor: "pointer",
+      cursor: "default",
       borderColor: (props) => props.color || "transparent",
     },
+  },
+  linkStyle:{
+    cursor:"text",
   },
   inner: {
     color: "#fff",
