@@ -7,7 +7,7 @@ import HomePageHeroVid from "../components/HomePageHeroVid";
 import CallToAction from "../components/CallToAction";
 import CTASecondary from "../components/CTASecondary";
 import TestimonialCard from "../components/TestimonialCard";
-import gridBackgroundImg from "../images/indexbg_new.jpg";
+import gridBackgroundImg from "../images/indexbg_aug2019.jpg";
 import SolutionsGrid from "../components/SolutionsGrid";
 import GridTitle from "../components/GridTitle";
 import GridCardIndex from "../components/GridCardIndex";
