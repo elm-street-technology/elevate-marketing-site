@@ -29,6 +29,7 @@ import Emails from "../images/6emails_pic.png";
 import Dose from "../images/dose_pic.png";
 import Line from "../images/line.png";
 import Freebg from "../images/free_bg.jpg";
+import Elevate_logo from "../images/elevate_logo.png";
 
 const leadGenSpecialOffer = ({ classes }) => {
 
@@ -40,7 +41,7 @@ const leadGenSpecialOffer = ({ classes }) => {
         <div className={classes.top}>
           <div className={classes.centerHeading} style={{paddingBottom:"35px"}}>
             <div className={classes.heading}><strong>A Special Offer from Elevate</strong></div>
-            <div className={classes.bold}>Expires Friday, June 28th at 6pm PST.
+            <div className={classes.bold}>Expires Friday, July 26th at 6pm PST.
             
 </div>
           </div>
@@ -188,6 +189,9 @@ Sales tax charged where applicable.  Please note that setup fees are non-refunda
         <div className={classes.top}>
           <div className={classes.centerHeading} style={{paddingBottom:"55px",}}>
             <div className={classes.heading}>
+            <div style={{ textAlign: "center",paddingBottom:"20px" }}>
+            <img src={Elevate_logo} style={{ width:"100%", maxWidth:"130px"}}/>
+           </div>
             Request Personal Demo
             </div>
             Schedule 15-minutes of one-on-one time with an Elevate coach.

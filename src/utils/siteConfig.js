@@ -11,7 +11,7 @@ module.exports = {
   authorUrl: "https://www.tryelevate.com/about", // URL used for author and publisher schema, can be a social profile or other personal site
   userTwitter: "@ElmStreetRE", // Change for Twitter Cards
   shortTitle: "Try Elevate", // Used for App manifest e.g. Mobile Home Screen
-  shareImage: "/logos/logo-512.jpg", // Open Graph Default Share Image. 1200x1200 is recommended
+  shareImage: "/logos/elevate_share.jpg", // Open Graph Default Share Image. 1200x1200 is recommended
   shareImageWidth: 900, // Change to the width of your default share image
   shareImageHeight: 600, // Change to the height of your default share image
   siteLogo: "/logos/logo-512.png", // Logo used for SEO, RSS, and App manifest

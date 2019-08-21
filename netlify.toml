@@ -79,3 +79,8 @@
   from = "/BootCamps"
   to = "/bootcamps"
   status = 301
+
+[[redirects]]
+  from = "/nextsteps"
+  to = "/boot_camp_extras"
+  status = 301

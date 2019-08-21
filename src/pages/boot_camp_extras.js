@@ -46,182 +46,259 @@ const boot_camp_extras = ({ classes }) => {
       </Container>
       
       <Container>
-        <div className={classes.top}>
-          <div className={classes.column} style={{ height:"1300px"}}> 
-            <div className={classes.grayText} style={{ textAlign: "center" }}>
-            <div style={{ textAlign: "center",paddingBottom:"10px" }}>
-          <img src={Star} width="45" />
-        </div>
-              <div className={classes.heading}>
-              
-              Are you a NEW<br />
-              Elevate subscriber?</div>
-                <div>
-                <div className={classes.bold}>Welcome, you smart cookie!  Here’s what happens next...</div>
-                
-                It takes about 24-hrs to process your order.  Once processed, you will hear from our Success Team with next steps.
-<br /><br />
-Get a head-start on “all things Elevate”<br />
-with our helpful resources:
-                </div>
-                <div style={{ paddingTop: "30px", }}>
+            <div className={classes.top}>
+                  <div className={classes.centerHeading}>
 
-                <a target="_blank" href="https://tryelevate.com/webinars/" className={classes.getStartedLink}>
-                  Training Webinars
-                    </a>
-                <a target="_blank" href="https://elmstreettechnology.zendesk.com/hc/en-us" className={classes.getStartedLink}>
-                  Elevate Help Center
-                    </a>
-                <a target="_blank" href="/assets/elevate_getting_started_ebook.pdf" className={classes.getStartedLink}>
-                  Getting Started Guide
-                    </a>
-                    <br />
-                    <div className={classes.infoboxGray2}>
-                    <div style={{ textAlign: "center",paddingBottom:"10px" }}>
-          <img src={Star} width="45" />
-        </div>
-                    <div className={classes.heading}>Received a<br />
-                    FREE month?</div>
-                    <div className={classes.bold}>Here's how it works...</div>
-                    
-1. Your account will be processed &amp; billed within 24 hrs.<br /><br />
-2. Once processed, an Elevate Coach<br />
-   will be in contact within 2-business days<br />
-   to schedule onboarding.<br /><br />
-3. Your FREE month will be applied to your<br />
-2nd month (excludes Elite subscribers)<br /><br />
-</div>
-                </div>
+                          <div className={classes.grayText} style={{ textAlign: "center" }}>
+                                <div style={{ textAlign: "center",paddingBottom:"25px" }}>
+                                <img src={Star} width="45" />
+                                </div>
+                                <div className={classes.heading}>  
+                                Are you a NEW Elevate subscriber?</div>
+                                <div>
+                                    <div className={classes.bold}>Welcome, you smart cookie! Here’s what happens next...</div>
+                                    It takes about 24-hrs to process your order.  Once processed, you will hear from our Success Team with next steps.
+                                    <br /><br />
+                                </div>
+                         </div>
+                  </div>
             </div>
+      </Container>
             
-            
-
-          </div>
-          
-          <div className={classes.column}>
-
-          <div className={classes.heading} style={{textAlign: "center",}}>
-              
-              Thinking of joining Elevate?</div>
-
-            <div className={classes.infoboxTeal}>
-              <div>
-              <div style={{ textAlign: "center",paddingBottom:"10px" }}>
-          <img src={Tour} width="45" />
-        </div>
-                <div className={classes.heading2} style={{color:"#FFFFFF"}}>Take a Tour of Elevate</div>
-                <div style={{color:"#FFFFFF"}}>
-                Schedule your personal walk-through with an Elevate Success Coach to learn how you can capture, nurture &amp; convert more business...today.
-
-                </div>
-              </div>
-                <div>
-                <a target="_blank" href="https://calendly.com/estsean/15-min-demo" className={classes.getStartedLink2}>
-                  Schedule NOW
-                    </a>
-                </div>
-            </div>
-
-            <div className={classes.infoboxGray}>
-            <div style={{ textAlign: "center",paddingBottom:"10px" }}>
-          <img src={Encore} width="45" />
-        </div>
-              <div style={{textAlign:"center"}}>
-                <div className={classes.heading2}>Join an Upcoming Webinar</div>
-                <div style={{color:"#FFFFFF"}}>
-                Loved your Elevate educational experience?  Dial into one of our upcoming one-hour webinars for MORE tips, tricks &amp; strategies to rock your marketing &amp; drive your lead gen.
-
-                </div>
-                <a target="_blank" href="/smbc_webinars/" className={classes.getStartedLink}>
-                  Register TODAY
-                    </a>
-              </div>
-            </div>
-
-            <div className={classes.infoboxTeal}>
-              <div>
-              <div style={{ textAlign: "center",paddingBottom:"10px" }}>
-          <img src={Web} width="45" />
-        </div>
-                <div className={classes.heading2} style={{color:"#FFFFFF"}}>Check us out LIVE</div>
-                <div style={{color:"#FFFFFF"}}>
-                The Elevate Boot Camp series provides tips, tricks &amp; strategies in an energetic two-hour session designed to energize &amp; empower agents across the US.
-
-                </div>
-              </div>
-                <div>
-                <a target="_blank" href="/smbc_webinars/" className={classes.getStartedLink2}>
-                Upcoming TOUR Schedule
-                    </a>
-                </div>
-            </div>
-
-
+      <Container>
+            <div className={classes.top}>
+                  <div className={classes.centerHeading}>
+                          <div className={classes.grayText}>
+                          <div className={classes.bold}>Get a head-start on “all things Elevate” with our helpful resources:</div>
+                          <br />
+                          </div>
 
           </div>
 
         </div>
       </Container>
-   
-      <div style={{backgroundColor:"gray",backgroundImage:"url("+Freebg+")"}}>
+
+      <div>
       <Container>
-            <div className={classes.section}></div>
-        <div className={classes.top}>
-          <div className={classes.centerHeading}>
-            <div className={classes.heading} style={{paddingBottom:"55px", color:"#ffffff"}}>
-            FREE Marketing Content
-            </div>
-
-          </div>
-        </div>
+        
       
       
         <div className={classes.top}>
-          <div className={classes.column3} style={{ textAlign: "center", paddingBottom: "35px" }}>
-          <div style={{ textAlign: "center",paddingBottom:"20px" }}>
-          <img src={Emails} style={{ width:"100%", maxWidth:"300px"}}/>
-        </div>
-            
-          <div className={classes.heading2} style={{color:"#ffffff"}}>6 Emails Every Real Estate<br />
-          Agent Should Be Sending</div>
-                <div> 
-                Easy to implement, proven to deliver emails designed to nurture your clients.
-                </div>
-                <a target="_blank" href="/assets/6emails_elevate.pdf" className={classes.getStartedLink2}>
-                  Download PDF
-                    </a>
+                <div className={classes.column3} style={{ textAlign: "center", paddingBottom: "10px" }}>
+                                    <a target="_blank" href="/assets/elevate_getting_started_ebook.pdf" className={classes.getStartedLink}>
+                                    Getting Started Guide
+                                  </a>
+                 </div>
+                  <div className={classes.column3} style={{ textAlign: "center", paddingBottom: "10px" }}>
+                                    <a target="_blank" href="https://elmstreettechnology.zendesk.com/hc/en-us" className={classes.getStartedLink}>
+                                    Elevate Help Center
+                                    </a>
+                  </div>
 
-            </div>
-          <div className={classes.column3} style={{ textAlign: "center", paddingBottom: "35px" }}>
-          <div style={{ textAlign: "center",paddingBottom:"20px" }}>
-          <img src={Dose} style={{ width:"100%", maxWidth:"300px"}}/>
-        </div>
-          <div className={classes.heading2} style={{color:"#ffffff"}}>Daily Dose of<br />
-         Marketing Awesomeness</div>
-                <div> 
-                Every morning, we’ll send a marketing tip,<br />
-                trick or insight direct to your inbox.
-                </div>
-                <a target="_blank" href="http://3sixtyfive.agency/" className={classes.getStartedLink2}>
-                  Sign Up
-                    </a>
-          </div>
+                  <div className={classes.column3} style={{ textAlign: "center", paddingBottom: "10px" }}>
+                                    <a target="_blank" href="https://tryelevate.com/webinars/" className={classes.getStartedLink}>
+                                    Training Webinars
+                                    </a>
+                  </div>
 
-          <div className={classes.column3} style={{ textAlign: "center", paddingBottom: "35px" }}>
-          <div style={{ textAlign: "center",paddingBottom:"20px" }}>
-          <img src={Social} style={{ width:"100%", maxWidth:"300px"}}/>
         </div>
-          <div className={classes.heading2} style={{color:"#ffffff"}}>Social Media Boot Camp<br />
-Takeaways
+</Container>
 </div>
-                <div> 
-                Quick tips, tricks &amp; takeaways from our<br />
-                Social Media Boot Camp Webinar.
+
+
+ <Container>
+              <div style={{marginLeft: "18px", marginRight: "18px",}}>
+                 <div className={classes.infoboxGray2}>
+                
+                        <div className={classes.heading}>Received a FREE month?</div>
+                        <div className={classes.bold}>Here's how it works...</div>
+                
+                        1. Your account will be processed &amp; billed within 24 hours.<br /><br />
+                        2. Once processed, an Elevate Coach will be in contact within 2-business days to schedule onboarding.<br /><br />
+                        3. Your FREE month will be applied to your 2nd month (excludes Elite subscribers)<br /><br />
+                
                 </div>
-                <a target="_blank" href="/assets/elevate_socialmedia_tips.pdf" className={classes.getStartedLink2}>
-                  Download PDF
-                    </a>
+              </div>
+</Container>
+
+
+<div>
+<Container>
+        <div className={classes.top}>
+                <div className={classes.centerHeading}>
+                         <div className={classes.heading} style={{textAlign: "center", paddingTop:"13px"}}>
+                          Thinking of joining Elevate?
+                          </div>
+
+                </div>
+        </div>
+      
+      
+<div className={classes.top}>
+          <div className={classes.column3} style={{ textAlign: "center", paddingBottom: "35px" }}>
+          
+                    <div className={classes.infoboxTeal}>
+                        <div>
+                            <div style={{ textAlign: "center",paddingBottom:"10px" }}>
+                            <img src={Tour} width="45" />
+                            </div>
+
+                            <div className={classes.heading2} style={{color:"#FFFFFF"}}>
+                            Take a Tour of Elevate
+                            </div>
+
+                            <div style={{color:"#FFFFFF"}}>
+                            Schedule your personal<br />
+                            walk-through with an<br />
+                            Elevate Success Coach to<br />
+                            learn how you can capture,<br />
+                            nurture &amp; convert<br />
+                            more business...today.<br />
+                            </div>
+                      </div>
+                            <div>
+                                <a target="_blank" href="https://calendly.com/estsean/15-min-demo" className={classes.getStartedLink2}>
+                                Schedule NOW
+                                </a>
+                            </div>
+                  </div>
+
           </div>
+
+
+          <div className={classes.column3} style={{ textAlign: "center", paddingBottom: "35px" }}>
+                  <div className={classes.infoboxGray}>
+                          <div style={{ textAlign: "center",paddingBottom:"10px" }}>
+                          <img src={Encore} width="45" />
+                          </div>
+
+                  <div style={{textAlign:"center"}}>
+                          <div className={classes.heading2}>Join an Upcoming Webinar</div>
+
+                          <div style={{color:"#FFFFFF"}}>
+                          Loved your Elevate educational<br />
+                          experience?  Dial into one of<br />
+                          our upcoming one-hour webinars<br />
+                          for MORE tips, tricks &amp; strategies<br />
+                          to rock your marketing<br />
+                          &amp; drive your lead gen.
+                          </div>
+
+                          <a target="_blank" href="/smbc_webinars/" className={classes.getStartedLink}>
+                          Register TODAY
+                          </a>
+                  </div>
+
+                  </div>
+
+          </div>
+
+
+          <div className={classes.column3} style={{ textAlign: "center", paddingBottom: "35px" }}>
+                  <div className={classes.infoboxTeal}>
+                      <div>
+                            <div style={{ textAlign: "center",paddingBottom:"10px" }}>
+                            <img src={Web} width="45" />
+                            </div>
+
+                            <div className={classes.heading2} style={{color:"#FFFFFF"}}>
+                            Check us out LIVE</div>
+
+                            <div style={{color:"#FFFFFF"}}>
+                            The Elevate Boot Camp<br />
+                            series provides tips, tricks<br />
+                            &amp; strategies in an energetic<br />
+                            two-hour session designed to<br />
+                            energize &amp; empower<br />
+                            agents across the US.
+                            </div>
+                      </div>
+                      
+                      <div>
+                      <a target="_blank" href="/smbc_webinars/" className={classes.getStartedLink2}>
+                      Upcoming TOUR Schedule</a>
+                      </div>
+                  </div>
+          </div>
+
+
+
+          </div>
+</Container>
+</div>
+
+
+
+
+
+   
+ <div style={{backgroundColor:"gray",backgroundImage:"url("+Freebg+")"}}>
+      <Container>
+                  <div className={classes.section}></div>
+                        <div className={classes.top}>
+                                <div className={classes.centerHeading}>
+                                <div className={classes.heading} style={{paddingBottom:"55px", color:"#ffffff"}}>
+                                FREE Marketing Content
+                                </div>
+                                </div>
+                        </div>
+      
+      
+<div className={classes.top}>
+<div className={classes.column3} style={{ textAlign: "center", paddingBottom: "35px" }}>
+                      <div style={{ textAlign: "center",paddingBottom:"20px" }}>
+                      <img src={Emails} style={{ width:"100%", maxWidth:"300px"}}/>
+                      </div>
+            
+                      <div className={classes.heading2} style={{color:"#ffffff"}}>
+                      6 Emails Every Real Estate<br />
+                      Agent Should Be Sending</div>
+                          <div>
+                          Easy to implement, proven to deliver emails designed to nurture your clients.
+                         </div>
+
+                         <a target="_blank" href="/assets/6emails_elevate.pdf" className={classes.getStartedLink2}>
+                          Download PDF</a>
+
+</div>
+
+<div className={classes.column3} style={{ textAlign: "center", paddingBottom: "35px" }}>
+                        <div style={{ textAlign: "center",paddingBottom:"20px" }}>
+                        <img src={Dose} style={{ width:"100%", maxWidth:"300px"}}/>
+                        </div>
+
+                        <div className={classes.heading2} style={{color:"#ffffff"}}>Daily Dose of<br />
+                        Marketing Awesomeness</div>
+
+                        <div> 
+                        Every morning, we’ll send a marketing tip,<br />
+                        trick or insight direct to your inbox.
+                        </div>
+
+                        <a target="_blank" href="http://3sixtyfive.agency/" className={classes.getStartedLink2}>
+                        Sign Up
+                        </a>
+</div>
+
+<div className={classes.column3} style={{ textAlign: "center", paddingBottom: "35px" }}>
+                      <div style={{ textAlign: "center",paddingBottom:"20px" }}>
+                      <img src={Social} style={{ width:"100%", maxWidth:"300px"}}/>
+                      </div>
+
+                      <div className={classes.heading2} style={{color:"#ffffff"}}>
+                      Social Media Boot Camp<br />
+                      Takeaways
+                      </div>
+
+                      <div> 
+                      Quick tips, tricks &amp; takeaways from our<br />
+                      Social Media Boot Camp Webinar.
+                      </div>
+
+                      <a target="_blank" href="/assets/elevate_socialmedia_tips.pdf" className={classes.getStartedLink2}>
+                      Download PDF
+                      </a>
+</div>
 
 
 
@@ -243,7 +320,7 @@ export default withStyles((theme) => ({
   top: {
     display: "flex",
     flexWrap: "wrap",
-    alignItems: "center",
+    alignItems: "top",
   },
   section:{
     paddingTop: "60px",
@@ -258,7 +335,7 @@ export default withStyles((theme) => ({
   },
   heading2: {
     color: theme.colors.secondary,
-    fontSize: "22px",
+    fontSize: "18px",
     fontWeight: "700",
     marginRight: "auto",
     paddingBottom: "20px",
@@ -288,8 +365,8 @@ export default withStyles((theme) => ({
   },
 
   getStartedLink: {
-    minWidth: "300px",
-    maxWidth: "300px",
+    minWidth: "250px",
+    maxWidth: "250px",
     alignContent: "center",
     justifyContent: "center",
     fontSize: "14px",
@@ -306,8 +383,8 @@ export default withStyles((theme) => ({
   },
 
   getStartedLink2: {
-    minWidth: "300px",
-    maxWidth: "300px",
+    minWidth: "250px",
+    maxWidth: "250px",
     alignContent: "center",
     justifyContent: "center",
     fontSize: "14px",
