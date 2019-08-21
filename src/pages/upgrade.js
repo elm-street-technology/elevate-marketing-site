@@ -60,7 +60,7 @@ MARISMO, MIREAL, SWFLAMLS, NEFMLS, SEFMLAMLS, MRIS, Orlando, LIBOR, CRMLS, HGAR.
       
       <Container>
         <div className={classes.top}>
-          <div className={classes.column} style={{ height:"670px"}}> 
+          <div className={classes.column} style={{ }}> 
             <div className={classes.grayText} style={{ textAlign: "center" }}>
               <div className={classes.heading}>Getting Started Videos</div>
                 <div>
@@ -98,26 +98,12 @@ MARISMO, MIREAL, SWFLAMLS, NEFMLS, SEFMLAMLS, MRIS, Orlando, LIBOR, CRMLS, HGAR.
             <div className={classes.infoboxTeal}>
               <div>
                 <div className={classes.heading} style={{color:"#FFFFFF"}}>Training Webinars</div>
-                <div>
-                  Join us for a live walk-through
-                          of Elevate. We will <span className={classes.bold}> answer all
-                          of your burning questions </span>
-                          about how this exciting new solution
-                          will work for you &amp; your clients.
-
-                </div>
-                <br/>View our upcoming schedule &amp; register TODAY. 
               </div>
-                <div style={{paddingTop:"30px"}}>
-                <a target="_blank" href="https://elmstreettechnology.zendesk.com/hc/en-us/articles/360019751351-Live-Training-Webinars-for-Former-Listingbook-Agents" 
-                    className={classes.darkTealLink} style={{backgroundColor:"#3e928b"}}>
-                    <LiveTv color="#FFFFFF" size={30} className={classes.iconPosition} style={{top:"8px",right:"6px"}}/>
-                    Register Today</a>
+                
+                <div style={{paddingTop:"10px"}}>
+                <span className={classes.bold} style={{color:"#FFFFFF"}}></span>
                 </div>
-                <div style={{paddingTop:"30px"}}>
-                <span className={classes.bold} style={{color:"#FFFFFF"}}>Can’t attend a live training?</span>
-                </div>
-                No worries, we’ve got recordings for you:
+               
                 <div style={{paddingTop:"30px"}} >
                   <a target="_blank" href="https://tryelevate.wistia.com/projects/ibbj6zglui" className={classes.darkTealLink} style={{backgroundColor:"#3e928b"}}>On Demand Recordings</a>
                 </div>
