@@ -8,7 +8,7 @@ import EventCard from "../components/EventCard";
 import EventCardZero from "../components/EventCardZero";
 import Container from "../components/Container";
 import SEO from "../components/SEO";
-import lgbg from "../images/lg_bg.jpg";
+import lgbg from "../images/lg_topbg.jpg";
 import Hexagons from "../images/hexagons.svg";
 import Search from "elevate-ui-icons/Search";
 
@@ -113,17 +113,18 @@ class EventsLG extends Component {
             <iframe width="800" height="450" src="https://www.youtube.com/embed/AU_uOzHsyM0?autoplay=1&rel=0"
               frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
           </div>
-          <div className={classes.titleText}>
-            Lead Generation Boot Camp
-        </div>
-        <div className={classes.BodyText}>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor<br />
-          incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud<br />
-          exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-        </div>
-          <div className={classes.titleSubText}>
-            Select an event you are interested in:
-        </div>
+                <div className={classes.titleText} style={{color:"#2d397c"}}>
+                        Lead Generation Boot Camp
+                </div>
+                <div className={classes.BodyText}>
+                    The NEW high-energy, 2-hr session teaches brokers and agents alike the secrets<br />
+                    of online lead generation used by top performers in the industry. Attendees will learn<br />
+                    the three main types of lead generation, along with the pros, cons and best practices<br />
+                    to capture, nurture &amp; convert more online business in less time.
+                </div>
+                <div className={classes.titleSubText} style={{color:"#2d397c", paddingBottom:"35px"}}>
+                        Select an event you are interested in:
+                </div>
         </Container>
         </div>
         <Container>
@@ -378,8 +379,7 @@ export default withStyles((theme) => ({
 
   lgBackground: {
     backgroundImage: `url('${lgbg}')`,
-    backgroundSize: "cover",
-    backgroundPosition: "absolute",
+    backgroundPosition: "bottom",
     width:"100%",
   },
 }))(EventsLG);

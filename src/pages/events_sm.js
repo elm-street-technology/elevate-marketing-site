@@ -8,7 +8,7 @@ import EventCard from "../components/EventCard";
 import EventCardZero from "../components/EventCardZero";
 import Container from "../components/Container";
 import SEO from "../components/SEO";
-import smbg from "../images/sm_bg.jpg";
+import smbg from "../images/sm_topbg.jpg";
 import Hexagons from "../images/hexagons.svg";
 import Search from "elevate-ui-icons/Search";
 
@@ -109,19 +109,19 @@ class EventsSM extends Component {
 
         <div className={classes.smBackground}>
         <Container>
-          <div style={{ textAlign: "center" }}>
-            <iframe width="800" height="450" src="https://www.youtube.com/embed/bHTQ31OzZY8?autoplay=1&rel=0"
-              frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-          </div>
-          <div className={classes.titleText}>
-            Social Media Boot Camp
-        </div>
-        <div className={classes.BodyText}>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor<br />
-          incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud<br />
-          exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-        </div>
-          <div className={classes.titleSubText}>
+                <div style={{ textAlign: "center" }}>
+                      <iframe width="800" height="450" src="https://www.youtube.com/embed/bHTQ31OzZY8?autoplay=1&rel=0"
+                      frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                </div>
+                <div className={classes.titleText} style={{color:"#2d397c"}}>
+                      Social Media Boot Camp
+                </div>
+                <div className={classes.BodyText}>
+                      The #1 boot camp for real estate agents continues to take the US by storm.<br />
+                      This 2-hr, interactive educational seminar is designed to inspire and empower agents<br />
+                      with tips, tricks &amp; strategies for conquering their website, blog and social media.
+                </div>
+          <div className={classes.titleSubText} style={{color:"#2d397c", paddingBottom:"35px"}}>
             Select an event you are interested in:
         </div>
         </Container>
@@ -284,7 +284,7 @@ export default withStyles((theme) => ({
   root: {
     position: "relative",
     paddingTop: "40px",
-    paddingBottom: "192px",
+    paddingBottom: "30px",
   },
   top: {
     display: "flex",
@@ -381,8 +381,7 @@ export default withStyles((theme) => ({
 
   smBackground: {
     backgroundImage: `url('${smbg}')`,
-    backgroundSize: "cover",
-    backgroundPosition: "absolute",
+    backgroundPosition: "bottom",
     width:"100%",
   },
 }))(EventsSM);

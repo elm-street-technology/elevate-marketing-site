@@ -85,18 +85,18 @@ class Events extends Component {
 
         <div className={classes.eventsBackground}>
         <Container>
-          <div style={{ textAlign: "center", paddingTop:"50px" }}>
-            <img src={Logo} className={classes.logoStyle}/>
-          </div>
-          <div className={classes.titleText}>
-            Select an event you are interested in:
-        </div>
+                    <div style={{ textAlign: "center", paddingTop:"50px" }}>
+                          <img src={Logo} className={classes.logoStyle}/>
+                    </div>
+                    <div className={classes.titleText}>
+                        Select your area of interest:
+                    </div>
         </Container>
         </div>
         <Container>
           <div className={classes.top}>
             {/* <div className={classes.heading} style={{ marginRight: "auto", marginLeft: "auto",textAlign:"center" }}>Upcoming Webinars &amp; Live Events</div> */}
-            <div style={{width:"45%", height:"300px", margin:"20px", textAlign:"center", paddingTop:"25px", paddingBottom:"25px"}}>
+            <div style={{width:"45%", height:"450px", margin:"20px", textAlign:"center", paddingTop:"25px", paddingBottom:"25px"}}>
                     <Link className={classes.bootcampLink} to="/events_sm">
                       <img src={SMBCLogo} className={classes.subLogoStyle}/>
                     </Link><br />
@@ -106,8 +106,15 @@ class Events extends Component {
                     educational seminar is designed to inspire
                     and empower agents with tips, tricks &amp; strategies
                     for conquering their website, blog and social media.</div>
+
+                    <a target="_blank" href="/events_sm" className={classes.button}>
+                    Upcoming Events</a>
+                    <a target="_blank" href="" className={classes.button}>
+                    Host an Event</a>
+                    <a target="_blank" href="" className={classes.button}>
+                    FAQ</a>
             </div>
-            <div style={{ width: "45%", height: "300px", margin: "20px", textAlign: "center", paddingTop:"25px", paddingBottom:"25px" }}>
+            <div style={{ width: "45%", height: "450px", margin: "20px", textAlign: "center", paddingTop:"25px", paddingBottom:"25px" }}>
                     <Link className={classes.bootcampLink} to="/events_lg">
                       <img src={LGBCLogo} className={classes.subLogoStyle} />
                     </Link><br />
@@ -117,7 +124,15 @@ class Events extends Component {
                     used by top performers in the industry.  Attendees will learn
                     the three main types of lead generation, along with
                     the pros, cons and best practices to capture,
-                    nurture &amp; convert more online business in less time.</div>
+                    nurture &amp; convert more<br />
+                    online business in less time.</div>
+
+                    <a target="_blank" href="/events_lg" className={classes.button}>
+                    Upcoming Events</a>
+                    <a target="_blank" href="" className={classes.button}>
+                    Host an Event</a>
+                    <a target="_blank" href="" className={classes.button}>
+                    FAQ</a>
              </div>
           </div>
 
@@ -132,6 +147,10 @@ class Events extends Component {
                     to succeed and grow.  Topics include lead generation,
                     agent recruitment and retention, the most important KPIs
                     and metrics to follow, and much more.</div>
+
+                    <a target="_blank" href="" className={classes.button}>
+                    Host an Event
+                    </a>
             </div>
             <div style={{ width: "45%", height: "280px", margin: "20px", textAlign: "center", paddingTop:"25px", paddingBottom:"25px" }}>
                     <div className={classes.subtitleText2}>CUSTOM DEEP DIVES</div>
@@ -142,8 +161,23 @@ class Events extends Component {
                     developing content for consumer audiences,
                     agent recruitment &amp; retention strategies, and
                     developing a website designed to capture &amp; convert.</div>
+
+                    <a target="_blank" href="" className={classes.button}>
+                    Consult with Our Team
+                    </a>
              </div>
           </div>
+
+
+
+     
+
+
+
+
+
+
+
           <div className={classes.inputWrapper}>
             <input
               className={classes.input}
@@ -237,6 +271,41 @@ class Events extends Component {
           )}
           
         </Container>
+
+<div style={{paddingTop:"20px", paddingBottom:"50px", backgroundColor:"#28336f"}}>
+    <Container>
+    <div style={{textAlign:"center", paddingBottom:"5px", paddingTop:"25px"}}><div className={classes.subtitleText2} style={{color:"#4cbbb0"}}>BOOT CAMP FAQ'S</div></div>
+            <div className={classes.flexContainer}>
+                <div className={classes.flexItem} style={{padding:"35px",}}>  
+                      <div className={classes.leftsubheading}>Who should attend?</div>
+                      <div className={classes.leftsubtext}>Elevate Educational Boot Camps are designed to energize, educate &amp; empower real estate brokers, agents &amp; teams  across the U.S.</div>
+                      <br />
+                      <div className={classes.leftsubheading}>What will we learn?</div>
+                      <div className={classes.leftsubtext}>You’ll learn tips, tricks &amp; strategies in a fast-paced, easy-to-digest environment that will help you grow their online brand through intelligent, thoughtful marketing.</div>
+                      <br />
+                      <div className={classes.leftsubheading}>How long is the event?</div>
+                      <div className={classes.leftsubtext}>Our onsite event usually runs about 2-hours, complete with breakfast and/or lunch, Q&amp;A and exciting giveaways (like an Amazon Fire Tablet to help agents stay mobile).</div>
+                </div>
+                <div className={classes.flexItem} style={{padding:"35px",}}>
+                      <div className={classes.leftsubheading}>Is there a cost to participate?</div>
+                      <div className={classes.leftsubtext}>No. All of our Boot Camp events are FREE for attendees.</div>
+                      <br />
+                      <div className={classes.leftsubheading}>How do I register?</div>
+                      <div className={classes.leftsubtext}>Select an event you’d like to attend and follow the online registration process...and be sure to invite your friends &amp; colleagues who may also be interested!</div>
+                      <br />
+                      <div className={classes.leftsubheading}>How do I book a boot camp for my agents?</div>
+                      <div className={classes.leftsubtext}>That’s easy.  Fill out our request form OR contact<br />
+                            Chyane LaHay, Events Corrdinator at 813-334-0166 | chyanel@tryelevate.com to start the conversation.</div>
+                </div>
+            </div>
+
+        
+    </Container>
+</div>    
+
+
+
+
         <Container>
           <div className={classes.top} style={{
             float:"right",
@@ -397,5 +466,77 @@ export default withStyles((theme) => ({
     backgroundImage: `url('${eventsbg}')`,
     backgroundPosition: "bottom",
     width:"100%",
+  },
+
+  leftsubheading: {
+    color: "#4bbbb1",
+    fontSize: "18px",
+    fontWeight: "700",
+    letterSpacing: ".25px",
+    fontWeight: "700",
+    lineHeight: "1.6",
+  
+    [theme.breakpoints[900]]: {
+        fontSize: "18px",
+    },
+  },
+  leftsubtext: {
+    color: "#ffffff",
+    fontWeight: "500",
+    fontSize: "18px",
+    letterSpacing: ".25px",
+    lineHeight: "1.6",
+    marginbottom: "20px",
+    textAlign: "left",
+    [theme.breakpoints[900]]: {
+        fontSize: "16px",
+    },
+  },
+
+  flexContainer: {
+    padding: "0",
+    margin: '0',
+  
+    display: "-webkit-box",
+    display: "-moz-box",
+    display: "-ms-flexbox",
+    display: "-webkit-flex",
+    display: "flex",
+    flexWrap: "wrap",
+  
+  },
+
+  flexItem: {
+    maxWidth: "100%",
+    width: "100%",
+    paddingRight: "0px",
+    paddingBottom: "25px",
+  
+  
+    [theme.breakpoints[900]]: {
+        maxWidth: "50%",
+        width: "50%",
+        paddingRight: "30px",
+        paddingLeft: "30px",
+        paddingBottom: "0px",
+    },
+  },
+
+  button: {
+    minWidth: "200px",
+    maxWidth: "200px",
+    alignContent: "center",
+    justifyContent: "center",
+    fontSize: "14px",
+    fontWeight: "700",
+    display: "block",
+    letterSpacing: ".25px",
+    backgroundColor: theme.colors.secondary,
+    color: "#FFF",
+    textDecoration: "none",
+    padding: "12px 14px",
+    borderRadius: "4px",
+    margin: "14px auto",
+    marginBottom: "20px",
   },
 }))(Events);
