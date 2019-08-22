@@ -9,11 +9,11 @@ import EventCardZero from "../components/EventCardZero";
 import Container from "../components/Container";
 import SEO from "../components/SEO";
 import Hexagons from "../images/hexagons.svg";
-import Logo from "../images/generic_bootcamp_logo.png";
+import Logo from "../images/generic_bootcamp.png";
 import Search from "elevate-ui-icons/Search";
 import eventsbg from "../images/events_bg.jpg";
-import SMBCLogo from "../images/socialmedia_bootcamp_logo1.png";
-import LGBCLogo from "../images/leadgen_bootcamp_logo2.png";
+import SMBCLogo from "../images/sm_bootcamp.png";
+import LGBCLogo from "../images/lg_bootcamp.png";
 import WebinarsLogo from "../images/edu_webinar_logo3.png";
 
 class Events extends Component {
@@ -85,7 +85,7 @@ class Events extends Component {
 
         <div className={classes.eventsBackground}>
         <Container>
-          <div style={{ textAlign: "center" }}>
+          <div style={{ textAlign: "center", paddingTop:"50px" }}>
             <img src={Logo} className={classes.logoStyle}/>
           </div>
           <div className={classes.titleText}>
@@ -96,21 +96,53 @@ class Events extends Component {
         <Container>
           <div className={classes.top}>
             {/* <div className={classes.heading} style={{ marginRight: "auto", marginLeft: "auto",textAlign:"center" }}>Upcoming Webinars &amp; Live Events</div> */}
-            <div style={{width:"31%", height:"180px", margin:"10px", textAlign:"center"}}>
-              <Link className={classes.bootcampLink} to="/events_sm">
-                <img src={SMBCLogo} className={classes.subLogoStyle} />
-              </Link>
+            <div style={{width:"45%", height:"300px", margin:"20px", textAlign:"center", paddingTop:"25px", paddingBottom:"25px"}}>
+                    <Link className={classes.bootcampLink} to="/events_sm">
+                      <img src={SMBCLogo} className={classes.subLogoStyle}/>
+                    </Link><br />
+                    <div className={classes.subtitleText}>Turn your social media from a toy into a tool</div>
+                    <div className={classes.subtext}>The #1 boot camp for real estate agents continues
+                    to take the US by storm. This 2-hr, interactive
+                    educational seminar is designed to inspire
+                    and empower agents with tips, tricks &amp; strategies
+                    for conquering their website, blog and social media.</div>
             </div>
-            <div style={{ width: "31%", height: "180px", margin: "10px", textAlign: "center" }}>
-              <Link className={classes.bootcampLink} to="/events_lg">
-                <img src={LGBCLogo} className={classes.subLogoStyle} />
-              </Link>
+            <div style={{ width: "45%", height: "300px", margin: "20px", textAlign: "center", paddingTop:"25px", paddingBottom:"25px" }}>
+                    <Link className={classes.bootcampLink} to="/events_lg">
+                      <img src={LGBCLogo} className={classes.subLogoStyle} />
+                    </Link><br />
+                    <div className={classes.subtitleText}>Capture, nurture &amp; convert more leads</div>
+                    <div className={classes.subtext}>The NEW high-energy, 2-hr session teaches
+                    brokers and agents alike the secrets of online lead generation
+                    used by top performers in the industry.  Attendees will learn
+                    the three main types of lead generation, along with
+                    the pros, cons and best practices to capture,
+                    nurture &amp; convert more online business in less time.</div>
+             </div>
+          </div>
+
+          <div className={classes.top}>
+            {/* <div className={classes.heading} style={{ marginRight: "auto", marginLeft: "auto",textAlign:"center" }}>Upcoming Webinars &amp; Live Events</div> */}
+            <div style={{width:"45%", height:"280px", margin:"20px", textAlign:"center", paddingTop:"25px", paddingBottom:"25px"}}>
+                    <div className={classes.subtitleText2}>BROKER ONLY MASTERMIND</div>
+                    <div className={classes.subtitleText}>Empowering brokers to lead &amp; succeed</div>
+                    <div className={classes.subtext}>You asked and we delivered! This half-day
+                    broker-only session addresses the key business practices
+                    and KPIs that brokers should pay attention to in order
+                    to succeed and grow.  Topics include lead generation,
+                    agent recruitment and retention, the most important KPIs
+                    and metrics to follow, and much more.</div>
             </div>
-            <div style={{ width: "31%", height: "180px", margin: "10px", textAlign: "center" }}>
-              <Link className={classes.bootcampLink} to="/events_webinars">
-                <img src={WebinarsLogo} className={classes.subLogoStyle} />
-              </Link>
-            </div>
+            <div style={{ width: "45%", height: "280px", margin: "20px", textAlign: "center", paddingTop:"25px", paddingBottom:"25px" }}>
+                    <div className={classes.subtitleText2}>CUSTOM DEEP DIVES</div>
+                    <div className={classes.subtitleText}>Educational itinerary designed just for you</div>
+                    <div className={classes.subtext}>Work with the Elevate Educational Team to develop
+                    a custom experience for your membership and/or agents.
+                    Popular past deep dives include Facebook intensives,
+                    developing content for consumer audiences,
+                    agent recruitment &amp; retention strategies, and
+                    developing a website designed to capture &amp; convert.</div>
+             </div>
           </div>
           <div className={classes.inputWrapper}>
             <input
@@ -255,7 +287,7 @@ export const query = graphql`
 export default withStyles((theme) => ({
   root: {
     position: "relative",
-    paddingTop: "40px",
+    paddingTop: "5px",
     paddingBottom: "192px",
   },
   top: {
@@ -315,28 +347,55 @@ export default withStyles((theme) => ({
     marginTop: "32px",
   },
   logoStyle:{
-    width:"80%",
+    width:"100%",
+    maxWidth:"350px",
     [theme.breakpoints[900]]: {
       width: "40%"
     },
   },
   subLogoStyle:{
-    width:"90%",
+    width:"100%",
+    maxWidth:"300px"
   },
 
   titleText: {
-    fontSize: "28px",
+    fontSize: "20px",
     lineHeight: "36px",
     fontWeight: "700",
     textAlign: "center",
-    paddingBottom: "24px",
-    paddingTop: "40px"
+    paddingBottom: "34px",
+    paddingTop: "30px"
+  },
+
+  subtitleText: {
+    fontSize: "18px",
+    lineHeight: "30px",
+    fontWeight: "700",
+    color: "#4cbbb0",
+    textAlign: "center",
+    paddingTop: "10px",
+  },
+
+  subtitleText2: {
+    fontSize: "22px",
+    lineHeight: "24px",
+    fontWeight: "700",
+    color: "#28336f",
+    textAlign: "center",
+    paddingTop: "10px",
+  },
+
+  subtext: {
+    fontSize: "16px",
+    lineHeight: "22px",
+    fontWeight: "500",
+    color: "#50555c",
+    textAlign: "center",
   },
 
   eventsBackground: {
     backgroundImage: `url('${eventsbg}')`,
-    backgroundSize: "cover",
-    backgroundPosition: "absolute",
+    backgroundPosition: "bottom",
     width:"100%",
   },
 }))(Events);
