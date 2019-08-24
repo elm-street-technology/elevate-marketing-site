@@ -114,6 +114,9 @@ class FormHostEvent extends Component {
                       send_to: "AW-980447970/2_aHCOnsjo8BEOLlwdMD",
                     });
                   }
+                  if (window.ga){
+                    window.ga('send', 'event', { eventCategory: 'form', eventAction: 'lead', eventLabel: 'host-event', eventValue:''});
+                  }
                 } else {
                   this.setState({ formState: "error" });
                 }
