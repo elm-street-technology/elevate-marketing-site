@@ -154,6 +154,9 @@ class SignUpForm extends Component {
                       'value': ''
                     });
                   }
+                  if (window.ga) {
+                    window.ga('send','event','form','form_completed','get-started');
+                  }
                 } else {
                   this.setState({ formState: "error" });
                 }
