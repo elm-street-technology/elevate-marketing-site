@@ -148,6 +148,7 @@ class SignUpForm extends Component {
                     window.gtag("event", "conversion", {
                       send_to: "AW-980447970/2_aHCOnsjo8BEOLlwdMD",
                     });
+                    // Add GA conversion goal here
                   }
                 } else {
                   this.setState({ formState: "error" });

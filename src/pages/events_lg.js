@@ -228,6 +228,7 @@ class EventsLG extends Component {
           )}
           
         </Container>
+        {/*
         <Container>
           <div className={classes.top} style={{
             float:"right",
@@ -237,24 +238,7 @@ class EventsLG extends Component {
             </Link>
           </div>
         </Container>
-        <div className={classes.backgroundSlice}>
-          <svg
-            className={classes.backgroundTopSlice}
-            xmlns="http://www.w3.org/2000/svg"
-            viewBox="0 0 100 100"
-            preserveAspectRatio="none"
-          >
-            <polygon fill="white" points="0,100 100,0 100,100" />
-          </svg>
-          <svg
-            className={classes.backgroundBottomSlice}
-            xmlns="http://www.w3.org/2000/svg"
-            viewBox="0 0 100 100"
-            preserveAspectRatio="none"
-          >
-            <polygon fill="white" points="0,100 100,0 100,100" />
-          </svg>
-        </div>
+          */}
       </div>
     );
   }
