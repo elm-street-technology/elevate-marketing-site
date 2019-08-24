@@ -148,11 +148,9 @@ class SignUpForm extends Component {
                     window.gtag("event", "conversion", {
                       send_to: "AW-980447970/2_aHCOnsjo8BEOLlwdMD",
                     });
-                    window.gtag('event', 'lead', {
-                      'event_category': 'form',
-                      'event_label': 'get-started',
-                      'value': ''
-                    });
+                  }
+                  if (window.ga) {
+                    window.ga('send','event','form','form_completed','get-started');
                   }
                 } else {
                   this.setState({ formState: "error" });

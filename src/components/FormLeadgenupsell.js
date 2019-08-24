@@ -186,6 +186,9 @@ class FormLeadgenupsell extends Component {
                       send_to: "AW-980447970/2_aHCOnsjo8BEOLlwdMD",
                     });
                   }
+                  if (window.ga) {
+                    window.ga('send','event','form','form_completed','leadgen');
+                  }
                 } else {
                   this.setState({ formState: "error" });
                 }
