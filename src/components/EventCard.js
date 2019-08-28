@@ -1,11 +1,24 @@
 import React from "react";
 import classNames from "classnames";
 import withStyles from "elevate-ui/withStyles";
+import Map from "elevate-ui-icons/Map";
 
 const EventCard = ({ classes, className, event }) => {
+
+  const options = {
+    timeZoneName: 'short', 
+    weekday: "short",
+    month: "short",
+    day: "numeric",
+    year: "numeric",
+    hour: "numeric",
+    minute: "numeric",};
+
+
   const datetime = new Date(event.datetime);
   return (
     <div className={classNames(classes.root, className)}>
+      {/*
       <div className={classes.date}>
         <div className={classes.month}>
           {datetime.toLocaleDateString("en-us", {
@@ -17,25 +30,35 @@ const EventCard = ({ classes, className, event }) => {
             day: "2-digit",
           })}
         </div>
-      </div>
+        </div> */}
       <div className={classes.details}>
         <div className={classes.time}>
-          {datetime.toLocaleTimeString("en-us", {
-            hour: "numeric",
-            minute: "numeric",
-            timeZoneName: "short",
-          })}
+          {datetime.toLocaleTimeString("en-US", options)}
         </div>
         <div className={classes.title}>{event.title}</div>
-        <div className={classes.location}>{event.location}</div>
-        <a
-          href={event.registrationUrl}
-          target="_blank"
-          rel="noopener noreferrer"
-          className={classes.registerLink}
-        >
-          Register
-        </a>
+        <div style={{display:"flex"}}>
+          
+          <div style={{display:"flex",flexDirection:"column", marginRight:"6px",marginTop:"12px"}}>
+            <Map size={24} className={classes.mapIcon} />
+          </div>
+          <div style={{ display: "flex", flexDirection: "column" }} className={classes.location}>
+            <a href={`https://www.google.com/maps/place/${event.location}`} target="_blank" className={classes.mapLink}>
+              {event.location}
+            </a>
+          </div>
+        </div>
+        
+        <div>
+          <a
+            href={event.registrationUrl}
+            target="_blank"
+            rel="noopener noreferrer"
+            className={classes.registerLink}
+          >
+            Register
+          </a>
+        </div>
+        
       </div>
     </div>
   );
@@ -84,29 +107,38 @@ export default withStyles((theme) => ({
   details: {
     display: "flex",
     flexDirection: "column",
-    borderLeft: "1px solid #cecece",
-    padding: "8px 0 8px 16px",
-    marginLeft: "16px",
+    padding: "8px 0 8px 8px",
+    marginLeft: "auto",
     marginRight: "auto",
   },
   time: {
-    fontSize: "16px",
+    fontSize: "14px",
+    color: "#f25853"
   },
   title: {
     fontSize: "18px",
     fontWeight: "700",
     margin: "8px 0",
   },
+  mapIcon:{
+    color:"#64616e",
+  },
+  mapLink: {
+    color: "#64616e",
+    textDecoration: "none",
+  },
   location: {
     marginTop: "6px",
     fontSize: "16px",
     lineHeight: "1.375em",
+    color: "#64616e",
+    textDecoration: "none",
   },
   registerLink: {
     display: "flex",
     alignContent: "center",
     justifyContent: "center",
-    backgroundColor: "#44cfa5",
+    backgroundColor: "#55c3ba",
     fontSize: "14px",
     letterSpacing: ".25px",
     color: "#fff",
@@ -115,6 +147,9 @@ export default withStyles((theme) => ({
     padding: "12px 16px",
     borderRadius: "6px",
     marginTop: "18px",
-    maxWidth: "90px",
+    maxWidth: "60%",
+    width:"60%",
+    marginLeft: "auto",
+    marginRight: "auto",
   },
 }))(EventCard);

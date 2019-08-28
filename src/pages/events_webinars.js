@@ -9,9 +9,11 @@ import EventCardZero from "../components/EventCardZero";
 import Container from "../components/Container";
 import SEO from "../components/SEO";
 import Hexagons from "../images/hexagons.svg";
+import eventsbg from "../images/events_bg.jpg";
+import Logo from "../images/edu_webinar_logo3.png";
 import Search from "elevate-ui-icons/Search";
 
-class Bootcamps extends Component {
+class EventsWebinars extends Component {
   constructor(props) {
     super(props);
 
@@ -77,23 +79,26 @@ class Bootcamps extends Component {
           <meta name="description" content={`Social media & lead gen tips, tricks & shortcuts - ${config.siteTitle}`} />
         </Helmet>
         <SEO customTitle customDescription={`Social media & lead gen tips, tricks & shortcuts - ${config.siteTitle}`} />
-
+        
+        <div className={classes.eventsBackground}>
         <Container>
           <div style={{ textAlign: "center" }}>
-            <iframe width="800" height="450" src="https://www.youtube.com/embed/bHTQ31OzZY8?autoplay=1&rel=0"
-              frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            <img src={Logo} className={classes.logoStyle}/>
           </div>
           <div className={classes.titleText}>
-            Register for the #1 Social Media Boot Camp for real estate professionals
+            Educational Webinars
+        </div>
+        <div className={classes.BodyText}>
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor<br />
+          incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud<br />
+          exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+        </div>
+          <div className={classes.titleSubText}>
+            Select an event you are interested in:
         </div>
         </Container>
+        </div>
         <Container>
-          <div className={classes.top}>
-            <div className={classes.heading}>Upcoming Events</div>
-            <Link className={classes.bootcampLink} to="/bootcamp">
-              Learn about our Social Media Bootcamp →
-            </Link>
-          </div>
           <div className={classes.inputWrapper}>
             <input
               className={classes.input}
@@ -102,7 +107,12 @@ class Bootcamps extends Component {
               placeholder="Type an MLS to search... (e.g. FMLS)"
             />
             <Search size={36} className={classes.inputIcon} />
+            
           </div>
+          
+
+
+
           {!(activeEvents && activeEvents.length) ? (
             <EventCardZero className={classes.grid}>
               <div>There are no scheduled upcoming events.</div>
@@ -127,6 +137,16 @@ class Bootcamps extends Component {
               ))}
             </EventCardGrid>
           )}
+          
+        </Container>
+        <Container>
+          <div className={classes.top} style={{
+            float:"right",
+            marginTop:"40px"}}>
+            <Link className={classes.bootcampLink} to="/bootcamp">
+              Learn about our Social Media Bootcamp →
+            </Link>
+          </div>
         </Container>
         <div className={classes.backgroundSlice}>
           <svg
@@ -151,8 +171,8 @@ class Bootcamps extends Component {
   }
 }
 export const query = graphql`
-  query eventQueryB {
-    allContentfulEvent(limit: 1000, sort: { fields: [datetime], order: ASC }) {
+  query eventWebinarQuery {
+    allContentfulEvent(limit: 1000, filter: {eventType: {eq: "Webinar"}}, sort: { fields: [datetime], order: ASC }) {
       edges {
         node {
           datetime
@@ -169,7 +189,7 @@ export const query = graphql`
 export default withStyles((theme) => ({
   root: {
     position: "relative",
-    paddingTop: "96px",
+    paddingTop: "40px",
     paddingBottom: "192px",
   },
   top: {
@@ -228,39 +248,47 @@ export default withStyles((theme) => ({
   grid: {
     marginTop: "32px",
   },
-  backgroundSlice: {
-    position: "absolute",
-    top: "200px",
-    bottom: "0",
-    right: "0",
-    left: "0",
-    width: "100%",
-    height: "400px",
-    backgroundImage: `url('${Hexagons}')`,
-    opacity: "0.5",
-    zIndex: "-1",
+
+  logoStyle:{
+    width:"80%",
+    [theme.breakpoints[900]]: {
+      width: "40%"
+    },
   },
 
-  backgroundTopSlice: {
-    position: "absolute",
-    top: "-1px",
-    width: "100%",
-    height: "10vw",
-    transform: "rotate(180deg)",
-  },
-
-  backgroundBottomSlice: {
-    position: "absolute",
-    bottom: "0",
-    width: "100%",
-    height: "10vw",
-  },
   titleText: {
     fontSize: "28px",
-    lineHeight: "52px",
+    lineHeight: "36px",
     fontWeight: "700",
     textAlign: "center",
-    paddingBottom: "60px",
+    color: "#55c3ba",
+    paddingBottom: "24px",
     paddingTop: "40px"
   },
-}))(Bootcamps);
+
+  titleSubText: {
+    fontSize: "18px",
+    lineHeight: "30px",
+    fontWeight: "700",
+    textAlign: "center",
+    color: "#55c3ba",
+    paddingTop: "30px",
+  },
+
+  BodyText: {
+    fontSize: "16px",
+    lineHeight: "22px",
+    fontWeight: "300",
+    textAlign: "center",
+    color: "#56585a",
+    paddingRight: "45px",
+    paddingLeft: "45px",
+  },
+
+  eventsBackground: {
+    backgroundImage: `url('${eventsbg}')`,
+    backgroundSize: "cover",
+    backgroundPosition: "absolute",
+    width:"100%",
+  },
+}))(EventsWebinars);
