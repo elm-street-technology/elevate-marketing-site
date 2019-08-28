@@ -61,8 +61,8 @@ class SignUpForm extends Component {
             </Typography>
             <Typography type="heading4" gutterTop>
               If you'd like to speak to a sales representative NOW, please call{" "}
-              <a href="tel:18057197394" className={classes.link}>
-                805.719.7394
+              <a href="tel:18447920260" className={classes.link}>
+                844.792.0260
               </a>.
             </Typography>
           </Alert>
@@ -166,8 +166,8 @@ class SignUpForm extends Component {
                 type="heading6"
                 style={{ textAlign: "center", marginBottom: "32px", color: "#55c3ba" }}
               >
-                Schedule your personal walk-through or call <a href="tel:18057197394" className={classes.link}>
-                  805.719.7394
+                Schedule your personal walk-through or call <a href="tel:18447920260" className={classes.link}>
+                844.792.0260
                 </a> to speak to a sales representative today.
                 
               </Typography>
