@@ -131,7 +131,8 @@ class FormHostEvent extends Component {
                 type="heading6"
                 style={{ textAlign: "center", marginBottom: "32px", color: "#55c3ba" }}
               >
-                <span style={{fontSize:"24px",fontWeight:"700"}}>Interested in developing and/or hosting an event?</span>
+                <span style={{fontSize:"24px",fontWeight:"700"}}>Interested in hosting an<br />
+                Elevate educational event?</span><br />
                 We want to connect with you.
                 
               </Typography>

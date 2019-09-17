@@ -10,6 +10,8 @@ import Calendar from "elevate-ui-icons/Calendar";
 import eventsbg from "../images/events_bg.jpg";
 import SMBCLogo from "../images/sm_bootcamp.png";
 import LGBCLogo from "../images/lg_bootcamp.png";
+import MastermindLogo from "../images/mastermind_logo.png";
+import DeepLogo from "../images/deep_logo.png";
 import FormHostEvent from "../components/FormHostEvent";
 
 class Events extends Component {
@@ -103,7 +105,7 @@ class Events extends Component {
                     and empower agents with tips, tricks &amp; strategies
                     for conquering their website, blog and social media.</div>
                     <div>
-                      <a href="/events_sm" className={classes.buttonIcon}>
+                      <a href="/events_sm" className={classes.buttonIcon2}>
                       <Calendar size={20} style={{position: "relative",top:"4px"}}/> Upcoming Events</a>
                     </div>
                     <a href="#host_form" className={classes.button}>
@@ -124,7 +126,7 @@ class Events extends Component {
                     nurture &amp; convert more
                     online business in less time.</div>
                     <div >
-                      <a href="/events_lg" className={classes.buttonIcon}>
+                      <a href="/events_lg" className={classes.buttonIcon2}>
                       <Calendar size={20} style={{position: "relative",top:"4px"}}/> Upcoming Events</a>
                     </div>
                     <a  href="#host_form" className={classes.button}>
@@ -137,7 +139,7 @@ class Events extends Component {
           <div className={classes.top}>
             {/* <div className={classes.heading} style={{ marginRight: "auto", marginLeft: "auto",textAlign:"center" }}>Upcoming Webinars &amp; Live Events</div> */}
             <div className={classes.columnSection}>
-                    <div className={classes.subtitleText2}>BROKER ONLY MASTERMIND</div>
+                    <img src={MastermindLogo} className={classes.subLogoStyle}/>
                     <div className={classes.subtitleText}>Empowering brokers to lead &amp; succeed</div>
                     <div className={classes.subtext}>You asked and we delivered! This half-day
                     broker-only session addresses the key business practices
@@ -151,7 +153,7 @@ class Events extends Component {
                     </a>
             </div>
             <div className={classes.columnSection}>
-                    <div className={classes.subtitleText2}>CUSTOM DEEP DIVES</div>
+                    <img src={DeepLogo} className={classes.subLogoStyle} style={{maxWidth:"260px"}}/>      
                     <div className={classes.subtitleText}>Educational itinerary designed just for you</div>
                     <div className={classes.subtext}>Work with the Elevate Educational Team to develop
                     a custom experience for your membership and/or agents.
@@ -199,26 +201,13 @@ class Events extends Component {
                       <br />
                       <div className={classes.leftsubheading}>How do I book a boot camp for my agents?</div>
                       <div className={classes.leftsubtext}>That’s easy.  Fill out our request form OR contact<br />
-                            Chyane LaHay, Events Corrdinator at 813-334-0166 | chyanel@tryelevate.com to start the conversation.</div>
+                            Chyane LaHay, Events Coordinator at 813-334-0166 | chyanel@tryelevate.com to start the conversation.</div>
                 </div>
             </div>
 
         
     </Container>
 </div>    
-
-
-
-
-        <Container>
-          <div className={classes.top} style={{
-            float:"right",
-            marginTop:"40px"}}>
-            <Link className={classes.bootcampLink} to="/bootcamp">
-              Learn about our Social Media Bootcamp →
-            </Link>
-          </div>
-        </Container>
       </div>
     );
   }
@@ -243,7 +232,6 @@ export default withStyles((theme) => ({
   root: {
     position: "relative",
     paddingTop: "5px",
-    paddingBottom: "192px",
   },
   top: {
     display: "flex",
@@ -434,6 +422,28 @@ export default withStyles((theme) => ({
     margin: "14px auto",
     marginBottom: "20px",
   },
+
+  buttonIcon2: {
+    minWidth: "200px",
+    maxWidth: "200px",
+    alignContent: "center",
+    justifyContent: "center",
+    fontSize: "14px",
+    fontWeight: "700",
+    display: "block",
+    letterSpacing: ".25px",
+    backgroundColor: "#292c64",
+    color: "#FFF",
+    textDecoration: "none",
+    paddingRight: "14px",
+    paddingLeft: "14px",
+    paddingTop: "8px",
+    paddingBottom: "14px",
+    borderRadius: "4px",
+    margin: "14px auto",
+    marginBottom: "20px",
+  },
+
   button: {
     minWidth: "200px",
     maxWidth: "200px",

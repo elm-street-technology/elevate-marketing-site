@@ -168,18 +168,6 @@ const Footer = ({ classes }) => (
             </a>
           </div>
         </div>
-        <div className={classes.column}>
-          <div className={classes.section}>Solutions</div>
-          <Link className={classes.link} to="/agents">
-            Agents
-          </Link>
-          <Link className={classes.link} to="/brokers">
-            Brokers
-          </Link>
-          <Link className={classes.link} to="/teams">
-            Teams
-          </Link>
-        </div>
 
         <div className={classes.column}>
           <div className={classes.section}>Products</div>
@@ -207,6 +195,42 @@ const Footer = ({ classes }) => (
         </div>
 
         <div className={classes.column}>
+          <div className={classes.section}>Solutions</div>
+          <Link className={classes.link} to="/agents">
+            Agents
+          </Link>
+          <Link className={classes.link} to="/brokers">
+            Brokers
+          </Link>
+          <Link className={classes.link} to="/teams">
+            Teams
+          </Link>
+        </div>
+
+      
+
+        <div className={classes.column}>
+          <div className={classes.section}>Explore</div>
+          <Link className={classes.link} to="/events">
+            Educational Programs
+          </Link>
+          <Link className={classes.link} to="/events_sm">
+            Social Media Boot Camp
+          </Link>
+          <Link className={classes.link} to="/events_lg">
+            Lead Gen. Boot Camp
+          </Link>
+          <Link className={classes.link} to="/markets">
+            MLS Markets
+          </Link>
+          <Link className={classes.link} to="/testimonials">
+            Happy Clients
+          </Link>
+          
+        </div>
+
+
+        <div className={classes.column}>
           <div className={classes.section}>Support</div>
           <a
             className={classes.link}
@@ -216,7 +240,7 @@ const Footer = ({ classes }) => (
             Help Center
           </a>
           <Link className={classes.link} to="/webinars">
-            Webinars
+            Training Webinars
           </Link>
           <Link className={classes.link} to="/blog">
             Blog
@@ -232,23 +256,6 @@ const Footer = ({ classes }) => (
           </Link>
           <Link className={classes.link} to="/dmca">
             DMCA Notice
-          </Link>
-        </div>
-
-        <div className={classes.column}>
-          <div className={classes.section}>Explore</div>
-          <Link className={classes.link} to="/testimonials">
-            Testimonials
-          </Link>
-          <Link className={classes.link} to="/markets">
-            MLS Markets
-          </Link>
-          <Link className={classes.link} to="/events">
-            Upcoming Events
-          </Link>
-
-          <Link className={classes.link} to="/bootcamp">
-            Social Media Boot Camp
           </Link>
           <SocialLinks className={classes.social} />
         </div>
@@ -279,7 +286,7 @@ export default withStyles((theme) => ({
     width: "100%",
     display: "grid",
     gridTemplateColumns: "repeat(1, 1fr)",
-    gridColumnGap: "44px",
+    gridColumnGap: "35px",
     gridRowGap: "32px",
 
     [theme.breakpoints[900]]: {

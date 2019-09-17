@@ -27,9 +27,9 @@ const Webinars = ({ classes, data }) => {
       <SEO />
       <Container>
         <div className={classes.top}>
-          <div className={classes.heading}>Upcoming Webinars</div>
-          <Link className={classes.bootcampLink} to="/bootcamp">
-            Learn about our Social Media Bootcamp →
+          <div className={classes.heading}>Upcoming Training Webinars</div>
+          <Link className={classes.bootcampLink} to="/events">
+            Explore Elevate's Educational boot Camp Series →
           </Link>
         </div>
         <WebinarCardGrid className={classes.grid}>
@@ -38,9 +38,9 @@ const Webinars = ({ classes, data }) => {
           })}
         </WebinarCardGrid>
         <div className={classes.pastContainer}>
-          <div className={classes.past}>Past Webinars</div>
+          <div className={classes.past}>On Demand Training Webinars</div>
           <div className={classes.pastDesc}>
-            Updated upon the completion of the weekly webinars
+          Browse an ever-growing selection of on demand Elevate training webinars, including hot topics such as "The Secrets to Successfully Closing Online Leads", "How to Promote Your Open Houses", "Elevate CRM Training", and many more.
           </div>
           <a
             href={"https://tryelevate.wistia.com/projects/u8p4ih0dk6"}
