@@ -51,7 +51,7 @@ const Bright = ({ children, classes, data, tags }) => {
                 <div className={classes.flexItem}>
 
                    
-                <iframe width="100%" height="300" src="https://www.youtube.com/embed/fGRZ8-mLwnQ?rel=0"
+                <iframe width="100%" height="300" src="https://www.youtube.com/embed/wUNYSRnAbog?rel=0"
           frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                     
 
@@ -116,7 +116,7 @@ const Bright = ({ children, classes, data, tags }) => {
                 <div className={classes.flexItem}>
 
                    
-                <iframe width="100%" height="300" src="https://www.youtube.com/embed/fGRZ8-mLwnQ?rel=0"
+                <iframe width="100%" height="300" src="https://www.youtube.com/embed/63j2UGFEfU4?rel=0"
           frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                     
 
