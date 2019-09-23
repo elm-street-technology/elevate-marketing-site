@@ -26,7 +26,7 @@ const Bright = ({ children, classes, data, tags }) => {
       <SEO postNode={postNode} pagePath="contact" customTitle />
 
       <Container>
-      <div className={classes.top} style={{paddingBottom:"40px"}}>
+      <div className={classes.top} style={{paddingBottom:"40px", paddingRight:"15px", paddingLeft:"15px"}}>
           <div className={classes.centerHeading}>
                   <div className={classes.heading}>THE POWER OF</div>
                   <div style={{ textAlign: "center",paddingBottom:"22px" }}>
@@ -69,10 +69,10 @@ const Bright = ({ children, classes, data, tags }) => {
 
 <div style={{paddingTop:"20px", paddingBottom:"50px", backgroundColor:"#f7f7f7"}}>
     <Container>
-    <div style={{textAlign:"center", paddingBottom:"5px", paddingTop:"25px"}}><div className={classes.heading}>The Power of PRODUCTIVITY</div>
+    <div style={{textAlign:"center", paddingBottom:"5px", padding:"25px"}}><div className={classes.heading}>The Power of PRODUCTIVITY</div>
     <div className={classes.subtext}><strong>One</strong> vendor. <strong>One</strong> point of contact. <strong>One</strong> solution. <strong>For you entire office.</strong></div></div>
             <div className={classes.flexContainer}>
-                <div className={classes.flexItem3} style={{padding:"30px",}}>  
+                <div className={classes.flexItem3} style={{padding:"20px",}}>  
                       <div className={classes.subtext}>• Brokerage recruiting module<br />
                           • Brokerage-level advanced dashboard<br />
                           • Brokerage, office &amp; agent KPIs<br />
@@ -82,7 +82,7 @@ const Bright = ({ children, classes, data, tags }) => {
                           • Customer activity workflows &amp; task coaching
                       </div>
                 </div>
-                <div className={classes.flexItem2} style={{padding:"30px",}}>
+                <div className={classes.flexItem2} style={{padding:"20px",}}>
                       <div className={classes.subtext}>• CMA Wizard<br />
                           • Document management<br />
                           • Agent-protected databases<br />
@@ -91,7 +91,7 @@ const Bright = ({ children, classes, data, tags }) => {
                           • Bright MLS Integration</div>
                 </div>
 
-                <div className={classes.flexItem2} style={{padding:"30px",}}>
+                <div className={classes.flexItem2} style={{padding:"20px",}}>
                 <div style={{ textAlign: "center" }}>
                             <img src={Ask} width="260" />
                             </div>
@@ -125,7 +125,7 @@ const Bright = ({ children, classes, data, tags }) => {
                 <div style={{ textAlign: "left",paddingBottom:"22px" }}>
                             <img src={Sprologo} width="290" />
                             </div>
-                <div className={classes.subtext}>Andrew Strauch of Bright MLS and Prem Luthra of Elevate sit down to discuss the all-in-one productivity and marketing solution that every broker wants...and needs.</div>
+                <div className={classes.subtext}>Andrew Strauch of Bright MLS and Prem Luthra of Elevate sit down to discuss the all-in-one productivity and marketing solution that every real estate agent wants...and needs.</div>
                     
                 </div>
             </div>
@@ -159,7 +159,6 @@ export default withStyles((theme) => ({
     display: "flex",
     flexDirection: "column",
     width: "100%",
-    padding: "0 8px",
     margin: "70px auto",
   },
 

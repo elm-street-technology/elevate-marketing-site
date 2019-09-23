@@ -18,11 +18,11 @@ const BgSectionExternal = ({
   return (
       
       <div className={classNames(classes.root, className)}>
-          <div className={classes.titlearea} style={{ backgroundImage: "url(" + bgImage + ")",backgroundSize:"cover" }}>
+          <div className={classes.titlearea} style={{ backgroundImage: "url(" + bgImage + ")",backgroundSize:"cover", backgroundPosition:"centerTop" }}>
             
                 <Container>
                 <div className={classes.flexContainer}>
-                <div className={classes.flexItem} style={{paddingLeft:"20px", paddingRight:"20px", paddingTop:"55px", paddingBottom:"65px",}}>
+                <div className={classes.flexItem} style={{paddingLeft:"40px", paddingRight:"30px", paddingTop:"55px", paddingBottom:"65px",}}>
                     <h1 className={classes.leftheading}>{secTitle}</h1>
                     <p className={classes.leftsubtext}>
                     {children}</p>
@@ -64,11 +64,12 @@ export default withStyles((theme) => ({
         },
 
     leftheading: {
-        color: "#f15623",
+        color: "#ffffff",
         fontSize: "30px",
         fontWeight: "700",
         letterSpacing: ".25px",
         fontWeight: "600",
+        paddingBottom:"20px",
         lineHeight: "38px",
 
         [theme.breakpoints[900]]: {
@@ -93,13 +94,13 @@ export default withStyles((theme) => ({
         fontSize: "16px",
         textAlign: "center",
         fontWeight: "600",
-        minWidth: "300px",
+        minWidth: "250px",
         letterSpacing: ".25px",
         backgroundColor: "#f15623",
         color: "#FFF",
         display: "block",
         marginTop: "30px",
-        maxWidth: "300px",
+        maxWidth: "250px",
         textDecoration: "none",
         padding: "12px 14px",
         borderRadius: "3px",
