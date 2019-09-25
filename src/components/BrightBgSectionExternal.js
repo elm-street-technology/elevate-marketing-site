@@ -31,7 +31,7 @@ const BgSectionExternal = ({
                     </a>
                     <br />
                     <span className={classes.leftsubtext2} style={{color:"#cccccc"}}>
-                    or call 833-978-1196
+                    or call 833.978.1196
                     </span>
                 </div>
                 <div className={classes.flexItem2}>

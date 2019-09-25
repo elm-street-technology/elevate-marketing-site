@@ -55,7 +55,7 @@ class FormBright extends Component {
           <div >
                                   
                       
-            <Typography type="heading3" gutterBottom>
+            <Typography type="heading3" gutterBottom style={{color:"#f15623",}}>
               Fantastic!
             </Typography>
             <Typography type="heading5" gutterTop>
