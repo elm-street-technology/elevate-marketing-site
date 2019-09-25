@@ -26,7 +26,7 @@ const BgSectionExternal = ({
                     <h1 className={classes.leftheading}>{secTitle}</h1>
                     <p className={classes.leftsubtext}>
                     {children}</p>
-                    <a href={secLink} className={classes.ctabutton} target="_blank">
+                    <a href={secLink} className={classes.ctabutton}>
                     {secButton}
                     </a>
                     <br />
