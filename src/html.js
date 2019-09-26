@@ -83,11 +83,43 @@ module.exports = class HTML extends React.Component {
           />
           {this.props.postBodyComponents}
 
+         {/*
           <script
             id="ze-snippet"
             src="https://static.zdassets.com/ekr/snippet.js?key=4ee92cc2-6d3c-4fc6-bceb-d9926c37cfae"
           />
-          
+         */}
+         <script
+            dangerouslySetInnerHTML={{
+              __html: `
+
+
+              !function() {
+               var t = window.driftt = window.drift = window.driftt || [];
+               if (!t.init) {
+                 if (t.invoked) return void (window.console && console.error && console.error("Drift snippet included twice."));
+                 t.invoked = !0, t.methods = [ "identify", "config", "track", "reset", "debug", "show", "ping", "page", "hide", "off", "on" ],
+                 t.factory = function(e) {
+                   return function() {
+                     var n = Array.prototype.slice.call(arguments);
+                     return n.unshift(e), t.push(n), t;
+                   };
+                 }, t.methods.forEach(function(e) {
+                   t[e] = t.factory(e);
+                 }), t.load = function(t) {
+                   var e = 3e5, n = Math.ceil(new Date() / e) * e, o = document.createElement("script");
+                   o.type = "text/javascript", o.async = !0, o.crossorigin = "anonymous", o.src = "https://js.driftt.com/include/" + n + "/" + t + ".js";
+                   var i = document.getElementsByTagName("script")[0];
+                   i.parentNode.insertBefore(o, i);
+                 };
+               }
+              }();
+              drift.SNIPPET_VERSION = '0.3.1';
+              drift.load('48bummh9yzsf');
+
+              `,
+            }}
+          />
           
           <noscript>
             <img
