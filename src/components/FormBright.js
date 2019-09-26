@@ -55,7 +55,7 @@ class FormBright extends Component {
           <div >
                                   
                       
-            <Typography type="heading3" gutterBottom>
+            <Typography type="heading3" gutterBottom style={{color:"#f15623",}}>
               Fantastic!
             </Typography>
             <Typography type="heading5" gutterTop>
@@ -173,7 +173,8 @@ class FormBright extends Component {
           render={({ values, isSubmitting,handleBlur, handleChange }) => (
             <Form noValidate>
               <div style={{marginBottom:"30px"}}>
-                <div className={classes.headingLarge}>Explore the power of PRODUCTIVITY today</div>
+                <div className={classes.headingLarge}>Explore the Power<br />
+                of PRODUCTIVITY Today!</div>
                 <div className={classes.headingText} style={{ marginTop: "20px" }}>Speak to an Elevate Success Coach NOW:  833-978-1196 or schedule below.</div>
                 </div>
               <div style={{ maxWidth: "500px",marginLeft:"auto",marginRight:"auto"}}>
@@ -334,7 +335,7 @@ class FormBright extends Component {
                 className={classes.signUpBtn}
                 disabled={isSubmitting}
               >
-                Tell Me More about Elevate
+                let's connect
               </button>
               </div>
               <div style={{fontSize:"11px"}}>
@@ -385,12 +386,12 @@ export default withStyles((theme) => ({
     padding:"3px"
   },
   headingLarge:{
-    fontSize: "40px",
-    textTransform: "uppercase",
+    fontSize: "33px",
     fontWeight: "700",
-    color: "#55c3ba",
+    color: "#f15623",
     textAlign:"center",
-    padding:"3px"
+    padding:"3px",
+    lineHeight:"38px"
   },
   headingText:{
     color: "#777777",
@@ -406,12 +407,12 @@ export default withStyles((theme) => ({
     marginLeft: "10px"
   },
   signUpBtn: {
-    width: "100%",
-    fontSize: "20px",
+    width: "60%",
+    fontSize: "18px",
     lineHeight: "26px",
     fontWeight: "600",
     color: "#FFF",
-    backgroundColor: theme.colors.secondary,
+    backgroundColor: "#f15623",
     borderRadius: "6px",
     padding: "12px",
     marginTop: "30px",
