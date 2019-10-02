@@ -8,15 +8,15 @@ import SEO from "../components/SEO";
 import LandingHeader from "../images/leads_top_image.jpg";
 import LandingFooter from "../images/seller_bottom.jpg";
 
-const Dms = ({ children, classes, data, tags }) => {
+const Seller = ({ children, classes, data, tags }) => {
   const postNode = {
-      title: `Lead Generation - ${config.siteTitle}`,
+      title: `Seller Leads - ${config.siteTitle}`,
   };
 
   return (
     <div className={classes.root}>
       <Helmet>
-              <title>{`Lead Generation - ${config.siteTitle}`}</title>
+              <title>{`Seller Leads - ${config.siteTitle}`}</title>
       </Helmet>
       <SEO postNode={postNode} pagePath="contact" customTitle />
 
@@ -66,4 +66,4 @@ export default withStyles((theme) => ({
     textAlign:"center",
     marginBottom:"30px"
   },
-}))(Dms);
+}))(Seller);
