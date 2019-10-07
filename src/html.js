@@ -46,6 +46,7 @@ module.exports = class HTML extends React.Component {
             async
             src="https://www.googletagmanager.com/gtag/js?id=AW-980447970"
           />
+          <script aysnc src="https://www.eventbrite.com/static/widgets/eb_widgets.js" />
           <script
             dangerouslySetInnerHTML={{
               __html: `
