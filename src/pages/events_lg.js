@@ -37,49 +37,41 @@ class EventsLG extends Component {
     };
   }
 
+  componentDidMount() {
+    console.log("Search string");
+    console.log(this.props.location.search);
+    if(this.props.location.search.length > 4){
+      var searchVal = this.props.location.search.replace('?q=','');
+      const { activeEvents } = this.state;
+
+      var filteredEvents = {};
+      filteredEvents = this.filterEvents(activeEvents, searchVal, 'keyword');
+      this.setState({
+        filteredInputValue: searchVal,
+        filteredEvents
+      });
+    }
+  }
+
   onInputChange = (e) => {
     console.log(e.target.name);
     const value = e.target.value;
     const { activeEvents } = this.state;
 
-    var filteredEvents = activeEvents;
+    var filteredEvents = {};
 
-    if (e.target.name == 'keyword') {
-      filteredEvents = filteredEvents.filter((event) => {
-        // Check the input string against the event title and location
-        if (
-          (event.title &&
-            event.title.toLowerCase().includes(value.toLowerCase())) ||
-          (event.location &&
-            event.location.toLowerCase().includes(value.toLowerCase())) ||
-          (event.mls &&
-            event.mls.toLowerCase().includes(value.toLowerCase()))
-        ) {
-          return true;
-        }
-        return false;
-      });
+    if(e.target.name == 'keyword'){
+      filteredEvents = this.filterEvents(activeEvents, value, 'keyword');
       this.setState({
         filteredInputValue: value,
       });
     }
-    if (e.target.name == 'state') {
-      filteredEvents = filteredEvents.filter((event) => {
-        if (
-          (event.state &&
-            event.state.toLowerCase().includes(value.toLowerCase())) ||
-          (event.state && value == 'Any State')
-        ) {
-          return true;
-        }
-        return false;
-      });
+    if(e.target.name == 'state'){
+      filteredEvents = filteredEvents = this.filterEvents(activeEvents, value, 'state');
       this.setState({
         filteredInputValueState: value,
       });
-    }
-
-
+    }    
 
     this.setState({
       filteredEvents
@@ -94,6 +86,50 @@ class EventsLG extends Component {
       filteredInputValueState: ""
     });
   };
+
+  filterEvents = (events, keyword, type="keyword") => {
+    var filteredEvents = events;
+    if(type === 'keyword'){
+
+      var values = keyword.split(",");
+
+      filteredEvents = events.filter((event) => {
+        // Check the input string against the event title and location
+        var toReturn = false;
+        values.forEach(function(value){
+          if(value.length > 1){
+            if (
+              (event.title &&
+                event.title.toLowerCase().includes(value.toLowerCase())) ||
+              (event.location &&
+                event.location.toLowerCase().includes(value.toLowerCase())) ||
+              (event.mls &&
+                event.mls.toLowerCase().includes(value.toLowerCase()))
+            ) {
+              toReturn = true;
+            }
+          }
+          
+        })
+        
+        return toReturn;
+      });
+    }
+    if(type === 'state'){
+      filteredEvents = events.filter((event) => {
+        if (
+          (event.state &&
+            event.state.toLowerCase().includes(keyword.toLowerCase())) ||
+          (event.state && keyword === 'Any State')
+        ) {
+          return true;
+        }
+        return false;
+      });
+    }
+
+    return filteredEvents;
+  }
 
   render() {
     const { classes } = this.props;
@@ -137,7 +173,7 @@ class EventsLG extends Component {
               name="keyword"
             />
             <Search size={36} className={classes.inputIcon} />
-            <select className={classes.input} style={{ width: "30%", marginLeft: "10px" }} name="state" onChange={this.onInputChange}
+            <select className={classes.input} style={{ width: "30%", marginLeft: "10px",padding:"0px" }} name="state" onChange={this.onInputChange}
               value={this.state.filteredInputValueState}>
               <option>Any State</option>
               <option value="AK">AK</option>
