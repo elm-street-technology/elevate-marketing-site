@@ -96,7 +96,7 @@ const Testimonials2 = ({ children, classes, data, tags }) => {
 
                    
                 <div style={{ textAlign: "center",paddingBottom:"22px", paddingRight:"20px", paddingLeft:"20px" }}>
-                            <img src={Test_pic1} style={{maxWidth:"370px"}} />
+                            <div><img src={Test_pic1} style={{Width:"100%", maxWidth:"330px"}} /></div>
                             <div className={classes.Heading2}>Terry Naber</div>
                             <div className={classes.subtext}>Broker Associate | REALTOR<br />
                             Colorado Springs Homes<br />
@@ -128,7 +128,7 @@ const Testimonials2 = ({ children, classes, data, tags }) => {
 <div style={{paddingBottom:"20px",}}>
         <Container>
             <div className={classes.flexContainer}>
-                <div className={classes.flexItem} style={{textAlign:"right", paddingBottom:"20px;"}}>
+                <div className={classes.flexItem} style={{textAlign:"right", paddingBottom:"20px", paddingLeft:"20px", paddingRight:"20px"}}>
 
                             <div className={classes.subtext}>
                                 <div className={classes.Heading2}>Denis Pepin, Broker/Owner</div>
