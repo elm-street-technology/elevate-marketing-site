@@ -96,7 +96,7 @@ const Testimonials2 = ({ children, classes, data, tags }) => {
 
                    
                 <div style={{ textAlign: "center",paddingBottom:"22px", paddingRight:"20px", paddingLeft:"20px" }}>
-                            <img src={Test_pic1} width="370" />
+                            <img src={Test_pic1} style={{maxWidth:"370px"}} />
                             <div className={classes.Heading2}>Terry Naber</div>
                             <div className={classes.subtext}>Broker Associate | REALTOR<br />
                             Colorado Springs Homes<br />
@@ -178,7 +178,7 @@ const Testimonials2 = ({ children, classes, data, tags }) => {
 
                    
                 <div style={{ textAlign: "center",paddingBottom:"22px", paddingRight:"20px", paddingLeft:"20px" }}>
-                            <img src={Test_pic2} width="370" />
+                            <img src={Test_pic2} style={{maxWidth:"370px"}} />
                             <div className={classes.Heading2}>Jennifer Pecora, Agent</div>
                             <div className={classes.subtext}>Pecora Properties, Watson Realty Corp.<br />
                             Palm Bay, FL</div>
@@ -225,7 +225,7 @@ const Testimonials2 = ({ children, classes, data, tags }) => {
 
                    
 <div style={{ textAlign: "center",paddingBottom:"22px", paddingRight:"20px", paddingLeft:"20px" }}>
-                        <img src={Test_pic3} width="370" />
+                        <img src={Test_pic3} style={{maxWidth:"370px"}}  />
                         <div className={classes.Heading2}>Heather Paukova, REALTOR&reg;</div>
                         <div className={classes.subtext}>RE/MAX Southern Shores<br />
                         Myrtle Beach, SC</div>
