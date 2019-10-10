@@ -12,6 +12,9 @@ import Test from "../images/test_bg.jpg";
 import Test_pic1 from "../images/test_pic1.png";
 import Test_pic2 from "../images/test_pic2.png";
 import Test_pic3 from "../images/test_pic3.png";
+import Testa from "../images/testa.png";
+import Testb from "../images/testb.png";
+import Testc from "../images/testc.png";
 import Spro from "../images/socialpro_bg.jpg";
 import BrightBgSectionExternal from "../components/BrightBgSectionExternal";
 import SEO from "../components/SEO";
@@ -47,7 +50,7 @@ const Testimonials2 = ({ children, classes, data, tags }) => {
 <div style={{paddingTop:"50px", paddingBottom:"50px",}}>
         <Container>
             <div className={classes.flexContainer}>
-                <div className={classes.flexItem}>
+                <div className={classes.flexItem} style={{paddingBottom:"20px", paddingLeft:"15px", paddingRight:"15px"}}>
 
                    
                 <iframe width="100%" height="270" src="https://www.youtube.com/embed/py5fhtASVPY?rel=0"
@@ -92,7 +95,7 @@ const Testimonials2 = ({ children, classes, data, tags }) => {
                 <div className={classes.flexItem}>
 
                    
-                <div style={{ textAlign: "center",paddingBottom:"22px" }}>
+                <div style={{ textAlign: "center",paddingBottom:"22px", paddingRight:"20px", paddingLeft:"20px" }}>
                             <img src={Test_pic1} width="370" />
                             <div className={classes.Heading2}>Terry Naber</div>
                             <div className={classes.subtext}>Broker Associate | REALTOR<br />
@@ -107,8 +110,7 @@ const Testimonials2 = ({ children, classes, data, tags }) => {
                 <div className={classes.flexItem} style={{paddingLeft:"20px", paddingRight:"20px", paddingBottom:"20px",}}>
 
                             <div className={classes.subtext}>
-                                <div className={classes.heading}>Lead generation ROI<br />
-                                recognized in 1st month.</div>
+                                <div className={classes.heading}>Lead generation ROI recognized in 1st month.</div>
                                 <br />
                                 "We are very pleased with our website and lead generation program from Elevate!  We recently switched our website and CRM database to Elevate, and once their team started putting the “non-live” website together for us to review, we started getting leads in the system right away.  The website wasn't even live yet!  I reached out to one of those leads immediately and, long story short, we closed on their new home in Colorado Springs in less than one month!  
                                 <br /><br />
@@ -143,7 +145,7 @@ const Testimonials2 = ({ children, classes, data, tags }) => {
 
                 </div>
 
-                <div className={classes.flexItem} style={{paddingBottom:"20px", paddingLeft:"20px", paddingRight:"20px"}}>
+                <div className={classes.flexItem} style={{paddingBottom:"20px", paddingLeft:"15px", paddingRight:"15px"}}>
                 
                             <iframe width="100%" height="270" src="https://www.youtube.com/embed/XpCfCopNLlA?rel=0"
                             frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
@@ -175,7 +177,7 @@ const Testimonials2 = ({ children, classes, data, tags }) => {
                 <div className={classes.flexItem}>
 
                    
-                <div style={{ textAlign: "center",paddingBottom:"22px" }}>
+                <div style={{ textAlign: "center",paddingBottom:"22px", paddingRight:"20px", paddingLeft:"20px" }}>
                             <img src={Test_pic2} width="370" />
                             <div className={classes.Heading2}>Jennifer Pecora, Agent</div>
                             <div className={classes.subtext}>Pecora Properties, Watson Realty Corp.<br />
@@ -222,7 +224,7 @@ const Testimonials2 = ({ children, classes, data, tags }) => {
 <div className={classes.flexItem}>
 
                    
-<div style={{ textAlign: "center",paddingBottom:"22px" }}>
+<div style={{ textAlign: "center",paddingBottom:"22px", paddingRight:"20px", paddingLeft:"20px" }}>
                         <img src={Test_pic3} width="370" />
                         <div className={classes.Heading2}>Heather Paukova, REALTOR&reg;</div>
                         <div className={classes.subtext}>RE/MAX Southern Shores<br />
@@ -237,30 +239,68 @@ const Testimonials2 = ({ children, classes, data, tags }) => {
 </div>
 
 
+<div style={{paddingTop:"20px", paddingBottom:"10px", backgroundColor:"#f7f7f7"}}>
+
+            <Container>
+
+                        <div style={{textAlign:"center", paddingBottom:"5px", padding:"25px"}}>
+                            <div className={classes.Heading2}>More love from happy clients.</div>
+                            <div className={classes.subtext}>Are you ready for your happy dance?</div>     
+                            <a target="_blank" href="https://tryelevate.com/get-started/" className={classes.buttonLink}>Connect with a Success Coach</a>
+                        </div>
+            </Container>
+
+</div> 
+
+
+
+
 
 <div style={{paddingTop:"20px", paddingBottom:"50px", backgroundColor:"#ffffff"}}>
     <Container>
-    <div style={{textAlign:"center", paddingBottom:"5px", padding:"25px"}}><div className={classes.heading}>The Power of MARKETING</div>
-    <div className={classes.subtext}>Turn your social media from a toy into a tool, today.</div></div>
             <div className={classes.flexContainer}>
-                <div className={classes.flexItem3} style={{padding:"20px",}}>  
-                      <div className={classes.subtext}>• IDX Website<br />
-                          • Advanced Productivity CRM<br />
-                          • Dynamic-fed CMA Wizard<br />
-                          • Robust Blog with Automated Content
+                <div className={classes.flexItem2} style={{padding:"20px", textAlign:"center"}}>  
+                      <div className={classes.subtext}>
+                      <img src={Testa} width="170" />
+                                <div className={classes.Heading2}>
+                                  Joloyce Egbert-Palmer<br />
+                                  REALTOR&reg;</div>
+                                  KRCH Realty<br />
+                                  Reno, NV<br /><br />
+
+                                  “Elevate created my amazing website and launched my lead program. My website is professional and easy to use, plus Elevate automatically posts content on all my social media channels...something that<br />
+                                  I don’t have time to do, and now<br />
+                                  I don’t need to!”
+
                       </div>
                 </div>
-                <div className={classes.flexItem2} style={{padding:"20px",}}>
-                      <div className={classes.subtext}>• Email &amp; Text Campaigns<br />
-                          • Bright MLS Integration<br />
-                          • Voiceover IP (VoIP)<br />
-                          • Pay-Per-Click Lead Generation</div>
+                <div className={classes.flexItem2} style={{padding:"20px", textAlign:"center"}}>
+                      <div className={classes.subtext}>
+                                 <img src={Testb} width="170" />
+                                  <div className={classes.Heading2}>Prince Jones<br />
+                                  Broker Associate, REALTOR&reg;</div>
+                                  RE/MAX Realty Team <br />
+                                  Cape Coral, FL<br /><br />
+                                  
+                                  “As a REALTOR&reg;, you will find that there are a vast number of companies trying to make money off your hard work. They promise the world, and they do not deliver. Elevate is not one of those companies. To quote Tony Robbins, using Elevate...”life will never be the same.”
+                        </div>
                 </div>
 
-                <div className={classes.flexItem2} style={{padding:"20px",}}>
-                <div className={classes.heading} style={{fontSize:"24px",}}>and MORE...</div>
-                </div>
-            </div>
+                <div className={classes.flexItem2} style={{padding:"20px", textAlign:"center"}}>
+                      <div className={classes.subtext}>
+                                <img src={Testc} width="170" />
+                                <div className={classes.Heading2}>
+                                  Tracy Anne Madden<br />
+                                  REALTOR&reg;</div>
+                                  Tracy Madden Homes<br />
+                                  Temecula, CA<br /><br />
+
+                                  “I am a new REALTOR&reg; and I was really struggling with managing my social media in a professional way, and I desperately needed my own website. I attended a Social Media Boot Camp and learned about the services these guys had to offer and I was blown away<br />
+                                  by the fact that they literally<br />
+                                  covered everything."
+                      </div>
+              </div>
+      </div>
 
         
     </Container>
@@ -268,25 +308,7 @@ const Testimonials2 = ({ children, classes, data, tags }) => {
 
 
 
-<a id="form"></a>
-<div style={{backgroundColor:"#f7f7f7",}}>
-      <Container>
 
-        <div >
-            <div style={{ maxWidth: "900px", backgroundColor: "#f7f7f7", marginRight:"auto",marginLeft:"auto", paddingTop:"60px", paddingBottom:"60px"}}>
-                <div className={classes.landingHeaderStyle}>
-                   
-                </div>
-                <div style={{ paddingLeft: "10px", paddingRight: "10px"}}>
-                    <FormBright />
-                </div>
-                <div>
-                    
-                </div>
-            </div>
-        </div>
-      </Container>
-      </div>
     </div>
   );
 };
@@ -393,8 +415,8 @@ export default withStyles((theme) => ({
   
   
     [theme.breakpoints[900]]: {
-        maxWidth: "26%",
-        width: "26%",
+        maxWidth: "33%",
+        width: "33%",
         paddingRight: "20px",
         paddingBottom: "0px",
     },
