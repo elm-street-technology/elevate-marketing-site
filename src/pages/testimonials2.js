@@ -96,7 +96,7 @@ const Testimonials2 = ({ children, classes, data, tags }) => {
 
                    
                 <div style={{ textAlign: "center",paddingBottom:"22px", paddingRight:"20px", paddingLeft:"20px" }}>
-                            <div style={{paddingLeft:"20px", paddingRight:"20px"}}><img src={Test_pic1} style={{Width:"100%", maxWidth:"350px"}} /></div>
+                            <div style={{paddingLeft:"20px", paddingRight:"20px"}}><img src={Test_pic1} style={{Width:"100%", maxWidth:"320px"}} /></div>
                             <div className={classes.Heading2}>Terry Naber</div>
                             <div className={classes.subtext}>Broker Associate | REALTOR<br />
                             Colorado Springs Homes<br />
@@ -175,7 +175,7 @@ const Testimonials2 = ({ children, classes, data, tags }) => {
 
                    
                 <div style={{ textAlign: "center",paddingBottom:"22px", paddingRight:"20px", paddingLeft:"20px" }}>
-                <div style={{paddingLeft:"20px", paddingRight:"20px"}}><img src={Test_pic2} style={{Width:"100%", maxWidth:"350px"}} /></div>
+                <div style={{paddingLeft:"20px", paddingRight:"20px"}}><img src={Test_pic2} style={{Width:"100%", maxWidth:"320px"}} /></div>
                             <div className={classes.Heading2}>Jennifer Pecora, Agent</div>
                             <div className={classes.subtext}>Pecora Properties, Watson Realty Corp.<br />
                             Palm Bay, FL</div>
@@ -222,7 +222,7 @@ const Testimonials2 = ({ children, classes, data, tags }) => {
 
                    
 <div style={{ textAlign: "center",paddingBottom:"22px", paddingRight:"20px", paddingLeft:"20px" }}>
-<div style={{paddingLeft:"20px", paddingRight:"20px"}}><img src={Test_pic3} style={{Width:"100%", maxWidth:"350px"}} /></div>
+<div style={{paddingLeft:"20px", paddingRight:"20px"}}><img src={Test_pic3} style={{Width:"100%", maxWidth:"320px"}} /></div>
                         <div className={classes.Heading2}>Heather Paukova, REALTOR&reg;</div>
                         <div className={classes.subtext}>RE/MAX Southern Shores<br />
                         Myrtle Beach, SC</div>
