@@ -96,7 +96,7 @@ const Testimonials2 = ({ children, classes, data, tags }) => {
 
                    
                 <div style={{ textAlign: "center",paddingBottom:"22px", paddingRight:"20px", paddingLeft:"20px" }}>
-                            <div><img src={Test_pic1} style={{Width:"100%", maxWidth:"330px"}} /></div>
+                            <div style={{paddingLeft:"20px", paddingRight:"20px"}}><img src={Test_pic1} style={{Width:"100%", maxWidth:"350px"}} /></div>
                             <div className={classes.Heading2}>Terry Naber</div>
                             <div className={classes.subtext}>Broker Associate | REALTOR<br />
                             Colorado Springs Homes<br />
@@ -135,10 +135,7 @@ const Testimonials2 = ({ children, classes, data, tags }) => {
                                 United Real Estate Professionals<br />
                                 Huntington Beach, CA<br /><br />
 
-                                A seasoned broker/owner who’s been burned<br />
-                                by lead generation solutions in the past, discusses<br />
-                                his experience with Elevate’s lead generation<br />
-                                and scrubbing services, along with an almost immediate ROI. 
+                                A seasoned broker/owner who’s been burned by lead generation solutions in the past, discusses his experience with Elevate’s lead generation and scrubbing services, along with an almost immediate ROI. 
                             </div>
                 
                     
@@ -178,7 +175,7 @@ const Testimonials2 = ({ children, classes, data, tags }) => {
 
                    
                 <div style={{ textAlign: "center",paddingBottom:"22px", paddingRight:"20px", paddingLeft:"20px" }}>
-                            <img src={Test_pic2} style={{maxWidth:"370px"}} />
+                <div style={{paddingLeft:"20px", paddingRight:"20px"}}><img src={Test_pic2} style={{Width:"100%", maxWidth:"350px"}} /></div>
                             <div className={classes.Heading2}>Jennifer Pecora, Agent</div>
                             <div className={classes.subtext}>Pecora Properties, Watson Realty Corp.<br />
                             Palm Bay, FL</div>
@@ -225,7 +222,7 @@ const Testimonials2 = ({ children, classes, data, tags }) => {
 
                    
 <div style={{ textAlign: "center",paddingBottom:"22px", paddingRight:"20px", paddingLeft:"20px" }}>
-                        <img src={Test_pic3} style={{maxWidth:"370px"}}  />
+<div style={{paddingLeft:"20px", paddingRight:"20px"}}><img src={Test_pic3} style={{Width:"100%", maxWidth:"350px"}} /></div>
                         <div className={classes.Heading2}>Heather Paukova, REALTOR&reg;</div>
                         <div className={classes.subtext}>RE/MAX Southern Shores<br />
                         Myrtle Beach, SC</div>
