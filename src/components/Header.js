@@ -14,6 +14,11 @@ class Header extends Component {
     isMenuOpen: false,
   };
 
+  componentDidMount = () => {
+    console.log('make sure noscroll is off');
+    noScroll.off();
+  }
+
   onMenuOpen = () => {
     this.setState({ isMenuOpen: true });
     noScroll.on();
@@ -23,6 +28,7 @@ class Header extends Component {
     this.setState({ isMenuOpen: false });
     noScroll.off();
   };
+  
 
   render() {
     const { classes } = this.props;
