@@ -8,7 +8,7 @@ import EventCard from "../components/EventCard";
 import EventCardZero from "../components/EventCardZero";
 import Container from "../components/Container";
 import SEO from "../components/SEO";
-import smbg from "../images/sm_topbg.jpg";
+import smbg from "../images/sm_topbg2.jpg";
 import Hexagons from "../images/hexagons.svg";
 import Search from "elevate-ui-icons/Search";
 
@@ -145,6 +145,9 @@ class EventsSM extends Component {
 
         <div className={classes.smBackground}>
         <Container>
+                <div className={classes.titleSubText} style={{color:"#55c3ba", paddingBottom:"35px"}}>
+                    Do you struggle with social media? We're here to help!
+                </div>
                 <div style={{ textAlign: "center" }}>
                       <iframe width="800" height="450" src="https://www.youtube.com/embed/bHTQ31OzZY8?autoplay=1&rel=0"
                       frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
@@ -154,7 +157,7 @@ class EventsSM extends Component {
                 </div>
                 <div className={classes.BodyText}>
                       The #1 boot camp for real estate agents continues to take the US by storm.<br />
-                      This 2-hr, interactive educational seminar is designed to inspire and empower agents<br />
+                      This FREE 2-hr, interactive educational seminar is designed to inspire and empower agents<br />
                       with tips, tricks &amp; strategies for conquering their website, blog and social media.
                 </div>
           <div className={classes.titleSubText} style={{color:"#2d397c", paddingBottom:"35px"}}>
