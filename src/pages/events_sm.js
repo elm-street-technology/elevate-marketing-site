@@ -145,9 +145,11 @@ class EventsSM extends Component {
 
         <div className={classes.smBackground}>
         <Container>
-                <div style={{ textAlign: "center" }}>
-                      <iframe width="800" height="450" src="https://www.youtube.com/embed/bHTQ31OzZY8?autoplay=1&rel=0"
+                <div style={{maxWidth:"800px",marginLeft:"auto",marginRight:"auto"}}>
+                <div style={{ textAlign: "center" }} className={classes.videoEmbed}>
+                      <iframe className={classes.videoContainer} src="https://www.youtube.com/embed/bHTQ31OzZY8?autoplay=1&rel=0"
                       frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                </div>
                 </div>
                 <div className={classes.titleText} style={{color:"#2d397c"}}>
                       Social Media Boot Camp
@@ -403,4 +405,20 @@ export default withStyles((theme) => ({
     backgroundPosition: "bottom",
     width:"100%",
   },
+  videoEmbed:{
+    position: "relative",
+    paddingBottom: "56.25%",
+    paddingTop: "30px",
+    height: "0",
+    overflow: "hidden",
+    
+  },
+  videoContainer:{
+    position: "absolute",
+    top: "0",
+    left: "0",
+    width: "100%",
+    height: "100%",
+    
+  }
 }))(EventsSM);
