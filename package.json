@@ -39,6 +39,7 @@
     "no-scroll": "^2.1.1",
     "path": "^0.12.7",
     "prismjs": "^1.15.0",
+    "rc-slider": "^8.7.1",
     "react-card-flipper": "^1.0.1",
     "react-helmet": "^5.2.0",
     "react-jss": "^8.6.1",
