@@ -38,7 +38,9 @@ class LeadgenCalc extends Component {
 
     handleSlide(e){
         this.setState({numberOfLeads:e});
-        this.recalcResults();
+        var that = this;
+        setTimeout(function() { that.recalcResults(); }, 100);
+        
     }
 
     handleHomePrice(e){
@@ -120,7 +122,7 @@ class LeadgenCalc extends Component {
                 <div className={classes.row}>
                     <div className={classes.col}>
                         <div style={{width:"300px",height:"20px"}}>
-                            <Slider min={this.state.minLeads} max={this.state.maxLeads} defaultValue={this.state.numberOfLeads} onChange={this.handleSlide}/>
+                            <Slider min={this.state.minLeads} max={this.state.maxLeads} defaultValue={this.state.numberOfLeads} onChange={this.handleSlide} onBlur={this.handleInputChange}/>
                         </div>
                         <div style={{marginBottom:"40px"}}>
                             <h2>Number of Leads: {this.state.numberOfLeads}</h2>
