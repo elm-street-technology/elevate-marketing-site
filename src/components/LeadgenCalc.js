@@ -38,38 +38,31 @@ class LeadgenCalc extends Component {
 
     handleSlide(e){
         this.setState({numberOfLeads:e});
-        this.recalcResults();
+        var that = this;
+        setTimeout(function() { that.recalcResults(); }, 100);
+        
     }
 
     handleHomePrice(e){
         this.setState({avgHomePrice:e.target.value});
-        return true;
     }
 
     handleCommission(e){
         console.log(e);
         this.setState({commissionPrct:e.target.value});
-        //this.recalcResults();
-        return true;
     }
 
     handleBrokerPrct(e){
         this.setState({brokerFeesPrct:e.target.value});
-        //this.recalcResults();
-        return true;
     }
 
     handleBrokerFixed(e){
         this.setState({brokerFeesFixed:e.target.value});
-        //this.recalcResults();
-        return true;
     }
 
     handleInputChange(e){
         this.recalcResults();
-        return true;
     }
-
 
     recalcResults(){
         if(this.state.typeOfLead === "blend"){
@@ -120,7 +113,7 @@ class LeadgenCalc extends Component {
                 <div className={classes.row}>
                     <div className={classes.col}>
                         <div style={{width:"300px",height:"20px"}}>
-                            <Slider min={this.state.minLeads} max={this.state.maxLeads} defaultValue={this.state.numberOfLeads} onChange={this.handleSlide}/>
+                            <Slider min={this.state.minLeads} max={this.state.maxLeads} defaultValue={this.state.numberOfLeads} onChange={this.handleSlide} onBlur={this.handleInputChange}/>
                         </div>
                         <div style={{marginBottom:"40px"}}>
                             <h2>Number of Leads: {this.state.numberOfLeads}</h2>
@@ -203,7 +196,6 @@ export default withStyles((theme) => ({
     flexDirection: "column",
     width: "100%",
     maxWidth: "1080px",
-    /*textAlign: "center",*/
     fontWeight: "600",
     alignItems: "flex-start",
     [theme.breakpoints[900]]: {
