@@ -9,7 +9,7 @@ import PageBody from "../components/PageBody";
 import SEO from "../components/SEO";
 
 const PageTemplate = ({ classes, data: { contentfulPage } }) => {
-  const { title, slug, body } = contentfulPage;
+  const { title, slug, body, body2 } = contentfulPage;
   const postNode = contentfulPage;
 
   return (
@@ -22,29 +22,35 @@ const PageTemplate = ({ classes, data: { contentfulPage } }) => {
       <Container>
         <PageTitle>{title}</PageTitle>
         <PageBody body={body} />
+        <PageBody body={body2} />
       </Container>
     </div>
   );
 };
 
 export const query = graphql`
-  query pageQuery($slug: String!) {
-    contentfulPage(slug: { eq: $slug }) {
-      title
-      slug
-      metaDescription {
-        internal {
-          content
-        }
+query pageQuery($slug: String!) {
+  contentfulPage(slug: { eq: $slug }) {
+    title
+    slug
+    metaDescription {
+      internal {
+        content
       }
-      body {
-        childMarkdownRemark {
-          html
-          excerpt(pruneLength: 320)
-        }
+    }
+    body {
+      childMarkdownRemark {
+        html
+        excerpt(pruneLength: 320)
+      }
+    }
+    body2 {
+      childMarkdownRemark {
+        html
       }
     }
   }
+}
 `;
 
 export default withStyles((theme) => ({
