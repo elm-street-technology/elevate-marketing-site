@@ -45,33 +45,24 @@ class LeadgenCalc extends Component {
 
     handleHomePrice(e){
         this.setState({avgHomePrice:e.target.value});
-        return true;
     }
 
     handleCommission(e){
         console.log(e);
         this.setState({commissionPrct:e.target.value});
-        //this.recalcResults();
-        return true;
     }
 
     handleBrokerPrct(e){
         this.setState({brokerFeesPrct:e.target.value});
-        //this.recalcResults();
-        return true;
     }
 
     handleBrokerFixed(e){
         this.setState({brokerFeesFixed:e.target.value});
-        //this.recalcResults();
-        return true;
     }
 
     handleInputChange(e){
         this.recalcResults();
-        return true;
     }
-
 
     recalcResults(){
         if(this.state.typeOfLead === "blend"){
@@ -205,7 +196,6 @@ export default withStyles((theme) => ({
     flexDirection: "column",
     width: "100%",
     maxWidth: "1080px",
-    /*textAlign: "center",*/
     fontWeight: "600",
     alignItems: "flex-start",
     [theme.breakpoints[900]]: {
