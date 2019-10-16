@@ -8,7 +8,7 @@ import SEO from "../components/SEO";
 
 const LeadCalc = ({ children, classes, data, tags }) => {
   const postNode = {
-      title: `Lead Generation - ${config.siteTitle}`,
+      title: `Lead Generation Calculator - ${config.siteTitle}`,
   };
 
   return (
@@ -20,7 +20,7 @@ const LeadCalc = ({ children, classes, data, tags }) => {
 
       <Container>
         <div >
-                  <div style={{ maxWidth: "900px", backgroundColor: "#ece8ea", marginRight:"auto",marginLeft:"auto",paddingTop:"35px"}}>
+                  <div style={{ maxWidth: "900px",  marginRight:"auto",marginLeft:"auto",paddingTop:"35px"}}>
                 
                 <div style={{ paddingLeft: "10px", paddingRight: "10px"}}>
                     <LeadgenCalc />
