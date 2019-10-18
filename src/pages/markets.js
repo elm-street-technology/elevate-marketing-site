@@ -4,6 +4,7 @@ import withStyles from "elevate-ui/withStyles";
 import Container from "../components/Container";
 import SEO from "../components/SEO";
 import CircuitBoard from "../images/circuit-board.svg";
+import Mlsbg from "../images/mls_bg.jpg";
 import MLSHeatMap from "../images/mls-heat-map.jpg";
 
 const Markets = ({ classes, data }) => {
@@ -12,14 +13,27 @@ const Markets = ({ classes, data }) => {
   markets.forEach(({ node: market }) => {
     marketCount += market.mlsName.length;
   });
+
+  
   return (
+
+    
     <div
+    
       className={classes.root}
-      style={{
-        backgroundImage: `url('${CircuitBoard}')`,
-        backgroundRepeat: "repeat",
-      }}
     >
+      <div style={{backgroundImage:"url("+Mlsbg+")", backgroundSize:"cover", backgroundPosition:"centerTop"}}>
+<Container>
+      <div className={classes.top} style={{paddingBottom:"80px", paddingRight:"25px", paddingLeft:"25px", paddingTop:"75px"}}>
+          <div className={classes.centerHeading}>
+                            <div className={classes.heading} style={{color:"#ffffff"}}>The Power of PARTNERS</div>
+                            <div className={classes.subtext} style={{color:"#ffffff"}}>Our ever-growing network across the U.S. allows us to service more brokers,<br />
+                            agents &amp; teams than most any other solution out there.
+                            </div>
+          </div>
+      </div>
+</Container>
+</div>
       <SEO />
       <Container>
         <div className={classes.container}>
@@ -95,13 +109,12 @@ export const query = graphql`
 
 export default withStyles((theme) => ({
   root: {
-    padding: "96px 8px 192px 8px",
-    backgroundColor: "#faf8f6",
+    padding: "15px 0px 70px 0px",
+    backgroundColor: "#ffffff",
   },
   container: {
     backgroundColor: "#fff",
     padding: "20px 24px",
-    boxShadow: "0px 8px 12px rgba(0,0,0,.1)",
 
     [theme.breakpoints[600]]: {
       padding: "40px 48px",
@@ -171,4 +184,36 @@ export default withStyles((theme) => ({
     lineHeight: "1.6",
     color: theme.colors.primary,
   },
+
+  heading: {
+    fontSize: "33px",
+    fontWeight: "700",
+    lineHeight: "40px",
+    letterSpacing: ".14px",
+    color: "#5ac0ba",
+    marginBottom: "12px",
+    textAlign: "center",
+  },
+
+  subtext: {
+    fontSize: "16px",
+    fontWeight: "300",
+    lineHeight: "24px",
+    color: "#777777",
+  },
+
+  centerHeading:{
+    alignItems: "center",
+    width: "100%",
+    textAlign: "center",
+  },
+
+  Heading2: {
+    fontSize: "20px",
+    fontWeight: "700",
+    lineHeight: "26px",
+    color: "#5ac0ba",
+    letterSpacing: ".14px",
+  },
+
 }))(Markets);
