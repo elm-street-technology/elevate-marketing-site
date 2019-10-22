@@ -1,28 +1,31 @@
 import React from "react";
+import Helmet from "react-helmet";
 import withStyles from "elevate-ui/withStyles";
-
+import config from "../utils/siteConfig";
 import Container from "../components/Container";
-import SEO from "../components/SEO";
-import CircuitBoard from "../images/circuit-board.svg";
 import Mlsbg from "../images/mls_bg.jpg";
 import MLSHeatMap from "../images/mls-heat-map.jpg";
+import SEO from "../components/SEO";
+import FormMLS from "../components/FormMLS";
 
-const Markets = ({ classes, data }) => {
+const Markets = ({ children, classes, data, tags }) => {
+  const postNode = {
+      title: `Your Single Source Solution - ${config.siteTitle}`,
+  };
   const markets = data.allContentfulMarket.edges;
   let marketCount = 0;
   markets.forEach(({ node: market }) => {
     marketCount += market.mlsName.length;
   });
 
-  
   return (
+<div className={classes.root}>
+      <Helmet>
+              <title>{`Your Single Source Solution - ${config.siteTitle}`}</title>
+      </Helmet>
+      <SEO postNode={postNode} pagePath="contact" customTitle />
 
-    
-    <div
-    
-      className={classes.root}
-    >
-      <div style={{backgroundImage:"url("+Mlsbg+")", backgroundSize:"cover", backgroundPosition:"centerTop"}}>
+<div style={{backgroundImage:"url("+Mlsbg+")", backgroundSize:"cover", backgroundPosition:"centerTop"}}>
 <Container>
       <div className={classes.top} style={{paddingBottom:"80px", paddingRight:"25px", paddingLeft:"25px", paddingTop:"75px"}}>
           <div className={classes.centerHeading}>
@@ -34,67 +37,68 @@ const Markets = ({ classes, data }) => {
       </div>
 </Container>
 </div>
-      <SEO />
-      <Container>
-        <div className={classes.container}>
-          <div className={classes.heading}>Areas we serve</div>
-          <div className={classes.subheading}>
-            Available in {marketCount} markets across the US
-          </div>
-          <div className={classes.mlsHeatMapContainer}>
-            <img
-              src={MLSHeatMap}
-              alt="MLS Heat Map"
-              title="MLS Heat Map"
-              className={classes.mlsHeatMap}
-            />
-          </div>
-          <div className={classes.table}>
-            <div className={classes.tableThead}>
-              <div className={classes.tableTh}>State</div>
-              <div className={classes.tableTh}>MLS</div>
-            </div>
-            <div className={classes.tableTbody}>
-              {markets.map(({ node: market }) => {
-                return (
-                  <div key={market.id} className={classes.tableTr}>
-                    <div className={classes.tableTd}>{market.state}</div>
-                    <div className={classes.tableTd}>
-                      {market.mlsName &&
-                        market.mlsName.map(
-                          (mls, i) =>
-                            i === market.mlsName.length - 1 ? (
-                              <span key={mls} className={classes.mls}>
-                                {mls}
-                              </span>
-                            ) : (
-                              <span key={mls}>
-                                <span className={classes.mls}>{mls}</span>
-                                <span
-                                  style={{
-                                    color: "#64616E",
-                                    padding: "0px 10px",
-                                  }}
-                                >
-                                  |
-                                </span>
-                              </span>
-                            )
-                        )}
+
+<div style={{paddingTop:"50px", paddingBottom:"50px",}}>
+        <Container>
+                <div className={classes.mlsHeatMapContainer}>
+                            <img
+                            src={MLSHeatMap}
+                            alt="MLS Heat Map"
+                            title="MLS Heat Map"
+                            className={classes.mlsHeatMap}
+                            />
+                 </div>
+                 <div className={classes.table}>
+                    <div className={classes.tableThead}>
+                      <div className={classes.tableTh}>State</div>
+                      <div className={classes.tableTh}>MLS</div>
+                    </div>
+                    <div className={classes.tableTbody}>
+                      {markets.map(({ node: market }) => {
+                        return (
+                          <div key={market.id} className={classes.tableTr}>
+                            <div className={classes.tableTd}>{market.state}</div>
+                            <div className={classes.tableTd}>
+                              {market.mlsName &&
+                                market.mlsName.map(
+                                  (mls, i) =>
+                                    i === market.mlsName.length - 1 ? (
+                                      <span key={mls} className={classes.mls}>
+                                        {mls}
+                                      </span>
+                                    ) : (
+                                      <span key={mls}>
+                                        <span className={classes.mls}>{mls}</span>
+                                        <span
+                                          style={{
+                                            color: "#64616E",
+                                            padding: "0px 10px",
+                                          }}
+                                        >
+                                          |
+                                        </span>
+                                      </span>
+                                    )
+                                )}
+                            </div>
+                          </div>
+                        );
+                      })}
                     </div>
                   </div>
-                );
-              })}
-            </div>
-          </div>
-        </div>
-      </Container>
-    </div>
+                  <div style={{marginTop:"30px"}}>
+                    <FormMLS />
+                  </div>
+                  
+         </Container>
+</div>
+
+</div>
   );
 };
 
 export const query = graphql`
-  query marketQuery {
+  query market2Query {
     allContentfulMarket(limit: 1000, sort: { fields: [state], order: ASC }) {
       edges {
         node {
@@ -109,40 +113,134 @@ export const query = graphql`
 
 export default withStyles((theme) => ({
   root: {
-    padding: "15px 0px 70px 0px",
-    backgroundColor: "#ffffff",
+    display: "flex",
+    flexDirection: "column",
+    width: "100%",
+    margin: "auto",
   },
-  container: {
-    backgroundColor: "#fff",
-    padding: "20px 24px",
 
-    [theme.breakpoints[600]]: {
-      padding: "40px 48px",
-    },
-
-    [theme.breakpoints[900]]: {
-      padding: "60px 72px",
-    },
+  top: {
+    display: "flex",
+    flexWrap: "wrap",
+    alignItems: "top",
   },
+
+  heading: {
+    fontSize: "33px",
+    fontWeight: "700",
+    lineHeight: "40px",
+    letterSpacing: ".14px",
+    color: "#5ac0ba",
+    marginBottom: "12px",
+  },
+
+  subtext: {
+    fontSize: "16px",
+    fontWeight: "300",
+    lineHeight: "24px",
+    color: "#777777",
+  },
+
+  centerHeading:{
+    alignItems: "center",
+    width: "100%",
+    textAlign: "center",
+  },
+
+  Heading2: {
+    fontSize: "20px",
+    fontWeight: "700",
+    lineHeight: "26px",
+    color: "#5ac0ba",
+    letterSpacing: ".14px",
+  },
+
+  landingHeaderStyle:{
+    textAlign:"center",
+  },
+
   mlsHeatMapContainer: {
-    width: "75%",
+    width: "65%",
     margin: "16px auto 0 auto",
   },
   mlsHeatMap: {
     width: "100%",
   },
-  heading: {
-    fontSize: "28px",
+
+
+  buttonLink: {
+    minWidth: "250px",
+    maxWidth: "250px",
+    alignContent: "center",
+    justifyContent: "center",
+    fontSize: "14px",
     fontWeight: "700",
-    marginRight: "auto",
-    marginBottom: "16px",
-    color: "#2E2E35",
-    textAlign: "center",
+    display: "block",
+    letterSpacing: ".25px",
+    backgroundColor: theme.colors.secondary,
+    color: "#FFF",
+    textDecoration: "none",
+    padding: "16px",
+    borderRadius: "4px",
+    margin: "16px auto",
+    marginBottom: "20px",
   },
-  subheading: {
-    color: "#64616E",
-    fontSize: "22px",
-    textAlign: "center",
+
+  flexContainer: {
+    padding: "0",
+    margin: '0',
+  
+    display: "-webkit-box",
+    display: "-moz-box",
+    display: "-ms-flexbox",
+    display: "-webkit-flex",
+    display: "flex",
+    flexWrap: "wrap",
+  
+  },
+  flexItem: {
+    maxWidth: "100%",
+    width: "100%",
+    paddingRight: "0px",
+    paddingBottom: "25px",
+  
+  
+    [theme.breakpoints[900]]: {
+        maxWidth: "50%",
+        width: "50%",
+        paddingRight: "20px",
+        paddingBottom: "0px",
+    },
+  },
+
+  flexItem2: {
+    maxWidth: "100%",
+    width: "100%",
+    paddingRight: "0px",
+    paddingBottom: "25px",
+  
+  
+    [theme.breakpoints[900]]: {
+        maxWidth: "33%",
+        width: "33%",
+        paddingRight: "20px",
+        paddingBottom: "0px",
+    },
+  },
+
+  flexItem3: {
+    maxWidth: "100%",
+    width: "100%",
+    paddingRight: "0px",
+    paddingBottom: "25px",
+  
+  
+    [theme.breakpoints[900]]: {
+        maxWidth: "40%",
+        width: "40%",
+        paddingRight: "20px",
+        paddingBottom: "0px",
+    },
   },
   table: {
     paddingTop: "62px",
@@ -184,36 +282,4 @@ export default withStyles((theme) => ({
     lineHeight: "1.6",
     color: theme.colors.primary,
   },
-
-  heading: {
-    fontSize: "33px",
-    fontWeight: "700",
-    lineHeight: "40px",
-    letterSpacing: ".14px",
-    color: "#5ac0ba",
-    marginBottom: "12px",
-    textAlign: "center",
-  },
-
-  subtext: {
-    fontSize: "16px",
-    fontWeight: "300",
-    lineHeight: "24px",
-    color: "#777777",
-  },
-
-  centerHeading:{
-    alignItems: "center",
-    width: "100%",
-    textAlign: "center",
-  },
-
-  Heading2: {
-    fontSize: "20px",
-    fontWeight: "700",
-    lineHeight: "26px",
-    color: "#5ac0ba",
-    letterSpacing: ".14px",
-  },
-
 }))(Markets);
