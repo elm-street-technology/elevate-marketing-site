@@ -3,11 +3,6 @@ import Helmet from "react-helmet";
 import withStyles from "elevate-ui/withStyles";
 import config from "../utils/siteConfig";
 import Container from "../components/Container";
-import FormBright from "../components/FormBright";
-import Brightlogo from "../images/brightmls_logo.png";
-import Bosslogo from "../images/eboss_logo.png";
-import Sprologo from "../images/spro_logo.png";
-import Ask from "../images/askhow.png";
 import Test from "../images/test_bg.jpg";
 import Test_pic1 from "../images/test_pic1.png";
 import Test_pic2 from "../images/test_pic2.png";
@@ -15,8 +10,6 @@ import Test_pic3 from "../images/test_pic3.png";
 import Testa from "../images/testa.png";
 import Testb from "../images/testb.png";
 import Testc from "../images/testc.png";
-import Spro from "../images/socialpro_bg.jpg";
-import BrightBgSectionExternal from "../components/BrightBgSectionExternal";
 import SEO from "../components/SEO";
 
 const Testimonials2 = ({ children, classes, data, tags }) => {

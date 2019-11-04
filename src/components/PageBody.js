@@ -4,10 +4,15 @@ import withStyles from "elevate-ui/withStyles";
 import "prismjs/themes/prism.css";
 
 const PageBody = (props) => {
+  var thisHtml = '';
+  if(props.body !== null){
+    thisHtml = props.body.childMarkdownRemark.html;
+  }
+
   return (
     <div
       className={classNames(props.classes.post, props.className)}
-      dangerouslySetInnerHTML={{ __html: props.body.childMarkdownRemark.html }}
+      dangerouslySetInnerHTML={{ __html: thisHtml }}
     />
   );
 };
