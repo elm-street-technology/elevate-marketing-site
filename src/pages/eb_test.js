@@ -23,7 +23,7 @@ const EbTest = ({ children, classes, data, tags }) => {
       <Helmet>
               <title>{`Your Single Source Solution - ${config.siteTitle}`}</title>
       </Helmet>
-      <SEO postNode={postNode} pagePath="contact" customTitle />
+      <SEO postNode={postNode} pagePath="eb_test" customTitle />
 
         <Container>
             <div className={classes.top} style={{paddingBottom:"40px", paddingRight:"15px", paddingLeft:"15px", paddingTop:"55px"}}>

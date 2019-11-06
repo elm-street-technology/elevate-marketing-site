@@ -22,7 +22,7 @@ const Testimonials2 = ({ children, classes, data, tags }) => {
       <Helmet>
               <title>{`Your Single Source Solution - ${config.siteTitle}`}</title>
       </Helmet>
-      <SEO postNode={postNode} pagePath="contact" customTitle />
+      <SEO postNode={postNode} pagePath="testimonials" customTitle />
 
 <div style={{backgroundImage:"url("+Test+")", backgroundSize:"cover", backgroundPosition:"centerTop"}}>
 <Container>

@@ -18,7 +18,7 @@ const Dms = ({ children, classes, data, tags }) => {
       <Helmet>
               <title>{`Your Single Source Solution - ${config.siteTitle}`}</title>
       </Helmet>
-      <SEO postNode={postNode} pagePath="contact" customTitle />
+      <SEO postNode={postNode} pagePath="dms" customTitle />
 
       <Container>
         <div >
