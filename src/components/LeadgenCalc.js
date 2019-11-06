@@ -13,6 +13,8 @@ class LeadgenCalc extends Component {
             numberOfLeads: 50,
             minLeads: 10,
             maxLeads: 200,
+            minPrice: 750,
+            maxPrice: 10000,
             avgHomePrice: 200000,
             commissionPrct: 3,
             brokerFeesPrct: 25,
