@@ -17,7 +17,7 @@ const SixEmails = ({ children, classes, data, tags }) => {
       <Helmet>
               <title>{`6 Emails Every Real Estate Agent Should Be Sending (Free Download) - ${config.siteTitle}`}</title>
       </Helmet>
-      <SEO postNode={postNode} pagePath="contact" customTitle />
+      <SEO postNode={postNode} pagePath="6emails" customTitle />
 
       <Container>
         <div >
