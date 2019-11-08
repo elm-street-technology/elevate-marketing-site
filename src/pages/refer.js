@@ -18,7 +18,7 @@ const Refer = ({ children, classes, data, tags }) => {
       <Helmet>
               <title>{`Share the power of ELEVATE - ${config.siteTitle}`}</title>
       </Helmet>
-      <SEO postNode={postNode} pagePath="contact" customTitle />
+      <SEO postNode={postNode} pagePath="refer" customTitle />
 
 
       <Container>

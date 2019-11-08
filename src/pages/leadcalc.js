@@ -16,7 +16,7 @@ const LeadCalc = ({ children, classes, data, tags }) => {
       <Helmet>
               <title>{`Lead Generation - ${config.siteTitle}`}</title>
       </Helmet>
-      <SEO postNode={postNode} pagePath="contact" customTitle />
+      <SEO postNode={postNode} pagePath="leadcalc" customTitle />
 
       <Container>
         <div >

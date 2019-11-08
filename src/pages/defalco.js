@@ -17,7 +17,7 @@ const Defalco = ({ children, classes, data, tags }) => {
       <Helmet>
               <title>{`An Exclusive Offer Only for DeFalco Agents - ${config.siteTitle}`}</title>
       </Helmet>
-      <SEO postNode={postNode} pagePath="contact" customTitle />
+      <SEO postNode={postNode} pagePath="defalco" customTitle />
 
       <Container>
         <div >

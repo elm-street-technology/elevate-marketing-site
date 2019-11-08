@@ -18,7 +18,7 @@ const Seller = ({ children, classes, data, tags }) => {
       <Helmet>
               <title>{`Seller Leads - ${config.siteTitle}`}</title>
       </Helmet>
-      <SEO postNode={postNode} pagePath="contact" customTitle />
+      <SEO postNode={postNode} pagePath="seller-leads" customTitle />
 
       <Container>
         <div >

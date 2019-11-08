@@ -22,7 +22,7 @@ const FormSubmittedWB62019 = ({ children, classes, data, tags }) => {
       <Helmet>
               <title>{`${config.siteTitle}`}</title>
       </Helmet>
-      <SEO postNode={postNode} pagePath="contact" customTitle />
+      <SEO postNode={postNode} pagePath="formsubmittedwb62019" customTitle />
 
       <Container>
         <div >

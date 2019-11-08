@@ -16,7 +16,7 @@ const GetStarted = ({ children, classes, data, tags }) => {
       <Helmet>
         <title>{`Get Started - ${config.siteTitle}`}</title>
       </Helmet>
-      <SEO postNode={postNode} pagePath="contact" customTitle />
+      <SEO postNode={postNode} pagePath="get-started" />
 
       <Container>
         <h1 className={classes.heading}>
