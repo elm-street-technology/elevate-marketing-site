@@ -2,6 +2,8 @@ import React, { Component } from "react";
 import withStyles from "elevate-ui/withStyles";
 import Slider, { Range } from 'rc-slider';
 import '../components/slider.css'
+import ArrowIcon from '../images/icon-teal-roundarrow.png';
+import EqualsIcon from '../images/icon-teal-equals.png';
 
 const Handle = Slider.Handle;
 
@@ -15,18 +17,21 @@ class LeadgenCalc extends Component {
             maxLeads: 200,
             minPrice: 750,
             maxPrice: 10000,
+            startPrice: 1000,
+            currentSpend: 1000,
             avgHomePrice: 200000,
             commissionPrct: 3,
             brokerFeesPrct: 25,
             brokerFeesFixed: 0,
             costPerLead: 20,
             netIncomePerLead: 0,
-            netTotalAtThree: 0,
-            netTotalAtFive: 0,
+            netTotal: 0,
             totalLeadSpend: 0,
+            conversionRate: 3,
             typeOfLead: "blend", // either "blend" or "seller", changes the price per lead
         };
         this.handleSlide = this.handleSlide.bind(this);
+        this.handleConversionSlide = this.handleConversionSlide.bind(this);
         this.handleHomePrice = this.handleHomePrice.bind(this);
         this.handleCommission = this.handleCommission.bind(this);
         this.handleBrokerPrct = this.handleBrokerPrct.bind(this);
@@ -39,10 +44,16 @@ class LeadgenCalc extends Component {
     }
 
     handleSlide(e){
-        this.setState({numberOfLeads:e});
+        this.setState({currentSpend:e});
         var that = this;
         setTimeout(function() { that.recalcResults(); }, 100);
         
+    }
+
+    handleConversionSlide(e){
+        this.setState({conversionRate:e});
+        var that = this;
+        setTimeout(function() { that.recalcResults(); }, 100);
     }
 
     handleHomePrice(e){
@@ -71,6 +82,7 @@ class LeadgenCalc extends Component {
             var incomePerLead = 0;
             var brokerFees = 0;
             var netIncome = 0;
+            var numberOfLeads = 0;
 
             // table for lead price
             var leadPrice = 26;
@@ -88,18 +100,20 @@ class LeadgenCalc extends Component {
             }
             this.setState({costPerLead:leadPrice});
 
+            numberOfLeads = Math.floor((this.state.currentSpend / 2) / leadPrice);
+
             incomePerLead = this.state.avgHomePrice * (this.state.commissionPrct / 100);
             brokerFees = (incomePerLead * (this.state.brokerFeesPrct / 100)) + parseFloat(this.state.brokerFeesFixed);
             netIncome = incomePerLead - brokerFees;
-            this.setState({netIncomePerLead:netIncome});
+            this.setState({netIncomePerLead:netIncome, numberOfLeads:numberOfLeads});
         }
 
         // Calc potential income
-        var totalLeadSpend = this.state.costPerLead * this.state.numberOfLeads;
+        //var totalLeadSpend = this.state.costPerLead * this.state.numberOfLeads;
+        var totalLeadSpend = this.state.currentSpend;
         var potentialTotal = netIncome * this.state.numberOfLeads;
-        var atThreePrct = (potentialTotal * 0.03) - (this.state.costPerLead * this.state.numberOfLeads);
-        var atFivePrct = (potentialTotal * 0.05) - (this.state.costPerLead * this.state.numberOfLeads);
-        this.setState({netTotalAtThree:atThreePrct, netTotalAtFive:atFivePrct, totalLeadSpend: totalLeadSpend});
+        var calculated = (potentialTotal * (this.state.conversionRate/100)) - (this.state.costPerLead * this.state.numberOfLeads);
+        this.setState({netTotal:calculated, totalLeadSpend: totalLeadSpend});
     }
 
     render() {
@@ -107,18 +121,35 @@ class LeadgenCalc extends Component {
         return (
             <div className={classes.root}>
                 <div className={classes.row}>
-                    <div className={classes.col} style={{textAlign:"center",marginBottom:"30px"}}>
-                        <h1 style={{fontSize:"28px"}}>Lead Calculator</h1>
-                        <span style={{color:"#999999"}}>tag line </span>
+                    <div className={classes.col} style={{textAlign:"center",marginBottom:"40px"}}>
+                        <h1 style={{color:"#55c3ba",fontSize:"33px"}}>Calculate the ROI on your lead spend with Elevate</h1>
                     </div>
                 </div>
                 <div className={classes.row}>
                     <div className={classes.col}>
-                        <div style={{width:"300px",height:"20px"}}>
-                            <Slider min={this.state.minLeads} max={this.state.maxLeads} defaultValue={this.state.numberOfLeads} onChange={this.handleSlide} onBlur={this.handleInputChange}/>
+                        <div style={{}}>
+                            <h2>How much are you willing to spend on leads?</h2>
                         </div>
-                        <div style={{marginBottom:"40px"}}>
-                            <h2>Number of Leads: {this.state.numberOfLeads}</h2>
+                        <div style={{width:"90%",marginBottom:"40px"}}>
+                            <Slider min={this.state.minPrice} max={this.state.maxPrice} defaultValue={this.state.startPrice} onChange={this.handleSlide} onBlur={this.handleInputChange} 
+                                style={{margin:"10px"}} />
+                            <div style={{color:"rgb(153, 153, 153)"}}>
+                            ${this.state.totalLeadSpend.toLocaleString(undefined, {minimumFractionDigits: 2, maximumFractionDigits: 2})}
+                            </div>
+                        </div>
+                        
+                        <div style={{}}>
+                            <h2>What is your average conversion rate?</h2>
+                        </div>
+                        <div style={{width:"90%",marginBottom:"20px"}}>
+                            <Slider min={1} max={10} defaultValue={this.state.conversionRate} onChange={this.handleConversionSlide} onBlur={this.handleInputChange}
+                                style={{margin:"10px"}} />
+                            <div style={{color:"rgb(153, 153, 153)"}}>
+                            {this.state.conversionRate}%
+                            </div>
+                        </div>
+                        <div style={{color:"rgb(153, 153, 153)",marginTop:"20px",marginBottom:"20px"}}>
+                            <hr style={{marginRight:"20px"}}/>
                         </div>
                         <div>
                             <h2>Average Home Price in your Market:</h2>
@@ -142,46 +173,51 @@ class LeadgenCalc extends Component {
                         </div>
                     </div>
                     <div className={classes.col}>
-                        <div style={{marginBottom:"20px"}}>
-                            <div style={{fontSize:"30px"}}>
-                                ${this.state.totalLeadSpend.toLocaleString(undefined, {minimumFractionDigits: 2, maximumFractionDigits: 2})}
-                            </div>
-                            <div style={{fontSize:"16px",color:"#999999"}}>
-                                Total Lead Spend
+                        <div style={{backgroundColor:"#8bd0ca29",padding:"10px",borderRadius:"4px",border:"1px #55c3ba solid",position:"relative"}}>
+                            <img src={ArrowIcon} style={{position: "absolute",left: "40px",top: "20px"}} />
+                            <img src={ArrowIcon} style={{position: "absolute",left: "40px",top: "100px"}} />
+                            <img src={EqualsIcon} style={{position: "absolute",left: "50px",top: "210px"}} />
+                            <div style={{marginLeft:"90px"}}>
+                                <div style={{marginBottom:"20px"}}>
+                                    <div style={{fontSize:"30px"}}>
+                                        ${this.state.totalLeadSpend.toLocaleString(undefined, {minimumFractionDigits: 2, maximumFractionDigits: 2})}
+                                    </div>
+                                    <div style={{fontSize:"16px",color:"#999999"}}>
+                                        Total Lead Spend
+                                    </div>
+                                </div>
+                                <div style={{marginBottom:"20px"}}>
+                                    <div style={{fontSize:"30px"}}>{this.state.numberOfLeads}</div>
+                                    <div style={{fontSize:"16px",color:"#999999"}}>
+                                        Number of Leads
+                                    </div>
+                                </div>
+                                <div style={{marginBottom:"20px"}}>
+                                    <div style={{fontSize:"30px"}}>
+                                        ${this.state.netIncomePerLead.toLocaleString(undefined, {minimumFractionDigits: 2, maximumFractionDigits: 2})}
+                                    </div>
+                                    <div style={{fontSize:"16px",color:"#999999"}}>
+                                        Potential income per lead
+                                    </div>
+                                </div>
+                                
+                                <div style={{marginBottom:"20px"}}>
+                                    <div style={{fontSize:"30px",color:"#f15953"}}>
+                                        ${this.state.netTotal.toLocaleString(undefined, {minimumFractionDigits: 2, maximumFractionDigits: 2})}
+                                    </div>
+                                    <div style={{fontSize:"16px",color:"#999999"}}>
+                                        Total Income at a {this.state.conversionRate}% Conversion
+                                    </div>
+                                </div>
                             </div>
                         </div>
-                        <div style={{marginBottom:"20px"}}>
-                            <div style={{fontSize:"30px"}}>
-                                ${this.state.netIncomePerLead.toLocaleString(undefined, {minimumFractionDigits: 2, maximumFractionDigits: 2})}
-                            </div>
-                            <div style={{fontSize:"16px",color:"#999999"}}>
-                                Potential income per lead
-                            </div>
+                        <div>
+                            <button className={classes.buttonLink}>Contact Me Today</button>
                         </div>
-                        <div style={{marginBottom:"20px"}}>
-                            <div style={{fontSize:"30px"}}>${this.state.costPerLead.toFixed(2)}</div>
-                            <div style={{fontSize:"16px",color:"#999999"}}>
-                                Average cost per lead
-                            </div>
-                        </div>
-                        <div style={{marginBottom:"20px"}}>
-                            <div style={{fontSize:"30px"}}>
-                                ${this.state.netTotalAtThree.toLocaleString(undefined, {minimumFractionDigits: 2, maximumFractionDigits: 2})}
-                            </div>
-                            <div style={{fontSize:"16px",color:"#999999"}}>
-                                Total Income at 3% Conversion
-                            </div>
-                        </div>
-                        <div style={{marginBottom:"20px"}}>
-                            <div style={{fontSize:"30px"}}>
-                                ${this.state.netTotalAtFive.toLocaleString(undefined, {minimumFractionDigits: 2, maximumFractionDigits: 2})}
-                            </div>
-                            <div style={{fontSize:"16px",color:"#999999"}}>
-                                Total Income at 5% Conversion
-                            </div>
-                        </div>
-
                     </div>
+                </div>
+                <div style={{textAlign:"center",fontSize:"12px",color:"#aaaaaa",marginTop:"30px"}}>
+                The numbers above are estimates only.  For an accurate cost of leads in your specific market, contact an Elevate Lead Generation Specialist today.
                 </div>
             </div>
         )}
@@ -238,5 +274,22 @@ export default withStyles((theme) => ({
       marginBottom:"10px",
       color:"#666666",
       fontSize:"18px"
-  }
+  },
+  buttonLink: {
+    minWidth: "250px",
+    maxWidth: "250px",
+    alignContent: "center",
+    justifyContent: "center",
+    fontSize: "14px",
+    fontWeight: "700",
+    display: "block",
+    letterSpacing: ".25px",
+    backgroundColor: theme.colors.secondary,
+    color: "#FFF",
+    textDecoration: "none",
+    padding: "16px",
+    borderRadius: "4px",
+    margin: "16px auto",
+    marginBottom: "20px",
+  },
 }))(LeadgenCalc);

@@ -5,6 +5,7 @@ import config from "../utils/siteConfig";
 import Container from "../components/Container";
 import LeadgenCalc from "../components/LeadgenCalc";
 import SEO from "../components/SEO";
+import HeadBG from "../images/lead_calc_bg.jpg";
 
 const LeadCalc = ({ children, classes, data, tags }) => {
   const postNode = {
@@ -18,9 +19,22 @@ const LeadCalc = ({ children, classes, data, tags }) => {
       </Helmet>
       <SEO postNode={postNode} pagePath="leadcalc" customTitle />
 
+      <div style={{backgroundImage:"url("+HeadBG+")", backgroundSize:"cover", backgroundPosition:"centerTop"}}>
+        <Container>
+              <div className={classes.top} style={{paddingBottom:"80px", paddingRight:"25px", paddingLeft:"25px", paddingTop:"75px"}}>
+                  <div className={classes.centerHeading}>
+                      <div className={classes.heading} style={{color:"#ffffff"}}>The power of LEADS</div>
+                      <div className={classes.subtext} style={{color:"#ffffff"}}>Use our easy lead generation calculator to see how many exclusive<br/>
+                      buyer / seller leads you can be capturing in your local market.
+                      </div>
+                  </div>
+              </div>
+        </Container>
+      </div>
+
       <Container>
         <div >
-                  <div style={{ maxWidth: "900px",  marginRight:"auto",marginLeft:"auto",paddingTop:"35px"}}>
+                  <div style={{ maxWidth: "900px",  marginRight:"auto",marginLeft:"auto",paddingTop:"15px"}}>
                 
                 <div style={{ paddingLeft: "10px", paddingRight: "10px"}}>
                     <LeadgenCalc />
@@ -38,10 +52,36 @@ export default withStyles((theme) => ({
     display: "flex",
     flexDirection: "column",
     width: "100%",
-    padding: "0 8px",
-    margin: "70px auto",
+    margin: "auto",
   },
+  top: {
+    display: "flex",
+    flexWrap: "wrap",
+    alignItems: "top",
+  },
+
   heading: {
+    fontSize: "33px",
+    fontWeight: "700",
+    lineHeight: "40px",
+    letterSpacing: ".14px",
+    color: "#5ac0ba",
+    marginBottom: "12px",
+  },
+
+  subtext: {
+    fontSize: "16px",
+    fontWeight: "300",
+    lineHeight: "24px",
+    color: "#777777",
+  },
+
+  centerHeading:{
+    alignItems: "center",
+    width: "100%",
+    textAlign: "center",
+  },
+  heading2: {
     fontSize: "28px",
     fontWeight: "800",
     letterSpacing: ".14px",
@@ -61,4 +101,5 @@ export default withStyles((theme) => ({
     textAlign:"center",
     marginBottom:"30px"
   },
+  
 }))(LeadCalc);
