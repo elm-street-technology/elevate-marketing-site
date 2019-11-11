@@ -5,6 +5,7 @@ import '../components/slider.css'
 import ArrowIcon from '../images/icon-teal-roundarrow.png';
 import EqualsIcon from '../images/icon-teal-equals.png';
 import FormLeadgenCalc from '../components/FormLeadgenCalc';
+import LeadsIcon from "../images/leads_icon.png";
 
 const Handle = Slider.Handle;
 
@@ -193,6 +194,7 @@ class LeadgenCalc extends Component {
                                 <img src={ArrowIcon} style={{position: "absolute",left: "40px",top: "20px"}} />
                                 <img src={ArrowIcon} style={{position: "absolute",left: "40px",top: "100px"}} />
                                 <img src={EqualsIcon} style={{position: "absolute",left: "50px",top: "210px"}} />
+                                <img src={LeadsIcon} style={{position: "absolute",right: "10px",top: "10px", width: "130px"}} />
                                 <div style={{marginLeft:"90px"}}>
                                     <div style={{marginBottom:"20px"}}>
                                         <div style={{fontSize:"30px"}}>
