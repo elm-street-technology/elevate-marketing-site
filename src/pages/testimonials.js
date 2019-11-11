@@ -12,7 +12,7 @@ import Testb from "../images/testb.png";
 import Testc from "../images/testc.png";
 import SEO from "../components/SEO";
 
-const Testimonials2 = ({ children, classes, data, tags }) => {
+const Testimonials = ({ children, classes, data, tags }) => {
   const postNode = {
       title: `Your Single Source Solution - ${config.siteTitle}`,
   };
@@ -426,4 +426,4 @@ export default withStyles((theme) => ({
         paddingBottom: "0px",
     },
   },
-}))(Testimonials2);
+}))(Testimonials);
