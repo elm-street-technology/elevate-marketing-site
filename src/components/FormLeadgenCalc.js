@@ -9,7 +9,7 @@ import withStyles from "elevate-ui/withStyles";
 import Datetime from "elevate-ui/Datetime";
 import moment from "moment";
 
-class FormLeadgen extends Component {
+class FormLeadgenCalc extends Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -197,8 +197,9 @@ class FormLeadgen extends Component {
           }} render={({ values, isSubmitting, handleBlur, handleChange }) => <Form noValidate>
               <div style={{ marginBottom: "30px" }}>
                 <div className={classes.headingLarge}>
-                  LIMITED AVAILABILITY ON EXCLUSIVE BUYER / SELLER LEADS
+                  Let's Do It!
                 </div>
+                {/* 
                 <div className={classes.headingSmall}>
                   Exclusive leads in markets across the U.S.
                 </div>
@@ -206,6 +207,7 @@ class FormLeadgen extends Component {
                   First Come. First Served.<br/>
 Check availability today.
                 </div>
+                */}
               </div>
               <div style={{ maxWidth: "500px", marginLeft: "auto", marginRight: "auto" }}>
                 <div className={classes.topRow}>
@@ -336,8 +338,7 @@ export default withStyles((theme) => ({
     padding: "3px",
   },
   headingLarge: {
-    fontSize: "40px",
-    textTransform: "uppercase",
+    fontSize: "33px",
     fontWeight: "700",
     color: "#55c3ba",
     textAlign: "center",
@@ -351,4 +352,4 @@ export default withStyles((theme) => ({
     padding: "3px",
     lineHeight: "1.4em",
   },
-}))(FormLeadgen);
+}))(FormLeadgenCalc);
