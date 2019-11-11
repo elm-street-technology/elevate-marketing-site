@@ -155,13 +155,22 @@ class EventsLG extends Component {
 
 
                 <div className={classes.titleText} style={{color:"#2d397c"}}>
-                        Lead Generation Boot Camp
+                “Secrets to Successful Lead Generation”<br />
+                Educational Boot Camp
                 </div>
                 <div className={classes.BodyText}>
-                    The NEW high-energy, 2-hr session teaches brokers and agents alike the secrets<br />
-                    of online lead generation used by top performers in the industry. Attendees will learn<br />
-                    the three main types of lead generation, along with the pros, cons and best practices<br />
-                    to capture, nurture &amp; convert more online business in less time.
+                <div className={classes.titleSubText}>
+                Want to capture 20 - 30 EXCLUSIVE<br />
+                buyer / seller leads each month?
+                </div>
+                Here’s your chance to learn how!<br />
+                <br />
+                Come learn the tips, tricks &amp; shortcuts to online lead generation in this high-energy,<br />
+                90-minute educational session. Brokers and agents alike will learn the three main types<br />
+                of lead generation, along with the pros, cons &amp; best practicesto capture, nurture<br />
+                &amp; convert more online business in less time.  Wonder how the top performers<br />
+                in the industry maximize their online lead generation?<br />
+                This is your chance to learn their secrets.
                 </div>
                 <div className={classes.titleSubText} style={{color:"#2d397c", paddingBottom:"35px"}}>
                         Select an event you are interested in:
@@ -389,7 +398,7 @@ export default withStyles((theme) => ({
     fontWeight: "700",
     textAlign: "center",
     color: "#55c3ba",
-    paddingTop: "30px",
+    paddingTop: "10px",
   },
 
   BodyText: {
