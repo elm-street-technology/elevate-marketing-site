@@ -153,31 +153,6 @@ exports.createPages = ({ graphql, boundActionCreators }) => {
     });
   });
 
-  const loadTestimonials = new Promise((resolve, reject) => {
-    graphql(`
-      {
-        allContentfulTestimonial {
-          edges {
-            node {
-              slug
-            }
-          }
-        }
-      }
-    `).then((result) => {
-      result.data.allContentfulTestimonial.edges.map(({ node }) => {
-        createPage({
-          path: `${node.slug}/`,
-          component: path.resolve(`./src/templates/testimonial.js`),
-          context: {
-            slug: node.slug,
-          },
-        });
-      });
-      resolve();
-    });
-  });
-
   return Promise.all([
     loadBootcamps,
     loadBundles,
@@ -185,6 +160,5 @@ exports.createPages = ({ graphql, boundActionCreators }) => {
     loadPosts,
     loadProducts,
     loadTags,
-    loadTestimonials,
   ]);
 };

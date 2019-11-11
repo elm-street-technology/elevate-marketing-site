@@ -118,13 +118,12 @@ class Events extends Component {
                       <img src={LGBCLogo} className={classes.subLogoStyle} />
                     </Link><br />
                     <div className={classes.subtitleText}>Capture, nurture &amp; convert more leads</div>
-                    <div className={classes.subtext} style={{ minHeight:"130px"}}>The NEW high-energy, 2-hr session teaches
-                    brokers and agents alike the secrets of online lead generation
-                    used by top performers in the industry.  Attendees will learn
-                    the three main types of lead generation, along with
-                    the pros, cons and best practices to capture,
-                    nurture &amp; convert more
-                    online business in less time.</div>
+                    <div className={classes.subtext} style={{ minHeight:"130px"}}>Come learn the tips, tricks &amp; shortcuts to online
+                    lead generation in this high-energy, 90-minute educational session. Brokers and agents
+                    alike will learn the three main types of lead generation, along with the pros,
+                    cons &amp; best practices to capture, nurture &amp; convert more online business in less time.
+                    Wonder how the top performers in the industry maximize their online lead generation?
+                    This is your chance to learn their secrets.</div>
                     <div >
                       <a href="/events_lg" className={classes.buttonIcon2}>
                       <Calendar size={20} style={{position: "relative",top:"4px"}}/> Upcoming Events</a>
