@@ -151,7 +151,7 @@ class LeadgenCalc extends Component {
                                 <Slider min={this.state.minPrice} max={this.state.maxPrice} defaultValue={this.state.startPrice} onChange={this.handleSlide} onBlur={this.handleInputChange} 
                                     style={{margin:"10px"}} />
                                 <div style={{color:"rgb(153, 153, 153)"}}>
-                                ${this.state.totalLeadSpend.toLocaleString(undefined, {minimumFractionDigits: 2, maximumFractionDigits: 2})}
+                                ${this.state.totalLeadSpend.toLocaleString(undefined, {minimumFractionDigits: 2, maximumFractionDigits: 2})} / month
                                 </div>
                             </div>
                             
@@ -191,17 +191,17 @@ class LeadgenCalc extends Component {
                         </div>
                         <div className={classes.col}>
                             <div style={{backgroundColor:"#8bd0ca29",padding:"10px",borderRadius:"4px",border:"1px #55c3ba solid",position:"relative"}}>
-                                <img src={ArrowIcon} style={{position: "absolute",left: "40px",top: "20px"}} />
-                                <img src={ArrowIcon} style={{position: "absolute",left: "40px",top: "100px"}} />
-                                <img src={EqualsIcon} style={{position: "absolute",left: "50px",top: "210px"}} />
+                                <img src={ArrowIcon} style={{position: "absolute",left: "20px",top: "20px"}} />
+                                <img src={ArrowIcon} style={{position: "absolute",left: "20px",top: "100px"}} />
+                                <img src={EqualsIcon} style={{position: "absolute",left: "30px",top: "210px"}} />
                                 <img src={LeadsIcon} style={{position: "absolute",right: "10px",top: "10px", width: "130px"}} />
-                                <div style={{marginLeft:"90px"}}>
+                                <div style={{marginLeft:"70px"}}>
                                     <div style={{marginBottom:"20px"}}>
                                         <div style={{fontSize:"30px"}}>
                                             ${this.state.totalLeadSpend.toLocaleString(undefined, {minimumFractionDigits: 2, maximumFractionDigits: 2})}
                                         </div>
                                         <div style={{fontSize:"16px",color:"#999999"}}>
-                                            Total Lead Spend
+                                            Total Monthly Lead Spend
                                         </div>
                                     </div>
                                     <div style={{marginBottom:"20px"}}>
