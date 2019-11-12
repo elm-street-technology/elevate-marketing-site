@@ -48,6 +48,7 @@ class EventsSM extends Component {
           searchVal = val.replace('q=','');
         }
       });    
+      searchVal = searchVal.replace('%2C',',');
       
       //var searchVal = this.props.location.search
       const { activeEvents } = this.state;
