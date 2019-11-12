@@ -41,7 +41,14 @@ class EventsLG extends Component {
     console.log("Search string");
     console.log(this.props.location.search);
     if(this.props.location.search.length > 4){
-      var searchVal = this.props.location.search.replace('?q=','');
+      var searchVal = '';
+      var urlpieces = this.props.location.search.replace("?",'').split('&');
+      urlpieces.forEach(function(val){
+        if(val.substring(0,2) == 'q='){
+          searchVal = val.replace('q=','');
+        }
+      });
+      
       const { activeEvents } = this.state;
 
       var filteredEvents = {};
