@@ -48,7 +48,7 @@ class EventsLG extends Component {
           searchVal = val.replace('q=','');
         }
       });
-      searchVal = searchVal.replace('%2C',',');
+      searchVal = searchVal.replace(/%2C/g,',');
 
       const { activeEvents } = this.state;
 
