@@ -139,24 +139,26 @@ class LeadgenCalc extends Component {
                 <div className={classes.root}>
                     <div className={classes.row}>
                         <div className={classes.col} style={{textAlign:"center",marginBottom:"40px"}}>
-                            <h1 style={{color:"#55c3ba",fontSize:"33px"}}>Calculate the ROI on your lead spend with Elevate</h1>
+                            <h1 style={{color:"#55c3ba",fontSize:"33px",marginBottom:"20px"}}>Lead Generation ROI Calculator</h1>
+                            Insert a few details, along with what you have the invest in monthly lead generation, tocalculate potential income.  Wow!
                         </div>
                     </div>
                     <div className={classes.row}>
                         <div className={classes.col}>
                             <div style={{}}>
-                                <h2>How much are you willing to spend on leads?</h2>
+                                <h2>How much can you spend on monthly leads?</h2>
+                                <div style={{fontSize:"12px",color:"#aaaaaa"}}>(Note:  Minimum of $750/m)</div>
                             </div>
                             <div style={{width:"90%",marginBottom:"40px"}}>
                                 <Slider min={this.state.minPrice} max={this.state.maxPrice} defaultValue={this.state.startPrice} onChange={this.handleSlide} onBlur={this.handleInputChange} 
                                     style={{margin:"10px"}} />
                                 <div style={{color:"rgb(153, 153, 153)"}}>
-                                ${this.state.totalLeadSpend.toLocaleString(undefined, {minimumFractionDigits: 2, maximumFractionDigits: 2})} / month
+                                ${this.state.totalLeadSpend.toLocaleString(undefined, {minimumFractionDigits: 0, maximumFractionDigits: 0})}/m
                                 </div>
                             </div>
                             
                             <div style={{}}>
-                                <h2>What is your average conversion rate?</h2>
+                                <h2>Your average lead conversion rate:</h2>
                             </div>
                             <div style={{width:"90%",marginBottom:"20px"}}>
                                 <Slider min={1} max={10} defaultValue={this.state.conversionRate} onChange={this.handleConversionSlide} onBlur={this.handleInputChange}
@@ -169,19 +171,19 @@ class LeadgenCalc extends Component {
                                 <hr style={{marginRight:"20px"}}/>
                             </div>
                             <div>
-                                <h2>Average Home Price in your Market:</h2>
+                                <h2>Average home price in your market:</h2>
                                 <div className={classes.inputLabel}>
                                 $<input style={{width:"30%"}} className={classes.inputControl} value={this.state.avgHomePrice} onChange={this.handleHomePrice} onBlur={this.handleInputChange}/>
                                 </div>
                             </div>
                             <div>
-                                <h2>Your commission:</h2>
+                                <h2>Your average commission:</h2>
                                 <div className={classes.inputLabel}>
                                 <input style={{width:"15%"}} className={classes.inputControl} value={this.state.commissionPrct} onChange={this.handleCommission} onBlur={this.handleInputChange} />%
                                 </div>
                             </div>
                             <div>
-                                <h2>Broker/Agency Fees:</h2>
+                                <h2>Broker/agency fees:</h2>
                                 <div className={classes.inputLabel}>
                                 <input style={{width:"15%"}} className={classes.inputControl} value={this.state.brokerFeesPrct} onChange={this.handleBrokerPrct} onBlur={this.handleInputChange} />%
                                 +
@@ -198,41 +200,42 @@ class LeadgenCalc extends Component {
                                 <div style={{marginLeft:"70px"}}>
                                     <div style={{marginBottom:"20px"}}>
                                         <div style={{fontSize:"30px"}}>
-                                            ${this.state.totalLeadSpend.toLocaleString(undefined, {minimumFractionDigits: 2, maximumFractionDigits: 2})}
+                                            ${this.state.totalLeadSpend.toLocaleString(undefined, {minimumFractionDigits: 0, maximumFractionDigits: 0})}/m
                                         </div>
                                         <div style={{fontSize:"16px",color:"#999999"}}>
-                                            Total Monthly Lead Spend
+                                            Your monthly lead spend
                                         </div>
                                     </div>
                                     <div style={{marginBottom:"20px"}}>
                                         <div style={{fontSize:"30px"}}>{this.state.numberOfLeads}</div>
                                         <div style={{fontSize:"16px",color:"#999999"}}>
-                                            Number of Leads
+                                        Monthly average number of leads
                                         </div>
                                     </div>
                                     <div style={{marginBottom:"20px"}}>
                                         <div style={{fontSize:"30px"}}>
-                                            ${this.state.netIncomePerLead.toLocaleString(undefined, {minimumFractionDigits: 2, maximumFractionDigits: 2})}
+                                            ${this.state.netIncomePerLead.toLocaleString(undefined, {minimumFractionDigits: 0, maximumFractionDigits: 0})}
                                         </div>
                                         <div style={{fontSize:"16px",color:"#999999"}}>
-                                            Potential income per lead
+                                            Income potential per lead
                                         </div>
                                     </div>
                                     
                                     <div style={{marginBottom:"20px"}}>
                                         <div style={{fontSize:"30px",color:"#f15953"}}>
-                                            ${this.state.netTotal.toLocaleString(undefined, {minimumFractionDigits: 2, maximumFractionDigits: 2})}
+                                            ${this.state.netTotal.toLocaleString(undefined, {minimumFractionDigits: 0, maximumFractionDigits: 0})}
                                         </div>
                                         <div style={{fontSize:"16px",color:"#999999"}}>
                                             Net Income at a {this.state.conversionRate}% Conversion
                                         </div>
                                     </div>
                                 </div>
+                                <div style={{marginTop:"50px",textAlign:"center",lineHeight: "initial"}}>
+                                    Ready to start making MORE MONEY?
+                                        <button className={classes.buttonLink} onClick={this.handleShowForm}>Yes! I want Elevate leads</button>
+                                    </div>
                             </div>
-                            <div style={{marginTop:"30px",textAlign:"center",lineHeight: "initial"}}>
-                                Ready to claim your leads today<br/> &amp; start earning MORE?
-                                <button className={classes.buttonLink} onClick={this.handleShowForm}>Yes, let’s do it</button>
-                            </div>
+                            
                         </div>
                     </div>
                     <div style={{textAlign:"center",fontSize:"12px",color:"#aaaaaa",marginTop:"30px"}}>

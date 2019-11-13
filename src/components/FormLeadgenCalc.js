@@ -197,16 +197,16 @@ class FormLeadgenCalc extends Component {
           }} render={({ values, isSubmitting, handleBlur, handleChange }) => <Form noValidate>
               <div style={{ marginBottom: "30px" }}>
                 <div className={classes.headingLarge}>
-                  Let's Do It!
+                Claim Your Elevate Buyer / Seller Leads NOW
+                </div>
+                <div className={classes.headingText} style={{ marginTop: "10px" }}>
+                  Tell us your top 3 markets and a member of the Elevate Lead Generation Team will be in touch asap, or call 844-792-0260 to speak to a Success Coach immediately.
                 </div>
                 {/* 
                 <div className={classes.headingSmall}>
                   Exclusive leads in markets across the U.S.
                 </div>
-                <div className={classes.headingText} style={{ marginTop: "10px" }}>
-                  First Come. First Served.<br/>
-Check availability today.
-                </div>
+                
                 */}
               </div>
               <div style={{ maxWidth: "500px", marginLeft: "auto", marginRight: "auto" }}>
@@ -257,10 +257,10 @@ Check availability today.
                     </div>
                   </div>}
                 <button type="submit" className={classes.signUpBtn} disabled={isSubmitting}>
-                  Check Availability
+                  Contact Me ASAP with Availability
                 </button>
               </div>
-            <div style={{ fontSize: "11px" }}>
+            <div style={{ fontSize: "11px" ,marginBottom:"20px"}}>
               By submitting this form, you are requesting to be contacted by a member of the Elevate Sales Team.<br />
               Existing subscribers seeking support, please visit the <a href="https://elmstreettechnology.zendesk.com/hc/en-us">Elevate Help Center</a>.
               </div>
