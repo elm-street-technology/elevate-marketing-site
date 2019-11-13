@@ -3,20 +3,20 @@ import Helmet from "react-helmet";
 import withStyles from "elevate-ui/withStyles";
 import config from "../utils/siteConfig";
 import Container from "../components/Container";
-import SignUpForm from "../components/SignUpForm";
+import SignUpFormSuccess from "../components/SignUpFormSuccess";
 import SEO from "../components/SEO";
 
-const SuccessGuide = ({ children, classes, data, tags }) => {
+const SuccessStory = ({ children, classes, data, tags }) => {
   const postNode = {
-    title: `Success Guide - ${config.siteTitle}`,
+    title: `Success Story - ${config.siteTitle}`,
   };
 
   return (
     <div className={classes.root}>
       <Helmet>
-        <title>{`Success Guide - ${config.siteTitle}`}</title>
+        <title>{`Success Story - ${config.siteTitle}`}</title>
       </Helmet>
-      <SEO postNode={postNode} pagePath="success-guide" />
+      <SEO postNode={postNode} pagePath="success_story" />
 
 
       <Container>
@@ -35,7 +35,7 @@ const SuccessGuide = ({ children, classes, data, tags }) => {
         <h1 className={classes.heading} style={{paddingTop:"40px"}}>
         Are you ready to automate and streamline YOUR online marketing?
         </h1>
-        <SignUpForm />
+        <SignUpFormSuccess />
         {/* <div className={classes.closingContainer}>
           For Media Inquiries, {""} Please {""}
           <a
@@ -108,4 +108,4 @@ export default withStyles((theme) => ({
   //     textDecoration: "none !important",
   //   },
   // },
-}))(SuccessGuide);
+}))(SuccessStory);
