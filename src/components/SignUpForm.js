@@ -164,11 +164,11 @@ class SignUpForm extends Component {
             <Form noValidate>
               <Typography
                 type="heading6"
-                style={{ textAlign: "center", marginBottom: "32px", color: "#55c3ba" }}
+                style={{ textAlign: "center", marginBottom: "32px", color: "#888f96" }}
               >
                 Schedule your personal walk-through or call <a href="tel:18447920260" className={classes.link}>
                 844.792.0260
-                </a> to speak to a sales representative today.
+                </a> to speak to an Elevate Success Coach today.
                 
               </Typography>
               <div className={classes.topRow}>
