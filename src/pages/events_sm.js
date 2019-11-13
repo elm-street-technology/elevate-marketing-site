@@ -41,7 +41,16 @@ class EventsSM extends Component {
     console.log("Search string");
     console.log(this.props.location.search);
     if(this.props.location.search.length > 4){
-      var searchVal = this.props.location.search.replace('?q=','');
+      var searchVal = '';
+      var urlpieces = this.props.location.search.replace("?",'').split('&');
+      urlpieces.forEach(function(val){
+        if(val.substring(0,2) == 'q='){
+          searchVal = val.replace('q=','');
+        }
+      });    
+      searchVal = searchVal.replace(/%2C/g,',');
+      
+      //var searchVal = this.props.location.search
       const { activeEvents } = this.state;
 
       var filteredEvents = {};
@@ -245,22 +254,21 @@ class EventsSM extends Component {
           ) : !(filteredEvents && filteredEvents.length) ? (
             <EventCardZero className={classes.grid}>
               <div>
-                  Don't see an upcoming event in your area? No worries, you can still get:
-                  
+                Oops!  Received this message in error?  Click below to view our full event list.
               </div>
               <div>
-                  <ul>
-                    <li>Schedule Audit with a Coach</li>
-                    <li>Receive Notification of Next Event in Your Area</li>
-                    <li><Link to="/events_webinars">Register for an Upcoming Webinar</Link></li>
-                  </ul>
+                <button className={classes.resetButton} onClick={this.onInputClear}>
+                                Show ALL Upcoming Events
+                              </button>
               </div>
-              <button
-                className={classes.resetButton}
-                onClick={this.onInputClear}
-              >
-                Show all events
-              </button>
+              <div style={{marginTop:'20px'}}>
+                No local events in your area at the moment? Click below to connect with one of our Success Coaches instead.
+              </div>
+              <div>
+              <a href="/get-started" className={classes.resetButton}>Speak to an Elevate Coach</a>
+                  
+              </div>
+              
             </EventCardZero>
           ) : (
             <EventCardGrid className={classes.grid}>
@@ -358,10 +366,14 @@ export default withStyles((theme) => ({
   resetButton: {
     fontFamily: "inherit",
     fontWeight: "600",
-    background: "rgba(100, 97, 110, .1)",
+    backgroundColor: "#55c3ba",
+    textDecoration: "none",
     borderRadius: "6px",
     padding: "12px",
+    paddingRight:"24px",
+    paddingLeft:"24px",
     marginTop: "24px",
+    color:"#FFFFFF",
   },
   grid: {
     marginTop: "32px",
