@@ -140,7 +140,7 @@ class LeadgenCalc extends Component {
                     <div className={classes.row}>
                         <div className={classes.col} style={{textAlign:"center",marginBottom:"40px"}}>
                             <h1 style={{color:"#55c3ba",fontSize:"33px",marginBottom:"20px"}}>Lead Generation ROI Calculator</h1>
-                            Insert a few details, along with what you have the invest in monthly lead generation, tocalculate potential income.  Wow!
+                            Insert a few details, along with what you have to invest in monthly lead generation, to calculate potential income.  Wow!
                         </div>
                     </div>
                     <div className={classes.row}>
