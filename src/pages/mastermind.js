@@ -28,7 +28,7 @@ const Mastermind = ({ children, classes, data, tags }) => {
 <MastermindBgSectionExternal bgImage={Eboss} secTitle="The Power of PRODUCTIVITY">
 All-in-one solution combining a sophisticated
 IDX website, exclusive pay-per-click lead generation,
-advanced CRM, robust blog, email, and social.
+advanced CRM, robust blog, email, and social marketing campaigns.
 </MastermindBgSectionExternal>
 
 

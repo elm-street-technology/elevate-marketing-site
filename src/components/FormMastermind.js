@@ -173,9 +173,8 @@ class FormMastermind extends Component {
           render={({ values, isSubmitting,handleBlur, handleChange }) => (
             <Form noValidate>
               <div style={{marginBottom:"30px"}}>
-                <div className={classes.headingLarge}>Explore the Power<br />
-                of PRODUCTIVITY Today!</div>
-                <div className={classes.headingText} style={{ marginTop: "20px" }}>Speak to an Elevate Success Coach NOW:  833-978-1196 or schedule below.</div>
+                <div className={classes.headingLarge}>Request a Tour of Elevate Today</div>
+                <div className={classes.headingText} style={{ marginTop: "20px" }}>Or, call 844.792.0260 to speak to an Elevate Success Coach NOW</div>
                 </div>
               <div style={{ maxWidth: "500px",marginLeft:"auto",marginRight:"auto"}}>
               <div className={classes.topRow}>
