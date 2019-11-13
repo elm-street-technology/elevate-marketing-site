@@ -14,12 +14,17 @@ const SuccessGuide = ({ children, classes, data, tags }) => {
   return (
     <div className={classes.root}>
       <Helmet>
-        <title>{`Get Started - ${config.siteTitle}`}</title>
+        <title>{`Success Guide - ${config.siteTitle}`}</title>
       </Helmet>
-      <SEO postNode={postNode} pagePath="get-started" />
+      <SEO postNode={postNode} pagePath="success-guide" />
 
 
       <Container>
+      <h1 className={classes.heading}>
+      A Casual Conversation with Tina Minshall
+        </h1>
+        <h2 className={classes.subHeading}>
+          Bondilyn Jolly, VP of Marketing at Elevate chats with new agent Tina Minshall about the balance between being a mom and a successful agent, being yourself with your clients, and how Elevate helps her do both by automating and streamlining so much of her day-to-day.</h2>
       <div style={{textAlign: "center", maxWidth:"700px",marginLeft:"auto",marginRight:"auto"}}>
         <div style={{ textAlign: "center"}} className={classes.videoEmbed}>
                         <iframe className={classes.videoContainer} src="https://www.youtube.com/embed/py5fhtASVPY?autoplay=1&rel=0"
@@ -28,11 +33,8 @@ const SuccessGuide = ({ children, classes, data, tags }) => {
         </div>
  
         <h1 className={classes.heading} style={{paddingTop:"40px"}}>
-          The power of ELEVATE
+        Are you ready to automate and streamline YOUR online marketing?
         </h1>
-        <h2 className={classes.subHeading}>
-          Explore the 1st true productivity platform in real estate to capture, nurture &amp; convert leads.
-        </h2>
         <SignUpForm />
         {/* <div className={classes.closingContainer}>
           For Media Inquiries, {""} Please {""}
@@ -54,13 +56,13 @@ export default withStyles((theme) => ({
     flexDirection: "column",
     width: "100%",
     padding: "0 8px",
-    margin: "40px auto",
+    margin: "60px auto",
   },
   heading: {
     fontSize: "28px",
-    fontWeight: "800",
+    fontWeight: "700",
     letterSpacing: ".14px",
-    color: "#44ada4",
+    color: "#55c3ba",
     textAlign: "center",
     marginBottom: "12px",
   },
@@ -68,7 +70,9 @@ export default withStyles((theme) => ({
   subHeading: {
     fontSize: "18px",
     lineHeight: "28px",
+    fontWeight: "600",
     letterSpacing: ".08px",
+    color: "#888f96",
     textAlign: "center",
     margin: "0 auto 36px",
   },
