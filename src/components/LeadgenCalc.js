@@ -137,6 +137,7 @@ class LeadgenCalc extends Component {
 
             var closeLeadText = 'less than 1 lead';
             var closedLeads = Math.floor((this.state.conversionRate/100) * this.state.numberOfLeads);
+            console.log("Closed: "+closedLeads);
             if(closedLeads >= 1){
                 var nextStep = closedLeads + 1;
                 closeLeadText = closedLeads+"-"+nextStep+" leads";
@@ -234,7 +235,7 @@ class LeadgenCalc extends Component {
                                         </div>
                                         <div style={{fontSize:"16px",color:"#999999"}}>
                                             Avg. monthly income at {this.state.conversionRate}% Conversion
-                                            <div style={{fontSize:"12px",color:"#aaaaaa",marginTop:"10px"}}>Closing {closeLeadText} per month</div>
+                                            <div style={{fontSize:"12px",color:"#aaaaaa",marginTop:"10px"}}>Closing {closeLeadText} per month, after fees and lead spend</div>
                                         </div>
                                     </div>
                                 </div>
