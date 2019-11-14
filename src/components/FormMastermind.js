@@ -60,7 +60,7 @@ class FormMastermind extends Component {
             </Typography>
             <Typography type="heading5" gutterTop>
         We’ll reach out to you asap via email or telephone.<br/>
-              You can also speak to a member of our sales team immediately by calling  <a href="tel:18339781196" className={classes.link}>833.978.1196</a>.
+              You can also speak to a member of our sales team immediately by calling  <a href="tel:18447920260" className={classes.link}>844.792.0260</a>.
             </Typography>
           </div>
         </div>
@@ -259,42 +259,6 @@ class FormMastermind extends Component {
                 />
               )}
 
-              <Field
-                id="interests"
-                name="interests"
-                label="I am interested in:  (select all that apply)"
-                component={CheckboxGroup}
-                items={[
-                  {
-                    label: "Elevate BOSS for my brokerage",
-                    value: "Elevate BOSS for my brokerage",
-                  },
-                  {
-                    label: "Social Pro to conquer my online marketing",
-                    value: "Social Pro to conquer my online marketing",
-                  },
-                  {
-                    label: "Lead Generation and scrubbing services",
-                    value: "Lead Generation and scrubbing services",
-                  },
-                  {
-                    label: "Other (please specify)",
-                    value: "Other",
-                  },
-                ]}
-                className={classes.field}
-              />
-              {console.log(values.interests)}
-              {values.interests.includes('Other') && (
-                <Field
-                  id="interestsOther"
-                  name="interestsOther"
-                  label="Other"
-                  component={Input}
-                  className={classes.field}
-                  autoFocus
-                />
-              )}
               <span className={classes.selectlabel} >
                 Select a date / time to connect with an Elevate Success Coach:
                 </span>
