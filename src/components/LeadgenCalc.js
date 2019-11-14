@@ -248,7 +248,8 @@ class LeadgenCalc extends Component {
                         </div>
                     </div>
                     <div style={{textAlign:"center",fontSize:"12px",color:"#aaaaaa",marginTop:"30px"}}>
-                    The numbers above are estimates only.  For an accurate cost of leads in your specific market, contact an Elevate Lead Generation Specialist today.
+                    The numbers above are estimates only.  For an accurate cost of leads in your specific market, contact an Elevate Lead Generation Specialist today.<br/>
+                    <br/>Based on a single agent/license fee. For teams and broker license fees, please contact us.
                     </div>
                 </div>
             )
