@@ -285,9 +285,9 @@ export default withStyles((theme) => ({
   },
   leadIcon:{
     zIndex: "-100",
-    opacity: "20%",
+    opacity: "0.2",
     [theme.breakpoints[900]]: {
-        opacity: "100%"
+        opacity: "1"
     }
   },
   sliderLabel:{
