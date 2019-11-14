@@ -11,7 +11,7 @@ import withStyles from "elevate-ui/withStyles";
 import Datetime from "elevate-ui/Datetime";
 import moment from "moment";
 
-class SignUpForm extends Component {
+class SignUpFormSuccess extends Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -88,8 +88,8 @@ class SignUpForm extends Component {
             role: "",
             roleOther: "",
             interests: [],
-            form: "contact_formNew",
-            list: 46483,
+            form: "success_story",
+            list: 89309,
           }}
           validationSchema={() =>
             Yup.object().shape({
@@ -397,4 +397,4 @@ export default withStyles((theme) => ({
     fontWeight: "700",
     marginBottom: "4px",
   },
-}))(SignUpForm);
+}))(SignUpFormSuccess);

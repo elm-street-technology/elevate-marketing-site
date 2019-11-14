@@ -164,14 +164,20 @@ class EventsSM extends Component {
                 </div>
                 </div>
                 <div className={classes.titleText} style={{color:"#2d397c"}}>
-                      Social Media Boot Camp
+                      "This is the #1 Must Attend<br />
+                      Social Media Training in th U.S."<br />
+                      Educational Boot Camp
+                </div>
+                <div className={classes.titleSubText} style={{color:"#2d397c", paddingBottom:"35px"}}>
+                Struggling with social media? Not after attending this!
                 </div>
                 <div className={classes.BodyText}>
-                      The #1 boot camp for real estate agents continues to take the US by storm.<br />
-                      This FREE 2-hr, interactive educational seminar is designed to inspire and empower agents<br />
-                      with tips, tricks &amp; strategies for conquering their website, blog and social media.
+                Wonder how top real estate agents find time to be ‘everywhere’ online and STILL close more<br />
+                business? Interested in turning your social media from a toy into a powerful business tool?<br />
+                This FREE 90-minute, high-energy educational seminar is designed to inspire and empower<br />
+                agents with tips, tricks &amp; strategies for conquering their website, blog and social media.
                 </div>
-          <div className={classes.titleSubText} style={{color:"#2d397c", paddingBottom:"35px"}}>
+          <div className={classes.titleSubText} style={{color:"#2d397c", paddingBottom:"35px", paddingTop:"20px"}}>
             Select an event you are interested in:
         </div>
         </Container>
@@ -402,7 +408,7 @@ export default withStyles((theme) => ({
     fontWeight: "700",
     textAlign: "center",
     color: "#55c3ba",
-    paddingTop: "30px",
+    paddingTop: "10px",
   },
 
   BodyText: {

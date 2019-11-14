@@ -60,7 +60,7 @@ class FormMastermind extends Component {
             </Typography>
             <Typography type="heading5" gutterTop>
         We’ll reach out to you asap via email or telephone.<br/>
-              You can also speak to a member of our sales team immediately by calling  <a href="tel:18339781196" className={classes.link}>833.978.1196</a>.
+              You can also speak to a member of our sales team immediately by calling  <a href="tel:18447920260" className={classes.link}>844.792.0260</a>.
             </Typography>
           </div>
         </div>
@@ -83,8 +83,8 @@ class FormMastermind extends Component {
             email: "",
             phone: "",
             mls_number: "",
-            form: "bright_form",
-            list: 85576,
+            form: "mastermind_form",
+            list: 89310,
             meetingdate: '',
             meetingtime: '',
             role: "",
@@ -173,9 +173,8 @@ class FormMastermind extends Component {
           render={({ values, isSubmitting,handleBlur, handleChange }) => (
             <Form noValidate>
               <div style={{marginBottom:"30px"}}>
-                <div className={classes.headingLarge}>Explore the Power<br />
-                of PRODUCTIVITY Today!</div>
-                <div className={classes.headingText} style={{ marginTop: "20px" }}>Speak to an Elevate Success Coach NOW:  833-978-1196 or schedule below.</div>
+                <div className={classes.headingLarge}>Request a Tour of Elevate Today</div>
+                <div className={classes.headingText} style={{ marginTop: "20px" }}>Or, call 844.792.0260 to speak to an Elevate Success Coach NOW</div>
                 </div>
               <div style={{ maxWidth: "500px",marginLeft:"auto",marginRight:"auto"}}>
               <div className={classes.topRow}>
@@ -260,42 +259,6 @@ class FormMastermind extends Component {
                 />
               )}
 
-              <Field
-                id="interests"
-                name="interests"
-                label="I am interested in:  (select all that apply)"
-                component={CheckboxGroup}
-                items={[
-                  {
-                    label: "Elevate BOSS for my brokerage",
-                    value: "Elevate BOSS for my brokerage",
-                  },
-                  {
-                    label: "Social Pro to conquer my online marketing",
-                    value: "Social Pro to conquer my online marketing",
-                  },
-                  {
-                    label: "Lead Generation and scrubbing services",
-                    value: "Lead Generation and scrubbing services",
-                  },
-                  {
-                    label: "Other (please specify)",
-                    value: "Other",
-                  },
-                ]}
-                className={classes.field}
-              />
-              {console.log(values.interests)}
-              {values.interests.includes('Other') && (
-                <Field
-                  id="interestsOther"
-                  name="interestsOther"
-                  label="Other"
-                  component={Input}
-                  className={classes.field}
-                  autoFocus
-                />
-              )}
               <span className={classes.selectlabel} >
                 Select a date / time to connect with an Elevate Success Coach:
                 </span>
