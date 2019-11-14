@@ -135,6 +135,13 @@ class LeadgenCalc extends Component {
         }
         else{
 
+            var closeLeadText = 'less than 1 lead';
+            var closedLeads = Math.floor((this.state.conversionRate/100) * this.state.numberOfLeads);
+            if(closedLeads >= 1){
+                var nextStep = closedLeads + 1;
+                closeLeadText = closedLeads+"-"+nextStep+" leads";
+            }
+
             return (
                 <div className={classes.root}>
                     <div className={classes.row}>
@@ -150,7 +157,7 @@ class LeadgenCalc extends Component {
                                 <div style={{fontSize:"12px",color:"#aaaaaa"}}>(Note:  Minimum of $750/m)</div>
                             </div>
                             <div style={{width:"90%",marginBottom:"40px"}}>
-                                <Slider min={this.state.minPrice} max={this.state.maxPrice} defaultValue={this.state.startPrice} onChange={this.handleSlide} onBlur={this.handleInputChange} 
+                                <Slider step={250} marks={{1000:'',2000:'',3000:'',4000:'',5000:'',6000:'',7000:'',8000:'',9000:''}} min={this.state.minPrice} max={this.state.maxPrice} defaultValue={this.state.startPrice} onChange={this.handleSlide} onBlur={this.handleInputChange} 
                                     style={{margin:"10px"}} />
                                 <div style={{color:"rgb(153, 153, 153)"}}>
                                 ${this.state.totalLeadSpend.toLocaleString(undefined, {minimumFractionDigits: 0, maximumFractionDigits: 0})}/m
@@ -161,7 +168,7 @@ class LeadgenCalc extends Component {
                                 <h2>Your average lead conversion rate:</h2>
                             </div>
                             <div style={{width:"90%",marginBottom:"20px"}}>
-                                <Slider min={1} max={10} defaultValue={this.state.conversionRate} onChange={this.handleConversionSlide} onBlur={this.handleInputChange}
+                                <Slider dots  min={1} max={10} defaultValue={this.state.conversionRate} onChange={this.handleConversionSlide} onBlur={this.handleInputChange}
                                     style={{margin:"10px"}} />
                                 <div style={{color:"rgb(153, 153, 153)"}}>
                                 {this.state.conversionRate}%
@@ -226,8 +233,8 @@ class LeadgenCalc extends Component {
                                             ${this.state.netTotal.toLocaleString(undefined, {minimumFractionDigits: 0, maximumFractionDigits: 0})}
                                         </div>
                                         <div style={{fontSize:"16px",color:"#999999"}}>
-                                            Average monthly income at a {this.state.conversionRate}% Conversion<br/>
-                                            <div style={{fontSize:"12px",color:"#aaaaaa"}}>Closing less than 1 lead per month</div>
+                                            Avg. monthly income at {this.state.conversionRate}% Conversion
+                                            <div style={{fontSize:"12px",color:"#aaaaaa",marginTop:"10px"}}>Closing {closeLeadText} per month</div>
                                         </div>
                                     </div>
                                 </div>
