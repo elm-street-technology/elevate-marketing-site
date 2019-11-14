@@ -158,8 +158,8 @@ class LeadgenCalc extends Component {
                             </div>
                             <div style={{width:"90%",marginBottom:"40px"}}>
                                 <Slider step={250} marks={{1000:'',2000:'',3000:'',4000:'',5000:'',6000:'',7000:'',8000:'',9000:''}} min={this.state.minPrice} max={this.state.maxPrice} defaultValue={this.state.startPrice} onChange={this.handleSlide} onBlur={this.handleInputChange} 
-                                    style={{margin:"10px"}} />
-                                <div style={{color:"rgb(153, 153, 153)"}}>
+                                    className={classes.sliderControl} />
+                                <div  className={classes.sliderLabel}>
                                 ${this.state.totalLeadSpend.toLocaleString(undefined, {minimumFractionDigits: 0, maximumFractionDigits: 0})}/m
                                 </div>
                             </div>
@@ -168,9 +168,9 @@ class LeadgenCalc extends Component {
                                 <h2>Your average lead conversion rate:</h2>
                             </div>
                             <div style={{width:"90%",marginBottom:"20px"}}>
-                                <Slider dots  min={1} max={10} defaultValue={this.state.conversionRate} onChange={this.handleConversionSlide} onBlur={this.handleInputChange}
-                                    style={{margin:"10px"}} />
-                                <div style={{color:"rgb(153, 153, 153)"}}>
+                                <Slider marks={{2:'',3:'',4:'',5:'',6:'',7:'',8:'',9:''}} min={1} max={10} defaultValue={this.state.conversionRate} onChange={this.handleConversionSlide} onBlur={this.handleInputChange}
+                                    className={classes.sliderControl} />
+                                <div className={classes.sliderLabel}>
                                 {this.state.conversionRate}%
                                 </div>
                             </div>
@@ -203,7 +203,7 @@ class LeadgenCalc extends Component {
                                 <img src={ArrowIcon} style={{position: "absolute",left: "20px",top: "20px"}} />
                                 <img src={ArrowIcon} style={{position: "absolute",left: "20px",top: "100px"}} />
                                 <img src={EqualsIcon} style={{position: "absolute",left: "30px",top: "210px"}} />
-                                <img src={LeadsIcon} style={{position: "absolute",right: "10px",top: "10px", width: "130px"}} />
+                                <img src={LeadsIcon} className={classes.leadIcon} style={{position: "absolute",right: "10px",top: "10px", width: "130px"}} />
                                 <div style={{marginLeft:"70px"}}>
                                     <div style={{marginBottom:"20px"}}>
                                         <div style={{fontSize:"30px"}}>
@@ -282,6 +282,30 @@ export default withStyles((theme) => ({
     [theme.breakpoints[900]]: {
         width:"50%",
       },
+  },
+  leadIcon:{
+    zIndex: "-100",
+    opacity: "20%",
+    [theme.breakpoints[900]]: {
+        opacity: "100%"
+    }
+  },
+  sliderLabel:{
+    textAlign:"center",
+    color:"rgb(153, 153, 153)",
+    marginTop:"30px",
+    fontSize:"20px",
+    [theme.breakpoints[900]]: {
+        marginTop:"10px",
+        textAlign:"right",
+        fontSize:"16px"
+    }
+  },
+  sliderControl:{
+    marginTop:"30px",
+    [theme.breakpoints[900]]: {
+        marginTop:"10px",
+    }
   },
   heading: {
     color: "#FFF",
