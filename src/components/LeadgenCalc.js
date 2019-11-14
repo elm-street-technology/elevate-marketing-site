@@ -192,7 +192,7 @@ class LeadgenCalc extends Component {
                             </div>
                         </div>
                         <div className={classes.col}>
-                            <div style={{backgroundColor:"#8bd0ca29",padding:"10px",borderRadius:"4px",border:"1px #55c3ba solid",position:"relative"}}>
+                            <div style={{backgroundColor:"#95bbb829",padding:"10px",borderRadius:"4px",border:"1px #b3ccca solid",position:"relative"}}>
                                 <img src={ArrowIcon} style={{position: "absolute",left: "20px",top: "20px"}} />
                                 <img src={ArrowIcon} style={{position: "absolute",left: "20px",top: "100px"}} />
                                 <img src={EqualsIcon} style={{position: "absolute",left: "30px",top: "210px"}} />
@@ -222,11 +222,12 @@ class LeadgenCalc extends Component {
                                     </div>
                                     
                                     <div style={{marginBottom:"20px"}}>
-                                        <div style={{fontSize:"30px",color:"#f15953"}}>
+                                        <div style={{fontSize:"30px",color:"#00b541"}}>
                                             ${this.state.netTotal.toLocaleString(undefined, {minimumFractionDigits: 0, maximumFractionDigits: 0})}
                                         </div>
                                         <div style={{fontSize:"16px",color:"#999999"}}>
-                                            Net Income at a {this.state.conversionRate}% Conversion
+                                            Average monthly income at a {this.state.conversionRate}% Conversion<br/>
+                                            <div style={{fontSize:"12px",color:"#aaaaaa"}}>Closing less than 1 lead per month</div>
                                         </div>
                                     </div>
                                 </div>
