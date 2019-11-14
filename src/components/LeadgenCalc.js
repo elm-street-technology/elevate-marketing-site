@@ -107,7 +107,7 @@ class LeadgenCalc extends Component {
             }
             this.setState({costPerLead:leadPrice});
 
-            numberOfLeads = Math.floor((this.state.currentSpend / 2) / leadPrice);
+            numberOfLeads = Math.floor((this.state.currentSpend - 375) / leadPrice);
 
             incomePerLead = this.state.avgHomePrice * (this.state.commissionPrct / 100);
             brokerFees = (incomePerLead * (this.state.brokerFeesPrct / 100)) + parseFloat(this.state.brokerFeesFixed);
@@ -241,7 +241,7 @@ class LeadgenCalc extends Component {
                                 </div>
                                 <div style={{marginTop:"50px",textAlign:"center",lineHeight: "initial"}}>
                                     Ready to start making MORE MONEY?
-                                        <button className={classes.buttonLink} onClick={this.handleShowForm}>Yes! I want Elevate leads</button>
+                                        <button className={classes.buttonLink} onClick={this.handleShowForm} style={{backgroundColor:"#e78023"}}>Yes! I want Elevate leads</button>
                                     </div>
                             </div>
                             
