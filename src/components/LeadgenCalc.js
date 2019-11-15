@@ -182,16 +182,16 @@ class LeadgenCalc extends Component {
                                 <hr style={{marginRight:"20px",marginBottom: "30px",borderTop: "1px #e6e6e6 solid"}}/>
                             </div>
                             <div style={{marginBottom:"30px"}}>
-                            <div style={{width:"60%",display:"inline-block"}}>
+                            <div style={{width:"100%",display:"inline-block"}}>
                                 <h2>Average home price in your market:</h2>
                                 <div className={classes.inputLabel}>
-                                $<input style={{width:"60%",background: "#f3f7f7",marginLeft:"6px",marginRight:"6px"}} className={classes.inputControl} value={this.state.avgHomePrice} onChange={this.handleHomePrice} onBlur={this.handleInputChange}/>
+                                $<input style={{width:"30%",background: "#f3f7f7",marginLeft:"6px",marginRight:"6px"}} className={classes.inputControl} value={this.state.avgHomePrice} onChange={this.handleHomePrice} onBlur={this.handleInputChange}/>
                                 </div>
                             </div>
-                            <div style={{width:"40%",display:"inline-block"}}>
+                            <div style={{width:"100%",display:"inline-block",marginTop:"20px"}}>
                                 <h2>Your average commission:</h2>
                                 <div className={classes.inputLabel}>
-                                <input style={{width:"25%",background: "#f3f7f7",marginLeft:"6px",marginRight:"6px"}} className={classes.inputControl} value={this.state.commissionPrct} onChange={this.handleCommission} onBlur={this.handleInputChange} />%
+                                <input style={{width:"15%",background: "#f3f7f7",marginLeft:"6px",marginRight:"6px"}} className={classes.inputControl} value={this.state.commissionPrct} onChange={this.handleCommission} onBlur={this.handleInputChange} />%
                                 </div>
                             </div>
                             </div>
