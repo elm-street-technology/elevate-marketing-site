@@ -14,7 +14,7 @@ class LeadgenCalc extends Component {
     constructor() {
         super();
         this.state = {
-            numberOfLeads: 50,
+            numberOfLeads: 52,
             minLeads: 10,
             maxLeads: 200,
             minPrice: 750,
@@ -23,9 +23,9 @@ class LeadgenCalc extends Component {
             currentSpend: 1000,
             avgHomePrice: 200000,
             commissionPrct: 3,
-            brokerFeesPrct: 25,
+            brokerFeesPrct: 0,
             brokerFeesFixed: 0,
-            costPerLead: 20,
+            costPerLead: 12,
             netIncomePerLead: 0,
             netTotal: 0,
             totalLeadSpend: 0,
@@ -111,7 +111,7 @@ class LeadgenCalc extends Component {
 
             incomePerLead = this.state.avgHomePrice * (this.state.commissionPrct / 100);
             brokerFees = (incomePerLead * (this.state.brokerFeesPrct / 100)) + parseFloat(this.state.brokerFeesFixed);
-            netIncome = incomePerLead - brokerFees;
+            netIncome = incomePerLead ;
             this.setState({netIncomePerLead:netIncome, numberOfLeads:numberOfLeads});
         }
 
@@ -143,6 +143,9 @@ class LeadgenCalc extends Component {
                 closeLeadText = closedLeads+"-"+nextStep+" leads";
             }
 
+            var roi = Math.round((this.state.netTotal - this.state.totalLeadSpend) / this.state.totalLeadSpend * 100);
+            var yearIncome = this.state.netTotal * 12;
+
             return (
                 <div className={classes.root}>
                     <div className={classes.row}>
@@ -157,7 +160,7 @@ class LeadgenCalc extends Component {
                                 <h2>How much can you spend on monthly leads?</h2>
                                 <div style={{fontSize:"12px",color:"#aaaaaa"}}>(Note:  Minimum of $750/m)</div>
                             </div>
-                            <div style={{width:"90%",marginBottom:"40px"}}>
+                            <div style={{width:"95%",marginBottom:"40px"}}>
                                 <Slider step={250} marks={{1000:'',2000:'',3000:'',4000:'',5000:'',6000:'',7000:'',8000:'',9000:''}} min={this.state.minPrice} max={this.state.maxPrice} defaultValue={this.state.startPrice} onChange={this.handleSlide} onBlur={this.handleInputChange} 
                                     className={classes.sliderControl} />
                                 <div  className={classes.sliderLabel}>
@@ -168,7 +171,7 @@ class LeadgenCalc extends Component {
                             <div style={{}}>
                                 <h2>Your average lead conversion rate:</h2>
                             </div>
-                            <div style={{width:"90%",marginBottom:"20px"}}>
+                            <div style={{width:"95%",marginBottom:"20px"}}>
                                 <Slider marks={{2:'',3:'',4:'',5:'',6:'',7:'',8:'',9:''}} min={1} max={10} defaultValue={this.state.conversionRate} onChange={this.handleConversionSlide} onBlur={this.handleInputChange}
                                     className={classes.sliderControl} />
                                 <div className={classes.sliderLabel}>
@@ -176,20 +179,23 @@ class LeadgenCalc extends Component {
                                 </div>
                             </div>
                             <div style={{color:"rgb(153, 153, 153)",marginTop:"20px",marginBottom:"20px"}}>
-                                <hr style={{marginRight:"20px"}}/>
+                                <hr style={{marginRight:"20px",marginBottom: "30px",borderTop: "1px #e6e6e6 solid"}}/>
                             </div>
-                            <div>
+                            <div style={{marginBottom:"30px"}}>
+                            <div style={{width:"60%",display:"inline-block"}}>
                                 <h2>Average home price in your market:</h2>
                                 <div className={classes.inputLabel}>
-                                $<input style={{width:"30%"}} className={classes.inputControl} value={this.state.avgHomePrice} onChange={this.handleHomePrice} onBlur={this.handleInputChange}/>
+                                $<input style={{width:"60%",background: "#f3f7f7",marginLeft:"6px",marginRight:"6px"}} className={classes.inputControl} value={this.state.avgHomePrice} onChange={this.handleHomePrice} onBlur={this.handleInputChange}/>
                                 </div>
                             </div>
-                            <div>
+                            <div style={{width:"40%",display:"inline-block"}}>
                                 <h2>Your average commission:</h2>
                                 <div className={classes.inputLabel}>
-                                <input style={{width:"15%"}} className={classes.inputControl} value={this.state.commissionPrct} onChange={this.handleCommission} onBlur={this.handleInputChange} />%
+                                <input style={{width:"25%",background: "#f3f7f7",marginLeft:"6px",marginRight:"6px"}} className={classes.inputControl} value={this.state.commissionPrct} onChange={this.handleCommission} onBlur={this.handleInputChange} />%
                                 </div>
                             </div>
+                            </div>
+                            {/*
                             <div>
                                 <h2>Broker/agency fees:</h2>
                                 <div className={classes.inputLabel}>
@@ -198,6 +204,7 @@ class LeadgenCalc extends Component {
                                 $<input style={{width:"25%"}} className={classes.inputControl} value={this.state.brokerFeesFixed} onChange={this.handleBrokerFixed} onBlur={this.handleInputChange} /> (fixed)
                                 </div>
                             </div>
+                            */}
                         </div>
                         <div className={classes.col}>
                             <div style={{backgroundColor:"#95bbb829",padding:"10px",borderRadius:"4px",border:"1px #b3ccca solid",position:"relative"}}>
@@ -220,6 +227,7 @@ class LeadgenCalc extends Component {
                                         Monthly average number of leads
                                         </div>
                                     </div>
+                                    {/*
                                     <div style={{marginBottom:"20px"}}>
                                         <div style={{fontSize:"30px"}}>
                                             ${this.state.netIncomePerLead.toLocaleString(undefined, {minimumFractionDigits: 0, maximumFractionDigits: 0})}
@@ -228,14 +236,35 @@ class LeadgenCalc extends Component {
                                             Income potential per lead
                                         </div>
                                     </div>
+                                    */}
                                     
                                     <div style={{marginBottom:"20px"}}>
-                                        <div style={{fontSize:"30px",color:"#00b541"}}>
-                                            ${this.state.netTotal.toLocaleString(undefined, {minimumFractionDigits: 0, maximumFractionDigits: 0})}
+                                        <div style={{fontSize:"30px"}}>
+                                            ${this.state.netTotal.toLocaleString(undefined, {minimumFractionDigits: 0, maximumFractionDigits: 0})} 
+                                            {/*
+                                            <div style={{display:"inline-block",marginLeft:"10px",marginRight:"10px",color:"#55c3ba"}}>
+                                                &rarr;
+                                            </div>
+                                            
+                                            <div style={{display:"inline-block"}}> 
+                                                {roi}% ROI
+                                            </div>	
+                                            */}
                                         </div>
                                         <div style={{fontSize:"16px",color:"#999999"}}>
                                             Avg. monthly income at {this.state.conversionRate}% Conversion
-                                            <div style={{fontSize:"12px",color:"#aaaaaa",marginTop:"10px"}}>Closing {closeLeadText} per month, after fees and lead spend</div>
+                                        </div>
+                                    </div>
+                                    <div style={{marginBottom:"20px"}} className={classes.finalNumberBox}>
+                                        <div style={{fontSize:"30px",color:"#FFFFFF"}}>
+                                            ${yearIncome.toLocaleString(undefined, {minimumFractionDigits: 0, maximumFractionDigits: 0})} 
+                                            <div style={{display:"inline-block",fontSize:"15px",marginLeft:"10px"}}>
+                                            ({roi}% ROI)
+                                            </div>
+                                        </div>
+                                        <div style={{fontSize:"16px",color:"#e6fffd",marginTop:"10px"}}>
+                                            12 month income potential
+                                            <div style={{fontSize:"12px",color:"#e6fffd",marginTop:"10px"}}>Closing {closeLeadText} per month</div>
                                         </div>
                                     </div>
                                 </div>
@@ -350,4 +379,12 @@ export default withStyles((theme) => ({
     margin: "16px auto",
     marginBottom: "20px",
   },
+  finalNumberBox:{
+    backgroundColor: "#55c3ba",
+    padding: "14px",
+    width: "90%",
+    textAlign: "center",
+    borderRadius: "8px",
+    paddingTop: "10px",
+  }
 }))(LeadgenCalc);
