@@ -110,7 +110,7 @@ class LeadgenCalc extends Component {
             numberOfLeads = Math.floor((this.state.currentSpend - 375) / leadPrice);
 
             incomePerLead = this.state.avgHomePrice * (this.state.commissionPrct / 100);
-            brokerFees = (incomePerLead * (this.state.brokerFeesPrct / 100)) + parseFloat(this.state.brokerFeesFixed);
+            //brokerFees = (incomePerLead * (this.state.brokerFeesPrct / 100)) + parseFloat(this.state.brokerFeesFixed);
             netIncome = incomePerLead ;
             this.setState({netIncomePerLead:netIncome, numberOfLeads:numberOfLeads});
         }
@@ -118,9 +118,9 @@ class LeadgenCalc extends Component {
         // Calc potential income
         //var totalLeadSpend = this.state.costPerLead * this.state.numberOfLeads;
         var totalLeadSpend = this.state.currentSpend;
-        var potentialTotal = netIncome * this.state.numberOfLeads;
+        var potentialTotal = netIncome * this.state.numberOfLeads * (this.state.conversionRate/100);
         var calculated = (potentialTotal * (this.state.conversionRate/100)) - (this.state.costPerLead * this.state.numberOfLeads);
-        this.setState({netTotal:calculated, totalLeadSpend: totalLeadSpend});
+        this.setState({netTotal:potentialTotal, totalLeadSpend: totalLeadSpend});
     }
 
     render() {
@@ -129,7 +129,7 @@ class LeadgenCalc extends Component {
         if(this.state.showForm){
             return(
                 <div>
-                    <FormLeadgenCalc />
+                    <FormLeadgenCalc leadSpend={this.state.currentSpend}/>
                 </div>
             )
         }
@@ -258,12 +258,12 @@ class LeadgenCalc extends Component {
                                     <div style={{marginBottom:"20px"}} className={classes.finalNumberBox}>
                                         <div style={{fontSize:"30px",color:"#FFFFFF"}}>
                                             ${yearIncome.toLocaleString(undefined, {minimumFractionDigits: 0, maximumFractionDigits: 0})} 
-                                            <div style={{display:"inline-block",fontSize:"15px",marginLeft:"10px"}}>
+                                            <div style={{display:"inline-block",fontSize:"18px",marginLeft:"10px",color:"#f5c79e"}}>
                                             ({roi}% ROI)
                                             </div>
                                         </div>
                                         <div style={{fontSize:"16px",color:"#e6fffd",marginTop:"10px"}}>
-                                            12 month income potential
+                                            12 month GCI potential
                                             <div style={{fontSize:"12px",color:"#e6fffd",marginTop:"10px"}}>Closing {closeLeadText} per month</div>
                                         </div>
                                     </div>
