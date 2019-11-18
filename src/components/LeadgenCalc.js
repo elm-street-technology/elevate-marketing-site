@@ -100,7 +100,7 @@ class LeadgenCalc extends Component {
                 leadPrice = 20;
             }
             if(this.state.avgHomePrice < 500000){
-                leadPrice = 17;
+                leadPrice = 15;
             }
             if(this.state.avgHomePrice < 300000){
                 leadPrice = 12;
