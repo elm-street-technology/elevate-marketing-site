@@ -24,8 +24,7 @@ const LeadCalc = ({ children, classes, data, tags }) => {
               <div className={classes.top} style={{paddingBottom:"80px", paddingRight:"25px", paddingLeft:"25px", paddingTop:"75px"}}>
                   <div className={classes.centerHeading}>
                       <div className={classes.heading} style={{color:"#ffffff"}}>The power of LEADS</div>
-                      <div className={classes.subtext} style={{color:"#ffffff"}}>Use our easy lead generation calculator to see how many exclusive<br/>
-                      buyer / seller leads you can be capturing in your local market.
+                      <div className={classes.subtext} style={{color:"#ffffff"}}>Use our easy lead generation calculator to evaluate buyer / seller lead counts, monthly ad spend, and potential ROI.
                       </div>
                   </div>
               </div>
