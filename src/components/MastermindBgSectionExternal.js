@@ -25,13 +25,13 @@ const BgSectionExternal = ({
                 <div className={classes.flexContainer}>
                 <div className={classes.flexItem} style={{paddingLeft:"40px", paddingRight:"30px", paddingTop:"55px", paddingBottom:"65px",}}>
                 <div style={{ textAlign: "left",paddingBottom:"22px" }}>
-                            <img src={Prologo} width="370" />
+                            <img src={Prologo} width="290" />
                             </div>
                     
                     <h1 className={classes.leftheading}>{secTitle}</h1>
                     <p className={classes.leftsubtext}>
-                    <span style={{fontWeight:"700", color:"#ffffff"}}>For busy agents who want to do more,<br />
-                    engage more, convert more.</span>
+                    <span style={{fontWeight:"700", color:"#ffffff"}}>For busy agents who want to do<br />
+                    more, engage more, convert more.</span>
                     <br /><br />
                     {children}</p>
  
