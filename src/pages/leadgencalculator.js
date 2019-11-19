@@ -7,7 +7,7 @@ import LeadgenCalc from "../components/LeadgenCalc";
 import SEO from "../components/SEO";
 import HeadBG from "../images/lead_calc_bg.jpg";
 
-const LeadCalc = ({ children, classes, data, tags }) => {
+const LeadGenCalculator = ({ children, classes, data, tags }) => {
   const postNode = {
       title: `Lead Generation Calculator - ${config.siteTitle}`,
   };
@@ -101,4 +101,4 @@ export default withStyles((theme) => ({
     marginBottom:"30px"
   },
   
-}))(LeadCalc);
+}))(LeadGenCalculator);
