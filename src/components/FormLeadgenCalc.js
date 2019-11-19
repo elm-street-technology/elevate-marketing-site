@@ -9,7 +9,7 @@ import withStyles from "elevate-ui/withStyles";
 import Datetime from "elevate-ui/Datetime";
 import moment from "moment";
 
-class FormLeadgen extends Component {
+class FormLeadgenCalc extends Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -24,6 +24,7 @@ class FormLeadgen extends Component {
       market3: '',
       company: '',
       calEmbed: '',
+      leadSpend: props.leadSpend
     };
 
     this.showCalForm = this.showCalForm.bind(this);
@@ -111,7 +112,7 @@ class FormLeadgen extends Component {
               Got it!
             </Typography>
             <Typography type="heading5" gutterTop>
-        We'll check availability & reach out to you asap via email or telephone.<br/>
+        We'll check availability &amp; reach out to you<br/> asap via email or telephone.<br/>
               You can also speak to a lead generation specialist immediately by calling  <a href="tel:18447920260" className={classes.link}>844.792.0260</a>.
             </Typography>
           </div>
@@ -128,7 +129,7 @@ class FormLeadgen extends Component {
     
 
     return <div className={classNames(classes.root, className)}>
-        <Formik initialValues={{ firstname: "", lastname: "", company: "", email: "", phone: "", market1: "", market2: "", market3: "", form: "leadgen_formNew", list: 57292 }} validationSchema={() => Yup.object().shape(
+        <Formik initialValues={{ firstname: "", lastname: "", company: "", email: "", phone: "", market1: "", market2: "", market3: "", form: "leadgen_calc", list: 89474,leadSpend:this.state.leadSpend }} validationSchema={() => Yup.object().shape(
               {
                 firstname: Yup.string().required("First name is required"),
                 lastname: Yup.string().required("Last name is required"),
@@ -155,7 +156,7 @@ class FormLeadgen extends Component {
 
             const body = { ...values, 
               demo_request_date: meeting_request,
-              notes: "Interested Markets: " + values.market1 + "," + values.market2 + "," + values.market3, 
+              notes: "Lead Spend: "+values.leadSpend+", Interested Markets: " + values.market1 + "," + values.market2 + "," + values.market3, 
               utm_campaign: window.utm_tags ? window.utm_tags.campaign : "", 
               utm_source: window.utm_tags ? window.utm_tags.source : "", 
               utm_medium: window.utm_tags ? window.utm_tags.medium : "", 
@@ -197,15 +198,17 @@ class FormLeadgen extends Component {
           }} render={({ values, isSubmitting, handleBlur, handleChange }) => <Form noValidate>
               <div style={{ marginBottom: "30px" }}>
                 <div className={classes.headingLarge}>
-                  LIMITED AVAILABILITY ON EXCLUSIVE BUYER / SELLER LEADS
+                Claim Your Elevate Buyer / Seller Leads NOW
                 </div>
+                <div className={classes.headingText} style={{ marginTop: "10px" }}>
+                  Tell us your top 3 markets and a member of the Elevate Lead Generation Team will be in touch asap, or call 844-792-0260 to speak to a Success Coach immediately.
+                </div>
+                {/* 
                 <div className={classes.headingSmall}>
                   Exclusive leads in markets across the U.S.
                 </div>
-                <div className={classes.headingText} style={{ marginTop: "10px" }}>
-                  First Come. First Served.<br/>
-Check availability today.
-                </div>
+                
+                */}
               </div>
               <div style={{ maxWidth: "500px", marginLeft: "auto", marginRight: "auto" }}>
                 <div className={classes.topRow}>
@@ -218,6 +221,7 @@ Check availability today.
                 <div style={{ width: "100%", textAlign: "center" }}>
                   What are your top 3 markets of interest? (optional)
                 </div>
+                <input type="hidden" name="leadSpend" value={this.state.leadSpend} />
                 <Field id="market1" name="market1" label="City/State" component={Input} className={classes.field} onBlur={this.setFormVal} />
                 <Field id="market2" name="market2" label="City/State" component={Input} className={classes.field} onBlur={this.setFormVal} />
                 <Field id="market3" name="market3" label="City/State" component={Input} className={classes.field} onBlur={this.setFormVal} />
@@ -255,10 +259,10 @@ Check availability today.
                     </div>
                   </div>}
                 <button type="submit" className={classes.signUpBtn} disabled={isSubmitting}>
-                  Check Availability
+                  Contact Me ASAP with Availability
                 </button>
               </div>
-            <div style={{ fontSize: "11px" }}>
+            <div style={{ fontSize: "11px" ,marginBottom:"20px"}}>
               By submitting this form, you are requesting to be contacted by a member of the Elevate Sales Team.<br />
               Existing subscribers seeking support, please visit the <a href="https://elmstreettechnology.zendesk.com/hc/en-us">Elevate Help Center</a>.
               </div>
@@ -336,8 +340,7 @@ export default withStyles((theme) => ({
     padding: "3px",
   },
   headingLarge: {
-    fontSize: "40px",
-    textTransform: "uppercase",
+    fontSize: "33px",
     fontWeight: "700",
     color: "#55c3ba",
     textAlign: "center",
@@ -351,4 +354,4 @@ export default withStyles((theme) => ({
     padding: "3px",
     lineHeight: "1.4em",
   },
-}))(FormLeadgen);
+}))(FormLeadgenCalc);
