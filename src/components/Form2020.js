@@ -11,7 +11,7 @@ import withStyles from "elevate-ui/withStyles";
 import Datetime from "elevate-ui/Datetime";
 import moment from "moment";
 
-class FormBright extends Component {
+class Form2020 extends Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -60,7 +60,7 @@ class FormBright extends Component {
             </Typography>
             <Typography type="heading5" gutterTop>
         We’ll reach out to you asap via email or telephone.<br/>
-              You can also speak to a member of our sales team immediately by calling  <a href="tel:18339781196" className={classes.link}>833.978.1196</a>.
+              You can also speak to a member of our sales team immediately by calling  <a href="tel:18447920260" className={classes.link}>844.792.0260</a>.
             </Typography>
           </div>
         </div>
@@ -83,8 +83,8 @@ class FormBright extends Component {
             email: "",
             phone: "",
             mls_number: "",
-            form: "bright_form",
-            list: 85576,
+            form: "2020_form",
+            list: 89671,
             meetingdate: '',
             meetingtime: '',
             role: "",
@@ -105,7 +105,7 @@ class FormBright extends Component {
           onSubmit={(values, { setSubmitting }) => {
             //if (values.meetingdate != undefined) {
             var meeting_request = '';
-            var notes = 'Notes: ';
+            var notes = 'Interests: ';
             Object.keys(values).forEach(function (key, index) {
               // key: the name of the object key
               // index: the ordinal position of the key within the object 
@@ -121,9 +121,12 @@ class FormBright extends Component {
               }
               if (key == 'interestsOther'){
                 if(values.interestsOther.length > 0){
-                  notes = values.interests.join(",");
+                  //notes = values.interests.join(",");
                   notes = notes + "," + values.interestsOther;
                 }
+              }
+              if (key == "interests"){
+                notes = notes + "," + values.interests.join(",");
               }
             });
             
@@ -435,4 +438,4 @@ export default withStyles((theme) => ({
     fontWeight: "700",
     marginBottom: "4px",
   },
-}))(FormBright);
+}))(Form2020);
