@@ -20,6 +20,9 @@ class FormRefer extends Component {
     const { formState } = this.state;
     const { classes, className } = this.props;
 
+    var errorMessage = '';
+    var showError = false;
+
     if (formState === "success") {
       return (
         <div
@@ -42,11 +45,9 @@ class FormRefer extends Component {
         </div>
       );
     } else if (formState === "error") {
-      return (
-        <div style={{ maxWidth: "400px", margin: "24px auto" }}>
-          <Alert color="error">An error occurred.</Alert>
-        </div>
-      );
+      showError = true;
+      errorMessage = 'Please make sure each referral has at least an email or phone number.';
+      console.log(formState);
     }
 
     return (
@@ -76,6 +77,46 @@ class FormRefer extends Component {
               utm_term: (window.utm_tags) ? window.utm_tags.term : "",
               notes: (values.demorequest == true) ? "Requested demo" : ""
             };
+
+            var that = this;
+            var referError = false;
+
+            Object.keys(values).forEach(function (key, index) {
+              // key: the name of the object key
+              // index: the ordinal position of the key within the object 
+              if(key == 'firstname1'){
+                if (values.lastname1 === undefined || (values.email1 === undefined && values.phone1 === undefined)) {
+                  referError = true;
+                }
+              }
+              if(key == 'firstname2'){
+                if (values.lastname2 === undefined || (values.email2 === undefined && values.phone2 === undefined)) {
+                  referError = true;
+                }
+              }
+              if(key == 'firstname3'){
+                if (values.lastname3 === undefined || (values.email3 === undefined && values.phone3 === undefined)) {
+                  referError = true;
+                }
+              }
+              if(key == 'firstname4'){
+                if (values.lastname4 === undefined || (values.email4 === undefined && values.phone4 === undefined)) {
+                  referError = true;
+                }
+              }
+              if(key == 'firstname5'){
+                if (values.lastname5 === undefined || (values.email5 === undefined && values.phone5 === undefined)) {
+                  referError = true;
+                }
+              }
+            });
+
+            if(referError){
+              that.setState({ formState: "error" });
+              setSubmitting(false);
+              return false;
+            }
+
             return fetch(
               "https://easyemerge.com/plugins/elevate_form.php",
               {
@@ -114,6 +155,11 @@ class FormRefer extends Component {
           render={({ values, isSubmitting }) => (
             <Form noValidate>
               <div style={{ maxWidth: "800px", marginLeft: "auto", marginRight: "auto" }}>
+                {showError && (
+                <div style={{color:"#990000",fontWeight:"bold",marginBottom:"20px"}}>
+                  {errorMessage}
+                </div>
+                )}
               <div className={classes.topRow}>
                 <Field
                   id="firstname"
