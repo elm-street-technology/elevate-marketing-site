@@ -267,13 +267,13 @@ class Index extends Component {
               <div style={{fontWeight:"bold"}}>ANNUAL PRE-PAY </div>
               <div style={{fontWeight:"bold",fontSize:"36px",marginTop:"10px",marginBottom:"20px"}}>$1,200</div>
               <div style={{fontWeight:"bold"}}>*No Set-Up Fee </div>
-              <div>(annual savings of $XXX)</div>
+              
             </div>
             <div style={{flex:"1",textAlign:"center",color:"#FFFFFF",backgroundColor:"#4f4677",padding:"20px"}}>
               <div style={{fontWeight:"bold"}}>MONTH-TO-MONTH </div>
               <div style={{fontWeight:"bold",fontSize:"36px",marginTop:"10px",marginBottom:"20px"}}>$125/m</div>
               <div style={{fontWeight:"bold"}}>$100 Set-Up Fee </div>
-              <div>(annual savings of $XXX)</div>
+              
             </div>
             </div>
 
@@ -296,13 +296,13 @@ class Index extends Component {
               <div style={{fontWeight:"bold"}}>Buyer / Seller Lead Generation</div>
               <div style={{fontWeight:"bold",fontSize:"36px",marginTop:"10px",marginBottom:"20px"}}>$750/m</div>
               <div style={{fontWeight:"bold"}}>*No Set-Up Fee </div>
-              <div>(annual savings of $XXX)</div>
+              
             </div>
             <div style={{flex:"1",textAlign:"center",color:"#FFFFFF",backgroundColor:"#68aea8",padding:"20px"}}>
               <div style={{fontWeight:"bold"}}>Buyer / Seller Lead GenerationWITHScrubbing Concierge</div>
               <div style={{fontWeight:"bold",fontSize:"36px",marginTop:"10px",marginBottom:"20px"}}>$1,050/m</div>
               <div style={{fontWeight:"bold"}}>*No Set-Up Fee </div>
-              <div>(annual savings of $XXX)</div>
+              
             </div>
             </div>
 
