@@ -24,7 +24,7 @@ const Goal = ({ children, classes, data, tags }) => {
       <Helmet>
               <title>{`2020 Goal Setting - ${config.siteTitle}`}</title>
       </Helmet>
-      <SEO postNode={postNode} pagePath="goal" customTitle />
+      <SEO postNode={postNode} pagePath="2020_goal_setting" customTitle />
 
 <Container>
       <div className={classes.top} style={{paddingBottom:"15px", paddingRight:"25px", paddingLeft:"25px", paddingTop:"55px"}}>
