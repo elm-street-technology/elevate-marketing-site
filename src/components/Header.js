@@ -33,6 +33,7 @@ class Header extends Component {
   render() {
     const { classes } = this.props;
     return (
+      <div>
       <header className={classes.root}>
         <Container>
           <div className={classes.inner}>
@@ -195,6 +196,7 @@ class Header extends Component {
             </Link>
           </div>
         </Container>
+        
         <button
           onClick={this.onMenuClose}
           className={classNames(
@@ -203,6 +205,11 @@ class Header extends Component {
           )}
         />
       </header>
+        <div className={classes.violator}>
+        <span style={{fontWeight:"bold"}}>JOYFUL END OF YEAR SPECIALS ON MARKETING &amp; LEAD GENERATION</span><br/>
+        Schedule a <Link to="/get-started" style={{color:"#FFFFFF"}}>15-minute demo NOW</Link> or call 844.792.0260
+        </div>
+      </div>
     );
   }
 }
@@ -291,4 +298,15 @@ export default withStyles((theme) => ({
   navMobileUnderlayOpen: {
     visibility: "visible",
   },
+  violator:{
+    background:"#54a59d",
+    color:"#FFFFFF",
+    position:"fixed",
+    top:"80px",
+    padding:"5px",
+    width:"100%",
+    textAlign:"center",
+    zIndex:"100",
+    lineHeight:"22px"
+  }
 }))(Header);
