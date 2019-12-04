@@ -27,16 +27,21 @@ const Goal = ({ children, classes, data, tags }) => {
       <SEO postNode={postNode} pagePath="2020_goal_setting" customTitle />
 
 <Container>
-      <div className={classes.top} style={{paddingBottom:"15px", paddingRight:"25px", paddingLeft:"25px", paddingTop:"95px"}}>
+      <div className={classes.top} style={{paddingBottom:"15px", paddingRight:"25px", paddingLeft:"25px", paddingTop:"99px"}}>
           <div className={classes.centerHeading}>
-                            <div className={classes.subtext}>As we set our personal and professional growth goals for the coming year, successful real estate agent Matt O’Neill outlines the 7 elements in his life that he evaluates every year, how he’s constantly striving for self-improvement,<br />
-                            and how you - our audience - can get involved with your own self-evaluation.<br /><br />
-
+                            <div className={classes.bold}>“A life dedicated to authentic relationships is a life free of regret.”</div>
+                            <div className={classes.subHeading} style={{paddingTop:"10px"}}>DAVID OSBORN</div>
+                            <div className={classes.subtext}>
                             -----
                             <br /><br />
-                            <div className={classes.bold}>“A life dedicated to authentic relationships is a life free of regret.”</div>
+                              The #1 high-end, luxury real estate team leader in South Carolina by the Wall Street Journal shares the secrets to his success. Once a year, Matt O’Neill of the Matt O’Neill Team evaluates the 7 elements in his life that require his attention in order to strive for personal growth, professional growth, and self-improvement. Surprisingly, they aren’t what you might expect!
+<br /><br />
+                            In the brief video below, Matt shares those 7 elements and leads you through your own personal self-evaluation. Then, be sure to sign up for his 1-hr webinar on December 17th where he’ll deep dive into the idea of “Goal Setting”, how it’s changed his life, and how it’s helped him achieve over $225M in business in 2019.
+                            
                             </div>
-                            <div className={classes.subHeading}>DAVID OSBORN</div>
+
+                            <br /><br />
+                            <div className={classes.subHeading}>ARE YOU READY FOR 2020 TO BE YOUR BEST YEAR YET? START HERE!</div>
           </div>
       </div>
 </Container>
