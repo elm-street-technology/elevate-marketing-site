@@ -27,7 +27,7 @@ const Goal = ({ children, classes, data, tags }) => {
       <SEO postNode={postNode} pagePath="2020_goal_setting" customTitle />
 
 <Container>
-      <div className={classes.top} style={{paddingBottom:"15px", paddingRight:"25px", paddingLeft:"25px", paddingTop:"55px"}}>
+      <div className={classes.top} style={{paddingBottom:"15px", paddingRight:"25px", paddingLeft:"25px", paddingTop:"95px"}}>
           <div className={classes.centerHeading}>
                             <div className={classes.subtext}>As we set our personal and professional growth goals for the coming year, successful real estate agent Matt O’Neill outlines the 7 elements in his life that he evaluates every year, how he’s constantly striving for self-improvement,<br />
                             and how you - our audience - can get involved with your own self-evaluation.<br /><br />
@@ -75,8 +75,8 @@ const Goal = ({ children, classes, data, tags }) => {
                                 <img src={Leadsmo} width="270" />
                             </div>
                                  <div className={classes.heading}>LEAD GENERATION MASTERMIND</div>
-                                    <div className={classes.subtext}><span className={classes.bold}>Attend Matt’s “Mastermind” in Charleston, SC on Dec. 11th to learn<br />
-                                    his lead generation secrets and how he’s closing out the year at over $225M.</span>
+                                    <div className={classes.subtext}><span className={classes.bold}>Attend Matt’s “Mastermind” in Charleston, SC on Dec. 11th <br />
+                                    to learn his lead generation secrets and how he’s closing out the year at over $225M.</span>
                                     <br />
                                     <br />
                                     <a target="_blank" href="https://www.eventbrite.com/e/vip-mastermind-for-real-estate-professionals-charleston-nc-dec-11th-registration-83687943893?aff=Blog" className={classes.getStartedLink}>
