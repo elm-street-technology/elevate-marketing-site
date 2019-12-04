@@ -73,27 +73,6 @@ const Goal = ({ children, classes, data, tags }) => {
       </div>
 </Container>
 
-<div style={{paddingTop:"20px", paddingBottom:"30px", backgroundColor:"#f2f2f2"}}>
-    <Container>
-    <div style={{textAlign:"center", paddingBottom:"5px", padding:"33px"}}>
-                            <div style={{ textAlign: "center",paddingBottom:"22px" }}>
-                                <img src={Leadsmo} width="270" />
-                            </div>
-                                 <div className={classes.heading}>LEAD GENERATION MASTERMIND</div>
-                                    <div className={classes.subtext}><span className={classes.bold}>Attend Matt’s “Mastermind” in Charleston, SC on Dec. 11th <br />
-                                    to learn his lead generation secrets and how he’s closing out the year at over $225M.</span>
-                                    <br />
-                                    <br />
-                                    <a target="_blank" href="https://www.eventbrite.com/e/vip-mastermind-for-real-estate-professionals-charleston-nc-dec-11th-registration-83687943893?aff=Blog" className={classes.getStartedLink}>
-                                                                    Register Today
-                                                                    </a>
-            
-                                    </div>
-    </div>
-
-        
-    </Container>
-</div>
 
 
 
