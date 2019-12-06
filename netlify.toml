@@ -89,3 +89,8 @@
   from = "/leadcalc"
   to = "/leadgencalculator"
   status = 301
+
+[[redirects]]
+  from = "/2020-goal-setting-self-evaluation-with-matt-oneill"
+  to = "/2020_goal_setting"
+  status = 301
