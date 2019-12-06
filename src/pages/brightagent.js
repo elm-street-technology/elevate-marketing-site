@@ -3,10 +3,10 @@ import Helmet from "react-helmet";
 import withStyles from "elevate-ui/withStyles";
 import config from "../utils/siteConfig";
 import Container from "../components/Container";
-import FormBright from "../components/FormBright";
+import FormBrightAgent from "../components/FormBrightAgent";
 import Brightlogo from "../images/brightmls_logo.png";
 import Bosslogo2 from "../images/eboss_logo2.png";
-import Sprologo from "../images/spro_logo.png";
+import Sprologo2 from "../images/spro_logo2.png";
 import Ask from "../images/askhow.png";
 import Eboss from "../images/eboss_bg.jpg";
 import Spro from "../images/socialpro_bg.jpg";
@@ -29,7 +29,7 @@ const Brightagent = ({ children, classes, data, tags }) => {
       <div className={classes.top} style={{paddingBottom:"35px", paddingRight:"15px", paddingLeft:"15px", paddingTop:"55px"}}>
           <div className={classes.centerHeading}>
                             <div style={{ textAlign: "center",paddingBottom:"22px", paddingTop:"22px" }}>
-                            <img src={Bosslogo2} width="300" />
+                            <img src={Sprologo2} width="320" />
                             </div>
                             <div className={classes.heading}>The Power of MARKETING</div>
           </div>
@@ -49,7 +49,7 @@ const Brightagent = ({ children, classes, data, tags }) => {
         
         
                     <div style={{ textAlign: "center"}} className={classes.videoEmbed}>
-                        <iframe className={classes.videoContainer} src="https://www.youtube.com/embed/wUNYSRnAbog?rel=0"
+                        <iframe className={classes.videoContainer} src="https://www.youtube.com/embed/63j2UGFEfU4?rel=0"
                          frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                     </div>
 </div>
@@ -65,7 +65,7 @@ const Brightagent = ({ children, classes, data, tags }) => {
            
         </div>
         <div style={{ paddingLeft: "10px", paddingRight: "10px"}}>
-            <FormBright />
+            <FormBrightAgent />
         </div>
         <div>
             

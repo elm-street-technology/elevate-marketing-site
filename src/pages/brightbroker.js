@@ -3,7 +3,7 @@ import Helmet from "react-helmet";
 import withStyles from "elevate-ui/withStyles";
 import config from "../utils/siteConfig";
 import Container from "../components/Container";
-import FormBright from "../components/FormBright";
+import FormBrightBroker from "../components/FormBrightBroker";
 import Brightlogo from "../images/brightmls_logo.png";
 import Bosslogo2 from "../images/eboss_logo2.png";
 import Recruit from "../images/recruit_cover.jpg";
@@ -67,7 +67,7 @@ const Brightbroker = ({ children, classes, data, tags }) => {
            
         </div>
         <div style={{ paddingLeft: "10px", paddingRight: "10px"}}>
-            <FormBright />
+            <FormBrightBroker />
         </div>
         <div>
             
@@ -137,7 +137,7 @@ const Brightbroker = ({ children, classes, data, tags }) => {
                 from a position of persuasion and influence.<br />
                 A “must-read” for all brokers.
                 <br /><br />
-                <a target="_blank" href="http://3sixtyfive.agency/" className={classes.buttonLink}>
+                <a target="_blank" href="/assets/elevate_recruiting.pdf" className={classes.buttonLink}>
                  Download Now
                     </a>
                 </div>
@@ -223,6 +223,7 @@ export default withStyles((theme) => ({
 
   buttonLink: {
     minWidth: "250px",
+    textAlign: "center",
     alignContent: "center",
     justifyContent: "center",
     fontSize: "16px",

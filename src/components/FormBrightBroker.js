@@ -11,7 +11,7 @@ import withStyles from "elevate-ui/withStyles";
 import Datetime from "elevate-ui/Datetime";
 import moment from "moment";
 
-class FormBright extends Component {
+class FormBrightBroker extends Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -173,8 +173,9 @@ class FormBright extends Component {
           render={({ values, isSubmitting,handleBlur, handleChange }) => (
             <Form noValidate>
               <div style={{marginBottom:"30px"}}>
-                <div className={classes.headingLarge}>PICK YOUR PATH</div>
-            
+                <div className={classes.headingLarge}>Meet the BOSS</div>
+                <div className={classes.headingText} style={{ marginTop: "20px" }}>Request your personal consultation with our brokerage development team<br />
+                using the form below or call 833.978.1196 to speak to us today.</div>
                 </div>
               <div style={{ maxWidth: "500px",marginLeft:"auto",marginRight:"auto"}}>
               <div className={classes.topRow}>
@@ -434,4 +435,4 @@ export default withStyles((theme) => ({
     fontWeight: "700",
     marginBottom: "4px",
   },
-}))(FormBright);
+}))(FormBrightBroker);
