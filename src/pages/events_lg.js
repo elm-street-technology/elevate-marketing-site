@@ -175,7 +175,7 @@ class EventsLG extends Component {
                 <br />
                 Come learn the tips, tricks &amp; shortcuts to online lead generation in this high-energy,<br />
                 90-minute educational session. Brokers and agents alike will learn the three main types<br />
-                of lead generation, along with the pros, cons &amp; best practicesto capture, nurture<br />
+                of lead generation, along with the pros, cons &amp; best practices to capture, nurture<br />
                 &amp; convert more online business in less time.  Wonder how the top performers<br />
                 in the industry maximize their online lead generation?<br />
                 This is your chance to learn their secrets.
