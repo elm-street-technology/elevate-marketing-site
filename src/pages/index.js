@@ -61,6 +61,8 @@ class Index extends Component {
         modal.style.display = "none";
       }
     }
+
+    modal.style.display = "none"; // temporary
   }
 
   render() {
