@@ -22,7 +22,7 @@ const Brightagent = ({ children, classes, data, tags }) => {
   var lastname = '';
   var email = '';
   var phone = '';
-  if(window != undefined){
+  if(typeof window !== 'undefined'){
     var urlpieces = window.location.href.split('?');
     if(urlpieces[1] != undefined){
       var rawvars = urlpieces[1].split("&");
