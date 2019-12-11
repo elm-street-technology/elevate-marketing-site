@@ -62,7 +62,7 @@ class Index extends Component {
       }
     }
 
-    modal.style.display = "none"; // temporary
+    //modal.style.display = "none"; // temporary
   }
 
   render() {
@@ -569,6 +569,7 @@ cardinner: {
 },
 
 modal: {
+  display: "none",
   position: "fixed",
   zIndex: "10000",
   paddingTop: "100px",
