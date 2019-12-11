@@ -18,6 +18,32 @@ const Brightagent = ({ children, classes, data, tags }) => {
       title: `Your Single Source Solution - ${config.siteTitle}`,
   };
 
+  var firstname = '';
+  var lastname = '';
+  var email = '';
+  var phone = '';
+  if(window != undefined){
+    var urlpieces = window.location.href.split('?');
+    if(urlpieces[1] != undefined){
+      var rawvars = urlpieces[1].split("&");
+      rawvars.forEach(function(thisvar){
+        var pieces = thisvar.split('=');
+        if(pieces[0] == 'f'){
+          firstname = pieces[1];
+        }
+        if(pieces[0] == 'l'){
+          lastname = pieces[1];
+        }
+        if(pieces[0] == 'e'){
+          email = pieces[1];
+        }
+        if(pieces[0] == 'p'){
+          phone = pieces[1];
+        }
+      })
+    }
+  }
+
   return (
 <div className={classes.root}>
       <Helmet>
@@ -65,7 +91,7 @@ const Brightagent = ({ children, classes, data, tags }) => {
            
         </div>
         <div style={{ paddingLeft: "10px", paddingRight: "10px"}}>
-            <FormBrightAgent />
+            <FormBrightAgent firstname={firstname} lastname={lastname} email={email} phone={phone}/>
         </div>
         <div>
             

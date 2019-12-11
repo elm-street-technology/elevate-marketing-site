@@ -5,12 +5,6 @@ import config from "../utils/siteConfig";
 import Container from "../components/Container";
 import FormBright from "../components/FormBright";
 import Brightlogo from "../images/brightmls_logo.png";
-import Bosslogo from "../images/eboss_logo.png";
-import Sprologo from "../images/spro_logo.png";
-import Ask from "../images/askhow.png";
-import Eboss from "../images/eboss_bg.jpg";
-import Spro from "../images/socialpro_bg.jpg";
-import BrightBgSectionExternal from "../components/BrightBgSectionExternal";
 import SEO from "../components/SEO";
 
 const Bright = ({ children, classes, data, tags }) => {

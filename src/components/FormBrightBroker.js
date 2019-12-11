@@ -76,14 +76,15 @@ class FormBrightBroker extends Component {
     return (
       <div className={classNames(classes.root, className)}>
         <Formik
+          enableReinitialize
           initialValues={{
-            firstname: "",
-            lastname: "",
+            firstname: this.props.firstname,
+            lastname: this.props.lastname,
             company: "",
-            email: "",
-            phone: "",
+            email: this.props.email,
+            phone: this.props.phone,
             mls_number: "",
-            form: "bright_form",
+            form: "bright_form_broker",
             list: 85576,
             meetingdate: '',
             meetingtime: '',
@@ -223,82 +224,12 @@ class FormBrightBroker extends Component {
                       component={Input}
                       className={classes.field}
                   />
-              <Field
-                id="role"
-                name="role"
-                label="I am a(n)  &nbsp;&nbsp;(optional)"
-                component={RadioGroup}
-                display="inline"
-                items={[
-                  {
-                    label: "Agent",
-                    value: "Agent",
-                  },
-                  {
-                    label: "Team",
-                    value: "Team",
-                  },
-                  {
-                    label: "Broker",
-                    value: "Broker",
-                  },
-                  {
-                    label: "Other (please specify)*",
-                    value: "Other",
-                  },
-                ]}
-                className={classes.field}
-              />
-              {values.role === "Other" && (
-                <Field
-                  id="roleOther"
-                  name="roleOther"
-                  label="Other"
-                  component={Input}
-                  className={classes.field}
-                  autoFocus
-                />
-              )}
+              
+              <div className={classes.selectlabel} style={{display:"inline"}}>
+              Want to talk on a specific date / time?  <br/>
+Schedule it below.  Otherwise, we’ll be in touch asap.
 
-              <Field
-                id="interests"
-                name="interests"
-                label="I am interested in:  (select all that apply)"
-                component={CheckboxGroup}
-                items={[
-                  {
-                    label: "Elevate BOSS for my brokerage",
-                    value: "Elevate BOSS for my brokerage",
-                  },
-                  {
-                    label: "Social Pro to conquer my online marketing",
-                    value: "Social Pro to conquer my online marketing",
-                  },
-                  {
-                    label: "Lead Generation and scrubbing services",
-                    value: "Lead Generation and scrubbing services",
-                  },
-                  {
-                    label: "Other (please specify)",
-                    value: "Other",
-                  },
-                ]}
-                className={classes.field}
-              />
-              {console.log(values.interests)}
-              {values.interests.includes('Other') && (
-                <Field
-                  id="interestsOther"
-                  name="interestsOther"
-                  label="Other"
-                  component={Input}
-                  className={classes.field}
-                  autoFocus
-                />
-              )}
-              <span className={classes.selectlabel} >
-                Select a date / time to connect with an Elevate Success Coach:
-                </span>
+                </div>
                 <div>
                   <div className={classes.topRow}>
                     <Field id="meetingdate" name="meetingdate" label="Call Date" component={Datetime} timeFormat={false} isValidDate={valid} renderDay={renderDay} />
@@ -335,7 +266,7 @@ class FormBrightBroker extends Component {
                 className={classes.signUpBtn}
                 disabled={isSubmitting}
               >
-                let's connect
+                Please Contact Me
               </button>
               </div>
               <div style={{fontSize:"11px"}}>

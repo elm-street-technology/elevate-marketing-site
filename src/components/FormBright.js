@@ -3,68 +3,39 @@ import classNames from "classnames";
 import { Formik, Form, Field } from "formik";
 import * as Yup from "yup";
 import Alert from "elevate-ui/Alert";
-import CheckboxGroup from "elevate-ui/CheckboxGroup";
 import Input from "elevate-ui/Input";
-import RadioGroup from "elevate-ui/RadioGroup";
-import Typography from "elevate-ui/Typography";
 import withStyles from "elevate-ui/withStyles";
-import Datetime from "elevate-ui/Datetime";
-import moment from "moment";
 
 class FormBright extends Component {
   constructor(props) {
     super(props);
     this.state = {
       formState: null,
+      leadType: 'Agent/Team',
+      firstname: '',
+      lastname: '',
+      email: '',
+      phone: '',
     };
   }
 
   render() {
-    const { formState } = this.state;
+    const { formState,leadType,firstname,lastname,email,phone } = this.state;
     const { classes, className } = this.props;
 
-    var valid = function (current) {
-      return current.day() !== 0 && current.day() !== 6;
-    };
-
-    var renderDay = function (props, currentDate, selectedDate) {
-
-      if (currentDate.month() == moment().month()) {
-        if (currentDate.date() < moment().date()) {
-          if (props.className == "rdtDay") {
-            props.className = "rdtDay rdtDisabled";
-          }
-        }
-      }
-      if (currentDate.month() < moment().month()) {
-        props.className = "rdtDay rdtDisabled";
-      }
-
-      return <td {...props}>{currentDate.date()}</td>;
-    };
 
     if (formState === "success") {
-      return (
-        <div
-          style={{
-            maxWidth: "600px",
-            textAlign: "center",
-            margin: "24px auto",
-          }}
-        >
-          <div >
-                                  
-                      
-            <Typography type="heading3" gutterBottom style={{color:"#f15623",}}>
-              Fantastic!
-            </Typography>
-            <Typography type="heading5" gutterTop>
-        We’ll reach out to you asap via email or telephone.<br/>
-              You can also speak to a member of our sales team immediately by calling  <a href="tel:18339781196" className={classes.link}>833.978.1196</a>.
-            </Typography>
-          </div>
-        </div>
-      );
+      if(leadType == 'Agent/Team'){
+        if (typeof window !== 'undefined') {
+          window.location = '/brightagent?f='+firstname+'&l='+lastname+'&e='+email+'&p='+phone;
+        }
+      }
+      if(leadType == 'Broker'){
+        if (typeof window !== 'undefined') {
+          window.location = '/brightbroker?f='+firstname+'&l='+lastname+'&e='+email+'&p='+phone;
+        }
+      }
+      return null;
     } else if (formState === "error") {
       return (
         <div style={{ maxWidth: "400px", margin: "24px auto" }}>
@@ -150,6 +121,11 @@ class FormBright extends Component {
               .then((res) => {
                 if (res.message === "ok") {
                   this.setState({ formState: "success" });
+                  this.setState({ leadType: values.role});
+                  this.setState({firstname:values.firstname});
+                  this.setState({lastname:values.lastname});
+                  this.setState({email:values.email});
+                  this.setState({phone:values.phone});
 
                   if (window.fbq) {
                     window.fbq("track", "Lead");
@@ -208,133 +184,39 @@ class FormBright extends Component {
                 className={classes.field}
                 type="tel"
               />
-              <Field
-                id="company"
-                name="company"
-                label="Affiliation (optional)"
-                component={Input}
-                className={classes.field}
-              />
+              <div style={{margin:"20px"}} className={classes.headingMedium}>I am a Bright MLS...</div>
+              <div className={classes.topRow}>
+                <div style={{backgroundColor:"#e6e6e6", textAlign:"center",flex:"1",padding:"20px",paddingBottom:"26px"}}>
                   <Field
-                      id="mls_number"
-                      name="mls_number"
-                      label="MLS # (optional)"
-                      component={Input}
-                      className={classes.field}
+                  id="role1"
+                  name="role"
+                  type="radio"
+                  display="inline"
+                  value="Broker"
+                  className={classes.radioField}
                   />
-              <Field
-                id="role"
-                name="role"
-                label="I am a(n)  &nbsp;&nbsp;(optional)"
-                component={RadioGroup}
-                display="inline"
-                items={[
-                  {
-                    label: "Agent",
-                    value: "Agent",
-                  },
-                  {
-                    label: "Team",
-                    value: "Team",
-                  },
-                  {
-                    label: "Broker",
-                    value: "Broker",
-                  },
-                  {
-                    label: "Other (please specify)*",
-                    value: "Other",
-                  },
-                ]}
-                className={classes.field}
-              />
-              {values.role === "Other" && (
-                <Field
-                  id="roleOther"
-                  name="roleOther"
-                  label="Other"
-                  component={Input}
-                  className={classes.field}
-                  autoFocus
-                />
-              )}
-
-              <Field
-                id="interests"
-                name="interests"
-                label="I am interested in:  (select all that apply)"
-                component={CheckboxGroup}
-                items={[
-                  {
-                    label: "Elevate BOSS for my brokerage",
-                    value: "Elevate BOSS for my brokerage",
-                  },
-                  {
-                    label: "Social Pro to conquer my online marketing",
-                    value: "Social Pro to conquer my online marketing",
-                  },
-                  {
-                    label: "Lead Generation and scrubbing services",
-                    value: "Lead Generation and scrubbing services",
-                  },
-                  {
-                    label: "Other (please specify)",
-                    value: "Other",
-                  },
-                ]}
-                className={classes.field}
-              />
-              {console.log(values.interests)}
-              {values.interests.includes('Other') && (
-                <Field
-                  id="interestsOther"
-                  name="interestsOther"
-                  label="Other"
-                  component={Input}
-                  className={classes.field}
-                  autoFocus
-                />
-              )}
-              <span className={classes.selectlabel} >
-                Select a date / time to connect with an Elevate Success Coach:
-                </span>
-                <div>
-                  <div className={classes.topRow}>
-                    <Field id="meetingdate" name="meetingdate" label="Call Date" component={Datetime} timeFormat={false} isValidDate={valid} renderDay={renderDay} />
-                    <div style={{ margin: "8px auto 16px" }}>
-                      <label for="meetingtime" className={classes.selectlabel}>
-                        Call Time
-                        </label>
-                      <select name="meetingtime" value={values.meetingtime} onChange={handleChange} onBlur={handleBlur} style={{ display: "block" }} className={classes.selectfield}>
-                        <option value="" label="Select a time slot" />
-                        <option value="09:00:00">9:00am (EDT)</option>
-                        <option value="09:30:00">9:30am (EDT)</option>
-                        <option value="10:00:00">10:00am (EDT)</option>
-                        <option value="10:30:00">10:30am (EDT)</option>
-                        <option value="11:00:00">11:00am (EDT)</option>
-                        <option value="11:30:00">11:30am (EDT)</option>
-                        <option value="12:00:00">12:00pm (EDT)</option>
-                        <option value="12:30:00">12:30pm (EDT)</option>
-                        <option value="13:00:00">1:00pm (EDT)</option>
-                        <option value="13:30:00">1:30pm (EDT)</option>
-                        <option value="14:00:00">2:00pm (EDT)</option>
-                        <option value="14:30:00">2:30pm (EDT)</option>
-                        <option value="15:00:00">3:00pm (EDT)</option>
-                        <option value="15:30:00">3:30pm (EDT)</option>
-                        <option value="16:00:00">4:00pm (EDT)</option>
-                        <option value="16:30:00">4:30pm (EDT)</option>
-                        <option value="17:00:00">5:00pm (EDT)</option>
-                        <option value="17:30:00">5:30pm (EDT)</option>
-                      </select>
-                    </div>
-                  </div>
+                  <div className={classes.radioLabel}>Broker</div>
+                  
                 </div>
+                <div style={{backgroundColor:"#e6e6e6", textAlign:"center",flex:"1",padding:"20px",paddingBottom:"26px"}}>
+                  <Field
+                  id="role2"
+                  name="role"
+                  type="radio"
+                  display="inline"
+                  value="Agent/Team"
+                  className={classes.radioField}
+                  /> 
+                  <span className={classes.radioLabel}>Agent/Team</span> 
+                  
+                </div>
+              </div>
               <button
                 type="submit"
                 className={classes.signUpBtn}
                 disabled={isSubmitting}
               >
-                let's connect
+                Let's Go
               </button>
               </div>
               <div style={{fontSize:"11px"}}>
@@ -367,6 +249,23 @@ export default withStyles((theme) => ({
     height: "50px",
     fontWeight: "600",
   },
+  fieldLarge: {
+    borderRadius: "6px",
+    border: "2px solid #ECECEC",
+    height: "50px",
+    fontWeight: "600",
+    fontSize:"30px"
+  },
+  radioField: {
+    marginRight:"20px"
+  },
+  radioLabel:{
+    display:"inline",
+    fontWeight:"600",
+    fontSize:"20px",
+    position: "relative",
+    top: "2px"
+  },
   topRow: {
     display: "flex",
     flexDirection: "row",
@@ -391,6 +290,14 @@ export default withStyles((theme) => ({
     textAlign:"center",
     padding:"3px",
     lineHeight:"38px"
+  },
+  headingMedium:{
+    fontSize: "28px",
+    fontWeight: "700",
+    color: "#f15623",
+    textAlign:"center",
+    padding:"3px",
+    lineHeight:"33px"
   },
   headingText:{
     color: "#777777",
