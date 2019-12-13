@@ -12,7 +12,7 @@ import HeadBackground from "../images/broker_bg.jpg"
 import BOSSLogo from "../images/elevate_boss_white_logo.png"
 import FormBroker from "../components/FormBroker"
 
-const Broker = ({ children, classes, data, tags }) => {
+const Brokers = ({ children, classes, data, tags }) => {
   const postNode = {
       title: `Your Single Source Solution - ${config.siteTitle}`,
   };
@@ -38,12 +38,12 @@ const Broker = ({ children, classes, data, tags }) => {
         <Row>
         <Col>
             <div style={{textAlign:"center"}}>
-            <div style={{textAlign:"center",margin:"30px"}}>
+            <div style={{textAlign:"center",margin:"20px"}}>
                 
                 <h1 className={classes.heading}>Meet the <span style={{color:"#f05953"}}>BOSS</span></h1>
             </div>
-            <span style={{color:"#2f2574"}}>
-                <h4 className={classes.heading2}>ONE singular solution that empowers brokers (and their agents) with the tools, insights &amp; analytics to manage their business.</h4> </span>
+            <div style={{marginBottom:"30px"}}>
+                <p>ONE singular solution that empowers brokers (and their agents) with the tools, insights &amp; analytics to manage their business.</p> </div>
 
             <div className={classes.fullWidthVid}>
             <div aspectRatio="16by9">
@@ -211,4 +211,4 @@ export default withStyles((theme) => ({
     },
   },
 
-}))(Broker);
+}))(Brokers);
