@@ -144,7 +144,7 @@ class FormBroker extends Component {
                     });
                   }
                   if (window.ga) {
-                    window.ga('send','event','form','form_completed','dms');
+                    window.ga('send','event','form','form_completed','broker');
                   }
                 } else {
                   this.setState({ formState: "error" });
