@@ -10,6 +10,7 @@ import Screenshot from "../images/pdf_screenshot.png"
 import ResponsiveVid from "../components/ResponsiveVid"
 import HeadBackground from "../images/broker_bg.jpg"
 import BOSSLogo from "../images/elevate_boss_white_logo.png"
+import FormBroker from "../components/FormBroker"
 
 const Broker = ({ children, classes, data, tags }) => {
   const postNode = {
@@ -67,6 +68,7 @@ const Broker = ({ children, classes, data, tags }) => {
                 {/*
             <FormLanding firstname={this.state.firstname} lastname={this.state.lastname} email={this.state.email} phone={this.state.phone} />
                 */}
+                <FormBroker />
             </div>
             
         </Col>
