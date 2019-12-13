@@ -62,9 +62,9 @@ const Broker = ({ children, classes, data, tags }) => {
                 
                 <h1 className={classes.heading}>Tour the <span style={{color:"#f05953"}}>BOSS</span></h1>
             </div>
-            <p>Request your personal consultation with our brokerage development team using the form below, or call 833.978.1196 to speak to us today.</p>
+            <p>Request your personal consultation with our brokerage development team using the form below,<br/>or call 833.978.1196 to speak to us today.</p>
             </div>
-            <div style={{width:"80%",marginLeft:"auto",marginRight:"auto"}}>
+            <div style={{width:"80%",marginLeft:"auto",marginRight:"auto",marginTop:"20px"}}>
                 {/*
             <FormLanding firstname={this.state.firstname} lastname={this.state.lastname} email={this.state.email} phone={this.state.phone} />
                 */}
