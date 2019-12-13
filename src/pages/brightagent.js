@@ -54,10 +54,12 @@ const Brightagent = ({ children, classes, data, tags }) => {
 <Container>
       <div className={classes.top} style={{paddingBottom:"35px", paddingRight:"15px", paddingLeft:"15px", paddingTop:"55px"}}>
           <div className={classes.centerHeading}>
-                            <div style={{ textAlign: "center",paddingBottom:"22px", paddingTop:"22px" }}>
+                            <div style={{ textAlign: "center",paddingBottom:"22px", paddingTop:"42px" }}>
                             <img src={Sprologo2} width="320" />
                             </div>
                             <div className={classes.heading}>The Power of MARKETING</div>
+
+                           
           </div>
       </div>
 </Container>
@@ -105,7 +107,19 @@ const Brightagent = ({ children, classes, data, tags }) => {
 
 
 
-
+<div style={{backgroundColor:"#36383a", paddingTop:"25px", paddingBottom:"50px",}}>
+<Container>
+            <div className={classes.flexContainer}>
+                <div className={classes.flexItem3}><div className={classes.sub} style={{paddingTop:"12px"}}>Are You a Broker?</div>
+                  <div className={classes.subtext} style={{color:"#ffffff"}}>Do you want ONE singular solution that empowers brokers (and their agents)
+                  with the tools, insights &amp; analytics to manage their business?</div></div>
+                  <div className={classes.flexItem2}>
+                                  <a target="_blank" href="/brightbroker" className={classes.signUpBtn}>
+                                    Meet The Boss
+                                  </a></div>
+            </div>
+</Container>
+</div>
 
 
 
@@ -174,6 +188,29 @@ export default withStyles((theme) => ({
     marginBottom: "12px",
   },
 
+  sub: {
+    fontSize: "20px",
+    fontWeight: "700",
+    letterSpacing: ".14px",
+    color: "#f15623",
+    marginBottom: "12px",
+  },
+
+  signUpBtn: {
+    width: "250px",
+    maxWidth: "250px",
+    fontSize: "16px",
+    lineHeight: "26px",
+    fontWeight: "600",
+    color: "#FFF",
+    backgroundColor: "#f15623",
+    borderRadius: "6px",
+    padding: "12px",
+    marginTop: "30px",
+    textDecoration: "none",
+
+  },
+
   subtext: {
     fontSize: "16px",
     fontWeight: "300",
@@ -214,7 +251,7 @@ export default withStyles((theme) => ({
     maxWidth: "100%",
     width: "100%",
     paddingRight: "0px",
-    paddingBottom: "25px",
+    paddingBottom: "18px",
   
   
     [theme.breakpoints[900]]: {
@@ -229,14 +266,15 @@ export default withStyles((theme) => ({
     maxWidth: "100%",
     width: "100%",
     paddingRight: "0px",
-    paddingBottom: "25px",
+    paddingTop:"35px",
   
   
     [theme.breakpoints[900]]: {
-        maxWidth: "26%",
-        width: "26%",
+        maxWidth: "30%",
+        width: "30%",
         paddingRight: "20px",
         paddingBottom: "0px",
+        paddingTop:"35px",
     },
   },
 
@@ -244,12 +282,11 @@ export default withStyles((theme) => ({
     maxWidth: "100%",
     width: "100%",
     paddingRight: "0px",
-    paddingBottom: "25px",
   
   
     [theme.breakpoints[900]]: {
-        maxWidth: "40%",
-        width: "40%",
+        maxWidth: "70%",
+        width: "70%",
         paddingRight: "20px",
         paddingBottom: "0px",
     },

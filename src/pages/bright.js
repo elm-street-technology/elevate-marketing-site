@@ -4,7 +4,8 @@ import withStyles from "elevate-ui/withStyles";
 import config from "../utils/siteConfig";
 import Container from "../components/Container";
 import FormBright from "../components/FormBright";
-import Brightlogo from "../images/brightmls_logo.png";
+import Eboss from "../images/eboss_bg.jpg";
+import Brightlogow from "../images/bright_logow.png";
 import SEO from "../components/SEO";
 
 const Bright = ({ children, classes, data, tags }) => {
@@ -19,20 +20,21 @@ const Bright = ({ children, classes, data, tags }) => {
       </Helmet>
       <SEO postNode={postNode} pagePath="bright" customTitle />
 
+<div style={{backgroundImage:"url("+Eboss+")", backgroundSize:"cover", backgroundPosition:"centerTop"}}>
 <Container>
-      <div className={classes.top} style={{paddingBottom:"40px", paddingRight:"15px", paddingLeft:"15px", paddingTop:"55px"}}>
+      <div className={classes.top} style={{paddingBottom:"60px", paddingRight:"15px", paddingLeft:"15px", paddingTop:"75px"}}>
           <div className={classes.centerHeading}>
                             <div className={classes.heading} style={{paddingTop:"40px"}}>THE POWER OF</div>
                             <div style={{ textAlign: "center",paddingBottom:"22px" }}>
-                            <img src={Brightlogo} width="180" />
+                            <img src={Brightlogow} width="180" />
                             </div>
-                            <div className={classes.subtext}>A partnership designed to provide Bright MLS brokers,<br />
+                            <div className={classes.subtext} style={{color:"#ffffff"}}>A partnership designed to provide Bright MLS brokers,<br />
                             agents &amp; teams with the best marketing and productivity tools on the market.
                             </div>
           </div>
       </div>
 </Container>
-
+</div>
 
 
 

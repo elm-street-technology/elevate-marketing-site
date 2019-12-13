@@ -77,7 +77,7 @@ const Brightbroker = ({ children, classes, data, tags }) => {
         
         
                     <div style={{ textAlign: "center"}} className={classes.videoEmbed}>
-                        <iframe className={classes.videoContainer} src="https://www.youtube.com/embed/wUNYSRnAbog?rel=0"
+                        <iframe className={classes.videoContainer} src="https://www.youtube.com/embed/vd7DeTuNb6w"
                          frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                     </div>
 </div>
@@ -108,6 +108,19 @@ const Brightbroker = ({ children, classes, data, tags }) => {
 
 
 
+
+<div style={{backgroundColor:"#36383a", paddingTop:"25px", paddingBottom:"50px",}}>
+<Container>
+            <div className={classes.flexContainer}>
+                <div className={classes.flexItem3}><div className={classes.sub} style={{paddingTop:"12px"}}>Are You an Agent?</div>
+                  <div className={classes.subtext} style={{color:"#ffffff"}}>Get ready to sell more homes, faster...with this all-in-one marketing solution.</div></div>
+                  <div className={classes.flexItem2}>
+                                  <a target="_blank" href="/brightagent" className={classes.signUpBtn}>
+                                    Elevate Your Biz
+                                  </a></div>
+            </div>
+</Container>
+</div>
 
 
 
@@ -142,6 +155,7 @@ const Brightbroker = ({ children, classes, data, tags }) => {
             </div>
         </Container>
 </div>
+
 
 
 
@@ -223,6 +237,29 @@ export default withStyles((theme) => ({
     marginBottom: "12px",
   },
 
+  sub: {
+    fontSize: "20px",
+    fontWeight: "700",
+    letterSpacing: ".14px",
+    color: "#f15623",
+    marginBottom: "12px",
+  },
+
+  signUpBtn: {
+    width: "250px",
+    maxWidth: "250px",
+    fontSize: "16px",
+    lineHeight: "26px",
+    fontWeight: "600",
+    color: "#FFF",
+    backgroundColor: "#f15623",
+    borderRadius: "6px",
+    padding: "12px",
+    marginTop: "30px",
+    textDecoration: "none",
+
+  },
+
   subtext: {
     fontSize: "16px",
     fontWeight: "300",
@@ -297,14 +334,15 @@ export default withStyles((theme) => ({
     maxWidth: "100%",
     width: "100%",
     paddingRight: "0px",
-    paddingBottom: "25px",
+    paddingTop:"35px",
   
   
     [theme.breakpoints[900]]: {
-        maxWidth: "26%",
-        width: "26%",
+        maxWidth: "30%",
+        width: "30%",
         paddingRight: "20px",
         paddingBottom: "0px",
+        paddingTop:"35px",
     },
   },
 
@@ -312,12 +350,11 @@ export default withStyles((theme) => ({
     maxWidth: "100%",
     width: "100%",
     paddingRight: "0px",
-    paddingBottom: "25px",
   
   
     [theme.breakpoints[900]]: {
-        maxWidth: "40%",
-        width: "40%",
+        maxWidth: "70%",
+        width: "70%",
         paddingRight: "20px",
         paddingBottom: "0px",
     },
