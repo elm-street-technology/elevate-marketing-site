@@ -8,9 +8,13 @@ import Brightlogo from "../images/brightmls_logo.png";
 import Leadsmo from "../images/leads_mo.gif";
 import Sprologo from "../images/spro_logo.png";
 import Ask from "../images/askhow.png";
-import Matto from "../images/matto_bg.jpg";
+import FormGoals from "../components/FormGoals";
+import Matto from "../images/matto_bg2.jpg";
+import MattLogo from "../images/matt_mentor.png";
+import Blogbg from "../images/365_bg.jpg";
+import Goalspic from "../images/goals_cover.jpg";
 import Spro from "../images/socialpro_bg.jpg";
-import BgSectionExternal from "../components/2020BgSectionExternal";
+import BgSectionExternalGoals from "../components/BgSectionExternalGoals";
 import BrightBgSectionExternal from "../components/BrightBgSectionExternal";
 import SEO from "../components/SEO";
 
@@ -26,52 +30,129 @@ const Goal = ({ children, classes, data, tags }) => {
       </Helmet>
       <SEO postNode={postNode} pagePath="2020_goal_setting" customTitle />
 
-<Container>
-      <div className={classes.top} style={{paddingBottom:"15px", paddingRight:"25px", paddingLeft:"25px", paddingTop:"99px"}}>
-          <div className={classes.centerHeading}>
-                            <div className={classes.bold}>“A life dedicated to authentic relationships is a life free of regret.”</div>
-                            <div className={classes.subHeading} style={{paddingTop:"10px"}}>DAVID OSBORN</div>
+      
+      
+      <div style={{paddingTop:"90px", paddingBottom:"20px",}}>
+        <Container>
+        <div className={classes.heading}>2020 GOAL SETTING WEBINAR</div>
+        <div className={classes.subHeading2}><div className={classes.bold}>AUDIENCE GOODIES</div>
+                            <br />
                             <div className={classes.subtext}>
                             -----
-                            <br /><br />
-                              The #1 high-end, luxury real estate team leader in South Carolina by the Wall Street Journal shares the secrets to his success. Once a year, Matt O’Neill of the Matt O’Neill Team evaluates the 7 elements in his life that require his attention in order to strive for personal growth, professional growth, and self-improvement. Surprisingly, they aren’t what you might expect!
-<br /><br />
-                            In the brief video below, Matt shares those 7 elements and leads you through your own personal self-evaluation. Then, be sure to sign up for his 1-hr webinar on December 17th where he’ll deep dive into the idea of “Goal Setting”, how it’s changed his life, and how it’s helped him achieve over $225M in business in 2019.
-                            
                             </div>
-
-                            <br /><br />
-                            <div className={classes.subHeading}>ARE YOU READY FOR 2020 TO BE YOUR BEST YEAR YET? START HERE!</div>
-          </div>
-      </div>
-</Container>
-
-<Container>
-<div style={{textAlign: "center", maxWidth:"800px", marginLeft:"auto",marginRight:"auto", paddingBottom:"55px"}}>
-        <div style={{ textAlign: "center"}} className={classes.videoEmbed}>
-                        <iframe className={classes.videoContainer} src="https://www.youtube.com/embed/biy0h_CeCto"
-                         frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        
         </div>
-</div>
-</Container>
 
-<Container>
-      <div style={{paddingBottom:"55px", paddingRight:"25px", paddingLeft:"25px",}}>
-          <div className={classes.centerHeading}>
-          <span className={classes.subHeading}>KEY DISCUSSION POINTS</span><br /><br />
-                            <div className={classes.subtext}><span className={classes.bold}>6:14</span> Business &amp; Career<br />
-                            <span className={classes.bold}>6:51</span> Health &amp; Fitness<br />
-                            <span className={classes.bold}>7:08</span> Family, Friendships &amp; Relationships<br />
-                            <span className={classes.bold}>7:55</span> Lifestyle &amp; Adventure<br />
-                            <span className={classes.bold}>8:20</span> Financial &amp; Investment<br />
-                            <span className={classes.bold}>8:32</span> Personal Growth &amp; Intellectual Development<br />
-                            <span className={classes.bold}>9:02</span> Practicing Appreciation &amp; Gratitude<br />
-                            <span className={classes.bold}>10:00</span> Final “Focusing” Question (Courtesy of Gary Keller)<br />
-                            </div>
-                        
-          </div>
+                           
+        </Container>
       </div>
-</Container>
+      
+      
+      
+      
+      
+      <div style={{paddingBottom:"30px",}}>
+        <Container>
+
+        <div style={{textAlign:"center", paddingBottom:"45px", padding:"25px"}}><div className={classes.subHeading}>ON-DEMAND WEBINAR RECORDING</div>
+    <div className={classes.subHeading2}><div className={classes.bold}>COMING SOON!</div></div></div>
+
+
+
+            <div className={classes.flexContainer}>
+                <div className={classes.flexItem}>
+
+                   
+               
+                    
+
+                </div>
+                <div className={classes.flexItem} style={{paddingLeft:"20px", paddingRight:"20px", paddingBottom:"20px",}}>
+               
+                <div className={classes.subtext}><div className={classes.sub}>Missed the webinar?</div>
+                Looking for a repeat performance?<br />
+                We’ve got you covered!  
+                  <br /><br />
+                Enjoy this 1-hour, on-demand recording of Matt O’Neill’s<br />
+                “2020 Goal Setting” webinar.
+</div>
+                    
+                </div>
+            </div>
+        </Container>
+</div>
+
+
+<BgSectionExternalGoals bgImage={Matto} secTitle="FREE WEBINAR DOWNLOADS" secLink="/assets/Elevate_GoalSettingWorkshop_FreeDownload.pdf" secButton="Download Now" secImage={Goalspic}>
+Continue your preparation for making 2020 your best year yet with Matt’s “Wheel of Life” self-evaluation, PLUS his “magic” document: "Your Best Year Yet: Goal Setting Workshop".
+        </BgSectionExternalGoals>
+
+
+
+
+
+
+        <div style={{backgroundColor:"#ffffff",}}>
+      <Container>
+
+        <div >
+            <div style={{ maxWidth: "900px", backgroundColor: "#ffffff", marginRight:"auto",marginLeft:"auto", paddingTop:"60px", paddingBottom:"60px"}}>
+                <div className={classes.landingHeaderStyle}>
+                   
+                </div>
+                <div style={{ paddingLeft: "10px", paddingRight: "10px"}}>
+                    <FormGoals />
+                </div>
+                <div>
+                    
+                </div>
+            </div>
+        </div>
+      </Container>
+      </div>
+
+
+
+
+      <div style={{paddingBottom:"30px", backgroundColor:"#373b3b"}}>
+        <Container>
+
+        <div style={{textAlign:"center", paddingBottom:"55px", padding:"25px", paddingTop:"45px"}}><div className={classes.subHeading}>MONDAY MORNING MENTOR<br />
+        with Matt O’Neill</div>
+    <div className={classes.subHeading2} style={{color:"#ffffff"}}><div className={classes.bold}>Kick-Start Your Week with 30-Minutes of Awesomeness</div></div></div>
+
+
+
+            <div className={classes.flexContainer}>
+                <div className={classes.flexItem}>
+
+                <div style={{ textAlign: "center",paddingBottom:"22px" }}>
+                            <img src={MattLogo} width="290" />
+                            </div>
+               
+                    
+
+                </div>
+                <div className={classes.flexItem} style={{paddingLeft:"20px", paddingRight:"20px", paddingBottom:"20px",}}>
+               
+                <div className={classes.subtext} style={{color:"#f7f7f7"}}>Launching Monday, January 6th on the <a target="_blank" href="https://www.facebook.com/TryElevateRE/" style={{color:"#54a59d"}}>Elevate Facebook channel.</a>  All you need to do is follow us to receive alerts.
+                      <br /><br />
+                      Kick-start your week with a 30-minute, Facebook live stream session with Matt O’Neill on the <a target="_blank" href="https://www.facebook.com/TryElevateRE/" style={{color:"#54a59d"}}>@TryElevateRE</a> channel.
+                      <br /><br />
+                      Explore hot real estate topics each week such as:<br />
+                      •	Goal Setting<br />
+                      •	Lead Generation<br />
+                      •	Professional Growth<br />
+                      •	Work / Life Balance<br />
+                      •	Online Marketing<br />
+                      •	And much more<br />
+
+</div>
+                    
+                </div>
+            </div>
+        </Container>
+</div>
 
 
 
@@ -79,9 +160,15 @@ const Goal = ({ children, classes, data, tags }) => {
 
 
 
-<BgSectionExternal bgImage={Matto} secTitle="2020 GOAL SETTING" secLink="https://attendee.gotowebinar.com/register/6407595729034326795?source=blog" secButton="Register For Webinar">
-Register for Matt’s upcoming webinar on Dec. 17th “2020 Goal Setting. Make It Your Best Year Yet!” and spend an hour deep-diving into your 2020 marketing strategy.
-</BgSectionExternal>
+
+
+
+
+
+
+
+
+
 
 
 
@@ -131,13 +218,31 @@ export default withStyles((theme) => ({
   },
 
   subHeading: {
-    fontSize: "18px",
+    fontSize: "24px",
     fontWeight: "700",
     lineHeight: "28px",
     color: "#55c3ba",
     letterSpacing: ".14px",
     textAlign: "center",
-    margin: "0 auto 36px",
+    margin: "0 auto 5px",
+  },
+
+  subHeading2: {
+    fontSize: "18px",
+    fontWeight: "700",
+    lineHeight: "28px",
+    color: "#373b3b",
+    letterSpacing: ".14px",
+    textAlign: "center",
+    margin: "0 auto 5px",
+  },
+
+  sub: {
+    fontSize: "18px",
+    fontWeight: "700",
+    lineHeight: "28px",
+    color: "#55c3ba",
+    letterSpacing: ".14px",
   },
   landingHeaderStyle:{
     textAlign:"center",
