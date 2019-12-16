@@ -38,7 +38,7 @@ const Goal = ({ children, classes, data, tags }) => {
         <div className={classes.subHeading2}><div className={classes.bold}>AUDIENCE GOODIES</div>
                             <br />
                             <div className={classes.subtext}>
-                            -----
+                            
                             </div>
         
         </div>
@@ -117,7 +117,7 @@ Continue your preparation for making 2020 your best year yet with Matt’s “Wh
       <div style={{paddingBottom:"30px", backgroundColor:"#373b3b"}}>
         <Container>
 
-        <div style={{textAlign:"center", paddingBottom:"55px", padding:"25px", paddingTop:"45px"}}><div className={classes.subHeading}>MONDAY MORNING MENTOR<br />
+        <div style={{textAlign:"center", paddingBottom:"65px", padding:"25px", paddingTop:"55px"}}><div className={classes.subHeading}>MONDAY MORNING MENTOR<br />
         with Matt O’Neill</div>
     <div className={classes.subHeading2} style={{color:"#ffffff"}}><div className={classes.bold}>Kick-Start Your Week with 30-Minutes of Awesomeness</div></div></div>
 
