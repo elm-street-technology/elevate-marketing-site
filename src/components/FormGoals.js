@@ -83,7 +83,7 @@ class FormMastermind extends Component {
             email: "",
             phone: "",
             mls_number: "",
-            form: "mastermind_form",
+            form: "goals_form",
             list: 89310,
             meetingdate: '',
             meetingtime: '',
