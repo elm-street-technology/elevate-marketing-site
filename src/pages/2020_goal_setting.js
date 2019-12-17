@@ -63,7 +63,7 @@ const Goal = ({ children, classes, data, tags }) => {
                 <div className={classes.flexItem}>
 
                    
-               
+                <iframe width="470" height="295" src="https://www.youtube.com/embed/Ga01gwAjr-Q" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                     
 
                 </div>
