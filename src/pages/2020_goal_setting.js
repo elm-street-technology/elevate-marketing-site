@@ -51,11 +51,11 @@ const Goal = ({ children, classes, data, tags }) => {
       
       
       
-      <div style={{paddingBottom:"30px",}}>
+      <div style={{paddingBottom:"50px",}}>
         <Container>
 
         <div style={{textAlign:"center", paddingBottom:"45px", padding:"25px"}}><div className={classes.subHeading}>ON-DEMAND WEBINAR RECORDING</div>
-    <div className={classes.subHeading2}><div className={classes.bold}>COMING SOON!</div></div></div>
+    <div className={classes.subHeading2}></div></div>
 
 
 
