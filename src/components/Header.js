@@ -206,7 +206,7 @@ class Header extends Component {
         />
       </header>
         <div className={classes.violator}>
-        <span style={{fontWeight:"bold"}}>JOYFUL END OF YEAR SPECIALS ON MARKETING &amp; LEAD GENERATION</span><br/>
+        <span style={{fontWeight:"bold"}}>Special New Year Pricing on EXCLUSIVE Buyer / Seller Leads.  Secure Your Markets TODAY. </span><br/>
         Schedule a <Link to="/get-started" style={{color:"#FFFFFF"}}>15-minute demo NOW</Link> or call 844.792.0260
         </div>
       </div>

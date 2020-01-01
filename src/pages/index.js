@@ -568,6 +568,7 @@ cardinner: {
 },
 
 modal: {
+  display: "none",
   position: "fixed",
   zIndex: "10000",
   paddingTop: "100px",
