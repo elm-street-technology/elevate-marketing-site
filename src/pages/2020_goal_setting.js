@@ -49,7 +49,36 @@ const Goal = ({ children, classes, data, tags }) => {
       
       
       
-      
+      <div style={{paddingBottom:"50px",}}>
+        <Container>
+
+        <div style={{textAlign:"center", paddingBottom:"45px", padding:"25px"}}><div className={classes.subHeading}>ON-DEMAND WEBINAR RECORDING</div>
+    <div className={classes.subHeading2}></div></div>
+
+
+
+            <div className={classes.flexContainer}>
+                <div className={classes.flexItem}>
+
+                   
+                <iframe width="470" height="295" src="https://www.youtube.com/embed/UoFQnPfTRyQ" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    
+
+                </div>
+                <div className={classes.flexItem} style={{paddingLeft:"20px", paddingRight:"20px", paddingBottom:"20px",}}>
+               
+                <div className={classes.subtext}><div className={classes.sub}>Missed the webinar?</div>
+                Looking for a repeat performance?<br />
+                We’ve got you covered!  
+                  <br /><br />
+                Enjoy this 1-hour, on-demand recording of Matt O’Neill’s<br />
+                “2020 Goal Setting” webinar.
+</div>
+                    
+                </div>
+            </div>
+        </Container>
+</div> 
       
 
 
