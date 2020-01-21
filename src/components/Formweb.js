@@ -127,7 +127,10 @@ class Formweb extends Component {
                 }
               }
               if (key == "interests"){
-                notes = notes + "," + values.interests.join(",");
+                if(values.interests.length > 0){
+                  notes = notes + "," + values.interests.join(",");
+                }
+                
               }
             });
             
