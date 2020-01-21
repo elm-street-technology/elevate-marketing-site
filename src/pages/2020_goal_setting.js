@@ -51,36 +51,7 @@ const Goal = ({ children, classes, data, tags }) => {
       
       
       
-      <div style={{paddingBottom:"50px",}}>
-        <Container>
 
-        <div style={{textAlign:"center", paddingBottom:"45px", padding:"25px"}}><div className={classes.subHeading}>ON-DEMAND WEBINAR RECORDING</div>
-    <div className={classes.subHeading2}></div></div>
-
-
-
-            <div className={classes.flexContainer}>
-                <div className={classes.flexItem}>
-
-                   
-                <iframe width="470" height="295" src="https://www.youtube.com/embed/Ga01gwAjr-Q" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-                    
-
-                </div>
-                <div className={classes.flexItem} style={{paddingLeft:"20px", paddingRight:"20px", paddingBottom:"20px",}}>
-               
-                <div className={classes.subtext}><div className={classes.sub}>Missed the webinar?</div>
-                Looking for a repeat performance?<br />
-                We’ve got you covered!  
-                  <br /><br />
-                Enjoy this 1-hour, on-demand recording of Matt O’Neill’s<br />
-                “2020 Goal Setting” webinar.
-</div>
-                    
-                </div>
-            </div>
-        </Container>
-</div>
 
 
 <BgSectionExternalGoals bgImage={Matto} secTitle="FREE WEBINAR DOWNLOADS" secLink="/assets/Elevate_GoalSettingWorkshop_FreeDownload.pdf" secButton="Download Now" secImage={Goalspic}>
@@ -135,9 +106,9 @@ Continue your preparation for making 2020 your best year yet with Matt’s “Wh
                 </div>
                 <div className={classes.flexItem} style={{paddingLeft:"20px", paddingRight:"20px", paddingBottom:"20px",}}>
                
-                <div className={classes.subtext} style={{color:"#f7f7f7"}}>Launching Monday, January 6th on the <a target="_blank" href="https://www.facebook.com/TryElevateRE/" style={{color:"#54a59d"}}>Elevate Facebook channel.</a>  All you need to do is follow us to receive alerts.
-                      <br /><br />
-                      Kick-start your week with a 30-minute, Facebook live stream session with Matt O’Neill on the <a target="_blank" href="https://www.facebook.com/TryElevateRE/" style={{color:"#54a59d"}}>@TryElevateRE</a> channel.
+                <div className={classes.subtext} style={{color:"#f7f7f7"}}>Kick-start your week every Monday morning with a 30-minute, Facebook live stream session with Matt O’Neill on the <a target="_blank" href="https://www.facebook.com/TryElevateRE/" style={{color:"#54a59d"}}>@TryElevateRE</a> channel. Matt connects in at 10:30am EST / 7:30am PST (unless he's on the road traveling) with recordings available on the channel after each session. All you need to do is follow us to receive alerts!
+
+                      
                       <br /><br />
                       Explore hot real estate topics each week such as:<br />
                       •	Goal Setting<br />
