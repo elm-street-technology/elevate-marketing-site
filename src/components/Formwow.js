@@ -179,8 +179,11 @@ class Formwow extends Component {
           render={({ values, isSubmitting,handleBlur, handleChange }) => (
             <Form noValidate>
               <div style={{marginBottom:"30px"}}>
-                <div className={classes.headingLarge} style={{ marginBottom: "25px" }}>Social Media Campaigns<br />
-                starting as low as $80/m!</div>
+                <div className={classes.headingLarge} style={{ marginBottom: "25px" }}>Struggling with social media to grow<br />
+                your real estate business?</div>
+
+                <div style={{color:"#495050", lineHeight:"22px", paddingBottom:"25px"}}>Turn your social from a toy into a tool with an amazing, automated social media program that delivers results. Request a quick 15-minute demo today.</div>
+
 
                 <div className={classes.fullWidthVid}>
                   <div aspectRatio="16by9">
@@ -280,20 +283,20 @@ class Formwow extends Component {
                 component={CheckboxGroup}
                 items={[
                   {
-                    label: "Elevate BOSS for my brokerage",
-                    value: "Elevate BOSS for my brokerage",
+                    label: "Digital Marketing Services (Website, Email, Social, etc.)",
+                    value: "Digital Marketing Services (Website, Email, Social, etc.)",
                   },
                   {
-                    label: "Social Pro to conquer my online marketing",
-                    value: "Social Pro to conquer my online marketing",
+                    label: "Lead Generation, Parsing & Scrubbing Services",
+                    value: "Lead Generation, Parsing & Scrubbing Services",
                   },
                   {
-                    label: "Lead Generation and scrubbing services",
-                    value: "Lead Generation and scrubbing services",
+                    label: "CRM Solutions",
+                    value: "CRM Solutions",
                   },
                   {
-                    label: "Other (please specify)",
-                    value: "Other",
+                    label: "Custom Creative / Marketing Services",
+                    value: "Custom Creative / Marketing Services",
                   },
                 ]}
                 className={classes.field}
