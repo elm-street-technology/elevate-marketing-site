@@ -36,14 +36,15 @@ module.exports = class HTML extends React.Component {
             src="https://easyemerge.com/landing_src/emerge.js"
           />
           <script defer src="https://leadsbridge.com/pixels/1d72310edc006dadf2190caad5802983.js" />
-          <script src={'/js/drift.js'}  />
+          <script async src={'/js/drift.js'}  />
+          <script
+            defer
+            src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/core.js"
+          />
         </head>
         <body {...this.props.bodyAttributes}>
           
-          <script
-            async
-            src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/core.js"
-          />
+          
           <script
             async
             src="https://www.googletagmanager.com/gtag/js?id=AW-980447970"
@@ -97,7 +98,7 @@ module.exports = class HTML extends React.Component {
               __html: `
                 setTimeout(function(){ 
                     LoadDriftWidget() 
-                }, 2000)
+                }, 3000)
                 `,
             }}
           />
