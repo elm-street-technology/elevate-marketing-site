@@ -36,7 +36,7 @@ module.exports = class HTML extends React.Component {
             src="https://easyemerge.com/landing_src/emerge.js"
           />
           <script defer src="https://leadsbridge.com/pixels/1d72310edc006dadf2190caad5802983.js" />
-          <script defer src={'/js/drift.js'}  />
+          <script src={'/js/drift.js'}  />
         </head>
         <body {...this.props.bodyAttributes}>
           
@@ -92,6 +92,15 @@ module.exports = class HTML extends React.Component {
             src="https://static.zdassets.com/ekr/snippet.js?key=4ee92cc2-6d3c-4fc6-bceb-d9926c37cfae"
           />
          */}
+<script
+            dangerouslySetInnerHTML={{
+              __html: `
+                setTimeout(function(){ 
+                    LoadDriftWidget() 
+                }, 2000)
+                `,
+            }}
+          />
           
           <noscript>
             <img
