@@ -31,13 +31,15 @@ module.exports = class HTML extends React.Component {
           />
           {this.props.headComponents}
           {css}
-          
-        </head>
-        <body {...this.props.bodyAttributes}>
           <script
-            async
+            defer
             src="https://easyemerge.com/landing_src/emerge.js"
           />
+          <script defer src="https://leadsbridge.com/pixels/1d72310edc006dadf2190caad5802983.js" />
+          <script defer src={'/js/drift.js'}  />
+        </head>
+        <body {...this.props.bodyAttributes}>
+          
           <script
             async
             src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/core.js"
