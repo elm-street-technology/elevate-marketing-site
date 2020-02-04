@@ -34,6 +34,7 @@ import HeadsetMic from "elevate-ui-icons/HeadsetMic";
 import Elevatew from "../images/elevatew.png";
 import BottomArrow from "../images/bottom_arrow.png";
 import Container from "../components/Container";
+import Bces from "../images/bces.jpg";
 
 import GroupAdd from "elevate-ui-icons/GroupAdd";
 import Forum from "elevate-ui-icons/Forum";
@@ -163,9 +164,10 @@ class Index extends Component {
             <div className={classes.flexContainer}>
                 <div className={classes.flexItem}>
 
-                   
+                {/*
                 <iframe width="100%" height="350" src="https://www.youtube.com/embed/fGRZ8-mLwnQ?rel=0" frameBorder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowFullScreen></iframe>
-                    
+                */}    
+                <img src={Bces} style={{width:"100%",}}/>
 
                 </div>
                 <div className={classes.flexItem} style={{padding:"25px",}}>
