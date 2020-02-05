@@ -228,11 +228,11 @@ class FormDefalco extends Component {
                 
               <div style={{ marginTop:"16px",marginBottom: "10px"}}>
                   <Field id="product_dms" name="product_dms" type="checkbox" value="dms" className={classes.checkfield} style={{verticalAlign:"top"}} />
-                  <div className={classes.checkboxDesc}><span style={{ fontWeight: "700" }}>DMS</span> - "Help build my online marketing success"</div>
+                  <div className={classes.checkboxDesc}><span style={{ fontWeight: "700" }}>DMS&trade;</span> - "Help build my online marketing"</div>
                 </div>
                 <div>
                   <Field id="product_elite" name="product_elite" type="checkbox" value="elite" className={classes.checkfield} />
-                  <div className={classes.checkboxDesc}><span style={{ fontWeight: "700" }}>Elite</span> - "Send me lots of buyer / seller leads!"</div>
+                  <div className={classes.checkboxDesc}><span style={{ fontWeight: "700" }}>Elite&trade;</span> - "Send me lots of buyer / seller leads!"</div>
                 </div>
                 <div style={{ width: "100%", textAlign: "center",marginTop:"30px" }} className={classes.grayLabel}>
                   What are your top 3 markets of interest for leads? (optional)

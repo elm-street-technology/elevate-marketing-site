@@ -29,7 +29,7 @@ const Refer = ({ children, classes, data, tags }) => {
             </div>
             <div className={classes.heading}>SHARE THE POWER OF ELEVATE</div>
             <div style={{paddingBottom:"35px", lineHeight:"24px"}}><div className={classes.bold}>Share the love &amp; refer your fellow real estate colleagues to Elevate.</div>
-            For any referrals who subscribe to Elevate's DMS or Elite programs,<br />
+            For any referrals who subscribe to Elevate DMS&trade; or Elite&trade; programs,<br />
             you'll receive a $100 credit to your account. Nice!</div>
             
           </div>
