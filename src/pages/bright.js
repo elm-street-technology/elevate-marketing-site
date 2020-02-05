@@ -39,7 +39,7 @@ const Bright = ({ children, classes, data, tags }) => {
       </div>
 </Container>
 
-<BrightBgSectionExternal bgImage={Eboss} secTitle="BROKERS...Meet the BOSS" secLink="#form" secButton="request a demo today">
+<BrightBgSectionExternal bgImage={Eboss} secTitle="BROKERS...Meet the BOSS&trade;" secLink="#form" secButton="request a demo today">
               One singular solution for all of your real estate needs. The 1st true productivity platform in real estateoffers a more efficient, cost-effective wayto increase production &amp; help your agentssell more homes...faster.
 </BrightBgSectionExternal>
 
