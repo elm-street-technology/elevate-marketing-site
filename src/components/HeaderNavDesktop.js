@@ -14,22 +14,22 @@ const HeaderNavDesktop = ({ classes, className }) => {
         </div>
         <ul className={classes.dropDown}>
           <Link className={classes.listItemLink} to="/elevate-dms">
-            <li className={classes.listItem}>DMS</li>
+            <li className={classes.listItem}>DMS&trade;</li>
           </Link>
           <Link className={classes.listItemLink} to="/elevate-social-pro">
-            <li className={classes.listItem}>Social Pro</li>
+            <li className={classes.listItem}>Social Pro&trade;</li>
           </Link>
           <Link className={classes.listItemLink} to="/elevate-idx">
-            <li className={classes.listItem}>IDX</li>
+            <li className={classes.listItem}>IDX&trade;</li>
           </Link>
           <Link className={classes.listItemLink} to="/elevate-ignite">
-            <li className={classes.listItem}>Ignite</li>
+            <li className={classes.listItem}>Ignite&trade;</li>
           </Link>
           <Link className={classes.listItemLink} to="/elevate-elite">
-            <li className={classes.listItem}>Elite</li>
+            <li className={classes.listItem}>Elite&trade;</li>
           </Link>
           <Link className={classes.listItemLink} to="/elevate-crm">
-            <li className={classes.listItem}>CRM</li>
+            <li className={classes.listItem}>CRM&trade;</li>
           </Link>
           <Link className={classes.listItemLink} to="/recruiter">
             <li className={classes.listItem}>Recruiter</li>
