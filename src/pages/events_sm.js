@@ -164,7 +164,7 @@ class EventsSM extends Component {
                 </div>
                 </div>
                 <div className={classes.titleText} style={{color:"#2d397c"}}>
-                      "This Educational Boot Camp is the #1 Must Attend<br />
+                      "This is the #1 Must Attend<br />
                       Social Media Training in th U.S."
              
                 </div>
