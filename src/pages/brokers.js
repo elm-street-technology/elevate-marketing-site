@@ -40,7 +40,7 @@ const Brokers = ({ children, classes, data, tags }) => {
             <div style={{textAlign:"center"}}>
             <div style={{textAlign:"center",margin:"20px"}}>
                 
-                <h1 className={classes.heading}>Meet the <span style={{color:"#f05953"}}>BOSS&trade;</span></h1>
+                <h1 className={classes.heading}>Meet the <span style={{color:"#f05953"}}>BOSS</span></h1>
             </div>
             <div style={{marginBottom:"30px"}}>
                 <p>ONE singular solution that empowers brokers (and their agents) with the tools, insights &amp; analytics to manage their business.</p> </div>
@@ -60,7 +60,7 @@ const Brokers = ({ children, classes, data, tags }) => {
             <div style={{textAlign:"center"}}>
             <div style={{textAlign:"center",margin:"30px"}}>
                 
-                <h1 className={classes.heading}>Tour the <span style={{color:"#f05953"}}>BOSS&trade;</span></h1>
+                <h1 className={classes.heading}>Tour the <span style={{color:"#f05953"}}>BOSS</span></h1>
             </div>
             <p>Request your personal consultation with our brokerage development team using the form below,<br/>or call 833.978.1196 to speak to us today.</p>
             </div>
@@ -79,7 +79,7 @@ const Brokers = ({ children, classes, data, tags }) => {
             <hr/>
             <div style={{textAlign:"center",margin:"30px"}}>
                 
-                <h1 className={classes.heading}>Be the <span style={{color:"#f05953"}}>BOSS&trade;</span> (of Recruiting)</h1>
+                <h1 className={classes.heading}>Be the <span style={{color:"#f05953"}}>BOSS</span> (of Recruiting)</h1>
                 <p>Free Download: "The 27 Most Influential Words that Brokers Should Use When Recruiting"</p>
             </div>
         </Col>
