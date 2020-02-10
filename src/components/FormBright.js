@@ -267,7 +267,7 @@ class FormBright extends Component {
                 component={CheckboxGroup}
                 items={[
                   {
-                    label: "Elevate BOSS for my brokerage",
+                    label: "Elevate BOSS™ for my brokerage",
                     value: "Elevate BOSS for my brokerage",
                   },
                   {
