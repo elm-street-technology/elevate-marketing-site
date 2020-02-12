@@ -32,13 +32,14 @@ const Goal = ({ children, classes, data, tags }) => {
 
       
       
-      <div style={{paddingTop:"90px", paddingBottom:"20px",}}>
+      <div style={{paddingTop:"90px", paddingBottom:"50px",}}>
         <Container>
-        <div className={classes.heading}>2020 GOAL SETTING WEBINAR</div>
-        <div className={classes.subHeading2}><div className={classes.bold}>AUDIENCE GOODIES</div>
+        <div className={classes.heading}>2020 GOAL SETTING SELF-EVALUATION</div>
+        <div className={classes.subHeading2}><div className={classes.bold}>With #1 Team Leader - Matt O'Neill</div>
                             <br />
                             <div className={classes.subtext}>
-                            
+                            Make 2020 your BEST YEAR YET with Matt's popular "Goal Setting" workshop.<br />
+                            We've captured it and have it on demand below so you can work through it at your own pace.
                             </div>
         
         </div>
@@ -46,57 +47,55 @@ const Goal = ({ children, classes, data, tags }) => {
                            
         </Container>
       </div>
+
+
+      <BgSectionExternalGoals bgImage={Matto} secTitle="FREE DOWNLOAD" secLink="/assets/Elevate_GoalSettingWorkshop_FreeDownload.pdf" secButton="Download Now" secImage={Goalspic}>
+      Broken down into the 7 key elements in life, be sure to print this worksheet before you stream Matt’s videos.  And, have a pen handy because you’ve got work to do!
+        </BgSectionExternalGoals>
       
       
       
-      <div style={{paddingBottom:"50px",}}>
+      <div style={{paddingBottom:"60px",}}>
         <Container>
 
-        <div style={{textAlign:"center", paddingBottom:"45px", padding:"25px"}}><div className={classes.subHeading}>ON-DEMAND WEBINAR RECORDING</div>
-    <div className={classes.subHeading2}></div></div>
+        <div style={{textAlign:"center", paddingBottom:"45px", padding:"25px", paddingTop:"65px"}}><div className={classes.subHeading}>STREAM ON-DEMAND VIDEO WITH MATT O'NEILL</div>
+  
+   <br />
+                            <div className={classes.subtext} style={{paddingBottom:"20px"}}>
+                            Make 2020 your BEST YEAR YET with Matt's popular "Goal Setting" workshop.<br />
+                            We've captured it and have it on demand below so you can work through it at your own pace.
+                            <br />
+                            </div>
 
+                            
 
+                            </div>
 
-            <div className={classes.flexContainer}>
-                <div className={classes.flexItem}>
-
-                   
-                <iframe width="470" height="295" src="https://www.youtube.com/embed/UoFQnPfTRyQ" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-                    
-
-                </div>
-                <div className={classes.flexItem} style={{paddingLeft:"20px", paddingRight:"20px", paddingBottom:"20px",}}>
-               
-                <div className={classes.subtext}><div className={classes.sub}>Missed the webinar?</div>
-                Looking for a repeat performance?<br />
-                We’ve got you covered!  
-                  <br /><br />
-                Enjoy this 1-hour, on-demand recording of Matt O’Neill’s<br />
-                “2020 Goal Setting” webinar.
-</div>
-                    
-                </div>
-            </div>
+                            <div style={{textAlign: "center", maxWidth:"700px",marginLeft:"auto",marginRight:"auto"}}>
+        <div style={{ textAlign: "center"}} className={classes.videoEmbed}>
+                        <iframe className={classes.videoContainer} src="https://www.youtube.com/embed/UoFQnPfTRyQ"
+                         frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </div>
+        </div>
+            
         </Container>
 </div> 
       
 
 
 
-<BgSectionExternalGoals bgImage={Matto} secTitle="FREE WEBINAR DOWNLOADS" secLink="/assets/Elevate_GoalSettingWorkshop_FreeDownload.pdf" secButton="Download Now" secImage={Goalspic}>
-Continue your preparation for making 2020 your best year yet with Matt’s “Wheel of Life” self-evaluation, PLUS his “magic” document: "Your Best Year Yet: Goal Setting Workshop".
-        </BgSectionExternalGoals>
 
 
 
 
 
 
-        <div style={{backgroundColor:"#ffffff",}}>
+
+        <div style={{backgroundColor:"#f7f7f7",}}>
       <Container>
 
         <div >
-            <div style={{ maxWidth: "900px", backgroundColor: "#ffffff", marginRight:"auto",marginLeft:"auto", paddingTop:"60px", paddingBottom:"60px"}}>
+            <div style={{ maxWidth: "900px", backgroundColor: "#f7f7f7", marginRight:"auto",marginLeft:"auto", paddingTop:"60px", paddingBottom:"60px"}}>
                 <div className={classes.landingHeaderStyle}>
                    
                 </div>
@@ -114,45 +113,7 @@ Continue your preparation for making 2020 your best year yet with Matt’s “Wh
 
 
 
-      <div style={{paddingBottom:"30px", backgroundColor:"#373b3b"}}>
-        <Container>
-
-        <div style={{textAlign:"center", paddingBottom:"65px", padding:"25px", paddingTop:"55px"}}><div className={classes.subHeading}>MONDAY MORNING MENTOR<br />
-        with Matt O’Neill</div>
-    <div className={classes.subHeading2} style={{color:"#ffffff"}}><div className={classes.bold}>Kick-Start Your Week with 30-Minutes of Awesomeness</div></div></div>
-
-
-
-            <div className={classes.flexContainer}>
-                <div className={classes.flexItem}>
-
-                <div style={{ textAlign: "center",paddingBottom:"22px" }}>
-                            <img src={MattLogo} width="290" />
-                            </div>
-               
-                    
-
-                </div>
-                <div className={classes.flexItem} style={{paddingLeft:"20px", paddingRight:"20px", paddingBottom:"20px",}}>
-               
-                <div className={classes.subtext} style={{color:"#f7f7f7"}}>Kick-start your week every Monday morning with a 30-minute, Facebook live stream session with Matt O’Neill on the <a target="_blank" href="https://www.facebook.com/TryElevateRE/" style={{color:"#54a59d"}}>@TryElevateRE</a> channel. Matt connects in at 10:30am EST / 7:30am PST (unless he's on the road traveling) with recordings available on the channel after each session. All you need to do is follow us to receive alerts!
-
-                      
-                      <br /><br />
-                      Explore hot real estate topics each week such as:<br />
-                      •	Goal Setting<br />
-                      •	Lead Generation<br />
-                      •	Professional Growth<br />
-                      •	Work / Life Balance<br />
-                      •	Online Marketing<br />
-                      •	And much more<br />
-
-</div>
-                    
-                </div>
-            </div>
-        </Container>
-</div>
+ 
 
 
 

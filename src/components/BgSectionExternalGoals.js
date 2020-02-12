@@ -24,7 +24,7 @@ const BgSectionExternal = ({
                 <div className={classes.flexContainer}>
                 <div className={classes.flexItem} style={{paddingLeft:"20px", paddingRight:"20px", paddingTop:"45px"}}>
                     <h1 className={classes.leftheading} style={{paddingTop:"15px"}}>{secTitle}</h1>
-                    <div className={classes.subHeading2} style={{paddingBottom:"20px"}}><div className={classes.bold}>As Promised...</div></div>
+                    <div className={classes.subHeading2} style={{paddingBottom:"20px"}}><div className={classes.bold}>"Wheel of Life" Self-Evaluation Worksheet</div></div>
                     <p className={classes.leftsubtext}>
                     {children}</p>
                     <a href={secLink} className={classes.ctabutton} target="_blank">
