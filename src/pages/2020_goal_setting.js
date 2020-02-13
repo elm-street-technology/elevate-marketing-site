@@ -25,7 +25,7 @@ const Goal = ({ children, classes, data, tags }) => {
   };
 
   var showPop = true;
-  if(window){
+  if(typeof window != 'undefined'){
     if(window.location.search.length > 1){
       var values = window.location.search.substring(1);
       var valueArray = values.split("&");
