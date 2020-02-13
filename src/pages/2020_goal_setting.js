@@ -17,20 +17,40 @@ import Spro from "../images/socialpro_bg.jpg";
 import BgSectionExternalGoals from "../components/BgSectionExternalGoals";
 import BrightBgSectionExternal from "../components/BrightBgSectionExternal";
 import SEO from "../components/SEO";
+import FormGoalsInitial from "../components/FormGoalsInitial";
 
 const Goal = ({ children, classes, data, tags }) => {
   const postNode = {
       title: `2020 Goal Setting - ${config.siteTitle}`,
   };
 
+  var showPop = true;
+  if(window){
+    if(window.location.search.length > 1){
+      var values = window.location.search.substring(1);
+      var valueArray = values.split("&");
+      console.log(valueArray);
+      valueArray.forEach(function(element){
+        var pieces = element.split("=");
+        if(pieces[0] == "skippop"){
+          showPop = false;
+        }
+      })
+    }
+  }
+
   return (
+    <div>
+      {showPop && (
+    <FormGoalsInitial />
+    )}
 <div className={classes.root}>
       <Helmet>
               <title>{`2020 Goal Setting - ${config.siteTitle}`}</title>
       </Helmet>
       <SEO postNode={postNode} pagePath="2020_goal_setting" customTitle />
 
-      
+
       
       <div style={{paddingTop:"90px", paddingBottom:"50px",}}>
         <Container>
@@ -135,6 +155,7 @@ const Goal = ({ children, classes, data, tags }) => {
 
 
     </div>
+  </div>
   );
 };
 
