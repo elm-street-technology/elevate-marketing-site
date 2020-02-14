@@ -173,12 +173,9 @@ class FormMastermind extends Component {
           render={({ values, isSubmitting,handleBlur, handleChange }) => (
             <Form noValidate>
               <div style={{marginBottom:"30px"}}>
-                <div className={classes.headingLarge}>CONQUER 2020 MARKETING<br />
-                &amp; LEAD GEN WITH ONE SIMPLE SOLUTION</div>
-                <div className={classes.subHeading2}><div className={classes.bold}>Make 2020 Your Best Year Yet with Affordable End-of-the-Year Specials</div></div>
-                <div className={classes.headingText} style={{ marginTop: "20px" }}>Business success requires investing in marketing & lead generation solutions, and then having systems & processes in place to maximize them.
-<br /><br />
-Schedule 15-minutes with an Elevate Success Coach to explore how Elevate can DO IT ALL for you….at a price lower than you’ll find with any competitor.  Say goodbye to high-priced, hard to use solutions in 2020.
+                <div className={classes.headingLarge}>CONQUER YOUR MARKETING GOALS</div>
+                
+                <div className={classes.headingText} style={{ marginTop: "20px" }}>Matt and his team rely on Elevate to help drive their business success.  Want to learn more about the marketing and lead generation services trusted by Matt? Request a quick 15-minute walk-through with an Elevate Success Coach today.
 </div>
                 </div>
               <div style={{ maxWidth: "500px",marginLeft:"auto",marginRight:"auto"}}>
