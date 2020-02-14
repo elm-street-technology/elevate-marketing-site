@@ -24,7 +24,8 @@ const Goal = ({ children, classes, data, tags }) => {
       title: `2020 Goal Setting - ${config.siteTitle}`,
   };
 
-  var showPop = true;
+  var showPop = false;
+  var foundSkippop = false;
   if(typeof window != 'undefined'){
     if(window.location.search.length > 1){
       var values = window.location.search.substring(1);
@@ -33,9 +34,13 @@ const Goal = ({ children, classes, data, tags }) => {
       valueArray.forEach(function(element){
         var pieces = element.split("=");
         if(pieces[0] == "skippop"){
-          showPop = false;
+          foundSkippop = true;
         }
       })
+      
+    }
+    if(!foundSkippop){
+      showPop = true;
     }
   }
 
