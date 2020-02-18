@@ -163,22 +163,21 @@ class EventsLG extends Component {
 
 
                 <div className={classes.titleText} style={{color:"#2d397c"}}>
-                “Secrets to Successful Lead Generation”<br />
+                “Getting Social" About Lead Generation<br />
                 Educational Boot Camp
                 </div>
                 <div className={classes.BodyText}>
                 <div className={classes.titleSubText}>
-                Want to capture 20 - 30 EXCLUSIVE<br />
-                buyer / seller leads each month?
+                Want to know what the top agents in the country are doing to capture, nurture <br />
+                &amp; convert more online leads into cha-ching using social media?<br />
                 </div>
-                Here’s your chance to learn how!<br />
                 <br />
-                Come learn the tips, tricks &amp; shortcuts to online lead generation in this high-energy,<br />
-                90-minute educational session. Brokers and agents alike will learn the three main types<br />
-                of lead generation, along with the pros, cons &amp; best practices to capture, nurture<br />
-                &amp; convert more online business in less time.  Wonder how the top performers<br />
-                in the industry maximize their online lead generation?<br />
-                This is your chance to learn their secrets.
+                Secure your spot today for this must-attend,<br />
+                2-hour educational deep dive, specially designed<br />
+                for your members. Are you ready to conquer lead generation on Facebook,<br />
+                Twitter, LinkedIn, YouTube, your website<br />
+                blog &amp; paid advertising?<br />
+                It's not as hard...or as expensive...as you think!<br />
                 </div>
                 <div className={classes.titleSubText} style={{color:"#2d397c", paddingBottom:"35px"}}>
                         Select an event you are interested in:
