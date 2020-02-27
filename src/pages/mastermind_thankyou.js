@@ -27,7 +27,7 @@ const Mastermind_thankyou = ({ children, classes, data, tags }) => {
         We appreciate your interest in our Mastermind series and hope you enjoyed <br />your experience with Brenda.  Here’s a special thank you message...just for you!</h2>
       <div style={{textAlign: "center", maxWidth:"700px",marginLeft:"auto",marginRight:"auto"}}>
         <div style={{ textAlign: "center"}} className={classes.videoEmbed}>
-                        <iframe className={classes.videoContainer} src="https://www.youtube.com/embed/3XfWrKM_wos"
+                        <iframe className={classes.videoContainer} src="https://www.youtube.com/embed/3XfWrKM_wos?autoplay=1&rel=0"
                          frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
         </div>
         </div>
