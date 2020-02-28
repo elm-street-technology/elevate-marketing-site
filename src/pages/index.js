@@ -256,72 +256,22 @@ class Index extends Component {
           <div className={classes.modalContent}>
             <span id="modalClose" className={classes.close}>&times;</span>
             
-            <div style={{color:"#55c3ba",fontSize:"20px",fontWeight:"bold"}}>2020 Marketing Makeover</div>
+            <div style={{color:"rgb(241, 90, 83)",fontSize:"30px",fontWeight:"bold",paddingBottom:"30px"}}>$750 in FREE leads this month only!</div>
             <div>
-            <span style={{fontWeight:"bold"}}>Start 2020 with ALL of your marketing covered...automatically.</span>
+              <span style={{fontWeight:"bold"}}>
+                Let Elevate capture, nurture &amp; qualify your online leads, so you can focus on more important things in life.
+                <br/>
+                We’ve got you covered.
+              </span>
             </div> 
-            <div>
-              IDX website. Advanced CRM. Weekly blog &amp; social content. 
-              Email &amp; text campaigns. And more.
-            </div>
-            <div style={{backgroundColor:"#4f4677",marginTop:"20px"}}>&nbsp;</div>
-            <div style={{display:"flex"}}>
-            <div style={{flex:"1",textAlign:"center",color:"#FFFFFF",backgroundColor:"#3b3166",padding:"20px"}}>
-              <div style={{fontWeight:"bold"}}>ANNUAL PRE-PAY </div>
-              <div style={{fontWeight:"bold",fontSize:"36px",marginTop:"10px",marginBottom:"20px"}}>$1,200</div>
-              <div style={{fontWeight:"bold"}}>*No Set-Up Fee </div>
-              
-            </div>
-            <div style={{flex:"1",textAlign:"center",color:"#FFFFFF",backgroundColor:"#4f4677",padding:"20px"}}>
-              <div style={{fontWeight:"bold"}}>MONTH-TO-MONTH </div>
-              <div style={{fontWeight:"bold",fontSize:"36px",marginTop:"10px",marginBottom:"20px"}}>$125/m</div>
-              <div style={{fontWeight:"bold"}}>$100 Set-Up Fee </div>
-              
-            </div>
-            </div>
 
             <div>
               <div>
-            <Link to="/get-started" className={classes.ctabutton} style={{maxWidth:"550px"}}>
-              Schedule 15-minutes with an Elevate Success Coach</Link></div>
-              Or, call 844-792-0260 <span style={{fontWeight:"bold"}}>NOW</span>
-            </div>
-
-            <hr style={{margin:"20px"}}/>
-
-            <div style={{color:"#55c3ba",fontSize:"20px",fontWeight:"bold"}}>Exclusive Buyer / Seller Leads</div>
-            <div>
-                Elevate Lead Generation (and scrubbing) services to overflow your pipeline.
-            </div>
-            <div style={{backgroundColor:"#68aea8",marginTop:"20px"}}>&nbsp;</div>
-            <div style={{display:"flex"}}>
-            <div style={{flex:"1",textAlign:"center",color:"#FFFFFF",backgroundColor:"#72c0ba",padding:"20px"}}>
-              <div style={{fontWeight:"bold"}}>Buyer / Seller Lead Generation</div>
-              <div style={{fontWeight:"bold",fontSize:"36px",marginTop:"10px",marginBottom:"20px"}}>$750/m</div>
-              <div style={{fontWeight:"bold"}}>*No Set-Up Fee </div>
-              
-            </div>
-            <div style={{flex:"1",textAlign:"center",color:"#FFFFFF",backgroundColor:"#68aea8",padding:"20px"}}>
-              <div style={{fontWeight:"bold"}}>Buyer / Seller Lead GenerationWITHScrubbing Concierge</div>
-              <div style={{fontWeight:"bold",fontSize:"36px",marginTop:"10px",marginBottom:"20px"}}>$1,050/m</div>
-              <div style={{fontWeight:"bold"}}>*No Set-Up Fee </div>
-              
-            </div>
-            </div>
-
-            <div>ALL accounts who upgrade to an Elevate Lead Generation service will automatically receive $50 in 
-              FREE online advertising to help jumpstart your lead gen program.</div>
-
-            <div>
-              <div>
-            <Link to="/get-started" className={classes.ctabutton} style={{maxWidth:"550px"}}>
-              Schedule 15-minutes with an Elevate Success Coach</Link></div>
-              Or, call 844-792-0260 <span style={{fontWeight:"bold"}}>NOW</span>
-            </div>
-
-            
-
-
+                <Link to="/leadgen/?utm_source=popup&utm_medium=websitehomepage&utm_campaign=marchleadgenspecial&utm_term=lander" className={classes.ctabutton} style={{maxWidth:"550px"}}>
+                  Request Demo
+                </Link>
+              </div>
+            </div>         
           </div>
         </div>
 
@@ -570,10 +520,10 @@ cardinner: {
 },
 
 modal: {
-  display: "none",
+  display: "inherit",
   position: "fixed",
   zIndex: "10000",
-  paddingTop: "100px",
+  paddingTop: "0px",
   left: "0",
   top: "0",
   width: "100%",
@@ -588,10 +538,11 @@ modal: {
 modalContent: {
   backgroundColor:"#fefefe",
   margin: "auto",
-  padding: "20px",
+  padding: "40px",
   border: "1px solid #888",
   width: "50%",
-  minWidth:"400px"
+  minWidth:"400px",
+  color:"#888888",
 },
 
 close: {
