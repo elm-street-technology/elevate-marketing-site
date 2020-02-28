@@ -256,7 +256,14 @@ class Index extends Component {
           <div className={classes.modalContent}>
             <span id="modalClose" className={classes.close}>&times;</span>
             
-            <div style={{color:"rgb(241, 90, 83)",fontSize:"30px",fontWeight:"bold",paddingBottom:"30px"}}>$750 in FREE leads this month only!</div>
+            <div style={{color:"rgb(241, 90, 83)",fontSize:"30px",fontWeight:"bold",paddingBottom:"30px"}}>$750 in FREE leads this month only!
+            <br/>
+                <span style={{fontSize:'12px'}}>
+                * New Lead Generation Subscriptions Only
+                </span>
+            
+            </div>
+            
             <div>
               <span style={{fontWeight:"bold"}}>
                 Let Elevate capture, nurture &amp; qualify your online leads, so you can focus on more important things in life.
@@ -270,6 +277,7 @@ class Index extends Component {
                 <Link to="/leadgen/?utm_source=popup&utm_medium=websitehomepage&utm_campaign=marchleadgenspecial&utm_term=lander" className={classes.ctabutton} style={{maxWidth:"550px"}}>
                   Request Demo
                 </Link>
+                
               </div>
             </div>         
           </div>
