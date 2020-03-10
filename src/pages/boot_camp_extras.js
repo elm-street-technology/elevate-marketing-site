@@ -63,7 +63,7 @@ const boot_camp_extras = ({ classes }) => {
                                           <img src={Qpic} width="125" />
                                     </div>
                                     <div className={classes.bold}>I subscribed to Elevate today.</div>
-                                    <a target="_blank" href="/assets/elevate_getting_started_ebook.pdf" className={classes.getStartedLink}>
+                                    <a href="#new_subscriber" className={classes.getStartedLink}>
                                     What's Next?
                                   </a>
                   </div>
@@ -73,7 +73,7 @@ const boot_camp_extras = ({ classes }) => {
                                           <img src={Tours} width="125" />
                                     </div>
                                     <div className={classes.bold}>I want to learn more about Elevate.</div>
-                                    <a target="_blank" href="https://elmstreettechnology.zendesk.com/hc/en-us" className={classes.getStartedLink}>
+                                    <a href="#learn_more" className={classes.getStartedLink}>
                                     Take a Tour
                                     </a>
                   </div>
@@ -83,11 +83,11 @@ const boot_camp_extras = ({ classes }) => {
                                           <img src={Content} width="125" />
                                     </div>
                                     <div className={classes.bold}>I want more great content.</div>
-                                    <a target="_blank" href="https://tryelevate.com/webinars/" className={classes.getStartedLink}>
+                                    <a href="#content" className={classes.getStartedLink}>
                                     We've Got It!
                                     </a>
                   </div>
-
+                  <a id="new_subscriber"></a>
         </div>
     </Container>
 </div>
@@ -135,7 +135,7 @@ const boot_camp_extras = ({ classes }) => {
                                           <img src={Train} width="255" />
                                     </div>
                   </div>
-
+                  <a id="learn_more"></a>
         </div>
     </Container>
 </div>
@@ -177,7 +177,7 @@ const boot_camp_extras = ({ classes }) => {
                 </a>
                  </div> */}
         </div>
-      
+        <a id="content"></a> 
       
 
 </Container>
@@ -187,7 +187,7 @@ const boot_camp_extras = ({ classes }) => {
 
 
 
-   
+<a id="content"></a> 
  <div style={{backgroundColor:"gray",backgroundImage:"url("+Extras2bg+")"}}>
       <Container>
                  
