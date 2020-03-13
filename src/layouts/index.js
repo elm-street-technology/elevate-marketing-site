@@ -12,6 +12,13 @@ import withStyles from "elevate-ui/withStyles";
 const Template = ({ children, classes, location }) => {
   console.log(location);
 
+  if (typeof window !== 'undefined'){
+    if(window.drift){
+      //console.log('resetting drift');
+      window.drift.reset();
+    } 
+  }
+
   function ChooseFooter(){
     if (location.pathname == "/welcome" || location.pathname == "/welcome/" ||
       location.pathname == "/welcome_elite" || location.pathname == "/welcome_elite/"){
