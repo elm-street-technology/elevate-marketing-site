@@ -71,11 +71,11 @@ const subscribe_today = ({ classes }) => {
 <div style={{color:"#57585b", textAlign: "center",}}>
 <div className={classes.bold} style={{color:"#57585b", paddingTop:"28px"}}>Monthly: <span style={{color:"#f97306"}} className={classes.bold}>$80/m</span></div>
 <div className={classes.bold}>One Time Set-Up: <span style={{textDecoration:"line-through"}}>$300</span> <span style={{color:"#f97306"}} className={classes.bold}>$100</span></div>
-<div className={classes.bold}>Annual Pre-Pay: <span style={{color:"#f97306"}} className={classes.bold}>$864</span></div>
+
 </div>
               
                
-                <a target="_blank" href="" className={classes.getStartedLinkignite}>
+                <a target="_blank" href="https://elmstreettechnology.recurly.com/subscribe/elevatesocialpro" className={classes.getStartedLinkignite}>
                   SUBSCRIBE NOW
                     </a>
                     
@@ -113,9 +113,9 @@ const subscribe_today = ({ classes }) => {
                   <br />
                   <div className={classes.bold} style={{color:"#4ab8ac", paddingTop:"28px"}}>Monthly: <span style={{textDecoration:"line-through"}}>$199/m</span> <span style={{color:"#f97306"}} className={classes.bold}>$150/m</span></div>
 <div className={classes.bold} style={{color:"#4ab8ac",}}>One Time Set-Up: <span style={{textDecoration:"line-through"}}>$700</span> <span style={{color:"#f97306"}} className={classes.bold}>$200</span></div>
-<div className={classes.bold} style={{color:"#4ab8ac",}}>Annual Pre-Pay: <span style={{textDecoration:"line-through"}}>$2149</span> <span style={{color:"#f97306"}} className={classes.bold}>$1620</span></div>
 
-<a target="_blank" href="" className={classes.getStartedLinkignite}>
+
+<a target="_blank" href="https://elmstreettechnology.recurly.com/subscribe/edigitalmarketingsystem" className={classes.getStartedLinkignite}>
                   SUBSCRIBE NOW
                     </a>
 
@@ -158,11 +158,11 @@ const subscribe_today = ({ classes }) => {
                 <br /><br />
 
 
-                <div className={classes.bold} style={{color:"#f15953", paddingTop:"28px"}}>Monthly: <br /><span style={{textDecoration:"line-through"}}>$899/m</span> <span style={{color:"#f97306"}} className={classes.bold}>$749/m</span></div>
+                <div className={classes.bold} style={{color:"#f15953", paddingTop:"28px"}}>Monthly: <span style={{textDecoration:"line-through"}}>$899/m</span> <span style={{color:"#f97306"}} className={classes.bold}>$749/m</span></div>
 <div className={classes.bold}  style={{color:"#f15953",}}>One Time Set-Up: <span style={{textDecoration:"line-through"}}>$800</span> <span style={{color:"#f97306"}} className={classes.bold}>$500</span></div>
 
                 
-<a target="_blank" href="" className={classes.getStartedLinkignite}>
+<a target="_blank" href="https://elmstreettechnology.recurly.com/subscribe/elevateelite" className={classes.getStartedLinkignite}>
                   SUBSCRIBE NOW
                     </a>
                   
@@ -177,7 +177,7 @@ const subscribe_today = ({ classes }) => {
 
 <Container>
 <div style={{ textAlign: "center", padding: "35px", fontSize:"12px", lineHeight:"18px" }}>
-By signing this form, I expressly consent that Elm Street Technology or its agents may contact me at the numbers provided regarding the Elevate products or services, via live, automated or prerecorded call, text, or email. I am not requiredto enter into this agreement as a condition of any purchase. I can revoke this consent through any reasonable means.  By signing this form, I also agree to payment for the products and services ordered hereon and that sales tax may be charged where applicable. I also agree to the terms of cancellation policy on the back of this form including that set-up fees are non-refundable.  I confirm I have read, understood and agree to the full Terms of Service of the Elevate productsI am purchasing as set forth at TryElevate.com.  Visit TryElevate.com for full Terms of Service, Refund Policy, Privacy Policy &amp; DMCA Notice. Questions? - 877.218.9771. Sales tax charged where applicable.  Please note that setup fees are non-refundable.  <a target="_blank" href="http://tryelevate.com/terms-of-service/" >Full Terms of Service</a><br /><br />
+By signing this form, I expressly consent that Elm Street Technology or its agents may contact me at the numbers provided regarding the Elevate products or services, via live, automated or prerecorded call, text, or email. I am not requiredto enter into this agreement as a condition of any purchase. I can revoke this consent through any reasonable means.  By signing this form, I also agree to payment for the products and services ordered hereon and that sales tax may be charged where applicable. I also agree to the terms of cancellation policy on the back of this form including that set-up fees are non-refundable.  I confirm I have read, understood and agree to the full Terms of Service of the Elevate productsI am purchasing as set forth at TryElevate.com.  Visit TryElevate.com for full Terms of Service, Refund Policy, Privacy Policy &amp; DMCA Notice. Questions? - 877.218.9771. Sales tax charged where applicable.  Please note that setup fees are non-refundable.  <a target="_blank" href="http://tryelevate.com/terms-of-service/" >Full Terms of Service</a><br /><br /><br />
 </div>
 </Container>
 
