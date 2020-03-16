@@ -184,7 +184,7 @@ class EventsLG extends Component {
                 </div>
         </Container>
 
-        <div style={{backgroundColor:"#f15953", textAlign:"center", padding:"15px"}}><span className={classes.bold} style={{color:"#ffffff"}}>All events via WEBINAR at this time</span></div>
+        <div style={{backgroundColor:"#f15953", textAlign:"center", padding:"15px"}}><span className={classes.bold} style={{color:"#ffffff"}}>All events are via WEBINAR at this time</span></div>
 
 
 
