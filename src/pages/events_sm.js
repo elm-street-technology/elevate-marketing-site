@@ -174,7 +174,7 @@ class EventsSM extends Component {
                 <div className={classes.BodyText}>
                 Wonder how top real estate agents find time to be ‘everywhere’ online and STILL close more<br />
                 business? Interested in turning your social media from a toy into a powerful business tool?<br />
-                This FREE 90-minute, high-energy educational seminar is designed to inspire and empower<br />
+                This FREE 90-minute, high-energy educational Live Webinar is designed to inspire and empower<br />
                 agents with tips, tricks &amp; strategies for conquering their website, blog and social media.
                 </div>
           <div className={classes.titleSubText} style={{color:"#2d397c", paddingBottom:"35px", paddingTop:"20px"}}>
