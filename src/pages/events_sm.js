@@ -174,7 +174,7 @@ class EventsSM extends Component {
                 <div className={classes.BodyText}>
                 Wonder how top real estate agents find time to be ‘everywhere’ online and STILL close more<br />
                 business? Interested in turning your social media from a toy into a powerful business tool?<br />
-                This FREE 90-minute, high-energy educational Live Webinar is designed to inspire and empower<br />
+                This FREE 90-minute, high-energy educational seminar is designed to inspire and empower<br />
                 agents with tips, tricks &amp; strategies for conquering their website, blog and social media.
                 </div>
           <div className={classes.titleSubText} style={{color:"#2d397c", paddingBottom:"35px", paddingTop:"20px"}}>
@@ -182,6 +182,10 @@ class EventsSM extends Component {
         </div>
         </Container>
         </div>
+
+        <div style={{backgroundColor:"#f15953", textAlign:"center", padding:"15px"}}><span className={classes.bold} style={{color:"#ffffff"}}>All events via WEBINAR at this time</span></div>
+
+
         <Container>
           <div className={classes.inputWrapper}>
             <input
@@ -333,6 +337,9 @@ export default withStyles((theme) => ({
     fontSize: "32px",
     fontWeight: "700",
     marginRight: "auto",
+  },
+  bold:{
+    fontWeight:"700",
   },
   bootcampLink: {
     color: "inherit",

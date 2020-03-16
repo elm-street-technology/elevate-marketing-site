@@ -183,6 +183,11 @@ class EventsLG extends Component {
                         Select an event you are interested in:
                 </div>
         </Container>
+
+        <div style={{backgroundColor:"#f15953", textAlign:"center", padding:"15px"}}><span className={classes.bold} style={{color:"#ffffff"}}>All events via WEBINAR at this time</span></div>
+
+
+
         </div>
         <Container>
           <div className={classes.inputWrapper}>
@@ -335,6 +340,9 @@ export default withStyles((theme) => ({
     fontSize: "32px",
     fontWeight: "700",
     marginRight: "auto",
+  },
+  bold:{
+    fontWeight:"700",
   },
   bootcampLink: {
     color: "inherit",

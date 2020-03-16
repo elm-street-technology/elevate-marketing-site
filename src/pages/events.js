@@ -91,6 +91,9 @@ class Events extends Component {
                     </div>
         </Container>
         </div>
+        
+        <div style={{backgroundColor:"#f15953", textAlign:"center", padding:"15px"}}><span className={classes.bold} style={{color:"#ffffff"}}>Now available via WEBINAR</span></div>
+
         <Container>
           <div className={classes.top}>
             {/* <div className={classes.heading} style={{ marginRight: "auto", marginLeft: "auto",textAlign:"center" }}>Upcoming Webinars &amp; Live Events</div> */}
@@ -243,6 +246,9 @@ export default withStyles((theme) => ({
     textAlign:"center", 
     paddingTop:"20px", 
     paddingBottom:"20px"
+  },
+  bold:{
+    fontWeight:"700",
   },
   heading: {
     fontSize: "32px",
