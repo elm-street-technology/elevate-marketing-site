@@ -28,6 +28,7 @@ import Encore from "../images/encore_icon.png";
 import Emails from "../images/6emails_pic.png";
 import Dose from "../images/dose_pic.png";
 import Line from "../images/line.png";
+import Free from "../images/free_month.png";
 import Freebg from "../images/free_bg.jpg";
 import Elevate_logo from "../images/elevate_logo.png";
 
@@ -47,8 +48,11 @@ const subscribe_today = ({ classes }) => {
         <div className={classes.top}>
         <div className={classes.infoboxGray2}>
           <div className={classes.column3} style={{ textAlign: "center", paddingBottom: "35px", }}>
-          <div style={{ textAlign: "center",paddingBottom:"20px" }}>
+          <div style={{ textAlign: "center",paddingBottom:"10px" }}>
           <img src={Sp} style={{ width:"100%", maxWidth:"260px"}}/>
+        </div>
+        <div style={{ textAlign: "center",paddingBottom:"20px" }}>
+          <img src={Free} style={{ width:"100%", maxWidth:"140px"}}/>
         </div>
             
                 <div className={classes.productCol} style={{ textAlign: "left", paddingLeft:"10px", paddingRight:"10px" }}>
@@ -64,8 +68,7 @@ const subscribe_today = ({ classes }) => {
                 <div>
                 <img src={Line} style={{ width:"100%", maxWidth:"200px"}}/>
                 <br />
-                  <div className={classes.bold} style={{color:"#57585b", textAlign: "center"}}>ANNUAL AGREEMENT<br />
-                  W/ FREE MONTH
+                  <div className={classes.bold} style={{color:"#57585b", textAlign: "center"}}>ANNUAL AGREEMENT
 </div>
 <br />
 <div style={{color:"#57585b", textAlign: "center",}}>
@@ -87,8 +90,11 @@ const subscribe_today = ({ classes }) => {
             <div className={classes.infoboxGray2}>
           <div className={classes.column3} style={{ textAlign: "center", paddingBottom: "35px" }}>
           
-          <div style={{ textAlign: "center",paddingBottom:"20px" }}>
+          <div style={{ textAlign: "center",paddingBottom:"10px" }}>
           <img src={Dms} style={{ width:"100%", maxWidth:"105px"}}/>
+        </div>
+        <div style={{ textAlign: "center",paddingBottom:"20px" }}>
+          <img src={Free} style={{ width:"100%", maxWidth:"140px"}}/>
         </div>
                 <div className={classes.productCol} style={{ textAlign: "left", paddingLeft:"10px", paddingRight:"10px"}}>
                 <div className={classes.bold} style={{color:"#4ab8ac"}}>IDX WEBSITE</div>
@@ -107,11 +113,10 @@ const subscribe_today = ({ classes }) => {
                 <div>
                 <img src={Line} style={{ width:"100%", maxWidth:"200px"}}/>
                 <br />
-                <span className={classes.bold} style={{color:"#4ab8ac"}}>ANNUAL AGREEMENT<br />
-                  W/ FREE MONTH</span>
+                <span className={classes.bold} style={{color:"#4ab8ac"}}>ANNUAL AGREEMENT</span>
                 <br />
                   <br />
-                  <div className={classes.bold} style={{color:"#4ab8ac", paddingTop:"28px"}}>Monthly: <span style={{textDecoration:"line-through"}}>$199/m</span> <span style={{color:"#f97306"}} className={classes.bold}>$150/m</span></div>
+                  <div className={classes.bold} style={{color:"#4ab8ac", paddingTop:"28px"}}>Monthly: <span style={{textDecoration:"line-through"}}>$240/m</span> <span style={{color:"#f97306"}} className={classes.bold}>$150/m</span></div>
 <div className={classes.bold} style={{color:"#4ab8ac",}}>One Time Set-Up: <span style={{textDecoration:"line-through"}}>$700</span> <span style={{color:"#f97306"}} className={classes.bold}>$200</span></div>
 
 
@@ -129,7 +134,7 @@ const subscribe_today = ({ classes }) => {
 
           <div className={classes.infoboxGray2}>
           <div className={classes.column3} style={{ textAlign: "center", paddingBottom: "35px" }}>
-          <div style={{ textAlign: "center",paddingBottom:"20px" }}>
+          <div style={{ textAlign: "center",paddingBottom:"40px" }}>
           <img src={Elite} style={{ width:"100%", maxWidth:"120px"}}/>
         </div>
                 <div className={classes.productCol} style={{ textAlign: "left", paddingLeft:"10px", paddingRight:"10px", paddingBottom:"20px"}}>
