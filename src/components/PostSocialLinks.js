@@ -49,6 +49,7 @@ const PostSocialLinks = ({ classes, className, post }: Props) => {
       >
         <LinkedIn size={32} />
       </a>
+      {/* 
       {post.heroImage ? (
         <a
           className={classNames(classes.icon, classes.pinterest)}
@@ -63,17 +64,7 @@ const PostSocialLinks = ({ classes, className, post }: Props) => {
           <Pinterest size={32} />
         </a>
       ) : null}
-
-      <a
-        className={classNames(classes.icon, classes.google)}
-        href={`https://plus.google.com/share?url=${config.siteUrl}/${
-          post.slug
-        }`}
-        target="_blank"
-        rel="noreferrer noopener"
-      >
-        <GooglePlus size={32} />
-      </a>
+          */}
     </div>
   );
 };
