@@ -5,6 +5,10 @@ import config from "../utils/siteConfig";
 import Container from "../components/Container";
 import SignUpFormCovid from "../components/SignUpFormCovid";
 import Covid from "../images/covid_header.jpg";
+import C1 from "../images/covid_c1.png";
+import C2 from "../images/covid_c2.png";
+import C3 from "../images/covid_c3.png";
+import C4 from "../images/covid_c4.png";
 import SEO from "../components/SEO";
 
 const Covidshift = ({ children, classes, data, tags }) => {
@@ -48,6 +52,65 @@ const Covidshift = ({ children, classes, data, tags }) => {
             <h2 className={classes.subHeading}>
             Participated in our live survey?  Here’s the group results.</h2>
 
+
+            <div className={classes.top}>
+
+<div className={classes.column3} style={{ textAlign: "center", paddingTop: "12px" }}>
+                  
+                  
+                
+                  <div style={{ textAlign: "center",paddingTop:"12px" }}>
+                  <h2 className={classes.subHeading}>Real estate professionals are forecasting a serious market shift.<br />
+                  Do you believe this is happening<br />
+                  right now?</h2>
+                        <img src={C1} width="255" />
+                  </div>
+</div>
+
+<div className={classes.column3} style={{ textAlign: "center", paddingTop: "12px" }}>
+
+               
+                  <div style={{ textAlign: "center",paddingTop:"12px" }}>
+                  <h2 className={classes.subHeading}>If YES...<br />
+                  how long do you think this<br />
+                  real estate market shift will last?</h2>
+                        <img src={C2} width="255" />
+                  </div>
+</div>
+
+<div className={classes.column3} style={{ textAlign: "center", paddingTop: "12px" }}>
+                    <div style={{ textAlign: "center",paddingTop:"12px" }}>
+                  <h2 className={classes.subHeading}>Are you currently investing MORE in your lead generation and marketing efforts, OR are you withdrawing / holding back?</h2>
+                  
+                        <img src={C4} width="255" />
+                  </div>
+</div>
+</div>
+
+
+
+
+
+
+                  
+                  
+                
+                  <div style={{ textAlign: "center",paddingTop:"32px" }}>
+                  <h2 className={classes.subHeading}>How are you staying in touch<br />
+                  with your clients?</h2>
+                        <img src={C3} width="355" /><br /><br />
+                        <h2 className={classes.subHeading}>
+                        <span className={classes.bold} style={{color:"#55c3ba"}}>69% Email</span> (Mass mailing, one-on-one, etc.)<br />
+                        <span className={classes.bold} style={{color:"#55c3ba"}}>59% Social Media</span> (Facebook, Twitter, Instagram, LinkedIn, etc.)<br />
+                        <span className={classes.bold} style={{color:"#55c3ba"}}>17% Video Meetings / House Tours</span> (FaceTime, Zoom, GoToMeeting, etc.)</h2>
+                  </div>
+
+
+
+
+
+
+
     </div>
 </Container>
 
@@ -88,6 +151,31 @@ export default withStyles((theme) => ({
     color: "#55c3ba",
     textAlign: "center",
     marginBottom: "12px",
+  },
+  top: {
+    display: "flex",
+    flexWrap: "wrap",
+    alignItems: "top",
+  },
+
+  bold:{
+    fontWeight:"700",
+  },
+
+  column3:{
+    width:"350px",
+    maxWidth: "100%",
+    paddingRight:"10px",
+    paddingLeft:"10px",
+    verticalAlign: "top",
+  },
+
+  column2:{
+    width:"470px",
+    maxWidth: "100%",
+    paddingRight:"10px",
+    paddingLeft:"10px",
+    verticalAlign: "top",
   },
 
   subHeading: {
