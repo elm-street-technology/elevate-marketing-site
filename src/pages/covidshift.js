@@ -5,6 +5,7 @@ import config from "../utils/siteConfig";
 import Container from "../components/Container";
 import SignUpFormCovid from "../components/SignUpFormCovid";
 import Covid from "../images/covid_header.jpg";
+import Covidlogo from "../images/covid_logo.png";
 import C1 from "../images/covid_c1.png";
 import C2 from "../images/covid_c2.png";
 import C3 from "../images/covid_c3.png";
@@ -25,16 +26,9 @@ const Covidshift = ({ children, classes, data, tags }) => {
 
 
 <Container>
-    <div style={{paddingBottom:"50px"}}>
-                <div className={classes.covidContainer} style={{paddingBottom:"50px"}}>
-                            <img
-                            src={Covid}
-                            alt="Covid Shift"
-                            title="Covid Shift"
-                            className={classes.covidHeader}
-                            />
-                 </div>
-
+    <div style={{paddingBottom:"50px", textAlign:"center"}}>
+    <img src={Covidlogo} width="345" style={{paddingBottom:"20px"}}/>
+      <br />
 
       <h1 className={classes.heading}>Stream The Webinar</h1>
             <h2 className={classes.subHeading}>
