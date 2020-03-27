@@ -30,6 +30,7 @@ import Dose from "../images/dose_pic.png";
 import Line from "../images/line.png";
 import Free from "../images/free_month.png";
 import Freebg from "../images/free_bg.jpg";
+import Aprilbg from "../images/aprilbg.jpg";
 import Elevate_logo from "../images/elevate_logo.png";
 
 const subscribe_today = ({ classes }) => {
@@ -38,6 +39,21 @@ const subscribe_today = ({ classes }) => {
     <div className={classes.root}>
       <SEO />
     
+
+
+      <div style={{backgroundImage:"url("+Aprilbg+")", backgroundSize:"cover", backgroundPosition:"centerTop"}}>
+<Container>
+      <div className={classes.top} style={{paddingBottom:"60px", paddingRight:"35px", paddingLeft:"35px", paddingTop:"55px"}}>
+          <div className={classes.centerHeading}>
+                            <div className={classes.heading} style={{color:"#fbda3d"}}>50% OFF YOUR 1ST 3-MONTHS</div>
+                            <div className={classes.bold} style={{color:"#ffffff", fontSize:"18px", lineHeight:"33px"}}><span style={{color:"#fbda3d"}}>ANY</span> Elevate Digital Marketing / Lead Gen. Service
+                            </div>
+                            <div className={classes.subtext} style={{color:"#ffffff", fontSize:"14px"}}>*expires April 30, 2020</div>
+          </div>
+      </div>
+</Container>
+</div>
+
 
 
 
