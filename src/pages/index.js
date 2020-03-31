@@ -255,26 +255,24 @@ class Index extends Component {
         <div id="myModal" className={classes.modal}>
           <div className={classes.modalContent}>
             <span id="modalClose" className={classes.close}>&times;</span>
-           
-            <div style={{color:"rgb(241, 90, 83)",fontSize:"30px",fontWeight:"bold",paddingBottom:"30px"}}>$750 in FREE leads this month only!
-            <br/>
+            <div style={{color:"rgb(241, 90, 83)",fontSize:"30px",fontWeight:"bold",paddingBottom:"20px"}}>April Special Offer</div>
+            <div style={{fontSize:"20px",fontWeight:"bold",paddingBottom:"20px"}}>serving brokers &amp; agents in challenging times<br/>
                 <span style={{fontSize:'12px'}}>
-                * New Lead Generation Subscriptions Only
+                * valid for all NEW subscribers ONLY
                 </span>
             
             </div>
+            <div style={{color:"rgb(241, 90, 83)",fontSize:"30px",fontWeight:"bold",paddingBottom:"30px"}}>50% off your 1st 3-months</div>
             <div>
               <span style={{fontWeight:"bold"}}>
-                Let Elevate capture, nurture &amp; qualify your online leads, so you can focus on more important things in life.
-                <br/>
-                We’ve got you covered.
+              on ANY Elevate offering (marketing and/or lead gen)
               </span>
             </div> 
 
             <div>
               <div>
-                <Link to="/leadgen/?utm_source=popup&utm_medium=websitehomepage&utm_campaign=marchleadgenspecial&utm_term=lander" className={classes.ctabutton} style={{maxWidth:"550px"}}>
-                  Request Demo
+                <Link to="/aprilspecial" className={classes.ctabutton} style={{maxWidth:"550px"}}>
+                Schedule a Demo
                 </Link>
               </div>
             </div>         
