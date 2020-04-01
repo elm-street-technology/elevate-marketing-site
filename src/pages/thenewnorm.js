@@ -6,10 +6,10 @@ import Container from "../components/Container";
 import SignUpFormNorm from "../components/SignUpFormNorm";
 import Covid from "../images/covid_header.jpg";
 import Norm from "../images/norm.png";
-import C1 from "../images/covid_c1.png";
-import C2 from "../images/covid_c2.png";
-import C3 from "../images/covid_c3.png";
-import C4 from "../images/covid_c4.png";
+import BgSectionExternalNorm from "../components/BgSectionExternalNorm";
+import N1 from "../images/norm_c1.jpg";
+import N2 from "../images/norm_c2.jpg";
+import Swot from "../images/swot.png";
 import SEO from "../components/SEO";
 
 const Thenewnorm = ({ children, classes, data, tags }) => {
@@ -36,13 +36,41 @@ const Thenewnorm = ({ children, classes, data, tags }) => {
 
               <div style={{textAlign: "center", maxWidth:"700px",marginLeft:"auto",marginRight:"auto", paddingBottom:"50px"}}>
                 <div style={{ textAlign: "center"}} className={classes.videoEmbed}>
-                        <iframe className={classes.videoContainer} src="https://www.youtube.com/embed/g92eC1CVAYs"
+                        <iframe className={classes.videoContainer} src="https://www.youtube.com/embed/tKGQt6zuock"
                          frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                 </div>
               </div>
 
 
-             
+              <h1 className={classes.heading}>Poll Results</h1>
+            <h2 className={classes.subHeading}>
+            Participated in our live survey?<br />
+            Here’s the group results.</h2>
+
+              <div className={classes.top}>
+
+<div className={classes.column2} style={{ textAlign: "center", paddingTop: "12px" }}>
+                  
+                  
+                
+                  <div style={{ textAlign: "center",paddingTop:"12px" }}>
+                  <h2 className={classes.subHeading}>Are you currently using<br />
+                  video conferencing with colleagues?</h2>
+                        <img src={N1} width="255" />
+                  </div>
+</div>
+
+<div className={classes.column2} style={{ textAlign: "center", paddingTop: "12px" }}>
+
+               
+                  <div style={{ textAlign: "center",paddingTop:"12px" }}>
+                  <h2 className={classes.subHeading}>Are you currently engaged in all of the following: Facebook, Twitter, LinkedIn, Youtube, &amp; Blog?</h2>
+                        <img src={N2} width="255" />
+                  </div>
+</div>
+
+
+</div>    
 
 
             
@@ -65,7 +93,9 @@ const Thenewnorm = ({ children, classes, data, tags }) => {
 
     </div>
 </Container>
-
+<BgSectionExternalNorm secTitle="SWOT PERSONAL GOALS" secLink="/assets/elevate_swot.pdf" secButton="Download Now" secImage={Swot}>
+      During this unprecedented time, take the time to evaluate your strengths, weaknesses, opportunities &amp; threats with our SWOT self-evaluation worksheet.
+        </BgSectionExternalNorm>
 
 
  <div style={{backgroundColor:"#f7f7f7", paddingBottom:"50px"}}>
@@ -123,7 +153,7 @@ export default withStyles((theme) => ({
   },
 
   column2:{
-    width:"470px",
+    width:"520px",
     maxWidth: "100%",
     paddingRight:"10px",
     paddingLeft:"10px",
