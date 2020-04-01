@@ -72,9 +72,7 @@ const subscribe_today = ({ classes }) => {
           <div style={{ textAlign: "center",paddingBottom:"10px" }}>
           <img src={Sp} style={{ width:"100%", maxWidth:"260px"}}/>
         </div>
-        <div style={{ textAlign: "center",paddingBottom:"20px" }}>
-          <img src={Free} style={{ width:"100%", maxWidth:"140px"}}/>
-        </div>
+       
             
                 <div className={classes.productCol} style={{ textAlign: "left", paddingLeft:"10px", paddingRight:"10px" }}>
                 <div className={classes.bold} style={{color:"#57585b"}}>BLOG</div>
@@ -114,9 +112,7 @@ const subscribe_today = ({ classes }) => {
           <div style={{ textAlign: "center",paddingBottom:"10px" }}>
           <img src={Dms} style={{ width:"100%", maxWidth:"105px"}}/>
         </div>
-        <div style={{ textAlign: "center",paddingBottom:"20px" }}>
-          <img src={Free} style={{ width:"100%", maxWidth:"140px"}}/>
-        </div>
+        
                 <div className={classes.productCol} style={{ textAlign: "left", paddingLeft:"10px", paddingRight:"10px"}}>
                 <div className={classes.bold} style={{color:"#4ab8ac"}}>IDX WEBSITE</div>
                 <div className={classes.bold} style={{color:"#4ab8ac"}}>ADV. PRODUCTIVITY CRM</div>
@@ -155,7 +151,7 @@ const subscribe_today = ({ classes }) => {
 
           <div className={classes.infoboxGray2}>
           <div className={classes.column3} style={{ textAlign: "center", paddingBottom: "35px" }}>
-          <div style={{ textAlign: "center",paddingBottom:"40px" }}>
+          <div style={{ textAlign: "center",paddingBottom:"10px" }}>
           <img src={Elite} style={{ width:"100%", maxWidth:"120px"}}/>
         </div>
                 <div className={classes.productCol} style={{ textAlign: "left", paddingLeft:"10px", paddingRight:"10px", paddingBottom:"20px"}}>
@@ -184,7 +180,7 @@ const subscribe_today = ({ classes }) => {
                 <br /><br />
 
 
-                <div className={classes.bold} style={{color:"#f15953", paddingTop:"28px"}}>Monthly: <span style={{textDecoration:"line-through"}}>$899/m</span> <span style={{color:"#f97306"}} className={classes.bold}>$749/m</span></div>
+                <div className={classes.bold} style={{color:"#f15953",}}>Monthly: <span style={{textDecoration:"line-through"}}>$899/m</span> <span style={{color:"#f97306"}} className={classes.bold}>$749/m</span></div>
 <div className={classes.bold}  style={{color:"#f15953",}}>One Time Set-Up: <span style={{textDecoration:"line-through"}}>$800</span> <span style={{color:"#f97306"}} className={classes.bold}>$500</span></div>
 
                 
