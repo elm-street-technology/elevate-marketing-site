@@ -16,20 +16,8 @@ import SMBCLogo from "../images/smbcLogo.jpg";
 import Elite from "../images/elite_logo.png";
 import Sp from "../images/sp_logo.png";
 import Dms from "../images/dms_logo.png";
-import Ignite from "../images/ignite.jpg";
-import Pro from "../images/pro.jpg";
-import Tour from "../images/tour_icon.png";
-import Web from "../images/webinar_icon.png";
-import Social from "../images/social_pic.jpg";
-import Leadpic from "../images/leadpic.jpg";
-import Email from "../images/email.jpg";
-import Star from "../images/star.png";
-import Encore from "../images/encore_icon.png";
-import Emails from "../images/6emails_pic.png";
-import Dose from "../images/dose_pic.png";
 import Line from "../images/line.png";
-import Free from "../images/free_month.png";
-import Freebg from "../images/free_bg.jpg";
+import SignUpFormSubscribe from "../components/SignUpFormSubscribe";
 import Aprilbg from "../images/aprilbg.jpg";
 import Elevate_logo from "../images/elevate_logo.png";
 
@@ -199,15 +187,44 @@ const subscribe_today = ({ classes }) => {
 
 <Container>
 <div style={{ textAlign: "center", padding: "35px", fontSize:"12px", lineHeight:"18px" }}>
-By signing this form, I expressly consent that Elm Street Technology or its agents may contact me at the numbers provided regarding the Elevate products or services, via live, automated or prerecorded call, text, or email. I am not requiredto enter into this agreement as a condition of any purchase. I can revoke this consent through any reasonable means.  By signing this form, I also agree to payment for the products and services ordered hereon and that sales tax may be charged where applicable. I also agree to the terms of cancellation policy on the back of this form including that set-up fees are non-refundable.  I confirm I have read, understood and agree to the full Terms of Service of the Elevate productsI am purchasing as set forth at TryElevate.com.  Visit TryElevate.com for full Terms of Service, Refund Policy, Privacy Policy &amp; DMCA Notice. Questions? - 877.218.9771. Sales tax charged where applicable.  Please note that setup fees are non-refundable.  <a target="_blank" href="http://tryelevate.com/terms-of-service/" >Full Terms of Service</a><br /><br /><br />
+By subscribing to Elevate, I expressly consent that Elm Street Technology or its agents may contact me at the numbers provided regarding the Elevate products or services, via live, automated or prerecorded call, text, or email. I am not required to enter into this agreement as a condition of any purchase. I can revoke this consent through any reasonable means. By subscribing to Elevate, I also agree to payment for the products and services ordered hereon and that sales tax may be charged where applicable. I also agree to the terms of cancellation policy on the back of this form including that set-up fees are non-refundable. I confirm I have read, understood and agree to the full <a target="_blank" href="https://tryelevate.com/terms-of-service" >Terms of Service</a> of the Elevate products.  I am purchasing as set forth at TryElevate.com. Visit TryElevate.com for full <a target="_blank" href="https://tryelevate.com/terms-of-service" >Terms of Service</a>, <a target="_blank" href="https://tryelevate.com/pricing-and-refund-policy" >Refund Policy</a>, <a target="_blank" href="https://tryelevate.com/privacy" >Privacy Policy</a> &amp; <a target="_blank" href="https://tryelevate.com/dmca" >DMCA Notice.</a>  Sales tax charged where applicable. Please note that setup fees are non-refundable.
+<br /><br />
+Questions? - 877.218.9771
 </div>
+</Container>
+
+<Container>
+  <div style={{textAlign:"center"}}>
+            <h1 className={classes.heading}>Elevate Webinar Follow-up Video Demo</h1>
+            <h2 className={classes.subHeading}>
+            This 24-minute video provides you with a recap of the Elevate Educational Webinar series.</h2>
+
+              <div style={{textAlign: "center", maxWidth:"700px",marginLeft:"auto",marginRight:"auto", paddingBottom:"70px"}}>
+                <div style={{ textAlign: "center"}} className={classes.videoEmbed}>
+                        <iframe className={classes.videoContainer} src="https://www.youtube.com/embed/0Cj5p6XJXHU"
+                         frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                </div>
+              </div>
+   </div>
 </Container>
 
 
 
-
-
-
+<div style={{backgroundColor:"#f7f7f7", paddingBottom:"60px"}}>
+        <h1 className={classes.heading} style={{paddingTop:"50px", textAlign:"center"}}>
+        Interested in a Personal Walk-Through?
+        </h1>
+        <SignUpFormSubscribe/>
+        {/* <div className={classes.closingContainer}>
+          For Media Inquiries, {""} Please {""}
+          <a
+            className={classes.emailLink}
+            href="mailto:ekaplan@elmstreettechnology.com"
+          >
+            Email Us
+          </a>
+        </div> */}
+ </div>
 
 
 
@@ -266,6 +283,15 @@ export default withStyles((theme) => ({
     fontWeight: "700",
     marginRight: "auto",
     paddingBottom: "20px",
+  },
+  subHeading: {
+    fontSize: "18px",
+    lineHeight: "28px",
+    fontWeight: "600",
+    letterSpacing: ".08px",
+    color: "#888f96",
+    textAlign: "center",
+    margin: "0 auto 36px",
   },
   centerHeading:{
     alignItems: "center",
@@ -508,4 +534,21 @@ export default withStyles((theme) => ({
       minHeight: "380px",
     },
   },
+
+  videoEmbed:{
+    position: "relative",
+    paddingBottom: "56.25%",
+    paddingTop: "30px",
+    height: "0",
+    overflow: "hidden",
+    
+  },
+  videoContainer:{
+    position: "absolute",
+    top: "0",
+    left: "0",
+    width: "100%",
+    height: "100%",
+    
+  }
 }))(subscribe_today);
