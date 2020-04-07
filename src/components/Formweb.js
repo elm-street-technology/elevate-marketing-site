@@ -180,8 +180,9 @@ class Formweb extends Component {
           render={({ values, isSubmitting,handleBlur, handleChange }) => (
             <Form noValidate>
               <div style={{marginBottom:"30px"}}>
-                <div className={classes.headingLarge} style={{ marginBottom: "25px" }}>New decade. New year. New website?</div>
-                <div style={{color:"#495050", lineHeight:"22px", paddingBottom:"25px"}}>Kick-off the year with a gorgeous IDX website for as little as $150/m. Request a quick 15-minute demo today to see how you can be delivering daily reports, intuitive search &amp; so much more to your buyers/sellers.</div>
+                <div className={classes.headingLarge} style={{ marginBottom: "25px" }}>Get a stunning IDX website,<br />
+                starting as low as $75/m.</div>
+                <div style={{color:"#495050", lineHeight:"22px", paddingBottom:"35px"}}>In times of crisis, we are here to support the real estate community. For this month only, take advantage of special pricing and receive an IDX website, CRM, social media, email and text marketing...starting as low as $75/m. Schedule your 15-minute demo TODAY.</div>
 
                 <div className={classes.fullWidthVid}>
                   <div aspectRatio="16by9">
