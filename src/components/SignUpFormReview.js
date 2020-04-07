@@ -53,17 +53,14 @@ class SignUpFormReview extends Component {
           }}
         >
           <Alert color="success">
-            <Typography type="heading3" gutterBottom>
-              AWESOME.
+            <Typography type="heading4" gutterBottom>
+            Congratulations, you’ve just taken the 1st step to online marketing success.   
             </Typography>
-            <Typography type="heading6" gutterBottom>
-              An Elevate sales representative will be in touch with you shortly.
-            </Typography>
-            <Typography type="heading4" gutterTop>
-              If you'd like to speak to a sales representative NOW, please call{" "}
+            <Typography type="heading6" gutterTop>
+            We look forward to connecting with you.  In the meantime, feel free to connect with an Elevate Coach by calling{" "}
               <a href="tel:18447920260" className={classes.link}>
                 844.792.0260
-              </a>.
+              </a>. We look forward to assisting you.
             </Typography>
           </Alert>
         </div>
@@ -88,8 +85,8 @@ class SignUpFormReview extends Component {
             role: "",
             roleOther: "",
             interests: [],
-            form: "covidshift",
-            list: 97842,
+            form: "socialmediareview",
+            list: 98511,
           }}
           validationSchema={() =>
             Yup.object().shape({
@@ -226,11 +223,11 @@ class SignUpFormReview extends Component {
                     value: "Existing Client",
                   },
                   {
-                    label: "An agent – looking to schedule my 15-minute online marketing evaluation.",
+                    label: "An agent – looking to schedule my FREE 15-minute social media review.",
                     value: "Agent",
                   },
                   {
-                    label: "A broker – interested in scheduling my gap analysis.",
+                    label: "A broker – interested in scheduling my FREE gap / financial analysis.",
                     value: "Broker",
                   },
                   {

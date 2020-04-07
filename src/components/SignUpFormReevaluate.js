@@ -88,8 +88,8 @@ class SignUpFormReevaluate extends Component {
             role: "",
             roleOther: "",
             interests: [],
-            form: "thenewnorm",
-            list: 98245,
+            form: "reevaluate",
+            list: 98510,
           }}
           validationSchema={() =>
             Yup.object().shape({
