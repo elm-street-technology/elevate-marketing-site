@@ -9,6 +9,9 @@ import Re from "../images/reevaluate_title.png";
 import BgSectionExternalNorm from "../components/BgSectionExternalNorm";
 import N1 from "../images/norm_c1.jpg";
 import N2 from "../images/norm_c2.jpg";
+import R1 from "../images/reev1.png";
+import R2 from "../images/reev2.png";
+import R3 from "../images/reev3.png";
 import Swot from "../images/swot.png";
 import SEO from "../components/SEO";
 
@@ -94,10 +97,54 @@ const Reevaluate = ({ children, classes, data, tags }) => {
 
     </div>
 </Container>
-<BgSectionExternalNorm secTitle="SWOT PERSONAL GOALS" secLink="/assets/elevate_swot.pdf" secButton="Download Now" secImage={Swot}>
-      During this unprecedented time, take the time to evaluate your strengths, weaknesses, opportunities &amp; threats with our SWOT self-evaluation worksheet.
-        </BgSectionExternalNorm>
 
+<div style={{ textAlign: "center", backgroundColor: "#39225d" }}>
+  <Container>
+                    <div style={{paddingTop:"60px", paddingBottom:"25px", paddingLeft:"45px", paddingRight:"45px"}}>
+                          <div className={classes.heading}>Webinar Downloads</div>
+                                <div className={classes.bold} style={{color:"#FFFFFF"}}>Worksheets and Outlines to help you REevaluate!</div>
+
+                                
+                    </div>
+
+        <div className={classes.top}>
+
+                  <div className={classes.column3} style={{ textAlign: "center", paddingTop: "12px" }}>
+                                    
+                                    <div className={classes.bold} style={{color:"#FFFFFF", lineHeight:"33px"}}>Financial Analysis</div>
+                                    <div style={{color:"#cccccc"}}>Income &amp; Expense Tracking</div>
+                                    <a target="_blank" href="/assets/financial_analysis.xlsx" className={classes.getStartedLink}>
+                                    Download Spreadsheet</a>
+                                    <div style={{ textAlign: "center",paddingTop:"5px" }}>
+                                          <img src={R1} width="255" />
+                                    </div>
+                  </div>
+
+                  <div className={classes.column3} style={{ textAlign: "center", paddingTop: "12px" }}>
+                 
+                                    <div className={classes.bold} style={{color:"#FFFFFF", lineHeight:"33px"}}>Review of Last Year</div>
+                                    <div style={{color:"#cccccc"}}>Monthly Production &amp; Source</div>
+                                    <a target="_blank" href="/assets/last_year_review.xlsx" className={classes.getStartedLink}>
+                                    Download Spreadsheet</a>
+                                    <div style={{ textAlign: "center",paddingTop:"5px" }}>
+                                          <img src={R2} width="255" />
+                                    </div>
+                  </div>
+
+                  <div className={classes.column3} style={{ textAlign: "center", paddingTop: "12px" }}>
+
+                                    <div className={classes.bold} style={{color:"#FFFFFF", lineHeight:"33px"}}>REevaluate Worksheet</div>
+                                    <div style={{color:"#cccccc"}}>Tips, Outlines &amp; SWOT Analysis</div>
+                                    <a target="_blank" href="/assets/reevaluate_worksheet.pdf" className={classes.getStartedLink}>
+                                    Download .PDF</a>
+                                    <div style={{ textAlign: "center",paddingTop:"5px" }}>
+                                          <img src={R3} width="255" />
+                                    </div>
+                  </div>
+                  
+        </div>
+    </Container>
+</div>
 
  <div style={{backgroundColor:"#ffffff", paddingBottom:"50px"}}>
         <h1 className={classes.heading} style={{paddingTop:"65px"}}>
@@ -143,6 +190,24 @@ export default withStyles((theme) => ({
 
   bold:{
     fontWeight:"700",
+  },
+
+  getStartedLink: {
+    minWidth: "250px",
+    maxWidth: "250px",
+    alignContent: "center",
+    justifyContent: "center",
+    fontSize: "14px",
+    fontWeight: "700",
+    display: "block",
+    letterSpacing: ".25px",
+    backgroundColor: theme.colors.secondary,
+    color: "#FFF",
+    textDecoration: "none",
+    padding: "14px 16px",
+    borderRadius: "4px",
+    margin: "16px auto",
+    marginBottom: "20px",
   },
 
   column3:{
