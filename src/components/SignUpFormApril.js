@@ -333,7 +333,7 @@ class SignUpFormApril extends Component {
                 Tell Me More about Elevate
               </button>
               <div style={{ fontSize: "11px",textAlign: "center" }}>
-                By submitting this form, you are requesting to be contacted by a member of the Elevate Sales Team.<br />
+              By submitting this form, you are requesting to be contacted by a member of the Elevate Sales Team at the details provided via text, email or call (may involve automated or pre-recorded means).  You may revoke this consent through any reasonable means.<br />
                 Existing subscribers seeking support, please visit the <a href="https://elmstreettechnology.zendesk.com/hc/en-us">Elevate Help Center</a>.
               </div>
             </Form>

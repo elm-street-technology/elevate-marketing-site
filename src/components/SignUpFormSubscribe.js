@@ -259,8 +259,7 @@ class SignUpFormSubscribe extends Component {
                 Please contact me asap
               </button>
               <div style={{ fontSize: "11px",textAlign: "center" }}>
-                By submitting this form, you are requesting to be contacted by a member of the Elevate Sales Team.<br />
-                We will contact you to schedule your time slot asap.
+              By submitting this form, you are requesting to be contacted by a member of the Elevate Sales Team at the details provided via text, email or call (may involve automated or pre-recorded means).  You may revoke this consent through any reasonable means.
               </div>
             </Form>
           )}
