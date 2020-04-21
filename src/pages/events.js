@@ -103,7 +103,7 @@ class Events extends Component {
                     </Link><br />
                     <div className={classes.subtitleText}>Turn your social media from a toy into a tool</div>
                     <div className={classes.subtext} style={{ minHeight:"130px"}}>The #1 boot camp for real estate agents continues
-                    to take the US by storm. This 2-hr, interactive
+                    to take the US by storm. This 1-hr, interactive
                     educational seminar is designed to inspire
                     and empower agents with tips, tricks &amp; strategies
                     for conquering their website, blog and social media.</div>
