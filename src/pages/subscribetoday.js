@@ -79,8 +79,8 @@ const subscribe_today = ({ classes }) => {
 </div>
 <br />
 <div style={{color:"#57585b", textAlign: "center",}}>
-<div className={classes.bold} style={{color:"#57585b", paddingTop:"28px"}}>Monthly: <span style={{color:"#f97306"}} className={classes.bold}>$80/m</span></div>
-<div className={classes.bold}>One Time Set-Up: <span style={{textDecoration:"line-through"}}>$300</span> <span style={{color:"#f97306"}} className={classes.bold}>$100</span></div>
+<div className={classes.bold} style={{color:"#57585b", paddingTop:"28px"}}>Monthly: <span style={{color:"#57585b"}} className={classes.bold}>$80/m</span></div>
+<div className={classes.bold}>One Time Set-Up: $300</div>
 
 </div>
               
@@ -121,8 +121,8 @@ const subscribe_today = ({ classes }) => {
                 <span className={classes.bold} style={{color:"#4ab8ac"}}>ANNUAL AGREEMENT</span>
                 <br />
                   <br />
-                  <div className={classes.bold} style={{color:"#4ab8ac", paddingTop:"28px"}}>Monthly: <span style={{textDecoration:"line-through"}}>$240/m</span> <span style={{color:"#f97306"}} className={classes.bold}>$150/m</span></div>
-<div className={classes.bold} style={{color:"#4ab8ac",}}>One Time Set-Up: <span style={{textDecoration:"line-through"}}>$700</span> <span style={{color:"#f97306"}} className={classes.bold}>$200</span></div>
+                  <div className={classes.bold} style={{color:"#4ab8ac", paddingTop:"28px"}}>Monthly: $240/m</div>
+<div className={classes.bold} style={{color:"#4ab8ac",}}>One Time Set-Up: $700</div>
 
 
 <a target="_blank" href="https://elmstreettechnology.recurly.com/subscribe/edigitalmarketingsystem" className={classes.getStartedLinkignite}>
@@ -168,8 +168,8 @@ const subscribe_today = ({ classes }) => {
                 <br /><br />
 
 
-                <div className={classes.bold} style={{color:"#f15953",}}>Monthly: <span style={{textDecoration:"line-through"}}>$899/m</span> <span style={{color:"#f97306"}} className={classes.bold}>$749/m</span></div>
-<div className={classes.bold}  style={{color:"#f15953",}}>One Time Set-Up: <span style={{textDecoration:"line-through"}}>$800</span> <span style={{color:"#f97306"}} className={classes.bold}>$500</span></div>
+                <div className={classes.bold} style={{color:"#f15953",}}>Monthly: $899/m</div>
+<div className={classes.bold}  style={{color:"#f15953",}}>One Time Set-Up: $800</div>
 
                 
 <a target="_blank" href="https://elmstreettechnology.recurly.com/subscribe/elevateelite" className={classes.getStartedLinkignite}>
