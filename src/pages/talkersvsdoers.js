@@ -6,10 +6,7 @@ import Container from "../components/Container";
 import SignUpFormTalkers from "../components/SignUpFormTalkers";
 import Covid from "../images/covid_header.jpg";
 import Talkerslogo from "../images/talkers.png";
-import C1 from "../images/covid_c1.png";
-import C2 from "../images/covid_c2.png";
-import C3 from "../images/covid_c3.png";
-import C4 from "../images/covid_c4.png";
+import Aprilbg from "../images/aprilbg.jpg";
 import SEO from "../components/SEO";
 
 const Talkersvsdoers = ({ children, classes, data, tags }) => {
@@ -34,52 +31,18 @@ const Talkersvsdoers = ({ children, classes, data, tags }) => {
             <h2 className={classes.subHeading}>
              Missed the webinar or looking for a replay? We’ve got you covered.</h2>
 
-              <div style={{textAlign: "center", maxWidth:"700px",marginLeft:"auto",marginRight:"auto", paddingBottom:"50px"}}>
+              <div style={{textAlign: "center", maxWidth:"700px",marginLeft:"auto",marginRight:"auto", paddingBottom:"30px"}}>
                 <div style={{ textAlign: "center"}} className={classes.videoEmbed}>
-                        <iframe className={classes.videoContainer} src="https://www.youtube.com/embed/g92eC1CVAYs"
+                        <iframe className={classes.videoContainer} src="https://www.youtube.com/embed/DwR07S2dcao"
                          frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                 </div>
               </div>
 
 
-              <h1 className={classes.heading}>Poll Results</h1>
-            <h2 className={classes.subHeading}>
-            Participated in our live survey?  Here’s the group results.</h2>
+              
 
 
-            <div className={classes.top}>
-
-<div className={classes.column3} style={{ textAlign: "center", paddingTop: "12px" }}>
-                  
-                  
-                
-                  <div style={{ textAlign: "center",paddingTop:"12px" }}>
-                  <h2 className={classes.subHeading}>Real estate professionals are forecasting a serious market shift.<br />
-                  Do you believe this is happening<br />
-                  right now?</h2>
-                        <img src={C1} width="255" />
-                  </div>
-</div>
-
-<div className={classes.column3} style={{ textAlign: "center", paddingTop: "12px" }}>
-
-               
-                  <div style={{ textAlign: "center",paddingTop:"12px" }}>
-                  <h2 className={classes.subHeading}>If YES...<br />
-                  how long do you think this<br />
-                  real estate market shift will last?</h2>
-                        <img src={C2} width="255" />
-                  </div>
-</div>
-
-<div className={classes.column3} style={{ textAlign: "center", paddingTop: "12px" }}>
-                    <div style={{ textAlign: "center",paddingTop:"12px" }}>
-                  <h2 className={classes.subHeading}>Are you currently investing MORE in your lead generation and marketing efforts, OR are you withdrawing / holding back?</h2>
-                  
-                        <img src={C4} width="255" />
-                  </div>
-</div>
-</div>
+       
 
 
 
@@ -89,15 +52,7 @@ const Talkersvsdoers = ({ children, classes, data, tags }) => {
                   
                   
                 
-                  <div style={{ textAlign: "center",paddingTop:"32px" }}>
-                  <h2 className={classes.subHeading}>How are you staying in touch<br />
-                  with your clients?</h2>
-                        <img src={C3} width="355" /><br /><br />
-                        <h2 className={classes.subHeading}>
-                        <span className={classes.bold} style={{color:"#55c3ba"}}>69% Email</span> (Mass mailing, one-on-one, etc.)<br />
-                        <span className={classes.bold} style={{color:"#55c3ba"}}>59% Social Media</span> (Facebook, Twitter, Instagram, LinkedIn, etc.)<br />
-                        <span className={classes.bold} style={{color:"#55c3ba"}}>17% Video Meetings / House Tours</span> (FaceTime, Zoom, GoToMeeting, etc.)</h2>
-                  </div>
+ 
 
 
 
@@ -109,10 +64,18 @@ const Talkersvsdoers = ({ children, classes, data, tags }) => {
 </Container>
 
 
+<div style={{backgroundImage:"url("+Aprilbg+")", backgroundSize:"cover", backgroundPosition:"centerTop", padding:"45px"}}>
+              <h1 className={classes.heading} style={{color:"#ffffff", lineHeight:"34px"}}>Take Advantage of<br />
+              TODAY'S SPECIAL OFFER!</h1>
+              <a target="_blank" href="https://elmstreettechnology.recurly.com/subscribe/webinardms" className={classes.getStartedLink}>
+                  SUBSCRIBE NOW
+                    </a>
+              </div>
+
 
  <div style={{backgroundColor:"#f7f7f7", paddingBottom:"50px"}}>
         <h1 className={classes.heading} style={{paddingTop:"50px"}}>
-        Connect with a Success Coach
+        Request Your FREE Social Media Consultation
         </h1>
         <SignUpFormTalkers />
         {/* <div className={classes.closingContainer}>
@@ -180,6 +143,24 @@ export default withStyles((theme) => ({
     color: "#888f96",
     textAlign: "center",
     margin: "0 auto 36px",
+  },
+  getStartedLink: {
+    minWidth: "200px",
+    maxWidth: "200px",
+    alignContent: "center",
+    justifyContent: "center",
+    fontSize: "16px",
+    fontWeight: "700",
+    display: "block",
+    letterSpacing: ".25px",
+    backgroundColor: "#f8c43c",
+    color: "#FFF",
+    textDecoration: "none",
+    padding: "12px 14px",
+    borderRadius: "4px",
+    margin: "14px auto",
+    marginBottom: "10px",
+    textAlign:"center"
   },
 
   covidContainer: {
