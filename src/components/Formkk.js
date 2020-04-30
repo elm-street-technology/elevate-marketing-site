@@ -188,7 +188,7 @@ class Formkk extends Component {
 
               
                 </div>
-              <div style={{ maxWidth: "500px",marginLeft:"auto",marginRight:"auto"}}>
+              <div style={{ maxWidth: "600px",marginLeft:"auto",marginRight:"auto"}}>
               <div className={classes.topRow}>
                 <Field
                   id="firstname"
@@ -234,23 +234,24 @@ class Formkk extends Component {
                       component={Input}
                       className={classes.field}
                   />
+                  <div style={{textAlign:"left",fontSize:"14px",lineHeight:"19px"}}>
               <Field
                 id="role"
                 name="role"
-                label="I am a(n)  &nbsp;&nbsp;(optional)"
+                label="I am a(n)"
                 component={RadioGroup}
                 display="inline"
                 items={[
                   {
-                    label: "Agent",
+                    label: "Existing client – looking to connect to review my account & make sure I’m doing everything I can!",
+                    value: "Existing Client",
+                  },
+                  {
+                    label: "An agent – looking to schedule my 15-minute online marketing evaluation.",
                     value: "Agent",
                   },
                   {
-                    label: "Team",
-                    value: "Team",
-                  },
-                  {
-                    label: "Broker",
+                    label: "A broker – interested in scheduling my gap analysis.",
                     value: "Broker",
                   },
                   {
@@ -270,77 +271,7 @@ class Formkk extends Component {
                   autoFocus
                 />
               )}
-
-              <Field
-                id="interests"
-                name="interests"
-                label="I am interested in:  (select all that apply)"
-                component={CheckboxGroup}
-                items={[
-                  {
-                    label: "Digital Marketing Services (Website, Email, Social, etc.)",
-                    value: "Digital Marketing Services (Website, Email, Social, etc.)",
-                  },
-                  {
-                    label: "Lead Generation, Parsing & Scrubbing Services",
-                    value: "Lead Generation, Parsing & Scrubbing Services",
-                  },
-                  {
-                    label: "CRM Solutions",
-                    value: "CRM Solutions",
-                  },
-                  {
-                    label: "Custom Creative / Marketing Services",
-                    value: "Custom Creative / Marketing Services",
-                  },
-                ]}
-                className={classes.field}
-              />
-              {console.log(values.interests)}
-              {values.interests.includes('Other') && (
-                <Field
-                  id="interestsOther"
-                  name="interestsOther"
-                  label="Other"
-                  component={Input}
-                  className={classes.field}
-                  autoFocus
-                />
-              )}
-              <span className={classes.selectlabel} >
-                Select a date / time to connect with an Elevate Success Coach:
-                </span>
-                <div>
-                  <div className={classes.topRow}>
-                    <Field id="meetingdate" name="meetingdate" label="Call Date" component={Datetime} timeFormat={false} isValidDate={valid} renderDay={renderDay} />
-                    <div style={{ margin: "8px auto 16px" }}>
-                      <label for="meetingtime" className={classes.selectlabel}>
-                        Call Time
-                        </label>
-                      <select name="meetingtime" value={values.meetingtime} onChange={handleChange} onBlur={handleBlur} style={{ display: "block" }} className={classes.selectfield}>
-                        <option value="" label="Select a time slot" />
-                        <option value="09:00:00">9:00am (EDT)</option>
-                        <option value="09:30:00">9:30am (EDT)</option>
-                        <option value="10:00:00">10:00am (EDT)</option>
-                        <option value="10:30:00">10:30am (EDT)</option>
-                        <option value="11:00:00">11:00am (EDT)</option>
-                        <option value="11:30:00">11:30am (EDT)</option>
-                        <option value="12:00:00">12:00pm (EDT)</option>
-                        <option value="12:30:00">12:30pm (EDT)</option>
-                        <option value="13:00:00">1:00pm (EDT)</option>
-                        <option value="13:30:00">1:30pm (EDT)</option>
-                        <option value="14:00:00">2:00pm (EDT)</option>
-                        <option value="14:30:00">2:30pm (EDT)</option>
-                        <option value="15:00:00">3:00pm (EDT)</option>
-                        <option value="15:30:00">3:30pm (EDT)</option>
-                        <option value="16:00:00">4:00pm (EDT)</option>
-                        <option value="16:30:00">4:30pm (EDT)</option>
-                        <option value="17:00:00">5:00pm (EDT)</option>
-                        <option value="17:30:00">5:30pm (EDT)</option>
-                      </select>
-                    </div>
-                  </div>
-                </div>
+              </div>
               <button
                 type="submit"
                 className={classes.signUpBtn}
@@ -378,6 +309,7 @@ export default withStyles((theme) => ({
     border: "2px solid #ECECEC",
     height: "50px",
     fontWeight: "600",
+    textAlign: "left",
   },
   topRow: {
     display: "flex",
