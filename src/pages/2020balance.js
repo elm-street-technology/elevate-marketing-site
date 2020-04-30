@@ -36,7 +36,7 @@ const Balance = ({ children, classes, data, tags }) => {
 
               <div style={{textAlign: "center", maxWidth:"700px",marginLeft:"auto",marginRight:"auto", paddingBottom:"50px"}}>
                 <div style={{ textAlign: "center"}} className={classes.videoEmbed}>
-                        <iframe className={classes.videoContainer} src="https://www.youtube.com/embed/LU8XdEbxtxY"
+                        <iframe className={classes.videoContainer} src="https://www.youtube.com/embed/rkxLhkxzsLo"
                          frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                 </div>
               </div>
