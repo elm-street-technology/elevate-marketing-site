@@ -5,10 +5,11 @@ import config from "../utils/siteConfig";
 import Container from "../components/Container";
 import SignUpFormBalance from "../components/SignUpFormBalance";
 import Balancelogo from "../images/balance_logo.jpg";
-import C1 from "../images/covid_c1.png";
-import C2 from "../images/covid_c2.png";
-import C3 from "../images/covid_c3.png";
-import C4 from "../images/covid_c4.png";
+import Bal1 from "../images/bal1.png";
+import Bal2 from "../images/bal2.png";
+import Bal3 from "../images/bal3.png";
+import Bal4 from "../images/bal4.png";
+import Bal5 from "../images/bal5.png";
 import SEO from "../components/SEO";
 
 const Balance = ({ children, classes, data, tags }) => {
@@ -35,7 +36,7 @@ const Balance = ({ children, classes, data, tags }) => {
 
               <div style={{textAlign: "center", maxWidth:"700px",marginLeft:"auto",marginRight:"auto", paddingBottom:"50px"}}>
                 <div style={{ textAlign: "center"}} className={classes.videoEmbed}>
-                        <iframe className={classes.videoContainer} src="https://www.youtube.com/embed/g92eC1CVAYs"
+                        <iframe className={classes.videoContainer} src="https://www.youtube.com/embed/LU8XdEbxtxY"
                          frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                 </div>
               </div>
@@ -53,10 +54,9 @@ const Balance = ({ children, classes, data, tags }) => {
                   
                 
                   <div style={{ textAlign: "center",paddingTop:"12px" }}>
-                  <h2 className={classes.subHeading}>Real estate professionals are forecasting a serious market shift.<br />
-                  Do you believe this is happening<br />
-                  right now?</h2>
-                        <img src={C1} width="255" />
+                  <h2 className={classes.subHeading}>How are YOU feeling?<br />
+                  (select all that apply)</h2>
+                        <img src={Bal1} width="255" />
                   </div>
 </div>
 
@@ -64,20 +64,59 @@ const Balance = ({ children, classes, data, tags }) => {
 
                
                   <div style={{ textAlign: "center",paddingTop:"12px" }}>
-                  <h2 className={classes.subHeading}>If YES...<br />
-                  how long do you think this<br />
-                  real estate market shift will last?</h2>
-                        <img src={C2} width="255" />
+                  <h2 className={classes.subHeading}>What do you think will be<br />
+                  the shape of our industry's recovery?</h2>
+                        <img src={Bal2} width="255" />
                   </div>
 </div>
 
 <div className={classes.column3} style={{ textAlign: "center", paddingTop: "12px" }}>
                     <div style={{ textAlign: "center",paddingTop:"12px" }}>
-                  <h2 className={classes.subHeading}>Are you currently investing MORE in your lead generation and marketing efforts, OR are you withdrawing / holding back?</h2>
+                  <h2 className={classes.subHeading}>Are you experiencing<br />
+                  buyers/sellers “on hold”?</h2>
                   
-                        <img src={C4} width="255" />
+                        <img src={Bal3} width="255" />
                   </div>
 </div>
+</div>
+
+
+
+<div className={classes.top}>
+
+<div className={classes.column2} style={{ textAlign: "center", paddingTop: "42px" }}>
+                  
+                  
+                
+                  <div style={{ textAlign: "center" }}>
+                  <h2 className={classes.subHeading}>What technology are you using<br />
+                  MORE of now than previously?</h2>
+                        <img src={Bal5} width="355" /><br /><br />
+                        <h2 className={classes.subHeading}>
+                        <span className={classes.bold} style={{color:"#55c3ba"}}>70%</span> Virtual Tours, etc.<br />
+                        <span className={classes.bold} style={{color:"#55c3ba"}}>60%</span> Email, Text, Video Messaging<br />
+                        <span className={classes.bold} style={{color:"#55c3ba"}}>55%</span> Social Media - Organic &amp; Paid<br />
+                        <span className={classes.bold} style={{color:"#55c3ba"}}>28%</span> Online Lead Gen.
+                        </h2>
+                  </div>
+</div>
+
+<div className={classes.column2} style={{ textAlign: "center", paddingTop: "42px" }}>
+
+               
+                  <div style={{ textAlign: "center"}}>
+                  <h2 className={classes.subHeading}>What technology do you<br />
+                  plan to CONTINUE using?</h2>
+                        <img src={Bal5} width="355" /><br /><br />
+                        <h2 className={classes.subHeading}>
+                        <span className={classes.bold} style={{color:"#55c3ba"}}>78%</span> Virtual Tours, etc.<br />
+                        <span className={classes.bold} style={{color:"#55c3ba"}}>74%</span> Email, Text, Video Messaging<br />
+                        <span className={classes.bold} style={{color:"#55c3ba"}}>72%</span> Social Media - Organic &amp; Paid<br />
+                        <span className={classes.bold} style={{color:"#55c3ba"}}>45%</span> Online Lead Gen.<br />
+                        </h2>
+                  </div>
+</div>
+
 </div>
 
 
@@ -88,15 +127,7 @@ const Balance = ({ children, classes, data, tags }) => {
                   
                   
                 
-                  <div style={{ textAlign: "center",paddingTop:"32px" }}>
-                  <h2 className={classes.subHeading}>How are you staying in touch<br />
-                  with your clients?</h2>
-                        <img src={C3} width="355" /><br /><br />
-                        <h2 className={classes.subHeading}>
-                        <span className={classes.bold} style={{color:"#55c3ba"}}>69% Email</span> (Mass mailing, one-on-one, etc.)<br />
-                        <span className={classes.bold} style={{color:"#55c3ba"}}>59% Social Media</span> (Facebook, Twitter, Instagram, LinkedIn, etc.)<br />
-                        <span className={classes.bold} style={{color:"#55c3ba"}}>17% Video Meetings / House Tours</span> (FaceTime, Zoom, GoToMeeting, etc.)</h2>
-                  </div>
+             
 
 
 
@@ -164,7 +195,7 @@ export default withStyles((theme) => ({
   },
 
   column2:{
-    width:"470px",
+    width:"520px",
     maxWidth: "100%",
     paddingRight:"10px",
     paddingLeft:"10px",
