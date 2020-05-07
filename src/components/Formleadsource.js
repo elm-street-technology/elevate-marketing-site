@@ -57,11 +57,10 @@ class FormLeadSource extends Component {
                                   
                       
             <Typography type="heading3" gutterBottom style={{color:"#f15623",}}>
-              Fantastic!
+              <a className={classes.signUpBtn} href="/assets/last_year_review.xlsx">Download the Evaluation Spreadsheet</a>
             </Typography>
             <Typography type="heading5" gutterTop>
-        We’ll reach out to you asap via email or telephone.<br/>
-              You can also speak to a member of our sales team immediately by calling  <a href="tel:18447920260" className={classes.link}>844.792.0260</a>.
+              
             </Typography>
           </div>
         </div>
@@ -80,67 +79,26 @@ class FormLeadSource extends Component {
           initialValues={{
             firstname: "",
             lastname: "",
-            company: "",
             email: "",
-            phone: "",
-            mls_number: "",
-            form: "kardashian",
-            list: 100003,
-            meetingdate: '',
-            meetingtime: '',
-            role: "",
-            interests: '',
+            form: "formleadsource",
+            list: 100548,
           }}
           validationSchema={() =>
             Yup.object().shape({
               firstname: Yup.string().required("First name is required"),
               lastname: Yup.string().required("Last name is required"),
-              company: Yup.string(),
               email: Yup.string()
                 .email("Invalid email address")
-                .required("Email is required"),
-              phone: Yup.string().required("Phone is required"),
-              mls_number: Yup.string()
+                .required("Email is required")
             })
           }
           onSubmit={(values, { setSubmitting }) => {
-            //if (values.meetingdate != undefined) {
-            var meeting_request = '';
-            var notes = 'Interests: ';
-            Object.keys(values).forEach(function (key, index) {
-              // key: the name of the object key
-              // index: the ordinal position of the key within the object 
-              if (key == 'meetingdate') {
-                if (typeof values.meetingdate.format === "function") {
-                  meeting_request = values.meetingdate.format("YYYY-MM-DD") + "T" + values.meetingtime.replace(" (EDT)", "") + "-04:00"
-                }
-              }
-              if (key == 'roleOther'){
-                if(values.roleOther.length > 0){
-                  values.role = values.roleOther;
-                }
-              }
-              if (key == 'interestsOther'){
-                if(values.interestsOther.length > 0){
-                  //notes = values.interests.join(",");
-                  notes = notes + "," + values.interestsOther;
-                }
-              }
-              if (key == "interests"){
-                if(values.interests.length > 0){
-                  notes = notes + "," + values.interests.join(",");
-                }
-              }
-            });
-            
             const body = {
               ...values,
-              notes: notes,
               utm_campaign: (window.utm_tags) ? window.utm_tags.campaign : "",
               utm_source: (window.utm_tags) ? window.utm_tags.source : "",
               utm_medium: (window.utm_tags) ? window.utm_tags.medium : "",
-              utm_term: (window.utm_tags) ? window.utm_tags.term : "",
-              demo_request_date: meeting_request
+              utm_term: (window.utm_tags) ? window.utm_tags.term : ""
             };
             return fetch(
               "https://easyemerge.com/plugins/elevate_form.php",
@@ -179,10 +137,7 @@ class FormLeadSource extends Component {
           render={({ values, isSubmitting,handleBlur, handleChange }) => (
             <Form noValidate>
               <div style={{marginBottom:"30px"}}>
-                <div className={classes.headingLarge} style={{ marginBottom: "20px", paddingTop:"15px"}}>FREE DOWNLOAD</div>
-
-                <div className={classes.bold} style={{color:"#495050", fontSize:"20", lineHeight:"28px", paddingBottom:"25px"}}>Monthly Production &amp; Lead Source Spreadsheet<br />
-                A month-by-month evaluation</div>
+                
 
 
              
@@ -223,7 +178,7 @@ class FormLeadSource extends Component {
                 className={classes.signUpBtn}
                 disabled={isSubmitting}
               >
-                let's connect
+                Dowload Now
               </button>
               </div>
               <div style={{fontSize:"11px", paddingBottom:"35px", lineHeight:"16px"}}>

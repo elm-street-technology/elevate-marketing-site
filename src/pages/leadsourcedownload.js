@@ -23,6 +23,10 @@ const LeadSource = ({ children, classes, data, tags }) => {
       <Container>
         <div >
                   <div style={{ maxWidth: "900px", backgroundColor: "#f7f7f7", marginRight:"auto",marginLeft:"auto",paddingTop:"35px"}}>
+                  <div className={classes.headingLarge} style={{ marginBottom: "20px", paddingTop:"15px"}}>FREE DOWNLOAD</div>
+
+<div className={classes.bold} style={{color:"#495050", fontSize:"20", lineHeight:"28px", paddingBottom:"25px"}}>Monthly Production &amp; Lead Source Spreadsheet<br />
+A month-by-month evaluation</div>
                 
                 <div style={{ paddingLeft: "10px", paddingRight: "10px"}}>
                     <FormLeadSource />
@@ -61,6 +65,18 @@ export default withStyles((theme) => ({
     letterSpacing: ".08px",
     textAlign: "center",
     margin: "0 auto 36px",
+  },
+  headingLarge:{
+    fontSize: "48px",
+    fontWeight: "700",
+    color: "#5bc0b8",
+    textAlign:"center",
+    padding:"3px",
+    lineHeight:"43px"
+  },
+  bold:{
+    fontWeight:"700",
+    textAlign:"center",
   },
   landingHeaderStyle:{
     textAlign:"center",
