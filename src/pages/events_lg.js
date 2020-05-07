@@ -154,7 +154,7 @@ class EventsLG extends Component {
         <div className={classes.lgBackground}>
         <Container>
                 <div className={classes.titleText} style={{color:"#2d397c", paddingRight:"20px", paddingLeft:"20px"}}>
-                Do you struggle with social media? We’re here to help!<br />
+                Want to capture, nurture &amp; convert MORE online leads?<br />
                 Register for this must-attend WEBINAR today...</div>
                 <div className={classes.titleSubText} style={{paddingBottom:"40px", paddingRight:"20px", paddingLeft:"20px"}}>Registration is FREE.   <span style={{color:"#f48d07"}}>Space is LIMITED.</span>   <span style={{color:"#e44f49"}}>Tech GIVEAWAYS.</span></div>
 
@@ -166,8 +166,7 @@ class EventsLG extends Component {
                 </div>
                 </div>
                 <div className={classes.titleText} style={{color:"#2d397c"}}>
-                “This is the #1 must-attend<br />
-                social media training in the U.S.”
+                #1 Training: “Getting Social” about Lead Generation
                 </div>
 
 
