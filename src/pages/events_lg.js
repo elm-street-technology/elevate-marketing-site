@@ -19,6 +19,15 @@ class EventsLG extends Component {
     const { data } = this.props;
     const events = data.allContentfulEvent.edges;
 
+    var mls = false;
+    var slug = false;
+    if(this.props.pathContext.mls){
+      mls = this.props.pathContext.mls;
+    }
+    if(this.props.pathContext.slug){
+      slug = this.props.pathContext.slug;
+    }
+
     const activeEvents = [];
     events.forEach(({ node: event }) => {
       const datetime = new Date(event.datetime);
@@ -33,7 +42,9 @@ class EventsLG extends Component {
       activeEvents,
       filteredEvents: activeEvents,
       filteredInputValue: "",
-      filteredInputValueState: ""
+      filteredInputValueState: "",
+      mls: mls,
+      slug: slug,
     };
   }
 
@@ -141,7 +152,7 @@ class EventsLG extends Component {
 
   render() {
     const { classes } = this.props;
-    const { activeEvents, filteredEvents, filteredInputValue } = this.state;
+    const { activeEvents, filteredEvents, filteredInputValue, mls, slug } = this.state;
     return (
       <div className={classes.root}>
         <Helmet>
@@ -155,7 +166,8 @@ class EventsLG extends Component {
         <Container>
                 <div className={classes.titleText} style={{color:"#2d397c", paddingRight:"20px", paddingLeft:"20px"}}>
                 Want to capture, nurture &amp; convert MORE online leads?<br />
-                Register for this must-attend WEBINAR today...</div>
+                Register for this must-attend WEBINAR today...
+                { mls && <span><br/>exclusively for {mls} members.</span>}</div>
                 <div className={classes.titleSubText} style={{paddingBottom:"40px", paddingRight:"20px", paddingLeft:"20px"}}>Registration is FREE.   <span style={{color:"#f48d07"}}>Space is LIMITED.</span>   <span style={{color:"#e44f49"}}>Tech GIVEAWAYS.</span></div>
 
                 
@@ -210,6 +222,7 @@ to compete with other agents.”</div>
 
         </div>
         <Container>
+        { !slug &&
           <div className={classes.inputWrapper}>
             <input
               className={classes.input}
@@ -275,7 +288,7 @@ to compete with other agents.”</div>
               <option value="WY">WY</option>
             </select>
           </div>
-          
+          }
 
 
 
@@ -339,6 +352,8 @@ export const query = graphql`
           mls
           state
           physicalAddress
+          slug
+          eventStatus
         }
       }
     }
