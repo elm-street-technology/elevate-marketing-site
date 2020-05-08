@@ -19,12 +19,26 @@ class EventsSM extends Component {
     const { data } = this.props;
     const events = data.allContentfulEvent.edges;
 
+    var mls = false;
+    var slug = false;
+    if(this.props.pathContext.mls){
+      mls = this.props.pathContext.mls;
+    }
+    if(this.props.pathContext.slug){
+      slug = this.props.pathContext.slug;
+    }
+
     const activeEvents = [];
     events.forEach(({ node: event }) => {
       const datetime = new Date(event.datetime);
       const now = new Date();
       if (datetime < now) {
         return;
+      }
+      if (props.pathContext.slug){
+        if(event.slug != props.pathContext.slug){
+          return;
+        }
       }
       return activeEvents.push(event);
     });
@@ -34,6 +48,8 @@ class EventsSM extends Component {
       filteredEvents: activeEvents,
       filteredInputValue: "",
       filteredInputValueState: '',
+      mls: mls,
+      slug: slug,
     };
   }
 
@@ -142,7 +158,7 @@ class EventsSM extends Component {
 
   render() {
     const { classes } = this.props;
-    const { activeEvents, filteredEvents, filteredInputValue } = this.state;
+    const { activeEvents, filteredEvents, filteredInputValue, mls, slug } = this.state;
     return (
       <div className={classes.root}>
         <Helmet>
@@ -156,7 +172,9 @@ class EventsSM extends Component {
         <Container>
                 <div className={classes.titleText} style={{color:"#2d397c", paddingRight:"20px", paddingLeft:"20px"}}>
                 Do you struggle with social media? We’re here to help!<br />
-                Register for this must-attend WEBINAR today...</div>
+                Register for this must-attend WEBINAR today...
+                { mls && <span><br/>exclusively for {mls} members.</span>}
+                </div>
                 <div className={classes.titleSubText} style={{paddingBottom:"40px", paddingRight:"20px", paddingLeft:"20px"}}>Registration is FREE.   <span style={{color:"#f48d07"}}>Space is LIMITED.</span>   <span style={{color:"#e44f49"}}>Tech GIVEAWAYS.</span></div>
 
                 
@@ -176,23 +194,23 @@ class EventsSM extends Component {
 
 
 
-<div className={classes.top2} style={{paddingTop:"28px", paddingBottom:"35px"}}>
-<div className={classes.column3} style={{ textAlign: "center", paddingBottom: "15px", }}>
-<div className={classes.titleSubText}>“The trainers were so<br />
-knowledgeable and made it<br />
-so easy to learn.”</div>
-</div>
-<div className={classes.column3} style={{ textAlign: "center", paddingBottom: "15px", }}>
-<div className={classes.titleSubText}>“Struggling with<br />
-social media marketing?<br />
-Not after attending this!”</div>
-</div>
-<div className={classes.column3} style={{ textAlign: "center", paddingBottom: "15px", }}>
-<div className={classes.titleSubText}>“I walked out with<br />
-the training &amp; tools I needed<br />
-to compete with other agents.”</div>
-</div>
-</div>
+                  <div className={classes.top2} style={{paddingTop:"28px", paddingBottom:"35px"}}>
+                  <div className={classes.column3} style={{ textAlign: "center", paddingBottom: "15px", }}>
+                  <div className={classes.titleSubText}>“The trainers were so<br />
+                  knowledgeable and made it<br />
+                  so easy to learn.”</div>
+                  </div>
+                  <div className={classes.column3} style={{ textAlign: "center", paddingBottom: "15px", }}>
+                  <div className={classes.titleSubText}>“Struggling with<br />
+                  social media marketing?<br />
+                  Not after attending this!”</div>
+                  </div>
+                  <div className={classes.column3} style={{ textAlign: "center", paddingBottom: "15px", }}>
+                  <div className={classes.titleSubText}>“I walked out with<br />
+                  the training &amp; tools I needed<br />
+                  to compete with other agents.”</div>
+                  </div>
+                  </div>
  
 
 
@@ -211,6 +229,7 @@ to compete with other agents.”</div>
 
 
         <Container>
+        { !slug &&
           <div className={classes.inputWrapper}>
             <input
               className={classes.input}
@@ -276,6 +295,7 @@ to compete with other agents.”</div>
               <option value="WY">WY</option>
             </select>
           </div>
+          }
           
 
 
@@ -340,6 +360,8 @@ export const query = graphql`
           mls
           state
           physicalAddress
+          slug
+          eventStatus
         }
       }
     }

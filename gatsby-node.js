@@ -153,6 +153,55 @@ exports.createPages = ({ graphql, boundActionCreators }) => {
     });
   });
 
+  const loadEventLanders = new Promise((resolve, reject) => {
+    graphql(`
+    query eventBySlugQuery {
+      allContentfulEvent(filter: {slug: {ne: null}}) {
+        group(field: slug) {
+          fieldValue
+          totalCount
+          edges {
+            node {
+              eventType
+              mls
+            }
+          }
+        }
+      }
+    }
+    `).then((result) => {
+      result.data.allContentfulEvent.group.map(({ fieldValue, edges }) => {
+
+        console.log(fieldValue);
+        console.log(edges);
+
+        if(edges[0].node.eventType === 'SM'){
+          createPage({
+            path: `events/${fieldValue}/`,
+            component: path.resolve(`./src/pages/events_sm.js`),
+            context: {
+              slug: fieldValue,
+              eventType: edges[0].node.eventType,
+              mls: edges[0].node.mls
+            },
+          });
+        }
+        if(edges[0].node.eventType === 'LG'){
+          createPage({
+            path: `events/${fieldValue}/`,
+            component: path.resolve(`./src/pages/events_lg.js`),
+            context: {
+              slug: fieldValue,
+              eventType: edges[0].node.eventType,
+              mls: edges[0].node.mls
+            },
+          });
+        }
+      });
+      resolve();
+    });
+  });
+
   return Promise.all([
     loadBootcamps,
     loadBundles,
@@ -160,5 +209,6 @@ exports.createPages = ({ graphql, boundActionCreators }) => {
     loadPosts,
     loadProducts,
     loadTags,
+    loadEventLanders,
   ]);
 };
