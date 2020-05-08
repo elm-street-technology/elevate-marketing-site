@@ -20,7 +20,7 @@ const EventCard = ({ classes, className, event }) => {
   var eventStatusDiv = <div></div>;
   if(event.eventStatus){
     if(event.eventStatus === 'Sold Out' || 
-     event.eventStuats === 'Almost Sold Out' ||
+     event.eventStatus === 'Almost Sold Out' ||
      event.eventStatus === 'Limited Seats Available' ||
      event.eventStatus === 'Last Change to Register'){
       eventStatusDiv = <div className={`${classes.statusBox} ${classes.statusTextWarning}`}>{event.eventStatus}</div>
