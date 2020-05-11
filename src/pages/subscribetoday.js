@@ -29,23 +29,7 @@ const subscribe_today = ({ classes }) => {
     
 
 
-      <div style={{backgroundImage:"url("+Aprilbg+")", backgroundSize:"cover", backgroundPosition:"centerTop"}}>
-<Container>
-      <div className={classes.top} style={{paddingBottom:"60px", paddingRight:"35px", paddingLeft:"35px", paddingTop:"55px"}}>
-          <div className={classes.centerHeading}>
-                            <div className={classes.bold} style={{color:"#fbda3d", fontSize:"32px", lineHeight:"45px"}}>APRIL SPECIAL OFFER</div>
-                            <div className={classes.bold} style={{color:"#ffffff", fontSize:"18px", lineHeight:"33px"}}>Serving brokers &amp; agents in challenging times</div>
-                            <div style={{color:"#ffffff", fontSize:"12px", paddingBottom:"15px"}}>*valid for all NEW subscribers ONLY</div>
 
-                            <div className={classes.heading} style={{color:"#fbda3d"}}>50% OFF YOUR 1ST 3-MONTHS</div>
-                            <div className={classes.bold} style={{color:"#ffffff", fontSize:"18px", lineHeight:"33px"}}><span style={{color:"#fbda3d"}}>ANY</span> Elevate Offering (Marketing and/or Lead Gen.)
-                            </div>
-                            <div className={classes.bold} style={{color:"#fbda3d", fontSize:"18px",}}>USE CODE:  elevate50</div>
-                            <div className={classes.bold} style={{color:"#ffffff", fontSize:"18px", lineHeight:"33px"}}>during check-out process to redeem</div>
-          </div>
-      </div>
-</Container>
-</div>
 
 
 
@@ -121,7 +105,7 @@ const subscribe_today = ({ classes }) => {
                 <span className={classes.bold} style={{color:"#4ab8ac"}}>ANNUAL AGREEMENT</span>
                 <br />
                   <br />
-                  <div className={classes.bold} style={{color:"#4ab8ac", paddingTop:"28px"}}>Monthly: $240/m</div>
+                  <div className={classes.bold} style={{color:"#4ab8ac", paddingTop:"28px"}}>Monthly: $199/m</div>
 <div className={classes.bold} style={{color:"#4ab8ac",}}>One Time Set-Up: $700</div>
 
 
