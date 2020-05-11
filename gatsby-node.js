@@ -164,6 +164,7 @@ exports.createPages = ({ graphql, boundActionCreators }) => {
             node {
               eventType
               mls
+              landingLayout
             }
           }
         }
@@ -175,7 +176,9 @@ exports.createPages = ({ graphql, boundActionCreators }) => {
         console.log(fieldValue);
         console.log(edges);
 
-        if(edges[0].node.eventType === 'SM'){
+       // Possible values: SMBC - Supported,SMBC - Unsupported,LGBC - Supported,LGBC - Unsupported,Combined
+
+        if(edges[0].node.landingLayout === 'SMBC - Supported'){
           createPage({
             path: `events/${fieldValue}/`,
             component: path.resolve(`./src/pages/events_sm.js`),
@@ -186,10 +189,32 @@ exports.createPages = ({ graphql, boundActionCreators }) => {
             },
           });
         }
-        if(edges[0].node.eventType === 'LG'){
+        if(edges[0].node.landingLayout === 'LGBC - Supported'){
           createPage({
             path: `events/${fieldValue}/`,
             component: path.resolve(`./src/pages/events_lg.js`),
+            context: {
+              slug: fieldValue,
+              eventType: edges[0].node.eventType,
+              mls: edges[0].node.mls
+            },
+          });
+        }
+        if(edges[0].node.landingLayout === 'SMBC - Unsupported'){
+          createPage({
+            path: `events/${fieldValue}/`,
+            component: path.resolve(`./src/pages/events_sm_alt.js`),
+            context: {
+              slug: fieldValue,
+              eventType: edges[0].node.eventType,
+              mls: edges[0].node.mls
+            },
+          });
+        }
+        if(edges[0].node.landingLayout === 'LGBC - Unsupported'){
+          createPage({
+            path: `events/${fieldValue}/`,
+            component: path.resolve(`./src/pages/events_lg_alt.js`),
             context: {
               slug: fieldValue,
               eventType: edges[0].node.eventType,

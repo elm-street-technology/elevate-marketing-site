@@ -377,11 +377,14 @@ export default withStyles((theme) => ({
     alignItems: "top",
   },
   column3:{
-    width:"350px",
+    width:"100%",
     maxWidth: "100%",
     paddingRight:"13px",
     paddingLeft:"13px",
     verticalAlign: "top",
+    [theme.breakpoints[900]]: {
+      width: "350px"
+    },
   },
   heading: {
     fontSize: "32px",
