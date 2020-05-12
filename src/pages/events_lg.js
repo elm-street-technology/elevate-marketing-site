@@ -8,7 +8,7 @@ import EventCard from "../components/EventCard";
 import EventCardZero from "../components/EventCardZero";
 import Container from "../components/Container";
 import SEO from "../components/SEO";
-import lgbg from "../images/lg_topbg.jpg";
+import lgbg from "../images/exlgbg_new.jpg";
 import Hexagons from "../images/hexagons.svg";
 import Search from "elevate-ui-icons/Search";
 
@@ -18,6 +18,15 @@ class EventsLG extends Component {
 
     const { data } = this.props;
     const events = data.allContentfulEvent.edges;
+
+    var mls = false;
+    var slug = false;
+    if(this.props.pathContext.mls){
+      mls = this.props.pathContext.mls;
+    }
+    if(this.props.pathContext.slug){
+      slug = this.props.pathContext.slug;
+    }
 
     const activeEvents = [];
     events.forEach(({ node: event }) => {
@@ -33,7 +42,9 @@ class EventsLG extends Component {
       activeEvents,
       filteredEvents: activeEvents,
       filteredInputValue: "",
-      filteredInputValueState: ""
+      filteredInputValueState: "",
+      mls: mls,
+      slug: slug,
     };
   }
 
@@ -141,7 +152,7 @@ class EventsLG extends Component {
 
   render() {
     const { classes } = this.props;
-    const { activeEvents, filteredEvents, filteredInputValue } = this.state;
+    const { activeEvents, filteredEvents, filteredInputValue, mls, slug } = this.state;
     return (
       <div className={classes.root}>
         <Helmet>
@@ -153,43 +164,65 @@ class EventsLG extends Component {
         
         <div className={classes.lgBackground}>
         <Container>
+                <div className={classes.titleText} style={{color:"#2d397c", paddingRight:"20px", paddingLeft:"20px"}}>
+                Want to capture, nurture &amp; convert MORE online leads?<br />
+                Register for this must-attend WEBINAR today...
+                { mls && <span><br/>exclusively for {mls} members.</span>}</div>
+                <div className={classes.titleSubText} style={{paddingBottom:"40px", paddingRight:"20px", paddingLeft:"20px"}}>Registration is FREE.   <span style={{color:"#f48d07"}}>Space is LIMITED.</span>   <span style={{color:"#e44f49"}}>Tech GIVEAWAYS.</span></div>
+
+                
                 <div style={{maxWidth:"800px",marginLeft:"auto",marginRight:"auto"}}>
                 <div style={{ textAlign: "center" }} className={classes.videoEmbed}>
                       <iframe className={classes.videoContainer} src="https://www.youtube.com/embed/AU_uOzHsyM0?autoplay=1&rel=0"
                       frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                 </div>
                 </div>
-
-
-
                 <div className={classes.titleText} style={{color:"#2d397c"}}>
-                “Getting Social" About Lead Generation<br />
-                Educational Boot Camp
+                #1 Training: “Getting Social” about Lead Generation
                 </div>
-                <div className={classes.BodyText}>
-                <div className={classes.titleSubText}>
-                Want to know what the top agents in the country are doing to capture, nurture <br />
-                &amp; convert more online leads into cha-ching using social media?<br />
+
+
+               
+
+
+
+<div className={classes.top2} style={{paddingTop:"28px", paddingBottom:"35px"}}>
+<div className={classes.column3} style={{ textAlign: "center", paddingBottom: "15px", }}>
+<div className={classes.titleSubText}>“The trainers were so<br />
+knowledgeable and made it<br />
+so easy to learn.”</div>
+</div>
+<div className={classes.column3} style={{ textAlign: "center", paddingBottom: "15px", }}>
+<div className={classes.titleSubText}>“Struggling with<br />
+social media marketing?<br />
+Not after attending this!”</div>
+</div>
+<div className={classes.column3} style={{ textAlign: "center", paddingBottom: "15px", }}>
+<div className={classes.titleSubText}>“I walked out with<br />
+the training &amp; tools I needed<br />
+to compete with other agents.”</div>
+</div>
+</div>
+ 
+
+
+                
+                <div className={classes.BodyText} style={{paddingBottom:"40px"}}>
+                Wonder how top real estate agents find time to be ‘everywhere’ online and STILL close more<br />
+                business? Interested in turning your social media from a toy into a powerful business tool?<br />
+                This FREE 60-minute, high-energy educational WEBINAR is designed to inspire and empower<br />
+                agents with tips, tricks &amp; strategies for conquering their website, blog and social media.
                 </div>
-                <br />
-                Secure your spot today for this must-attend,<br />
-                2-hour educational deep dive, specially designed<br />
-                for your members. Are you ready to conquer lead generation on Facebook,<br />
-                Twitter, LinkedIn, YouTube, your website<br />
-                blog &amp; paid advertising?<br />
-                It's not as hard...or as expensive...as you think!<br />
-                </div>
-                <div className={classes.titleSubText} style={{color:"#2d397c", paddingBottom:"35px"}}>
-                        Select an event you are interested in:
-                </div>
+         
         </Container>
 
-        <div style={{backgroundColor:"#f15953", textAlign:"center", padding:"15px"}}><span className={classes.bold} style={{color:"#ffffff"}}>All events are via WEBINAR at this time</span></div>
+        <div style={{backgroundColor:"#f15953", textAlign:"center", padding:"15px"}}><span className={classes.bold} style={{color:"#ffffff"}}>REGISTER TODAY by selecting from any upcoming date/time slots</span></div>
 
 
 
         </div>
         <Container>
+        { !slug &&
           <div className={classes.inputWrapper}>
             <input
               className={classes.input}
@@ -255,7 +288,7 @@ class EventsLG extends Component {
               <option value="WY">WY</option>
             </select>
           </div>
-          
+          }
 
 
 
@@ -319,6 +352,8 @@ export const query = graphql`
           mls
           state
           physicalAddress
+          slug
+          eventStatus
         }
       }
     }
@@ -335,6 +370,21 @@ export default withStyles((theme) => ({
     display: "flex",
     flexWrap: "wrap",
     alignItems: "center",
+  },
+  top2: {
+    display: "flex",
+    flexWrap: "wrap",
+    alignItems: "top",
+  },
+  column3:{
+    width:"100%",
+    maxWidth: "100%",
+    paddingRight:"13px",
+    paddingLeft:"13px",
+    verticalAlign: "top",
+    [theme.breakpoints[900]]: {
+      width: "350px"
+    },
   },
   heading: {
     fontSize: "32px",
@@ -403,27 +453,26 @@ export default withStyles((theme) => ({
   },
 
   titleText: {
-    fontSize: "28px",
-    lineHeight: "36px",
+    fontSize: "24px",
+    lineHeight: "33px",
     fontWeight: "700",
     textAlign: "center",
     color: "#55c3ba",
-    paddingBottom: "24px",
+    paddingBottom: "18px",
     paddingTop: "40px"
   },
 
   titleSubText: {
     fontSize: "18px",
-    lineHeight: "30px",
+    lineHeight: "24px",
     fontWeight: "700",
     textAlign: "center",
     color: "#55c3ba",
-    paddingTop: "10px",
   },
 
   BodyText: {
     fontSize: "16px",
-    lineHeight: "22px",
+    lineHeight: "25px",
     fontWeight: "300",
     textAlign: "center",
     color: "#56585a",

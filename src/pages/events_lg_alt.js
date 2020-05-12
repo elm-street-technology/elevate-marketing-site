@@ -9,10 +9,12 @@ import EventCardZero from "../components/EventCardZero";
 import Container from "../components/Container";
 import SEO from "../components/SEO";
 import smbg from "../images/exbg_new.jpg";
+import lgbc from "../images/lgbc.png";
+import smbgtop from "../images/exbg_topnew.jpg";
 import Hexagons from "../images/hexagons.svg";
 import Search from "elevate-ui-icons/Search";
 
-class EventsSM extends Component {
+class EventsLGAlt extends Component {
   constructor(props) {
     super(props);
 
@@ -168,59 +170,24 @@ class EventsSM extends Component {
         </Helmet>
         <SEO customTitle customDescription={`Social media & lead gen tips, tricks & shortcuts - ${config.siteTitle}`} />
 
-        <div className={classes.smBackground}>
+        <div className={classes.smtopBackground}>
         <Container>
-                <div className={classes.titleText} style={{color:"#2d397c", paddingRight:"20px", paddingLeft:"20px"}}>
-                Do you struggle with social media? We’re here to help!<br />
+                <div className={classes.titleText} style={{color:"#ffffff", paddingRight:"30px", paddingLeft:"30px"}}>
+                <div style={{paddingBottom:"13px"}}><img src={lgbc} width="290" /></div>
+                
+                Want to capture, nurture &amp; convert MORE online leads?<br />
                 Register for this must-attend WEBINAR today...
                 { mls && <span><br/>exclusively for {mls} members.</span>}
                 </div>
-                <div className={classes.titleSubText} style={{paddingBottom:"40px", paddingRight:"20px", paddingLeft:"20px"}}>Registration is FREE.   <span style={{color:"#f48d07"}}>Space is LIMITED.</span>   <span style={{color:"#e44f49"}}>Tech GIVEAWAYS.</span></div>
-
-                
-                <div style={{maxWidth:"800px",marginLeft:"auto",marginRight:"auto"}}>
-                <div style={{ textAlign: "center" }} className={classes.videoEmbed}>
-                      <iframe className={classes.videoContainer} src="https://www.youtube.com/embed/bHTQ31OzZY8?autoplay=1&rel=0"
-                      frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-                </div>
-                </div>
-                <div className={classes.titleText} style={{color:"#2d397c"}}>
-                “This is the #1 must-attend<br />
-                social media training in the U.S.”
-                </div>
+                <div className={classes.titleSubText2} style={{paddingBottom:"40px", paddingRight:"30px", paddingLeft:"30px",}}>
+                    REGISTRATION FREE.<br />
+                    <span style={{color:"#fbb31f"}}>SPACE IS LIMITED.</span><br />
+                    <span style={{color:"#e44f49"}}>TECH GIVEAWAYS.</span>
+                    </div>
 
 
-               
+             
 
-
-
-                  <div className={classes.top2} style={{paddingTop:"28px", paddingBottom:"35px"}}>
-                  <div className={classes.column3} style={{ textAlign: "center", paddingBottom: "15px", }}>
-                  <div className={classes.titleSubText}>“The trainers were so<br />
-                  knowledgeable and made it<br />
-                  so easy to learn.”</div>
-                  </div>
-                  <div className={classes.column3} style={{ textAlign: "center", paddingBottom: "15px", }}>
-                  <div className={classes.titleSubText}>“Struggling with<br />
-                  social media marketing?<br />
-                  Not after attending this!”</div>
-                  </div>
-                  <div className={classes.column3} style={{ textAlign: "center", paddingBottom: "15px", }}>
-                  <div className={classes.titleSubText}>“I walked out with<br />
-                  the training &amp; tools I needed<br />
-                  to compete with other agents.”</div>
-                  </div>
-                  </div>
- 
-
-
-                
-                <div className={classes.BodyText} style={{paddingBottom:"40px"}}>
-                Wonder how top real estate agents find time to be ‘everywhere’ online and STILL close more<br />
-                business? Interested in turning your social media from a toy into a powerful business tool?<br />
-                This FREE 60-minute, high-energy educational WEBINAR is designed to inspire and empower<br />
-                agents with tips, tricks &amp; strategies for conquering their website, blog and social media.
-                </div>
          
         </Container>
         </div>
@@ -333,23 +300,67 @@ class EventsSM extends Component {
           )}
           
         </Container>
-        <Container>
-          <div className={classes.top} style={{
-            float:"right",
-            marginTop:"40px"}}>
-            <Link className={classes.bootcampLink} to="/bootcamp">
-              Learn about our Social Media Bootcamp →
-            </Link>
-          </div>
-        </Container>
+
+
+<div className={classes.smBackground}>
+<Container>
+<div style={{textAlign:"center", paddingLeft:"30px", paddingRight:"30px"}}>
+<div className={classes.titleText} style={{color:"#2d397c"}}>
+#1 Training: “Getting Social” about Lead Generation</div>
+
+<div className={classes.top2} style={{paddingTop:"28px", paddingBottom:"35px"}}>
+                  <div className={classes.column3} style={{ textAlign: "center", paddingBottom: "15px", }}>
+                  <div className={classes.titleSubText}>“The trainers were so<br />
+                  knowledgeable and made it<br />
+                  so easy to learn.”</div>
+                  </div>
+                  <div className={classes.column3} style={{ textAlign: "center", paddingBottom: "15px", }}>
+                  <div className={classes.titleSubText}>“Struggling with<br />
+                  social media marketing?<br />
+                  Not after attending this!”</div>
+                  </div>
+                  <div className={classes.column3} style={{ textAlign: "center", paddingBottom: "15px", }}>
+                  <div className={classes.titleSubText}>“I walked out with<br />
+                  the training &amp; tools I needed<br />
+                  to compete with other agents.”</div>
+                  </div>
+                  </div>
+
+<div className={classes.BodyText} style={{paddingBottom:"40px"}}>
+                Wonder how top real estate agents find time to be ‘everywhere’ online and STILL close more<br />
+                business? Interested in turning your social media from a toy into a powerful business tool?<br />
+                This FREE 60-minute, high-energy educational WEBINAR is designed to inspire and empower<br />
+                agents with tips, tricks &amp; strategies for conquering their website, blog and social media.
+                </div>
+
+<div style={{maxWidth:"800px",marginLeft:"auto",marginRight:"auto", paddingBottom:"80px"}}>
+                <div style={{ textAlign: "center" }} className={classes.videoEmbed}>
+                      <iframe className={classes.videoContainer} src="https://www.youtube.com/embed/AU_uOzHsyM0"
+                      frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                </div>
+                </div>
+
+</div>
+
+
+
+
+
+
+</Container>
+</div>
+
+
+
+    
         
       </div>
     );
   }
 }
 export const query = graphql`
-  query eventSMQuery {
-    allContentfulEvent(limit: 1000, filter: {eventType: {eq: "SM"}}, sort: { fields: [datetime], order: ASC }) {
+  query eventsLGAltQuery {
+    allContentfulEvent(limit: 1000, filter: {eventType: {eq: "LG"}}, sort: { fields: [datetime], order: ASC }) {
       edges {
         node {
           datetime
@@ -371,8 +382,8 @@ export const query = graphql`
 export default withStyles((theme) => ({
   root: {
     position: "relative",
-    paddingTop: "40px",
-    paddingBottom: "30px",
+    paddingTop: "10px",
+  
   },
   top: {
     display: "flex",
@@ -391,7 +402,7 @@ export default withStyles((theme) => ({
     paddingLeft:"13px",
     verticalAlign: "top",
     [theme.breakpoints[900]]: {
-      width: "350px"
+      width: "320px"
     },
   },
   heading: {
@@ -467,12 +478,20 @@ export default withStyles((theme) => ({
     textAlign: "center",
     color: "#55c3ba",
     paddingBottom: "18px",
-    paddingTop: "40px"
+    paddingTop: "50px"
   },
 
   titleSubText: {
     fontSize: "18px",
     lineHeight: "24px",
+    fontWeight: "700",
+    textAlign: "center",
+    color: "#55c3ba",
+  },
+
+  titleSubText2: {
+    fontSize: "22px",
+    lineHeight: "28px",
     fontWeight: "700",
     textAlign: "center",
     color: "#55c3ba",
@@ -484,8 +503,11 @@ export default withStyles((theme) => ({
     fontWeight: "300",
     textAlign: "center",
     color: "#56585a",
-    paddingRight: "45px",
-    paddingLeft: "45px",
+  },
+  smtopBackground: {
+    backgroundImage: `url('${smbgtop}')`,
+    backgroundPosition: "bottom",
+    width:"100%",
   },
 
   smBackground: {
@@ -509,4 +531,4 @@ export default withStyles((theme) => ({
     height: "100%",
     
   }
-}))(EventsSM);
+}))(EventsLGAlt);

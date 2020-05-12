@@ -153,6 +153,80 @@ exports.createPages = ({ graphql, boundActionCreators }) => {
     });
   });
 
+  const loadEventLanders = new Promise((resolve, reject) => {
+    graphql(`
+    query eventBySlugQuery {
+      allContentfulEvent(filter: {slug: {ne: null}}) {
+        group(field: slug) {
+          fieldValue
+          totalCount
+          edges {
+            node {
+              eventType
+              mls
+              landingLayout
+            }
+          }
+        }
+      }
+    }
+    `).then((result) => {
+      result.data.allContentfulEvent.group.map(({ fieldValue, edges }) => {
+
+        console.log(fieldValue);
+        console.log(edges);
+
+       // Possible values: SMBC - Supported,SMBC - Unsupported,LGBC - Supported,LGBC - Unsupported,Combined
+
+        if(edges[0].node.landingLayout === 'SMBC - Supported'){
+          createPage({
+            path: `events/${fieldValue}/`,
+            component: path.resolve(`./src/pages/events_sm.js`),
+            context: {
+              slug: fieldValue,
+              eventType: edges[0].node.eventType,
+              mls: edges[0].node.mls
+            },
+          });
+        }
+        if(edges[0].node.landingLayout === 'LGBC - Supported'){
+          createPage({
+            path: `events/${fieldValue}/`,
+            component: path.resolve(`./src/pages/events_lg.js`),
+            context: {
+              slug: fieldValue,
+              eventType: edges[0].node.eventType,
+              mls: edges[0].node.mls
+            },
+          });
+        }
+        if(edges[0].node.landingLayout === 'SMBC - Unsupported'){
+          createPage({
+            path: `events/${fieldValue}/`,
+            component: path.resolve(`./src/pages/events_sm_alt.js`),
+            context: {
+              slug: fieldValue,
+              eventType: edges[0].node.eventType,
+              mls: edges[0].node.mls
+            },
+          });
+        }
+        if(edges[0].node.landingLayout === 'LGBC - Unsupported'){
+          createPage({
+            path: `events/${fieldValue}/`,
+            component: path.resolve(`./src/pages/events_lg_alt.js`),
+            context: {
+              slug: fieldValue,
+              eventType: edges[0].node.eventType,
+              mls: edges[0].node.mls
+            },
+          });
+        }
+      });
+      resolve();
+    });
+  });
+
   return Promise.all([
     loadBootcamps,
     loadBundles,
@@ -160,5 +234,6 @@ exports.createPages = ({ graphql, boundActionCreators }) => {
     loadPosts,
     loadProducts,
     loadTags,
+    loadEventLanders,
   ]);
 };

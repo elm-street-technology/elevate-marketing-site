@@ -16,6 +16,21 @@ const EventCard = ({ classes, className, event }) => {
 
 
   const datetime = new Date(event.datetime);
+
+  var eventStatusDiv = <div></div>;
+  if(event.eventStatus){
+    if(event.eventStatus === 'Sold Out' || 
+     event.eventStatus === 'Almost Sold Out' ||
+     event.eventStatus === 'Limited Seats Available' ||
+     event.eventStatus === 'Last Change to Register'){
+      eventStatusDiv = <div className={`${classes.statusBox} ${classes.statusTextWarning}`}>{event.eventStatus}</div>
+     }
+    else{
+      eventStatusDiv = <div className={`${classes.statusBox} ${classes.statusTextNew}`}>{event.eventStatus}</div>
+    }
+  }
+  
+
   return (
     <div className={classNames(classes.root, className)}>
       {/*
@@ -32,6 +47,7 @@ const EventCard = ({ classes, className, event }) => {
         </div>
         </div> */}
       <div className={classes.details}>
+          {eventStatusDiv}
         <div className={classes.time}>
           {datetime.toLocaleTimeString("en-US", options)}
         </div>
@@ -152,4 +168,18 @@ export default withStyles((theme) => ({
     marginLeft: "auto",
     marginRight: "auto",
   },
+  statusBox:{
+    padding: "6px",
+    textAlign: "center",
+    fontWeight: "700",
+    marginBottom: "10px"
+  },
+  statusTextNew:{
+    backgroundColor: "#55c3ba38",
+    color: "#25968d"
+  },
+  statusTextWarning:{
+    backgroundColor: "#f1595347",
+    color: "#dc433d"
+  }
 }))(EventCard);

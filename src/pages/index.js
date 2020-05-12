@@ -34,7 +34,7 @@ import HeadsetMic from "elevate-ui-icons/HeadsetMic";
 import Elevatew from "../images/elevatew.png";
 import BottomArrow from "../images/bottom_arrow.png";
 import Container from "../components/Container";
-import Bces from "../images/bces.jpg";
+import Bcesw from "../images/bcesw.jpg";
 
 import GroupAdd from "elevate-ui-icons/GroupAdd";
 import Forum from "elevate-ui-icons/Forum";
@@ -149,8 +149,7 @@ class Index extends Component {
 
                    
                 <div className={classes.centerheading}>The power of <span style={{ fontWeight: "bold" }}>EDUCATION</span></div>
-                <div className={classes.centersubtext}>Energetic onsite &amp; <span style={{ fontWeight: "bold" }}>online education, training
-                &amp; webinars</span> to help brokers, agents &amp; teams excel.</div>
+                <div className={classes.centersubtext}><span style={{ fontWeight: "bold" }}>Important COVID-19 update:</span> At this time, ALL educational training series are WEBINAR only.</div>
                     
 
                 </div>
@@ -159,7 +158,7 @@ class Index extends Component {
 
 
         
-      <div style={{paddingTop:"50px", paddingBottom:"50px",}}>
+      <div style={{paddingTop:"35px", paddingBottom:"50px",}}>
         <Container>
             <div className={classes.flexContainer}>
                 <div className={classes.flexItem}>
@@ -167,17 +166,18 @@ class Index extends Component {
                 {/*
                 <iframe width="100%" height="350" src="https://www.youtube.com/embed/fGRZ8-mLwnQ?rel=0" frameBorder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowFullScreen></iframe>
                 */}    
-                <img src={Bces} style={{width:"100%",}}/>
+                <img src={Bcesw} style={{width:"100%",}}/>
 
                 </div>
                 <div className={classes.flexItem} style={{padding:"25px",}}>
-                <div className={classes.leftheading}>The Boot Camp Experience</div>
-                <div className={classes.leftsubtext}>Designed to energize &amp; empower agents across the U.S., the Elevate Boot Camp series provides tips, tricks &amp; strategies on everything from social media marketing, lead generation, nurturing &amp; conversion, and much more.</div>
+                <div className={classes.leftheading} style={{lineHeight:"34px"}}>The Boot Camp Experience...<br />
+                via WEBINAR</div><br />
+                <div className={classes.leftsubtext}>Designed to energize &amp; empower agents, brokers and teams across the U.S., the Elevate Boot Camp series provides tips, tricks &amp; strategies on everything from social media marketing, lead generation, nurturing &amp; conversion, and much more.</div>
 
-                <Link to="/events" className={classes.ctabutton}>
-                  Upcoming Tour Schedule</Link>
-                  <Link to="/bootcamp" className={classes.ctabutton}>
-                  Learn More</Link>
+                <Link to="/events_sm" className={classes.ctabutton}>
+                  #1 Social Media Boot Camp</Link>
+                  <Link to="/events_lg" className={classes.ctabutton}>
+                  Let’s Get Social about Lead Gen.</Link>
                     
                 </div>
             </div>
