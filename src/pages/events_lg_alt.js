@@ -177,7 +177,7 @@ class EventsLGAlt extends Component {
                 
                 Want to capture, nurture &amp; convert MORE online leads?<br />
                 Register for this must-attend WEBINAR today...
-                { mls && <span><br/>exclusively for {mls} members.</span>}
+                
                 </div>
                 <div className={classes.titleSubText2} style={{paddingBottom:"40px", paddingRight:"30px", paddingLeft:"30px",}}>
                     REGISTRATION FREE.<br />
