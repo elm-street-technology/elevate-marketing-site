@@ -88,8 +88,8 @@ class SignUpFormRollercoaster extends Component {
             role: "",
             roleOther: "",
             interests: [],
-            form: "reevaluate",
-            list: 98510,
+            form: "rollercoaster",
+            list: 101131,
           }}
           validationSchema={() =>
             Yup.object().shape({
