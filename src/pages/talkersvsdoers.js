@@ -24,7 +24,7 @@ const Talkersvsdoers = ({ children, classes, data, tags }) => {
 
 <Container>
     <div style={{paddingBottom:"50px", textAlign:"center"}}>
-    <img src={Talkerslogo} width="300" style={{paddingBottom:"20px"}}/>
+    <img src={Talkerslogo} width="300" style={{paddingBottom:"20px", paddingTop:"40px"}}/>
       <br />
 
       <h1 className={classes.heading}>Stream The Webinar</h1>
@@ -33,7 +33,7 @@ const Talkersvsdoers = ({ children, classes, data, tags }) => {
 
               <div style={{textAlign: "center", maxWidth:"700px",marginLeft:"auto",marginRight:"auto", paddingBottom:"30px"}}>
                 <div style={{ textAlign: "center"}} className={classes.videoEmbed}>
-                        <iframe className={classes.videoContainer} src="https://www.youtube.com/embed/2j-o7l_DyQM"
+                        <iframe className={classes.videoContainer} src="https://www.youtube.com/embed/xmtVJP9Nq8s"
                          frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                 </div>
               </div>
@@ -65,15 +65,15 @@ const Talkersvsdoers = ({ children, classes, data, tags }) => {
 
 
 <div style={{backgroundImage:"url("+Aprilbg+")", backgroundSize:"cover", backgroundPosition:"centerTop", padding:"45px"}}>
-              <h1 className={classes.heading} style={{color:"#ffffff", lineHeight:"34px"}}>Take Advantage of<br />
-              TODAY'S SPECIAL OFFER!</h1>
+              <h1 className={classes.heading} style={{color:"#ffffff", lineHeight:"34px"}}>Ready to conquer your<br />
+              online marketing with Elevate?</h1>
               <a target="_blank" href="https://elmstreettechnology.recurly.com/subscribe/webinardms" className={classes.getStartedLink}>
                   SUBSCRIBE NOW
                     </a>
               </div>
 
 
- <div style={{backgroundColor:"#f7f7f7", paddingBottom:"50px"}}>
+ <div style={{backgroundColor:"#f7f7f7", paddingBottom:"65px"}}>
         <h1 className={classes.heading} style={{paddingTop:"50px"}}>
         Request Your FREE Social Media Consultation
         </h1>
@@ -99,7 +99,7 @@ export default withStyles((theme) => ({
     flexDirection: "column",
     width: "100%",
     padding: "0 0px",
-    margin: "40px auto",
+    margin: "auto",
   },
   heading: {
     fontSize: "28px",

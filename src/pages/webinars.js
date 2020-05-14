@@ -3,7 +3,14 @@ import Link from "gatsby-link";
 import withStyles from "elevate-ui/withStyles";
 import WebinarCardGrid from "../components/WebinarCardGrid";
 import WebinarCard from "../components/WebinarCard";
+import BgSectionExternal2 from "../components/BgSectionExternal2";
 import Container from "../components/Container";
+import Webtopbg from "../images/webtop_bg.jpg";
+import Webbottombg from "../images/webbottom_bg.jpg";
+import Web0 from "../images/webinars.gif";
+import Web1 from "../images/miles_pic.png";
+import Web2 from "../images/crm_pic.png";
+import Web3 from "../images/list_pic.png";
 import SEO from "../components/SEO";
 import OverlappingHexagons from "../images/overlapping-hexagons.svg";
 
@@ -25,51 +32,101 @@ const Webinars = ({ classes, data }) => {
   return (
     <div className={classes.root}>
       <SEO />
-      <Container>
-        <div className={classes.top}>
-          <div className={classes.heading}>Upcoming Training Webinars</div>
-          <Link className={classes.bootcampLink} to="/events">
-            Explore Elevate's Educational boot Camp Series →
-          </Link>
-        </div>
-        <WebinarCardGrid className={classes.grid}>
-          {orderedWebinars.map(({ node: webinar }) => {
-            return <WebinarCard key={webinar.id} webinar={webinar} />;
-          })}
-        </WebinarCardGrid>
-        <div className={classes.pastContainer}>
-          <div className={classes.past}>On Demand Training Webinars</div>
-          <div className={classes.pastDesc}>
-          Browse an ever-growing selection of on demand Elevate training webinars, including hot topics such as "The Secrets to Successfully Closing Online Leads", "How to Promote Your Open Houses", "Elevate CRM Training", and many more.
-          </div>
-          <a
-            href={"https://tryelevate.wistia.com/projects/u8p4ih0dk6"}
-            target="_blank"
-            rel="noopener noreferrer"
-            className={classes.pastLink}
-          >
-            View Recordings
-          </a>
-        </div>
-      </Container>
-      <div className={classes.backgroundSlice}>
-        <svg
-          className={classes.backgroundTopSlice}
-          xmlns="http://www.w3.org/2000/svg"
-          viewBox="0 0 100 100"
-          preserveAspectRatio="none"
-        >
-          <polygon fill="white" points="0,100 100,0 100,100" />
-        </svg>
-        <svg
-          className={classes.backgroundBottomSlice}
-          xmlns="http://www.w3.org/2000/svg"
-          viewBox="0 0 100 100"
-          preserveAspectRatio="none"
-        >
-          <polygon fill="white" points="0,100 100,0 100,100" />
-        </svg>
+
+
+
+      <div style={{backgroundImage:"url("+Webtopbg+")", backgroundSize:"cover", backgroundPosition:"centerBottom"}}>
+                <Container>
+                        <div className={classes.top} style={{paddingBottom:"90px", paddingRight:"25px", paddingLeft:"25px", paddingTop:"95px"}}>
+                                  <div className={classes.centerHeading}>
+                                  <div className={classes.heading} style={{color:"#ffffff", paddingBottom:"15px"}}>The Power of LEARNING</div>
+                                  <div className={classes.subtext} style={{color:"#f7f7f7", fontSize:"18px", lineHeight:"26px"}}>Training webinars for Elevate subscribers,<br />
+                                  all from the comfort of your couch
+                                  </div>
+                                  </div>
+                        </div>
+                </Container>
       </div>
+
+
+      <div style={{ textAlign: "center" }}>
+      <Container>
+                    <div style={{paddingTop:"40px", paddingLeft:"45px", paddingRight:"45px"}}>
+                          <div className={classes.heading2}>Live Training Webinars</div>     
+                    </div>
+
+        <div className={classes.top}>
+
+                  <div className={classes.column3} style={{ textAlign: "center", paddingTop: "22px" }}>
+                                    
+                                    <div className={classes.subheading} >Welcome to Elevate</div>
+                                    <div className={classes.subtext}>Join Miles Greer, your Digital Tour Guide<br />
+                                    for an introduction to the POWER of Elevate.<br />
+                                    This popular training is complemented by<br />
+                                    best practices for engaging your sphere<br />
+                                    of influence, as well as tips for getting<br />
+                                    the most out of all that Elevate<br />
+                                    has to offer you and your business. 
+                                    <br /><br />
+                                    Training time:  1 hr.</div>
+                                    <a target="_blank" href="https://attendee.gotowebinar.com/rt/6820642661254087436" className={classes.getStartedLink}>
+                                    Register Now</a>
+                                    <div style={{ textAlign: "center",paddingTop:"5px" }}>
+                                          <img src={Web1} width="255" />
+                                    </div>
+                  </div>
+
+                  <div className={classes.column3} style={{ textAlign: "center", paddingTop: "22px" }}>
+                 
+                                    <div className={classes.subheading} >Elevate CRM&trade;</div>
+                                    <div className={classes.subtext}>Enjoy a step-by-step overview<br />
+                                    of your Elevate CRM&trade;.<br />
+                                    We’ll cover lead management,<br />
+                                    managing your website,<br />
+                                    creating email campaigns,<br />
+                                    social media, CMA’s,<br />
+                                    analytics and much, much more.
+                                    <br /><br />
+                                    Training time:  1 hr.</div>
+                                    <a target="_blank" href="https://attendee.gotowebinar.com/rt/4156541380315543820" className={classes.getStartedLink}>
+                                    Register Now</a>
+                                    <div style={{ textAlign: "center",paddingTop:"5px" }}>
+                                          <img src={Web2} width="255" />
+                                    </div>
+                  </div>
+
+                  <div className={classes.column3} style={{ textAlign: "center", paddingTop: "22px" }}>
+
+                                    <div className={classes.subheading} >Exploring Social Media</div>
+                                    <div className={classes.subtext}>Are you ready to take your social media<br />
+                                    marketing to the next level? In this<br />
+                                    fast-paced session, we’ll explore social 
+                                    marketing techniques designed to increase
+                                    reach and engagement, and how
+                                    Elevate helps to empower you with all<br />
+                                    of the tools you need to succeed.
+                                    <br /><br />
+                                    Training time:  1 hr.</div>
+                                    <a target="_blank" href="https://attendee.gotowebinar.com/rt/8516877941121421836" className={classes.getStartedLink}>
+                                    Register Now</a>
+                                    <div style={{ textAlign: "center",paddingTop:"5px" }}>
+                                          <img src={Web3} width="255" />
+                                    </div>
+                  </div>
+                  <a id="learn_more"></a>
+        </div>
+    </Container>
+    </div>
+
+
+
+    <BgSectionExternal2 bgImage={Webbottombg} secTitle="On Demand Webinars" secLink="https://tryelevate.wistia.com/projects/u8p4ih0dk6" secButton="View Recordings" secImage={Web0}>
+    Browse our ever-growing selection of on-demand Elevate training webinars, including our popular “Secrets of Successful Lead Generation”, “How to Promote Your Open Houses”, and so much more just for you.
+        </BgSectionExternal2>
+
+
+
+   
     </div>
   );
 };
@@ -95,19 +152,75 @@ export const query = graphql`
 export default withStyles((theme) => ({
   root: {
     position: "relative",
-    paddingTop: "96px",
-    paddingBottom: "192px",
+    paddingTop: "20px",
   },
   top: {
     display: "flex",
     flexWrap: "wrap",
+    alignItems: "top",
+  },
+  column3:{
+    width:"350px",
+    maxWidth: "100%",
+    paddingRight:"10px",
+    paddingLeft:"10px",
+    verticalAlign: "top",
+  },
+  getStartedLink: {
+    minWidth: "250px",
+    maxWidth: "250px",
+    alignContent: "center",
+    justifyContent: "center",
+    fontSize: "14px",
+    fontWeight: "700",
+    display: "block",
+    letterSpacing: ".25px",
+    backgroundColor: theme.colors.secondary,
+    color: "#FFF",
+    textDecoration: "none",
+    padding: "14px 16px",
+    borderRadius: "4px",
+    margin: "16px auto",
+    marginBottom: "20px",
+  },
+  centerHeading:{
     alignItems: "center",
+    width: "100%",
+    textAlign: "center",
+  },
+  bold:{
+    fontWeight:"700",
   },
   heading: {
     color: "#2E2E35",
     fontSize: "32px",
+    lineHeight: "36px",
     fontWeight: "700",
     marginRight: "auto",
+  },
+
+  subheading: {
+    color: "#2E2E35",
+    fontSize: "20px",
+    lineHeight: "24px",
+    fontWeight: "700",
+    paddingBottom: "15px",
+  },
+
+  subtext: {
+    fontSize: "16px",
+    fontWeight: "300",
+    lineHeight: "24px",
+    color: "#777777",
+  },
+
+  heading2: {
+    color: theme.colors.secondary,
+    fontSize: "32px",
+    lineHeight: "40px",
+    fontWeight: "700",
+    marginRight: "auto",
+    paddingBottom: "20px",
   },
   bootcampLink: {
     color: "inherit",
