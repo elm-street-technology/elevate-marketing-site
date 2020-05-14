@@ -24,7 +24,7 @@ const Talkersvsdoers = ({ children, classes, data, tags }) => {
 
 <Container>
     <div style={{paddingBottom:"50px", textAlign:"center"}}>
-    <img src={Talkerslogo} width="300" style={{paddingBottom:"20px"}}/>
+    <img src={Talkerslogo} width="300" style={{paddingBottom:"20px", paddingTop:"40px"}}/>
       <br />
 
       <h1 className={classes.heading}>Stream The Webinar</h1>
@@ -73,7 +73,7 @@ const Talkersvsdoers = ({ children, classes, data, tags }) => {
               </div>
 
 
- <div style={{backgroundColor:"#f7f7f7", paddingBottom:"50px"}}>
+ <div style={{backgroundColor:"#f7f7f7", paddingBottom:"65px"}}>
         <h1 className={classes.heading} style={{paddingTop:"50px"}}>
         Request Your FREE Social Media Consultation
         </h1>
@@ -99,7 +99,7 @@ export default withStyles((theme) => ({
     flexDirection: "column",
     width: "100%",
     padding: "0 0px",
-    margin: "40px auto",
+    margin: "auto",
   },
   heading: {
     fontSize: "28px",
