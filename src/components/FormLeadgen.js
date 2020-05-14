@@ -224,38 +224,8 @@ Check availability today.
                 <Field id="market2" name="market2" label="City/State" component={Input} className={classes.field} onBlur={this.setFormVal} />
                 <Field id="market3" name="market3" label="City/State" component={Input} className={classes.field} onBlur={this.setFormVal} />
                 Schedule 15 minutes with a Lead Generation Specialist:
-                <Field id="demorequest" name="demorequest" type="checkbox" value="yes" className={classes.checkfield} onClick={this.showCalForm} />
-                {this.state.showCalForm && <div>
-                    <div className={classes.topRow}>
-                      <Field id="meetingdate" name="meetingdate" label="Call Date" component={Datetime} timeFormat={false} isValidDate={valid} renderDay={renderDay} />
-                      <div style={{ margin: "8px auto 16px" }}>
-                        <label for="meetingtime" className={classes.selectlabel}>
-                          Call Time
-                        </label>
-                        <select name="meetingtime" value={values.meetingtime} onChange={handleChange} onBlur={handleBlur} style={{ display: "block" }} className={classes.selectfield}>
-                          <option value="" label="Select a time slot" />
-                          <option value="09:00:00">9:00am (EDT)</option>
-                          <option value="09:30:00">9:30am (EDT)</option>
-                          <option value="10:00:00">10:00am (EDT)</option>
-                          <option value="10:30:00">10:30am (EDT)</option>
-                          <option value="11:00:00">11:00am (EDT)</option>
-                          <option value="11:30:00">11:30am (EDT)</option>
-                          <option value="12:00:00">12:00pm (EDT)</option>
-                          <option value="12:30:00">12:30pm (EDT)</option>
-                          <option value="13:00:00">1:00pm (EDT)</option>
-                          <option value="13:30:00">1:30pm (EDT)</option>
-                          <option value="14:00:00">2:00pm (EDT)</option>
-                          <option value="14:30:00">2:30pm (EDT)</option>
-                          <option value="15:00:00">3:00pm (EDT)</option>
-                          <option value="15:30:00">3:30pm (EDT)</option>
-                          <option value="16:00:00">4:00pm (EDT)</option>
-                          <option value="16:30:00">4:30pm (EDT)</option>
-                          <option value="17:00:00">5:00pm (EDT)</option>
-                          <option value="17:30:00">5:30pm (EDT)</option>
-                        </select>
-                      </div>
-                    </div>
-                  </div>}
+                <Field id="demorequest" name="demorequest" type="checkbox" value="yes" className={classes.checkfield}  />
+                
                 <button type="submit" className={classes.signUpBtn} disabled={isSubmitting}>
                   Check Availability
                 </button>
