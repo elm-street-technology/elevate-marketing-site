@@ -7,12 +7,11 @@ import SignUpFormRollercoaster from "../components/SignUpFormRollercoaster";
 import Covid from "../images/covid_header.jpg";
 import Mrc from "../images/mrc_logo.png";
 import BgSectionExternalNorm from "../components/BgSectionExternalNorm";
-import Rechart1 from "../images/rechart1.jpg";
-import Rechart2 from "../images/rechart2.jpg";
-import Rechart3 from "../images/rechart3.jpg";
-import Rechart4 from "../images/rechart4.jpg";
-import Rechart5 from "../images/rechart5.jpg";
-import Rechart6 from "../images/rechart6.jpg";
+import Mrc1 from "../images/mrc_chart1.png";
+import Mrc2 from "../images/mrc_chart2.png";
+import Mrc3 from "../images/mrc_chart3.png";
+import Mrc4 from "../images/mrc_chart4.png";
+import Mrc5 from "../images/mrc_chart5.png";
 import R1 from "../images/reev1.png";
 import R2 from "../images/reev2.png";
 import R3 from "../images/reev3.png";
@@ -44,7 +43,7 @@ const Rollercoaster = ({ children, classes, data, tags }) => {
 
               <div style={{textAlign: "center", maxWidth:"700px",marginLeft:"auto",marginRight:"auto", paddingBottom:"50px"}}>
                 <div style={{ textAlign: "center"}} className={classes.videoEmbed}>
-                        <iframe className={classes.videoContainer} src="https://www.youtube.com/embed/F4leasNVHPY"
+                        <iframe className={classes.videoContainer} src="https://www.youtube.com/embed/MQ4bcqLANjc"
                          frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                 </div>
               </div>
@@ -63,10 +62,10 @@ const Rollercoaster = ({ children, classes, data, tags }) => {
                   
                 
                   <div style={{ textAlign: "center",paddingTop:"12px" }}>
-                  <h2 className={classes.subHeading}>Have you already<br />
-                  re-evaluated / adjusted<br />
-                  your annual projections yet?</h2>
-                        <img src={Rechart3} width="255"/>
+                  <h2 className={classes.subHeading}>Do you have closings currently<br />
+                  being held up because of<br />
+                  mortgage related issues?</h2>
+                        <img src={Mrc1} width="255"/>
                   </div>
 </div>
 
@@ -76,10 +75,10 @@ const Rollercoaster = ({ children, classes, data, tags }) => {
                   
                 
                   <div style={{ textAlign: "center",paddingTop:"12px" }}>
-                  <h2 className={classes.subHeading}><span className={classes.bold} style={{color:"#55c3ba"}}>IF YES...</span><br />
-                  what percentage have you<br />
-                  adjusted your numbers by?</h2>
-                        <img src={Rechart2} width="255" />
+                  <h2 className={classes.subHeading}><br />
+                  Do you prefer to work<br />
+                  with only one lender partner?</h2>
+                        <img src={Mrc2} width="255" />
                   </div>
 </div>
 
@@ -87,10 +86,10 @@ const Rollercoaster = ({ children, classes, data, tags }) => {
 
                
                   <div style={{ textAlign: "center",paddingTop:"12px" }}>
-                  <h2 className={classes.subHeading}>How many of you feel you<br />
-                  are still “on track” with your<br />
-                  2020 financial projections?</h2>
-                        <img src={Rechart1} width="255"/>
+                  <h2 className={classes.subHeading}>Are you currently working<br />
+                  with a lender partner to acquire<br />
+                  and farm new leads?</h2>
+                        <img src={Mrc3} width="255"/>
                   </div>
 </div>
 
@@ -110,46 +109,41 @@ const Rollercoaster = ({ children, classes, data, tags }) => {
 
               <div className={classes.top}>
 
-<div className={classes.column3} style={{ textAlign: "center", paddingTop: "12px" }}>
+<div className={classes.column2} style={{ textAlign: "center", paddingTop: "12px" }}>
                   
                   
                 
                   <div style={{ textAlign: "center",paddingTop:"12px" }}>
-                  <h2 className={classes.subHeading}>What tools are you<br />
-                  using more now than previously?</h2>
-                        <img src={Rechart5} width="255" style={{ paddingBottom:"12px" }}/>
+                  <h2 className={classes.subHeading}>How is real estate in<br />
+                  your market right now?</h2>
+                        <img src={Mrc4} width="255" style={{ paddingBottom:"12px" }}/>
                         <h2 className={classes.subHeading}>
-                        <span className={classes.bold} style={{color:"#55c3ba"}}>60%</span> Social Media<br />
-                        <span className={classes.bold} style={{color:"#55c3ba"}}>57%</span> Virtual Tours/Meetings<br />
-                        <span className={classes.bold} style={{color:"#55c3ba"}}>51%</span> Email/Text/Video<br />
-                        <span className={classes.bold} style={{color:"#55c3ba"}}>19%</span> Online Lead Gen.<br />
+                        <span className={classes.bold} style={{color:"#55c3ba"}}>36%</span> Starting to open up but real estate is moving slow<br />
+                        <span className={classes.bold} style={{color:"#55c3ba"}}>34%</span> Starting to open up and real estate<br />
+                        is moving at a good pace<br />
+                        <span className={classes.bold} style={{color:"#55c3ba"}}>16%</span> Still shut down but people are looking<br />
+                        <span className={classes.bold} style={{color:"#55c3ba"}}>9%</span> Still shut down and no one is moving<br />
+                        <span className={classes.bold} style={{color:"#55c3ba"}}>5%</span> My business saw no decline and I'm cooking with gas
                         </h2>
                   </div>
 </div>
 
 
-<div className={classes.column3} style={{ textAlign: "center", paddingTop: "12px" }}>
-                  
-                  
-                
-                  <div style={{ textAlign: "center",paddingTop:"12px" }}>
-                  <h2 className={classes.subHeading}>Have you had any pending<br />
-                  transactions cancel to date?</h2>
-                        <img src={Rechart4} width="255" />
-                  </div>
-</div>
 
-<div className={classes.column3} style={{ textAlign: "center", paddingTop: "12px" }}>
+
+<div className={classes.column2} style={{ textAlign: "center", paddingTop: "12px" }}>
 
                
                   <div style={{ textAlign: "center",paddingTop:"12px" }}>
-                  <h2 className={classes.subHeading}>Do you know the source of your<br />
-                  largest number of transactions?</h2>
-                        <img src={Rechart6} width="255" style={{ paddingBottom:"12px" }}/>
+                  <h2 className={classes.subHeading}>What is your production<br />
+                  looking like this year?</h2>
+                        <img src={Mrc5} width="255" style={{ paddingBottom:"12px" }}/>
                         <h2 className={classes.subHeading}>
-                        <span className={classes.bold} style={{color:"#55c3ba"}}>29%</span> Past Clients<br />
-                        <span className={classes.bold} style={{color:"#55c3ba"}}>10%</span> Online Lead Gen.<br />
-                        <span className={classes.bold} style={{color:"#55c3ba"}}>7%</span> Social Media/Networking</h2>
+                        <span className={classes.bold} style={{color:"#55c3ba"}}>47%</span> Less than six transactions<br />
+                        <span className={classes.bold} style={{color:"#55c3ba"}}>47%</span> Between 7-12 transactions<br />
+                        <span className={classes.bold} style={{color:"#55c3ba"}}>6%</span> Between 13-25 transactions<br />
+                        <span className={classes.bold} style={{color:"#55c3ba"}}>0%</span> Between 26-35 transactions<br />
+                        <span className={classes.bold} style={{color:"#55c3ba"}}>0%</span> More than 36 transactions</h2>
                   </div>
 </div>
 
@@ -180,7 +174,7 @@ const Rollercoaster = ({ children, classes, data, tags }) => {
 
 
 
- <div style={{backgroundColor:"#f7f7f7", paddingBottom:"60px"}}>
+ <div style={{backgroundColor:"#f7f7f7", paddingBottom:"70px"}}>
         <h1 className={classes.heading} style={{paddingTop:"65px"}}>
         Connect with a Success Coach
         </h1>

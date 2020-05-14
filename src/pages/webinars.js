@@ -69,7 +69,7 @@ const Webinars = ({ classes, data }) => {
                                     has to offer you and your business. 
                                     <br /><br />
                                     Training time:  1 hr.</div>
-                                    <a target="_blank" href="https://attendee.gotowebinar.com/rt/6820642661254087436" className={classes.getStartedLink}>
+                                    <a target="_blank" href="https://attendee.gotowebinar.com/rt/825496143307891981" className={classes.getStartedLink}>
                                     Register Now</a>
                                     <div style={{ textAlign: "center",paddingTop:"5px" }}>
                                           <img src={Web1} width="255" />
@@ -88,8 +88,8 @@ const Webinars = ({ classes, data }) => {
                                     analytics and much, much more.
                                     <br /><br />
                                     Training time:  1 hr.</div>
-                                    <a target="_blank" href="https://attendee.gotowebinar.com/rt/4156541380315543820" className={classes.getStartedLink}>
-                                    Register Now</a>
+                                    <a target="_blank" href="" className={classes.getStartedLink2}>
+                                    Coming Soon</a>
                                     <div style={{ textAlign: "center",paddingTop:"5px" }}>
                                           <img src={Web2} width="255" />
                                     </div>
@@ -107,7 +107,7 @@ const Webinars = ({ classes, data }) => {
                                     of the tools you need to succeed.
                                     <br /><br />
                                     Training time:  1 hr.</div>
-                                    <a target="_blank" href="https://attendee.gotowebinar.com/rt/8516877941121421836" className={classes.getStartedLink}>
+                                    <a target="_blank" href="https://attendee.gotowebinar.com/rt/6508184552514777101" className={classes.getStartedLink}>
                                     Register Now</a>
                                     <div style={{ textAlign: "center",paddingTop:"5px" }}>
                                           <img src={Web3} width="255" />
@@ -176,6 +176,24 @@ export default withStyles((theme) => ({
     display: "block",
     letterSpacing: ".25px",
     backgroundColor: theme.colors.secondary,
+    color: "#FFF",
+    textDecoration: "none",
+    padding: "14px 16px",
+    borderRadius: "4px",
+    margin: "16px auto",
+    marginBottom: "20px",
+  },
+
+  getStartedLink2: {
+    minWidth: "250px",
+    maxWidth: "250px",
+    alignContent: "center",
+    justifyContent: "center",
+    fontSize: "14px",
+    fontWeight: "700",
+    display: "block",
+    letterSpacing: ".25px",
+    backgroundColor: "#83858a",
     color: "#FFF",
     textDecoration: "none",
     padding: "14px 16px",
