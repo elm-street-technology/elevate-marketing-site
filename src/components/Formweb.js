@@ -182,7 +182,10 @@ class Formweb extends Component {
               <div style={{marginBottom:"30px"}}>
                 <div className={classes.headingLarge} style={{ marginBottom: "25px" }}>Get a stunning IDX website,<br />
                 starting as low as $75/m.</div>
-                <div style={{color:"#495050", lineHeight:"22px", paddingBottom:"35px"}}>In times of crisis, we are here to support the real estate community. For this month only, take advantage of special pricing and receive an IDX website, CRM, social media, email and text marketing...starting as low as $75/m. Schedule your 15-minute demo TODAY.</div>
+                <div style={{color:"#495050", lineHeight:"22px", paddingBottom:"35px",}}>Get a stunning IDX website, starting as low as $150/m.
+All Elevate IDX websites come with a full CRM, social media, email and text marketing, and fanatical training and support...
+starting as low as $150/m. Watch our quick video and then schedule<br />
+your 15-minute demo TODAY to learn more.</div>
 
                 <div className={classes.fullWidthVid}>
                   <div aspectRatio="16by9">
