@@ -88,8 +88,8 @@ const Webinars = ({ classes, data }) => {
                                     analytics and much, much more.
                                     <br /><br />
                                     Training time:  1 hr.</div>
-                                    <a target="_blank" href="" className={classes.getStartedLink2}>
-                                    Coming Soon</a>
+                                    <a target="_blank" href="https://attendee.gotowebinar.com/rt/232680153638954251" className={classes.getStartedLink}>
+                                    Register Now</a>
                                     <div style={{ textAlign: "center",paddingTop:"5px" }}>
                                           <img src={Web2} width="255" />
                                     </div>
