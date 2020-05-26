@@ -6,6 +6,7 @@ import Alert from "elevate-ui/Alert";
 import CheckboxGroup from "elevate-ui/CheckboxGroup";
 import Input from "elevate-ui/Input";
 import RadioGroup from "elevate-ui/RadioGroup";
+import ResponsiveVid from "../components/ResponsiveVid"
 import Typography from "elevate-ui/Typography";
 import withStyles from "elevate-ui/withStyles";
 import Datetime from "elevate-ui/Datetime";
@@ -197,9 +198,21 @@ class FormCRM extends Component {
                 <div className={classes.headingSmall}>
                   One Source.  One Vendor.  One Point of Contact.
                 </div>
-                <div className={classes.headingText} style={{ marginTop: "10px" }}>
+                <div className={classes.headingText} style={{ marginTop: "10px", paddingBottom:"25px", }}>
                     Contemporary, intuitive design for broker, agent &amp; team success.<br/>Secure personal data on every level.
                 </div>
+
+                <div className={classes.fullWidthVid}>
+                  <div aspectRatio="16by9">
+                  <ResponsiveVid youtubeId="xPJyb2d_tnU" />
+                  </div>
+                </div>
+
+                <div className={classes.headingText} style={{ marginTop: "20px", paddingBottom:"25px", }}>
+                Learn more, secure leads &amp; conquer your marketing today.
+                </div>
+
+
               </div>
               <div style={{ maxWidth: "500px", marginLeft: "auto", marginRight: "auto" }}>
                 <div className={classes.topRow}>
@@ -291,6 +304,14 @@ export default withStyles((theme) => ({
     marginBottom: "30px",
     textDecoration: "none",
   },
+  fullWidthVid:{
+    width: "100%",
+    marginLeft:"auto",
+    marginRight:"auto",
+    [theme.breakpoints[900]]: {
+      width: "75%"
+  },
+},
   headingSmall: {
     fontSize: "20px",
     textTransform: "uppercase",
