@@ -46,7 +46,7 @@ const subscribe_today = ({ classes }) => {
           <img src={Dms} style={{ width:"100%", maxWidth:"100px"}}/>
         </div>
         
-                <div className={classes.productCol} style={{ textAlign: "left", paddingLeft:"10px", paddingRight:"10px"}}>
+                <div className={classes.productCol} style={{ textAlign: "left", paddingLeft:"10px", paddingRight:"10px",}}>
                 <div className={classes.bold} style={{color:"#4ab8ac"}}>IDX WEBSITE</div>
                 <div className={classes.bold} style={{color:"#4ab8ac"}}>ADV. PRODUCTIVITY CRM</div>
                 <div className={classes.bold} style={{color:"#4ab8ac"}}>CMA WIZARD</div>
@@ -60,13 +60,13 @@ const subscribe_today = ({ classes }) => {
                 <div className={classes.bold} style={{color:"#57585b"}}>• YouTube</div>
                 </div>
 
-                <div>
+                <div style={{paddingTop:"33px"}}>
                 <img src={Line} style={{ width:"100%", maxWidth:"200px"}}/>
                 <br />
                 <span className={classes.bold} style={{color:"#4ab8ac"}}>ANNUAL AGREEMENT</span>
                 <br />
                   <br />
-                  <div className={classes.bold} style={{color:"#4ab8ac", paddingTop:"28px"}}>Monthly: $199/m</div>
+                  <div className={classes.bold} style={{color:"#4ab8ac", paddingTop:"28px"}}>Monthly: $249/m</div>
 <div className={classes.bold} style={{color:"#4ab8ac",}}>One Time Set-Up: $500</div>
 
 
@@ -88,8 +88,10 @@ const subscribe_today = ({ classes }) => {
           <img src={Dplus} style={{ width:"100%", maxWidth:"215px"}}/>
         </div>
         
-                <div className={classes.productCol} style={{ textAlign: "left", paddingLeft:"10px", paddingRight:"10px"}}>
-                <div className={classes.bold} style={{color:"#238076"}}>5 - 10 LEADS PER MONTH</div>
+                <div className={classes.productCol} style={{ textAlign: "left", paddingLeft:"10px", paddingRight:"10px",  paddingBottom:"20px"}}>
+                <div className={classes.bold} style={{color:"#f15953"}}>LEAD GENERATION</div>
+                <div className={classes.bold} style={{color:"#f15953"}}>• 5 - 10 leads per month</div>
+                <div className={classes.bold} style={{color:"#f15953"}}>• Pay-Per-Click Campaigns</div>
                 <div className={classes.bold} style={{color:"#4ab8ac"}}>IDX WEBSITE</div>
                 <div className={classes.bold} style={{color:"#4ab8ac"}}>ADV. PRODUCTIVITY CRM</div>
                 <div className={classes.bold} style={{color:"#4ab8ac"}}>CMA WIZARD</div>
@@ -109,7 +111,7 @@ const subscribe_today = ({ classes }) => {
                 <span className={classes.bold} style={{color:"#238076"}}>ANNUAL AGREEMENT</span>
                 <br />
                   <br />
-                  <div className={classes.bold} style={{color:"#238076", paddingTop:"28px"}}>Monthly: $249/m</div>
+                  <div className={classes.bold} style={{color:"#238076", paddingTop:"28px"}}>Monthly: $499/m</div>
 <div className={classes.bold} style={{color:"#238076",}}>One Time Set-Up: $500</div>
 
 
@@ -132,8 +134,8 @@ const subscribe_today = ({ classes }) => {
         </div>
                 <div className={classes.productCol} style={{ textAlign: "left", paddingLeft:"10px", paddingRight:"10px", paddingBottom:"20px"}}>
                 <div className={classes.bold} style={{color:"#f15953"}}>LEAD GENERATION</div>
+                <div className={classes.bold} style={{color:"#f15953"}}>• 20 - 30 leads per month</div>
                 <div className={classes.bold} style={{color:"#f15953"}}>• Pay-Per-Click Campaigns</div>
-                <div className={classes.bold} style={{color:"#f15953"}}>• Facebook Ads</div>
                 <div className={classes.bold} style={{color:"#4ab8ac"}}>IDX WEBSITE</div>
                 <div className={classes.bold} style={{color:"#4ab8ac"}}>ADV. PRODUCTIVITY CRM</div>
                 <div className={classes.bold} style={{color:"#4ab8ac"}}>CMA WIZARD</div>
@@ -156,7 +158,7 @@ const subscribe_today = ({ classes }) => {
                 <br /><br />
 
 
-                <div className={classes.bold} style={{color:"#f15953",}}>Monthly: $899/m</div>
+                <div className={classes.bold} style={{color:"#f15953", paddingTop:"28px"}}>Monthly: $899/m</div>
 <div className={classes.bold}  style={{color:"#f15953",}}>One Time Set-Up: $800</div>
 
                 
