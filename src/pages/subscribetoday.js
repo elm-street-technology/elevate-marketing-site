@@ -14,7 +14,7 @@ import PlayCircleFilled from "elevate-ui-icons/PlayCircleFilled";
 import CheckCircle from "elevate-ui-icons/CheckCircle";
 import SMBCLogo from "../images/smbcLogo.jpg";
 import Elite from "../images/elite_logo.png";
-import Sp from "../images/sp_logo.png";
+import Dplus from "../images/dplus.png";
 import Dms from "../images/dms_logo.png";
 import Line from "../images/line.png";
 import SignUpFormSubscribe from "../components/SignUpFormSubscribe";
@@ -40,49 +40,10 @@ const subscribe_today = ({ classes }) => {
       
         <div className={classes.top}>
         <div className={classes.infoboxGray2}>
-          <div className={classes.column3} style={{ textAlign: "center", paddingBottom: "35px", }}>
-          <div style={{ textAlign: "center",paddingBottom:"10px" }}>
-          <img src={Sp} style={{ width:"100%", maxWidth:"260px"}}/>
-        </div>
-       
-            
-                <div className={classes.productCol} style={{ textAlign: "left", paddingLeft:"10px", paddingRight:"10px" }}>
-                <div className={classes.bold} style={{color:"#57585b"}}>BLOG</div>
-                <div className={classes.bold} style={{color:"#57585b"}}>SOCIAL MEDIA SERVICES</div>
-                <div className={classes.bold} style={{color:"#57585b"}}>MLS Feed Listing Pushes:</div>
-                <div className={classes.bold} style={{color:"#57585b"}}>• Facebook</div>
-                <div className={classes.bold} style={{color:"#57585b"}}>• LinkedIn</div>
-                <div className={classes.bold} style={{color:"#57585b"}}>• Twitter</div>
-                <div className={classes.bold} style={{color:"#57585b"}}>• YouTube</div>
-                </div>
-
-                <div>
-                <img src={Line} style={{ width:"100%", maxWidth:"200px"}}/>
-                <br />
-                  <div className={classes.bold} style={{color:"#57585b", textAlign: "center"}}>ANNUAL AGREEMENT
-</div>
-<br />
-<div style={{color:"#57585b", textAlign: "center",}}>
-<div className={classes.bold} style={{color:"#57585b", paddingTop:"28px"}}>Monthly: <span style={{color:"#57585b"}} className={classes.bold}>$80/m</span></div>
-<div className={classes.bold}>One Time Set-Up: $300</div>
-
-</div>
-              
-               
-                <a target="_blank" href="https://elmstreettechnology.recurly.com/subscribe/elevatesocialpro" className={classes.getStartedLinkignite}>
-                  SUBSCRIBE NOW
-                    </a>
-                    
-                   
-                    </div>
-
-            </div>
-            </div>
-            <div className={classes.infoboxGray2}>
-          <div className={classes.column3} style={{ textAlign: "center", paddingBottom: "35px" }}>
+        <div className={classes.column3} style={{ textAlign: "center", paddingBottom: "35px" }}>
           
           <div style={{ textAlign: "center",paddingBottom:"10px" }}>
-          <img src={Dms} style={{ width:"100%", maxWidth:"105px"}}/>
+          <img src={Dms} style={{ width:"100%", maxWidth:"100px"}}/>
         </div>
         
                 <div className={classes.productCol} style={{ textAlign: "left", paddingLeft:"10px", paddingRight:"10px"}}>
@@ -106,10 +67,53 @@ const subscribe_today = ({ classes }) => {
                 <br />
                   <br />
                   <div className={classes.bold} style={{color:"#4ab8ac", paddingTop:"28px"}}>Monthly: $199/m</div>
-<div className={classes.bold} style={{color:"#4ab8ac",}}>One Time Set-Up: $700</div>
+<div className={classes.bold} style={{color:"#4ab8ac",}}>One Time Set-Up: $500</div>
 
 
 <a target="_blank" href="https://elmstreettechnology.recurly.com/subscribe/edigitalmarketingsystem" className={classes.getStartedLinkignite}>
+                  SUBSCRIBE NOW
+                    </a>
+
+                                      
+                  </div>
+
+
+
+          </div>
+            </div>
+            <div className={classes.infoboxGray2}>
+          <div className={classes.column3} style={{ textAlign: "center", paddingBottom: "35px" }}>
+          
+          <div style={{ textAlign: "center",paddingBottom:"10px" }}>
+          <img src={Dplus} style={{ width:"100%", maxWidth:"215px"}}/>
+        </div>
+        
+                <div className={classes.productCol} style={{ textAlign: "left", paddingLeft:"10px", paddingRight:"10px"}}>
+                <div className={classes.bold} style={{color:"#238076"}}>5 - 10 LEADS PER MONTH</div>
+                <div className={classes.bold} style={{color:"#4ab8ac"}}>IDX WEBSITE</div>
+                <div className={classes.bold} style={{color:"#4ab8ac"}}>ADV. PRODUCTIVITY CRM</div>
+                <div className={classes.bold} style={{color:"#4ab8ac"}}>CMA WIZARD</div>
+                <div className={classes.bold} style={{color:"#4ab8ac"}}>EMAIL MARKETING CAMPAIGNS</div>
+                <div className={classes.bold} style={{color:"#57585b"}}>BLOG</div>
+                <div className={classes.bold} style={{color:"#57585b"}}>SOCIAL MEDIA SERVICES</div>
+                <div className={classes.bold} style={{color:"#57585b"}}>MLS Feed Listing Pushes:</div>
+                <div className={classes.bold} style={{color:"#57585b"}}>• Facebook</div>
+                <div className={classes.bold} style={{color:"#57585b"}}>• LinkedIn</div>
+                <div className={classes.bold} style={{color:"#57585b"}}>• Twitter</div>
+                <div className={classes.bold} style={{color:"#57585b"}}>• YouTube</div>
+                </div>
+
+                <div>
+                <img src={Line} style={{ width:"100%", maxWidth:"200px"}}/>
+                <br />
+                <span className={classes.bold} style={{color:"#238076"}}>ANNUAL AGREEMENT</span>
+                <br />
+                  <br />
+                  <div className={classes.bold} style={{color:"#238076", paddingTop:"28px"}}>Monthly: $249/m</div>
+<div className={classes.bold} style={{color:"#238076",}}>One Time Set-Up: $500</div>
+
+
+<a target="_blank" href="https://elmstreettechnology.recurly.com/subscribe/dmsplus" className={classes.getStartedLinkignite}>
                   SUBSCRIBE NOW
                     </a>
 
