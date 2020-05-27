@@ -115,7 +115,7 @@ const subscribe_today = ({ classes }) => {
 <div className={classes.bold} style={{color:"#238076",}}>One Time Set-Up: $500</div>
 
 
-<a target="_blank" href="https://elmstreettechnology.recurly.com/subscribe/dmsplus" className={classes.getStartedLinkignite}>
+<a target="_blank" href="https://elmstreettechnology.recurly.com/subscribe/dmsplus?subscription[coupon_code]=dmsplus" className={classes.getStartedLinkignite}>
                   SUBSCRIBE NOW
                     </a>
 
