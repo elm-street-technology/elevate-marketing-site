@@ -29,6 +29,14 @@ const subscribe_today = ({ classes }) => {
     
 
 
+      <div style={{backgroundImage:"url("+Aprilbg+")", backgroundSize:"cover", backgroundPosition:"centerTop", paddingTop:"45px", paddingLeft:"45px", paddingRight:"45px", paddingBottom:"25px",textAlign:"center"}}>
+              <h1 className={classes.heading} style={{color:"#fdfa25", lineHeight:"34px"}}>FLASH SALE!</h1>
+              <h2 className={classes.subHeading} style={{color:"#ffffff", lineHeight:"34px"}}>
+              Subscribe by May 31st and we’ll waive all set-up fees!</h2>
+              </div>
+
+
+
 
 
 
@@ -67,7 +75,7 @@ const subscribe_today = ({ classes }) => {
                 <br />
                   <br />
                   <div className={classes.bold} style={{color:"#4ab8ac", paddingTop:"28px"}}>Monthly: $249/m</div>
-<div className={classes.bold} style={{color:"#4ab8ac",}}>One Time Set-Up: $500</div>
+<div className={classes.bold} style={{color:"#4ab8ac", textDecoration:"line-through"}}>One Time Set-Up: $500</div>
 
 
 <a target="_blank" href="https://elmstreettechnology.recurly.com/subscribe/edigitalmarketingsystem" className={classes.getStartedLinkignite}>
@@ -112,7 +120,7 @@ const subscribe_today = ({ classes }) => {
                 <br />
                   <br />
                   <div className={classes.bold} style={{color:"#238076", paddingTop:"28px"}}>Monthly: $499/m</div>
-<div className={classes.bold} style={{color:"#238076",}}>One Time Set-Up: $500</div>
+<div className={classes.bold} style={{color:"#238076", textDecoration:"line-through"}}>One Time Set-Up: $500</div>
 
 
 <a target="_blank" href="https://elmstreettechnology.recurly.com/subscribe/dmsplus?subscription[coupon_code]=dmsplus" className={classes.getStartedLinkignite}>
@@ -159,7 +167,7 @@ const subscribe_today = ({ classes }) => {
 
 
                 <div className={classes.bold} style={{color:"#f15953", paddingTop:"28px"}}>Monthly: $899/m</div>
-<div className={classes.bold}  style={{color:"#f15953",}}>One Time Set-Up: $800</div>
+<div className={classes.bold}  style={{color:"#f15953", textDecoration:"line-through"}}>One Time Set-Up: $800</div>
 
                 
 <a target="_blank" href="https://elmstreettechnology.recurly.com/subscribe/elevateelite" className={classes.getStartedLinkignite}>
@@ -247,7 +255,7 @@ Questions? - 877.218.9771
 export default withStyles((theme) => ({
   root: {
     position: "relative",
-    paddingTop: "66px",
+    paddingTop: "36px",
     paddingBottom: "0px",
     lineHeight: "1.75em",
   },
@@ -265,7 +273,7 @@ export default withStyles((theme) => ({
     lineHeight: "40px",
     fontWeight: "700",
     marginRight: "auto",
-    paddingBottom: "20px",
+    paddingBottom: "10px",
   },
   heading2: {
     color: theme.colors.secondary,
