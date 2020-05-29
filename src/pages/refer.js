@@ -6,6 +6,8 @@ import Container from "../components/Container";
 import FormRefer from "../components/FormRefer";
 import SEO from "../components/SEO";
 import power from "../images/refer_power.png";
+import Referbg from "../images/refer_bg.jpg";
+import Referlogo from "../images/refer_logo.png";
 import LandingHeader from "../images/6emails_landing_header.jpg";
 
 const Refer = ({ children, classes, data, tags }) => {
@@ -20,28 +22,56 @@ const Refer = ({ children, classes, data, tags }) => {
       </Helmet>
       <SEO postNode={postNode} pagePath="refer" customTitle />
 
-
+      <div style={{backgroundImage:"url("+Referbg+")", backgroundSize:"cover", backgroundPosition:"center", paddingTop:"45px", paddingLeft:"45px", paddingRight:"45px", paddingBottom:"20px",textAlign:"center"}}>
       <Container>
-        <div className={classes.top} style={{paddingRight:"25px", paddingLeft:"25px"}}>
-          <div className={classes.centerHeading}>
-            <div style={{ textAlign: "center",paddingBottom:"15px" }}>
-            <img src={power} width="250" />
-            </div>
-            <div className={classes.heading}>SHARE THE POWER OF ELEVATE</div>
-            <div style={{paddingBottom:"35px", lineHeight:"24px"}}><div className={classes.bold}>Share the love &amp; refer your fellow real estate colleagues to Elevate.</div>
-            For any referrals who subscribe to Elevate DMS&trade; or Elite&trade; programs,<br />
-            you'll receive a $100 credit to your account. Nice!</div>
-            
-          </div>
-        </div>
+        
+      <div className={classes.top}>
+
+<div className={classes.column2} style={{ textAlign: "center", paddingTop: "12px" }}>
+                  
+                  
+                
+                  <div style={{ textAlign: "center",paddingTop:"12px" }}>
+                  
+                        <img src={Referlogo} width="100%" style={{ paddingBottom:"12px", maxWidth:"350px" }}/>
+                        
+                  </div>
+</div>
+
+
+
+
+<div className={classes.column2} style={{ textAlign: "center", paddingTop: "12px" }}>
+
+               
+                  <div style={{ textAlign: "center",paddingTop:"12px" }}>
+                  “You can have everything you want in life if you just help enough people get what they want in life.” - ZIG ZIGLAR
+                  <br /><br />
+                  Have friends &amp; colleagues that could benefit from the tools &amp; services of Elevate?  Spread the love by referring them today! 
+                  <br /><br />
+                  It’s super easy...<br />
+                  For every friend you refer that subscribes to Elevate, you’ll receive a FREE batch of 5 - 10 leads from your target market in your Elevate account, and so will your friend!  
+                  </div>
+</div>
+
+
+</div>   
+
+
+
+
+
+
+
       </Container>
+      </div>
 
 
 
 
       <Container>
         <div >
-            <div style={{ maxWidth: "900px", backgroundColor: "#f7f7f7", paddingBottom: "40px", marginBottom:"40px", marginRight:"auto",marginLeft:"auto", paddingTop:"10px"}}>
+            <div style={{ maxWidth: "900px", backgroundColor: "#ffffff", paddingBottom: "40px", marginBottom:"40px", marginRight:"auto",marginLeft:"auto", paddingTop:"10px"}}>
                 <div className={classes.landingHeaderStyle}>
                     {/* <img src={LandingHeader} style={{width:"100%"}} /> */}
                 </div>
@@ -60,8 +90,8 @@ export default withStyles((theme) => ({
     display: "flex",
     flexDirection: "column",
     width: "100%",
-    padding: "0 8px",
-    margin: "50px auto",
+    padding: "0px",
+    margin: "2px auto",
   },
   heading: {
     fontSize: "28px",
@@ -82,6 +112,14 @@ export default withStyles((theme) => ({
   landingHeaderStyle:{
     textAlign:"center",
     marginBottom:"30px"
+  },
+
+  column2:{
+    width:"520px",
+    maxWidth: "100%",
+    paddingRight:"10px",
+    paddingLeft:"10px",
+    verticalAlign: "top",
   },
 
   centerHeading:{
