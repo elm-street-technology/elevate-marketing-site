@@ -29,10 +29,10 @@ const subscribe_today = ({ classes }) => {
     
 
 
-      <div style={{backgroundImage:"url("+Aprilbg+")", backgroundSize:"cover", backgroundPosition:"centerTop", paddingTop:"45px", paddingLeft:"45px", paddingRight:"45px", paddingBottom:"25px",textAlign:"center"}}>
+      <div style={{backgroundImage:"url("+Aprilbg+")", backgroundSize:"cover", backgroundPosition:"centerTop", paddingTop:"45px", paddingLeft:"45px", paddingRight:"45px", paddingBottom:"20px",textAlign:"center"}}>
               <h1 className={classes.heading} style={{color:"#fdfa25", lineHeight:"34px"}}>FLASH SALE!</h1>
               <h2 className={classes.subHeading} style={{color:"#ffffff", lineHeight:"34px"}}>
-              Subscribe by May 31st and we’ll waive all set-up fees!</h2>
+              We’re waiving set-up fees.  Limited offer.  Subscribe today.</h2>
               </div>
 
 
