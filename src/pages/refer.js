@@ -3,6 +3,7 @@ import Helmet from "react-helmet";
 import withStyles from "elevate-ui/withStyles";
 import config from "../utils/siteConfig";
 import Container from "../components/Container";
+import ReferBgSectionExternal from "../components/ReferBgSectionExternal";
 import FormRefer from "../components/FormRefer";
 import SEO from "../components/SEO";
 import power from "../images/refer_power.png";
@@ -22,60 +23,22 @@ const Refer = ({ children, classes, data, tags }) => {
       </Helmet>
       <SEO postNode={postNode} pagePath="refer" customTitle />
 
-      <div style={{backgroundImage:"url("+Referbg+")", backgroundSize:"cover", backgroundPosition:"center", paddingTop:"45px", paddingLeft:"45px", paddingRight:"45px", paddingBottom:"20px",textAlign:"center"}}>
-      <Container>
-        
-      <div className={classes.top}>
-
-<div className={classes.column2} style={{ textAlign: "center", paddingTop: "12px" }}>
-                  
-                  
-                
-                  <div style={{ textAlign: "center",paddingTop:"12px" }}>
-                  
-                        <img src={Referlogo} width="100%" style={{ paddingBottom:"12px", maxWidth:"350px" }}/>
-                        
-                  </div>
-</div>
-
-
-
-
-<div className={classes.column2} style={{ textAlign: "center", paddingTop: "12px" }}>
-
-               
-                  <div style={{ textAlign: "center",paddingTop:"12px" }}>
-                  “You can have everything you want in life if you just help enough people get what they want in life.” - ZIG ZIGLAR
-                  <br /><br />
-                  Have friends &amp; colleagues that could benefit from the tools &amp; services of Elevate?  Spread the love by referring them today! 
-                  <br /><br />
-                  It’s super easy...<br />
-                  For every friend you refer that subscribes to Elevate, you’ll receive a FREE batch of 5 - 10 leads from your target market in your Elevate account, and so will your friend!  
-                  </div>
-</div>
-
-
-</div>   
-
-
-
-
-
-
-
-      </Container>
-      </div>
-
+      <ReferBgSectionExternal bgImage={Referbg} secLink="#refer_form" secButton="Start referring today...">
+      For every friend you refer that subscribes to Elevate, you’ll receive a FREE batch of 5 - 10 leads from your target market in your Elevate account, and so will your friend!
+    </ReferBgSectionExternal>
+    <a id="refer_form"></a>
 
 
 
       <Container>
+      
         <div >
             <div style={{ maxWidth: "900px", backgroundColor: "#ffffff", paddingBottom: "40px", marginBottom:"40px", marginRight:"auto",marginLeft:"auto", paddingTop:"10px"}}>
                 <div className={classes.landingHeaderStyle}>
                     {/* <img src={LandingHeader} style={{width:"100%"}} /> */}
                 </div>
                 <div style={{ paddingLeft: "10px", paddingRight: "10px"}}>
+                
                     <FormRefer />
                 </div>
             </div>
