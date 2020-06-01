@@ -8,7 +8,7 @@ import FormRefer from "../components/FormRefer";
 import SEO from "../components/SEO";
 import power from "../images/refer_power.png";
 import Referbg from "../images/refer_bg.jpg";
-import Referlogo from "../images/refer_logo.png";
+import Referlogo2 from "../images/refer_logo2.png";
 import LandingHeader from "../images/6emails_landing_header.jpg";
 
 const Refer = ({ children, classes, data, tags }) => {
@@ -33,11 +33,12 @@ const Refer = ({ children, classes, data, tags }) => {
       <Container>
       
         <div >
-            <div style={{ maxWidth: "900px", backgroundColor: "#ffffff", paddingBottom: "40px", marginBottom:"40px", marginRight:"auto",marginLeft:"auto", paddingTop:"10px"}}>
+            <div style={{ maxWidth: "900px", backgroundColor: "#ffffff", paddingBottom: "40px", marginBottom:"40px", marginRight:"auto",marginLeft:"auto", paddingTop:"30px", textAlign:"center" }}>
                 <div className={classes.landingHeaderStyle}>
                     {/* <img src={LandingHeader} style={{width:"100%"}} /> */}
                 </div>
-                <div style={{ paddingLeft: "10px", paddingRight: "10px"}}>
+                <img src={Referlogo2} width="100%" style={{ paddingBottom:"28px", maxWidth:"330px",}}/>
+                <div style={{ paddingLeft: "18px", paddingRight: "18px"}}>
                 
                     <FormRefer />
                 </div>
