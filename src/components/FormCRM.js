@@ -195,9 +195,7 @@ class FormCRM extends Component {
                 <div className={classes.headingLarge}>
                   Take a Tour of the HOTTEST New CRM in Real Estate.
                 </div>
-                <div className={classes.headingSmall}>
-                  One Source.  One Vendor.  One Point of Contact.
-                </div>
+                
                 <div className={classes.headingText} style={{ marginTop: "10px", paddingBottom:"25px", }}>
                     Contemporary, intuitive design for broker, agent &amp; team success.<br/>Secure personal data on every level.
                 </div>

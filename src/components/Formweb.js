@@ -181,7 +181,7 @@ class Formweb extends Component {
             <Form noValidate>
               <div style={{marginBottom:"30px"}}>
                 <div className={classes.headingLarge} style={{ marginBottom: "25px" }}>Get a stunning IDX website,<br />
-                starting as low as $75/m.</div>
+                starting as low as $150/m.</div>
                 <div style={{color:"#495050", lineHeight:"22px", paddingBottom:"35px",}}>Get a stunning IDX website, starting as low as $150/m.
 All Elevate IDX websites come with a full CRM, social media, email and text marketing, and fanatical training and support...
 starting as low as $150/m. Watch our quick video and then schedule<br />
