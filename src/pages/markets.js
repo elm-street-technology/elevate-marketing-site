@@ -86,7 +86,7 @@ const Markets = ({ children, classes, data, tags }) => {
                       })}
                     </div>
                   </div>
-                  <div style={{marginTop:"30px"}}>
+                  <div style={{marginTop:"60px", paddingBottom:"25px"}}>
                     <FormMLS />
                   </div>
                   
@@ -160,7 +160,7 @@ export default withStyles((theme) => ({
   },
 
   mlsHeatMapContainer: {
-    width: "65%",
+    width: "70%",
     margin: "16px auto 0 auto",
   },
   mlsHeatMap: {
