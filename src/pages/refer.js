@@ -3,9 +3,12 @@ import Helmet from "react-helmet";
 import withStyles from "elevate-ui/withStyles";
 import config from "../utils/siteConfig";
 import Container from "../components/Container";
+import ReferBgSectionExternal from "../components/ReferBgSectionExternal";
 import FormRefer from "../components/FormRefer";
 import SEO from "../components/SEO";
 import power from "../images/refer_power.png";
+import Referbg from "../images/refer_bg.jpg";
+import Referlogo2 from "../images/refer_logo2.png";
 import LandingHeader from "../images/6emails_landing_header.jpg";
 
 const Refer = ({ children, classes, data, tags }) => {
@@ -20,32 +23,23 @@ const Refer = ({ children, classes, data, tags }) => {
       </Helmet>
       <SEO postNode={postNode} pagePath="refer" customTitle />
 
-
-      <Container>
-        <div className={classes.top} style={{paddingRight:"25px", paddingLeft:"25px"}}>
-          <div className={classes.centerHeading}>
-            <div style={{ textAlign: "center",paddingBottom:"15px" }}>
-            <img src={power} width="250" />
-            </div>
-            <div className={classes.heading}>SHARE THE POWER OF ELEVATE</div>
-            <div style={{paddingBottom:"35px", lineHeight:"24px"}}><div className={classes.bold}>Share the love &amp; refer your fellow real estate colleagues to Elevate.</div>
-            For any referrals who subscribe to Elevate DMS&trade; or Elite&trade; programs,<br />
-            you'll receive a $100 credit to your account. Nice!</div>
-            
-          </div>
-        </div>
-      </Container>
-
+      <ReferBgSectionExternal bgImage={Referbg} secLink="#refer_form" secButton="Start referring today...">
+      For every friend you refer that subscribes to Elevate, you’ll receive a FREE batch of 5 - 10 leads from your target market in your Elevate account, and so will your friend!
+    </ReferBgSectionExternal>
+    <a id="refer_form"></a>
 
 
 
       <Container>
+      
         <div >
-            <div style={{ maxWidth: "900px", backgroundColor: "#f7f7f7", paddingBottom: "40px", marginBottom:"40px", marginRight:"auto",marginLeft:"auto", paddingTop:"10px"}}>
+            <div style={{ maxWidth: "900px", backgroundColor: "#ffffff", paddingBottom: "40px", marginBottom:"40px", marginRight:"auto",marginLeft:"auto", paddingTop:"30px", textAlign:"center" }}>
                 <div className={classes.landingHeaderStyle}>
                     {/* <img src={LandingHeader} style={{width:"100%"}} /> */}
                 </div>
-                <div style={{ paddingLeft: "10px", paddingRight: "10px"}}>
+                <img src={Referlogo2} width="100%" style={{ paddingBottom:"28px", maxWidth:"330px",}}/>
+                <div style={{ paddingLeft: "18px", paddingRight: "18px"}}>
+                
                     <FormRefer />
                 </div>
             </div>
@@ -60,8 +54,8 @@ export default withStyles((theme) => ({
     display: "flex",
     flexDirection: "column",
     width: "100%",
-    padding: "0 8px",
-    margin: "50px auto",
+    padding: "0px",
+    margin: "2px auto",
   },
   heading: {
     fontSize: "28px",
@@ -82,6 +76,14 @@ export default withStyles((theme) => ({
   landingHeaderStyle:{
     textAlign:"center",
     marginBottom:"30px"
+  },
+
+  column2:{
+    width:"520px",
+    maxWidth: "100%",
+    paddingRight:"10px",
+    paddingLeft:"10px",
+    verticalAlign: "top",
   },
 
   centerHeading:{

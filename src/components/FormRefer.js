@@ -36,10 +36,13 @@ class FormRefer extends Component {
                                   
                       
             <Typography type="heading3" gutterBottom>
-                Thank YOU, {this.state.firstName}
+                AWESOME! YOU ARE A GOOD FRIEND!
             </Typography>
             <Typography type="heading5" gutterTop>
-                We will reach out to your friends &amp; colleagues and let you know when they join Elevate. Feel free to return to tryelevate.com/refer any time you have others to invite.
+            Your referrals will receive an email letting them know that you referred them to Elevate. 
+            When any of them subscribe to Elevate, we’ll let you know and provide a batch of leads to your account.
+            <br /><br />
+            You can come back to this form again and again to refer MORE friends!  We hope you do!
             </Typography>
           </div>
         </div>
@@ -156,7 +159,7 @@ class FormRefer extends Component {
             <Form noValidate>
               <div style={{ maxWidth: "800px", marginLeft: "auto", marginRight: "auto" }}>
                 {showError && (
-                <div style={{color:"#990000",fontWeight:"bold",marginBottom:"20px"}}>
+                <div style={{color:"#7a2892",fontWeight:"bold",marginBottom:"20px"}}>
                   {errorMessage}
                 </div>
                 )}
@@ -345,7 +348,7 @@ class FormRefer extends Component {
                 className={classes.signUpBtn}
                 disabled={isSubmitting}
               >
-                Refer My Friends NOW
+                Refer My Friends!
               </button>
               </div>
             </Form>
@@ -402,12 +405,12 @@ export default withStyles((theme) => ({
     },
   },
   signUpBtn: {
-    width: "50%",
-    fontSize: "20px",
+    width: "55%",
+    fontSize: "18px",
     lineHeight: "26px",
-    fontWeight: "600",
-    color: "#FFF",
-    backgroundColor: theme.colors.secondary,
+    fontWeight: "700",
+    backgroundColor: "#eefb18",
+    color: "#8776c7",
     borderRadius: "6px",
     padding: "12px",
     marginTop: "30px",
