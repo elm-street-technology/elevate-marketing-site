@@ -7,11 +7,11 @@ import SignUpFormLeading from "../components/SignUpFormLeading";
 import Covid from "../images/covid_header.jpg";
 import Leading from "../images/leading_logo.png";
 import BgSectionExternalNorm from "../components/BgSectionExternalNorm";
-import Mrc1 from "../images/mrc_chart1.png";
-import Mrc2 from "../images/mrc_chart2.png";
-import Mrc3 from "../images/mrc_chart3.png";
-import Mrc4 from "../images/mrc_chart4.png";
-import Mrc5 from "../images/mrc_chart5.png";
+import Leading1 from "../images/leading1.png";
+import Leading2 from "../images/leading2.png";
+import Leading3 from "../images/leading3.png";
+import Leading4 from "../images/leading4.png";
+import Leading5 from "../images/leading5.png";
 import R1 from "../images/reev1.png";
 import R2 from "../images/reev2.png";
 import R3 from "../images/reev3.png";
@@ -43,7 +43,7 @@ const Leadingbrokerage = ({ children, classes, data, tags }) => {
 
               <div style={{textAlign: "center", maxWidth:"700px",marginLeft:"auto",marginRight:"auto", paddingBottom:"50px"}}>
                 <div style={{ textAlign: "center"}} className={classes.videoEmbed}>
-                        <iframe className={classes.videoContainer} src="https://www.youtube.com/embed/MQ4bcqLANjc"
+                        <iframe className={classes.videoContainer} src="https://www.youtube.com/embed/rfnj2WfGSzU"
                          frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                 </div>
               </div>
@@ -57,41 +57,29 @@ const Leadingbrokerage = ({ children, classes, data, tags }) => {
 
             <div className={classes.top} style={{ paddingBottom: "20px" }}>
 
-<div className={classes.column3} style={{ textAlign: "center", paddingTop: "12px" }}>
+<div className={classes.column2} style={{ textAlign: "center", paddingTop: "12px" }}>
                   
                   
                 
                   <div style={{ textAlign: "center",paddingTop:"12px" }}>
-                  <h2 className={classes.subHeading}>Do you have closings currently<br />
-                  being held up because of<br />
-                  mortgage related issues?</h2>
-                        <img src={Mrc1} width="255"/>
+                  <h2 className={classes.subHeading}>Has your brokerage grown or contracted<br />
+                  (# of agents) since the beginning of the year?</h2>
+                        <img src={Leading1} width="255"/>
                   </div>
 </div>
 
 
-<div className={classes.column3} style={{ textAlign: "center", paddingTop: "12px" }}>
+<div className={classes.column2} style={{ textAlign: "center", paddingTop: "12px" }}>
                   
                   
                 
                   <div style={{ textAlign: "center",paddingTop:"12px" }}>
-                  <h2 className={classes.subHeading}><br />
-                  Do you prefer to work<br />
-                  with only one lender partner?</h2>
-                        <img src={Mrc2} width="255" />
+                  <h2 className={classes.subHeading}>How many technology vendors<br />
+                  do you currently work with? </h2>
+                        <img src={Leading2} width="255" />
                   </div>
 </div>
 
-<div className={classes.column3} style={{ textAlign: "center", paddingTop: "12px" }}>
-
-               
-                  <div style={{ textAlign: "center",paddingTop:"12px" }}>
-                  <h2 className={classes.subHeading}>Are you currently working<br />
-                  with a lender partner to acquire<br />
-                  and farm new leads?</h2>
-                        <img src={Mrc3} width="255"/>
-                  </div>
-</div>
 
 
 </div>  
@@ -109,41 +97,53 @@ const Leadingbrokerage = ({ children, classes, data, tags }) => {
 
               <div className={classes.top}>
 
-<div className={classes.column2} style={{ textAlign: "center", paddingTop: "12px" }}>
-                  
-                  
-                
-                  <div style={{ textAlign: "center",paddingTop:"12px" }}>
-                  <h2 className={classes.subHeading}>How is real estate in<br />
-                  your market right now?</h2>
-                        <img src={Mrc4} width="255" style={{ paddingBottom:"12px" }}/>
-                        <h2 className={classes.subHeading}>
-                        <span className={classes.bold} style={{color:"#55c3ba"}}>36%</span> Starting to open up but real estate is moving slow<br />
-                        <span className={classes.bold} style={{color:"#55c3ba"}}>34%</span> Starting to open up and real estate<br />
-                        is moving at a good pace<br />
-                        <span className={classes.bold} style={{color:"#55c3ba"}}>16%</span> Still shut down but people are looking<br />
-                        <span className={classes.bold} style={{color:"#55c3ba"}}>9%</span> Still shut down and no one is moving<br />
-                        <span className={classes.bold} style={{color:"#55c3ba"}}>5%</span> My business saw no decline and I'm cooking with gas
-                        </h2>
-                  </div>
-</div>
 
-
-
-
-<div className={classes.column2} style={{ textAlign: "center", paddingTop: "12px" }}>
+<div className={classes.column3} style={{ textAlign: "center", paddingTop: "12px" }}>
 
                
                   <div style={{ textAlign: "center",paddingTop:"12px" }}>
-                  <h2 className={classes.subHeading}>What is your production<br />
-                  looking like this year?</h2>
-                        <img src={Mrc5} width="255" style={{ paddingBottom:"12px" }}/>
+                  <h2 className={classes.subHeading}>What type of business model<br />
+                  do you operate?</h2>
+                        <img src={Leading3} width="255" style={{ paddingBottom:"12px" }}/>
                         <h2 className={classes.subHeading}>
-                        <span className={classes.bold} style={{color:"#55c3ba"}}>47%</span> Less than six transactions<br />
-                        <span className={classes.bold} style={{color:"#55c3ba"}}>47%</span> Between 7-12 transactions<br />
-                        <span className={classes.bold} style={{color:"#55c3ba"}}>6%</span> Between 13-25 transactions<br />
-                        <span className={classes.bold} style={{color:"#55c3ba"}}>0%</span> Between 26-35 transactions<br />
-                        <span className={classes.bold} style={{color:"#55c3ba"}}>0%</span> More than 36 transactions</h2>
+                        <span className={classes.bold} style={{color:"#55c3ba"}}>57%</span> Traditional Split Model<br />
+                        <span className={classes.bold} style={{color:"#55c3ba"}}>14%</span> Hybrid: flat fee &amp; traditional<br />
+                        <span className={classes.bold} style={{color:"#55c3ba"}}>14%</span> Traditional with cap system<br />
+                        <span className={classes.bold} style={{color:"#55c3ba"}}>8%</span> 100% / flat fee<br />
+                        <span className={classes.bold} style={{color:"#55c3ba"}}>7%</span> Other</h2>
+                  </div>
+</div>
+
+<div className={classes.column3} style={{ textAlign: "center", paddingTop: "12px" }}>
+
+               
+                  <div style={{ textAlign: "center",paddingTop:"12px" }}>
+                  <h2 className={classes.subHeading}>How do you currently monetize<br />
+                  your agent technology offerings?</h2>
+                        <img src={Leading4} width="255" style={{ paddingBottom:"12px" }}/>
+                        <h2 className={classes.subHeading}>
+                        <span className={classes.bold} style={{color:"#55c3ba"}}>64%</span> The brokerage pays 100%<br />
+                        <span className={classes.bold} style={{color:"#55c3ba"}}>18%</span> Other<br />
+                        <span className={classes.bold} style={{color:"#55c3ba"}}>9%</span> The brokerage charges<br />
+                        monthly tech fee<br />
+                        <span className={classes.bold} style={{color:"#55c3ba"}}>9%</span> The brokerage pays nothing<br />
+                        &amp; all on the agent<br />
+                        <span className={classes.bold} style={{color:"#55c3ba"}}>0%</span> Our agents pay a portion</h2>
+                  </div>
+</div>
+
+<div className={classes.column3} style={{ textAlign: "center", paddingTop: "12px" }}>
+
+               
+                  <div style={{ textAlign: "center",paddingTop:"12px" }}>
+                  <h2 className={classes.subHeading}>What are your recruiting growth<br />
+                  goals for the rest of 2020?</h2>
+                        <img src={Leading5} width="255" style={{ paddingBottom:"12px" }}/>
+                        <h2 className={classes.subHeading}>
+                        <span className={classes.bold} style={{color:"#55c3ba"}}>37%</span> Net gain of less than 5 agents<br />
+                        <span className={classes.bold} style={{color:"#55c3ba"}}>25%</span> Net gain of 6-10 agents<br />
+                        <span className={classes.bold} style={{color:"#55c3ba"}}>25%</span> Net gain of 11 or more agents<br />
+                        <span className={classes.bold} style={{color:"#55c3ba"}}>13%</span> Flat – no growth expected</h2>
                   </div>
 </div>
 
