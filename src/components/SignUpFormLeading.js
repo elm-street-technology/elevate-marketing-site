@@ -88,8 +88,8 @@ class SignUpFormLeading extends Component {
             role: "",
             roleOther: "",
             interests: [],
-            form: "rollercoaster",
-            list: 101131,
+            form: "leadingbrokerage",
+            list: 102719,
           }}
           validationSchema={() =>
             Yup.object().shape({
