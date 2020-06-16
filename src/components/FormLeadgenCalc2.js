@@ -221,20 +221,21 @@ class FormLeadgenCalc2 extends Component {
                 component={RadioGroup}
                 display="inline"
                 items={[
+                  
                   {
-                    label: "Existing client – looking to connect to review my account & make sure I’m doing everything I can!",
-                    value: "Existing Client",
-                  },
-                  {
-                    label: "An agent – looking to schedule my 15-minute online marketing evaluation.",
+                    label: "Agent - Looking for buyer / sellers leads",
                     value: "Agent",
                   },
                   {
-                    label: "A broker – interested in scheduling my gap analysis.",
+                    label: "Broker - Looking for leads for my brokerage and/or agents",
                     value: "Broker",
                   },
                   {
-                    label: "Other (please specify)*",
+                    label: "Existing client - Looking to add lead generation to my Elevate solution",
+                    value: "Existing Client",
+                  },
+                  {
+                    label: "Other (please specify)",
                     value: "Other",
                   },
                 ]}
@@ -275,7 +276,6 @@ export default withStyles((theme) => ({
     flexDirection: "column",
     width: "100%",
     maxWidth: "600px",
-    backgroundColor: "#ffffff !important",
     margin: "0 auto",
   },
   link: {

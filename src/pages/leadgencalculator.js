@@ -39,15 +39,21 @@ const LeadGenCalculator = ({ children, classes, data, tags }) => {
                 <div style={{ paddingLeft: "10px", paddingRight: "10px"}}>
                     <LeadgenCalc />
                 </div>
-                <div style={{margin:"10px",color:"#FFFFFF",backgroundColor:"#f15953",padding:"20px",textAlign:"center"}}>
-                <span style={{fontSize:"28px"}}>Secure Buyer/Seller Leads in YOUR Markets TODAY</span>
-                </div>
-                <div style={{margin:"10px",marginTop:"30px"}}>
-                  <FormLeadgenCalc2 />
-                </div>
+                
             </div>
         </div>
       </Container>
+      <div  style={{backgroundColor:"#e0ebeb"}}>
+        <Container>
+            <div style={{margin:"10px",padding:"20px",textAlign:"center"}}>
+                    <span style={{fontSize:"28px",fontWeight:"600",color:"#149c94"}}>Secure Buyer/Seller Leads in YOUR Markets TODAY</span>
+                    
+                    <div style={{margin:"10px",marginTop:"30px"}}>
+                      <FormLeadgenCalc2 />
+                    </div>
+                  </div>
+        </Container>
+      </div>
       
     </div>
   );
