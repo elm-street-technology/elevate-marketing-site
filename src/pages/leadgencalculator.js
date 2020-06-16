@@ -4,6 +4,7 @@ import withStyles from "elevate-ui/withStyles";
 import config from "../utils/siteConfig";
 import Container from "../components/Container";
 import LeadgenCalc from "../components/LeadgenCalc";
+import FormLeadgenCalc2 from '../components/FormLeadgenCalc2';
 import SEO from "../components/SEO";
 import HeadBG from "../images/lead_calc_bg.jpg";
 
@@ -38,9 +39,21 @@ const LeadGenCalculator = ({ children, classes, data, tags }) => {
                 <div style={{ paddingLeft: "10px", paddingRight: "10px"}}>
                     <LeadgenCalc />
                 </div>
+                
             </div>
         </div>
       </Container>
+      <div  style={{backgroundColor:"#e0ebeb"}}>
+        <Container>
+            <div style={{margin:"10px",padding:"20px",textAlign:"center"}}>
+                    <span style={{fontSize:"28px",fontWeight:"600",color:"#149c94"}}>Secure Buyer/Seller Leads in YOUR Markets TODAY</span>
+                    
+                    <div style={{margin:"10px",marginTop:"30px"}}>
+                      <FormLeadgenCalc2 />
+                    </div>
+                  </div>
+        </Container>
+      </div>
       
     </div>
   );

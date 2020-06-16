@@ -4,7 +4,7 @@ import Slider, { Range } from 'rc-slider';
 import '../components/slider.css'
 import ArrowIcon from '../images/icon-teal-roundarrow.png';
 import EqualsIcon from '../images/icon-teal-equals.png';
-import FormLeadgenCalc from '../components/FormLeadgenCalc';
+
 import LeadsIcon from "../images/leads_icon.png";
 
 const Handle = Slider.Handle;
@@ -149,9 +149,11 @@ class LeadgenCalc extends Component {
             return (
                 <div className={classes.root}>
                     <div className={classes.row}>
-                        <div className={classes.col} style={{textAlign:"center",marginBottom:"40px"}}>
-                            <h1 style={{color:"#55c3ba",fontSize:"33px",marginBottom:"20px"}}>Lead Generation ROI Calculator</h1>
-                            Insert a few details, along with what you have to invest in monthly lead generation, to calculate potential income.  Wow!
+                        <div className={classes.col} style={{textAlign:"center",marginBottom:"50px"}}>
+                            <h1 style={{color:"#55c3ba",fontSize:"33px",marginBottom:"30px"}}>Lead Generation ROI Calculator</h1>
+                            <div style={{lineHeight: "28px"}}>
+                            Looking at lead generation services and trying to calculate ROI?  Insert of few details below to quickly calculate investment versus potential income with Elevate's EXCLUSIVE buyer/seller leads.
+                            </div>
                         </div>
                     </div>
                     <div className={classes.row}>
@@ -269,17 +271,16 @@ class LeadgenCalc extends Component {
                                     </div>
                                 </div>
                                 <div style={{marginTop:"50px",textAlign:"center",lineHeight: "initial"}}>
-                                    Ready to start making MORE MONEY?
-                                        <button className={classes.buttonLink} onClick={this.handleShowForm} style={{backgroundColor:"#e78023"}}>Yes! I want Elevate leads</button>
+                                <div style={{textAlign:"center",fontSize:"12px",color:"#aaaaaa",marginTop:"30px"}}>
+                    The numbers above are estimates only.  For an accurate cost of leads in your specific market, contact an Elevate <br/>Lead Generation Specialist today.<br/>
+                    <br/>Based on a single agent/license fee. For teams and broker license fees, please contact us.
+                    </div>
                                     </div>
                             </div>
                             
                         </div>
                     </div>
-                    <div style={{textAlign:"center",fontSize:"12px",color:"#aaaaaa",marginTop:"30px"}}>
-                    The numbers above are estimates only.  For an accurate cost of leads in your specific market, contact an Elevate Lead Generation Specialist today.<br/>
-                    <br/>Based on a single agent/license fee. For teams and broker license fees, please contact us.
-                    </div>
+                    
                 </div>
             )
         }
