@@ -243,15 +243,15 @@ class Formsocialmediaguide extends Component {
                 display="inline"
                 items={[
                   {
-                    label: "Agent",
+                    label: "Existing client – looking to connect to review my account & make sure I’m doing everything I can!",
+                    value: "Existing Client",
+                  },
+                  {
+                    label: "An agent – looking to schedule my 15-minute online marketing evaluation.",
                     value: "Agent",
                   },
                   {
-                    label: "Team",
-                    value: "Team",
-                  },
-                  {
-                    label: "Broker",
+                    label: "A broker – interested in scheduling my gap analysis.",
                     value: "Broker",
                   },
                   {
@@ -271,33 +271,7 @@ class Formsocialmediaguide extends Component {
                   autoFocus
                 />
               )}
-                  
-                  
-                  <Field
-                id="interests"
-                name="interests"
-                label="I am interested in:  (select all that apply)"
-                component={CheckboxGroup}
-                items={[
-                  {
-                    label: "Digital Marketing Services (Website, Email, Social, Text, Blog, SEO)",
-                    value: "Digital Marketing Services (Website, Email, Social, Text, Blog, SEO)",
-                  },
-                  {
-                    label: "Lead Generation, Parsing & Scrubbing Services",
-                    value: "Lead Generation, Parsing & Scrubbing Services",
-                  },
-                  {
-                    label: "CRM Solutions",
-                    value: "CRM Solutions",
-                  },
-                  {
-                    label: "Custom Creative / Marketing Services",
-                    value: "Custom Creative / Marketing Services",
-                  },
-                ]}
-                className={classes.field}
-              />
+             
               
               </div>
               <button
