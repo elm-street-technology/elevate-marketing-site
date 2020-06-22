@@ -235,7 +235,7 @@ class Formsocialmediaguide extends Component {
                       className={classes.field}
                   />
                   <div style={{textAlign:"left",fontSize:"14px",lineHeight:"19px"}}>
-              <Field
+                  <Field
                 id="role"
                 name="role"
                 label="I am a(n)"
@@ -243,15 +243,15 @@ class Formsocialmediaguide extends Component {
                 display="inline"
                 items={[
                   {
-                    label: "Existing client – looking to connect to review my account & make sure I’m doing everything I can!",
-                    value: "Existing Client",
-                  },
-                  {
-                    label: "An agent – looking to schedule my 15-minute online marketing evaluation.",
+                    label: "Agent",
                     value: "Agent",
                   },
                   {
-                    label: "A broker – interested in scheduling my gap analysis.",
+                    label: "Team",
+                    value: "Team",
+                  },
+                  {
+                    label: "Broker",
                     value: "Broker",
                   },
                   {
@@ -271,13 +271,41 @@ class Formsocialmediaguide extends Component {
                   autoFocus
                 />
               )}
+                  
+                  
+                  <Field
+                id="interests"
+                name="interests"
+                label="I am interested in:  (select all that apply)"
+                component={CheckboxGroup}
+                items={[
+                  {
+                    label: "Digital Marketing Services (Website, Email, Social, Text, Blog, SEO)",
+                    value: "Digital Marketing Services (Website, Email, Social, Text, Blog, SEO)",
+                  },
+                  {
+                    label: "Lead Generation, Parsing & Scrubbing Services",
+                    value: "Lead Generation, Parsing & Scrubbing Services",
+                  },
+                  {
+                    label: "CRM Solutions",
+                    value: "CRM Solutions",
+                  },
+                  {
+                    label: "Custom Creative / Marketing Services",
+                    value: "Custom Creative / Marketing Services",
+                  },
+                ]}
+                className={classes.field}
+              />
+              
               </div>
               <button
                 type="submit"
                 className={classes.signUpBtn}
                 disabled={isSubmitting}
               >
-                let's connect
+                Get Download
               </button>
               </div>
               <div style={{fontSize:"11px", paddingBottom:"35px"}}>
