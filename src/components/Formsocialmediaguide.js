@@ -59,9 +59,11 @@ class Formsocialmediaguide extends Component {
             <Typography type="heading3" gutterBottom style={{color:"#f15623",}}>
               Fantastic!
             </Typography>
-            <Typography type="heading5" gutterTop>
-        We’ll reach out to you asap via email or telephone.<br/>
-              You can also speak to a member of our sales team immediately by calling  <a href="tel:18447920260" className={classes.link}>844.792.0260</a>.
+            <div style={{margin:"50px"}}>
+            <a className={classes.signUpBtn} href="/assets/socialmedia_marketing_101.pdf">Download the PDF</a>
+            </div>
+            <Typography type="heading5" gutterTop style={{fontSize:"18px"}}>
+              You can speak to a member of our sales team immediately <br/>by calling  <a href="tel:18447920260" className={classes.link}>844.792.0260</a>.
             </Typography>
           </div>
         </div>
@@ -84,8 +86,8 @@ class Formsocialmediaguide extends Component {
             email: "",
             phone: "",
             mls_number: "",
-            form: "kardashian",
-            list: 100003,
+            form: "socialmediaguide",
+            list: 103210,
             meetingdate: '',
             meetingtime: '',
             role: "",
