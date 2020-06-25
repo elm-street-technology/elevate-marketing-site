@@ -7,15 +7,11 @@ import FormRollercoasterCommunicate from "../components/SignUpFormRollercoasterC
 import Covid from "../images/covid_header.jpg";
 import Roll from "../images/roll_logo2.png";
 import BgSectionExternalNorm from "../components/BgSectionExternalNorm";
-import Mrc1 from "../images/mrc_chart1.png";
-import Mrc2 from "../images/mrc_chart2.png";
-import Mrc3 from "../images/mrc_chart3.png";
-import Mrc4 from "../images/mrc_chart4.png";
-import Mrc5 from "../images/mrc_chart5.png";
-import R1 from "../images/reev1.png";
-import R2 from "../images/reev2.png";
-import R3 from "../images/reev3.png";
-import Swot from "../images/swot.png";
+import Roll1 from "../images/roll2a.png";
+import Roll2 from "../images/roll2b.png";
+import Roll3 from "../images/roll2c.png";
+import Roll4 from "../images/roll2d.png";
+import Roll5 from "../images/roll2e.png";
 import SEO from "../components/SEO";
 
 const Rollercoastercommunicate = ({ children, classes, data, tags }) => {
@@ -43,7 +39,7 @@ const Rollercoastercommunicate = ({ children, classes, data, tags }) => {
 
               <div style={{textAlign: "center", maxWidth:"700px",marginLeft:"auto",marginRight:"auto", paddingBottom:"50px"}}>
                 <div style={{ textAlign: "center"}} className={classes.videoEmbed}>
-                        <iframe className={classes.videoContainer} src="https://www.youtube.com/embed/MQ4bcqLANjc"
+                        <iframe className={classes.videoContainer} src="https://www.youtube.com/embed/s1TU9Ux5rJ8"
                          frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                 </div>
               </div>
@@ -62,10 +58,8 @@ const Rollercoastercommunicate = ({ children, classes, data, tags }) => {
                   
                 
                   <div style={{ textAlign: "center",paddingTop:"12px" }}>
-                  <h2 className={classes.subHeading}>Do you have closings currently<br />
-                  being held up because of<br />
-                  mortgage related issues?</h2>
-                        <img src={Mrc1} width="255"/>
+                  <h2 className={classes.subHeading}>Are you currently receiving an increased amount of questions from customers regarding financing?</h2>
+                        <img src={Roll1} width="255"/>
                   </div>
 </div>
 
@@ -76,9 +70,9 @@ const Rollercoastercommunicate = ({ children, classes, data, tags }) => {
                 
                   <div style={{ textAlign: "center",paddingTop:"12px" }}>
                   <h2 className={classes.subHeading}><br />
-                  Do you prefer to work<br />
-                  with only one lender partner?</h2>
-                        <img src={Mrc2} width="255" />
+                  Do you prefer to work with<br />
+                  only one lender partner?</h2>
+                        <img src={Roll3} width="255" />
                   </div>
 </div>
 
@@ -86,10 +80,8 @@ const Rollercoastercommunicate = ({ children, classes, data, tags }) => {
 
                
                   <div style={{ textAlign: "center",paddingTop:"12px" }}>
-                  <h2 className={classes.subHeading}>Are you currently working<br />
-                  with a lender partner to acquire<br />
-                  and farm new leads?</h2>
-                        <img src={Mrc3} width="255"/>
+                  <h2 className={classes.subHeading}>Do you have closings currently being held up because of mortgage of mortgage related issues?</h2>
+                        <img src={Roll2} width="255"/>
                   </div>
 </div>
 
@@ -114,16 +106,17 @@ const Rollercoastercommunicate = ({ children, classes, data, tags }) => {
                   
                 
                   <div style={{ textAlign: "center",paddingTop:"12px" }}>
-                  <h2 className={classes.subHeading}>How is real estate in<br />
-                  your market right now?</h2>
-                        <img src={Mrc4} width="255" style={{ paddingBottom:"12px" }}/>
+                  <h2 className={classes.subHeading}>How is real estate in your<br />
+                  market right now?</h2>
+                        <img src={Roll4} width="255" style={{ paddingBottom:"12px" }}/>
                         <h2 className={classes.subHeading}>
-                        <span className={classes.bold} style={{color:"#55c3ba"}}>36%</span> Starting to open up but real estate is moving slow<br />
-                        <span className={classes.bold} style={{color:"#55c3ba"}}>34%</span> Starting to open up and real estate<br />
-                        is moving at a good pace<br />
-                        <span className={classes.bold} style={{color:"#55c3ba"}}>16%</span> Still shut down but people are looking<br />
-                        <span className={classes.bold} style={{color:"#55c3ba"}}>9%</span> Still shut down and no one is moving<br />
-                        <span className={classes.bold} style={{color:"#55c3ba"}}>5%</span> My business saw no decline and I'm cooking with gas
+                        <span className={classes.bold} style={{color:"#55c3ba"}}>62%</span> Starting to open up and real estate<br />
+                        is moving at a good pace.<br />
+                        <span className={classes.bold} style={{color:"#55c3ba"}}>18%</span> Starting to open up but real estate is moving slow.<br />
+                        <span className={classes.bold} style={{color:"#55c3ba"}}>15%</span> My business saw no decline<br />
+                        and I'm cooking with gas.<br />
+                        <span className={classes.bold} style={{color:"#55c3ba"}}>3%</span> Still shut down and no one is moving.<br />
+                        <span className={classes.bold} style={{color:"#55c3ba"}}>3%</span> Still shut down but people are looking.
                         </h2>
                   </div>
 </div>
@@ -137,13 +130,13 @@ const Rollercoastercommunicate = ({ children, classes, data, tags }) => {
                   <div style={{ textAlign: "center",paddingTop:"12px" }}>
                   <h2 className={classes.subHeading}>What is your production<br />
                   looking like this year?</h2>
-                        <img src={Mrc5} width="255" style={{ paddingBottom:"12px" }}/>
+                        <img src={Roll5} width="255" style={{ paddingBottom:"12px" }}/>
                         <h2 className={classes.subHeading}>
-                        <span className={classes.bold} style={{color:"#55c3ba"}}>47%</span> Less than six transactions<br />
-                        <span className={classes.bold} style={{color:"#55c3ba"}}>47%</span> Between 7-12 transactions<br />
-                        <span className={classes.bold} style={{color:"#55c3ba"}}>6%</span> Between 13-25 transactions<br />
-                        <span className={classes.bold} style={{color:"#55c3ba"}}>0%</span> Between 26-35 transactions<br />
-                        <span className={classes.bold} style={{color:"#55c3ba"}}>0%</span> More than 36 transactions</h2>
+                        <span className={classes.bold} style={{color:"#55c3ba"}}>42%</span> Less than six transaction.<br />
+                        <span className={classes.bold} style={{color:"#55c3ba"}}>36%</span> Between 7-12 transactions.<br />
+                        <span className={classes.bold} style={{color:"#55c3ba"}}>21%</span> Between 13-25 transactions.<br />
+                        <span className={classes.bold} style={{color:"#55c3ba"}}>0%</span> Between 26-35 transactions.<br />
+                        <span className={classes.bold} style={{color:"#55c3ba"}}>0%</span> More than 36 transactions.</h2>
                   </div>
 </div>
 
