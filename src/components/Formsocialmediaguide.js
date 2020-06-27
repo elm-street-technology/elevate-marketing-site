@@ -238,24 +238,24 @@ class Formsocialmediaguide extends Component {
                   <Field
                 id="role"
                 name="role"
-                label="I am a(n)"
+                label="I am:"
                 component={RadioGroup}
                 display="inline"
                 items={[
                   {
-                    label: "Existing client – looking to connect to review my account & make sure I’m doing everything I can!",
+                    label: "An Existing Client",
                     value: "Existing Client",
                   },
                   {
-                    label: "An agent – looking to schedule my 15-minute online marketing evaluation.",
+                    label: "An Agent",
                     value: "Agent",
                   },
                   {
-                    label: "A broker – interested in scheduling my gap analysis.",
+                    label: "A Broker",
                     value: "Broker",
                   },
                   {
-                    label: "Other (please specify)*",
+                    label: "Other (please specify)",
                     value: "Other",
                   },
                 ]}
