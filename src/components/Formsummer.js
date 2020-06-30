@@ -131,7 +131,7 @@ class Formsummer extends Component {
                 }
               }
               if (key == "demorequest"){
-                if(values.demorequest == "yes") {
+                if(values.demorequest) {
                   notes = notes = ", Requesting 15 min DMS demo";
                 }
               }
