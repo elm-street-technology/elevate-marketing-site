@@ -59,6 +59,9 @@ class Formkk extends Component {
             <Typography type="heading3" gutterBottom style={{color:"#f15623",}}>
               Fantastic!
             </Typography>
+            <div style={{margin:"50px"}}>
+            <a className={classes.signUpBtn} href="/assets/elevate_kardashian.pdf">Download the PDF</a>
+            </div>
             <Typography type="heading5" gutterTop>
         We’ll reach out to you asap via email or telephone.<br/>
               You can also speak to a member of our sales team immediately by calling  <a href="tel:18447920260" className={classes.link}>844.792.0260</a>.
