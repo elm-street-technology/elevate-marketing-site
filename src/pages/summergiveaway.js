@@ -21,7 +21,7 @@ import Fb from "../images/fbx.png";
 import Tw from "../images/twx.png";
 import Li from "../images/lix.png";
 import Yt from "../images/ytx.png";
-import Sgs from "../images/Sgs.png";
+import Sgs from "../images/sgs.png";
 import Summer_logo from "../images/summer_logo.png";
 import Leadpic from "../images/leadpic.jpg";
 import Extras1bg from "../images/extras_bg1.jpg";
