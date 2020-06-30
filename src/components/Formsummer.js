@@ -59,9 +59,6 @@ class Formsummer extends Component {
             <Typography type="heading3" gutterBottom style={{color:"#f15623",}}>
               Fantastic!
             </Typography>
-            <div style={{margin:"50px"}}>
-            <a className={classes.signUpBtn} href="/assets/socialmedia_marketing_101.pdf">Download the PDF</a>
-            </div>
             <Typography type="heading5" gutterTop style={{fontSize:"18px"}}>
               You can speak to a member of our sales team immediately <br/>by calling  <a href="tel:18447920260" className={classes.link}>844.792.0260</a>.
             </Typography>
