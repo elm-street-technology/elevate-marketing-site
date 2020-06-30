@@ -86,8 +86,8 @@ class Formsummer extends Component {
             email: "",
             phone: "",
             mls_number: "",
-            form: "socialmediaguide",
-            list: 103210,
+            form: "summer2020",
+            list: 103793,
             meetingdate: '',
             meetingtime: '',
             role: "",
@@ -108,7 +108,7 @@ class Formsummer extends Component {
           onSubmit={(values, { setSubmitting }) => {
             //if (values.meetingdate != undefined) {
             var meeting_request = '';
-            var notes = 'Interests: ';
+            var notes = '';
             Object.keys(values).forEach(function (key, index) {
               // key: the name of the object key
               // index: the ordinal position of the key within the object 
@@ -131,6 +131,11 @@ class Formsummer extends Component {
               if (key == "interests"){
                 if(values.interests.length > 0){
                   notes = notes + "," + values.interests.join(",");
+                }
+              }
+              if (key == "demorequest"){
+                if(values.demorequest == "yes") {
+                  notes = notes = ", Requesting 15 min DMS demo";
                 }
               }
             });
@@ -271,9 +276,13 @@ class Formsummer extends Component {
                   autoFocus
                 />
               )}
-             
+              <Field id="demorequest" name="demorequest" type="checkbox" value="yes" className={classes.checkfield} style={{marginLeft:"0px",marginRight:"15px"}} />
+              <span style={{fontSize:"16px"}}>I would like a 15-minute tour of Elevate's DMS solution.</span>
+              
+                
               
               </div>
+
               <button
                 type="submit"
                 className={classes.signUpBtn}
