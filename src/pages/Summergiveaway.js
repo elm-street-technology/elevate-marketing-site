@@ -43,7 +43,7 @@ const Summergiveaway = ({ classes }) => {
                                   ELEVATE DMS&trade;</div>
                                   <div className={classes.subtext} className={classes.bold} style={{color:"#0b6661"}}>INCLUDES 1 YEAR FREE:<br/>
                                    IDX website, CRM, social media,<br />
-                                   email campaigns, & blog<br />
+                                   email campaigns, &amp; blog<br />
                                   </div>
                                   </div>
                         </div>

@@ -288,9 +288,13 @@ class Formsummer extends Component {
                 REGISTER NOW
               </button>
               </div>
-              <div style={{fontSize:"11px", paddingBottom:"35px"}}>
-              By submitting this form, you are requesting to be contacted by a member of the Elevate Sales Team at the details provided via text, email or call (may involve automated or pre-recorded means).  You may revoke this consent through any reasonable means.<br/>
-                Existing subscribers seeking support, please visit the <a href="https://elmstreettechnology.zendesk.com/hc/en-us">Elevate Help Center</a>.
+              <div style={{fontSize:"10px", lineHeight:"16px", paddingBottom:"35px"}}>
+              Accepting registrations through July 31, 2020, 12pm PST.<br />
+              Giveaway recipient will receive twelve (12) months of Elevate’s DMS service.<br /> 
+              A valid credit card is required to be on file for account upgrades and/or additional purchases.<br />
+              Valid for real estate agents in supported MLS markets across the U.S.<br />
+              Cannot be an active Elevate subscriber.<br />
+              Cannot be redeemed for cash value.   
               </div>
             </Form>
           )}
