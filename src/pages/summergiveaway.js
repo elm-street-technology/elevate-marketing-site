@@ -60,9 +60,9 @@ const Summergiveaway = ({ classes }) => {
 
 
 
-<div style={{paddingTop:"55px", paddingBottom:"55px", textAlign:"center"}}>
+<div style={{paddingTop:"55px", paddingBottom:"55px", paddingRight:"20px", paddingLeft:"20px", textAlign:"center"}}>
 
-<img src={Sgs} style={{ width:"100%", maxWidth:"350px", paddingBottom:"20px", textAlign:"center",}}/>
+<img src={Sgs} style={{ width:"100%", maxWidth:"300px", paddingBottom:"20px", textAlign:"center",}}/>
 <Container>
 
 
