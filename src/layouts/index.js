@@ -4,8 +4,10 @@ import ThemeProvider from "elevate-ui/ThemeProvider";
 import config from "../utils/siteConfig";
 import Header from "../components/Header";
 import HeaderWelcome from "../components/HeaderWelcome";
+import HeaderLander from "../components/HeaderLander";
 import Footer from "../components/Footer";
 import FooterWelcome from "../components/FooterWelcome";
+import FooterLander from "../components/FooterLander";
 import favicon from "../images/favicon.png";
 import withStyles from "elevate-ui/withStyles";
 
@@ -20,23 +22,29 @@ const Template = ({ children, classes, location }) => {
   }
 
   function ChooseFooter(){
+    if (location.pathname == "/socialmediamarketingguide/" || location.pathname == "/socialmediamarketingguide") {
+      return <FooterLander />;
+    }
+
     if (location.pathname == "/welcome" || location.pathname == "/welcome/" ||
       location.pathname == "/welcome_elite" || location.pathname == "/welcome_elite/"){
       return <FooterWelcome />;
     }
-    else{
-      return <Footer />;
-    }
+
+    return <Footer />;
   }
 
   function ChooseHeader(){
+    if (location.pathname == "/socialmediamarketingguide/" || location.pathname == "/socialmediamarketingguide") {
+      return <HeaderLander />;
+    }
+
     if (location.pathname == "/welcome" || location.pathname == "/welcome/" ||
       location.pathname == "/welcome_elite" || location.pathname == "/welcome_elite/") {
       return <HeaderWelcome />;
     }
-    else {
-      return <Header />;
-    }
+
+    return <Header />;
   }
 
 
