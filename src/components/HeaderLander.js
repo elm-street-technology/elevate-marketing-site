@@ -37,12 +37,10 @@ class HeaderLander extends Component {
 export default withStyles((theme) => ({
   root: {
     zIndex: "9999",
-    position: "fixed",
     top: "0",
     display: "flex",
     alignItems: "center",
     width: "100%",
-    height: "80px",
     backgroundColor: "#fff",
   },
   inner: {
