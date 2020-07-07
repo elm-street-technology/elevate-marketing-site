@@ -251,8 +251,8 @@ class Formsocialmediaguide extends Component {
                     value: "Agent",
                   },
                   {
-                    label: "A Broker",
-                    value: "Broker",
+                    label: "A Broker/Owner",
+                    value: "Broker/Owner",
                   },
                   {
                     label: "Other (please specify)",
