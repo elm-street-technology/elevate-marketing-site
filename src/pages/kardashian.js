@@ -44,7 +44,7 @@ export default withStyles((theme) => ({
     flexDirection: "column",
     width: "100%",
     padding: "0 8px",
-    margin: "70px auto",
+    margin: "0px auto",
   },
   heading: {
     fontSize: "28px",
