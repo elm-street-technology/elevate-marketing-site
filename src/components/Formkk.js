@@ -246,16 +246,16 @@ class Formkk extends Component {
                 display="inline"
                 items={[
                   {
-                    label: "Existing client – looking to connect to review my account & make sure I’m doing everything I can!",
+                    label: "Existing Client",
                     value: "Existing Client",
                   },
                   {
-                    label: "An agent – looking to schedule my 15-minute online marketing evaluation.",
+                    label: "Agent",
                     value: "Agent",
                   },
                   {
-                    label: "A broker – interested in scheduling my gap analysis.",
-                    value: "Broker",
+                    label: "Broker/Owner",
+                    value: "Broker/Owner",
                   },
                   {
                     label: "Other (please specify)*",
@@ -280,10 +280,10 @@ class Formkk extends Component {
                 className={classes.signUpBtn}
                 disabled={isSubmitting}
               >
-                let's connect
+                Download Now
               </button>
               </div>
-              <div style={{fontSize:"11px", paddingBottom:"35px"}}>
+              <div style={{fontSize:"11px", lineHeight:"14px", paddingBottom:"35px"}}>
               By submitting this form, you are requesting to be contacted by a member of the Elevate Sales Team at the details provided via text, email or call (may involve automated or pre-recorded means).  You may revoke this consent through any reasonable means.<br/>
                 Existing subscribers seeking support, please visit the <a href="https://elmstreettechnology.zendesk.com/hc/en-us">Elevate Help Center</a>.
               </div>
