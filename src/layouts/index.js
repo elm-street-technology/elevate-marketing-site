@@ -22,7 +22,8 @@ const Template = ({ children, classes, location }) => {
   }
 
   function ChooseFooter(){
-    if (location.pathname == "/socialmediamarketingguide/" || location.pathname == "/socialmediamarketingguide") {
+    if (location.pathname == "/socialmediamarketingguide/" || location.pathname == "/socialmediamarketingguide" ||
+        location.pathname == "/kardashian/" || location.pathname == "/kardashian") {
       return <FooterLander />;
     }
 
@@ -35,7 +36,8 @@ const Template = ({ children, classes, location }) => {
   }
 
   function ChooseHeader(){
-    if (location.pathname == "/socialmediamarketingguide/" || location.pathname == "/socialmediamarketingguide") {
+    if (location.pathname == "/socialmediamarketingguide/" || location.pathname == "/socialmediamarketingguide" ||
+        location.pathname == "/kardashian/" || location.pathname == "/kardashian") {
       return <HeaderLander />;
     }
 
