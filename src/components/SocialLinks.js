@@ -28,7 +28,7 @@ const SocialLinks = ({ classes, className }) => {
       </a>
       <a
         className={classNames(classes.icon, classes.linkedin)}
-        href="https://www.linkedin.com/showcase/tryelevatere/"
+        href="https://www.linkedin.com/company/elm-street-technology/?viewAsMember=true"
         target="_blank"
         rel="noreferrer noopener"
       >
