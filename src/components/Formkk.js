@@ -134,6 +134,11 @@ class Formkk extends Component {
                   notes = notes + "," + values.interests.join(",");
                 }
               }
+              if (key == "demorequest"){
+                if(values.demorequest) {
+                  notes = notes = ", Requesting 15 min demo";
+                }
+              }
             });
             
             const body = {
@@ -275,6 +280,8 @@ class Formkk extends Component {
                 />
               )}
               </div>
+              <Field id="demorequest" name="demorequest" type="checkbox" value="yes" className={classes.checkfield} style={{marginLeft:"0px",marginRight:"15px"}} />
+              <span style={{fontSize:"16px"}}>Schedule a 15-minute demo of Elevate</span>
               <button
                 type="submit"
                 className={classes.signUpBtn}
