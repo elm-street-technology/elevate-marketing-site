@@ -15,6 +15,9 @@ if(window){
     if (getParameter('utm_term') != '') {
         window.utm_tags.term = getParameter('utm_term')
     }
+    if (getParameter('utm_content') != '') {
+        window.utm_tags.content = getParameter('utm_content')
+    }
 }
 
 exports.onRouteUpdate = ({ location, prevLocation }) => {
@@ -35,6 +38,8 @@ exports.onRouteUpdate = ({ location, prevLocation }) => {
         document.body.appendChild(new_element); 
     }
     // End leadfollow.io tracking reload
+
+    // AdRoll Integration here
 
 };
 
