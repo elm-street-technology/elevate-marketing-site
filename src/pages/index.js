@@ -257,7 +257,7 @@ class Index extends Component {
             <span id="modalClose" className={classes.close}>&times;</span>
             <div style={{color:"#f78d10",fontSize:"24px",fontWeight:"bold",paddingBottom:"20px"}}>AUGUST SPECIAL OFFER!</div>
             <div style={{color:"#f78d10",fontSize:"38px",fontWeight:"bold",paddingBottom:"10px", lineHeight:"42px"}}>50% OFF YOUR<br />
-            FIRST 2-MONTHS
+            1st 2-MONTHS
           </div>
             <div>
               <span style={{fontWeight:"bold"}}>
