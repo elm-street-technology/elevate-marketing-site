@@ -107,6 +107,7 @@ class SignUpForm extends Component {
           }
           onSubmit={(values, { setSubmitting }) => {
             var meeting_request = '';
+            var notes = '';
             Object.keys(values).forEach(function (key, index) {
               // key: the name of the object key
               // index: the ordinal position of the key within the object 
@@ -115,16 +116,23 @@ class SignUpForm extends Component {
                   meeting_request = values.meetingdate.format("YYYY-MM-DD") + "T" + values.meetingtime.replace(" (EDT)", "") + "-04:00"
                 }
               }
+              if (key == "demorequest"){
+                if(values.demorequest) {
+                  notes = "Requesting 15 min demo";
+                }
+              }
             });
             const body = {
               ...values,
+              notes: notes,
               roleOther: values.role === "Other" ? values.roleOther : "", // Just in case the user had typed in roleOther then changed their role to something else
-              interestStr: values.interests.join(",") + ", Interested Markets: " + values.market1 + ", " + values.market2 + "," + values.market3,
+              interestStr: notes + values.interests.join(",") + ", Interested Markets: " + values.market1 + ", " + values.market2 + "," + values.market3,
               utm_campaign: (window.utm_tags) ? window.utm_tags.campaign : "",
               utm_source: (window.utm_tags) ? window.utm_tags.source : "",
               utm_medium: (window.utm_tags) ? window.utm_tags.medium : "",
               utm_term: (window.utm_tags) ? window.utm_tags.term : "",
-              demo_request_date: meeting_request
+              demo_request_date: meeting_request,
+
             };
             return fetch(
               "https://easyemerge.com/plugins/elevate_form.php",
@@ -287,9 +295,11 @@ class SignUpForm extends Component {
                   <Field id="market3" name="market3" label="City/State" component={Input} className={classes.field} onBlur={this.setFormVal} />
                 </div>
               )}
+              <div style={{textAlign:"center"}}>
 
-
-
+<Field id="demorequest" name="demorequest" type="checkbox" value="yes" className={classes.checkfield} style={{marginLeft:"0px",marginRight:"15px"}} />
+              <span style={{fontSize:"16px"}}>Schedule a 15-minute demo of Elevate</span>
+              </div>
               
               <button
                 type="submit"
