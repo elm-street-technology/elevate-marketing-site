@@ -137,23 +137,7 @@ const Brokers = ({ children, classes, data, tags }) => {
             </div>
         </Col>
         </Row>
-        <Row style={{marginTop:"30px",marginBottom:"30px"}}>
-        <Col>
-        <div style={{textAlign:"center",marginTop:"30px"}}>
-            <h4 className={classes.heading2}>Deep Dive</h4>
-            Bondilyn Jolly (VP of Marketing), Frank Chimento (VP of Broker Development), &amp; Justin Falb 
-            (Managing Broker of Oceans Luxury Real Estate) discuss the challenges of independent brokerages and how 
-            they are winning the war against the ‘big boys’ in terms of recruiting, retention &amp; remaining profitable in a time of shrinking margins.
-            <br/><br/>
-            Runtime:  1 hour
-            </div>
-        </Col>
-        <Col>
-            <div aspectRatio="16by9">
-             <ResponsiveVid youtubeId="OEsIlXgI444" />
-            </div>
-        </Col>
-        </Row>
+        
       </Container>
     </div>
     </div>
