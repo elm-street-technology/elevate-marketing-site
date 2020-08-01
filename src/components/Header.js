@@ -206,8 +206,8 @@ class Header extends Component {
         />
       </header>
         <div className={classes.violator}>
-        <span style={{fontWeight:"bold"}}>Special New Year Pricing on EXCLUSIVE Buyer / Seller Leads.  Secure Your Markets TODAY. </span><br/>
-        Schedule a <Link to="/get-started" style={{color:"#FFFFFF"}}>15-minute demo NOW</Link> or call 844.792.0260
+        <span style={{fontWeight:"bold"}}>THIS MONTH ONLY:  50% off your 1st 2-months of Elevate Lead Generation </span><br/>
+        <Link to="/leadgen" style={{color:"#FFFFFF"}}>learn more</Link>
         </div>
       </div>
     );
@@ -299,8 +299,8 @@ export default withStyles((theme) => ({
     visibility: "visible",
   },
   violator:{
-    display:"none",
-    background:"#54a59d",
+    display:"fixed",
+    background:"#f78d10",
     color:"#FFFFFF",
     position:"fixed",
     top:"80px",

@@ -255,23 +255,20 @@ class Index extends Component {
         <div id="myModal" className={classes.modal}>
           <div className={classes.modalContent}>
             <span id="modalClose" className={classes.close}>&times;</span>
-            <div style={{color:"rgb(241, 90, 83)",fontSize:"30px",fontWeight:"bold",paddingBottom:"20px"}}>April Special Offer</div>
-            <div style={{fontSize:"20px",fontWeight:"bold",paddingBottom:"20px"}}>serving brokers &amp; agents in challenging times<br/>
-                <span style={{fontSize:'12px'}}>
-                * valid for all NEW subscribers ONLY
-                </span>
-            
-            </div>
-            <div style={{color:"rgb(241, 90, 83)",fontSize:"30px",fontWeight:"bold",paddingBottom:"30px"}}>50% off your 1st 3-months</div>
+            <div style={{color:"#f78d10",fontSize:"24px",fontWeight:"bold",paddingBottom:"20px"}}>AUGUST SPECIAL OFFER!</div>
+            <div style={{color:"#f78d10",fontSize:"38px",fontWeight:"bold",paddingBottom:"10px", lineHeight:"42px"}}>50% OFF YOUR<br />
+            1st 2-MONTHS
+          </div>
             <div>
               <span style={{fontWeight:"bold"}}>
-              on ANY Elevate offering (marketing and/or lead gen)
+              of Elevate Lead Generation:<br />
+              DMS&trade;, DMS Plus&trade;, or Elite&trade;    
               </span>
             </div> 
 
             <div>
               <div>
-                <Link to="/aprilspecial" className={classes.ctabutton} style={{maxWidth:"550px"}}>
+                <Link to="/get-started" className={classes.ctabutton} style={{maxWidth:"550px"}}>
                 Schedule a Demo
                 </Link>
               </div>
@@ -524,7 +521,7 @@ cardinner: {
 },
 
 modal: {
-  display: "none",
+  display: "inherit",
   position: "fixed",
   zIndex: "10000",
   paddingTop: "0px",
