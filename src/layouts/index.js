@@ -12,8 +12,6 @@ import favicon from "../images/favicon.png";
 import withStyles from "elevate-ui/withStyles";
 
 const Template = ({ children, classes, location }) => {
-  console.log(location);
-
   if (typeof window !== 'undefined'){
     if(window.drift){
       //console.log('resetting drift');
@@ -46,7 +44,7 @@ const Template = ({ children, classes, location }) => {
       return <HeaderWelcome />;
     }
 
-    return <Header />;
+    return <Header currentLocation={location} />;
   }
 
 

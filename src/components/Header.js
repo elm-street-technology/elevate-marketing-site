@@ -32,6 +32,12 @@ class Header extends Component {
 
   render() {
     const { classes } = this.props;
+    
+    let thisPath = '';
+    if(this.props.currentLocation){
+      thisPath = this.props.currentLocation.pathname;
+    }
+
     return (
       <div>
       <header className={classes.root}>
@@ -205,11 +211,14 @@ class Header extends Component {
           )}
         />
       </header>
+        {thisPath != '/leadgen' && 
         <div className={classes.violator}>
-        <span style={{fontWeight:"bold"}}>THIS MONTH ONLY:  50% off your 1st 2-months of Elevate Lead Generation </span><br/>
-        <Link to="/leadgen" style={{color:"#FFFFFF"}}>learn more</Link>
+          <span style={{fontWeight:"bold"}}>THIS MONTH ONLY:  50% off your 1st 2-months of Elevate Lead Generation </span><br/>
+          <Link to="/leadgen" style={{color:"#FFFFFF"}}>learn more</Link>
         </div>
+            }
       </div>
+    
     );
   }
 }
