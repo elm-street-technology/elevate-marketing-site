@@ -262,7 +262,7 @@ class Index extends Component {
             <div>
               <span style={{fontWeight:"bold"}}>
               of Elevate Lead Generation:<br />
-              DMS&trade;, DMS Plus&trade;, or Elite&trade;    
+              Ignite&trade;, DMS Plus&trade;, or Elite&trade;    
               </span>
             </div> 
 
