@@ -11,6 +11,7 @@ import ResponsiveVid from "../components/ResponsiveVid"
 import withStyles from "elevate-ui/withStyles";
 import Datetime from "elevate-ui/Datetime";
 import moment from "moment";
+import "../components/light.css";
 
 class Formseoguide extends Component {
   constructor(props) {
@@ -76,6 +77,8 @@ class Formseoguide extends Component {
         </div>
       );
     }
+
+    
 
     return (
       <div className={classNames(classes.root, className)}>
@@ -234,10 +237,11 @@ class Formseoguide extends Component {
                       className={classes.field}
                   />
                   <div style={{textAlign:"left",fontSize:"14px",lineHeight:"19px"}}>
+              <div className={classes.fieldContainer}>
               <Field
                 id="role"
                 name="role"
-                label="I am a(n)"
+                label='I am a(n)'
                 component={RadioGroup}
                 display="inline"
                 items={[
@@ -270,6 +274,7 @@ class Formseoguide extends Component {
                   autoFocus
                 />
               )}
+              </div>
               </div>
               <Field id="demorequest" name="demorequest" type="checkbox" value="yes" className={classes.checkfield} style={{marginLeft:"0px",marginRight:"15px"}} />
               <span style={{fontSize:"16px", color:"#f7f7f7"}}>Schedule a 15-minute demo of Elevate</span>
@@ -310,7 +315,15 @@ export default withStyles((theme) => ({
     border: "2px solid #f7f7f7",
     height: "50px",
     fontWeight: "600",
-    textAlign: "left",
+    textAlign: "left",  
+  },
+  fieldContainer: {
+    color:"#f7f7f7 !important",
+    fill:"#FFFFFF",
+    "*": {
+      color:"#f7f7f7",
+      fill: "#FF0000 !important",
+    }
   },
   topRow: {
     display: "flex",
