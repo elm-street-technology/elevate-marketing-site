@@ -27,7 +27,7 @@ const Websiteseoguide = ({ children, classes, data, tags }) => {
                     <img src={Rockin} width="100%"  style={{paddingBottom:"25px", paddingTop:"20px", maxWidth:"538px", textAlign:"center"}} />
                 </div>
                 <div style={{paddingLeft:"45px", paddingRight:"45px"}}>
-                    <h1 className={classes.Heading}>Secrets to Getting Found of Google</h1>
+                    <h1 className={classes.Heading}>Secrets to Getting Found on Google</h1>
                            <div style={{color:"#f7f7f7", lineHeight:"26px", textAlign:"center"}}>93% of buyers looking for a home use online searches for listings and information during their home-buying journey. What does it take to be seen on the first page of Google, and what can you do to get there?
                             <br /><br />
                            <h3 className={classes.Heading}>This FREE GUIDE is your key to SEO success!</h3></div>
