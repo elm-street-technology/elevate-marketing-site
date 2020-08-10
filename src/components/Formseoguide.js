@@ -188,7 +188,7 @@ class Formseoguide extends Component {
               });
           }}
           render={({ values, isSubmitting,handleBlur, handleChange }) => (
-            <Form noValidate>
+            <Form noValidate className="seoguideform">
               
               <div style={{ maxWidth: "600px",marginLeft:"auto",marginRight:"auto"}}>
               <div className={classes.topRow}>
