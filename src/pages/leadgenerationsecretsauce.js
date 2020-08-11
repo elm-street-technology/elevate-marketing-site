@@ -6,16 +6,8 @@ import Container from "../components/Container";
 import SignUpFormSecretSauce from "../components/SignUpFormSecretSauce";
 import Covid from "../images/covid_header.jpg";
 import Secretlogo from "../images/secretsauce_logo.png";
-import BgSectionExternalNorm from "../components/BgSectionExternalNorm";
-import Mrc1 from "../images/mrc_chart1.png";
-import Mrc2 from "../images/mrc_chart2.png";
-import Mrc3 from "../images/mrc_chart3.png";
-import Mrc4 from "../images/mrc_chart4.png";
-import Mrc5 from "../images/mrc_chart5.png";
-import R1 from "../images/reev1.png";
-import R2 from "../images/reev2.png";
-import R3 from "../images/reev3.png";
-import Swot from "../images/swot.png";
+import Ss1 from "../images/ss_chart1.jpg";
+import Ss2 from "../images/ss_chart2.jpg";
 import SEO from "../components/SEO";
 
 const Leadgenerationsecretsauce = ({ children, classes, data, tags }) => {
@@ -43,7 +35,7 @@ const Leadgenerationsecretsauce = ({ children, classes, data, tags }) => {
 
               <div style={{textAlign: "center", maxWidth:"700px",marginLeft:"auto",marginRight:"auto", paddingBottom:"50px"}}>
                 <div style={{ textAlign: "center"}} className={classes.videoEmbed}>
-                        <iframe className={classes.videoContainer} src="https://www.youtube.com/embed/MQ4bcqLANjc"
+                        <iframe className={classes.videoContainer} src="https://www.youtube.com/embed/FqD9H3ieORw"
                          frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                 </div>
               </div>
@@ -55,46 +47,7 @@ const Leadgenerationsecretsauce = ({ children, classes, data, tags }) => {
             Here’s the group results.</h2>
 
 
-            <div className={classes.top} style={{ paddingBottom: "20px" }}>
-
-<div className={classes.column3} style={{ textAlign: "center", paddingTop: "12px" }}>
-                  
-                  
-                
-                  <div style={{ textAlign: "center",paddingTop:"12px" }}>
-                  <h2 className={classes.subHeading}>Do you have closings currently<br />
-                  being held up because of<br />
-                  mortgage related issues?</h2>
-                        <img src={Mrc1} width="255"/>
-                  </div>
-</div>
-
-
-<div className={classes.column3} style={{ textAlign: "center", paddingTop: "12px" }}>
-                  
-                  
-                
-                  <div style={{ textAlign: "center",paddingTop:"12px" }}>
-                  <h2 className={classes.subHeading}><br />
-                  Do you prefer to work<br />
-                  with only one lender partner?</h2>
-                        <img src={Mrc2} width="255" />
-                  </div>
-</div>
-
-<div className={classes.column3} style={{ textAlign: "center", paddingTop: "12px" }}>
-
-               
-                  <div style={{ textAlign: "center",paddingTop:"12px" }}>
-                  <h2 className={classes.subHeading}>Are you currently working<br />
-                  with a lender partner to acquire<br />
-                  and farm new leads?</h2>
-                        <img src={Mrc3} width="255"/>
-                  </div>
-</div>
-
-
-</div>  
+        
 
 
 
@@ -114,16 +67,14 @@ const Leadgenerationsecretsauce = ({ children, classes, data, tags }) => {
                   
                 
                   <div style={{ textAlign: "center",paddingTop:"12px" }}>
-                  <h2 className={classes.subHeading}>How is real estate in<br />
-                  your market right now?</h2>
-                        <img src={Mrc4} width="255" style={{ paddingBottom:"12px" }}/>
+                  <h2 className={classes.subHeading}>How would you rate the current state<br />
+                  of your lead generation?</h2>
+                        <img src={Ss1} width="255" style={{ paddingBottom:"12px" }}/>
                         <h2 className={classes.subHeading}>
-                        <span className={classes.bold} style={{color:"#55c3ba"}}>36%</span> Starting to open up but real estate is moving slow<br />
-                        <span className={classes.bold} style={{color:"#55c3ba"}}>34%</span> Starting to open up and real estate<br />
-                        is moving at a good pace<br />
-                        <span className={classes.bold} style={{color:"#55c3ba"}}>16%</span> Still shut down but people are looking<br />
-                        <span className={classes.bold} style={{color:"#55c3ba"}}>9%</span> Still shut down and no one is moving<br />
-                        <span className={classes.bold} style={{color:"#55c3ba"}}>5%</span> My business saw no decline and I'm cooking with gas
+                        <span className={classes.bold} style={{color:"#55c3ba"}}>27%</span> No Sauce (Nothing Happening)<br />
+                        <span className={classes.bold} style={{color:"#55c3ba"}}>49%</span> Mild (Weak)<br />
+                        <span className={classes.bold} style={{color:"#55c3ba"}}>23%</span> Medium (Ok, but could use some help)<br />
+                        <span className={classes.bold} style={{color:"#55c3ba"}}>1%</span> Spicy (I'm rocking it!)
                         </h2>
                   </div>
 </div>
@@ -135,15 +86,13 @@ const Leadgenerationsecretsauce = ({ children, classes, data, tags }) => {
 
                
                   <div style={{ textAlign: "center",paddingTop:"12px" }}>
-                  <h2 className={classes.subHeading}>What is your production<br />
-                  looking like this year?</h2>
-                        <img src={Mrc5} width="255" style={{ paddingBottom:"12px" }}/>
+                  <h2 className={classes.subHeading}>How much are you investing<br />
+                  in lead generation?</h2>
+                        <img src={Ss2} width="255" style={{ paddingBottom:"12px" }}/>
                         <h2 className={classes.subHeading}>
-                        <span className={classes.bold} style={{color:"#55c3ba"}}>47%</span> Less than six transactions<br />
-                        <span className={classes.bold} style={{color:"#55c3ba"}}>47%</span> Between 7-12 transactions<br />
-                        <span className={classes.bold} style={{color:"#55c3ba"}}>6%</span> Between 13-25 transactions<br />
-                        <span className={classes.bold} style={{color:"#55c3ba"}}>0%</span> Between 26-35 transactions<br />
-                        <span className={classes.bold} style={{color:"#55c3ba"}}>0%</span> More than 36 transactions</h2>
+                        <span className={classes.bold} style={{color:"#55c3ba"}}>51%</span> Less than $1,000/m<br />
+                        <span className={classes.bold} style={{color:"#55c3ba"}}>9%</span> More than $1,000/m<br />
+                        <span className={classes.bold} style={{color:"#55c3ba"}}>40%</span> Nothing</h2>
                   </div>
 </div>
 
