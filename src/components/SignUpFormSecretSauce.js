@@ -222,15 +222,15 @@ class SignUpFormSecretSauce extends Component {
                 display="inline"
                 items={[
                   {
-                    label: "Existing client – looking to connect to review my account & make sure I’m doing everything I can!",
+                    label: "Existing client – looking to connect with a Success Coach regarding my account.",
                     value: "Existing Client",
                   },
                   {
-                    label: "An agent – looking to schedule my 15-minute online marketing evaluation.",
+                    label: "An agent – looking to schedule my 15-minute one-on-one consultation with a Success Coach.",
                     value: "Agent",
                   },
                   {
-                    label: "A broker – interested in scheduling my gap analysis.",
+                    label: "A broker – interested in lead generation for myself and/or my agents.",
                     value: "Broker",
                   },
                   {

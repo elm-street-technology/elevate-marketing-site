@@ -127,7 +127,7 @@ const Leadgenerationsecretsauce = ({ children, classes, data, tags }) => {
         <h1 className={classes.heading} style={{paddingTop:"65px"}}>
         Connect with a Success Coach
         </h1>
-        <h2 className={classes.subHeading}>We’re here to help you succeed during (and after) this market shift.</h2>
+        <h2 className={classes.subHeading}>Learn more about Elevate’s lead generation by connecting with a Success Coach.</h2>
         <SignUpFormSecretSauce />
         {/* <div className={classes.closingContainer}>
           For Media Inquiries, {""} Please {""}
