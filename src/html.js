@@ -117,7 +117,7 @@ module.exports = class HTML extends React.Component {
                     leadColor: "#146FF8",
                     triggerColor: "#146FF8",
                     triggerRadius: "50%",
-                    triggerPositionX: "right",
+                    triggerPositionX: "left",
                     triggerPositionY: "bottom",
                     triggerIcon: "default",
                     triggerSize: "medium",
@@ -125,7 +125,7 @@ module.exports = class HTML extends React.Component {
                     triggerOffsetY: 20,
                     mobile: {
                       triggerSize: "small",
-                      triggerPositionX: "right",
+                      triggerPositionX: "left",
                       triggerPositionY: "center",
                       triggerOffsetX: 0,
                       triggerOffsetY: 0,
