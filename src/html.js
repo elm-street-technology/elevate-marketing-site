@@ -87,18 +87,54 @@ module.exports = class HTML extends React.Component {
           />
           {this.props.postBodyComponents}
 
-         {/*
           <script
-            id="ze-snippet"
-            src="https://static.zdassets.com/ekr/snippet.js?key=4ee92cc2-6d3c-4fc6-bceb-d9926c37cfae"
-          />
-         */}
-<script
             dangerouslySetInnerHTML={{
               __html: `
                 setTimeout(function(){ 
                     LoadDriftWidget() 
                 }, 3000)
+                `,
+            }}
+          />
+
+          <script
+            dangerouslySetInnerHTML={{
+              __html: `
+              (function () {
+                var s = document.createElement("script"),
+                  e = !document.body ? document.querySelector("head") : document.body;
+                s.src = "https://acsbap.com/apps/app/assets/js/acsb.js";
+                s.async = s.defer = true;
+                s.onload = function () {
+                  acsbJS.init({
+                    statementLink: "",
+                    feedbackLink: "",
+                    footerHtml: "",
+                    hideMobile: false,
+                    hideTrigger: false,
+                    language: "en",
+                    position: "right",
+                    leadColor: "#146FF8",
+                    triggerColor: "#146FF8",
+                    triggerRadius: "50%",
+                    triggerPositionX: "right",
+                    triggerPositionY: "bottom",
+                    triggerIcon: "default",
+                    triggerSize: "medium",
+                    triggerOffsetX: 20,
+                    triggerOffsetY: 20,
+                    mobile: {
+                      triggerSize: "small",
+                      triggerPositionX: "right",
+                      triggerPositionY: "center",
+                      triggerOffsetX: 0,
+                      triggerOffsetY: 0,
+                      triggerRadius: "50%",
+                    },
+                  });
+                };
+                e.appendChild(s);
+              })();
                 `,
             }}
           />
