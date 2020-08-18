@@ -128,11 +128,11 @@ const Webinars = ({ classes, data }) => {
                   <div className={classes.column2} style={{ textAlign: "center", paddingTop: "22px" }}>
 
                                     <div className={classes.subheading} >Elevate Email Campaigns</div>
-                                    <div className={classes.subtext}>Join us as we introduce you
-                                    to the email marketing system within your Elevate CRM.
-                                    This training includes best practices for engaging your sphere,
-                                    tips for staying top of mind, and best practices to providing
-                                    valuable content while you nurture your leads. Live Q&amp;A throughout.
+                                    <div className={classes.subtext}>Join us as we introduce you to the email marketing
+                                    system within your Elevate CRM. This training includes a platform overview
+                                    of features for engaging your sphere, tips for staying top of mind,
+                                    and best practices for providing valuable content
+                                    to nurture your leads. Live Q&amp;A throughout.
                                     <br /><br />
                                     Training time:  1 hr.</div>
                                     <a target="_blank" href="https://register.gotowebinar.com/rt/5239817628865423374" className={classes.getStartedLink}>
