@@ -175,7 +175,7 @@ class EventsSM extends Component {
                 Register for this must-attend WEBINAR today...
                 { mls && <span><br/>exclusively for {mls} members.</span>}
                 </div>
-                <div className={classes.titleSubText} style={{paddingBottom:"40px", paddingRight:"20px", paddingLeft:"20px"}}>Registration is FREE.   <span style={{color:"#f48d07"}}>Space is LIMITED.</span>   <span style={{color:"#e44f49"}}>Tech GIVEAWAYS.</span></div>
+                <div className={classes.titleSubText} style={{paddingBottom:"40px", paddingRight:"20px", paddingLeft:"20px"}}>Registration is FREE.   <span style={{color:"#f48d07"}}>Space is LIMITED.</span> </div>
 
                 
                 <div style={{maxWidth:"800px",marginLeft:"auto",marginRight:"auto"}}>

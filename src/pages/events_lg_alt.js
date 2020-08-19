@@ -182,7 +182,7 @@ class EventsLGAlt extends Component {
                 <div className={classes.titleSubText2} style={{paddingBottom:"40px", paddingRight:"30px", paddingLeft:"30px",}}>
                     REGISTRATION FREE.<br />
                     <span style={{color:"#fbb31f"}}>SPACE IS LIMITED.</span><br />
-                    <span style={{color:"#e44f49"}}>TECH GIVEAWAYS.</span>
+                  
                     </div>
 
 
