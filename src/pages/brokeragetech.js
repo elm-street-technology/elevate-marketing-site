@@ -35,16 +35,13 @@ const Brokeragetech = ({ children, classes, data, tags }) => {
 
               <div style={{textAlign: "center", maxWidth:"700px",marginLeft:"auto",marginRight:"auto", paddingBottom:"50px"}}>
                 <div style={{ textAlign: "center"}} className={classes.videoEmbed}>
-                        <iframe className={classes.videoContainer} src="https://www.youtube.com/embed/FqD9H3ieORw"
+                        <iframe className={classes.videoContainer} src="https://www.youtube.com/embed/-1kQNGTSZcA"
                          frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                 </div>
               </div>
 
 
-              <h1 className={classes.heading}>Poll Results</h1>
-            <h2 className={classes.subHeading}>
-            Participated in our live survey?<br />
-            Here’s the group results.</h2>
+            
 
 
         
@@ -58,46 +55,7 @@ const Brokeragetech = ({ children, classes, data, tags }) => {
 
 
 
-
-
-              <div className={classes.top}>
-
-<div className={classes.column2} style={{ textAlign: "center", paddingTop: "12px" }}>
-                  
-                  
-                
-                  <div style={{ textAlign: "center",paddingTop:"12px" }}>
-                  <h2 className={classes.subHeading}>How would you rate the current state<br />
-                  of your lead generation?</h2>
-                        <img src={Ss1} width="255" style={{ paddingBottom:"12px" }}/>
-                        <h2 className={classes.subHeading}>
-                        <span className={classes.bold} style={{color:"#55c3ba"}}>27%</span> No Sauce (Nothing Happening)<br />
-                        <span className={classes.bold} style={{color:"#55c3ba"}}>49%</span> Mild (Weak)<br />
-                        <span className={classes.bold} style={{color:"#55c3ba"}}>23%</span> Medium (Ok, but could use some help)<br />
-                        <span className={classes.bold} style={{color:"#55c3ba"}}>1%</span> Spicy (I'm rocking it!)
-                        </h2>
-                  </div>
-</div>
-
-
-
-
-<div className={classes.column2} style={{ textAlign: "center", paddingTop: "12px" }}>
-
-               
-                  <div style={{ textAlign: "center",paddingTop:"12px" }}>
-                  <h2 className={classes.subHeading}>How much are you investing<br />
-                  in lead generation?</h2>
-                        <img src={Ss2} width="255" style={{ paddingBottom:"12px" }}/>
-                        <h2 className={classes.subHeading}>
-                        <span className={classes.bold} style={{color:"#55c3ba"}}>51%</span> Less than $1,000/m<br />
-                        <span className={classes.bold} style={{color:"#55c3ba"}}>9%</span> More than $1,000/m<br />
-                        <span className={classes.bold} style={{color:"#55c3ba"}}>40%</span> Nothing</h2>
-                  </div>
-</div>
-
-
-</div>    
+  
 
 
             
