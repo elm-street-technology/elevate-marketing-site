@@ -33,6 +33,8 @@ import CheckCircle from "elevate-ui-icons/CheckCircle";
 import HeadsetMic from "elevate-ui-icons/HeadsetMic";
 import Elevatew from "../images/elevatew.png";
 import BottomArrow from "../images/bottom_arrow.png";
+import Seocover from "../images/seo_cover.png";
+import Smcover from "../images/sm101_cover.png";
 import Container from "../components/Container";
 import Bcesw from "../images/bcesw.jpg";
 
@@ -184,6 +186,62 @@ class Index extends Component {
         </Container>
         </div>
 
+
+
+        <div style={{ textAlign: "center", backgroundColor:"#f7f7f7" }}>
+      <Container>
+                    <div style={{paddingTop:"40px", paddingLeft:"45px", paddingRight:"45px", paddingBottom:"20px"}}>
+                          <div className={classes.centerheading}>Elevate Educational Guides</div> 
+                          <div className={classes.centersubtext}>FREE downloads to feed your brain...and your bottom line.</div>  
+                    </div>
+
+        <div className={classes.top}>
+
+                  <div className={classes.column2} style={{ textAlign: "center", paddingTop: "22px" }}>
+                                    
+                                    <div className={classes.centerheading2}>Social Media Marketing 101 Guide</div>
+                                    <div className={classes.centersubtext} style={{ fontWeight: "bold" }}>Download Your FREE, All-Inclusive Guide<br />
+                                    For Creating GREAT Content!</div>
+                                    <br /><br />
+                                    <div className={classes.centersubtext}>What makes for awesome social media marketing content? It's not as time-consuming
+                                    or difficult as you might think. Download this FREE GUIDE and get the tips,
+                                    tricks, and strategies from the pros to elevate your social media marketing
+                                    content today! Includes 4-month content marketing calendar.</div>
+                                    
+                                    <a target="_blank" href="/socialmediamarketingguide" className={classes.ctabutton}>
+                                    Download Now</a>
+                                    <div style={{ textAlign: "center",paddingTop:"35px" }}>
+                                          <img src={Smcover} width="300" />
+                                    </div>
+                  </div>
+
+                  <div className={classes.column2} style={{ textAlign: "center", paddingTop: "22px" }}>
+                 
+                                    <div className={classes.centerheading2}>Website SEO Guide</div>
+                                    <div className={classes.centersubtext} style={{ fontWeight: "bold" }}>Secrets to Getting<br />
+                                    Found on Google</div>
+                                    <br /><br />
+                                    <div className={classes.centersubtext}>93% of buyers looking for a home use online searches
+                                    for listings and information during their home-buying journey. What does it take to be seen
+                                    on the first page of Google, and what can you do to get there? 
+                                    This FREE GUIDE<br />
+                                    is your key to SEO success!
+                                    </div>
+                                    <a target="_blank" href="/websiteseoguide" className={classes.ctabutton}>
+                                    Download Today</a>
+                                    <div style={{ textAlign: "center",paddingTop:"35px" }}>
+                                          <img src={Seocover} width="300" />
+                                    </div>
+                  </div>
+
+
+                  
+        </div>
+    </Container>
+    </div>
+
+
+
 {/*
       <div style={{ backgroundColor:"#f7f7f7", paddingTop:"45px", paddingLeft:"25px", paddingright:"25px",}}>
         <div>
@@ -289,6 +347,20 @@ export default withStyles((theme) => ({
     flexDirection: "column",
     width: "100%",
   },
+  top: {
+    display: "flex",
+    flexWrap: "wrap",
+    alignItems: "top",
+  },
+
+  column2:{
+    width:"530px",
+    maxWidth: "100%",
+    paddingRight:"20px",
+    paddingLeft:"20px",
+    verticalAlign: "top",
+  },
+
   moreThan: {
     fontSize: "16px",
     color: theme.colors.secondary,
@@ -407,7 +479,7 @@ export default withStyles((theme) => ({
     justifyContent: "center",
     fontSize: "16px",
     textAlign: "center",
-    fontWeight: "500",
+    fontWeight: "700",
     minWidth: "300px",
     letterSpacing: ".25px",
     backgroundColor: theme.colors.secondary,
@@ -465,7 +537,7 @@ leftheading: {
   fontSize: "30px",
   fontWeight: "700",
   letterSpacing: ".25px",
-  fontWeight: "600",
+  fontWeight: "700",
   lineHeight: "1.6",
 
   [theme.breakpoints[900]]: {
@@ -477,12 +549,25 @@ centerheading: {
   fontSize: "30px",
   fontWeight: "700",
   letterSpacing: ".25px",
-  fontWeight: "600",
+  fontWeight: "700",
   lineHeight: "1.6",
   textAlign: "center",
 
   [theme.breakpoints[900]]: {
       fontSize: "28px",
+  },
+},
+centerheading2: {
+  color: "#4bbbb1",
+  fontSize: "20px",
+  fontWeight: "700",
+  letterSpacing: ".25px",
+  fontWeight: "700",
+  lineHeight: "1.6",
+  textAlign: "center",
+
+  [theme.breakpoints[900]]: {
+      fontSize: "20px",
   },
 },
 centersubtext: {

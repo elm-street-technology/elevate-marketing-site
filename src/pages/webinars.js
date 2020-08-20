@@ -11,6 +11,7 @@ import Web0 from "../images/webinars.gif";
 import Web1 from "../images/miles_pic.png";
 import Web2 from "../images/crm_pic.png";
 import Web3 from "../images/list_pic.png";
+import Web4 from "../images/emerge_screen.png";
 import SEO from "../components/SEO";
 import OverlappingHexagons from "../images/overlapping-hexagons.svg";
 
@@ -49,7 +50,7 @@ const Webinars = ({ classes, data }) => {
       </div>
 
 
-      <div style={{ textAlign: "center" }}>
+      <div style={{ textAlign: "center", backgroundColor:"#f7f7f7" }}>
       <Container>
                     <div style={{paddingTop:"40px", paddingLeft:"45px", paddingRight:"45px"}}>
                           <div className={classes.heading2}>Live Training Webinars</div>     
@@ -57,14 +58,11 @@ const Webinars = ({ classes, data }) => {
 
         <div className={classes.top}>
 
-                  <div className={classes.column3} style={{ textAlign: "center", paddingTop: "22px" }}>
+                  <div className={classes.column2} style={{ textAlign: "center", paddingTop: "22px" }}>
                                     
                                     <div className={classes.subheading} >Welcome to Elevate</div>
-                                    <div className={classes.subtext}>Join Miles Greer, your Digital Tour Guide<br />
-                                    for an introduction to the POWER of Elevate.<br />
-                                    This popular training is complemented by<br />
-                                    best practices for engaging your sphere<br />
-                                    of influence, as well as tips for getting<br />
+                                    <div className={classes.subtext}>Join Miles Greer, your Digital Tour Guide for an introduction to the POWER of Elevate.
+                                    This popular training is complemented by best practices for engaging your sphere of influence, as well as tips for getting
                                     the most out of all that Elevate<br />
                                     has to offer you and your business. 
                                     <br /><br />
@@ -72,34 +70,47 @@ const Webinars = ({ classes, data }) => {
                                     <a target="_blank" href="https://attendee.gotowebinar.com/rt/825496143307891981" className={classes.getStartedLink}>
                                     Register Now</a>
                                     <div style={{ textAlign: "center",paddingTop:"5px" }}>
-                                          <img src={Web1} width="255" />
+                                          <img src={Web1} width="300" />
                                     </div>
                   </div>
 
-                  <div className={classes.column3} style={{ textAlign: "center", paddingTop: "22px" }}>
+                  <div className={classes.column2} style={{ textAlign: "center", paddingTop: "22px" }}>
                  
                                     <div className={classes.subheading} >Elevate CRM&trade;</div>
-                                    <div className={classes.subtext}>Enjoy a step-by-step overview<br />
-                                    of your Elevate CRM&trade;.<br />
-                                    We’ll cover lead management,<br />
-                                    managing your website,<br />
-                                    creating email campaigns,<br />
-                                    social media, CMA’s,<br />
+                                    <div className={classes.subtext}>Enjoy a step-by-step overview of your<br />
+                                    Elevate CRM&trade;. We’ll cover lead management,<br />
+                                    managing your website, creating email<br />
+                                    campaigns, social media, CMA’s,<br />
                                     analytics and much, much more.
                                     <br /><br />
                                     Training time:  1 hr.</div>
                                     <a target="_blank" href="https://attendee.gotowebinar.com/rt/5463997054050193165" className={classes.getStartedLink}>
                                     Register Now</a>
                                     <div style={{ textAlign: "center",paddingTop:"5px" }}>
-                                          <img src={Web2} width="255" />
+                                          <img src={Web2} width="300" />
                                     </div>
                   </div>
 
-                  <div className={classes.column3} style={{ textAlign: "center", paddingTop: "22px" }}>
+
+                  <a id="learn_more"></a>
+        </div>
+    </Container>
+    </div>
+
+
+    <div style={{ textAlign: "center" }}>
+      <Container>
+                    
+
+        <div className={classes.top} style={{paddingTop:"22px"}}>
+
+             
+
+                  <div className={classes.column2} style={{ textAlign: "center", paddingTop: "22px" }}>
 
                                     <div className={classes.subheading} >Exploring Social Media</div>
-                                    <div className={classes.subtext}>Are you ready to take your social media<br />
-                                    marketing to the next level? In this<br />
+                                    <div className={classes.subtext}>Are you ready to take your social media
+                                    marketing to the next level? In this
                                     fast-paced session, we’ll explore social 
                                     marketing techniques designed to increase
                                     reach and engagement, and how
@@ -110,7 +121,24 @@ const Webinars = ({ classes, data }) => {
                                     <a target="_blank" href="https://attendee.gotowebinar.com/rt/6508184552514777101" className={classes.getStartedLink}>
                                     Register Now</a>
                                     <div style={{ textAlign: "center",paddingTop:"5px" }}>
-                                          <img src={Web3} width="255" />
+                                          <img src={Web3} width="300" />
+                                    </div>
+                  </div>
+
+                  <div className={classes.column2} style={{ textAlign: "center", paddingTop: "22px" }}>
+
+                                    <div className={classes.subheading} >Elevate Email Campaigns</div>
+                                    <div className={classes.subtext}>Join us as we introduce you to the email marketing
+                                    system within your Elevate CRM. This training includes a platform overview
+                                    of features for engaging your sphere, tips for staying top of mind,
+                                    and best practices for providing valuable content
+                                    to nurture your leads. Live Q&amp;A throughout.
+                                    <br /><br />
+                                    Training time:  1 hr.</div>
+                                    <a target="_blank" href="https://register.gotowebinar.com/rt/5239817628865423374" className={classes.getStartedLink}>
+Register Now</a>
+                                    <div style={{ textAlign: "center",paddingTop:"5px" }}>
+                                          <img src={Web4} width="300" />
                                     </div>
                   </div>
                   <a id="learn_more"></a>
@@ -159,6 +187,15 @@ export default withStyles((theme) => ({
     flexWrap: "wrap",
     alignItems: "top",
   },
+
+  column2:{
+    width:"530px",
+    maxWidth: "100%",
+    paddingRight:"20px",
+    paddingLeft:"20px",
+    verticalAlign: "top",
+  },
+
   column3:{
     width:"350px",
     maxWidth: "100%",
