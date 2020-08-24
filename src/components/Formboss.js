@@ -7,12 +7,11 @@ import CheckboxGroup from "elevate-ui/CheckboxGroup";
 import Input from "elevate-ui/Input";
 import RadioGroup from "elevate-ui/RadioGroup";
 import Typography from "elevate-ui/Typography";
-import ResponsiveVid from "../components/ResponsiveVid"
 import withStyles from "elevate-ui/withStyles";
 import Datetime from "elevate-ui/Datetime";
 import moment from "moment";
 
-class Formsocialpro extends Component {
+class Formboss extends Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -56,12 +55,12 @@ class Formsocialpro extends Component {
           <div >
                                   
                       
-            <Typography type="heading3" gutterBottom style={{color:"#f15623",}}>
+            <Typography type="heading3" gutterBottom>
               Fantastic!
             </Typography>
-
-            <Typography type="heading5" gutterTop style={{fontSize:"18px"}}>
-              You can speak to a member of our sales team immediately <br/>by calling  <a href="tel:18447920260" className={classes.link}>844.792.0260</a>.
+            <Typography type="heading5" gutterTop>
+        We’ll reach out to you asap via email or telephone.<br/>
+              You can also speak to a member of our sales team immediately by calling  <a href="tel:18339781196" className={classes.link}>833.978.1196</a>.
             </Typography>
           </div>
         </div>
@@ -84,12 +83,10 @@ class Formsocialpro extends Component {
             email: "",
             phone: "",
             mls_number: "",
-            form: "socialmediaguide",
-            list: 103210,
+            form: "boss_form",
+            list: 85576,
             meetingdate: '',
             meetingtime: '',
-            role: "",
-            interests: '',
           }}
           validationSchema={() =>
             Yup.object().shape({
@@ -106,7 +103,6 @@ class Formsocialpro extends Component {
           onSubmit={(values, { setSubmitting }) => {
             //if (values.meetingdate != undefined) {
             var meeting_request = '';
-            var notes = 'Interests: ';
             Object.keys(values).forEach(function (key, index) {
               // key: the name of the object key
               // index: the ordinal position of the key within the object 
@@ -115,32 +111,9 @@ class Formsocialpro extends Component {
                   meeting_request = values.meetingdate.format("YYYY-MM-DD") + "T" + values.meetingtime.replace(" (EDT)", "") + "-04:00"
                 }
               }
-              if (key == 'roleOther'){
-                if(values.roleOther.length > 0){
-                  values.role = values.roleOther;
-                }
-              }
-              if (key == 'interestsOther'){
-                if(values.interestsOther.length > 0){
-                  //notes = values.interests.join(",");
-                  notes = notes + "," + values.interestsOther;
-                }
-              }
-              if (key == "interests"){
-                if(values.interests.length > 0){
-                  notes = notes + "," + values.interests.join(",");
-                }
-              }
-              if (key == "demorequest"){
-                if(values.demorequest) {
-                  notes = notes + ", Requesting 15 min demo";
-                }
-              }
             });
-            
             const body = {
               ...values,
-              notes: notes,
               utm_campaign: (window.utm_tags) ? window.utm_tags.campaign : "",
               utm_source: (window.utm_tags) ? window.utm_tags.source : "",
               utm_medium: (window.utm_tags) ? window.utm_tags.medium : "",
@@ -171,7 +144,7 @@ class Formsocialpro extends Component {
                     });
                   }
                   if (window.ga) {
-                    window.ga('send','event','form','form_completed','bright');
+                    window.ga('send','event','form','form_completed','broker');
                   }
                 } else {
                   this.setState({ formState: "error" });
@@ -183,27 +156,19 @@ class Formsocialpro extends Component {
           }}
           render={({ values, isSubmitting,handleBlur, handleChange }) => (
             <Form noValidate>
-              <div style={{marginBottom:"30px"}}>
-                
-
-
-             
-
-              
-                </div>
               <div style={{ maxWidth: "600px",marginLeft:"auto",marginRight:"auto"}}>
               <div className={classes.topRow}>
                 <Field
                   id="firstname"
                   name="firstname"
-                  label="First Name"
+                  placeholder="First Name"
                   component={Input}
                   className={classes.field}
                 />
                 <Field
                   id="lastname"
                   name="lastname"
-                  label="Last Name"
+                  placeholder="Last Name"
                   component={Input}
                   className={classes.field}
                 />
@@ -211,14 +176,14 @@ class Formsocialpro extends Component {
               <Field
                 id="email"
                 name="email"
-                label="Email"
+                placeholder="Email"
                 component={Input}
                 className={classes.field}
               />
               <Field
                 id="phone"
                 name="phone"
-                label="Phone"
+                placeholder="Phone"
                 component={Input}
                 className={classes.field}
                 type="tel"
@@ -226,66 +191,28 @@ class Formsocialpro extends Component {
               <Field
                 id="company"
                 name="company"
-                label="Affiliation (optional)"
+                placeholder="Affiliation (optional)"
                 component={Input}
                 className={classes.field}
               />
                   <Field
                       id="mls_number"
                       name="mls_number"
-                      label="MLS # (optional)"
+                      placeholder="MLS # (optional)"
                       component={Input}
                       className={classes.field}
                   />
-                  <div style={{textAlign:"left",fontSize:"14px",lineHeight:"19px"}}>
-                  <Field
-                id="role"
-                name="role"
-                label="I am:"
-                component={RadioGroup}
-                display="inline"
-                items={[
-                  {
-                    label: "An Existing Client",
-                    value: "Existing Client",
-                  },
-                  {
-                    label: "An Agent",
-                    value: "Agent",
-                  },
-                  {
-                    label: "A Broker/Owner",
-                    value: "Broker/Owner",
-                  },
-                  {
-                    label: "Other (please specify)",
-                    value: "Other",
-                  },
-                ]}
-                className={classes.field}
-              />
-              {values.role === "Other" && (
-                <Field
-                  id="roleOther"
-                  name="roleOther"
-                  label="Other"
-                  component={Input}
-                  className={classes.field}
-                  autoFocus
-                />
-              )}
-             
-              
-              </div>
+                
               <button
                 type="submit"
                 className={classes.signUpBtn}
                 disabled={isSubmitting}
+                style={{width:"70%"}}
               >
-                Schedule Tour
+                Please Contact Me
               </button>
               </div>
-              <div style={{fontSize:"11px", lineHeight:"16px", paddingBottom:"35px"}}>
+              <div style={{fontSize:"11px", lineHeight:"16px"}}>
               By submitting this form, you are requesting to be contacted by a member of the Elevate Sales Team at the details provided via text, email or call (may involve automated or pre-recorded means).  You may revoke this consent through any reasonable means.
                 Existing subscribers seeking support, please visit the <a href="https://elmstreettechnology.zendesk.com/hc/en-us">Elevate Help Center</a>.
               </div>
@@ -302,7 +229,7 @@ export default withStyles((theme) => ({
     display: "flex",
     flexDirection: "column",
     width: "100%",
-    maxWidth: "700px",
+    maxWidth: "800px",
     margin: "0 auto",
     textAlign: "center"
   },
@@ -314,7 +241,6 @@ export default withStyles((theme) => ({
     border: "2px solid #ECECEC",
     height: "50px",
     fontWeight: "600",
-    textAlign: "left",
   },
   topRow: {
     display: "flex",
@@ -334,12 +260,12 @@ export default withStyles((theme) => ({
     padding:"3px"
   },
   headingLarge:{
-    fontSize: "33px",
+    fontSize: "40px",
+    textTransform: "uppercase",
     fontWeight: "700",
-    color: "#5bc0b8",
+    color: "#55c3ba",
     textAlign:"center",
-    padding:"3px",
-    lineHeight:"38px"
+    padding:"3px"
   },
   headingText:{
     color: "#777777",
@@ -355,12 +281,12 @@ export default withStyles((theme) => ({
     marginLeft: "10px"
   },
   signUpBtn: {
-    width: "60%",
-    fontSize: "18px",
+    width: "100%",
+    fontSize: "20px",
     lineHeight: "26px",
     fontWeight: "600",
     color: "#FFF",
-    backgroundColor: "#5bc0b8",
+    backgroundColor: theme.colors.secondary,
     borderRadius: "6px",
     padding: "12px",
     marginTop: "30px",
@@ -383,13 +309,4 @@ export default withStyles((theme) => ({
     fontWeight: "700",
     marginBottom: "4px",
   },
-
-  fullWidthVid:{
-    width: "100%",
-    marginLeft:"auto",
-    marginRight:"auto",
-    [theme.breakpoints[900]]: {
-      width: "75%"
-  },
-},
-}))(Formsocialpro);
+}))(Formboss);

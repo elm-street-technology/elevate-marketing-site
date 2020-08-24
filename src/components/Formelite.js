@@ -12,7 +12,7 @@ import withStyles from "elevate-ui/withStyles";
 import Datetime from "elevate-ui/Datetime";
 import moment from "moment";
 
-class Formsocialpro extends Component {
+class Formelite extends Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -392,4 +392,4 @@ export default withStyles((theme) => ({
       width: "75%"
   },
 },
-}))(Formsocialpro);
+}))(Formelite);

@@ -4,53 +4,53 @@ import withStyles from "elevate-ui/withStyles";
 import config from "../utils/siteConfig";
 import Container from "../components/Container";
 import BgSectionExternal3 from "../components/BgSectionExternal3";
-import Formsocialpro from "../components/Formsocialpro";
-import Sprobg from "../images/sprobg.jpg";
+import Formignite from "../components/Formignite";
+import Ignitebg from "../images/ignitebg.jpg";
 import Fadebg from "../images/fadebg.jpg";
-import Sprologo from "../images/sprologo.png";
+import Ignitelogo from "../images/ignitelogo.png";
+import Ignstar from "../images/ignstar.png";
 import Quote from "../images/quote.png";
 import Sp1 from "../images/sp1.png";
-import Sp2 from "../images/sp2.png";
-import Sp3 from "../images/sp3.png";
+import Ign2 from "../images/ign2.gif";
+import Ign3 from "../images/Ign3.png";
 import Sp5 from "../images/sp5.png";
+import Ign4 from "../images/ign4.png";
 import Glance4 from "../images/glance4.png";
 import Glance5 from "../images/glance5.png";
 import SEO from "../components/SEO";
 
-const Socialpro = ({ children, classes, data, tags }) => {
+const Ignite = ({ children, classes, data, tags }) => {
   const postNode = {
-      title: `Elevate Social ProTM - ${config.siteTitle}`,
+      title: `Elevate IgniteTM - ${config.siteTitle}`,
   };
 
   return (
 <div className={classes.root}>
       <Helmet>
-              <title>{`Elevate Social ProTM - ${config.siteTitle}`}</title>
+              <title>{`Elevate IgniteTM - ${config.siteTitle}`}</title>
       </Helmet>
-      <SEO postNode={postNode} pagePath="Socialpro" customTitle />
+      <SEO postNode={postNode} pagePath="Ignite" customTitle />
 
-<div style={{backgroundImage:"url("+Sprobg+")", backgroundSize:"cover", backgroundPosition:"centerTop"}}>
+<div style={{backgroundImage:"url("+Ignitebg+")", backgroundSize:"cover", backgroundPosition:"centerTop"}}>
 <Container>
       <div className={classes.top} style={{paddingBottom:"30px", paddingRight:"35px", paddingLeft:"35px", paddingTop:"75px"}}>
           <div className={classes.centerHeading}>
-                            <img src={Sprologo} width="100%"  style={{paddingBottom:"18px", paddingTop:"20px",maxWidth:"330px"}} />
-                            <div className={classes.heading} style={{color:"#ffffff"}}>The Power of SOCIAL MEDIA</div>
-                            <div className={classes.subtext} style={{color:"#f7f7f7", fontSize:"18px"}}>Turn your social media from a toy into a tool.
+                            <img src={Ignitelogo} width="100%"  style={{paddingBottom:"18px", paddingTop:"20px",maxWidth:"255px"}} />
+                            <div className={classes.heading} style={{color:"#ffffff"}}>The Power of LEAD GENERATION</div>
+                            <div className={classes.subtext} style={{color:"#f7f7f7", fontSize:"18px"}}>Exclusive buyer / seller leads just for you.<br />
+                            <img src={Ignstar} width="100%"  style={{paddingTop:"20px",maxWidth:"255px"}} />
                             </div>
           </div>
       </div>
 
       <div className={classes.top}  style={{paddingBottom:"50px",}}>
 
-             <div className={classes.column3} style={{ textAlign: "center", paddingBottom: "10px" }}>
+             <div className={classes.column2} style={{ textAlign: "center", paddingBottom: "10px" }}>
                  <a target="_blank" href="" className={classes.buttonLink}>Request Demo</a>
             </div>
 
-            <div className={classes.column3} style={{ textAlign: "center", paddingBottom: "10px" }}>
-                <a target="_blank" href="" className={classes.buttonLink}>Subscribe Today</a>
-            </div>
 
-            <div className={classes.column3} style={{ textAlign: "center", paddingBottom: "10px" }}>
+            <div className={classes.column2} style={{ textAlign: "center", paddingBottom: "10px" }}>
                 <a target="_blank" href="" className={classes.buttonLink}>Compare Products</a>
             </div>
 
@@ -75,8 +75,8 @@ const Socialpro = ({ children, classes, data, tags }) => {
 
                         <div style={{textAlign:"center", paddingRight:"35px", paddingLeft:"35px", paddingBottom:"35px"}}>
                             <div className={classes.Heading2}>Key Highlights</div>
-                            <div className={classes.subtext}>Automate your social media marketing so you can focus on what matters the most...<br />
-                            growing your sphere &amp; selling more homes, faster...</div>     
+                            <div className={classes.subtext}>High-quality, exclusive pay-per-click (PPC) lead generation captured just for you,<br />
+                            without all of the other “bells &amp; whistles”.</div>     
                             
                         </div>
             </Container>
@@ -87,27 +87,20 @@ const Socialpro = ({ children, classes, data, tags }) => {
 <div className={classes.top} style={{textAlign:"center"}}>
 
 
-<div className={classes.column3} style={{ textAlign: "center", paddingTop: "20px" }}>
-<div className={classes.subtext2}>Customized social branding on Facebook,
-Twitter, LinkedIn &amp; YouTube</div>
+<div className={classes.column2} style={{ textAlign: "center", paddingTop: "20px" }}>
+<div className={classes.subtext2}>Pay-per-click (PPC) capture<br />
+of exclusive leads</div>
 <div style={{ textAlign: "center",}}>
     <img src={Sp1} width="100%"  style={{paddingTop:"25px", maxWidth:"320px"}} />
 </div>
 </div>
 
-<div className={classes.column3} style={{ textAlign: "center", paddingTop: "20px" }}>
-<div className={classes.subtext2}>Relevant, life-style content<br />
-posted weekly</div>
-<div style={{ textAlign: "center",}}>
-    <img src={Sp2} width="100%"  style={{paddingTop:"25px", maxWidth:"320px"}} />
-</div>
-</div>
 
-<div className={classes.column3} style={{ textAlign: "center", paddingTop: "20px" }}>
-<div className={classes.subtext2}>Automated posts of new listings<br />
-&amp; listing updates</div>
+<div className={classes.column2} style={{ textAlign: "center", paddingTop: "20px" }}>
+<div className={classes.subtext2}>Advanced, intuitive CRM with<br />
+powerful performance metrics</div>
 <div style={{ textAlign: "center",}}>
-    <img src={Sp3} width="100%"  style={{paddingTop:"25px", maxWidth:"320px"}} />
+    <img src={Ign2} width="100%"  style={{paddingTop:"25px", maxWidth:"320px"}} />
 </div>
 </div>
 
@@ -122,18 +115,18 @@ posted weekly</div>
 
 
 <div className={classes.column2} style={{ textAlign: "center", paddingTop: "20px" }}>
-<div className={classes.subtext2}>Automated creation of<br />
-YouTube video tours</div>
+<div className={classes.subtext2}>Automated nurture<br />
+campaigns</div>
 <div style={{ textAlign: "center",}}>
-    <img src={Sp3} width="100%"  style={{paddingTop:"25px", maxWidth:"320px"}} />
+    <img src={Ign3} width="100%"  style={{paddingTop:"25px", maxWidth:"320px"}} />
 </div>
 </div>
 
 <div className={classes.column2} style={{ textAlign: "center", paddingTop: "20px" }}>
-<div className={classes.subtext2}>Content-rich consumer<br />
-blog with weekly posts</div>
+<div className={classes.subtext2}>Lead engagement<br />
+&amp; behavioral tracking</div>
 <div style={{ textAlign: "center",}}>
-    <img src={Sp5} width="100%"  style={{paddingTop:"25px", maxWidth:"320px"}} />
+    <img src={Ign4} width="100%"  style={{paddingTop:"25px", maxWidth:"320px"}} />
 </div>
 </div>
 
@@ -150,7 +143,7 @@ blog with weekly posts</div>
         Take a Tour of Elevate Today
         </h1>
         <h2 className={classes.subtext}>Schedule 15-minutes with an Elevate Success Coach to explore Elevate’s marketing power.</h2>
-        <Formsocialpro/>
+        <Formignite/>
         {/* <div className={classes.closingContainer}>
           For Media Inquiries, {""} Please {""}
           <a
@@ -175,32 +168,34 @@ blog with weekly posts</div>
                 <div className={classes.flexItem2} style={{padding:"30px", textAlign:"center"}}>
                         <img src={Quote} width="80" style={{paddingBottom:"15px"}}/>
                       <div className={classes.subtext}>
-                      “I always struggled with creating &amp; managing my social media until Elevate.  Now I look like a pro!”
+                      “3 listing appointments and one transaction in my first 30-days of Elevate’s lead generation.  I’m hooked!”
                       <br /><br />
-                      <div className={classes.Heading3}>Jennifer M.</div>
-                      San Clemente, CA
+                      <div className={classes.Heading3}>Kelli P.</div>
+                      Dallas, TX
                       </div>
                 </div>
 
                 <div className={classes.flexItem2} style={{padding:"30px", textAlign:"center"}}>
                 <img src={Quote} width="80" style={{paddingBottom:"15px"}}/>
                       <div className={classes.subtext}>  
-                      “I’ve had so many complements<br />
-                      on my blog articles, and I don’t have<br />
-                      to lift a finger.”
+                      “I love that I don’t<br />
+                      have to compete for<br />
+                      my Elevate leads.”
                       <br /><br />
-                      <div className={classes.Heading3}>Michael K.</div>
-                      Tampa, FL
+                      <div className={classes.Heading3}>Jason R.</div>
+                      St. Petersburg, FL
                         </div>
                 </div>
 
                 <div className={classes.flexItem2} style={{padding:"30px", textAlign:"center"}}>
                 <img src={Quote} width="80" style={{paddingBottom:"15px"}}/>
                       <div className={classes.subtext}>  
-                      “Elevate has saved me hours of frustration &amp; time with my online marketing.  I love the automation.”
+                      “I’ve got leads in every<br />
+                      stage of the purchase<br />
+                      process. I love it!”
                       <br /><br />
-                      <div className={classes.Heading3}>Mary Ann B.</div>
-                      Arlington, TX
+                      <div className={classes.Heading3}>Courtney H.</div>
+                      San Francisco, CA
                         </div>
                 </div>
 
@@ -394,4 +389,4 @@ export default withStyles((theme) => ({
     height: "100%",
     
   }
-}))(Socialpro);
+}))(Ignite);

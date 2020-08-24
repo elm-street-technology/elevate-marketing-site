@@ -4,55 +4,51 @@ import withStyles from "elevate-ui/withStyles";
 import config from "../utils/siteConfig";
 import Container from "../components/Container";
 import BgSectionExternal3 from "../components/BgSectionExternal3";
-import Formsocialpro from "../components/Formsocialpro";
-import Sprobg from "../images/sprobg.jpg";
+import Formboss from "../components/Formboss";
+import Bossbg from "../images/bossbg.jpg";
 import Fadebg from "../images/fadebg.jpg";
-import Sprologo from "../images/sprologo.png";
+import Bosslogo from "../images/bosslogo.png";
+import Bossstar from "../images/bossstar.png";
 import Quote from "../images/quote.png";
-import Sp1 from "../images/sp1.png";
-import Sp2 from "../images/sp2.png";
-import Sp3 from "../images/sp3.png";
-import Sp5 from "../images/sp5.png";
-import Glance4 from "../images/glance4.png";
-import Glance5 from "../images/glance5.png";
 import SEO from "../components/SEO";
 
-const Socialpro = ({ children, classes, data, tags }) => {
+const Boss = ({ children, classes, data, tags }) => {
   const postNode = {
-      title: `Elevate Social ProTM - ${config.siteTitle}`,
+      title: `Elevate BossTM - ${config.siteTitle}`,
   };
 
   return (
 <div className={classes.root}>
       <Helmet>
-              <title>{`Elevate Social ProTM - ${config.siteTitle}`}</title>
+              <title>{`Elevate BossTM - ${config.siteTitle}`}</title>
       </Helmet>
-      <SEO postNode={postNode} pagePath="Socialpro" customTitle />
+      <SEO postNode={postNode} pagePath="Boss" customTitle />
 
-<div style={{backgroundImage:"url("+Sprobg+")", backgroundSize:"cover", backgroundPosition:"centerTop"}}>
+<div style={{backgroundImage:"url("+Bossbg+")", backgroundSize:"cover", backgroundPosition:"centerTop"}}>
 <Container>
-      <div className={classes.top} style={{paddingBottom:"30px", paddingRight:"35px", paddingLeft:"35px", paddingTop:"75px"}}>
+      <div className={classes.top} style={{paddingRight:"35px", paddingLeft:"35px", paddingTop:"75px"}}>
           <div className={classes.centerHeading}>
-                            <img src={Sprologo} width="100%"  style={{paddingBottom:"18px", paddingTop:"20px",maxWidth:"330px"}} />
-                            <div className={classes.heading} style={{color:"#ffffff"}}>The Power of SOCIAL MEDIA</div>
-                            <div className={classes.subtext} style={{color:"#f7f7f7", fontSize:"18px"}}>Turn your social media from a toy into a tool.
+                            <img src={Bosslogo} width="100%"  style={{paddingBottom:"18px", paddingTop:"20px",maxWidth:"220px"}} />
+                            <div className={classes.heading} style={{color:"#ffffff"}}>The Power of ONE</div>
+                            <div className={classes.subtext} style={{color:"#f7f7f7", fontSize:"18px"}}>One vendor.  One point of contact.  One solution.  For your entire office.<br/>
+                            <img src={Bossstar} width="100%"  style={{paddingTop:"20px",maxWidth:"295px"}} />
                             </div>
           </div>
       </div>
 
-      <div className={classes.top}  style={{paddingBottom:"50px",}}>
+      <div style={{textAlign: "center", maxWidth:"700px",marginLeft:"auto",marginRight:"auto", paddingBottom:"20px", paddingRight:"35px", paddingLeft:"35px",marginTop:"-5px"}}>
+                <div style={{ textAlign: "center"}} className={classes.videoEmbed}>
+                        <iframe className={classes.videoContainer} src="https://www.youtube.com/embed/vd7DeTuNb6w"
+                         frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                </div>
+              </div>
 
-             <div className={classes.column3} style={{ textAlign: "center", paddingBottom: "10px" }}>
-                 <a target="_blank" href="" className={classes.buttonLink}>Request Demo</a>
+            <div style={{paddingBottom:"50px",}}>
+
+             <div style={{ textAlign: "center", paddingBottom: "10px" }}>
+                 <a href="#demo" className={classes.buttonLink}>Request Demo</a>
             </div>
 
-            <div className={classes.column3} style={{ textAlign: "center", paddingBottom: "10px" }}>
-                <a target="_blank" href="" className={classes.buttonLink}>Subscribe Today</a>
-            </div>
-
-            <div className={classes.column3} style={{ textAlign: "center", paddingBottom: "10px" }}>
-                <a target="_blank" href="" className={classes.buttonLink}>Compare Products</a>
-            </div>
 
 
 </div>          
@@ -75,82 +71,126 @@ const Socialpro = ({ children, classes, data, tags }) => {
 
                         <div style={{textAlign:"center", paddingRight:"35px", paddingLeft:"35px", paddingBottom:"35px"}}>
                             <div className={classes.Heading2}>Key Highlights</div>
-                            <div className={classes.subtext}>Automate your social media marketing so you can focus on what matters the most...<br />
-                            growing your sphere &amp; selling more homes, faster...</div>     
+                            <div className={classes.subtext}>The 1st true productivity platform in real estate offers a more efficient, cost-effective way<br />
+                            to increase production &amp; help your agents sell more homes...faster.</div>     
                             
                         </div>
             </Container>
 
 </div>
-<div style={{backgroundImage:"url("+Fadebg+")", backgroundSize:"cover", backgroundPosition:"centerBottom"}}>
+<div style={{backgroundImage:"url("+Fadebg+")", backgroundSize:"cover", backgroundPosition:"centerBottom", paddingBottom:"65px"}}>
 <Container>
 <div className={classes.top} style={{textAlign:"center"}}>
 
 
-<div className={classes.column3} style={{ textAlign: "center", paddingTop: "20px" }}>
-<div className={classes.subtext2}>Customized social branding on Facebook,
-Twitter, LinkedIn &amp; YouTube</div>
-<div style={{ textAlign: "center",}}>
-    <img src={Sp1} width="100%"  style={{paddingTop:"25px", maxWidth:"320px"}} />
-</div>
+<div className={classes.column4} style={{ textAlign: "center", paddingTop: "35px" }}>
+<img src={Quote} width="80" style={{paddingBottom:"15px"}}/>
+<div className={classes.subtext2}>Brokerage<br />
+recruiting module</div>
+
 </div>
 
-<div className={classes.column3} style={{ textAlign: "center", paddingTop: "20px" }}>
-<div className={classes.subtext2}>Relevant, life-style content<br />
-posted weekly</div>
-<div style={{ textAlign: "center",}}>
-    <img src={Sp2} width="100%"  style={{paddingTop:"25px", maxWidth:"320px"}} />
-</div>
+<div className={classes.column4} style={{ textAlign: "center", paddingTop: "35px" }}>
+<img src={Quote} width="80" style={{paddingBottom:"15px"}}/>
+<div className={classes.subtext2}>Brokerage-level<br />
+advanced dashboard</div>
+
 </div>
 
-<div className={classes.column3} style={{ textAlign: "center", paddingTop: "20px" }}>
-<div className={classes.subtext2}>Automated posts of new listings<br />
-&amp; listing updates</div>
-<div style={{ textAlign: "center",}}>
-    <img src={Sp3} width="100%"  style={{paddingTop:"25px", maxWidth:"320px"}} />
+<div className={classes.column4} style={{ textAlign: "center", paddingTop: "35px" }}>
+<img src={Quote} width="80" style={{paddingBottom:"15px"}}/>
+<div className={classes.subtext2}>Brokerage, office<br />
+&amp; agent KPIs</div>
 </div>
+
+<div className={classes.column4} style={{ textAlign: "center", paddingTop: "35px" }}>
+<img src={Quote} width="80" style={{paddingBottom:"15px"}}/>
+<div className={classes.subtext2}>Lead capture/response<br />
+routing &amp; tracking</div>
+</div>
+
+
+
+
+</div>
+</Container>
+
+<Container>
+<div className={classes.top} style={{textAlign:"center"}}>
+
+
+<div className={classes.column4} style={{ textAlign: "center", paddingTop: "35px" }}>
+<img src={Quote} width="80" style={{paddingBottom:"15px"}}/>
+<div className={classes.subtext2}>Lead generation,<br />
+parsing &amp; scrubbing</div>
+
+</div>
+
+<div className={classes.column4} style={{ textAlign: "center", paddingTop: "35px" }}>
+<img src={Quote} width="80" style={{paddingBottom:"15px"}}/>
+<div className={classes.subtext2}>Customer activity<br />
+workflows &amp; task coaching</div>
+
+</div>
+
+<div className={classes.column4} style={{ textAlign: "center", paddingTop: "35px" }}>
+<img src={Quote} width="80" style={{paddingBottom:"15px"}}/>
+<div className={classes.subtext2}>Document<br />
+management</div>
+</div>
+
+<div className={classes.column4} style={{ textAlign: "center", paddingTop: "35px" }}>
+<img src={Quote} width="80" style={{paddingBottom:"15px"}}/>
+<div className={classes.subtext2}>Agent-protected<br />
+databases</div>
+</div>
+
+
+
+
+</div>
+</Container>
+
+
+
+
+
+<Container>
+<div className={classes.top} style={{textAlign:"center"}}>
+
+
+<div className={classes.column4} style={{ textAlign: "center", paddingTop: "35px" }}>
+<img src={Quote} width="80" style={{paddingBottom:"15px"}}/>
+<div className={classes.subtext2}>CMA Wizard</div>
+
+</div>
+
+<div className={classes.column4} style={{ textAlign: "center", paddingTop: "35px" }}>
+<img src={Quote} width="80" style={{paddingBottom:"15px"}}/>
+<div className={classes.subtext2}>Team capable</div>
+
 </div>
 
 
 </div>
 </Container>
-</div>
-
-<div style={{paddingTop:"40px", backgroundImage:"url("+Fadebg+")", backgroundSize:"cover", backgroundPosition:"centerBottom"}}>
-<Container>
-<div className={classes.top} style={{textAlign:"center"}}>
-
-
-<div className={classes.column2} style={{ textAlign: "center", paddingTop: "20px" }}>
-<div className={classes.subtext2}>Automated creation of<br />
-YouTube video tours</div>
-<div style={{ textAlign: "center",}}>
-    <img src={Sp3} width="100%"  style={{paddingTop:"25px", maxWidth:"320px"}} />
-</div>
-</div>
-
-<div className={classes.column2} style={{ textAlign: "center", paddingTop: "20px" }}>
-<div className={classes.subtext2}>Content-rich consumer<br />
-blog with weekly posts</div>
-<div style={{ textAlign: "center",}}>
-    <img src={Sp5} width="100%"  style={{paddingTop:"25px", maxWidth:"320px"}} />
-</div>
+<a id="demo"></a>
 </div>
 
 
-</div>
-</Container>
-</div>
+
+
 
 
 
 
 <div style={{backgroundColor:"#ffffff", paddingBottom:"60px", textAlign:"center", paddingRight:"30px", paddingLeft:"30px"}}>
         <h1 className={classes.Heading2} style={{paddingTop:"70px"}}>
-        Take a Tour of Elevate Today
+        Tour the BOSS
         </h1>
-        <h2 className={classes.subtext}>Schedule 15-minutes with an Elevate Success Coach to explore Elevate’s marketing power.</h2>
-        <Formsocialpro/>
+        <h2 className={classes.subtext} style={{paddingBottom:"40px"}}>Request your personal consultation with our <br />
+        broker development team using the form below, or call 833-978-1196 to speak to us today.</h2>
+        <Formboss/>
         {/* <div className={classes.closingContainer}>
           For Media Inquiries, {""} Please {""}
           <a
@@ -175,32 +215,39 @@ blog with weekly posts</div>
                 <div className={classes.flexItem2} style={{padding:"30px", textAlign:"center"}}>
                         <img src={Quote} width="80" style={{paddingBottom:"15px"}}/>
                       <div className={classes.subtext}>
-                      “I always struggled with creating &amp; managing my social media until Elevate.  Now I look like a pro!”
+                      “Elevate BOSS has helped<br />
+                      my independent office<br />
+                      compete against the<br />
+                      big box brands.”
                       <br /><br />
-                      <div className={classes.Heading3}>Jennifer M.</div>
-                      San Clemente, CA
+                      <div className={classes.Heading3}>Joe J.</div>
+                      Nashville, TN
                       </div>
                 </div>
 
                 <div className={classes.flexItem2} style={{padding:"30px", textAlign:"center"}}>
                 <img src={Quote} width="80" style={{paddingBottom:"15px"}}/>
                       <div className={classes.subtext}>  
-                      “I’ve had so many complements<br />
-                      on my blog articles, and I don’t have<br />
-                      to lift a finger.”
+                      “Our agents love<br />
+                      all of the technology<br />
+                      and marketing tools we now<br />
+                      offer with Elevate.”
                       <br /><br />
-                      <div className={classes.Heading3}>Michael K.</div>
-                      Tampa, FL
+                      <div className={classes.Heading3}>Jenn &amp; Mark N.</div>
+                      Los Angeles, CA
                         </div>
                 </div>
 
                 <div className={classes.flexItem2} style={{padding:"30px", textAlign:"center"}}>
                 <img src={Quote} width="80" style={{paddingBottom:"15px"}}/>
                       <div className={classes.subtext}>  
-                      “Elevate has saved me hours of frustration &amp; time with my online marketing.  I love the automation.”
+                      “I went from 13 vendors down<br />
+                      to 3 with Elevate. Not only<br />
+                      did I save tons of money, but my stress<br />
+                      level seriously dropped!”
                       <br /><br />
-                      <div className={classes.Heading3}>Mary Ann B.</div>
-                      Arlington, TX
+                      <div className={classes.Heading3}>Jacob M.</div>
+                     Worcester, MA
                         </div>
                 </div>
 
@@ -265,6 +312,14 @@ export default withStyles((theme) => ({
 
   column3:{
     width:"350px",
+    maxWidth: "100%",
+    paddingRight:"10px",
+    paddingLeft:"10px",
+    verticalAlign: "top",
+  },
+
+  column4:{
+    width:"260px",
     maxWidth: "100%",
     paddingRight:"10px",
     paddingLeft:"10px",
@@ -394,4 +449,4 @@ export default withStyles((theme) => ({
     height: "100%",
     
   }
-}))(Socialpro);
+}))(Boss);

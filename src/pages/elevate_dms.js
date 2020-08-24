@@ -4,38 +4,45 @@ import withStyles from "elevate-ui/withStyles";
 import config from "../utils/siteConfig";
 import Container from "../components/Container";
 import BgSectionExternal3 from "../components/BgSectionExternal3";
-import Formsocialpro from "../components/Formsocialpro";
-import Sprobg from "../images/sprobg.jpg";
+import Formdms from "../components/Form_dms";
+import Dmsbg from "../images/dmsbg.jpg";
 import Fadebg from "../images/fadebg.jpg";
-import Sprologo from "../images/sprologo.png";
+import Dmslogo from "../images/dmslogo.png";
+import Dmsstar from "../images/dmsstar.png";
 import Quote from "../images/quote.png";
 import Sp1 from "../images/sp1.png";
 import Sp2 from "../images/sp2.png";
+import Dms2 from "../images/dms2.png";
+import Dms3 from "../images/dms3.png";
+import Dms5 from "../images/dms5.gif";
+import Dms7 from "../images/dms7.png";
 import Sp3 from "../images/sp3.png";
 import Sp5 from "../images/sp5.png";
+import Ign2 from "../images/ign2.gif";
 import Glance4 from "../images/glance4.png";
 import Glance5 from "../images/glance5.png";
 import SEO from "../components/SEO";
 
-const Socialpro = ({ children, classes, data, tags }) => {
+const Dms = ({ children, classes, data, tags }) => {
   const postNode = {
-      title: `Elevate Social ProTM - ${config.siteTitle}`,
+      title: `Elevate DMSTM - ${config.siteTitle}`,
   };
 
   return (
 <div className={classes.root}>
       <Helmet>
-              <title>{`Elevate Social ProTM - ${config.siteTitle}`}</title>
+              <title>{`Elevate DMSTM - ${config.siteTitle}`}</title>
       </Helmet>
-      <SEO postNode={postNode} pagePath="Socialpro" customTitle />
+      <SEO postNode={postNode} pagePath="Dms" customTitle />
 
-<div style={{backgroundImage:"url("+Sprobg+")", backgroundSize:"cover", backgroundPosition:"centerTop"}}>
+<div style={{backgroundImage:"url("+Dmsbg+")", backgroundSize:"cover", backgroundPosition:"centerTop"}}>
 <Container>
       <div className={classes.top} style={{paddingBottom:"30px", paddingRight:"35px", paddingLeft:"35px", paddingTop:"75px"}}>
           <div className={classes.centerHeading}>
-                            <img src={Sprologo} width="100%"  style={{paddingBottom:"18px", paddingTop:"20px",maxWidth:"330px"}} />
-                            <div className={classes.heading} style={{color:"#ffffff"}}>The Power of SOCIAL MEDIA</div>
-                            <div className={classes.subtext} style={{color:"#f7f7f7", fontSize:"18px"}}>Turn your social media from a toy into a tool.
+                            <img src={Dmslogo} width="100%"  style={{paddingBottom:"18px", paddingTop:"20px",maxWidth:"180px"}} />
+                            <div className={classes.heading} style={{color:"#ffffff"}}>The Power of MARKETING</div>
+                            <div className={classes.subtext} style={{color:"#f7f7f7", fontSize:"18px"}}>Be in front of MORE people, MORE often.<br/>
+                            <img src={Dmsstar} width="100%"  style={{paddingTop:"20px",maxWidth:"255px"}} />
                             </div>
           </div>
       </div>
@@ -43,11 +50,11 @@ const Socialpro = ({ children, classes, data, tags }) => {
       <div className={classes.top}  style={{paddingBottom:"50px",}}>
 
              <div className={classes.column3} style={{ textAlign: "center", paddingBottom: "10px" }}>
-                 <a target="_blank" href="" className={classes.buttonLink}>Request Demo</a>
+                 <a href="#demo" className={classes.buttonLink}>Request Demo</a>
             </div>
 
             <div className={classes.column3} style={{ textAlign: "center", paddingBottom: "10px" }}>
-                <a target="_blank" href="" className={classes.buttonLink}>Subscribe Today</a>
+                <a target="_blank" href="https://elmstreettechnology.recurly.com/subscribe/edigitalmarketingsystem" className={classes.buttonLink}>Subscribe Today</a>
             </div>
 
             <div className={classes.column3} style={{ textAlign: "center", paddingBottom: "10px" }}>
@@ -75,8 +82,8 @@ const Socialpro = ({ children, classes, data, tags }) => {
 
                         <div style={{textAlign:"center", paddingRight:"35px", paddingLeft:"35px", paddingBottom:"35px"}}>
                             <div className={classes.Heading2}>Key Highlights</div>
-                            <div className={classes.subtext}>Automate your social media marketing so you can focus on what matters the most...<br />
-                            growing your sphere &amp; selling more homes, faster...</div>     
+                            <div className={classes.subtext}>Build your business, increase your sphere &amp; look like a marketing rockstar<br />
+                            with an all-in-one solution designed to capture, engage &amp; convert.</div>     
                             
                         </div>
             </Container>
@@ -88,26 +95,26 @@ const Socialpro = ({ children, classes, data, tags }) => {
 
 
 <div className={classes.column3} style={{ textAlign: "center", paddingTop: "20px" }}>
-<div className={classes.subtext2}>Customized social branding on Facebook,
-Twitter, LinkedIn &amp; YouTube</div>
+<div className={classes.subtext2}>Advanced, intuitive CRM with<br />
+powerful performance metrics</div>
 <div style={{ textAlign: "center",}}>
-    <img src={Sp1} width="100%"  style={{paddingTop:"25px", maxWidth:"320px"}} />
+    <img src={Ign2} width="100%"  style={{paddingTop:"25px", maxWidth:"320px"}} />
 </div>
 </div>
 
 <div className={classes.column3} style={{ textAlign: "center", paddingTop: "20px" }}>
-<div className={classes.subtext2}>Relevant, life-style content<br />
-posted weekly</div>
+<div className={classes.subtext2}>Morning reports with<br />
+the latest activity data.</div>
 <div style={{ textAlign: "center",}}>
-    <img src={Sp2} width="100%"  style={{paddingTop:"25px", maxWidth:"320px"}} />
+    <img src={Dms2} width="100%"  style={{paddingTop:"25px", maxWidth:"320px"}} />
 </div>
 </div>
 
 <div className={classes.column3} style={{ textAlign: "center", paddingTop: "20px" }}>
-<div className={classes.subtext2}>Automated posts of new listings<br />
-&amp; listing updates</div>
+<div className={classes.subtext2}>Mobile-friendly<br />
+IDX website</div>
 <div style={{ textAlign: "center",}}>
-    <img src={Sp3} width="100%"  style={{paddingTop:"25px", maxWidth:"320px"}} />
+    <img src={Dms3} width="100%"  style={{paddingTop:"25px", maxWidth:"320px"}} />
 </div>
 </div>
 
@@ -121,23 +128,65 @@ posted weekly</div>
 <div className={classes.top} style={{textAlign:"center"}}>
 
 
-<div className={classes.column2} style={{ textAlign: "center", paddingTop: "20px" }}>
-<div className={classes.subtext2}>Automated creation of<br />
-YouTube video tours</div>
+<div className={classes.column3} style={{ textAlign: "center", paddingTop: "20px" }}>
+<div className={classes.subtext2}>Robust blog with<br />
+automated posts</div>
 <div style={{ textAlign: "center",}}>
-    <img src={Sp3} width="100%"  style={{paddingTop:"25px", maxWidth:"320px"}} />
+    <img src={Sp5} width="100%"  style={{paddingTop:"25px", maxWidth:"320px"}} />
 </div>
 </div>
 
-<div className={classes.column2} style={{ textAlign: "center", paddingTop: "20px" }}>
-<div className={classes.subtext2}>Content-rich consumer<br />
-blog with weekly posts</div>
+<div className={classes.column3} style={{ textAlign: "center", paddingTop: "20px" }}>
+<div className={classes.subtext2}>Automated social media<br />
+posts weekly</div>
+<div style={{ textAlign: "center",}}>
+    <img src={Dms5} width="100%"  style={{paddingTop:"25px", maxWidth:"320px"}} />
+</div>
+</div>
+
+<div className={classes.column3} style={{ textAlign: "center", paddingTop: "20px" }}>
+<div className={classes.subtext2}>Intuitive<br />
+CMA Wizard</div>
 <div style={{ textAlign: "center",}}>
     <img src={Sp5} width="100%"  style={{paddingTop:"25px", maxWidth:"320px"}} />
 </div>
 </div>
 
 
+</div>
+</Container>
+</div>
+
+<div style={{paddingTop:"40px", backgroundImage:"url("+Fadebg+")", backgroundSize:"cover", backgroundPosition:"centerBottom"}}>
+<Container>
+<div className={classes.top} style={{textAlign:"center"}}>
+
+
+<div className={classes.column3} style={{ textAlign: "center", paddingTop: "20px" }}>
+<div className={classes.subtext2}>Email marketing templates,<br />
+campaigns &amp; image library</div>
+<div style={{ textAlign: "center",}}>
+    <img src={Dms7} width="100%"  style={{paddingTop:"25px", maxWidth:"320px"}} />
+</div>
+</div>
+
+<div className={classes.column3} style={{ textAlign: "center", paddingTop: "20px" }}>
+<div className={classes.subtext2}>Customized social branding on Facebook,<br />
+Twitter, LinkedIn &amp; YouTube</div>
+<div style={{ textAlign: "center",}}>
+    <img src={Sp1} width="100%"  style={{paddingTop:"25px", maxWidth:"320px"}} />
+</div>
+</div>
+
+<div className={classes.column3} style={{ textAlign: "center", paddingTop: "20px" }}>
+<div className={classes.subtext2}>Automated creation of<br />
+YouTube video tours</div>
+<div style={{ textAlign: "center",}}>
+    <img src={Sp5} width="100%"  style={{paddingTop:"25px", maxWidth:"320px"}} />
+</div>
+</div>
+
+<a id="demo"></a>
 </div>
 </Container>
 </div>
@@ -150,7 +199,7 @@ blog with weekly posts</div>
         Take a Tour of Elevate Today
         </h1>
         <h2 className={classes.subtext}>Schedule 15-minutes with an Elevate Success Coach to explore Elevate’s marketing power.</h2>
-        <Formsocialpro/>
+        <Formdms/>
         {/* <div className={classes.closingContainer}>
           For Media Inquiries, {""} Please {""}
           <a
@@ -175,32 +224,30 @@ blog with weekly posts</div>
                 <div className={classes.flexItem2} style={{padding:"30px", textAlign:"center"}}>
                         <img src={Quote} width="80" style={{paddingBottom:"15px"}}/>
                       <div className={classes.subtext}>
-                      “I always struggled with creating &amp; managing my social media until Elevate.  Now I look like a pro!”
+                      “My Elevate website is so easy for my customers to use...and I LOVE the daily marketing report emails.”
                       <br /><br />
-                      <div className={classes.Heading3}>Jennifer M.</div>
-                      San Clemente, CA
+                      <div className={classes.Heading3}>Mark H.</div>
+                      Tucson, AZ
                       </div>
                 </div>
 
                 <div className={classes.flexItem2} style={{padding:"30px", textAlign:"center"}}>
                 <img src={Quote} width="80" style={{paddingBottom:"15px"}}/>
                       <div className={classes.subtext}>  
-                      “I’ve had so many complements<br />
-                      on my blog articles, and I don’t have<br />
-                      to lift a finger.”
+                      “For the first time ever, I actually like using a CRM!  Elevate automates so much of my day-to-day.  It’s simple!”
                       <br /><br />
-                      <div className={classes.Heading3}>Michael K.</div>
-                      Tampa, FL
+                      <div className={classes.Heading3}>Kendra D.</div>
+                      Denver, CO.
                         </div>
                 </div>
 
                 <div className={classes.flexItem2} style={{padding:"30px", textAlign:"center"}}>
                 <img src={Quote} width="80" style={{paddingBottom:"15px"}}/>
                       <div className={classes.subtext}>  
-                      “Elevate has saved me hours of frustration &amp; time with my online marketing.  I love the automation.”
+                      “All of my social media is done for me, and I love the email drip campaigns and newsletters for my clients.”
                       <br /><br />
-                      <div className={classes.Heading3}>Mary Ann B.</div>
-                      Arlington, TX
+                      <div className={classes.Heading3}>Brenda T.</div>
+                      Atlanta, GA
                         </div>
                 </div>
 
@@ -394,4 +441,4 @@ export default withStyles((theme) => ({
     height: "100%",
     
   }
-}))(Socialpro);
+}))(Dms);
