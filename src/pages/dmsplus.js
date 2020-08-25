@@ -10,8 +10,9 @@ import Fadebg from "../images/fadebg.jpg";
 import Dmspluslogo from "../images/dmspluslogo.png";
 import Plusstar from "../images/plusstar.png";
 import Quote from "../images/quote.png";
+import Ppc from "../images/prodppc.png";
 import Sp1 from "../images/sp1.png";
-import Sp2 from "../images/sp2.png";
+import Cma from "../images/prodcma.png";
 import Dms2 from "../images/dms2.png";
 import Dms3 from "../images/dms3.png";
 import Dms5 from "../images/dms5.gif";
@@ -58,7 +59,7 @@ const Dmsplus = ({ children, classes, data, tags }) => {
             </div>
 
             <div className={classes.column3} style={{ textAlign: "center", paddingBottom: "10px" }}>
-                <a target="_blank" href="" className={classes.buttonLink}>Compare Products</a>
+                <a target="_blank" href="/compare_products" className={classes.buttonLink}>Compare Products</a>
             </div>
 
 
@@ -98,7 +99,7 @@ const Dmsplus = ({ children, classes, data, tags }) => {
 <div className={classes.subtext2}>Pay-per-click (PPC) capture<br />
 of EXCLUSIVE buyer/seller leads</div>
 <div style={{ textAlign: "center",}}>
-    <img src={Ign2} width="100%"  style={{paddingTop:"25px", maxWidth:"320px"}} />
+    <img src={Ppc} width="100%"  style={{paddingTop:"25px", maxWidth:"320px"}} />
 </div>
 </div>
 
@@ -166,7 +167,7 @@ posts weekly</div>
 <div className={classes.subtext2}>Intuitive<br />
 CMA Wizard</div>
 <div style={{ textAlign: "center",}}>
-    <img src={Dms7} width="100%"  style={{paddingTop:"25px", maxWidth:"320px"}} />
+    <img src={Cma} width="100%"  style={{paddingTop:"25px", maxWidth:"320px"}} />
 </div>
 </div>
 
@@ -186,7 +187,7 @@ Twitter, LinkedIn &amp; YouTube</div>
 </div>
 </div>
 
-<a id="demo"></a>
+
 </div>
 </Container>
 </div>
@@ -199,17 +200,21 @@ Twitter, LinkedIn &amp; YouTube</div>
 
 <div style={{ textAlign: "center", paddingTop: "20px" }}>
 <div className={classes.subtext2}>Automated creation of YouTube video tours</div>
-<div style={{ textAlign: "center",}}>
-    <img src={Dms7} width="100%"  style={{paddingTop:"25px", maxWidth:"320px"}} />
-</div>
+<div width="100%" style={{textAlign: "center", maxWidth:"520px",marginLeft:"auto",marginRight:"auto", paddingTop:"25px" }}>
+                <div style={{ textAlign: "center"}} className={classes.videoEmbed}>
+                        <iframe className={classes.videoContainer} src="https://www.youtube.com/embed/CwXlC7Xuojs"
+                         frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                </div>
+              </div>
 </div>
 
 </Container>
+<a id="demo"></a>
 </div>
 
 
 
-<a id="demo"></a>
+
 <div style={{backgroundColor:"#ffffff", paddingBottom:"60px", textAlign:"center", paddingRight:"30px", paddingLeft:"30px"}}>
         <h1 className={classes.Heading2} style={{paddingTop:"70px"}}>
         Take a Tour of Elevate Today

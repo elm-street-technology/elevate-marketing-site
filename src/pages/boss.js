@@ -6,6 +6,16 @@ import Container from "../components/Container";
 import BgSectionExternal3 from "../components/BgSectionExternal3";
 import Formboss from "../components/Formboss";
 import Bossbg from "../images/bossbg.jpg";
+import B1 from "../images/boss1.png";
+import B2 from "../images/boss2.png";
+import B3 from "../images/boss3.png";
+import B4 from "../images/boss4.png";
+import B5 from "../images/boss5.png";
+import B6 from "../images/boss6.png";
+import B7 from "../images/boss7.png";
+import B8 from "../images/boss8.png";
+import B9 from "../images/boss9.png";
+import B10 from "../images/boss10.png";
 import Fadebg from "../images/fadebg.jpg";
 import Bosslogo from "../images/bosslogo.png";
 import Bossstar from "../images/bossstar.png";
@@ -69,7 +79,7 @@ const Boss = ({ children, classes, data, tags }) => {
 
             <Container>
 
-                        <div style={{textAlign:"center", paddingRight:"35px", paddingLeft:"35px", paddingBottom:"35px"}}>
+                        <div style={{textAlign:"center", paddingRight:"35px", paddingLeft:"35px", paddingBottom:"25px"}}>
                             <div className={classes.Heading2}>Key Highlights</div>
                             <div className={classes.subtext}>The 1st true productivity platform in real estate offers a more efficient, cost-effective way<br />
                             to increase production &amp; help your agents sell more homes...faster.</div>     
@@ -83,28 +93,28 @@ const Boss = ({ children, classes, data, tags }) => {
 <div className={classes.top} style={{textAlign:"center"}}>
 
 
-<div className={classes.column4} style={{ textAlign: "center", paddingTop: "35px" }}>
-<img src={Quote} width="80" style={{paddingBottom:"15px"}}/>
+<div className={classes.column4} style={{ textAlign: "center", paddingTop: "45px" }}>
+<img src={B1} width="80" style={{paddingBottom:"15px"}}/>
 <div className={classes.subtext2}>Brokerage<br />
 recruiting module</div>
 
 </div>
 
-<div className={classes.column4} style={{ textAlign: "center", paddingTop: "35px" }}>
-<img src={Quote} width="80" style={{paddingBottom:"15px"}}/>
+<div className={classes.column4} style={{ textAlign: "center", paddingTop: "45px" }}>
+<img src={B2} width="80" style={{paddingBottom:"15px"}}/>
 <div className={classes.subtext2}>Brokerage-level<br />
 advanced dashboard</div>
 
 </div>
 
-<div className={classes.column4} style={{ textAlign: "center", paddingTop: "35px" }}>
-<img src={Quote} width="80" style={{paddingBottom:"15px"}}/>
+<div className={classes.column4} style={{ textAlign: "center", paddingTop: "45px" }}>
+<img src={B3} width="80" style={{paddingBottom:"15px"}}/>
 <div className={classes.subtext2}>Brokerage, office<br />
 &amp; agent KPIs</div>
 </div>
 
-<div className={classes.column4} style={{ textAlign: "center", paddingTop: "35px" }}>
-<img src={Quote} width="80" style={{paddingBottom:"15px"}}/>
+<div className={classes.column4} style={{ textAlign: "center", paddingTop: "45px" }}>
+<img src={B4} width="80" style={{paddingBottom:"15px"}}/>
 <div className={classes.subtext2}>Lead capture/response<br />
 routing &amp; tracking</div>
 </div>
@@ -119,28 +129,28 @@ routing &amp; tracking</div>
 <div className={classes.top} style={{textAlign:"center"}}>
 
 
-<div className={classes.column4} style={{ textAlign: "center", paddingTop: "35px" }}>
-<img src={Quote} width="80" style={{paddingBottom:"15px"}}/>
+<div className={classes.column4} style={{ textAlign: "center", paddingTop: "45px" }}>
+<img src={B5} width="80" style={{paddingBottom:"15px"}}/>
 <div className={classes.subtext2}>Lead generation,<br />
 parsing &amp; scrubbing</div>
 
 </div>
 
-<div className={classes.column4} style={{ textAlign: "center", paddingTop: "35px" }}>
-<img src={Quote} width="80" style={{paddingBottom:"15px"}}/>
+<div className={classes.column4} style={{ textAlign: "center", paddingTop: "45px" }}>
+<img src={B6} width="80" style={{paddingBottom:"15px"}}/>
 <div className={classes.subtext2}>Customer activity<br />
 workflows &amp; task coaching</div>
 
 </div>
 
-<div className={classes.column4} style={{ textAlign: "center", paddingTop: "35px" }}>
-<img src={Quote} width="80" style={{paddingBottom:"15px"}}/>
+<div className={classes.column4} style={{ textAlign: "center", paddingTop: "45px" }}>
+<img src={B7} width="80" style={{paddingBottom:"15px"}}/>
 <div className={classes.subtext2}>Document<br />
 management</div>
 </div>
 
-<div className={classes.column4} style={{ textAlign: "center", paddingTop: "35px" }}>
-<img src={Quote} width="80" style={{paddingBottom:"15px"}}/>
+<div className={classes.column4} style={{ textAlign: "center", paddingTop: "45px" }}>
+<img src={B8} width="80" style={{paddingBottom:"15px"}}/>
 <div className={classes.subtext2}>Agent-protected<br />
 databases</div>
 </div>
@@ -159,14 +169,14 @@ databases</div>
 <div className={classes.top} style={{textAlign:"center"}}>
 
 
-<div className={classes.column4} style={{ textAlign: "center", paddingTop: "35px" }}>
-<img src={Quote} width="80" style={{paddingBottom:"15px"}}/>
+<div className={classes.column4} style={{ textAlign: "center", paddingTop: "45px" }}>
+<img src={B9} width="80" style={{paddingBottom:"15px"}}/>
 <div className={classes.subtext2}>CMA Wizard</div>
 
 </div>
 
-<div className={classes.column4} style={{ textAlign: "center", paddingTop: "35px" }}>
-<img src={Quote} width="80" style={{paddingBottom:"15px"}}/>
+<div className={classes.column4} style={{ textAlign: "center", paddingTop: "45px" }}>
+<img src={B10} width="80" style={{paddingBottom:"15px"}}/>
 <div className={classes.subtext2}>Team capable</div>
 
 </div>

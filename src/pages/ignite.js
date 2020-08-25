@@ -11,6 +11,7 @@ import Ignitelogo from "../images/ignitelogo.png";
 import Ignstar from "../images/ignstar.png";
 import Quote from "../images/quote.png";
 import Sp1 from "../images/sp1.png";
+import Ppc from "../images/prodppc.png";
 import Ign2 from "../images/ign2.gif";
 import Ign3 from "../images/Ign3.png";
 import Sp5 from "../images/sp5.png";
@@ -46,12 +47,12 @@ const Ignite = ({ children, classes, data, tags }) => {
       <div className={classes.top}  style={{paddingBottom:"50px",}}>
 
              <div className={classes.column2} style={{ textAlign: "center", paddingBottom: "10px" }}>
-                 <a target="_blank" href="" className={classes.buttonLink}>Request Demo</a>
+                 <a href="#demo" className={classes.buttonLink}>Request Demo</a>
             </div>
 
 
             <div className={classes.column2} style={{ textAlign: "center", paddingBottom: "10px" }}>
-                <a target="_blank" href="" className={classes.buttonLink}>Compare Products</a>
+                <a target="_blank" href="/compare_products" className={classes.buttonLink}>Compare Products</a>
             </div>
 
 
@@ -91,7 +92,7 @@ const Ignite = ({ children, classes, data, tags }) => {
 <div className={classes.subtext2}>Pay-per-click (PPC) capture<br />
 of exclusive leads</div>
 <div style={{ textAlign: "center",}}>
-    <img src={Sp1} width="100%"  style={{paddingTop:"25px", maxWidth:"320px"}} />
+    <img src={Ppc} width="100%"  style={{paddingTop:"25px", maxWidth:"350px"}} />
 </div>
 </div>
 
@@ -100,7 +101,7 @@ of exclusive leads</div>
 <div className={classes.subtext2}>Advanced, intuitive CRM with<br />
 powerful performance metrics</div>
 <div style={{ textAlign: "center",}}>
-    <img src={Ign2} width="100%"  style={{paddingTop:"25px", maxWidth:"320px"}} />
+    <img src={Ign2} width="100%"  style={{paddingTop:"25px", maxWidth:"350px"}} />
 </div>
 </div>
 
@@ -118,7 +119,7 @@ powerful performance metrics</div>
 <div className={classes.subtext2}>Automated nurture<br />
 campaigns</div>
 <div style={{ textAlign: "center",}}>
-    <img src={Ign3} width="100%"  style={{paddingTop:"25px", maxWidth:"320px"}} />
+    <img src={Ign3} width="100%"  style={{paddingTop:"25px", maxWidth:"350px"}} />
 </div>
 </div>
 
@@ -126,11 +127,11 @@ campaigns</div>
 <div className={classes.subtext2}>Lead engagement<br />
 &amp; behavioral tracking</div>
 <div style={{ textAlign: "center",}}>
-    <img src={Ign4} width="100%"  style={{paddingTop:"25px", maxWidth:"320px"}} />
+    <img src={Ign4} width="100%"  style={{paddingTop:"25px", maxWidth:"350px"}} />
 </div>
 </div>
 
-
+<a id="demo"></a>
 </div>
 </Container>
 </div>

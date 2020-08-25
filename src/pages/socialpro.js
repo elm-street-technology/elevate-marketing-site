@@ -33,7 +33,7 @@ const Socialpro = ({ children, classes, data, tags }) => {
 <Container>
       <div className={classes.top} style={{paddingBottom:"30px", paddingRight:"35px", paddingLeft:"35px", paddingTop:"75px"}}>
           <div className={classes.centerHeading}>
-                            <img src={Sprologo} width="100%"  style={{paddingBottom:"18px", paddingTop:"20px",maxWidth:"330px"}} />
+                            <img src={Sprologo} width="100%"  style={{paddingBottom:"18px", paddingTop:"20px",maxWidth:"350px"}} />
                             <div className={classes.heading} style={{color:"#ffffff"}}>The Power of SOCIAL MEDIA</div>
                             <div className={classes.subtext} style={{color:"#f7f7f7", fontSize:"18px"}}>Turn your social media from a toy into a tool.
                             </div>
@@ -43,7 +43,7 @@ const Socialpro = ({ children, classes, data, tags }) => {
       <div className={classes.top}  style={{paddingBottom:"50px",}}>
 
              <div className={classes.column3} style={{ textAlign: "center", paddingBottom: "10px" }}>
-                 <a target="_blank" href="" className={classes.buttonLink}>Request Demo</a>
+                 <a href="#demo" className={classes.buttonLink}>Request Demo</a>
             </div>
 
             <div className={classes.column3} style={{ textAlign: "center", paddingBottom: "10px" }}>
@@ -51,7 +51,7 @@ const Socialpro = ({ children, classes, data, tags }) => {
             </div>
 
             <div className={classes.column3} style={{ textAlign: "center", paddingBottom: "10px" }}>
-                <a target="_blank" href="" className={classes.buttonLink}>Compare Products</a>
+                <a target="_blank" href="/compare_products" className={classes.buttonLink}>Compare Products</a>
             </div>
 
 
@@ -124,9 +124,12 @@ posted weekly</div>
 <div className={classes.column2} style={{ textAlign: "center", paddingTop: "20px" }}>
 <div className={classes.subtext2}>Automated creation of<br />
 YouTube video tours</div>
-<div style={{ textAlign: "center",}}>
-    <img src={Sp3} width="100%"  style={{paddingTop:"25px", maxWidth:"320px"}} />
-</div>
+<div width="100%" style={{textAlign: "center", maxWidth:"400px",marginLeft:"auto",marginRight:"auto", paddingTop:"25px" }}>
+                <div style={{ textAlign: "center"}} className={classes.videoEmbed}>
+                        <iframe className={classes.videoContainer} src="https://www.youtube.com/embed/CwXlC7Xuojs"
+                         frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                </div>
+              </div>
 </div>
 
 <div className={classes.column2} style={{ textAlign: "center", paddingTop: "20px" }}>
@@ -137,7 +140,7 @@ blog with weekly posts</div>
 </div>
 </div>
 
-
+<a id="demo"></a>
 </div>
 </Container>
 </div>
