@@ -247,7 +247,7 @@ class Formsingleproperty extends Component {
                 items={[
                   {
                     label: "An Existing Client",
-                    value: "Existing Client",
+                    value: "Existing Elevate Client",
                   },
                   {
                     label: "An Agent",
@@ -277,12 +277,37 @@ class Formsingleproperty extends Component {
              
               
               </div>
+
+              <div style={{textAlign:"left",fontSize:"14px",lineHeight:"19px"}}>
+                  <Field
+                id="role"
+                name="role"
+                label="I would like to:"
+                component={RadioGroup}
+                display="inline"
+                items={[
+                  {
+                    label: "Subscribe Today!",
+                    value: "Subscribe Today!",
+                  },
+                  {
+                    label: "Request a Demo",
+                    value: "Request a Demo",
+                  },
+
+                ]}
+                className={classes.field}
+              />
+
+             
+              
+              </div>
               <button
                 type="submit"
                 className={classes.signUpBtn}
                 disabled={isSubmitting}
               >
-                Request a Demo!
+                SUBMIT
               </button>
               </div>
               <div style={{fontSize:"11px", paddingBottom:"35px", lineHeight:"16px"}}>

@@ -5,8 +5,8 @@ import config from "../utils/siteConfig";
 import Container from "../components/Container";
 import Singlepropbg from "../images/singlepropbg.jpg";
 import Amlogo from "../images/amlogo.png";
-import Opt1 from "../images/option1.png";
-import Opt2 from "../images/option2.png";
+import Opt1 from "../images/monthly.png";
+import Opt2 from "../images/annually.png";
 import Singleprop from "../images/singleprop.gif";
 import Formsingleproperty from "../components/Formsingleproperty";
 import Test_pic1 from "../images/test_pic1.png";
@@ -34,6 +34,10 @@ const Singleproperty = ({ children, classes, data, tags }) => {
       <div className={classes.top} style={{paddingRight:"25px", paddingLeft:"25px", paddingTop:"85px", paddingBottom:"40px"}}>
           <div className={classes.centerHeading}>
                             <div className={classes.heading} style={{color:"#FCBA1E"}}>SINGLE PROPERTY WEBSITES</div>
+                            <br />
+                            <div className={classes.heading2} style={{color:"#FCBA1E"}}>ONLY $20 A MONTH!</div>
+                            <div className={classes.subtext2} style={{color:"#52B1AD",}}>With up to 5 Active Listings Per Month!</div>
+                            <br />
                             <div className={classes.subtext2} style={{color:"#52B1AD",}}>Stand-alone service OR add as an upgrade to
                             ANY Elevate DMS&trade;, DMS Plus&trade; or Elite&trade; subscription.</div>
                             <div className={classes.subtext} style={{color:"#f7f7f7"}}>Showcase properties and close deals faster by putting
@@ -75,57 +79,14 @@ const Singleproperty = ({ children, classes, data, tags }) => {
 </div>
 
 
-<div style={{ textAlign: "center", paddingTop:"35px", paddingBottom:"60px"}}>
-      <Container>
 
-
-        <div className={classes.top}>
-
-                  <div className={classes.column3} style={{ textAlign: "center", paddingTop: "30px" }}>
-                                    
-                  <img src={Opt1} width="100%"  style={{paddingBottom:"21px", maxWidth:"135px"}} />
-                                    <div className={classes.subtext2} style={{color:"#52B1AD",}}>PAY MONTHLY: $20/M</div>
-                                    <div className={classes.subtext}>For up to <span className={classes.bold}>5 LISTINGS!</span></div>
-                                    <a target="_blank" href="" className={classes.getStartedLink}>
-                                    Subscribe Now</a>
-                                  
-                  </div>
-
-                  <div className={classes.column3} style={{ textAlign: "center", paddingTop: "30px" }}>
-                                    
-                                    
-                  <img src={Opt2} width="100%"  style={{paddingBottom:"21px", maxWidth:"135px"}} />
-                                    <div className={classes.subtext2} style={{color:"#52B1AD",}}>PAY ANNUALLY: $220/YR</div>
-                                    <div className={classes.subtext}>with your <span className={classes.bold}>12TH MONTH FREE!</span></div>
-                                    <a target="_blank" href="" className={classes.getStartedLink}>
-                                    Subscribe Now</a>
-                                    
-
-                  </div>
-
-                  <div className={classes.column3} style={{ textAlign: "center", paddingTop: "30px" }}>
-                 
-                                    
-                  <div className={classes.heading} style={{color:"#FCBA1E", fontSize:"22px", lineHeight:"28px"}}>WANT TO<br />
-                  LEARN MORE?</div>
-                                    <div className={classes.subtext} >Connect with an<br />
-                                    <span className={classes.bold}>Elevate Success Coach!</span></div>
-                                    <a href="#learn_more" className={classes.getStartedLink}>
-                                    Request a Demo</a>
-                                  
-                  </div>
-
-
-                  <a id="learn_more"></a>     
-        </div>
-    </Container>
-    </div>
 
 
 
     <div style={{backgroundColor:"#f7f7f7", paddingBottom:"50px", paddingTop:"65px", paddingLeft:"25px", paddingRight:"25px", textAlign:"center"}}>
-    <div className={classes.heading} style={{color:"#FCBA1E", fontSize:"22px", lineHeight:"28px"}}>CONNECT WITH A SUCCESS COACH</div>
-    <div className={classes.subtext} >Schedule 15-minutes with an Elevate Success Coach to explore Elevate’s marketing power.</div>
+    <div className={classes.heading} style={{color:"#FCBA1E",}}>READY TO SUBSCRIBE?<br />
+    WANT A DEMO?</div>
+    <div className={classes.subtext} >Use this form to connect with an Elevate Success Coach TODAY.</div>
         <Formsingleproperty />
         {/* <div className={classes.closingContainer}>
           For Media Inquiries, {""} Please {""}
@@ -190,7 +151,7 @@ export default withStyles((theme) => ({
   },
 
   heading: {
-    fontSize: "33px",
+    fontSize: "36px",
     fontWeight: "700",
     lineHeight: "40px",
     letterSpacing: ".14px",
@@ -207,6 +168,14 @@ export default withStyles((theme) => ({
     fontWeight: "300",
     lineHeight: "24px",
     color: "#777777",
+  },
+
+  column2:{
+    width:"530px",
+    maxWidth: "100%",
+    paddingRight:"20px",
+    paddingLeft:"20px",
+    verticalAlign: "top",
   },
 
   column3:{
@@ -247,10 +216,10 @@ export default withStyles((theme) => ({
     textAlign: "center",
   },
 
-  Heading2: {
-    fontSize: "20px",
+  heading2: {
+    fontSize: "28px",
     fontWeight: "700",
-    lineHeight: "26px",
+    lineHeight: "33px",
     color: "#5ac0ba",
     letterSpacing: ".14px",
   },
