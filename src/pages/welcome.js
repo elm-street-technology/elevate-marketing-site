@@ -18,9 +18,10 @@ import Webinar from "../images/webinar_icon.png";
 import Emails from "../images/6emails_pic.png";
 import Dose from "../images/dose_pic.png";
 import Social from "../images/social_pic.jpg";
-import Email from "../images/email.jpg";
-import DL from "../images/dl.jpg";
-import Help from "../images/help.jpg";
+import Welc1 from "../images/welc1.png";
+import Welc2 from "../images/welc2.gif";
+import Welc3 from "../images/welc3.png";
+import Welcheader from "../images/welc_header.jpg";
 import Live from "../images/live.jpg";
 import Welcome from "../images/welcome.gif";
 import Vid from "../images/vidmock.jpg";
@@ -31,91 +32,106 @@ const welcome = ({ classes }) => {
   return (
     <div className={classes.root}>
       <SEO />
-      <Container>
-        <div className={classes.top}>
-          <div className={classes.centerHeading} style={{paddingBottom:"35px"}}>
-            <div className={classes.heading}><strong>Welcome to Elevate</strong></div>
-            <div className={classes.bold}>We invite you to explore your NEW Elevate experience.
-            
-</div>
-          </div>
-        </div>
-      </Container>
+      <div style={{backgroundImage:"url("+Welcheader+")", backgroundSize:"cover", backgroundPosition:"centerBottom"}}>
+                <Container>
+                        <div className={classes.top} style={{paddingBottom:"110px", paddingRight:"25px", paddingLeft:"25px", paddingTop:"115px"}}>
+                                  <div className={classes.centerHeading}>
+                                  <div className={classes.heading} style={{color:"#ffffff", paddingBottom:"15px"}}>Welcome to Elevate</div>
+                                  <div className={classes.subtext} style={{color:"#f7f7f7", fontSize:"18px", lineHeight:"26px"}}>We invite you to explore your NEW Elevate experience.
+                                  </div>
+                                  </div>
+                        </div>
+                </Container>
+      </div>
+
+
+
+
+
+
       
+      
+
+
+      <div style={{ textAlign: "center" }}>
       <Container>
-        <div className={classes.top}>
-          <div className={classes.column2} style={{ height:"950px", paddingTop:"20px",}}> 
+                    
 
-          <img src={Welcome} style={{ width:"100%", maxWidth:"675px"}}/>
-            
-            
-            
-
-          </div>
-          
-          <div className={classes.column3}>
-            <div className={classes.infoboxTeal}>
-              <div>
-            
-                <div className={classes.heading2} style={{color:"#FFFFFF"}}>Get Started Guide</div>
-                <span style={{color:"#FFFFFF"}}>
-                Let us walk you step-by-step through your Elevate experience.
+        <div className={classes.top} style={{paddingTop:"32px"}}>
 
 
-                </span>
-              </div>
-                <div>
-                <a target="_blank" href="/assets/elevate_welcome_ebook.pdf" className={classes.getStartedLink2}>
-                 Download PDF
-                    </a>
-                </div>
-            </div>
+                  <div className={classes.column3} style={{ textAlign: "center", paddingTop: "32px" }}>
 
-            <div className={classes.infoboxGray}>
-          
-              <div style={{textAlign:"center"}}>
-                <div className={classes.heading2}>Training Webinars</div>
-                <div style={{color:"#FFFFFF"}}>
-                Join a live walk-through with our Elevate Success Team to explore your new service.
+                                      <div className={classes.heading2} >Get Started Guide</div>
+                                      <div className={classes.subtext}>
+                                      Let us walk you<br />
+                                      step-by-step through your<br />
+                                      Elevate experience.</div>
+                                          <a target="_blank" href="/assets/elevate_welcome_ebook.pdf" className={classes.getStartedLink}>
+                                          Download PDF</a>
+                                      <div style={{ textAlign: "center", paddingTop:"8px", marginBottom:"-6px"}}>
+                                    <img src={Welc1} width="300" />
+                  </div>
+                  </div>
 
-                </div>
-                <a target="_blank" href="https://tryelevate.com/webinars/" className={classes.getStartedLink}>
-                  Register Now
-                    </a>
-              </div>
-            </div>
-
-            <div className={classes.infoboxTeal}>
-              <div>
              
-                <div className={classes.heading2} style={{color:"#FFFFFF"}}>Help Center</div>
-                <div style={{color:"#FFFFFF"}}>
-                Browse our easy-to-search knowledge base with any questions you may have.
 
+                  <div className={classes.column3} style={{ textAlign: "center", paddingTop: "32px" }}>
 
-                </div>
-              </div>
-                <div>
-                <a target="_blank" href="https://elmstreettechnology.zendesk.com/hc/en-us" className={classes.getStartedLink2}>
-                Browse Help
-                    </a>
-                </div>
-            </div>
+                                    <div className={classes.heading2} >Training Webinars</div>
+                                    <div className={classes.subtext}>
+                                      Join a live walk-through with<br />
+                                      our Elevate Success Team to<br />
+                                      explore your new service.</div>
+                                    <a target="_blank" href="https://tryelevate.com/webinars/" className={classes.getStartedLink}>
+                                    Register Now</a>
+                                    <div style={{ textAlign: "center", paddingTop:"8px", marginBottom:"-6px" }}>
+                                          <img src={Welc2} width="300" />
+                                    </div>
+                  </div>
 
-          </div>
+                  <div className={classes.column3} style={{ textAlign: "center", paddingTop: "32px" }}>
 
+                                    <div className={classes.heading2} >Help Center</div>
+                                    <div className={classes.subtext}>
+                                      Browse our easy-to-search<br />
+                                      knowledge base with any<br />
+                                      questions you may have.</div>
+                                    <a target="_blank" href="https://elmstreettechnology.zendesk.com/hc/en-us" className={classes.getStartedLink}>
+                                    Browse Help</a>
+                                    <div style={{ textAlign: "center",paddingTop:"8px", marginBottom:"-6px" }}>
+                                          <img src={Welc3} width="300" />
+                                    </div>
+                  </div>
+                  
         </div>
-      </Container>
+    </Container>
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
    
-      <div style={{backgroundColor:"gray",backgroundImage:"url("+Freebg+")"}}>
+      <div style={{backgroundColor:"#f7f7f7", paddingBottom:"25px"}}>
       <Container>
             <div className={classes.section}></div>
         <div className={classes.top}>
           <div className={classes.centerHeading} style={{paddingBottom:"55px",}}>
-            <div className={classes.heading} style={{color:"#ffffff"}}>
+            <div className={classes.heading}>
             FREE Tips, Tricks &amp; Strategies
             </div>
-            for marketing &amp; lead generation success.
+            <div className={classes.subtext}>for marketing &amp; lead generation success.</div>
           </div>
         </div>
       
@@ -126,15 +142,15 @@ const welcome = ({ classes }) => {
           <img src={Dose} style={{ width:"100%", maxWidth:"300px"}}/>
         </div>
             
-          <div className={classes.heading2} style={{color:"#ffffff"}}>Daily Marketing Tips<br />
+          <div className={classes.heading2}>Daily Marketing Tips<br />
 free daily email
 </div>
                 <div> 
-                Sign up to receive your daily dose<br />
+                <div className={classes.subtext}>Sign up to receive your daily dose<br />
                 of marketing awesomeness<br />
-                delivered straight to your inbox.
+                delivered straight to your inbox.</div>
                 </div>
-                <a target="_blank" href="http://3sixtyfive.agency/" className={classes.getStartedLink2}>
+                <a target="_blank" href="http://3sixtyfive.agency/" className={classes.getStartedLink}>
                   Register Today
                     </a>
                 
@@ -144,15 +160,15 @@ free daily email
           <div style={{ textAlign: "center",paddingBottom:"20px" }}>
           <img src={Emails} style={{ width:"100%", maxWidth:"300px"}}/>
         </div>
-          <div className={classes.heading2} style={{color:"#ffffff"}}>Email Marketing Tips<br />
+          <div className={classes.heading2}>Email Marketing Tips<br />
 free download
 </div>
                 <div> 
-                6 emails every real estate agent<br />
+                <div className={classes.subtext}>6 emails every real estate agent<br />
                 should be sending to nurture past,<br />
-                present &amp; future clients.
+                present &amp; future clients.</div>
                 </div>
-                <a target="_blank" href="/assets/6emails_elevate.pdf" className={classes.getStartedLink2}>
+                <a target="_blank" href="/assets/6emails_elevate.pdf" className={classes.getStartedLink}>
                   Download PDF
                     </a>
           </div>
@@ -161,15 +177,15 @@ free download
           <div style={{ textAlign: "center",paddingBottom:"20px" }}>
           <img src={Social} style={{ width:"100%", maxWidth:"300px"}}/>
         </div>
-          <div className={classes.heading2} style={{color:"#ffffff"}}>Social Media Tips<br />
+          <div className={classes.heading2}>Social Media Tips<br />
 free download
 </div>
                 <div> 
-                Quick tips to establishing<br />
+                <div className={classes.subtext}>Quick tips to establishing<br />
                 &amp; build your online presence<br />
-                &amp; strengthen relationships.
+                &amp; strengthen relationships.</div>
                 </div>
-                <a target="_blank" href="/assets/elevatesocialmediaebook.pdf" className={classes.getStartedLink2}>
+                <a target="_blank" href="/assets/elevatesocialmediaebook.pdf" className={classes.getStartedLink}>
                   Download PDF
                     </a>
           </div>
@@ -181,21 +197,7 @@ free download
       </div>
 
 
-      <Container>
-        <div className={classes.top}>
-          <div className={classes.centerHeading} style={{paddingTop:"70px"}}>
-            <div className={classes.heading}><strong>Enjoying your Elevate experience so far?</strong></div>
-            We’d love for you to share your experience.
-           
 
-
-            <div style={{paddingBottom:"50px", paddingTop:"20px"}}>
-            <a target="_blank" href="https://www.facebook.com/TryElevateRE/reviews/" className={classes.getStartedLink}>
-                  Write Us a Review
-                    </a></div>
-          </div>
-        </div>
-      </Container>
 
 
 
@@ -211,7 +213,7 @@ free download
 export default withStyles((theme) => ({
   root: {
     position: "relative",
-    paddingTop: "96px",
+    paddingTop: "10px",
     paddingBottom: "0px",
     lineHeight: "1.75em",
   },
@@ -223,8 +225,16 @@ export default withStyles((theme) => ({
   section:{
     paddingTop: "60px",
   },
+
+  subtext: {
+    fontSize: "16px",
+    fontWeight: "300",
+    lineHeight: "24px",
+    color: "#777777",
+  },
+
   heading: {
-    color: theme.colors.secondary,
+    color: "#52B1AD",
     fontSize: "32px",
     lineHeight:"40px",
     fontWeight: "700",
@@ -232,8 +242,9 @@ export default withStyles((theme) => ({
     paddingBottom: "20px",
   },
   heading2: {
-    color: theme.colors.secondary,
-    fontSize: "22px",
+    color: "#52B1AD",
+    fontSize: "20px",
+    lineHeight: "28px",
     fontWeight: "700",
     marginRight: "auto",
     paddingBottom: "20px",
@@ -285,7 +296,7 @@ export default withStyles((theme) => ({
     fontWeight: "700",
     display: "block",
     letterSpacing: ".25px",
-    backgroundColor: theme.colors.secondary,
+    backgroundColor: "#52B1AD",
     color: "#FFF",
     textDecoration: "none",
     padding: "14px 16px",
