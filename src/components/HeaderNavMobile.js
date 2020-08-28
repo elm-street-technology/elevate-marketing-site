@@ -15,26 +15,29 @@ const HeaderNavMobile = ({ classes, className, onMenuClose }) => {
       <div className={classes.link}>
         <div className={classes.navItem}>Products</div>
         <ul className={classes.dropDown}>
-          <Link className={classes.listItemLink} to="/elevate-dms">
-            <li className={classes.listItem}>DMS&trade;</li>
+          <Link className={classes.listItemLink} to="/elevate_at_a_glance">
+            <li className={classes.listItem}>Elevate At-A-Glance</li>
           </Link>
-          <Link className={classes.listItemLink} to="/elevate-social-pro">
+          <Link className={classes.listItemLink} to="/socialpro">
             <li className={classes.listItem}>Social Pro&trade;</li>
           </Link>
-          <Link className={classes.listItemLink} to="/elevate-idx">
-            <li className={classes.listItem}>IDX&trade;</li>
-          </Link>
-          <Link className={classes.listItemLink} to="/elevate-ignite">
+          <Link className={classes.listItemLink} to="/ignite">
             <li className={classes.listItem}>Ignite&trade;</li>
           </Link>
-          <Link className={classes.listItemLink} to="/elevate-elite">
+          <Link className={classes.listItemLink} to="/elevatedms">
+            <li className={classes.listItem}>DMS&trade;</li>
+          </Link>
+          <Link className={classes.listItemLink} to="/dmsplus">
+            <li className={classes.listItem}>DMS Plus&trade;</li>
+          </Link>
+          <Link className={classes.listItemLink} to="/elite">
             <li className={classes.listItem}>Elite&trade;</li>
           </Link>
-          <Link className={classes.listItemLink} to="/elevate-crm">
-            <li className={classes.listItem}>CRM&trade;</li>
+          <Link className={classes.listItemLink} to="/boss">
+            <li className={classes.listItem}>BOSS&trade;</li>
           </Link>
-          <Link className={classes.listItemLink} to="/recruiter">
-            <li className={classes.listItem}>Recruiter</li>
+          <Link className={classes.listItemLink} to="/compare_products">
+            <li className={classes.listItem}>Compare Products</li>
           </Link>
         </ul>
       </div>
