@@ -84,8 +84,8 @@ class Formsingleproperty extends Component {
             email: "",
             phone: "",
             mls_number: "",
-            form: "socialmediaguide",
-            list: 103210,
+            form: "singleproperty",
+            list: 106794,
             meetingdate: '',
             meetingtime: '',
             role: "",
@@ -106,7 +106,7 @@ class Formsingleproperty extends Component {
           onSubmit={(values, { setSubmitting }) => {
             //if (values.meetingdate != undefined) {
             var meeting_request = '';
-            var notes = 'Interests: ';
+            var notes = '';
             Object.keys(values).forEach(function (key, index) {
               // key: the name of the object key
               // index: the ordinal position of the key within the object 
@@ -128,7 +128,7 @@ class Formsingleproperty extends Component {
               }
               if (key == "interests"){
                 if(values.interests.length > 0){
-                  notes = notes + "," + values.interests.join(",");
+                  notes = notes + values.interests;
                 }
               }
               if (key == "demorequest"){
@@ -280,19 +280,19 @@ class Formsingleproperty extends Component {
 
               <div style={{textAlign:"left",fontSize:"14px",lineHeight:"19px"}}>
                   <Field
-                id="role"
-                name="role"
+                id="interests"
+                name="interests"
                 label="I would like to:"
                 component={RadioGroup}
                 display="inline"
                 items={[
                   {
                     label: "Subscribe Today!",
-                    value: "Subscribe Today!",
+                    value: "I would like to Subscribe Today",
                   },
                   {
                     label: "Request a Demo",
-                    value: "Request a Demo",
+                    value: "I would like a Demo",
                   },
 
                 ]}

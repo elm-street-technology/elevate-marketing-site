@@ -98,40 +98,6 @@ const Singleproperty = ({ children, classes, data, tags }) => {
           </a>
         </div> */}
  </div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
     </div>
   );
 };
@@ -142,6 +108,7 @@ export default withStyles((theme) => ({
     flexDirection: "column",
     width: "100%",
     margin: "auto",
+    marginTop: "-80px",
   },
 
   top: {
