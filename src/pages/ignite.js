@@ -13,7 +13,7 @@ import Quote from "../images/quote.png";
 import Sp1 from "../images/sp1.png";
 import Ppc from "../images/prodppc.png";
 import Ign2 from "../images/ign2.gif";
-import Ign3 from "../images/Ign3.png";
+import Ign3 from "../images/ign3.png";
 import Sp5 from "../images/sp5.png";
 import Ign4 from "../images/ign4.png";
 import Glance4 from "../images/glance4.png";
