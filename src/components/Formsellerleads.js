@@ -4,6 +4,7 @@ import { Formik, Form, Field } from "formik";
 import * as Yup from "yup";
 import Alert from "elevate-ui/Alert";
 import Input from "elevate-ui/Input";
+import RadioGroup from "elevate-ui/RadioGroup";
 import Typography from "elevate-ui/Typography";
 import withStyles from "elevate-ui/withStyles";
 import Datetime from "elevate-ui/Datetime";
@@ -38,22 +39,6 @@ class Formsellerleads extends Component {
       var interestedMarkets = "Interested markets: "+this.state.market1+" - "+this.state.market2+" - "+this.state.market3;
       var thisCompany = "Company: "+this.state.company;
       var eventDesc = encodeURIComponent(thisCompany+", "+interestedMarkets);
-
-      var tempCode = `
-      <!-- Calendly inline widget begin -->
-      <iframe style="height:740px" src="https://calendly.com/estsean/15min-1?embed_domain=&amp;embed_type=Inline&amp;name=`;
-      
-      tempCode += encodeURIComponent(this.state.firstname+" "+this.state.lastname);
-      tempCode += `&amp;email=`;
-      tempCode += encodeURIComponent(this.state.email);
-      tempCode += `&amp;a1=`;
-      tempCode += this.state.phone.replace(/\D/g, '');
-      tempCode += `&amp;a2=`;
-      tempCode += eventDesc;
-      tempCode += `" width="100%" height="100%" frameborder="0"></iframe>
-          <!--Calendly inline widget end-- >
-      `;
-      this.setState({ calEmbed: tempCode});
 
       this.setState({ showCalForm: true});
     }
@@ -158,6 +143,9 @@ class Formsellerleads extends Component {
                   notes = notes + ", Requesting 15 min demo";
                 }
               }
+              if (key == "interestedIn"){
+                notes = notes + ", Interested In: " + values.interestedIn;
+              }
             });
 
             const body = { ...values, 
@@ -211,14 +199,44 @@ class Formsellerleads extends Component {
                 <Field id="email" name="email" label="Email" component={Input} className={classes.field} onBlur={this.setFormVal} />
                 <Field id="phone" name="phone" label="Phone" component={Input} className={classes.field} type="tel" onBlur={this.setFormVal} />
                 <Field id="company" name="company" label="Affiliation (optional)" component={Input} className={classes.field} onBlur={this.setFormVal} />
-                <div style={{ width: "100%", textAlign: "center" }}>
+                <div style={{ width: "100%", textAlign: "left", fontWeight: "600", margin: "20px", marginLeft:"5px" }}>
                   What are your top 3 markets of interest? (optional)
                 </div>
                 <Field id="market1" name="market1" label="City/State" component={Input} className={classes.field} onBlur={this.setFormVal} />
                 <Field id="market2" name="market2" label="City/State" component={Input} className={classes.field} onBlur={this.setFormVal} />
                 <Field id="market3" name="market3" label="City/State" component={Input} className={classes.field} onBlur={this.setFormVal} />
+                <div style={{textAlign: "left",}} className={classes.fieldCenter}>
+                  <div style={{ width: "100%", margin: "20px", marginLeft:"5px" }}>
+                  I am interested in:
+                  </div>
+                  <div style={{marginLeft:"20px"}}>
+                <Field
+                id="interestedIn"
+                name="interestedIn"
+                label=''
+                component={RadioGroup}
+                items={[
+                  {
+                    label: "Seller Only Leads",
+                    value: "Seller Only Leads",
+                  },
+                  {
+                    label: "Buyer Only Leads",
+                    value: "Buyer Only Leads",
+                  },
+                  {
+                    label: "A Mix of Buyer / Seller Leads",
+                    value: "A Mix of Buyer / Seller Leads",
+                  },
+                ]}
+                
+              />
+              </div>
+              </div>
+              <div style={{marginTop:"20px"}}>
                 Schedule 15 minutes with a Lead Generation Specialist:
                 <Field id="demorequest" name="demorequest" type="checkbox" value="yes" className={classes.checkfield}  />
+                </div>
                 
                 <button type="submit" className={classes.signUpBtn} disabled={isSubmitting}>
                   SUBMIT
@@ -254,6 +272,9 @@ export default withStyles((theme) => ({
     borderRadius: "6px",
     border: "2px solid #ECECEC",
     height: "50px",
+    fontWeight: "600",
+  },
+  fieldCenter: {
     fontWeight: "600",
   },
   selectfield: {
