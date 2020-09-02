@@ -213,8 +213,8 @@ class Header extends Component {
       </header>
         {thisPath != '/leadgen' && thisPath != '/leadgen/' && 
         <div className={classes.violator}>
-          <span style={{fontWeight:"bold"}}>THIS MONTH ONLY:  50% off your 1st 2-months of Elevate Lead Generation </span><br/>
-          <Link to="/leadgen" style={{color:"#FFFFFF"}}>learn more</Link>
+          <span style={{fontWeight:"bold"}}>EXCLUSIVE SELLER LEADS: September Pre-Sale</span><br/>
+          <Link to="/sellerleads" style={{color:"#FFFFFF"}}>Claim Your Markets NOW!</Link>
         </div>
             }
       </div>
@@ -308,7 +308,7 @@ export default withStyles((theme) => ({
     visibility: "visible",
   },
   violator:{
-    display:"none",
+    display:"fixed",
     background:"#f78d10",
     color:"#FFFFFF",
     position:"fixed",

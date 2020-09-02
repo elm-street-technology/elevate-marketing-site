@@ -313,21 +313,19 @@ class Index extends Component {
         <div id="myModal" className={classes.modal}>
           <div className={classes.modalContent}>
             <span id="modalClose" className={classes.close}>&times;</span>
-            <div style={{color:"#f78d10",fontSize:"24px",fontWeight:"bold",paddingBottom:"20px"}}>AUGUST SPECIAL OFFER!</div>
-            <div style={{color:"#f78d10",fontSize:"38px",fontWeight:"bold",paddingBottom:"10px", lineHeight:"42px"}}>50% OFF YOUR<br />
-            1st 2-MONTHS
+            <div style={{color:"#f78d10",fontSize:"24px",fontWeight:"bold",paddingBottom:"5px"}}>EXCLUSIVE</div>
+            <div style={{color:"#f78d10",fontSize:"38px",fontWeight:"bold",paddingBottom:"10px", lineHeight:"42px"}}>SELLER LEADS
           </div>
             <div>
               <span style={{fontWeight:"bold"}}>
-              of Elevate Lead Generation:<br />
-              Ignite&trade;, DMS Plus&trade;, or Elite&trade;    
+              September Pre-Sale   
               </span>
             </div> 
 
             <div>
               <div>
-                <Link to="/get-started" className={classes.ctabutton} style={{maxWidth:"550px"}}>
-                Schedule a Demo
+                <Link to="/sellerleads" className={classes.ctabutton} style={{maxWidth:"550px"}}>
+                Claim Your Markets NOW!
                 </Link>
               </div>
             </div>         
@@ -606,7 +604,7 @@ cardinner: {
 },
 
 modal: {
-  display: "none",
+  display: "inherit",
   position: "fixed",
   zIndex: "10000",
   paddingTop: "0px",
