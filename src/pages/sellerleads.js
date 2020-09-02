@@ -32,11 +32,11 @@ const Sellerleads = ({ children, classes, data, tags }) => {
       </Helmet>
       <SEO postNode={postNode} pagePath="sellerleads" customTitle />
 
-<div style={{backgroundImage:"url("+Sellerleadsbg+")", backgroundSize:"cover", backgroundPosition:"centerTop", paddingBottom:"65px", paddingTop:"45px"}}>
+<div style={{backgroundImage:"url("+Sellerleadsbg+")", backgroundSize:"cover", backgroundPosition:"centerTop", paddingBottom:"65px"}}>
 <Container>
-      <div className={classes.top} style={{paddingRight:"35px", paddingLeft:"35px", paddingTop:"85px", paddingBottom:"35px"}}>
+      <div className={classes.top} style={{paddingRight:"35px", paddingLeft:"35px", paddingTop:"45px", paddingBottom:"35px"}}>
           <div className={classes.centerHeading}>
-          <img src={Sellerleadslogo} width="100%"  style={{paddingRight:"28px", paddingLeft:"28px", maxWidth:"600px"}} />
+          <img src={Sellerleadslogo} width="100%"  style={{maxWidth:"600px"}} />
                             <br />
                             <div className={classes.subtext2} style={{color:"#ffffff",}}>September pre-sale.<br />
                             Program launching Oct 2020.</div>        
@@ -81,10 +81,10 @@ const Sellerleads = ({ children, classes, data, tags }) => {
 
 
 
-    <div style={{backgroundColor:"#ffffff", paddingBottom:"50px", paddingTop:"65px", paddingLeft:"30px", paddingRight:"30px", textAlign:"center"}}>
-    <div className={classes.heading}>Markets across the entire<br />
-    U.S. now available</div>
-    <div className={classes.subtext} style={{paddingBottom:"20px"}}>Claim Yours Today!</div>
+    <div style={{backgroundColor:"#ffffff", paddingBottom:"70px", paddingTop:"55px", paddingLeft:"30px", paddingRight:"30px", textAlign:"center"}}>
+    <div className={classes.heading}>Exclusive Seller Leads<br />
+    Now Available Across the Entire U.S.</div>
+    <div className={classes.subtext} style={{paddingBottom:"25px"}}>Claim Yours Today!</div>
         <Formsellerleads />
         {/* <div className={classes.closingContainer}>
           For Media Inquiries, {""} Please {""}
