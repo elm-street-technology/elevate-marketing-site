@@ -4,6 +4,7 @@ import { Formik, Form, Field } from "formik";
 import * as Yup from "yup";
 import Alert from "elevate-ui/Alert";
 import Input from "elevate-ui/Input";
+import RadioGroup from "elevate-ui/RadioGroup";
 import Typography from "elevate-ui/Typography";
 import withStyles from "elevate-ui/withStyles";
 import Datetime from "elevate-ui/Datetime";
@@ -142,6 +143,7 @@ class FormLeadgen extends Component {
             )} onSubmit={(values, { setSubmitting }) => {
             //console.log(values.meetingdate);
             var meeting_request = '';
+            let notes = "Interested Markets: " + values.market1 + "," + values.market2 + "," + values.market3;
 
             Object.keys(values).forEach(function (key, index) {
               // key: the name of the object key
@@ -151,11 +153,19 @@ class FormLeadgen extends Component {
                   meeting_request = values.meetingdate.format("YYYY-MM-DD") + "T" + values.meetingtime.replace(" (EDT)", "") + "-04:00"
                 }
               }
+              if (key == "interestedIn"){
+                notes = notes + ", Interested In: " + values.interestedIn;
+              }
+              if (key == "demorequest"){
+                if(values.demorequest) {
+                  notes = notes + ", Requesting 15 min demo";
+                }
+              }
             });
 
             const body = { ...values, 
               demo_request_date: meeting_request,
-              notes: "Interested Markets: " + values.market1 + "," + values.market2 + "," + values.market3, 
+              notes, 
               utm_campaign: window.utm_tags ? window.utm_tags.campaign : "", 
               utm_source: window.utm_tags ? window.utm_tags.source : "", 
               utm_medium: window.utm_tags ? window.utm_tags.medium : "", 
@@ -199,14 +209,16 @@ class FormLeadgen extends Component {
                 <div className={classes.headingLarge}>
                 
                 <br /> 
-                LIMITED AVAILABILITY ON EXCLUSIVE BUYER / SELLER LEADS
+                
+
+                EXCLUSIVE REAL ESTATE BUYER / SELLER LEADS
                 </div>
                 <div className={classes.headingSmall}>
-                  Exclusive leads in markets across the U.S.
+                Seller, Buyer, or a Mix of Both
                 </div>
                 <div className={classes.headingText} style={{ marginTop: "10px" }}>
-                  First Come. First Served.<br/>
-Check availability today.
+                Limited availability across U.S.<br/>
+                Secure your markets today.
                 </div>
               </div>
               <div style={{ maxWidth: "500px", marginLeft: "auto", marginRight: "auto" }}>
@@ -217,12 +229,40 @@ Check availability today.
                 <Field id="email" name="email" label="Email" component={Input} className={classes.field} onBlur={this.setFormVal} />
                 <Field id="phone" name="phone" label="Phone" component={Input} className={classes.field} type="tel" onBlur={this.setFormVal} />
                 <Field id="company" name="company" label="Affiliation (optional)" component={Input} className={classes.field} onBlur={this.setFormVal} />
-                <div style={{ width: "100%", textAlign: "center" }}>
+                <div style={{ width: "100%", textAlign: "left", paddingTop: '10px', paddingBottom:"10px"}}>
                   What are your top 3 markets of interest? (optional)
                 </div>
                 <Field id="market1" name="market1" label="City/State" component={Input} className={classes.field} onBlur={this.setFormVal} />
                 <Field id="market2" name="market2" label="City/State" component={Input} className={classes.field} onBlur={this.setFormVal} />
                 <Field id="market3" name="market3" label="City/State" component={Input} className={classes.field} onBlur={this.setFormVal} />
+                <div style={{textAlign: "left",}} className={classes.fieldCenter}>
+                  <div style={{ width: "100%", margin: "20px", marginLeft:"5px" }}>
+                  I am interested in:
+                  </div>
+                  <div style={{marginLeft:"20px"}}>
+                <Field
+                id="interestedIn"
+                name="interestedIn"
+                label=''
+                component={RadioGroup}
+                items={[
+                  {
+                    label: "Seller Only Leads",
+                    value: "Seller Only Leads",
+                  },
+                  {
+                    label: "Buyer Only Leads",
+                    value: "Buyer Only Leads",
+                  },
+                  {
+                    label: "A Mix of Buyer / Seller Leads",
+                    value: "A Mix of Buyer / Seller Leads",
+                  },
+                ]}
+                
+              />
+              </div>
+              </div>
                 Schedule 15 minutes with a Lead Generation Specialist:
                 <Field id="demorequest" name="demorequest" type="checkbox" value="yes" className={classes.checkfield}  />
                 
