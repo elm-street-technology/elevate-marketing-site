@@ -40,12 +40,37 @@ const Bright = ({ children, classes, data, tags }) => {
 </Container>
 
 <BrightBgSectionExternal bgImage={Eboss} secTitle="BROKERS...Meet the BOSS" secLink="#form" secButton="request a demo today">
-              One singular solution for all of your real estate needs. The 1st true productivity platform in real estateoffers a more efficient, cost-effective wayto increase production &amp; help your agentssell more homes...faster.
+              One singular solution for all of your real estate needs. The 1st true productivity platform in real estate offers a more efficient, cost-effective way to increase production &amp; help your agents sell more homes...faster.
 </BrightBgSectionExternal>
 
 
+<div style={{paddingTop:"50px", paddingBottom:"30px", backgroundColor:"#ffffff"}}>
+    <Container>
+    <div style={{textAlign:"center", paddingBottom:"5px", padding:"25px"}}><div className={classes.heading}>Meet the BOSS in 2-1/2 Minutes</div>
+    </div>
+            
+            <div style={{textAlign: "center", maxWidth:"700px",marginLeft:"auto",marginRight:"auto", paddingBottom:"50px"}}>
+                <div style={{ textAlign: "center"}} className={classes.videoEmbed}>
+                        <iframe className={classes.videoContainer} src="https://www.youtube.com/embed/13M8wP5kU7M"
+                         frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                </div>
+              </div>
+                
+              
+                
+            
 
-<div style={{paddingTop:"50px", paddingBottom:"20px",}}>
+        
+    </Container>
+</div> 
+
+
+
+
+
+
+
+<div style={{paddingTop:"60px", paddingBottom:"50px", backgroundColor:"#f7f7f7"}}>
         <Container>
             <div className={classes.flexContainer}>
                 <div className={classes.flexItem}>
@@ -67,7 +92,7 @@ const Bright = ({ children, classes, data, tags }) => {
         </Container>
 </div>
 
-<div style={{paddingTop:"20px", paddingBottom:"50px", backgroundColor:"#ffffff"}}>
+<div style={{paddingTop:"60px", paddingBottom:"50px", backgroundColor:"#ffffff"}}>
     <Container>
     <div style={{textAlign:"center", paddingBottom:"5px", padding:"25px"}}><div className={classes.heading}>The Power of PRODUCTIVITY</div>
     <div className={classes.subtext}><strong>One</strong> vendor. <strong>One</strong> point of contact. <strong>One</strong> solution. <strong>For you entire office.</strong></div></div>
@@ -103,62 +128,13 @@ const Bright = ({ children, classes, data, tags }) => {
 </div> 
 
 
-<BrightBgSectionExternal bgImage={Spro} secTitle="AGENTS...Here’s your all-in-one marketing solution" secLink="#form" secButton="request a demo today">
-                Turn your online marketing from a toy into a tool. Automate your social media marketing so you can focus on what
-                matters the most...growing your sphere &amp; selling more homes, faster.
-</BrightBgSectionExternal>
 
 
 
-<div style={{paddingTop:"50px", paddingBottom:"20px",}}>
-        <Container>
-            <div className={classes.flexContainer}>
-                <div className={classes.flexItem}>
 
-                   
-                <iframe width="100%" height="330" src="https://www.youtube.com/embed/63j2UGFEfU4?rel=0"
-          frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-                    
 
-                </div>
-                <div className={classes.flexItem} style={{padding:"20px",}}>
-                <div style={{ textAlign: "left",paddingBottom:"22px" }}>
-                            <img src={Sprologo} width="270" />
-                            </div>
-                <div className={classes.subtext}>Available to Bright MLS agents and teams, this intuitive, comprehensive solution offers agents an all-in-one solution including IDX websites, an advanced productivity CRM, dynamic MLS-fed CMA wizards, pay-per-click lead generation services, Voiceover IP, automated email, social media, text and blog campaigns, and more.</div>
-                    
-                </div>
-            </div>
-        </Container>
-</div>
 
-<div style={{paddingTop:"20px", paddingBottom:"50px", backgroundColor:"#ffffff"}}>
-    <Container>
-    <div style={{textAlign:"center", paddingBottom:"5px", padding:"25px"}}><div className={classes.heading}>The Power of MARKETING</div>
-    <div className={classes.subtext}>Turn your social media from a toy into a tool, today.</div></div>
-            <div className={classes.flexContainer}>
-                <div className={classes.flexItem3} style={{padding:"20px",}}>  
-                      <div className={classes.subtext}>• IDX Website<br />
-                          • Advanced Productivity CRM<br />
-                          • Dynamic-fed CMA Wizard<br />
-                          • Robust Blog with Automated Content
-                      </div>
-                </div>
-                <div className={classes.flexItem2} style={{padding:"20px",}}>
-                      <div className={classes.subtext}>• Email &amp; Text Campaigns<br />
-                          • Bright MLS Integration<br />
-                          • Voiceover IP (VoIP)<br />
-                          • Pay-Per-Click Lead Generation</div>
-                </div>
-
-                <div className={classes.flexItem2} style={{padding:"20px",}}>
-                <div className={classes.heading} style={{fontSize:"24px",}}>and MORE...</div>
-                </div>
-            </div>
-
-        
-    </Container>
-</div> 
+ 
 
 
 
@@ -168,10 +144,9 @@ const Bright = ({ children, classes, data, tags }) => {
 
         <div >
             <div style={{ maxWidth: "900px", backgroundColor: "#f7f7f7", marginRight:"auto",marginLeft:"auto", paddingTop:"60px", paddingBottom:"60px"}}>
-                <div className={classes.landingHeaderStyle}>
-                   
-                </div>
-                <div style={{ paddingLeft: "10px", paddingRight: "10px"}}>
+            <div className={classes.heading}>Schedule Your Confidential One-On-One</div>
+            <div className={classes.subtext} style={{textAlign:"center"}}>with the Elevate Brokerage Development Team</div>
+                <div style={{ paddingLeft: "30px", paddingRight: "30px", paddingTop:"25px"}}>
                     <FormBright />
                 </div>
                 <div>
@@ -213,6 +188,23 @@ export default withStyles((theme) => ({
     fontWeight: "300",
     lineHeight: "24px",
     color: "#777777",
+  },
+
+  videoEmbed:{
+    position: "relative",
+    paddingBottom: "56.25%",
+    paddingTop: "30px",
+    height: "0",
+    overflow: "hidden",
+    
+  },
+  videoContainer:{
+    position: "absolute",
+    top: "0",
+    left: "0",
+    width: "100%",
+    height: "100%",
+    
   },
 
   centerHeading:{
