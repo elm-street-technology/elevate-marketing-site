@@ -70,8 +70,8 @@ const subscribe_today = ({ classes }) => {
                 <span className={classes.bold} style={{color:"#4ab8ac"}}>ANNUAL AGREEMENT</span>
                 <br />
                   <br />
-                  <div className={classes.bold} style={{color:"#4ab8ac", paddingTop:"28px"}}>Monthly: $249/m</div>
-<div className={classes.bold} style={{color:"#4ab8ac", textDecoration:"line-through"}}>One Time Set-Up: $500</div>
+                  <div className={classes.bold} style={{color:"#4ab8ac", paddingTop:"8px"}}>Monthly: $249/m</div>
+
 
 
 <a target="_blank" href="https://elmstreettechnology.recurly.com/subscribe/edigitalmarketingsystem" className={classes.getStartedLinkignite}>
@@ -115,8 +115,8 @@ const subscribe_today = ({ classes }) => {
                 <span className={classes.bold} style={{color:"#238076"}}>ANNUAL AGREEMENT</span>
                 <br />
                   <br />
-                  <div className={classes.bold} style={{color:"#238076", paddingTop:"28px"}}>Monthly: $499/m</div>
-<div className={classes.bold} style={{color:"#238076", textDecoration:"line-through"}}>One Time Set-Up: $500</div>
+                  <div className={classes.bold} style={{color:"#238076", paddingTop:"8px"}}>Monthly: $499/m</div>
+
 
 
 <a target="_blank" href="https://elmstreettechnology.recurly.com/subscribe/dmsplus" className={classes.getStartedLinkignite}>
@@ -162,8 +162,8 @@ const subscribe_today = ({ classes }) => {
                 <br /><br />
 
 
-                <div className={classes.bold} style={{color:"#f15953", paddingTop:"28px"}}>Monthly: $899/m</div>
-<div className={classes.bold}  style={{color:"#f15953", textDecoration:"line-through"}}>One Time Set-Up: $800</div>
+                <div className={classes.bold} style={{color:"#f15953", paddingTop:"8px"}}>Monthly: $899/m</div>
+
 
                 
 <a target="_blank" href="https://elmstreettechnology.recurly.com/subscribe/elevateelite" className={classes.getStartedLinkignite}>
