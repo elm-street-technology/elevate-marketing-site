@@ -41,7 +41,7 @@ const HeaderNavDesktop = ({ classes, className }) => {
       </div>
 
 
-
+      {/*
       <div className={classes.link}>
         <div className={classes.navItem}>
           Solutions
@@ -59,6 +59,7 @@ const HeaderNavDesktop = ({ classes, className }) => {
           </Link>
         </ul>
       </div>
+      */}
 
       <div className={classes.link}>
         <div className={classes.navItem}>

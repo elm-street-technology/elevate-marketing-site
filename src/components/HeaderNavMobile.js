@@ -42,6 +42,7 @@ const HeaderNavMobile = ({ classes, className, onMenuClose }) => {
         </ul>
       </div>
 
+      {/*
       <div className={classes.link}>
         <div className={classes.navItem}>Solutions</div>
         <ul className={classes.dropDown}>
@@ -56,6 +57,7 @@ const HeaderNavMobile = ({ classes, className, onMenuClose }) => {
           </Link>
         </ul>
       </div>
+      */}
 
       <div className={classes.link}>
         <div className={classes.navItem}>Explore</div>
