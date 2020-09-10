@@ -172,11 +172,7 @@ class FormBright extends Component {
           }}
           render={({ values, isSubmitting,handleBlur, handleChange }) => (
             <Form noValidate>
-              <div style={{marginBottom:"30px"}}>
-                <div className={classes.headingLarge}>Explore the Power<br />
-                of PRODUCTIVITY Today!</div>
-                <div className={classes.headingText} style={{ marginTop: "20px" }}>Speak to an Elevate Success Coach NOW:  833-978-1196</div>
-                </div>
+              
               <div style={{ maxWidth: "500px",marginLeft:"auto",marginRight:"auto"}}>
               <div className={classes.topRow}>
                 <Field
@@ -226,24 +222,20 @@ class FormBright extends Component {
               <Field
                 id="role"
                 name="role"
-                label="I am a(n)  &nbsp;&nbsp;(optional)"
+                label="I am:"
                 component={RadioGroup}
                 display="inline"
                 items={[
                   {
-                    label: "Agent",
-                    value: "Agent",
+                    label: "a Broker/Owner in Bright MLS",
+                    value: "a Broker/Owner in Bright MLS",
                   },
                   {
-                    label: "Team",
-                    value: "Team",
+                    label: "a Recruiter for a Broker/Owner in Bright MLS",
+                    value: "a Recruiter for a Broker/Owner in Bright MLS",
                   },
                   {
-                    label: "Broker",
-                    value: "Broker",
-                  },
-                  {
-                    label: "Other (please specify)*",
+                    label: "Other (please specify)",
                     value: "Other",
                   },
                 ]}
@@ -271,12 +263,16 @@ class FormBright extends Component {
                     value: "Elevate BOSS for my brokerage",
                   },
                   {
-                    label: "Social Pro to conquer my online marketing",
-                    value: "Social Pro to conquer my online marketing",
+                    label: "Lead generation solutions for my brokerage",
+                    value: "Lead generation solutions for my brokerage",
                   },
                   {
-                    label: "Lead Generation and scrubbing services",
-                    value: "Lead Generation and scrubbing services",
+                    label: "Elevate BOSS™’s recruitment program",
+                    value: "Elevate BOSS’s recruitment program",
+                  },
+                  {
+                    label: "Consolidating technology & saving money",
+                    value: "Consolidating technology & saving money",
                   },
                   {
                     label: "Other (please specify)",
@@ -305,8 +301,8 @@ class FormBright extends Component {
                 let's connect
               </button>
               </div>
-              <div style={{fontSize:"11px"}}>
-              By submitting this form, you are requesting to be contacted by a member of the Elevate Sales Team at the details provided via text, email or call (may involve automated or pre-recorded means).  You may revoke this consent through any reasonable means.<br/>
+              <div style={{fontSize:"11px", lineHeight:"16px"}}>
+              By submitting this form, you are requesting to be contacted by a member of the Elevate Sales Team at the details provided via text, email or call (may involve automated or pre-recorded means).  You may revoke this consent through any reasonable means.
                 Existing subscribers seeking support, please visit the <a href="https://elmstreettechnology.zendesk.com/hc/en-us">Elevate Help Center</a>.
               </div>
             </Form>
