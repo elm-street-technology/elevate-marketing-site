@@ -194,6 +194,7 @@ const Footer = ({ classes }) => (
           </Link>
         </div>
 
+        {/*
         <div className={classes.column}>
           <div className={classes.section}>Solutions</div>
           <Link className={classes.link} to="/agents">
@@ -206,7 +207,7 @@ const Footer = ({ classes }) => (
             Teams
           </Link>
         </div>
-
+        */}
       
 
         <div className={classes.column}>
