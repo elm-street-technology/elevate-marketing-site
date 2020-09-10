@@ -3,16 +3,13 @@ import classNames from "classnames";
 import { Formik, Form, Field } from "formik";
 import * as Yup from "yup";
 import Alert from "elevate-ui/Alert";
-import CheckboxGroup from "elevate-ui/CheckboxGroup";
 import Input from "elevate-ui/Input";
 import RadioGroup from "elevate-ui/RadioGroup";
 import Typography from "elevate-ui/Typography";
-import ResponsiveVid from "../components/ResponsiveVid"
 import withStyles from "elevate-ui/withStyles";
-import Datetime from "elevate-ui/Datetime";
 import moment from "moment";
 
-class Formkk extends Component {
+class FormProduct extends Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -59,12 +56,9 @@ class Formkk extends Component {
             <Typography type="heading3" gutterBottom style={{color:"#f15623",}}>
               Fantastic!
             </Typography>
-            <div style={{margin:"50px"}}>
-            <a className={classes.signUpBtn} href="/assets/elevate_kardashian.pdf">Download the PDF</a>
-            </div>
-            <Typography type="heading5" gutterTop>
-        We’ll reach out to you asap via email or telephone.<br/>
-              You can also speak to a member of our sales team immediately by calling  <a href="tel:18447920260" className={classes.link}>844.792.0260</a>.
+
+            <Typography type="heading5" gutterTop style={{fontSize:"18px"}}>
+              You can speak to a member of our sales team immediately <br/>by calling  <a href="tel:18447920260" className={classes.link}>844.792.0260</a>.
             </Typography>
           </div>
         </div>
@@ -87,12 +81,15 @@ class Formkk extends Component {
             email: "",
             phone: "",
             mls_number: "",
-            form: "kardashian",
-            list: 100003,
+            form: "form_product",
+            list: this.props.listid,
             meetingdate: '',
             meetingtime: '',
             role: "",
             interests: '',
+            subject: this.props.subject,
+            webhook: this.props.webhook,
+            lead_source: this.props.leadsource,
           }}
           validationSchema={() =>
             Yup.object().shape({
@@ -187,9 +184,7 @@ class Formkk extends Component {
           render={({ values, isSubmitting,handleBlur, handleChange }) => (
             <Form noValidate>
               <div style={{marginBottom:"30px"}}>
-                <div className={classes.headingLarge} style={{ marginBottom: "25px" }}>6 Real Estate Lessons From Kim Kardashian - FREE Download</div>
-
-                <div style={{color:"#495050", lineHeight:"22px", paddingBottom:"25px"}}>What can Kim Kardashian teach real estate agents about marketing?  A lot!  Download your free guide, filled with real life examples to take your real estate brand to the next level.</div>
+                
 
 
              
@@ -243,27 +238,27 @@ class Formkk extends Component {
                       className={classes.field}
                   />
                   <div style={{textAlign:"left",fontSize:"14px",lineHeight:"19px"}}>
-              <Field
+                  <Field
                 id="role"
                 name="role"
-                label="I am a(n)"
+                label="I am:"
                 component={RadioGroup}
                 display="inline"
                 items={[
                   {
-                    label: "Existing Client",
+                    label: "An Existing Client",
                     value: "Existing Client",
                   },
                   {
-                    label: "Agent",
+                    label: "An Agent",
                     value: "Agent",
                   },
                   {
-                    label: "Broker/Owner",
+                    label: "A Broker/Owner",
                     value: "Broker/Owner",
                   },
                   {
-                    label: "Other (please specify)*",
+                    label: "Other (please specify)",
                     value: "Other",
                   },
                 ]}
@@ -279,19 +274,19 @@ class Formkk extends Component {
                   autoFocus
                 />
               )}
+             
+              
               </div>
-              <Field id="demorequest" name="demorequest" type="checkbox" value="yes" className={classes.checkfield} style={{marginLeft:"0px",marginRight:"15px"}} />
-              <span style={{fontSize:"16px"}}>Schedule a 15-minute demo of Elevate</span>
               <button
                 type="submit"
                 className={classes.signUpBtn}
                 disabled={isSubmitting}
               >
-                Download Now
+                Schedule Tour
               </button>
               </div>
-              <div style={{fontSize:"11px", lineHeight:"14px", paddingBottom:"35px"}}>
-              By submitting this form, you are requesting to be contacted by a member of the Elevate Sales Team at the details provided via text, email or call (may involve automated or pre-recorded means).  You may revoke this consent through any reasonable means.<br/>
+              <div style={{fontSize:"11px", lineHeight:"16px", paddingBottom:"35px"}}>
+              By submitting this form, you are requesting to be contacted by a member of the Elevate Sales Team at the details provided via text, email or call (may involve automated or pre-recorded means).  You may revoke this consent through any reasonable means.
                 Existing subscribers seeking support, please visit the <a href="https://elmstreettechnology.zendesk.com/hc/en-us">Elevate Help Center</a>.
               </div>
             </Form>
@@ -397,4 +392,4 @@ export default withStyles((theme) => ({
       width: "75%"
   },
 },
-}))(Formkk);
+}))(FormProduct);
