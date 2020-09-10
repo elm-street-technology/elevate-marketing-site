@@ -128,7 +128,7 @@ class Formcomparison extends Component {
     
 
     return <div className={classNames(classes.root, className)}>
-        <Formik initialValues={{ firstname: "", lastname: "", company: "", email: "", phone: "", market1: "", market2: "", market3: "", form: "leadgen_formNew", list: 57292 }} validationSchema={() => Yup.object().shape(
+        <Formik initialValues={{ firstname: "", lastname: "", company: "", email: "", phone: "", market1: "", market2: "", market3: "", form: "compare_product", list: 107391 }} validationSchema={() => Yup.object().shape(
               {
                 firstname: Yup.string().required("First name is required"),
                 lastname: Yup.string().required("Last name is required"),
@@ -142,6 +142,7 @@ class Formcomparison extends Component {
             )} onSubmit={(values, { setSubmitting }) => {
             //console.log(values.meetingdate);
             var meeting_request = '';
+            var notes = "Interested Markets: " + values.market1 + "," + values.market2 + "," + values.market3;
 
             Object.keys(values).forEach(function (key, index) {
               // key: the name of the object key
@@ -151,11 +152,16 @@ class Formcomparison extends Component {
                   meeting_request = values.meetingdate.format("YYYY-MM-DD") + "T" + values.meetingtime.replace(" (EDT)", "") + "-04:00"
                 }
               }
+              if (key == "demorequest"){
+                if(values.demorequest) {
+                  notes = notes + ", Requesting 15 min demo";
+                }
+              }
             });
 
             const body = { ...values, 
               demo_request_date: meeting_request,
-              notes: "Interested Markets: " + values.market1 + "," + values.market2 + "," + values.market3, 
+              notes, 
               utm_campaign: window.utm_tags ? window.utm_tags.campaign : "", 
               utm_source: window.utm_tags ? window.utm_tags.source : "", 
               utm_medium: window.utm_tags ? window.utm_tags.medium : "", 

@@ -4,7 +4,6 @@ import withStyles from "elevate-ui/withStyles";
 import config from "../utils/siteConfig";
 import Container from "../components/Container";
 import BgSectionExternal3 from "../components/BgSectionExternal3";
-import Formsocialpro from "../components/Formsocialpro";
 import Sprobg from "../images/sprobg.jpg";
 import Fadebg from "../images/fadebg.jpg";
 import Sprologo from "../images/sprologo.png";
@@ -16,6 +15,7 @@ import Sp5 from "../images/sp5.png";
 import Glance4 from "../images/glance4.png";
 import Glance5 from "../images/glance5.png";
 import SEO from "../components/SEO";
+import FormProduct from "../components/FormProduct";
 
 const Socialpro = ({ children, classes, data, tags }) => {
   const postNode = {
@@ -153,7 +153,11 @@ blog with weekly posts</div>
         Take a Tour of Elevate Today
         </h1>
         <h2 className={classes.subtext}>Schedule 15-minutes with an Elevate Success Coach to explore Elevate’s marketing power.</h2>
-        <Formsocialpro/>
+        <FormProduct
+          subject="Social Pro Product Lead"
+          listid="107379"
+          webhook="b1452e08-f398-11ea-9d14-bc764e046a9d"
+          leadsource="tryelevate.com:socialpro" />
         {/* <div className={classes.closingContainer}>
           For Media Inquiries, {""} Please {""}
           <a

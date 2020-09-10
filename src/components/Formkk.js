@@ -136,7 +136,7 @@ class Formkk extends Component {
               }
               if (key == "demorequest"){
                 if(values.demorequest) {
-                  notes = notes = ", Requesting 15 min demo";
+                  notes = notes + ", Requesting 15 min demo";
                 }
               }
             });

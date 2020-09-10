@@ -4,7 +4,7 @@ import withStyles from "elevate-ui/withStyles";
 import config from "../utils/siteConfig";
 import Container from "../components/Container";
 import BgSectionExternal3 from "../components/BgSectionExternal3";
-import Formdms from "../components/Form_dms";
+import FormProduct from "../components/FormProduct";
 import Dmsbg from "../images/dmsbg.jpg";
 import Fadebg from "../images/fadebg.jpg";
 import Dmslogo from "../images/dmslogo.png";
@@ -202,7 +202,11 @@ YouTube video tours</div>
         Take a Tour of Elevate Today
         </h1>
         <h2 className={classes.subtext}>Schedule 15-minutes with an Elevate Success Coach to explore Elevate’s marketing power.</h2>
-        <Formdms/>
+        <FormProduct
+          subject="DMS Product Lead"
+          listid="107387"
+          webhook="b1452e08-f398-11ea-9d14-bc764e046a9d"
+          leadsource="tryelevate.com:elevatedms" />
         {/* <div className={classes.closingContainer}>
           For Media Inquiries, {""} Please {""}
           <a
