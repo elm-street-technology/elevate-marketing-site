@@ -171,26 +171,29 @@ const Footer = ({ classes }) => (
 
         <div className={classes.column}>
           <div className={classes.section}>Products</div>
-          <Link className={classes.link} to="/elevate-dms">
-            DMS&trade;
+          <Link className={classes.link} to="/elevate_at_a_glance">
+            Elevate At-A-Glance
           </Link>
-          <Link className={classes.link} to="/elevate-social-pro">
+          <Link className={classes.link} to="/socialpro">
             Social Pro&trade;
           </Link>
-          <Link className={classes.link} to="/elevate-idx">
-            IDX&trade;
-          </Link>
-          <Link className={classes.link} to="/elevate-ignite">
+          <Link className={classes.link} to="/ignite">
             Ignite&trade;
           </Link>
-          <Link className={classes.link} to="/elevate-elite">
+          <Link className={classes.link} to="/elevatedms">
+            DMS&trade;
+          </Link>
+          <Link className={classes.link} to="/dmsplus">
+            DMS PLUS&trade;
+          </Link>
+          <Link className={classes.link} to="/elite">
             Elite&trade;
           </Link>
-          <Link className={classes.link} to="/crm">
-            CRM&trade;
+          <Link className={classes.link} to="/boss">
+            BOSS&trade;
           </Link>
-          <Link className={classes.link} to="/recruiter">
-            Recruiter
+          <Link className={classes.link} to="/compare_products">
+            Compare Products
           </Link>
         </div>
 
