@@ -46,14 +46,15 @@ import PieChart from "elevate-ui-icons/PieChart";
 import Header from "../components/Header";
 import Footer from "../components/Footer";
 
-
-window.addEventListener("click", function(event) {
-  var fullmodal = document.getElementById("myModal");
-  var span = document.getElementById("modalClose");
-  if (event.target == fullmodal || event.target == span) {
-    fullmodal.style.display = "none";
-  }
-});
+if (typeof window !== 'undefined')  {
+  window.addEventListener("click", function(event) {
+    var fullmodal = document.getElementById("myModal");
+    var span = document.getElementById("modalClose");
+    if (event.target == fullmodal || event.target == span) {
+      fullmodal.style.display = "none";
+    }
+  });
+}
 
 class Index extends Component {
 
