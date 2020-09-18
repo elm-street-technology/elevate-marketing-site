@@ -46,26 +46,16 @@ import PieChart from "elevate-ui-icons/PieChart";
 import Header from "../components/Header";
 import Footer from "../components/Footer";
 
-class Index extends Component {
-  componentDidMount(){
-    // Get the modal
-    var modal = document.getElementById("myModal");
-    // Get the <span> element that closes the modal
-    var span = document.getElementById("modalClose");
 
-    // When the user clicks on <span> (x), close the modal
-    span.onclick = function() {
-      modal.style.display = "none";
-    }
-
-    // When the user clicks anywhere outside of the modal, close it
-    window.onclick = function(event) {
-      if (event.target == modal) {
-        modal.style.display = "none";
-      }
-    }
-
+window.addEventListener("click", function(event) {
+  var fullmodal = document.getElementById("myModal");
+  var span = document.getElementById("modalClose");
+  if (event.target == fullmodal || event.target == span) {
+    fullmodal.style.display = "none";
   }
+});
+
+class Index extends Component {
 
   render() {
     const { classes } = this.props;
