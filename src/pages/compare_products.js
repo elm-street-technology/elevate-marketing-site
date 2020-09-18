@@ -12,6 +12,7 @@ import Glance3 from "../images/glance3.gif";
 import Glance4 from "../images/glance4.png";
 import Glance5 from "../images/glance5.png";
 import SEO from "../components/SEO";
+import FormProduct from "../components/FormProduct";
 
 const Compareproducts = ({ children, classes, data, tags }) => {
   const postNode = {
@@ -52,7 +53,12 @@ const Compareproducts = ({ children, classes, data, tags }) => {
         Take a Tour of Elevate Today
         </h1>
         <h2 className={classes.subtext} style={{paddingBottom:"35px"}}>Schedule 15-minutes with an Elevate Success Coach to explore Elevate’s marketing power.</h2>
-        <Formcomparison/>
+
+        <FormProduct
+          subject="Compare Products Lead"
+          listid="107391"
+          webhook="b1452e08-f398-11ea-9d14-bc764e046a9d"
+          leadsource="tryelevate.com:compare_products" />
         {/* <div className={classes.closingContainer}>
           For Media Inquiries, {""} Please {""}
           <a

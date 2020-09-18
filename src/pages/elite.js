@@ -223,7 +223,8 @@ Twitter, LinkedIn &amp; YouTube</div>
           subject="Elite Product Lead"
           listid="107389"
           webhook="b1452e08-f398-11ea-9d14-bc764e046a9d"
-          leadsource="tryelevate.com:elite" />
+          leadsource="tryelevate.com:elite"
+          showMarkets="true" />
         {/* <div className={classes.closingContainer}>
           For Media Inquiries, {""} Please {""}
           <a

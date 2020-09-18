@@ -136,6 +136,11 @@ class FormProduct extends Component {
                   notes = notes + ", Requesting 15 min demo";
                 }
               }
+              if (key == "market1"){
+                if(values.market1) {
+                  notes = notes + ", Markets: " + values.market1 + "," + values.market2 + "," + values.market3;
+                }
+              }
             });
             
             const body = {
@@ -277,6 +282,16 @@ class FormProduct extends Component {
              
               
               </div>
+              {this.props.showMarkets && (
+                <div>
+                <div style={{ width: "100%", textAlign: "center" }}>
+                  What are your top 3 markets of interest? (optional)
+                </div>
+                <Field id="market1" name="market1" label="City/State" component={Input} className={classes.field} onBlur={this.setFormVal} />
+                <Field id="market2" name="market2" label="City/State" component={Input} className={classes.field} onBlur={this.setFormVal} />
+                <Field id="market3" name="market3" label="City/State" component={Input} className={classes.field} onBlur={this.setFormVal} />
+                </div>
+              )}
               <button
                 type="submit"
                 className={classes.signUpBtn}

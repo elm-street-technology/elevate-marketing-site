@@ -148,7 +148,8 @@ campaigns</div>
           subject="Ignite Product Lead"
           listid="107386"
           webhook="b1452e08-f398-11ea-9d14-bc764e046a9d"
-          leadsource="tryelevate.com:ignite" />
+          leadsource="tryelevate.com:ignite"
+          showMarkets="true" />
         {/* <div className={classes.closingContainer}>
           For Media Inquiries, {""} Please {""}
           <a
