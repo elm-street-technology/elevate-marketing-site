@@ -23,7 +23,8 @@ const Template = ({ children, classes, location }) => {
     if (location.pathname == "/socialmediamarketingguide/" || location.pathname == "/socialmediamarketingguide" ||
         location.pathname == "/kardashian/" || location.pathname == "/kardashian" ||
         location.pathname == "/singlepropertywebsites/" || location.pathname == "/singlepropertywebsites" ||
-        location.pathname == "/sellerleads/" || location.pathname == "/sellerleads") {
+        location.pathname == "/sellerleads/" || location.pathname == "/sellerleads" ||
+        location.pathname == "/leadgenguide/" || location.pathname == "/leadgenguide") {
       return <FooterLander />;
     }
 
@@ -39,7 +40,8 @@ const Template = ({ children, classes, location }) => {
     if (location.pathname == "/socialmediamarketingguide/" || location.pathname == "/socialmediamarketingguide" ||
         location.pathname == "/kardashian/" || location.pathname == "/kardashian" ||
         location.pathname == "/singlepropertywebsites/" || location.pathname == "/singlepropertywebsites" ||
-        location.pathname == "/sellerleads/" || location.pathname == "/sellerleads") {
+        location.pathname == "/sellerleads/" || location.pathname == "/sellerleads" ||
+        location.pathname == "/leadgenguide/" || location.pathname == "/leadgenguide") {
       return <HeaderLander />;
     }
 
