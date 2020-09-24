@@ -53,7 +53,9 @@ class Formboss extends Component {
           }}
         >
           <div >
-                                  
+          <div style={{margin:"50px"}}>
+            <a className={classes.signUpBtn} href="/assets/elevate_brokerage_tech_checklist.pdf">Download the PDF</a>
+            </div>                    
                       
             <Typography type="heading3" gutterBottom>
               Fantastic!
@@ -209,7 +211,7 @@ class Formboss extends Component {
                 disabled={isSubmitting}
                 style={{width:"70%"}}
               >
-                Please Contact Me
+                Download
               </button>
               </div>
               <div style={{fontSize:"11px", lineHeight:"16px"}}>
