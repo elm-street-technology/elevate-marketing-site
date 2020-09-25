@@ -10,7 +10,7 @@ import FormMLS from "../components/FormMLS";
 
 const Markets = ({ children, classes, data, tags }) => {
   const postNode = {
-      title: `Your Single Source Solution - ${config.siteTitle}`,
+      title: `Elevate MLS Markets - ${config.siteTitle}`,
   };
   const markets = data.allContentfulMarket.edges;
   let marketCount = 0;
@@ -21,7 +21,7 @@ const Markets = ({ children, classes, data, tags }) => {
   return (
 <div className={classes.root}>
       <Helmet>
-              <title>{`Your Single Source Solution - ${config.siteTitle}`}</title>
+              <title>{`Elevate MLS Markets - ${config.siteTitle}`}</title>
       </Helmet>
       <SEO postNode={postNode} pagePath="markets" customTitle />
 
