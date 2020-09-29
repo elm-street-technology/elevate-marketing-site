@@ -205,6 +205,10 @@ class Formchecklist extends Component {
                       className={classes.field}
                   />
                 
+
+                <Field id="demorequest" name="demorequest" type="checkbox" value="yes" className={classes.checkfield} style={{marginLeft:"0px",marginRight:"15px"}} />
+              <span style={{fontSize:"16px"}}>Schedule a 15-minute demo of Elevate</span>
+              
               <button
                 type="submit"
                 className={classes.signUpBtn}

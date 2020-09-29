@@ -196,12 +196,10 @@ databases</div>
 
 <div style={{backgroundColor:"#ffffff", paddingBottom:"60px", textAlign:"center", paddingRight:"30px", paddingLeft:"30px"}}>
         <h1 className={classes.Heading2} style={{paddingTop:"70px"}}>
-        Brokerage Technology Checklist<br />
-        FREE DOWNLOAD
+        Tour the BOSS
         </h1>
-        <h2 className={classes.subtext} style={{paddingBottom:"40px"}}>Your comprehensive guide to selecting the right technology partner for your brokerage.<br />
-        Includes the top 4 questions to ask tech companies to separate potential partners from vendors,<br />
-        and a checklist of features &amp; functionality to explore.</h2>
+        <h2 className={classes.subtext} style={{paddingBottom:"40px"}}>Request your personal consultation with our broker<br />
+        development team using the form below, or call 833-978-1196 to speak to us today.</h2>
         <Formboss/>
         {/* <div className={classes.closingContainer}>
           For Media Inquiries, {""} Please {""}

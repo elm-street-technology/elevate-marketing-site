@@ -6,6 +6,7 @@ import Container from "../components/Container";
 import Formchecklist from "../components/Formchecklist";
 import SEO from "../components/SEO";
 import Checklistlogo from "../images/checklist_logo.png";
+import Checklistbottom from "../images/checklist_bottom.jpg";
 
 
 const Brokeragetechchecklist = ({ children, classes, data, tags }) => {
@@ -34,8 +35,11 @@ const Brokeragetechchecklist = ({ children, classes, data, tags }) => {
                  </div>
 
 
-                <div style={{ paddingLeft: "30px", paddingRight: "30px", paddingBottom:"60px"}}>
+                <div style={{ paddingLeft: "30px", paddingRight: "30px", paddingBottom:"20px"}}>
                     <Formchecklist />
+                </div>
+                <div>
+                    <img src={Checklistbottom} style={{ width: "100%" }} />
                 </div>
                 
             </div>
