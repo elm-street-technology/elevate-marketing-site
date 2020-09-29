@@ -5,6 +5,7 @@ import config from "../utils/siteConfig";
 import Container from "../components/Container";
 import BgSectionExternal3 from "../components/BgSectionExternal3";
 import Formboss from "../components/Formboss";
+import Formchecklist from "../components/Formchecklist";
 import Bossbg from "../images/bossbg.jpg";
 import B1 from "../images/boss1.png";
 import B2 from "../images/boss2.png";
@@ -20,6 +21,7 @@ import Fadebg from "../images/fadebg.jpg";
 import Bosslogo from "../images/bosslogo.png";
 import Bossstar from "../images/bossstar.png";
 import Quote from "../images/quote.png";
+import Cover from "../images/checklist_cover.jpg";
 import SEO from "../components/SEO";
 
 const Boss = ({ children, classes, data, tags }) => {
@@ -195,10 +197,11 @@ databases</div>
 
 
 <div style={{backgroundColor:"#ffffff", paddingBottom:"60px", textAlign:"center", paddingRight:"30px", paddingLeft:"30px"}}>
-        <h1 className={classes.Heading2} style={{paddingTop:"70px"}}>
+<Container>
+  <h1 className={classes.Heading2} style={{paddingTop:"70px"}}>
         Tour the BOSS
         </h1>
-        <h2 className={classes.subtext} style={{paddingBottom:"40px"}}>Request your personal consultation with our broker<br />
+        <h2 className={classes.subtext} style={{paddingBottom:"40px"}}>Request your personal consultation with our broker<br/>
         development team using the form below, or call 833-978-1196 to speak to us today.</h2>
         <Formboss/>
         {/* <div className={classes.closingContainer}>
@@ -210,6 +213,7 @@ databases</div>
             Email Us
           </a>
         </div> */}
+        </Container>
  </div>
 
 
@@ -266,7 +270,39 @@ databases</div>
 
         
     </Container>
+</div>
+
+
+<div style={{paddingTop:"50px", paddingBottom:"50px",}}>
+        
+        
+        <Container>
+                        <div style={{textAlign:"center", paddingRight:"25px", paddingLeft:"25px", paddingBottom:"25px"}}>
+                            <div className={classes.Heading2}>Brokerage Technology Checklist<br />
+                            FREE DOWNLOAD</div>
+                            <div className={classes.subtext}>Download your comprehensive guide to selecting the right technology partner for your brokerage. Includes the top 4 questions to ask tech companies to separate potential partners from vendors, and a checklist of features &amp; functionality every brokerage must have!</div>     
+                            
+                        </div>
+   
+            <div className={classes.flexContainer}>
+                <div className={classes.flexItem} style={{padding:"30px", textAlign:"center"}}>
+                <Formchecklist/>
+                </div>
+
+                <div className={classes.flexItem} style={{padding:"30px", textAlign:"center"}}>
+                <img src={Cover} width="100%" style={{paddingBottom:"15px"}}/>
+                </div>
+
+  
+
+
+      </div>
+
+        
+    </Container>
 </div> 
+
+
 
 
 
@@ -350,7 +386,7 @@ export default withStyles((theme) => ({
     fontSize: "28px",
     paddingBottom: "20px",
     fontWeight: "700",
-    lineHeight: "34px",
+    lineHeight: "40px",
     color: "#52B1AD",
     letterSpacing: ".14px",
   },

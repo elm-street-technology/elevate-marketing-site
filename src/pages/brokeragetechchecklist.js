@@ -30,7 +30,7 @@ const Brokeragetechchecklist = ({ children, classes, data, tags }) => {
                    <h1 className={classes.Heading}>Brokerage Technology Checklist<br />
                     FREE DOWNLOAD</h1>
                   <div style={{color:"#495050", lineHeight:"26px", textAlign:"center", paddingBottom:"30px"}}>
-                  Your comprehensive guide to selecting the right technology partner for your brokerage.  Includes the top 4 questions to ask tech companies to separate potential partners from vendors, and a checklist of features &amp; functionality to explore.
+                  Download your comprehensive guide to selecting the right technology partner for your brokerage. Includes the top 4 questions to ask tech companies to separate potential partners from vendors, and a checklist of features &amp; functionality every brokerage must have!
                  </div>
                  </div>
 
