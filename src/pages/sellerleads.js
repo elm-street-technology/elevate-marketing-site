@@ -37,9 +37,7 @@ const Sellerleads = ({ children, classes, data, tags }) => {
       <div className={classes.top} style={{paddingRight:"35px", paddingLeft:"35px", paddingTop:"45px", paddingBottom:"35px"}}>
           <div className={classes.centerHeading}>
           <img src={Sellerleadslogo} width="100%"  style={{maxWidth:"600px"}} />
-                            <br />
-                            <div className={classes.subtext2} style={{color:"#ffffff",}}>September pre-sale.<br />
-                            Program launching Oct 2020.</div>        
+                              
           </div>
       </div>
 

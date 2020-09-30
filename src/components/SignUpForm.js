@@ -267,16 +267,16 @@ class SignUpForm extends Component {
                 component={CheckboxGroup}
                 items={[
                   {
-                    label: "Digital Marketing Services (Website, Email, Social, Text, Blog, SEO)",
-                    value: "Digital Marketing Services (Website, Email, Social, Text, Blog, SEO)",
+                    label: "Lead Generation:  buyer leads, seller leads or a mix of both",
+                    value: "Lead Generation:  buyer leads, seller leads or a mix of both",
                   },
                   {
-                    label: "Lead Generation, Parsing & Scrubbing Services",
-                    value: "Lead Generation, Parsing & Scrubbing Services",
+                    label: "Digital Marketing Services (website, email, social, text, blog, SEO)",
+                    value: "Digital Marketing Services (website, email, social, text, blog, SEO)",
                   },
                   {
-                    label: "CRM Solutions",
-                    value: "CRM Solutions",
+                    label: "Elevate CRM",
+                    value: "Elevate CRM",
                   },
                   {
                     label: "Custom Creative / Marketing Services",
