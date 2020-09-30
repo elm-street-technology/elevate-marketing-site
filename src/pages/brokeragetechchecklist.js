@@ -6,6 +6,7 @@ import Container from "../components/Container";
 import Formchecklist from "../components/Formchecklist";
 import SEO from "../components/SEO";
 import Checklistlogo from "../images/checklist_logo.png";
+import Checklistbottom from "../images/checklist_bottom.jpg";
 
 
 const Brokeragetechchecklist = ({ children, classes, data, tags }) => {
@@ -29,13 +30,16 @@ const Brokeragetechchecklist = ({ children, classes, data, tags }) => {
                    <h1 className={classes.Heading}>Brokerage Technology Checklist<br />
                     FREE DOWNLOAD</h1>
                   <div style={{color:"#495050", lineHeight:"26px", textAlign:"center", paddingBottom:"30px"}}>
-                  Your comprehensive guide to selecting the right technology partner for your brokerage.  Includes the top 4 questions to ask tech companies to separate potential partners from vendors, and a checklist of features &amp; functionality to explore.
+                  Download your comprehensive guide to selecting the right technology partner for your brokerage. Includes the top 4 questions to ask tech companies to separate potential partners from vendors, and a checklist of features &amp; functionality every brokerage must have!
                  </div>
                  </div>
 
 
-                <div style={{ paddingLeft: "30px", paddingRight: "30px", paddingBottom:"60px"}}>
+                <div style={{ paddingLeft: "30px", paddingRight: "30px", paddingBottom:"20px"}}>
                     <Formchecklist />
+                </div>
+                <div>
+                    <img src={Checklistbottom} style={{ width: "100%" }} />
                 </div>
                 
             </div>

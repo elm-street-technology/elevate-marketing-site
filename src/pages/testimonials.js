@@ -14,13 +14,13 @@ import SEO from "../components/SEO";
 
 const Testimonials = ({ children, classes, data, tags }) => {
   const postNode = {
-      title: `Your Single Source Solution - ${config.siteTitle}`,
+      title: `Elevate's Happy Clients - ${config.siteTitle}`,
   };
 
   return (
 <div className={classes.root}>
       <Helmet>
-              <title>{`Your Single Source Solution - ${config.siteTitle}`}</title>
+              <title>{`Elevate's Happy Clients - ${config.siteTitle}`}</title>
       </Helmet>
       <SEO postNode={postNode} pagePath="testimonials" customTitle />
 
@@ -82,7 +82,7 @@ const Testimonials = ({ children, classes, data, tags }) => {
 </div> 
 
 
-<div style={{paddingTop:"50px", paddingBottom:"50px",}}>
+<div style={{paddingTop:"50px", paddingBottom:"60px",}}>
         <Container>
             <div className={classes.flexContainer}>
                 <div className={classes.flexItem}>
@@ -118,14 +118,14 @@ const Testimonials = ({ children, classes, data, tags }) => {
 
 
 
-<div style={{paddingBottom:"20px",}}>
+<div style={{paddingBottom:"25px",}}>
         <Container>
             <div className={classes.flexContainer}>
                 <div className={classes.flexItem} style={{textAlign:"right", paddingBottom:"20px", paddingLeft:"20px", paddingRight:"20px"}}>
 
                             <div className={classes.subtext}>
                                 <div className={classes.Heading2}>Denis Pepin, Broker/Owner</div>
-                                United Real Estate Professionals<br />
+                                United&reg; Real Estate Professionals<br />
                                 Huntington Beach, CA<br /><br />
 
                                 A seasoned broker/owner who’s been burned by lead generation solutions in the past, discusses his experience with Elevate’s lead generation and scrubbing services, along with an almost immediate ROI. 
@@ -140,6 +140,32 @@ const Testimonials = ({ children, classes, data, tags }) => {
                             <iframe width="100%" height="270" src="https://www.youtube.com/embed/XpCfCopNLlA?rel=0"
                             frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
+                </div>
+            </div>
+        </Container>
+</div>
+
+<div style={{paddingTop:"30px", paddingBottom:"50px",}}>
+        <Container>
+            <div className={classes.flexContainer}>
+                <div className={classes.flexItem} style={{paddingBottom:"20px", paddingLeft:"15px", paddingRight:"15px"}}>
+
+                   
+                <iframe width="100%" height="270" src="https://www.youtube.com/embed/ic8aS9PqlxQ?rel=0"
+                frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    
+
+                </div>
+                <div className={classes.flexItem} style={{paddingLeft:"20px", paddingRight:"20px", paddingBottom:"20px",}}>
+
+                            <div className={classes.subtext}>
+                                <div className={classes.Heading2}>Elisa Bruno-Midili, Broker</div>
+                                Cafe Realty<br />
+                                Hudson Valley, NY<br /><br />
+
+                                Elisa Bruno-Midili of Cafe Realty shares the story of how Elevate BOSS&trade; has empowered her to compete with big box affiliations in the Hudson Valley region of New York State.  Tune in for a discussion of how metropolitan city-dwellers are exiting New York City and heading to the country, and how Elisa has been able to position herself, her agents and her brokerage to capture, nurture and convert all of the business heading their way thanks to Elevate’s comprehensive brokerage solution, Elevate BOSS&trade;.  After 7-years of searching, Elisa has FINALLY found the ONE solution that does it all!
+                            </div>
+                    
                 </div>
             </div>
         </Container>
@@ -224,6 +250,32 @@ const Testimonials = ({ children, classes, data, tags }) => {
     
 
 </div>
+            </div>
+        </Container>
+</div>
+
+<div style={{paddingTop:"30px", paddingBottom:"50px",}}>
+        <Container>
+            <div className={classes.flexContainer}>
+                <div className={classes.flexItem} style={{paddingBottom:"20px", paddingLeft:"15px", paddingRight:"15px"}}>
+
+                   
+                <iframe width="100%" height="270" src="https://www.youtube.com/embed/aQe9YcNFN-s?rel=0"
+                frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    
+
+                </div>
+                <div className={classes.flexItem} style={{paddingLeft:"20px", paddingRight:"20px", paddingBottom:"20px",}}>
+
+                            <div className={classes.subtext}>
+                                <div className={classes.Heading2}>Dave Gibson</div>
+                                Realty ONE Group's<br />
+                                Arizona Gibson Team<br /><br />
+
+                                Dave Gibson of Realty ONE Group's Arizona Gibson Team shares his story of overcoming personal and professional struggle, and how Elevate's end-to-end solution helps him conquer the day-to-day of running his real estate business.
+                            </div>
+                    
+                </div>
             </div>
         </Container>
 </div>

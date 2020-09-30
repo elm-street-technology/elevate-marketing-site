@@ -34,7 +34,10 @@ import HeadsetMic from "elevate-ui-icons/HeadsetMic";
 import Elevatew from "../images/elevatew.png";
 import BottomArrow from "../images/bottom_arrow.png";
 import Seocover from "../images/seo_cover.png";
+import Fadebg from "../images/fadebg.jpg";
 import Smcover from "../images/sm101_cover.png";
+import Btccover from "../images/btc_cover.png";
+import Saucecover from "../images/sauce_cover.png";
 import Container from "../components/Container";
 import Bcesw from "../images/bcesw.jpg";
 
@@ -179,7 +182,7 @@ class Index extends Component {
 
 
 
-        <div style={{ textAlign: "center", backgroundColor:"#f7f7f7" }}>
+        <div style={{backgroundImage:"url("+Fadebg+")", backgroundSize:"cover", backgroundPosition:"centerBottom", textAlign:"center"}}>
       <Container>
                     <div style={{paddingTop:"40px", paddingLeft:"45px", paddingRight:"45px", paddingBottom:"20px"}}>
                           <div className={classes.centerheading}>Elevate Educational Guides</div> 
@@ -191,7 +194,7 @@ class Index extends Component {
                   <div className={classes.column2} style={{ textAlign: "center", paddingTop: "22px" }}>
                                     
                                     <div className={classes.centerheading2}>Social Media Marketing 101 Guide</div>
-                                    <div className={classes.centersubtext} style={{ fontWeight: "bold" }}>Download Your FREE, All-Inclusive Guide<br />
+                                    <div className={classes.centersubtext} style={{ fontWeight: "bold" }}>Your FREE, All-Inclusive Guide<br />
                                     For Creating GREAT Content!</div>
                                     <br /><br />
                                     <div className={classes.centersubtext}>What makes for awesome social media marketing content? It's not as time-consuming
@@ -202,7 +205,7 @@ class Index extends Component {
                                     <a target="_blank" href="/socialmediamarketingguide" className={classes.ctabutton}>
                                     Download Now</a>
                                     <div style={{ textAlign: "center",paddingTop:"35px" }}>
-                                          <img src={Smcover} width="300" />
+                                          <img src={Smcover} width="300"/>
                                     </div>
                   </div>
 
@@ -214,8 +217,9 @@ class Index extends Component {
                                     <br /><br />
                                     <div className={classes.centersubtext}>93% of buyers looking for a home use online searches
                                     for listings and information during their home-buying journey. What does it take to be seen
-                                    on the first page of Google, and what can you do to get there? 
-                                    This FREE GUIDE<br />
+                                    on the first page of Google,<br />
+                                    and what can you do to get there?<br />
+                                    This FREE GUIDE
                                     is your key to SEO success!
                                     </div>
                                     <a target="_blank" href="/websiteseoguide" className={classes.ctabutton}>
@@ -230,6 +234,60 @@ class Index extends Component {
         </div>
     </Container>
     </div>
+
+
+    <div style={{backgroundImage:"url("+Fadebg+")", backgroundSize:"cover", backgroundPosition:"centerBottom", textAlign:"center", paddingTop:"40px"}}>
+      <Container>
+                    
+
+        <div className={classes.top}>
+
+                  <div className={classes.column2} style={{ textAlign: "center", paddingTop: "22px" }}>
+                                    
+                                    <div className={classes.centerheading2}>Lead Generation "Secret Sauce"</div>
+                                    <div className={classes.centersubtext} style={{ fontWeight: "bold" }}>Packed Full of Easy-To-Implement<br />
+                                    Tips, Tricks &amp; Strategies</div>
+                                    <br /><br />
+                                    <div className={classes.centersubtext}>How to stand out from the crowd, build a successful pipeline,
+                                    and drive conversions. Your FREE GUIDE is packed full
+                                    of easy-to-implement tips, tricks &amp; strategies, an overview of how
+                                    Elevate’s lead generation technology does 90% of the work for busy real estate professionals,
+                                    and a bunch of special offers to jumpstart your online lead generation.</div>
+                                    
+                                    <a target="_blank" href="/leadgenguide" className={classes.ctabutton}>
+                                    Download Now</a>
+                                    <div style={{ textAlign: "center",paddingTop:"35px" }}>
+                                          <img src={Saucecover} width="300" />
+                                    </div>
+                  </div>
+
+                  <div className={classes.column2} style={{ textAlign: "center", paddingTop: "22px" }}>
+                 
+                                    <div className={classes.centerheading2}>Brokerage Technology Checklist</div>
+                                    <div className={classes.centersubtext} style={{ fontWeight: "bold" }}>Select The Best Technology<br />
+                                    Partner for Your Brokerage</div>
+                                    <br /><br />
+                                    <div className={classes.centersubtext}>Download your comprehensive guide<br />
+                                    to selecting the right technology partner for your brokerage.<br />
+                                    Includes the top 4 questions to ask tech companies<br />
+                                    to separate potential partners from vendors,<br />
+                                    and a checklist of features &amp; functionality<br />
+                                    every brokerage must have!
+                                    </div>
+                                    <a target="_blank" href="/brokeragetechchecklist" className={classes.ctabutton}>
+                                    Download Today</a>
+                                    <div style={{ textAlign: "center",paddingTop:"35px" }}>
+                                          <img src={Btccover} width="300" />
+                                    </div>
+                  </div>
+
+
+                  
+        </div>
+    </Container>
+    </div>
+
+
 
 
 

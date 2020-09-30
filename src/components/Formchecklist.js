@@ -105,6 +105,7 @@ class Formchecklist extends Component {
           onSubmit={(values, { setSubmitting }) => {
             //if (values.meetingdate != undefined) {
             var meeting_request = '';
+            var notes = "";
             Object.keys(values).forEach(function (key, index) {
               // key: the name of the object key
               // index: the ordinal position of the key within the object 
@@ -113,9 +114,15 @@ class Formchecklist extends Component {
                   meeting_request = values.meetingdate.format("YYYY-MM-DD") + "T" + values.meetingtime.replace(" (EDT)", "") + "-04:00"
                 }
               }
+              if (key == "demorequest"){
+                if(values.demorequest) {
+                  notes = notes + " Requesting 15 min demo";
+                }
+              }
             });
             const body = {
               ...values,
+              notes, 
               utm_campaign: (window.utm_tags) ? window.utm_tags.campaign : "",
               utm_source: (window.utm_tags) ? window.utm_tags.source : "",
               utm_medium: (window.utm_tags) ? window.utm_tags.medium : "",
@@ -205,6 +212,10 @@ class Formchecklist extends Component {
                       className={classes.field}
                   />
                 
+
+                <Field id="demorequest" name="demorequest" type="checkbox" value="yes" className={classes.checkfield} style={{marginLeft:"0px",marginRight:"15px"}} />
+              <span style={{fontSize:"16px"}}>Schedule a 15-minute demo of Elevate</span>
+              
               <button
                 type="submit"
                 className={classes.signUpBtn}

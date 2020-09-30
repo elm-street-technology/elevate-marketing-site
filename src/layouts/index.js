@@ -24,6 +24,7 @@ const Template = ({ children, classes, location }) => {
         location.pathname == "/kardashian/" || location.pathname == "/kardashian" ||
         location.pathname == "/singlepropertywebsites/" || location.pathname == "/singlepropertywebsites" ||
         location.pathname == "/sellerleads/" || location.pathname == "/sellerleads" ||
+        location.pathname == "/brokeragetechchecklist/" || location.pathname == "/brokeragetechchecklist" ||
         location.pathname == "/leadgenguide/" || location.pathname == "/leadgenguide") {
       return <FooterLander />;
     }
@@ -41,6 +42,7 @@ const Template = ({ children, classes, location }) => {
         location.pathname == "/kardashian/" || location.pathname == "/kardashian" ||
         location.pathname == "/singlepropertywebsites/" || location.pathname == "/singlepropertywebsites" ||
         location.pathname == "/sellerleads/" || location.pathname == "/sellerleads" ||
+        location.pathname == "/brokeragetechchecklist/" || location.pathname == "/brokeragetechchecklist" ||
         location.pathname == "/leadgenguide/" || location.pathname == "/leadgenguide") {
       return <HeaderLander />;
     }
