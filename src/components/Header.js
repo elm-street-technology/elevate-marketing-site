@@ -213,8 +213,8 @@ class Header extends Component {
       </header>
         {thisPath != '/leadgen' && thisPath != '/leadgen/' && 
         <div className={classes.violator}>
-          <span style={{fontWeight:"bold"}}>EXCLUSIVE SELLER LEADS: September Pre-Sale</span><br/>
-          <Link to="/sellerleads" style={{color:"#FFFFFF"}}>Claim Your Markets NOW!</Link>
+          <span style={{fontWeight:"bold", fontSize:"14px"}}>EXCLUSIVE SELLER LEADS: Now Available!</span>
+          <Link to="/sellerleads" style={{color:"#fbcd2e", fontWeight:"bold", paddingLeft:"4px", fontSize:"14px"}}>CLAIM YOUR MARKET</Link>
         </div>
             }
       </div>
@@ -309,11 +309,11 @@ export default withStyles((theme) => ({
   },
   violator:{
     display:"fixed",
-    background:"#f78d10",
+    background:"#eb1255",
     color:"#FFFFFF",
     position:"fixed",
     top:"80px",
-    padding:"5px",
+    padding:"15px",
     width:"100%",
     textAlign:"center",
     zIndex:"100",

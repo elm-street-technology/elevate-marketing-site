@@ -38,6 +38,7 @@ import Fadebg from "../images/fadebg.jpg";
 import Smcover from "../images/sm101_cover.png";
 import Btccover from "../images/btc_cover.png";
 import Saucecover from "../images/sauce_cover.png";
+import Modalpic from "../images/modal_expic.png";
 import Container from "../components/Container";
 import Bcesw from "../images/bcesw.jpg";
 
@@ -362,22 +363,24 @@ class Index extends Component {
         <div id="myModal" className={classes.modal}>
           <div className={classes.modalContent}>
             <span id="modalClose" className={classes.close}>&times;</span>
-            <div style={{color:"#f78d10",fontSize:"24px",fontWeight:"bold",paddingBottom:"5px"}}>EXCLUSIVE</div>
-            <div style={{color:"#f78d10",fontSize:"38px",fontWeight:"bold",paddingBottom:"10px", lineHeight:"42px"}}>SELLER LEADS
+            <div style={{ textAlign: "center",}}>
+                                          <img src={Modalpic} width="100%" style={{maxWidth:"380px"}}/>
+                                    </div>
+            <div style={{color:"#f78d10",fontSize:"65px",fontWeight:"bold",paddingBottom:"10px", lineHeight:"65px"}}>SELLER LEADS
           </div>
             <div>
               <span style={{fontWeight:"bold"}}>
-              September Pre-Sale   
+              ARE NOW AVAILABLE!  
               </span>
             </div> 
 
-            <div>
+      
               <div>
                 <Link to="/sellerleads" className={classes.ctabutton} style={{maxWidth:"550px"}}>
-                Claim Your Markets NOW!
+                CLAIM YOUR MARKETS
                 </Link>
               </div>
-            </div>         
+                    
           </div>
         </div>
 
