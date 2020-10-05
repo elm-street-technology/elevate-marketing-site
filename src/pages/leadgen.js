@@ -22,7 +22,7 @@ const Dms = ({ children, classes, data, tags }) => {
 
       <Container>
         <div >
-                  <div style={{ maxWidth: "900px", backgroundColor: "#ece8ea", marginRight:"auto",marginLeft:"auto",paddingTop:"35px"}}>
+                  <div style={{ maxWidth: "900px", backgroundColor: "#ece8ea", marginRight:"auto",marginLeft:"auto",paddingTop:"20px"}}>
                 
                 <div style={{ paddingLeft: "10px", paddingRight: "10px"}}>
                     <FormLeadgen />
@@ -44,7 +44,7 @@ export default withStyles((theme) => ({
     flexDirection: "column",
     width: "100%",
     padding: "0 8px",
-    margin: "70px auto",
+    margin: "20px auto",
   },
   heading: {
     fontSize: "28px",
