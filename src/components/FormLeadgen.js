@@ -4,12 +4,10 @@ import { Formik, Form, Field } from "formik";
 import * as Yup from "yup";
 import Alert from "elevate-ui/Alert";
 import Input from "elevate-ui/Input";
-import RadioGroup from "elevate-ui/RadioGroup";
 import Typography from "elevate-ui/Typography";
 import withStyles from "elevate-ui/withStyles";
 import Datetime from "elevate-ui/Datetime";
 import moment from "moment";
-
 class FormLeadgen extends Component {
   constructor(props) {
     super(props);
@@ -26,24 +24,19 @@ class FormLeadgen extends Component {
       company: '',
       calEmbed: '',
     };
-
     this.showCalForm = this.showCalForm.bind(this);
     this.setFormVal = this.setFormVal.bind(this);
   }
-
   showCalForm(e) {
     console.log('showcalform');
     console.log(e.target);
-
     if(e.target.checked){
       var interestedMarkets = "Interested markets: "+this.state.market1+" - "+this.state.market2+" - "+this.state.market3;
       var thisCompany = "Company: "+this.state.company;
       var eventDesc = encodeURIComponent(thisCompany+", "+interestedMarkets);
-
       var tempCode = `
       <!-- Calendly inline widget begin -->
       <iframe style="height:740px" src="https://calendly.com/estsean/15min-1?embed_domain=&amp;embed_type=Inline&amp;name=`;
-      
       tempCode += encodeURIComponent(this.state.firstname+" "+this.state.lastname);
       tempCode += `&amp;email=`;
       tempCode += encodeURIComponent(this.state.email);
@@ -55,33 +48,25 @@ class FormLeadgen extends Component {
           <!--Calendly inline widget end-- >
       `;
       this.setState({ calEmbed: tempCode});
-
       this.setState({ showCalForm: true});
     }
     else{
       this.setState({ showCalForm: false});
     }
   }
-
   setFormVal(e){
     console.log(e.target.name);
     var tempObj = {};
     tempObj[e.target.name] = e.target.value;
     this.setState(tempObj);
   }
-
-  
-
   render() {
     const { formState } = this.state;
     const { classes, className } = this.props;
-
     var valid = function (current) {
       return current.day() !== 0 && current.day() !== 6;
     };
-
     var renderDay = function(props, currentDate, selectedDate) {
-
       if(currentDate.month() == moment().month()){
         if (currentDate.date() < moment().date()) {
           if(props.className == "rdtDay"){
@@ -92,10 +77,8 @@ class FormLeadgen extends Component {
       if(currentDate.month() < moment().month()){
           props.className = "rdtDay rdtDisabled";
       }
-
       return <td {...props}>{currentDate.date()}</td>;
     };
-
     if (formState === "success") {
       return (
         <div
@@ -106,8 +89,6 @@ class FormLeadgen extends Component {
           }}
         >
           <div >
-                                  
-                      
             <Typography type="heading3" gutterBottom>
               Got it!
             </Typography>
@@ -125,9 +106,6 @@ class FormLeadgen extends Component {
         </div>
       );
     }
-
-    
-
     return <div className={classNames(classes.root, className)}>
         <Formik initialValues={{ firstname: "", lastname: "", company: "", email: "", phone: "", market1: "", market2: "", market3: "", form: "leadgen_formNew", list: 57292 }} validationSchema={() => Yup.object().shape(
               {
@@ -143,8 +121,6 @@ class FormLeadgen extends Component {
             )} onSubmit={(values, { setSubmitting }) => {
             //console.log(values.meetingdate);
             var meeting_request = '';
-            let notes = "Interested Markets: " + values.market1 + "," + values.market2 + "," + values.market3;
-
             Object.keys(values).forEach(function (key, index) {
               // key: the name of the object key
               // index: the ordinal position of the key within the object 
@@ -153,19 +129,10 @@ class FormLeadgen extends Component {
                   meeting_request = values.meetingdate.format("YYYY-MM-DD") + "T" + values.meetingtime.replace(" (EDT)", "") + "-04:00"
                 }
               }
-              if (key == "interestedIn"){
-                notes = notes + ", Interested In: " + values.interestedIn;
-              }
-              if (key == "demorequest"){
-                if(values.demorequest) {
-                  notes = notes + ", Requesting 15 min demo";
-                }
-              }
             });
-
             const body = { ...values, 
               demo_request_date: meeting_request,
-              notes, 
+              notes: "Interested Markets: " + values.market1 + "," + values.market2 + "," + values.market3, 
               utm_campaign: window.utm_tags ? window.utm_tags.campaign : "", 
               utm_source: window.utm_tags ? window.utm_tags.source : "", 
               utm_medium: window.utm_tags ? window.utm_tags.medium : "", 
@@ -185,7 +152,6 @@ class FormLeadgen extends Component {
               .then((res) => {
                 if (res.message === "ok") {
                   this.setState({ formState: "success" });
-
                   if (window.fbq) {
                     window.fbq("track", "Lead");
                   }
@@ -207,18 +173,15 @@ class FormLeadgen extends Component {
           }} render={({ values, isSubmitting, handleBlur, handleChange }) => <Form noValidate>
               <div style={{ marginBottom: "30px" }}>
                 <div className={classes.headingLarge}>
-                
                 <br /> 
-                
-
-                EXCLUSIVE REAL ESTATE BUYER / SELLER LEADS
+                LIMITED AVAILABILITY ON EXCLUSIVE BUYER / SELLER LEADS
                 </div>
                 <div className={classes.headingSmall}>
-                Seller, Buyer, or a Mix of Both
+                  Exclusive leads in markets across the U.S.
                 </div>
                 <div className={classes.headingText} style={{ marginTop: "10px" }}>
-                Limited availability across U.S.<br/>
-                Secure your markets today.
+                  First Come. First Served.<br/>
+Check availability today.
                 </div>
               </div>
               <div style={{ maxWidth: "500px", marginLeft: "auto", marginRight: "auto" }}>
@@ -229,48 +192,19 @@ class FormLeadgen extends Component {
                 <Field id="email" name="email" label="Email" component={Input} className={classes.field} onBlur={this.setFormVal} />
                 <Field id="phone" name="phone" label="Phone" component={Input} className={classes.field} type="tel" onBlur={this.setFormVal} />
                 <Field id="company" name="company" label="Affiliation (optional)" component={Input} className={classes.field} onBlur={this.setFormVal} />
-                <div style={{ width: "100%", textAlign: "left", paddingTop: '10px', paddingBottom:"10px"}}>
+                <div style={{ width: "100%", textAlign: "center" }}>
                   What are your top 3 markets of interest? (optional)
                 </div>
                 <Field id="market1" name="market1" label="City/State" component={Input} className={classes.field} onBlur={this.setFormVal} />
                 <Field id="market2" name="market2" label="City/State" component={Input} className={classes.field} onBlur={this.setFormVal} />
                 <Field id="market3" name="market3" label="City/State" component={Input} className={classes.field} onBlur={this.setFormVal} />
-                <div style={{textAlign: "left",}} className={classes.fieldCenter}>
-                  <div style={{ width: "100%", margin: "20px", marginLeft:"5px" }}>
-                  I am interested in:
-                  </div>
-                  <div style={{marginLeft:"20px"}}>
-                <Field
-                id="interestedIn"
-                name="interestedIn"
-                label=''
-                component={RadioGroup}
-                items={[
-                  {
-                    label: "Seller Only Leads",
-                    value: "Seller Only Leads",
-                  },
-                  {
-                    label: "Buyer Only Leads",
-                    value: "Buyer Only Leads",
-                  },
-                  {
-                    label: "A Mix of Buyer / Seller Leads",
-                    value: "A Mix of Buyer / Seller Leads",
-                  },
-                ]}
-                
-              />
-              </div>
-              </div>
                 Schedule 15 minutes with a Lead Generation Specialist:
                 <Field id="demorequest" name="demorequest" type="checkbox" value="yes" className={classes.checkfield}  />
-                
                 <button type="submit" className={classes.signUpBtn} disabled={isSubmitting}>
                   Check Availability
                 </button>
               </div>
-            <div style={{ fontSize: "11px" }}>
+            <div style={{ fontSize: "11px", lineHeight:"16px" }}>
             By submitting this form, you are requesting to be contacted by a member of the Elevate Sales Team at the details provided via text, email or call (may involve automated or pre-recorded means).  You may revoke this consent through any reasonable means.<br />
               Existing subscribers seeking support, please visit the <a href="https://elmstreettechnology.zendesk.com/hc/en-us">Elevate Help Center</a>.
               </div>
@@ -278,9 +212,6 @@ class FormLeadgen extends Component {
       </div>;
   }
 }
-
-
-
 export default withStyles((theme) => ({
   root: {
     display: "flex",
@@ -321,7 +252,6 @@ export default withStyles((theme) => ({
     display: "flex",
     flexDirection: "row",
     justifyContent: "space-between",
-
     "& > * + *": {
       marginLeft: "12px",
     },
