@@ -5,6 +5,7 @@ import * as Yup from "yup";
 import Alert from "elevate-ui/Alert";
 import Input from "elevate-ui/Input";
 import Typography from "elevate-ui/Typography";
+import RadioGroup from "elevate-ui/RadioGroup";
 import withStyles from "elevate-ui/withStyles";
 import Datetime from "elevate-ui/Datetime";
 import moment from "moment";
@@ -198,6 +199,52 @@ Check availability today.
                 <Field id="market1" name="market1" label="City/State" component={Input} className={classes.field} onBlur={this.setFormVal} />
                 <Field id="market2" name="market2" label="City/State" component={Input} className={classes.field} onBlur={this.setFormVal} />
                 <Field id="market3" name="market3" label="City/State" component={Input} className={classes.field} onBlur={this.setFormVal} />
+                
+                
+                <div style={{textAlign:"left",fontSize:"14px",lineHeight:"19px"}}>
+                  <Field
+                id="role"
+                name="role"
+                label="I am:"
+                component={RadioGroup}
+                display="inline"
+                items={[
+                  {
+                    label: "An Existing Client",
+                    value: "Existing Client",
+                  },
+                  {
+                    label: "An Agent",
+                    value: "Agent",
+                  },
+                  {
+                    label: "A Broker/Owner",
+                    value: "Broker/Owner",
+                  },
+                  {
+                    label: "Other (please specify)",
+                    value: "Other",
+                  },
+                ]}
+                className={classes.field}
+              />
+              {values.role === "Other" && (
+                <Field
+                  id="roleOther"
+                  name="roleOther"
+                  label="Other"
+                  component={Input}
+                  className={classes.field}
+                  autoFocus
+                />
+              )}
+  
+              
+              </div>
+                
+                
+                
+                
                 Schedule 15 minutes with a Lead Generation Specialist:
                 <Field id="demorequest" name="demorequest" type="checkbox" value="yes" className={classes.checkfield}  />
                 <button type="submit" className={classes.signUpBtn} disabled={isSubmitting}>
