@@ -108,7 +108,7 @@ class FormLeadgen extends Component {
       );
     }
     return <div className={classNames(classes.root, className)}>
-        <Formik initialValues={{ firstname: "", lastname: "", company: "", email: "", phone: "", market1: "", market2: "", market3: "", form: "leadgen_formNew", list: 57292 }} validationSchema={() => Yup.object().shape(
+        <Formik initialValues={{ firstname: "", lastname: "", company: "", email: "", phone: "", market1: "", market2: "", market3: "", role: "", form: "leadgen_formNew", list: 57292 }} validationSchema={() => Yup.object().shape(
               {
                 firstname: Yup.string().required("First name is required"),
                 lastname: Yup.string().required("Last name is required"),
