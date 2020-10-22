@@ -105,6 +105,9 @@ const HeaderNavDesktop = ({ classes, className }) => {
           <Link className={classes.listItemLink} to="/blog">
             <li className={classes.listItem}>Blog</li>
           </Link>
+          <Link className={classes.listItemLink} to="/dailymarketingtips">
+            <li className={classes.listItem}>Daily Marketing Tips</li>
+          </Link>
         </ul>
       </div>
     </nav>
