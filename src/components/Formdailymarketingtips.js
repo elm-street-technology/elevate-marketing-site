@@ -85,8 +85,8 @@ class Formdailymarketingtips extends Component {
             email: "",
             phone: "",
             mls_number: "",
-            form: "socialmediaguide",
-            list: 103210,
+            form: "elevatetips",
+            list: 118042,
             meetingdate: '',
             meetingtime: '',
             role: "",
@@ -96,12 +96,9 @@ class Formdailymarketingtips extends Component {
             Yup.object().shape({
               firstname: Yup.string().required("First name is required"),
               lastname: Yup.string().required("Last name is required"),
-              company: Yup.string(),
               email: Yup.string()
                 .email("Invalid email address")
                 .required("Email is required"),
-              phone: Yup.string().required("Phone is required"),
-              mls_number: Yup.string()
             })
           }
           onSubmit={(values, { setSubmitting }) => {
