@@ -249,6 +249,9 @@ const Footer = ({ classes }) => (
           <Link className={classes.link} to="/blog">
             Blog
           </Link>
+          <Link className={classes.link} to="/dailymarketingtips">
+            Daily Marketing Tips
+          </Link>
           <Link className={classes.link} to="/terms-of-service">
             Terms of Service
           </Link>
