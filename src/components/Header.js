@@ -214,7 +214,7 @@ class Header extends Component {
         {thisPath != '/leadgen' && thisPath != '/leadgen/' && 
         <div className={classes.violator}>
           <span style={{fontWeight:"bold", fontSize:"14px"}}>NO CONTRACT COMMITMENT: This Month ONLY!</span>
-          <Link to="/getstarted" style={{color:"#fbcd2e", fontWeight:"bold", paddingLeft:"4px", fontSize:"14px"}}> Connect To Learn More</Link>
+          <Link to="/get-started" style={{color:"#fbcd2e", fontWeight:"bold", paddingLeft:"4px", fontSize:"14px"}}> Connect To Learn More</Link>
         </div>
             }
       </div>

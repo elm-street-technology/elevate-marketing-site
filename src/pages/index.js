@@ -376,7 +376,7 @@ class Index extends Component {
 
       
               <div>
-                <Link to="/getstarted" className={classes.ctabutton} style={{maxWidth:"550px"}}>
+                <Link to="/get-started" className={classes.ctabutton} style={{maxWidth:"550px"}}>
                 Connect To Learn More
                 </Link>
               </div>
