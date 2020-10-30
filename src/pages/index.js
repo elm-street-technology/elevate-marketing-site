@@ -38,7 +38,7 @@ import Fadebg from "../images/fadebg.jpg";
 import Smcover from "../images/sm101_cover.png";
 import Btccover from "../images/btc_cover.png";
 import Saucecover from "../images/sauce_cover.png";
-import Modalpic from "../images/modal_expic.png";
+import Modalpic from "../images/nov_pop.gif";
 import Container from "../components/Container";
 import Bcesw from "../images/bcesw.jpg";
 
@@ -364,20 +364,20 @@ class Index extends Component {
           <div className={classes.modalContent}>
             <span id="modalClose" className={classes.close}>&times;</span>
             <div style={{ textAlign: "center",}}>
-                                          <img src={Modalpic} width="100%" style={{maxWidth:"380px"}}/>
+                                          <img src={Modalpic} width="100%" style={{maxWidth:"420px"}}/>
                                     </div>
-            <div style={{color:"#f78d10",fontSize:"65px",fontWeight:"bold",paddingBottom:"10px", lineHeight:"65px"}}>SELLER LEADS
+            <div style={{color:"#f82037",fontSize:"25px",fontWeight:"bold",paddingBottom:"5px", lineHeight:"28px", paddingTop:"20px"}}>NO CONTRACT COMMITMENT
           </div>
             <div>
               <span style={{fontWeight:"bold"}}>
-              ARE NOW AVAILABLE!  
+              on ANY Elevate Product 
               </span>
             </div> 
 
       
               <div>
-                <Link to="/sellerleads" className={classes.ctabutton} style={{maxWidth:"550px"}}>
-                CLAIM YOUR MARKETS
+                <Link to="/getstarted" className={classes.ctabutton} style={{maxWidth:"550px"}}>
+                Connect To Learn More
                 </Link>
               </div>
                     
