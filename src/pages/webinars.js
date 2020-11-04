@@ -135,7 +135,7 @@ const Webinars = ({ classes, data }) => {
                                     to nurture your leads. Live Q&amp;A throughout.
                                     <br /><br />
                                     Training time:  1 hr.</div>
-                                    <a target="_blank" href="https://register.gotowebinar.com/rt/5239817628865423374" className={classes.getStartedLink}>
+                                    <a target="_blank" href="https://attendee.gotowebinar.com/rt/4763393744118775568" className={classes.getStartedLink}>
 Register Now</a>
                                     <div style={{ textAlign: "center",paddingTop:"5px" }}>
                                           <img src={Web4} width="300" />
