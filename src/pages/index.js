@@ -370,16 +370,22 @@ class Index extends Component {
           </div>
             <div>
               <span style={{fontWeight:"bold"}}>
-              on ANY Elevate Product 
+              on Elevate Social Pro&trade;, DMS&trade;, DMS Plus&trade; &amp; Elite&trade;
               </span>
             </div> 
 
       
-              <div>
+              <div style={{paddingbottom:"15px"}}>
                 <Link to="/get-started" className={classes.ctabutton} style={{maxWidth:"550px"}}>
                 Connect To Learn More
                 </Link>
               </div>
+
+              <div>
+              <span style={{fontSize:"11px"}}>
+              *Excludes Brokerage Products
+              </span>
+            </div> 
                     
           </div>
         </div>
