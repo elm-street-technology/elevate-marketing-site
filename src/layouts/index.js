@@ -25,6 +25,7 @@ const Template = ({ children, classes, location }) => {
         location.pathname == "/singlepropertywebsites/" || location.pathname == "/singlepropertywebsites" ||
         location.pathname == "/sellerleads/" || location.pathname == "/sellerleads" ||
         location.pathname == "/leadgen/" || location.pathname == "/leadgen" ||
+        location.pathname == "/emailmarketingguide/" || location.pathname == "/emailmarketingguide" ||
         location.pathname == "/brokeragetechchecklist/" || location.pathname == "/brokeragetechchecklist" ||
         location.pathname == "/leadgenguide/" || location.pathname == "/leadgenguide") {
       return <FooterLander />;
@@ -44,6 +45,7 @@ const Template = ({ children, classes, location }) => {
         location.pathname == "/singlepropertywebsites/" || location.pathname == "/singlepropertywebsites" ||
         location.pathname == "/sellerleads/" || location.pathname == "/sellerleads" ||
         location.pathname == "/leadgen/" || location.pathname == "/leadgen" ||
+        location.pathname == "/emailmarketingguide/" || location.pathname == "/emailmarketingguide" ||
         location.pathname == "/brokeragetechchecklist/" || location.pathname == "/brokeragetechchecklist" ||
         location.pathname == "/leadgenguide/" || location.pathname == "/leadgenguide") {
       return <HeaderLander />;
