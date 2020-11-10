@@ -61,7 +61,7 @@ class Formdailymarketingtips extends Component {
             </Typography>
            
             <Typography type="heading5" gutterTop style={{fontSize:"18px"}}>
-              You will start to receive your first marketing tip as soon as possible.<br />
+            Check your inbox for your 1st tip!<br />
               If you have any questions, you can speak to a member of our sales team immediately <br/>by calling  <a href="tel:18447920260" className={classes.link}>844.792.0260</a>.
             </Typography>
           </div>
