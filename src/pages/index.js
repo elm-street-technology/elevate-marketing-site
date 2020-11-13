@@ -383,7 +383,7 @@ class Index extends Component {
 
               <div>
               <span style={{fontSize:"11px"}}>
-              *Excludes Brokerage Products
+              *Excludes Elite Pro&trade; &amp; Brokerage Products
               </span>
             </div> 
                     
