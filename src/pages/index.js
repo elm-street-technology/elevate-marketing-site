@@ -37,6 +37,8 @@ import Seocover from "../images/seo_cover.png";
 import Fadebg from "../images/fadebg.jpg";
 import Smcover from "../images/sm101_cover.png";
 import Btccover from "../images/btc_cover.png";
+import Emailcover from "../images/email_cover.png";
+import Kardcover from "../images/kard_cover.png";
 import Saucecover from "../images/sauce_cover.png";
 import Modalpic from "../images/nov_pop.gif";
 import Container from "../components/Container";
@@ -192,16 +194,28 @@ class Index extends Component {
 
         <div className={classes.top}>
 
-                  <div className={classes.column2} style={{ textAlign: "center", paddingTop: "22px" }}>
+                <div className={classes.column3} style={{ textAlign: "center", paddingTop: "22px" }}>
                                     
-                                    <div className={classes.centerheading2}>Social Media Marketing 101 Guide</div>
-                                    <div className={classes.centersubtext} style={{ fontWeight: "bold" }}>Your FREE, All-Inclusive Guide<br />
+                                    <div className={classes.centerheading2}>Awesome Email<br />
+                                    Marketing Guide</div>
+                                    <div className={classes.centersubtext} >Your FREE Guide
+                                    For Creating AWESOME Email Marketing!</div>
+                                    
+                                    
+                                    <a target="_blank" href="/emailmarketingguide" className={classes.ctabutton}>
+                                    Download Now</a>
+                                    <div style={{ textAlign: "center",paddingTop:"35px" }}>
+                                          <img src={Emailcover} width="300"/>
+                                    </div>
+                  </div>
+
+                  <div className={classes.column3} style={{ textAlign: "center", paddingTop: "22px" }}>
+                                    
+                                    <div className={classes.centerheading2}>Social Media<br />
+                                    Marketing 101 Guide</div>
+                                    <div className={classes.centersubtext}>Your FREE, All-Inclusive Guide<br />
                                     For Creating GREAT Content!</div>
-                                    <br /><br />
-                                    <div className={classes.centersubtext}>What makes for awesome social media marketing content? It's not as time-consuming
-                                    or difficult as you might think. Download this FREE GUIDE and get the tips,
-                                    tricks, and strategies from the pros to elevate your social media marketing
-                                    content today! Includes 4-month content marketing calendar.</div>
+                                    
                                     
                                     <a target="_blank" href="/socialmediamarketingguide" className={classes.ctabutton}>
                                     Download Now</a>
@@ -210,19 +224,13 @@ class Index extends Component {
                                     </div>
                   </div>
 
-                  <div className={classes.column2} style={{ textAlign: "center", paddingTop: "22px" }}>
+                  <div className={classes.column3} style={{ textAlign: "center", paddingTop: "22px" }}>
                  
-                                    <div className={classes.centerheading2}>Website SEO Guide</div>
-                                    <div className={classes.centersubtext} style={{ fontWeight: "bold" }}>Secrets to Getting<br />
+                                    <div className={classes.centerheading2}>ROCKIN' Website<br />
+                                    SEO Guide</div>
+                                    <div className={classes.centersubtext}>Secrets to Getting<br />
                                     Found on Google</div>
-                                    <br /><br />
-                                    <div className={classes.centersubtext}>93% of buyers looking for a home use online searches
-                                    for listings and information during their home-buying journey. What does it take to be seen
-                                    on the first page of Google,<br />
-                                    and what can you do to get there?<br />
-                                    This FREE GUIDE
-                                    is your key to SEO success!
-                                    </div>
+                                   
                                     <a target="_blank" href="/websiteseoguide" className={classes.ctabutton}>
                                     Download Today</a>
                                     <div style={{ textAlign: "center",paddingTop:"35px" }}>
@@ -243,17 +251,15 @@ class Index extends Component {
 
         <div className={classes.top}>
 
-                  <div className={classes.column2} style={{ textAlign: "center", paddingTop: "22px" }}>
+
+                  <div className={classes.column3} style={{ textAlign: "center", paddingTop: "22px" }}>
                                     
-                                    <div className={classes.centerheading2}>Lead Generation "Secret Sauce"</div>
-                                    <div className={classes.centersubtext} style={{ fontWeight: "bold" }}>Packed Full of Easy-To-Implement<br />
+                                    <div className={classes.centerheading2}>Lead Generation<br />
+                                    "Secret Sauce"</div>
+                                    <div className={classes.centersubtext}>Packed Full of Easy-To-Implement<br />
                                     Tips, Tricks &amp; Strategies</div>
-                                    <br /><br />
-                                    <div className={classes.centersubtext}>How to stand out from the crowd, build a successful pipeline,
-                                    and drive conversions. Your FREE GUIDE is packed full
-                                    of easy-to-implement tips, tricks &amp; strategies, an overview of how
-                                    Elevate’s lead generation technology does 90% of the work for busy real estate professionals,
-                                    and a bunch of special offers to jumpstart your online lead generation.</div>
+                                    
+                                 
                                     
                                     <a target="_blank" href="/leadgenguide" className={classes.ctabutton}>
                                     Download Now</a>
@@ -262,23 +268,30 @@ class Index extends Component {
                                     </div>
                   </div>
 
-                  <div className={classes.column2} style={{ textAlign: "center", paddingTop: "22px" }}>
+                  <div className={classes.column3} style={{ textAlign: "center", paddingTop: "22px" }}>
                  
-                                    <div className={classes.centerheading2}>Brokerage Technology Checklist</div>
-                                    <div className={classes.centersubtext} style={{ fontWeight: "bold" }}>Select The Best Technology<br />
+                                    <div className={classes.centerheading2}>The Brokerage<br />
+                                    Technology Checklist</div>
+                                    <div className={classes.centersubtext} >Select The Best Technology<br />
                                     Partner for Your Brokerage</div>
-                                    <br /><br />
-                                    <div className={classes.centersubtext}>Download your comprehensive guide<br />
-                                    to selecting the right technology partner for your brokerage.<br />
-                                    Includes the top 4 questions to ask tech companies<br />
-                                    to separate potential partners from vendors,<br />
-                                    and a checklist of features &amp; functionality<br />
-                                    every brokerage must have!
-                                    </div>
+                                   
                                     <a target="_blank" href="/brokeragetechchecklist" className={classes.ctabutton}>
                                     Download Today</a>
                                     <div style={{ textAlign: "center",paddingTop:"35px" }}>
                                           <img src={Btccover} width="300" />
+                                    </div>
+                  </div>
+
+                  <div className={classes.column3} style={{ textAlign: "center", paddingTop: "22px" }}>
+                 
+                                    <div className={classes.centerheading2}>6 Estate Marketing Lessons<br />
+                                    From Kim Kardashian</div>
+                                    <div className={classes.centersubtext} >What can Kim Kardashian teach real estate agents about marketing?</div>
+                                   
+                                    <a target="_blank" href="/kardashian" className={classes.ctabutton}>
+                                    Download Today</a>
+                                    <div style={{ textAlign: "center",paddingTop:"35px" }}>
+                                          <img src={Kardcover} width="300" />
                                     </div>
                   </div>
 
@@ -411,6 +424,14 @@ export default withStyles((theme) => ({
 
   column2:{
     width:"530px",
+    maxWidth: "100%",
+    paddingRight:"20px",
+    paddingLeft:"20px",
+    verticalAlign: "top",
+  },
+
+  column3:{
+    width:"345px",
     maxWidth: "100%",
     paddingRight:"20px",
     paddingLeft:"20px",
