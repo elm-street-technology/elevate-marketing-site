@@ -214,24 +214,24 @@ class SignUpFormReview extends Component {
               <Field
                 id="role"
                 name="role"
-                label="I am a(n)"
+                label="I am:"
                 component={RadioGroup}
                 display="inline"
                 items={[
                   {
-                    label: "Existing client – looking to connect to review my account & make sure I’m doing everything I can!",
+                    label: "An Existing Client",
                     value: "Existing Client",
                   },
                   {
-                    label: "An agent – looking to schedule my FREE 15-minute social media review.",
+                    label: "An Agent",
                     value: "Agent",
                   },
                   {
-                    label: "A broker – interested in scheduling my FREE gap / financial analysis.",
+                    label: "A Broker/Owner",
                     value: "Broker",
                   },
                   {
-                    label: "Other (please specify)*",
+                    label: "Other (please specify)",
                     value: "Other",
                   },
                 ]}
@@ -255,7 +255,7 @@ class SignUpFormReview extends Component {
               >
                 Please contact me asap
               </button>
-              <div style={{ fontSize: "11px",textAlign: "center" }}>
+              <div style={{ fontSize: "11px", lineHeight:"16px", textAlign: "center" }}>
               By submitting this form, you are requesting to be contacted by a member of the Elevate Sales Team at the details provided via text, email or call (may involve automated or pre-recorded means).  You may revoke this consent through any reasonable means.
               </div>
             </Form>
