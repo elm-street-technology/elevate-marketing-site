@@ -252,6 +252,9 @@ const Footer = ({ classes }) => (
           <Link className={classes.link} to="/dailymarketingtips">
             Daily Marketing Tips
           </Link>
+          <Link className={classes.link} to="/free_educational_guides">
+            Free Educational Guides
+          </Link>
           <Link className={classes.link} to="/terms-of-service">
             Terms of Service
           </Link>
