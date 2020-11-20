@@ -5,6 +5,7 @@ import config from "../utils/siteConfig";
 import Container from "../components/Container";
 import FormLeadgen from "../components/FormLeadgen";
 import SEO from "../components/SEO";
+import Modalpic2 from "../images/doubledown.png";
 import LandingHeader from "../images/leads_top_image.jpg";
 import LandingFooter from "../images/leads_bottom_image.jpg";
 
@@ -22,8 +23,14 @@ const Dms = ({ children, classes, data, tags }) => {
 
       <Container>
         <div >
-                  <div style={{ maxWidth: "900px", backgroundColor: "#ece8ea", marginRight:"auto",marginLeft:"auto",paddingTop:"20px"}}>
-                
+                  <div style={{ maxWidth: "900px", backgroundColor: "#ece8ea", marginRight:"auto",marginLeft:"auto",paddingTop:"20px", textAlign:"center"}}>
+                <div style={{padding:"40px", textAlign:"center"}}>
+                <img src={Modalpic2} width="100%" style={{maxWidth:"400px", paddingBottom:"20px"}}/><br />
+                <div className={classes.centersubtext} >The first 25 people to secure EXCLUSIVE buyer / seller<br />
+                lead markets will receive DOUBLE BUYER LEADS for the first 2-months.  
+                <br /><br />
+                Hurry - limited availability!  Secure your markets today!</div>
+                </div>
                 <div style={{ paddingLeft: "10px", paddingRight: "10px"}}>
                     <FormLeadgen />
                 </div>
@@ -53,6 +60,19 @@ export default withStyles((theme) => ({
     color: "#2E2E35",
     textAlign: "center",
     marginBottom: "12px",
+  },
+  centersubtext: {
+    color: "#5A5B5C",
+    fontWeight: "500",
+    fontSize: "16px",
+    letterSpacing: ".25px",
+    lineHeight: "1.6",
+    marginbottom: "20px",
+    textAlign: "center",
+  
+    [theme.breakpoints[900]]: {
+        fontSize: "16px",
+    },
   },
 
   subHeading: {
