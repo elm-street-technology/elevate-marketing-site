@@ -41,6 +41,7 @@ import Emailcover from "../images/email_cover.png";
 import Kardcover from "../images/kard_cover.png";
 import Saucecover from "../images/sauce_cover.png";
 import Modalpic from "../images/nov_pop.gif";
+import Modalpic2 from "../images/doubledown.png";
 import Container from "../components/Container";
 import Bcesw from "../images/bcesw.jpg";
 
@@ -377,27 +378,31 @@ class Index extends Component {
           <div className={classes.modalContent}>
             <span id="modalClose" className={classes.close}>&times;</span>
             <div style={{ textAlign: "center",}}>
-                                          <img src={Modalpic} width="100%" style={{maxWidth:"420px"}}/>
+                                          <img src={Modalpic2} width="100%" style={{maxWidth:"400px", padding:"15px"}}/>
                                     </div>
-            <div style={{color:"#f82037",fontSize:"25px",fontWeight:"bold",paddingBottom:"5px", lineHeight:"28px", paddingTop:"20px"}}>NO CONTRACT COMMITMENT
-          </div>
+         
             <div>
               <span style={{fontWeight:"bold"}}>
-              on Elevate Social Pro&trade;, DMS&trade;, DMS Plus&trade; &amp; Elite&trade;
+              Be one of the 1st 25 people to subscribe<br />
+              to one of the following Elevate Lead<br />
+              Generation Solutions - Ignite, DMS Plus,<br />
+              Elite - and receive 2X BUYER LEADS<br />
+              for your 1st two-months. 
+
               </span>
             </div> 
 
       
-              <div style={{paddingbottom:"15px"}}>
-                <Link to="/get-started" className={classes.ctabutton} style={{maxWidth:"550px"}}>
-                Connect To Learn More
+              <div style={{paddingbottom:"22px"}}>
+                <Link to="/leadgen" target="_blank" className={classes.ctabutton} style={{maxWidth:"550px"}}>
+                Check Availability NOW!
                 </Link>
+                <br /><br />
+                <span style={{fontSize:"12px"}}>*excludes Elite Pro &amp; Brokerage solutions</span>
               </div>
 
               <div>
-              <span style={{fontSize:"11px"}}>
-              *Excludes Elite Pro&trade; &amp; Brokerage Products
-              </span>
+             
             </div> 
                     
           </div>

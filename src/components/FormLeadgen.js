@@ -172,19 +172,7 @@ class FormLeadgen extends Component {
                 this.setState({ formState: "error" });
               });
           }} render={({ values, isSubmitting, handleBlur, handleChange }) => <Form noValidate>
-              <div style={{ marginBottom: "30px" }}>
-                <div className={classes.headingLarge}>
-                <br /> 
-                LIMITED AVAILABILITY ON EXCLUSIVE BUYER / SELLER LEADS
-                </div>
-                <div className={classes.headingSmall}>
-                  Exclusive leads in markets across the U.S.
-                </div>
-                <div className={classes.headingText} style={{ marginTop: "10px" }}>
-                  First Come. First Served.<br/>
-Check availability today.
-                </div>
-              </div>
+              
               <div style={{ maxWidth: "500px", marginLeft: "auto", marginRight: "auto" }}>
                 <div className={classes.topRow}>
                   <Field id="firstname" name="firstname" label="First Name" component={Input} className={classes.field} onBlur={this.setFormVal} />
@@ -252,6 +240,8 @@ Check availability today.
                 </button>
               </div>
             <div style={{ fontSize: "11px", lineHeight:"16px" }}>
+            *excludes Elite Pro &amp; Brokerage solutions
+                  <br /><br />
             By submitting this form, you are requesting to be contacted by a member of the Elevate Sales Team at the details provided via text, email or call (may involve automated or pre-recorded means).  You may revoke this consent through any reasonable means.<br />
               Existing subscribers seeking support, please visit the <a href="https://elmstreettechnology.zendesk.com/hc/en-us">Elevate Help Center</a>.
               </div>
