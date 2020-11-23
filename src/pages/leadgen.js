@@ -26,12 +26,13 @@ const Dms = ({ children, classes, data, tags }) => {
                   <div style={{ maxWidth: "900px", backgroundColor: "#ece8ea", marginRight:"auto",marginLeft:"auto",paddingTop:"20px", textAlign:"center"}}>
                 <div style={{padding:"40px", textAlign:"center"}}>
                 <img src={Modalpic2} width="100%" style={{maxWidth:"400px", paddingBottom:"20px"}}/><br />
-                <div className={classes.centersubtext} >The first 25 people to secure EXCLUSIVE buyer / seller<br />
-                lead markets will receive DOUBLE BUYER LEADS for the first 2-months.  
+                <div className={classes.centersubtext} style={{ paddingLeft: "22px", paddingRight: "22px"}}>Be one of the 1st 25 people to subscribe to one
+                of the following Elevate Lead Generation
+                Solutions - Ignite, DMS Plus, Elite - and receive 2X BUYER LEADS for your 1st two-months.  
                 <br /><br />
                 Hurry - limited availability!  Secure your markets today!</div>
                 </div>
-                <div style={{ paddingLeft: "10px", paddingRight: "10px"}}>
+                <div style={{ paddingLeft: "22px", paddingRight: "22px"}}>
                     <FormLeadgen />
                 </div>
                 <div>

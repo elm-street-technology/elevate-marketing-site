@@ -378,14 +378,17 @@ class Index extends Component {
           <div className={classes.modalContent}>
             <span id="modalClose" className={classes.close}>&times;</span>
             <div style={{ textAlign: "center",}}>
-                                          <img src={Modalpic2} width="100%" style={{maxWidth:"400px", padding:"20px"}}/>
+                                          <img src={Modalpic2} width="100%" style={{maxWidth:"400px", padding:"15px"}}/>
                                     </div>
          
             <div>
               <span style={{fontWeight:"bold"}}>
-              The first 25 people to secure EXCLUSIVE<br />
-              buyer / seller lead markets will receive<br />
-              DOUBLE BUYER LEADS for the first 2-months.
+              Be one of the 1st 25 people to subscribe<br />
+              to one of the following Elevate Lead<br />
+              Generation Solutions - Ignite, DMS Plus,<br />
+              Elite - and receive 2X BUYER LEADS<br />
+              for your 1st two-months. 
+
               </span>
             </div> 
 
@@ -394,6 +397,8 @@ class Index extends Component {
                 <Link to="/leadgen" target="_blank" className={classes.ctabutton} style={{maxWidth:"550px"}}>
                 Check Availability NOW!
                 </Link>
+                <br /><br />
+                <span style={{fontSize:"12px"}}>*excludes Elite Pro &amp; Brokerage solutions</span>
               </div>
 
               <div>
