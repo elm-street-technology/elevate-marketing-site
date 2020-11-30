@@ -382,6 +382,7 @@ class Index extends Component {
                                     </div>
          
             <div>
+            <div className={classes.centerheading} style={{fontSize:"20px"}}>Hurry...expires at 6PM PT TODAY!</div>
               <span style={{fontWeight:"bold"}}>
               Be one of the 1st 25 people to subscribe<br />
               to one of the following Elevate Lead<br />
