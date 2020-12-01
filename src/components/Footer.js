@@ -189,6 +189,9 @@ const Footer = ({ classes }) => (
           <Link className={classes.link} to="/elite">
             Elite&trade;
           </Link>
+          <Link className={classes.link} to="/elitepro">
+            Elite Pro&trade;
+          </Link>
           <Link className={classes.link} to="/boss">
             BOSS&trade;
           </Link>

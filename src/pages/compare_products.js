@@ -7,6 +7,7 @@ import BgSectionExternal3 from "../components/BgSectionExternal3";
 import Formcomparison from "../components/Formcomparison";
 import Glancebg from "../images/glancebg.jpg";
 import Compchart from "../images/compchart.jpg";
+import Compchart2 from "../images/compchart2.jpg";
 import Glance2 from "../images/glance2.png";
 import Glance3 from "../images/glance3.gif";
 import Glance4 from "../images/glance4.png";
@@ -36,7 +37,7 @@ const Compareproducts = ({ children, classes, data, tags }) => {
           </div>
       </div>
 
-      <img src={Compchart} width="100%"  style={{paddingTop:"25px", maxWidth:"1080px", paddingRight:"25px", paddingLeft:"25px", marginBottom:"-2px"}} />
+      <img src={Compchart2} width="100%"  style={{paddingTop:"25px", maxWidth:"1080px", paddingRight:"25px", paddingLeft:"25px", marginBottom:"-2px"}} />
 
 </Container>
 </div>
