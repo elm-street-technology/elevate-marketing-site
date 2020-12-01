@@ -25,12 +25,12 @@ const Dms = ({ children, classes, data, tags }) => {
         <div >
                   <div style={{ maxWidth: "900px", backgroundColor: "#ece8ea", marginRight:"auto",marginLeft:"auto",paddingTop:"20px", textAlign:"center"}}>
                 <div style={{padding:"40px", textAlign:"center"}}>
-                <img src={Modalpic2} width="100%" style={{maxWidth:"400px", paddingBottom:"20px"}}/><br />
-                <div className={classes.centersubtext} style={{ paddingLeft: "22px", paddingRight: "22px"}}>Be one of the 1st 25 people to subscribe to one
-                of the following Elevate Lead Generation
-                Solutions - Ignite, DMS Plus, Elite - and receive 2X BUYER LEADS for your 1st two-months.  
-                <br /><br />
-                Hurry - limited availability!  Secure your markets today!</div>
+                <div className={classes.heading} style={{color:"#52B1AD"}}>LIMITED AVAILABILITY ON<br />
+                EXCLUSIVE BUYER / SELLER LEADS</div>
+                <div className={classes.subHeading} style={{color:"#52B1AD"}}>EXCLUSIVE LEADS IN MARKETS ACROSS THE U.S.</div>
+                <div className={classes.centersubtext} style={{ paddingLeft: "22px", paddingRight: "22px"}}>
+                First Come. First Served.<br />
+                Check availability today.</div>
                 </div>
                 <div style={{ paddingLeft: "22px", paddingRight: "22px"}}>
                     <FormLeadgen />
@@ -55,8 +55,8 @@ export default withStyles((theme) => ({
     margin: "20px auto",
   },
   heading: {
-    fontSize: "28px",
-    fontWeight: "800",
+    fontSize: "30px",
+    fontWeight: "700",
     letterSpacing: ".14px",
     color: "#2E2E35",
     textAlign: "center",
@@ -64,7 +64,7 @@ export default withStyles((theme) => ({
   },
   centersubtext: {
     color: "#5A5B5C",
-    fontWeight: "500",
+    fontWeight: "700",
     fontSize: "16px",
     letterSpacing: ".25px",
     lineHeight: "1.6",
@@ -78,6 +78,7 @@ export default withStyles((theme) => ({
 
   subHeading: {
     fontSize: "18px",
+    fontWeight: "700",
     lineHeight: "28px",
     letterSpacing: ".08px",
     textAlign: "center",

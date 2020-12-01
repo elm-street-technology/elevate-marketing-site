@@ -378,28 +378,24 @@ class Index extends Component {
           <div className={classes.modalContent}>
             <span id="modalClose" className={classes.close}>&times;</span>
             <div style={{ textAlign: "center",}}>
-                                          <img src={Modalpic2} width="100%" style={{maxWidth:"400px", padding:"15px"}}/>
+                                          <img src={Modalpic} width="100%" style={{maxWidth:"400px", padding:"15px"}}/>
                                     </div>
          
             <div>
-            <div className={classes.centerheading} style={{fontSize:"20px"}}>Hurry...expires at 6PM PT TODAY!</div>
+            <div className={classes.centerheading} style={{fontSize:"20px"}}>NO CONTRACT COMMITMENT!</div>
               <span style={{fontWeight:"bold"}}>
-              Be one of the 1st 25 people to subscribe<br />
-              to one of the following Elevate Lead<br />
-              Generation Solutions - Ignite, DMS Plus,<br />
-              Elite - and receive 2X BUYER LEADS<br />
-              for your 1st two-months. 
+              on Elevate Social Pro&trade;, DMS&trade;, DMS Plus&trade; &amp; Elite&trade;
 
               </span>
             </div> 
 
       
               <div style={{paddingbottom:"22px"}}>
-                <Link to="/leadgen" target="_blank" className={classes.ctabutton} style={{maxWidth:"550px"}}>
-                Check Availability NOW!
+                <Link to="/get-started" target="_blank" className={classes.ctabutton} style={{maxWidth:"550px"}}>
+                Connect To Learn More
                 </Link>
                 <br /><br />
-                <span style={{fontSize:"12px"}}>*excludes Elite Pro &amp; Brokerage solutions</span>
+              
               </div>
 
               <div>
