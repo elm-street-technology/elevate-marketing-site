@@ -395,7 +395,7 @@ class Index extends Component {
                 Connect To Learn More
                 </Link>
                 <br /><br />
-              
+                <span style={{fontSize:"12px"}}>excludes Elite Pro&trade; &amp; brokerage solutions</span>
               </div>
 
               <div>
