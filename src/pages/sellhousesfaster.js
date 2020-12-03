@@ -35,7 +35,7 @@ const Sellhousesfaster = ({ children, classes, data, tags }) => {
 
               <div style={{textAlign: "center", maxWidth:"700px",marginLeft:"auto",marginRight:"auto", paddingBottom:"50px"}}>
                 <div style={{ textAlign: "center"}} className={classes.videoEmbed}>
-                        <iframe className={classes.videoContainer} src="https://www.youtube.com/embed/-1kQNGTSZcA"
+                        <iframe className={classes.videoContainer} src="https://www.youtube.com/embed/ex1ul6RovP0"
                          frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                 </div>
               </div>
