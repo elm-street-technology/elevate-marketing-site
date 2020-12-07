@@ -21,6 +21,7 @@ const Template = ({ children, classes, location }) => {
 
   function ChooseFooter(){
     if (location.pathname == "/socialmediamarketingguide/" || location.pathname == "/socialmediamarketingguide" ||
+        location.pathname == "/your2021marketingguide/" || location.pathname == "/your2021marketingguide" ||
         location.pathname == "/kardashian/" || location.pathname == "/kardashian" ||
         location.pathname == "/singlepropertywebsites/" || location.pathname == "/singlepropertywebsites" ||
         location.pathname == "/sellerleads/" || location.pathname == "/sellerleads" ||
@@ -41,6 +42,7 @@ const Template = ({ children, classes, location }) => {
 
   function ChooseHeader(){
     if (location.pathname == "/socialmediamarketingguide/" || location.pathname == "/socialmediamarketingguide" ||
+        location.pathname == "/your2021marketingguide/" || location.pathname == "/your2021marketingguide" ||
         location.pathname == "/kardashian/" || location.pathname == "/kardashian" ||
         location.pathname == "/singlepropertywebsites/" || location.pathname == "/singlepropertywebsites" ||
         location.pathname == "/sellerleads/" || location.pathname == "/sellerleads" ||
