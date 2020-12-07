@@ -42,8 +42,9 @@ const Elitepro = ({ children, classes, data, tags }) => {
       <div className={classes.top} style={{paddingBottom:"30px", paddingRight:"35px", paddingLeft:"35px", paddingTop:"75px"}}>
           <div className={classes.centerHeading}>
                             <img src={Eliteprologo} width="100%"  style={{paddingBottom:"18px", paddingTop:"20px",maxWidth:"269px"}} />
-                            <div className={classes.heading} style={{color:"#ffffff"}}>The Power of LEAD GENERATION</div>
-                            <div className={classes.subtext} style={{color:"#f7f7f7", fontSize:"18px"}}>For the busy agent looking for dedicated help every step of the way.<br/>
+                            <div className={classes.heading} style={{color:"#ffffff"}}>The Power of POWERFUL<br />
+                            LEAD GENERATION</div>
+                            <div className={classes.subtext} style={{color:"#f7f7f7", fontSize:"18px"}}>Perfect for teams looking for dedicated help every step of the way.<br/>
                             <img src={Eprostar} width="100%"  style={{paddingTop:"20px",maxWidth:"255px"}} />
                             </div>
           </div>
@@ -266,36 +267,36 @@ of YouTube video tours</div>
                 <div className={classes.flexItem2} style={{padding:"30px", textAlign:"center"}}>
                         <img src={Quote} width="80" style={{paddingBottom:"15px"}}/>
                       <div className={classes.subtext}>
-                      “Consolidating all of my marketing<br />
-                      and lead generation into one<br />
-                      solution has saved me<br />
-                      valuable time and money.”
+                      “Elevate’s lead generation and CRM<br />
+                      solution is perfect for our growing<br />
+                      team. It’s the best suite of services<br />
+                      that we’ve found...at the best price.”
                       <br /><br />
-                      <div className={classes.Heading3}>Pat G.</div>
-                      Kansas City, MO
+                      <div className={classes.Heading3}>Michael G.</div>
+                      Houston, TX
                       </div>
                 </div>
 
                 <div className={classes.flexItem2} style={{padding:"30px", textAlign:"center"}}>
                 <img src={Quote} width="80" style={{paddingBottom:"15px"}}/>
                       <div className={classes.subtext}>  
-                      “The best online<br />
-                      lead generation service I’ve used.<br />
-                      Goodbye big portals.<br />
-                      Elevate has me covered.”
+                      “Elite Pro’s coaching team ensures<br />
+                      that I make the most out of my leads.<br />
+                      I love the automated workflows<br />
+                      that help me keep in touch.”
                       <br /><br />
-                      <div className={classes.Heading3}>Lisa L.</div>
-                      Chicago, IL
+                      <div className={classes.Heading3}>Emily V.</div>
+                      Kansas City, MO
                         </div>
                 </div>
 
                 <div className={classes.flexItem2} style={{padding:"30px", textAlign:"center"}}>
                 <img src={Quote} width="80" style={{paddingBottom:"15px"}}/>
                       <div className={classes.subtext}>  
-                      “I searched for years for a solution that would do it all.  I’ve finally found it.  I cancelled 5 other services when I switched to Elevate!”
+                      “Every stage of my pipeline in FULL, thanks to Elevate.  Three pending transactions in my first 30-days and more to follow.  Amazing!”
                       <br /><br />
-                      <div className={classes.Heading3}>Michelle M.</div>
-                     Boston, MA
+                      <div className={classes.Heading3}>Kyle W.</div>
+                     Portland, OR
                         </div>
                 </div>
 
