@@ -17,6 +17,7 @@ import Dms2 from "../images/dms2.png";
 import Dms3 from "../images/dms3.png";
 import Dms5 from "../images/dms5.gif";
 import Dms7 from "../images/dms7.png";
+import Elitemetric from "../images/agent_metric_pic.jpg";
 import Coachpic from "../images/coachpic.png";
 import Sp3 from "../images/sp3.png";
 import Sp5 from "../images/sp5.png";
@@ -57,7 +58,7 @@ const Elitepro = ({ children, classes, data, tags }) => {
             </div>
 
             <div className={classes.column3} style={{ textAlign: "center", paddingBottom: "10px" }}>
-                <a target="_blank" href="https://elmstreettechnology.recurly.com/subscribe/elevateelite" className={classes.buttonLink}>Subscribe Today</a>
+                <a target="_blank" href="https://elmstreettechnology.recurly.com/subscribe/elevateelitepro" className={classes.buttonLink}>Subscribe Today</a>
             </div>
 
             <div className={classes.column3} style={{ textAlign: "center", paddingBottom: "10px" }}>
@@ -200,10 +201,10 @@ Twitter, LinkedIn &amp; YouTube</div>
 <div className={classes.top} style={{textAlign:"center"}}>
 
 
-<div className={classes.column2} style={{ textAlign: "center", paddingTop: "20px" }}>
+<div className={classes.column3} style={{ textAlign: "center", paddingTop: "20px" }}>
 <div className={classes.subtext2}>Automated creation<br />
 of YouTube video tours</div>
-<div width="100%" style={{textAlign: "center", maxWidth:"500px",marginLeft:"auto",marginRight:"auto", paddingTop:"25px" }}>
+<div width="100%" style={{textAlign: "center", maxWidth:"430px",marginLeft:"auto",marginRight:"auto", paddingTop:"25px", paddingLeft:"15px", paddingRight:"15px" }}>
                 <div style={{ textAlign: "center"}} className={classes.videoEmbed}>
                         <iframe className={classes.videoContainer} src="https://www.youtube.com/embed/CwXlC7Xuojs"
                          frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
@@ -211,11 +212,21 @@ of YouTube video tours</div>
               </div>
 </div>
 
-<div className={classes.column2} style={{ textAlign: "center", paddingTop: "20px" }}>
+<div className={classes.column3} style={{ textAlign: "center", paddingTop: "20px" }}>
+<div className={classes.subtext2}>Agent Metric Tracking<br />
+&amp; Recruitment Module</div>
+<div style={{ textAlign: "center",}}>
+    <img src={Elitemetric} width="100%"  style={{paddingTop:"25px", maxWidth:"320px"}} />
+</div>
+</div>
+
+
+
+<div className={classes.column3} style={{ textAlign: "center", paddingTop: "20px" }}>
 <div className={classes.subtext2}>Dedicated Fulfillment<br />
 &amp; Success Coach</div>
 <div style={{ textAlign: "center",}}>
-    <img src={Coachpic} width="100%"  style={{paddingTop:"25px", maxWidth:"320px"}} />
+    <img src={Coachpic} width="100%"  style={{paddingTop:"25px", maxWidth:"263px"}} />
 </div>
 </div>
 
