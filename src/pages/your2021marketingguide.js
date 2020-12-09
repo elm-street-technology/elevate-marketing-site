@@ -34,11 +34,7 @@ const Your2021marketingguide = ({ children, classes, data, tags }) => {
                  </div>
                  </div>
 
-                 <div className={classes.fullWidthVid}>
-                  <div aspectRatio="16by9">
-                  <ResponsiveVid youtubeId="gVv5zmFs3Gg" />
-                  </div>
-                </div>
+                 
 
 
                 <div style={{ paddingLeft: "10px", paddingRight: "10px"}}>
