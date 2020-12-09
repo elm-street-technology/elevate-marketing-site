@@ -33,6 +33,9 @@ const HeaderNavMobile = ({ classes, className, onMenuClose }) => {
           <Link className={classes.listItemLink} to="/elite">
             <li className={classes.listItem}>Elite&trade;</li>
           </Link>
+          <Link className={classes.listItemLink} to="/elitepro">
+            <li className={classes.listItem}>Elite Pro&trade;</li>
+          </Link>
           <Link className={classes.listItemLink} to="/boss">
             <li className={classes.listItem}>BOSS&trade;</li>
           </Link>
