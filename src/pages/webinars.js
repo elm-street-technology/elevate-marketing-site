@@ -53,6 +53,7 @@ const Webinars = ({ classes, data }) => {
       <div style={{ textAlign: "center", backgroundColor:"#f7f7f7" }}>
       <Container>
                     <div style={{paddingTop:"40px", paddingLeft:"45px", paddingRight:"45px"}}>
+                    <div className={classes.heading3}>LIVE WEBINARS RETURN JANUARY 2021</div> 
                           <div className={classes.heading2}>Live Training Webinars</div>     
                     </div>
 
@@ -267,6 +268,15 @@ export default withStyles((theme) => ({
     fontWeight: "300",
     lineHeight: "24px",
     color: "#777777",
+  },
+
+  heading3: {
+    color: "#f15b54",
+    fontSize: "18px",
+    lineHeight: "40px",
+    fontWeight: "700",
+    marginRight: "auto",
+    paddingBottom: "10px",
   },
 
   heading2: {
