@@ -685,7 +685,7 @@ cardinner: {
 },
 
 modal: {
-  display: "inherit",
+  display: "none",
   position: "fixed",
   zIndex: "10000",
   paddingTop: "0px",
