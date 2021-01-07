@@ -36,13 +36,13 @@ const Priceadjustments = ({ children, classes, data, tags }) => {
       </Helmet>
       <SEO postNode={postNode} pagePath="2021priceadjustments" customTitle />
 
-<div style={{backgroundImage:"url("+Bossbg+")", backgroundSize:"cover", backgroundPosition:"centerTop"}}>
+<div>
 <Container>
-      <div className={classes.top} style={{paddingRight:"35px", paddingLeft:"35px", paddingTop:"70px", paddingBottom:"75px"}}>
+      <div className={classes.top} style={{paddingRight:"35px", paddingLeft:"35px", paddingTop:"45px"}}>
           <div className={classes.centerHeading}>
                             
                             <div className={classes.heading}>Thank you for choosing Elevate</div>
-                            <div className={classes.subtext} style={{color:"#f7f7f7"}}>as your real estate technology partner and entrusting us with your online marketing and lead generation. We are adjusting our pricing strategy for all current subscribers <span className={classes.bold}>effective March 1, 2021</span> as follows:
+                            <div className={classes.subtext}>as your real estate technology partner and entrusting us with your online marketing and lead generation. We are adjusting our pricing strategy for all current subscribers <span className={classes.bold}>effective March 1, 2021</span> as follows:
 
                             </div>
           </div>
@@ -63,24 +63,24 @@ const Priceadjustments = ({ children, classes, data, tags }) => {
 
 
 
-<div style={{paddingBottom:"65px", paddingTop:"24px"}}>
+<div style={{paddingBottom:"65px", paddingTop:"14px"}}>
 <Container>
 <div className={classes.top} style={{textAlign:"center"}}>
 
 
-<div className={classes.column3} style={{ textAlign: "center", paddingTop: "45px" }}>
-<img src={p1} width="85" style={{paddingBottom:"15px"}}/>
-<div className={classes.Heading2}>$110/m</div>
+<div className={classes.column3} style={{ textAlign: "center", paddingTop: "30px" }}>
+<img src={p1} width="65" style={{paddingBottom:"8px"}}/>
+<div className={classes.Heading4}>$110/m</div>
 </div>
 
-<div className={classes.column3} style={{ textAlign: "center", paddingTop: "45px" }}>
-<img src={p2} width="100%" style={{paddingBottom:"15px", maxWidth:"270px"}}/>
-<div className={classes.Heading2}>$110/m</div>
+<div className={classes.column3} style={{ textAlign: "center", paddingTop: "30px" }}>
+<img src={p2} width="100%" style={{paddingBottom:"8px", maxWidth:"220px"}}/>
+<div className={classes.Heading4}>$110/m</div>
 </div>
 
-<div className={classes.column3} style={{ textAlign: "center", paddingTop: "45px" }}>
-<img src={p3} width="100" style={{paddingBottom:"15px"}}/>
-<div className={classes.Heading2}>$200/m</div>
+<div className={classes.column3} style={{ textAlign: "center", paddingTop: "30px" }}>
+<img src={p3} width="80" style={{paddingBottom:"8px"}}/>
+<div className={classes.Heading4}>$200/m</div>
 </div>
 
 </div>
@@ -92,23 +92,23 @@ const Priceadjustments = ({ children, classes, data, tags }) => {
 <div className={classes.top} style={{textAlign:"center"}}>
 
 
-<div className={classes.column3} style={{ textAlign: "center", paddingTop: "45px" }}>
-<img src={p4} width="100%" style={{paddingBottom:"15px", maxWidth:"220px"}}/>
-<div className={classes.Heading2}>+ $50/m</div>
+<div className={classes.column3} style={{ textAlign: "center", paddingTop: "40px" }}>
+<img src={p4} width="100%" style={{paddingBottom:"15px", maxWidth:"170px"}}/>
+<div className={classes.Heading4}>+ $50/m</div>
 <div className={classes.subtext}>no increase on lead gen. services</div>
 
 </div>
 
-<div className={classes.column3} style={{ textAlign: "center", paddingTop: "45px" }}>
-<img src={p5} width="100%" style={{paddingBottom:"15px", maxWidth:"140px"}}/>
-<div className={classes.Heading2}>+ $50/m</div>
+<div className={classes.column3} style={{ textAlign: "center", paddingTop: "40px" }}>
+<img src={p5} width="100%" style={{paddingBottom:"15px", maxWidth:"110px"}}/>
+<div className={classes.Heading4}>+ $50/m</div>
 <div className={classes.subtext}>no increase on lead gen. services</div>
 
 </div>
 
-<div className={classes.column3} style={{ textAlign: "center", paddingTop: "45px" }}>
-<img src={p6} width="120" style={{paddingBottom:"15px"}}/>
-<div className={classes.Heading2}>+ $50/m</div>
+<div className={classes.column3} style={{ textAlign: "center", paddingTop: "40px" }}>
+<img src={p6} width="100" style={{paddingBottom:"15px"}}/>
+<div className={classes.Heading4}>+ $50/m</div>
 <div className={classes.subtext}>no increase on lead gen. services</div>
 </div>
 
@@ -233,6 +233,14 @@ export default withStyles((theme) => ({
     alignItems: "center",
     width: "100%",
     textAlign: "center",
+  },
+
+  Heading4: {
+    fontSize: "18px",
+    fontWeight: "700",
+    lineHeight: "25px",
+    color: "#52B1AD",
+    letterSpacing: ".14px",
   },
 
   Heading2: {
