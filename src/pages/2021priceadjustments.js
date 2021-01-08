@@ -13,7 +13,7 @@ import p3 from "../images/dmslogo.png";
 import p4 from "../images/dmsplus_logo1.png";
 import p5 from "../images/ignite_logo1.png";
 import p6 from "../images/elitelogo.png";
-import B7 from "../images/boss7.png";
+import Feature from "../images/featurespic.jpg";
 import B8 from "../images/boss8.png";
 import B9 from "../images/boss9.png";
 import B10 from "../images/boss10.png";
@@ -41,10 +41,12 @@ const Priceadjustments = ({ children, classes, data, tags }) => {
       <div className={classes.top} style={{paddingRight:"35px", paddingLeft:"35px", paddingTop:"45px"}}>
           <div className={classes.centerHeading}>
                             
-                            <div className={classes.heading}>Thank you for choosing Elevate</div>
-                            <div className={classes.subtext}>as your real estate technology partner and entrusting us with your online marketing and lead generation. We are adjusting our pricing strategy for all current subscribers <span className={classes.bold}>effective March 1, 2021</span> as follows:
+                            <div className={classes.heading}>A SPECIAL OFFER for Elevate Subscribers</div>
+                            <h2 className={classes.subtext} style={{paddingBottom:"25px"}}><span className={classes.bold}>Elevate price increases go into effect March 1, 2021.</span><br />
+        As a thank you for being a trusted technology partner,  we invite you to upgrade your Elevate account to include the next level of lead generation and LOCK IN 2020 PRICES FOR THE NEXT 12-MONTHS.
+*Offer expires January 31, 2021.
 
-                            </div>
+</h2>
           </div>
       </div>
 
@@ -63,27 +65,27 @@ const Priceadjustments = ({ children, classes, data, tags }) => {
 
 
 
-<div style={{paddingBottom:"65px", paddingTop:"24px"}}>
+<div style={{paddingBottom:"35px", paddingTop:"24px"}}>
 <Container>
 <div className={classes.top} style={{textAlign:"center"}}>
 
 
-<div className={classes.column4} style={{ textAlign: "center", paddingTop: "30px" }}>
+<div className={classes.column4} style={{ textAlign: "center", paddingTop: "20px" }}>
 <img src={p1} width="65" style={{paddingBottom:"8px"}}/>
 <div className={classes.Heading4}>$110/m</div>
 </div>
 
-<div className={classes.column4} style={{ textAlign: "center", paddingTop: "30px" }}>
+<div className={classes.column4} style={{ textAlign: "center", paddingTop: "20px" }}>
 <img src={p2} width="100%" style={{paddingBottom:"8px", maxWidth:"220px"}}/>
 <div className={classes.Heading4}>$110/m</div>
 </div>
 
-<div className={classes.column4} style={{ textAlign: "center", paddingTop: "30px" }}>
+<div className={classes.column4} style={{ textAlign: "center", paddingTop: "20px" }}>
 <img src={p3} width="80" style={{paddingBottom:"8px"}}/>
 <div className={classes.Heading4}>$200/m</div>
 </div>
 
-<div className={classes.column4} style={{ textAlign: "center", paddingTop: "30px" }}>
+<div className={classes.column4} style={{ textAlign: "center", paddingTop: "20px" }}>
 <img src={p6} width="98" style={{paddingBottom:"15px"}}/>
 <div className={classes.Heading4}>+ $50/m</div>
 <div className={classes.subtext} style={{fontSize:"11px"}}>no increase on lead gen. services</div>
@@ -92,11 +94,15 @@ const Priceadjustments = ({ children, classes, data, tags }) => {
 </div>
 </Container>
 
+</div>
 
-
-
-
-
+<div className={classes.top} style={{textAlign:"center", paddingBottom:"65px"}}>
+<Container>
+<h2 className={classes.subtext}>
+<span className={classes.bold}>To learn more about this SPECIAL OFFER or to connect with an Elevate Success Coach<br />
+regarding your account, fill out the following:</span>
+</h2>
+</Container>
 </div>
 
 
@@ -106,19 +112,9 @@ const Priceadjustments = ({ children, classes, data, tags }) => {
 
 
 
-<div style={{backgroundColor:"#f7f7f7", paddingBottom:"70px", textAlign:"center", paddingRight:"30px", paddingLeft:"30px"}}>
+<div style={{backgroundColor:"#f7f7f7", paddingBottom:"70px", textAlign:"center", paddingRight:"30px", paddingLeft:"30px", paddingTop:"60px"}}>
 <Container>
-  <h1 className={classes.Heading2} style={{paddingTop:"70px"}}>
-        A SPECIAL OFFER for Elevate Subscribers
-        </h1>
-        <h2 className={classes.subtext} style={{paddingBottom:"40px"}}><span className={classes.bold}>Elevate price increases go into effect March 1, 2021.</span><br />
-        As a thank you for being a trusted technology partner,  we invite you to upgrade your Elevate account to include the next level of lead generation and LOCK IN 2020 PRICES FOR THE NEXT 12-MONTHS.
-*Offer expires January 31, 2021.
-
-<br /><br />
-<span className={classes.bold}>To learn more about this SPECIAL OFFER or to connect with an Elevate Success Coach<br />
-regarding your account, fill out the following:</span>
-</h2>
+  
         <Formprice/>
         {/* <div className={classes.closingContainer}>
           For Media Inquiries, {""} Please {""}
@@ -131,6 +127,36 @@ regarding your account, fill out the following:</span>
         </div> */}
         </Container>
  </div>
+
+
+
+
+ <div style={{paddingBottom:"75px", paddingTop:"54px"}}>
+<Container>
+<div className={classes.top} style={{textAlign:"center"}}>
+
+
+<div className={classes.column2} style={{ textAlign: "center", paddingTop: "20px" }}>
+<div className={classes.Heading3}>Elevate Releases wave of New Features</div>
+<div  className={classes.subtext}>It's clear that the COVID quarantine has been highly productive for the Elevate Development Team. Recently, the team has released a wave of exciting new services and features inside of Elevate designed to assist busy real estate professionals with providing an unparalleled online experience
+<br />for the buyers and sellers they serve.</div>
+
+<div style={{ textAlign: "center", paddingBottom: "10px" }}>
+                 <a href="https://tryelevate.com/elevate-releases-wave-of-new-features/"  target="_blank"  className={classes.buttonLink}>Check Them Out</a>
+            </div>
+</div>
+
+<div className={classes.column2} style={{ textAlign: "center", paddingTop: "20px" }}>
+<img src={Feature} width="100%" style={{maxWidth:"750px"}}/>
+
+</div>
+
+
+
+</div>
+</Container>
+
+</div>
 
 
 
