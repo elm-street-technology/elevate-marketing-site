@@ -9,10 +9,10 @@ import Formchecklist from "../components/Formchecklist";
 import Bossbg from "../images/bossbg.jpg";
 import p1 from "../images/elevateidx.png";
 import p2 from "../images/sp_logo.png";
-import p3 from "../images/dms_logo1.png";
+import p3 from "../images/dmslogo.png";
 import p4 from "../images/dmsplus_logo1.png";
 import p5 from "../images/ignite_logo1.png";
-import p6 from "../images/elite_logo1.png";
+import p6 from "../images/elitelogo.png";
 import B7 from "../images/boss7.png";
 import B8 from "../images/boss8.png";
 import B9 from "../images/boss9.png";
@@ -63,57 +63,38 @@ const Priceadjustments = ({ children, classes, data, tags }) => {
 
 
 
-<div style={{paddingBottom:"65px", paddingTop:"14px"}}>
+<div style={{paddingBottom:"65px", paddingTop:"24px"}}>
 <Container>
 <div className={classes.top} style={{textAlign:"center"}}>
 
 
-<div className={classes.column3} style={{ textAlign: "center", paddingTop: "30px" }}>
+<div className={classes.column4} style={{ textAlign: "center", paddingTop: "30px" }}>
 <img src={p1} width="65" style={{paddingBottom:"8px"}}/>
 <div className={classes.Heading4}>$110/m</div>
 </div>
 
-<div className={classes.column3} style={{ textAlign: "center", paddingTop: "30px" }}>
+<div className={classes.column4} style={{ textAlign: "center", paddingTop: "30px" }}>
 <img src={p2} width="100%" style={{paddingBottom:"8px", maxWidth:"220px"}}/>
 <div className={classes.Heading4}>$110/m</div>
 </div>
 
-<div className={classes.column3} style={{ textAlign: "center", paddingTop: "30px" }}>
+<div className={classes.column4} style={{ textAlign: "center", paddingTop: "30px" }}>
 <img src={p3} width="80" style={{paddingBottom:"8px"}}/>
 <div className={classes.Heading4}>$200/m</div>
 </div>
 
+<div className={classes.column4} style={{ textAlign: "center", paddingTop: "30px" }}>
+<img src={p6} width="98" style={{paddingBottom:"15px"}}/>
+<div className={classes.Heading4}>+ $50/m</div>
+<div className={classes.subtext} style={{fontSize:"11px"}}>no increase on lead gen. services</div>
+</div>
+
 </div>
 </Container>
 
 
 
-<Container>
-<div className={classes.top} style={{textAlign:"center"}}>
 
-
-<div className={classes.column3} style={{ textAlign: "center", paddingTop: "40px" }}>
-<img src={p4} width="100%" style={{paddingBottom:"15px", maxWidth:"170px"}}/>
-<div className={classes.Heading4}>+ $50/m</div>
-<div className={classes.subtext}>no increase on lead gen. services</div>
-
-</div>
-
-<div className={classes.column3} style={{ textAlign: "center", paddingTop: "40px" }}>
-<img src={p5} width="100%" style={{paddingBottom:"15px", maxWidth:"110px"}}/>
-<div className={classes.Heading4}>+ $50/m</div>
-<div className={classes.subtext}>no increase on lead gen. services</div>
-
-</div>
-
-<div className={classes.column3} style={{ textAlign: "center", paddingTop: "40px" }}>
-<img src={p6} width="100" style={{paddingBottom:"15px"}}/>
-<div className={classes.Heading4}>+ $50/m</div>
-<div className={classes.subtext}>no increase on lead gen. services</div>
-</div>
-
-</div>
-</Container>
 
 
 </div>
@@ -128,14 +109,15 @@ const Priceadjustments = ({ children, classes, data, tags }) => {
 <div style={{backgroundColor:"#f7f7f7", paddingBottom:"70px", textAlign:"center", paddingRight:"30px", paddingLeft:"30px"}}>
 <Container>
   <h1 className={classes.Heading2} style={{paddingTop:"70px"}}>
-        As a SPECIAL OFFER...
+        A SPECIAL OFFER for Elevate Subscribers
         </h1>
-        <h2 className={classes.subtext} style={{paddingBottom:"40px"}}>we invite you to upgrade your Elevate account to include the next level of lead generation<br />
-        and LOCK IN 2020 prices for the next 12-months.  This offer expires January 31, 2021.
+        <h2 className={classes.subtext} style={{paddingBottom:"40px"}}><span className={classes.bold}>Elevate price increases go into effect March 1, 2021.</span><br />
+        As a thank you for being a trusted technology partner,  we invite you to upgrade your Elevate account to include the next level of lead generation and LOCK IN 2020 PRICES FOR THE NEXT 12-MONTHS.
+*Offer expires January 31, 2021.
 
 <br /><br />
-<span className={classes.bold}>To learn more about this SPECIAL OFFER or to connect with an<br />
-Elevate Success Coach regarding your account, fill out the following:</span>
+<span className={classes.bold}>To learn more about this SPECIAL OFFER or to connect with an Elevate Success Coach<br />
+regarding your account, fill out the following:</span>
 </h2>
         <Formprice/>
         {/* <div className={classes.closingContainer}>
@@ -218,7 +200,7 @@ export default withStyles((theme) => ({
   },
 
   column4:{
-    width:"260px",
+    width:"265px",
     maxWidth: "100%",
     paddingRight:"10px",
     paddingLeft:"10px",
