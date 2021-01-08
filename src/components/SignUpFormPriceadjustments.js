@@ -87,9 +87,11 @@ class SignUpFormPriceadjustments extends Component {
             phone: "",
             role: "",
             roleOther: "",
+            notes: "",
+            notesOther: "",
             interests: [],
-            form: "covidshift",
-            list: 97842,
+            form: "2021priceadjustment",
+            list: 121698,
           }}
           validationSchema={() =>
             Yup.object().shape({
@@ -102,6 +104,8 @@ class SignUpFormPriceadjustments extends Component {
               phone: Yup.string().required("Phone is required"),
               role: Yup.string(),
               roleOther: Yup.string(),
+              notes: Yup.string(),
+              notesOther: Yup.string(),
               interests: Yup.array(),
             })
           }
@@ -118,13 +122,12 @@ class SignUpFormPriceadjustments extends Component {
             });
             const body = {
               ...values,
-              roleOther: values.role === "Other" ? values.roleOther : "", // Just in case the user had typed in roleOther then changed their role to something else
-              interestStr: values.interests.join(",") + ", Interested Markets: " + values.market1 + ", " + values.market2 + "," + values.market3,
+              role: values.role === "Other" ? values.roleOther : values.role, // Just in case the user had typed in roleOther then changed their role to something else
+              notes: values.notes === "Other" ? values.notesOther : values.notes,
               utm_campaign: (window.utm_tags) ? window.utm_tags.campaign : "",
               utm_source: (window.utm_tags) ? window.utm_tags.source : "",
               utm_medium: (window.utm_tags) ? window.utm_tags.medium : "",
-              utm_term: (window.utm_tags) ? window.utm_tags.term : "",
-              demo_request_date: meeting_request
+              utm_term: (window.utm_tags) ? window.utm_tags.term : ""
             };
             return fetch(
               "https://easyemerge.com/plugins/elevate_form.php",
@@ -234,8 +237,8 @@ class SignUpFormPriceadjustments extends Component {
 
 
 <Field
-                id="role"
-                name="role"
+                id="notes"
+                name="notes"
                 label="Please contact me:"
                 component={RadioGroup}
                 display="inline"
@@ -256,10 +259,10 @@ class SignUpFormPriceadjustments extends Component {
                 ]}
                 className={classes.field}
               />
-              {values.role === "Other" && (
+              {values.notes === "Other" && (
                 <Field
-                  id="roleOther"
-                  name="roleOther"
+                  id="notesOther"
+                  name="notesOther"
                   label="Other"
                   component={Input}
                   className={classes.field}
