@@ -42,9 +42,13 @@ const Priceadjustments = ({ children, classes, data, tags }) => {
           <div className={classes.centerHeading}>
                             
                             <div className={classes.heading}>A SPECIAL OFFER for Elevate Subscribers</div>
-                            <h2 className={classes.subtext} style={{paddingBottom:"25px"}}><span className={classes.bold}>Elevate price increases go into effect March 1, 2021.</span><br />
+                            <h2 className={classes.subtext} style={{paddingBottom:"35px"}}><span className={classes.bold}>Elevate price increases go into effect March 1, 2021.</span><br />
         As a thank you for being a trusted technology partner,  we invite you to upgrade your Elevate account to include the next level of lead generation and LOCK IN 2020 PRICES FOR THE NEXT 12-MONTHS.
 *Offer expires January 31, 2021.
+<br />
+<div style={{ textAlign: "center", paddingBottom: "20px" }}>
+                 <a href="https://secure.systememerge.com/view-1050126230.html"  target="_blank"  className={classes.buttonLink}>Read Email From CEO, Prem Luthra</a>
+            </div>
 
 </h2>
           </div>
@@ -97,14 +101,6 @@ const Priceadjustments = ({ children, classes, data, tags }) => {
 </div>
 */}
 
-<div className={classes.top} style={{textAlign:"center", paddingBottom:"65px"}}>
-<Container>
-<h2 className={classes.subtext}>
-<span className={classes.bold}>To learn more about this SPECIAL OFFER or to connect with an Elevate Success Coach<br />
-regarding your account, fill out the following:</span>
-</h2>
-</Container>
-</div>
 
 
 
@@ -115,7 +111,10 @@ regarding your account, fill out the following:</span>
 
 <div style={{backgroundColor:"#f7f7f7", paddingBottom:"70px", textAlign:"center", paddingRight:"30px", paddingLeft:"30px", paddingTop:"60px"}}>
 <Container>
-  
+<h2 className={classes.subtext} style={{paddingBottom:"35px"}}>
+<span className={classes.bold}>To learn more about this SPECIAL OFFER or to connect with an Elevate Success Coach<br />
+regarding your account, fill out the following:</span>
+</h2>
         <Formprice/>
         {/* <div className={classes.closingContainer}>
           For Media Inquiries, {""} Please {""}
@@ -276,8 +275,8 @@ export default withStyles((theme) => ({
 
 
   buttonLink: {
-    minWidth: "250px",
-    maxWidth: "250px",
+    minWidth: "320px",
+    maxWidth: "320px",
     alignContent: "center",
     justifyContent: "center",
     fontSize: "14px",
