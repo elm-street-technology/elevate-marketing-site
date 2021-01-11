@@ -64,7 +64,7 @@ const Priceadjustments = ({ children, classes, data, tags }) => {
 
 
 
-
+{/*
 <div style={{paddingBottom:"35px", paddingTop:"24px"}}>
 <Container>
 <div className={classes.top} style={{textAlign:"center"}}>
@@ -95,6 +95,7 @@ const Priceadjustments = ({ children, classes, data, tags }) => {
 </Container>
 
 </div>
+*/}
 
 <div className={classes.top} style={{textAlign:"center", paddingBottom:"65px"}}>
 <Container>
