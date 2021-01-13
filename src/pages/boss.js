@@ -229,7 +229,7 @@ databases</div>
                 <div className={classes.flexItem2} style={{padding:"30px", textAlign:"center"}}>
                         <img src={Quote} width="80" style={{paddingBottom:"15px"}}/>
                       <div className={classes.subtext}>
-                      “Elevate BOSS has helped<br />
+                      “Elevate BOSS&reg; has helped<br />
                       my independent office<br />
                       compete against the<br />
                       big box brands.”

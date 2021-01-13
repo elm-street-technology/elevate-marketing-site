@@ -175,25 +175,25 @@ const Footer = ({ classes }) => (
             Elevate At-A-Glance
           </Link>
           <Link className={classes.link} to="/socialpro">
-            Social Pro&trade;
+            Social Pro&reg;
           </Link>
           <Link className={classes.link} to="/ignite">
-            Ignite&trade;
+            Ignite&reg;
           </Link>
           <Link className={classes.link} to="/elevatedms">
-            DMS&trade;
+            DMS&reg;
           </Link>
           <Link className={classes.link} to="/dmsplus">
-            DMS PLUS&trade;
+            DMS PLUS&reg;
           </Link>
           <Link className={classes.link} to="/elite">
-            Elite&trade;
+            Elite&reg;
           </Link>
           <Link className={classes.link} to="/elitepro">
             Elite Pro&trade;
           </Link>
           <Link className={classes.link} to="/boss">
-            BOSS&trade;
+            BOSS&reg;
           </Link>
           <Link className={classes.link} to="/compare_products">
             Compare Products

@@ -163,7 +163,7 @@ const Testimonials = ({ children, classes, data, tags }) => {
                                 Cafe Realty<br />
                                 Hudson Valley, NY<br /><br />
 
-                                Elisa Bruno-Midili of Cafe Realty shares the story of how Elevate BOSS&trade; has empowered her to compete with big box affiliations in the Hudson Valley region of New York State.  Tune in for a discussion of how metropolitan city-dwellers are exiting New York City and heading to the country, and how Elisa has been able to position herself, her agents and her brokerage to capture, nurture and convert all of the business heading their way thanks to Elevate’s comprehensive brokerage solution, Elevate BOSS&trade;.  After 7-years of searching, Elisa has FINALLY found the ONE solution that does it all!
+                                Elisa Bruno-Midili of Cafe Realty shares the story of how Elevate BOSS&reg; has empowered her to compete with big box affiliations in the Hudson Valley region of New York State.  Tune in for a discussion of how metropolitan city-dwellers are exiting New York City and heading to the country, and how Elisa has been able to position herself, her agents and her brokerage to capture, nurture and convert all of the business heading their way thanks to Elevate’s comprehensive brokerage solution, Elevate BOSS&reg;.  After 7-years of searching, Elisa has FINALLY found the ONE solution that does it all!
                             </div>
                     
                 </div>
