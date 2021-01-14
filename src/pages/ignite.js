@@ -22,13 +22,13 @@ import SEO from "../components/SEO";
 
 const Ignite = ({ children, classes, data, tags }) => {
   const postNode = {
-      title: `Elevate IgniteTM - ${config.siteTitle}`,
+      title: `Elevate Ignite - ${config.siteTitle}`,
   };
 
   return (
 <div className={classes.root}>
       <Helmet>
-              <title>{`Elevate IgniteTM - ${config.siteTitle}`}</title>
+              <title>{`Elevate Ignite - ${config.siteTitle}`}</title>
       </Helmet>
       <SEO postNode={postNode} pagePath="Ignite" customTitle />
 

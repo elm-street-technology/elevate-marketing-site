@@ -129,7 +129,7 @@ const Brokers = ({ children, classes, data, tags }) => {
         <Col>
             <div style={{textAlign:"center",marginTop:"30px"}}>
             <h4 className={classes.heading2}>Short &amp; Sweet</h4>
-            Prem Luthra (Elevate CEO) &amp; Frank Chimento (VP of Broker Development) discuss the benefits of Elevate BOSS&trade;, 
+            Prem Luthra (Elevate CEO) &amp; Frank Chimento (VP of Broker Development) discuss the benefits of Elevate BOSS&reg;, 
             along with the key differentiating factors of this long-needed solution for real estate brokers &amp; agents.
             <br/><br/>
             Runtime: 4:41

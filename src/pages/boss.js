@@ -26,13 +26,13 @@ import SEO from "../components/SEO";
 
 const Boss = ({ children, classes, data, tags }) => {
   const postNode = {
-      title: `Elevate BossTM - ${config.siteTitle}`,
+      title: `Elevate Boss - ${config.siteTitle}`,
   };
 
   return (
 <div className={classes.root}>
       <Helmet>
-              <title>{`Elevate BossTM - ${config.siteTitle}`}</title>
+              <title>{`Elevate Boss - ${config.siteTitle}`}</title>
       </Helmet>
       <SEO postNode={postNode} pagePath="Boss" customTitle />
 

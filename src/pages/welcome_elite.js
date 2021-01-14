@@ -58,7 +58,7 @@ const welcome_elite = ({ classes }) => {
             
                 <div className={classes.heading2} style={{color:"#FFFFFF"}}>Get Started Guide</div>
                 <span style={{color:"#FFFFFF"}}>
-                Let us walk you step-by-step through your Elevate Elite experience.
+                Let us walk you step-by-step through your Elevate Elite&reg; experience.
 
 
                 </span>
