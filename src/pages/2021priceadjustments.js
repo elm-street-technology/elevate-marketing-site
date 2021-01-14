@@ -12,7 +12,8 @@ import p2 from "../images/sp_logo.png";
 import p3 from "../images/dmslogo.png";
 import p4 from "../images/dmsplus_logo1.png";
 import p5 from "../images/ignite_logo1.png";
-import p6 from "../images/elitelogo.png";
+import Flowroi from "../images/flowroi.png";
+import Voicepad from "../images/voicepad.png";
 import Feature from "../images/featurespic.jpg";
 import B8 from "../images/boss8.png";
 import B9 from "../images/boss9.png";
@@ -148,6 +149,46 @@ regarding your account, fill out the following:</span>
 
 <div className={classes.column2} style={{ textAlign: "center", paddingTop: "20px" }}>
 <img src={Feature} width="100%" style={{maxWidth:"750px"}}/>
+
+</div>
+
+
+
+</div>
+</Container>
+
+</div>
+
+
+<div style={{paddingBottom:"75px", paddingTop:"74px", backgroundColor:"#f7f7f7",}}>
+<Container>
+<div className={classes.top} style={{textAlign:"center"}}>
+
+<div className={classes.centerHeading}>
+                            
+                            <div className={classes.Heading3}>Elm Street Technology Acquires VoicePad &amp; Flow ROI to Expand Offerings</div>
+                            <h2 className={classes.subtext} style={{paddingBottom:"35px"}}>Two acquisitions announced in January tease aggressive 2021 growth
+
+</h2>
+          </div>
+
+
+<div className={classes.column2} style={{ textAlign: "center", paddingTop: "20px", paddingLeft:"25px", paddingRight:"25px" }}>
+<img src={Voicepad} width="100%" style={{maxWidth:"220px", paddingBottom:"15px"}}/>
+<div  className={classes.subtext}>For over 17-years, VoicePad has provided high-level lead generation and telecom solutions to real estate professionals and now joins the comprehensive suite of services<br />offered under Elevate.</div>
+
+<div style={{ textAlign: "center", paddingBottom: "10px" }}>
+                 <a href="https://tryelevate.com/elm-street-technology-acquires-voicepad/"  target="_blank"  className={classes.buttonLink}>Read The Press Release</a>
+            </div>
+</div>
+
+<div className={classes.column2} style={{ textAlign: "center", paddingTop: "20px" }}>
+<img src={Flowroi} width="100%" style={{maxWidth:"190px", paddingBottom:"15px"}}/>
+<div  className={classes.subtext}>The acquisition of Flow ROI introduces real estate transaction functionality into the Elm Street Technology product suite, enhancing Elevate’s end-to-end solution <br />for brokers, agents and teams.</div>
+
+<div style={{ textAlign: "center", paddingBottom: "10px" }}>
+                 <a href="https://tryelevate.com/elm-street-technology-acquires-flow-roi/"  target="_blank"  className={classes.buttonLink}>Read The Press Release</a>
+            </div>
 
 </div>
 
