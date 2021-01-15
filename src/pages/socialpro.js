@@ -42,15 +42,17 @@ const Socialpro = ({ children, classes, data, tags }) => {
 
       <div className={classes.top}  style={{paddingBottom:"50px",}}>
 
-             <div className={classes.column3} style={{ textAlign: "center", paddingBottom: "10px" }}>
+             <div className={classes.column2} style={{ textAlign: "center", paddingBottom: "10px" }}>
                  <a href="#demo" className={classes.buttonLink}>Request Demo</a>
             </div>
 
+            {/*
             <div className={classes.column3} style={{ textAlign: "center", paddingBottom: "10px" }}>
                 <a target="_blank" href="" className={classes.buttonLink}>Subscribe Today</a>
             </div>
+            */}
 
-            <div className={classes.column3} style={{ textAlign: "center", paddingBottom: "10px" }}>
+            <div className={classes.column2} style={{ textAlign: "center", paddingBottom: "10px" }}>
                 <a target="_blank" href="/compare_products" className={classes.buttonLink}>Compare Products</a>
             </div>
 
