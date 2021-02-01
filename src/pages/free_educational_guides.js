@@ -183,13 +183,13 @@ const Educationalguides = ({ children, classes, data, tags }) => {
 
                   <div className={classes.column3} style={{ textAlign: "center", paddingTop: "22px" }}>
                  
-                                    <div className={classes.centerheading2}>6 Estate Marketing Lessons<br />
-                                    From Kim Kardashian Guide</div><br />
-                                    <div className={classes.centersubtext} >What can Kim Kardashian teach real estate agents about marketing? A lot! Download your free guide, filled with real life examples to take your real estate brand to the next level.</div>
+                                    <div className={classes.centerheading2}>6 Real Estate Marketing<br />
+                                    Lessons From Kim Kardashian</div><br />
+                                    <div className={classes.centersubtext} >Kim can teach real estate agents a lot about marketing! This free guide is filled with real life examples to take your real estate brand to the next level.</div>
                                    
                                     <a target="_blank" href="/kardashian" className={classes.ctabutton}>
                                     Download Today</a>
-                                    <div style={{ textAlign: "center",paddingTop:"35px" }}>
+                                    <div style={{ textAlign: "center",paddingTop:"32px" }}>
                                           <img src={Kardcover} width="300" />
                                     </div>
                   </div>
