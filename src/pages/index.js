@@ -285,13 +285,13 @@ class Index extends Component {
 
                   <div className={classes.column3} style={{ textAlign: "center", paddingTop: "22px" }}>
                  
-                                    <div className={classes.centerheading2}>6 Estate Marketing Lessons<br />
-                                    From Kim Kardashian</div>
-                                    <div className={classes.centersubtext} >What can Kim Kardashian teach real estate agents about marketing?</div>
+                                    <div className={classes.centerheading2}>6 Real Estate Marketing<br />
+                                    Lessons From Kim Kardashian</div>
+                                    <div className={classes.centersubtext} >What Kim teach you about marketing?</div>
                                    
                                     <a target="_blank" href="/kardashian" className={classes.ctabutton}>
                                     Download Today</a>
-                                    <div style={{ textAlign: "center",paddingTop:"35px" }}>
+                                    <div style={{ textAlign: "center",paddingTop:"28px" }}>
                                           <img src={Kardcover} width="300" />
                                     </div>
                   </div>

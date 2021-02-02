@@ -26,13 +26,13 @@ import SEO from "../components/SEO";
 
 const Elite = ({ children, classes, data, tags }) => {
   const postNode = {
-      title: `Elevate EliteTM - ${config.siteTitle}`,
+      title: `Elevate Elite - ${config.siteTitle}`,
   };
 
   return (
 <div className={classes.root}>
       <Helmet>
-              <title>{`Elevate EliteTM - ${config.siteTitle}`}</title>
+              <title>{`Elevate Elite - ${config.siteTitle}`}</title>
       </Helmet>
       <SEO postNode={postNode} pagePath="Elite" customTitle />
 

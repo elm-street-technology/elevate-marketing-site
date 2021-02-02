@@ -26,13 +26,13 @@ import SEO from "../components/SEO";
 
 const Dmsplus = ({ children, classes, data, tags }) => {
   const postNode = {
-      title: `Elevate DMS PlusTM - ${config.siteTitle}`,
+      title: `Elevate DMS Plus - ${config.siteTitle}`,
   };
 
   return (
 <div className={classes.root}>
       <Helmet>
-              <title>{`Elevate DMS PlusTM - ${config.siteTitle}`}</title>
+              <title>{`Elevate DMS Plus- ${config.siteTitle}`}</title>
       </Helmet>
       <SEO postNode={postNode} pagePath="Dmsplus" customTitle />
 

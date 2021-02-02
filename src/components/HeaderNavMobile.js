@@ -19,25 +19,25 @@ const HeaderNavMobile = ({ classes, className, onMenuClose }) => {
             <li className={classes.listItem}>Elevate At-A-Glance</li>
           </Link>
           <Link className={classes.listItemLink} to="/socialpro">
-            <li className={classes.listItem}>Social Pro&trade;</li>
+            <li className={classes.listItem}>Social Pro&reg;</li>
           </Link>
           <Link className={classes.listItemLink} to="/ignite">
-            <li className={classes.listItem}>Ignite&trade;</li>
+            <li className={classes.listItem}>Ignite&reg;</li>
           </Link>
           <Link className={classes.listItemLink} to="/elevatedms">
-            <li className={classes.listItem}>DMS&trade;</li>
+            <li className={classes.listItem}>DMS&reg;</li>
           </Link>
           <Link className={classes.listItemLink} to="/dmsplus">
-            <li className={classes.listItem}>DMS Plus&trade;</li>
+            <li className={classes.listItem}>DMS Plus&reg;</li>
           </Link>
           <Link className={classes.listItemLink} to="/elite">
-            <li className={classes.listItem}>Elite&trade;</li>
+            <li className={classes.listItem}>Elite&reg;</li>
           </Link>
           <Link className={classes.listItemLink} to="/elitepro">
             <li className={classes.listItem}>Elite Pro&trade;</li>
           </Link>
           <Link className={classes.listItemLink} to="/boss">
-            <li className={classes.listItem}>BOSS&trade;</li>
+            <li className={classes.listItem}>BOSS&reg;</li>
           </Link>
           <Link className={classes.listItemLink} to="/compare_products">
             <li className={classes.listItem}>Compare Products</li>

@@ -77,9 +77,9 @@ const Webinars = ({ classes, data }) => {
 
                   <div className={classes.column2} style={{ textAlign: "center", paddingTop: "22px" }}>
                  
-                                    <div className={classes.subheading} >Elevate CRM&trade;</div>
+                                    <div className={classes.subheading} >Elevate CRM&reg;</div>
                                     <div className={classes.subtext}>Enjoy a step-by-step overview of your<br />
-                                    Elevate CRM&trade;. We’ll cover lead management,<br />
+                                    Elevate CRM&reg;. We’ll cover lead management,<br />
                                     managing your website, creating email<br />
                                     campaigns, social media, CMA’s,<br />
                                     analytics and much, much more.
@@ -130,7 +130,7 @@ const Webinars = ({ classes, data }) => {
 
                                     <div className={classes.subheading} >Elevate Email Campaigns</div>
                                     <div className={classes.subtext}>Join us as we introduce you to the email marketing
-                                    system within your Elevate CRM. This training includes a platform overview
+                                    system within your Elevate CRM&reg;. This training includes a platform overview
                                     of features for engaging your sphere, tips for staying top of mind,
                                     and best practices for providing valuable content
                                     to nurture your leads. Live Q&amp;A throughout.

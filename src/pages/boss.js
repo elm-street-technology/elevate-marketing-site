@@ -26,13 +26,13 @@ import SEO from "../components/SEO";
 
 const Boss = ({ children, classes, data, tags }) => {
   const postNode = {
-      title: `Elevate BossTM - ${config.siteTitle}`,
+      title: `Elevate Boss - ${config.siteTitle}`,
   };
 
   return (
 <div className={classes.root}>
       <Helmet>
-              <title>{`Elevate BossTM - ${config.siteTitle}`}</title>
+              <title>{`Elevate Boss - ${config.siteTitle}`}</title>
       </Helmet>
       <SEO postNode={postNode} pagePath="Boss" customTitle />
 
@@ -229,7 +229,7 @@ databases</div>
                 <div className={classes.flexItem2} style={{padding:"30px", textAlign:"center"}}>
                         <img src={Quote} width="80" style={{paddingBottom:"15px"}}/>
                       <div className={classes.subtext}>
-                      “Elevate BOSS has helped<br />
+                      “Elevate BOSS&reg; has helped<br />
                       my independent office<br />
                       compete against the<br />
                       big box brands.”

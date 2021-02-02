@@ -39,7 +39,7 @@ const Singleproperty = ({ children, classes, data, tags }) => {
                             <div className={classes.subtext2} style={{color:"#52B1AD",}}>With up to 5 Active Listings Per Month!</div>
                             <br />
                             <div className={classes.subtext2} style={{color:"#52B1AD",}}>Stand-alone service OR add as an upgrade to
-                            ANY Elevate DMS&trade;, DMS Plus&trade; or Elite&trade; subscription.</div>
+                            ANY Elevate DMS&reg;, DMS Plus&reg; or Elite&reg; subscription.</div>
                             <div className={classes.subtext} style={{color:"#f7f7f7"}}>Showcase properties and close deals faster by putting
                             your available listings in front of the right potential buyers.</div>
           </div>
