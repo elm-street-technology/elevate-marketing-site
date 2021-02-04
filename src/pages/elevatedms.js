@@ -8,6 +8,7 @@ import FormProduct from "../components/FormProduct";
 import Dmsbg from "../images/dmsbg.jpg";
 import Fadebg from "../images/fadebg.jpg";
 import Dmslogo from "../images/dmslogo.png";
+import Dmsprice from "../images/dms_price.png";
 import Dmsstar from "../images/dmsstar.png";
 import Quote from "../images/quote.png";
 import Sp1 from "../images/sp1.png";
@@ -49,16 +50,24 @@ const Dms = ({ children, classes, data, tags }) => {
 
       <div className={classes.top}  style={{paddingBottom:"50px",}}>
 
-             <div className={classes.column2} style={{ textAlign: "center", paddingBottom: "10px" }}>
+
+      <div className={classes.column3} style={{ textAlign: "center", paddingBottom: "10px" }}>
+      <img src={Dmsprice} width="100%"  style={{maxWidth:"280px"}} />
+            </div>
+      
+
+             <div className={classes.column3} style={{ textAlign: "center", paddingBottom: "10px" }}>
                  <a href="#demo" className={classes.buttonLink}>Request Demo</a>
             </div>
+
+            
 {/*
             <div className={classes.column3} style={{ textAlign: "center", paddingBottom: "10px" }}>
                 <a target="_blank" href="https://elmstreettechnology.recurly.com/subscribe/edigitalmarketingsystem" className={classes.buttonLink}>Subscribe Today</a>
             </div>
             */}
 
-            <div className={classes.column2} style={{ textAlign: "center", paddingBottom: "10px" }}>
+            <div className={classes.column3} style={{ textAlign: "center", paddingBottom: "10px" }}>
                 <a target="_blank" href="/compare_products" className={classes.buttonLink}>Compare Products</a>
             </div>
 
@@ -287,6 +296,7 @@ export default withStyles((theme) => ({
     alignItems: "top",
   },
 
+
   heading: {
     fontSize: "33px",
     fontWeight: "700",
@@ -323,7 +333,8 @@ export default withStyles((theme) => ({
     maxWidth: "100%",
     paddingRight:"10px",
     paddingLeft:"10px",
-    verticalAlign: "top",
+    verticalAlign: "center",
+    alignItems: "center",
   },
 
   bold:{
@@ -375,6 +386,10 @@ export default withStyles((theme) => ({
     borderRadius: "4px",
     margin: "16px auto",
     marginBottom: "10px",
+
+    [theme.breakpoints[900]]: {
+      marginTop: "34px",
+  },
   },
 
   flexContainer: {

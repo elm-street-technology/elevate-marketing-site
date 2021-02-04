@@ -8,6 +8,7 @@ import FormProduct from "../components/FormProduct";
 import Elitebg from "../images/elitebg.jpg";
 import Fadebg from "../images/fadebg.jpg";
 import Elitelogo from "../images/elitelogo.png";
+import Eliteprice from "../images/elite_price.png";
 import Elitestar from "../images/elitestar.png";
 import Quote from "../images/quote.png";
 import Ppc from "../images/prodppc.png";
@@ -50,7 +51,11 @@ const Elite = ({ children, classes, data, tags }) => {
 
       <div className={classes.top}  style={{paddingBottom:"50px",}}>
 
-             <div className={classes.column2} style={{ textAlign: "center", paddingBottom: "10px" }}>
+      <div className={classes.column3} style={{ textAlign: "center", paddingBottom: "10px" }}>
+      <img src={Eliteprice} width="100%"  style={{maxWidth:"280px"}} />
+            </div>
+
+             <div className={classes.column3} style={{ textAlign: "center", paddingBottom: "10px" }}>
                  <a href="#demo" className={classes.buttonLink}>Request Demo</a>
             </div>
 {/*
@@ -58,7 +63,7 @@ const Elite = ({ children, classes, data, tags }) => {
                 <a target="_blank" href="https://elmstreettechnology.recurly.com/subscribe/elevateelite" className={classes.buttonLink}>Subscribe Today</a>
             </div>
 */}
-            <div className={classes.column2} style={{ textAlign: "center", paddingBottom: "10px" }}>
+            <div className={classes.column3} style={{ textAlign: "center", paddingBottom: "10px" }}>
                 <a target="_blank" href="/compare_products" className={classes.buttonLink}>Compare Products</a>
             </div>
 
@@ -398,6 +403,10 @@ export default withStyles((theme) => ({
     borderRadius: "4px",
     margin: "16px auto",
     marginBottom: "10px",
+
+    [theme.breakpoints[900]]: {
+      marginTop: "34px",
+    },
   },
 
   flexContainer: {

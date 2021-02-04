@@ -57,6 +57,17 @@ const Boss = ({ children, classes, data, tags }) => {
 
             <div style={{paddingBottom:"50px",}}>
 
+
+            <Container>
+
+<div style={{textAlign:"center", paddingRight:"35px", paddingLeft:"35px", paddingBottom:"25px", paddingTop:"20px"}}>
+    <div className={classes.Heading3}>Prices Vary Based on Solution.</div>
+    <div className={classes.subtext3}>Request Your Consultation Today.</div>     
+    
+</div>
+</Container>
+           
+
              <div style={{ textAlign: "center", paddingBottom: "10px" }}>
                  <a href="#demo" className={classes.buttonLink}>Request Demo</a>
             </div>
@@ -346,6 +357,13 @@ export default withStyles((theme) => ({
     fontWeight: "700",
     lineHeight: "24px",
     color: "#777777",
+  },
+
+  subtext3: {
+    fontSize: "16px",
+    fontWeight: "300",
+    lineHeight: "24px",
+    color: "#f7f7f7",
   },
 
   column2:{
