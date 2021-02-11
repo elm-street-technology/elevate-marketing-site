@@ -3,7 +3,7 @@ import Helmet from "react-helmet";
 import withStyles from "elevate-ui/withStyles";
 import config from "../utils/siteConfig";
 import Container from "../components/Container";
-import Formlistingguide from "../components/Formlistingguide";
+import Formlistingguideam from "../components/Formlistingguideam";
 import Covid from "../images/covid_header.jpg";
 import List from "../images/lll.png";
 import Listcover from "../images/listings_cover.jpg";
@@ -68,7 +68,7 @@ const Listings = ({ children, classes, data, tags }) => {
    
             <div className={classes.flexContainer}>
                 <div className={classes.flexItem} style={{paddingLeft:"30px", paddingRight:"30px", paddingBottom:"30px", textAlign:"center"}}>
-                <Formlistingguide/>
+                <Formlistingguideam/>
                 </div>
 
                 <div className={classes.flexItem} style={{padding:"30px", textAlign:"center"}}>
