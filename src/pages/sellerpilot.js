@@ -3,6 +3,7 @@ import Helmet from "react-helmet";
 import withStyles from "elevate-ui/withStyles";
 import config from "../utils/siteConfig";
 import Container from "../components/Container";
+import List from "../images/listwithme.jpg";
 import FormSellerOptin from "../components/FormSellerOptin";
 import SEO from "../components/SEO";
 
@@ -22,20 +23,36 @@ const Sellerpilot = ({ children, classes, data, tags }) => {
     <a id="refer_form"></a>
 
 
+    <div style={{paddingTop:"50px", paddingBottom:"50px",}}>
+        
+        
+        <Container>
+                        
+   
+            <div className={classes.flexContainer}>
+                <div className={classes.flexItem} style={{padding:"30px", textAlign:"left"}}>
+                <div className={classes.Heading2}>You're invited to participate...</div>
+                <div className={classes.subtext} style={{paddingBottom:"25px"}}>in an exciting SELLER LEADS PILOT program, you lucky human!  Please verify that all of your contact information below is correct.  The address noted below will be used as the return address on your postcards.  If the information is NOT correct, please log into your Elevate account to update your account credentials or contact Customer Experience:  508-885-2040.</div>
+                <FormSellerOptin/>
+                </div>
 
-      <Container>
-      
-        <div >
-            <div style={{ maxWidth: "900px", backgroundColor: "#ffffff", paddingBottom: "40px", marginBottom:"40px", marginRight:"auto",marginLeft:"auto", paddingTop:"30px", textAlign:"center" }}>
-                <div className={classes.landingHeaderStyle}>
-                    {/* <img src={LandingHeader} style={{width:"100%"}} /> */}
+                <div className={classes.flexItem} style={{padding:"30px", textAlign:"center"}}>
+                <img src={List} width="100%" style={{paddingBottom:"15px"}}/>
                 </div>
-                <div style={{ paddingLeft: "18px", paddingRight: "18px"}}>                
-                    <FormSellerOptin />
-                </div>
-            </div>
-        </div>
-      </Container>
+
+  
+
+
+      </div>
+
+        
+    </Container>
+</div> 
+
+
+
+
+   
     </div>
   );
 };
@@ -55,6 +72,22 @@ export default withStyles((theme) => ({
     color: "#2E2E35",
     textAlign: "center",
     marginBottom: "12px",
+  },
+
+  subtext: {
+    fontSize: "16px",
+    fontWeight: "300",
+    lineHeight: "24px",
+    color: "#777777",
+  },
+
+  Heading2: {
+    fontSize: "28px",
+    paddingBottom: "20px",
+    fontWeight: "700",
+    lineHeight: "40px",
+    color: "#52B1AD",
+    letterSpacing: ".14px",
   },
 
   subHeading: {
@@ -81,6 +114,33 @@ export default withStyles((theme) => ({
     alignItems: "center",
     width: "100%",
     textAlign: "center",
+  },
+
+  flexContainer: {
+    padding: "0",
+    margin: '0',
+  
+    display: "-webkit-box",
+    display: "-moz-box",
+    display: "-ms-flexbox",
+    display: "-webkit-flex",
+    display: "flex",
+    flexWrap: "wrap",
+  
+  },
+  flexItem: {
+    maxWidth: "100%",
+    width: "100%",
+    paddingRight: "0px",
+    paddingBottom: "25px",
+  
+  
+    [theme.breakpoints[900]]: {
+        maxWidth: "50%",
+        width: "50%",
+        paddingRight: "20px",
+        paddingBottom: "0px",
+    },
   },
 
   heading: {
