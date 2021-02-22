@@ -8,18 +8,11 @@ const Form = ({ props, children, classes, className }) => {
     <div className={classNames(classes.root, className)}>
         <form>
         <div style={{ maxWidth: "800px", marginLeft: "auto", marginRight: "auto" }}>
-            <div>
-                <input type="text" name="first_name" id="first_name" placeholder="First Name" className={classes.field}/>
+            <div id="contact_confirmation" className={classes.confirmationText}>
+                
             </div>
-            <div>
-                <input type="text" name="last_name" id="last_name" placeholder="Last Name" className={classes.field} />
-            </div>
-            <div>
-                <input type="text" name="email" id="email" placeholder="Email" className={classes.field} />
-            </div>
-            <div>
-                <input type="text" name="phone" id="phone" placeholder="Phone" className={classes.field} />
-            </div>
+            <input type="hidden" name="first_name" id="first_name" />
+            <input type="hidden" name="last_name" id="last_name" />
             <input type="hidden" name="recipient_id" id="recipient_id" />
             <input type="hidden" name="email" id="email" />
             <div id="prefButtons">
@@ -39,27 +32,75 @@ const Form = ({ props, children, classes, className }) => {
 };
 
 
-    if (typeof window != 'undefined') {
-        window.onload = function (e) {
-            findRecipient();
+if (typeof window != 'undefined') {
+    window.onload = function (e) {
+        findRecipient();
 
-            $("#optin").click(function () {
-                var recipient_id = $("#recipient_id").val();
-                var email = $("#email").val();
-                saveRecipToList(recipient_id, email, 123985);
-                $("#prefButtons").hide();
-            });
+        $("#optin").click(function () {
+            var recipient_id = $("#recipient_id").val();
+            var email = $("#email").val();
+            saveRecipToList(recipient_id, email, 123985);
+            $("#prefButtons").hide();
+        });
 
-            $("#optout").click(function () {
-                var recipient_id = $("#recipient_id").val();
-                var email = $("#email").val();
-                saveRecipToList(recipient_id, email, 123986);
-                $("#prefButtons").hide();
-            });
-        };
+        $("#optout").click(function () {
+            var recipient_id = $("#recipient_id").val();
+            var email = $("#email").val();
+            saveRecipToList(recipient_id, email, 123986);
+            $("#prefButtons").hide();
+        });
+
+        $('#recipient_id').change(function(){
+            var recipient_id = $("#recipient_id").val();
+            var email = $("#email").val();
+            loadData(recipient_id, email);
+        });
+    };
+}
+
+function loadData(recipient_id, email){
+    var data = { recipient_id, email }
+
+    if (recipient_id > 0) {
+        makeApiCall(0, 'contacts/info/get_optfields', data, preLoad);
     }
+}
+
+function preLoad(data){
+    let company = '';
+    let address = '';
+    let city = '';
+    let state = '';
+    let zip = '';
+
+    data.data.forEach(function(optfield) {
+        if(optfield.name == 'Address'){
+            address = optfield.string_value;
+        }
+        if(optfield.name == 'City'){
+            city = optfield.string_value;
+        }
+        if(optfield.name == 'State'){
+            state = optfield.string_value;
+        }
+        if(optfield.name == 'Zip'){
+            zip = optfield.string_value;
+        }
+        if(optfield.name == 'Company Name'){
+            company = optfield.string_value;
+        }
+    })
 
 
+    let contact_info = '';
+    contact_info = $('#first_name').val()+" "+$("#last_name").val()+"<br/>";
+    contact_info += $('#email').val()+"<br/>";
+    contact_info += company+"<br/>";
+    contact_info += address+"<br/>";
+    contact_info += city+", "+state+" "+zip+"<br/>";
+
+    $('#contact_confirmation').html(contact_info);
+}
 
 function showThankyouMessage(){
     $('#submitResult').html("Thank you. Your preference has been recorded.");
@@ -87,7 +128,7 @@ export default withStyles((theme) => ({
   },
 
   signUpBtn: {
-    width: "60%",
+    width: "90%",
     fontSize: "18px",
     lineHeight: "26px",
     fontWeight: "600",
@@ -104,6 +145,13 @@ export default withStyles((theme) => ({
     backgroundColor:"#eaeaea",
     padding:"10px",
     textAlign:"center"
+  },
+  confirmationText: {
+    fontSize: "18px",
+    fontWeight: "700",
+    lineHeight: "24px",
+    color: "#666666",
+    marginBottom:"20px",
   },
 
 }))(Form);
