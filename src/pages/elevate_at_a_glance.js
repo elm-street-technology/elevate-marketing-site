@@ -26,7 +26,7 @@ const Elevateataglance = ({ children, classes, data, tags }) => {
 
 <div style={{backgroundImage:"url("+Glancebg+")", backgroundSize:"cover", backgroundPosition:"centerTop"}}>
 <Container>
-      <div className={classes.top} style={{paddingBottom:"50px", paddingRight:"35px", paddingLeft:"35px", paddingTop:"75px"}}>
+      <div className={classes.top} style={{paddingBottom:"50px", paddingRight:"35px", paddingLeft:"35px", paddingTop:"55px"}}>
           <div className={classes.centerHeading}>
                             <div className={classes.heading} style={{color:"#ffffff"}}>Elevate At-A-Glance</div>
                             <div className={classes.subtext} style={{color:"#f7f7f7", fontSize:"18px"}}>The Power of Pure <span className={classes.bold} style={{color:"#ffffff",}}>PRODUCTIVITY</span> for agents, brokers &amp; teams
@@ -35,12 +35,7 @@ const Elevateataglance = ({ children, classes, data, tags }) => {
       </div>
 
 
-      <div style={{textAlign: "center", maxWidth:"700px",marginLeft:"auto",marginRight:"auto", paddingBottom:"60px", paddingRight:"35px", paddingLeft:"35px",}}>
-                <div style={{ textAlign: "center"}} className={classes.videoEmbed}>
-                        <iframe className={classes.videoContainer} src="https://www.youtube.com/embed/xPJyb2d_tnU"
-                         frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-                </div>
-              </div>
+     
 </Container>
 </div>
 

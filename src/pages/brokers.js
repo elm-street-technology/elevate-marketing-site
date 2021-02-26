@@ -35,28 +35,10 @@ const Brokers = ({ children, classes, data, tags }) => {
 
       
       <Container>
+       
         <Row>
         <Col>
-            <div style={{textAlign:"center"}}>
-            <div style={{textAlign:"center",margin:"20px"}}>
-                
-                <h1 className={classes.heading}>Meet the <span style={{color:"#f05953"}}>BOSS</span></h1>
-            </div>
-            <div style={{marginBottom:"30px"}}>
-                <p>ONE singular solution that empowers brokers (and their agents) with the tools, insights &amp; analytics to manage their business.</p> </div>
-
-            <div className={classes.fullWidthVid}>
-            <div aspectRatio="16by9">
-                <ResponsiveVid youtubeId="vd7DeTuNb6w" />
-            </div>
-            </div>
-
-            </div>
-        </Col>
-        </Row>
-        <Row>
-        <Col>
-            <hr/>
+            
             <div style={{textAlign:"center"}}>
             <div style={{textAlign:"center",margin:"30px"}}>
                 
@@ -112,31 +94,16 @@ const Brokers = ({ children, classes, data, tags }) => {
         </Row>
         <Row >
         <Col>
-            <hr/>
+            
             <div style={{textAlign:"center",margin:"30px"}}>
                 
                 <h1 className={classes.heading}>Explore <span style={{color:"#f05953"}}>MORE</span></h1>
-                <p>Looking for more information?  Explore below or call 833.978.1196 to speak to a member of our brokerage development team.  We're here to help.</p>
+                <p>Looking for more information?  Explore below or call 833.978.1196 to speak to a member<br />
+                  of our brokerage development team.  We're here to help.</p>
             </div>
         </Col>
         </Row>
-        <Row style={{marginTop:"30px",marginBottom:"30px"}}>
-        <Col>
-            <div aspectRatio="16by9">
-            <ResponsiveVid youtubeId="YgFbo7RLAwU" />
-            </div>
-        </Col>
-        <Col>
-            <div style={{textAlign:"center",marginTop:"30px"}}>
-            <h4 className={classes.heading2}>Short &amp; Sweet</h4>
-            Prem Luthra (Elevate CEO) &amp; Frank Chimento (VP of Broker Development) discuss the benefits of Elevate BOSS&reg;, 
-            along with the key differentiating factors of this long-needed solution for real estate brokers &amp; agents.
-            <br/><br/>
-            Runtime: 4:41
-
-            </div>
-        </Col>
-        </Row>
+        
         
       </Container>
     </div>

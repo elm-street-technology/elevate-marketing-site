@@ -200,11 +200,7 @@ class FormCRM extends Component {
                     Contemporary, intuitive design for broker, agent &amp; team success.<br/>Secure personal data on every level.
                 </div>
 
-                <div className={classes.fullWidthVid}>
-                  <div aspectRatio="16by9">
-                  <ResponsiveVid youtubeId="xPJyb2d_tnU" />
-                  </div>
-                </div>
+               
 
                 <div className={classes.headingText} style={{ marginTop: "20px", paddingBottom:"25px", }}>
                 Learn more, secure leads &amp; conquer your marketing today.

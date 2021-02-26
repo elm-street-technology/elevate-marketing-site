@@ -44,25 +44,7 @@ const Bright = ({ children, classes, data, tags }) => {
 </BrightBgSectionExternal>
 
 
-<div style={{paddingTop:"50px", paddingBottom:"30px", backgroundColor:"#ffffff"}}>
-    <Container>
-    <div style={{textAlign:"center", paddingBottom:"5px", padding:"25px"}}><div className={classes.heading}>Meet the BOSS in 2-1/2 Minutes</div>
-    </div>
-            
-            <div style={{textAlign: "center", maxWidth:"700px",marginLeft:"auto",marginRight:"auto", paddingBottom:"50px"}}>
-                <div style={{ textAlign: "center"}} className={classes.videoEmbed}>
-                        <iframe className={classes.videoContainer} src="https://www.youtube.com/embed/13M8wP5kU7M"
-                         frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-                </div>
-              </div>
-                
-              
-                
-            
 
-        
-    </Container>
-</div> 
 
 
 

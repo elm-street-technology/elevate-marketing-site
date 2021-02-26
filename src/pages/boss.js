@@ -38,22 +38,18 @@ const Boss = ({ children, classes, data, tags }) => {
 
 <div style={{backgroundImage:"url("+Bossbg+")", backgroundSize:"cover", backgroundPosition:"centerTop"}}>
 <Container>
-      <div className={classes.top} style={{paddingRight:"35px", paddingLeft:"35px", paddingTop:"75px"}}>
+      <div className={classes.top} style={{paddingRight:"35px", paddingLeft:"35px", paddingTop:"65px"}}>
           <div className={classes.centerHeading}>
                             <img src={Bosslogo} width="100%"  style={{paddingBottom:"18px", paddingTop:"20px",maxWidth:"220px"}} />
                             <div className={classes.heading} style={{color:"#ffffff"}}>The Power of ONE</div>
-                            <div className={classes.subtext} style={{color:"#f7f7f7", fontSize:"18px"}}>One vendor.  One point of contact.  One solution.  For your entire office.<br/>
-                            <img src={Bossstar} width="100%"  style={{paddingTop:"20px",maxWidth:"295px"}} />
+                            <div className={classes.subtext} style={{color:"#f7f7f7"}}>One vendor.  One point of contact.  One solution.  For your entire office.<br/>
+                            <div className={classes.subtext2} style={{color:"#FCBA1E"}}>Ask us how we drive HIGH agent adoption rates!</div>
+                            
                             </div>
           </div>
       </div>
 
-      <div style={{textAlign: "center", maxWidth:"700px",marginLeft:"auto",marginRight:"auto", paddingBottom:"20px", paddingRight:"35px", paddingLeft:"35px",marginTop:"-5px"}}>
-                <div style={{ textAlign: "center"}} className={classes.videoEmbed}>
-                        <iframe className={classes.videoContainer} src="https://www.youtube.com/embed/vd7DeTuNb6w"
-                         frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-                </div>
-              </div>
+     
 
             <div style={{paddingBottom:"50px",}}>
 
