@@ -12,8 +12,8 @@ import p2 from "../images/sp_logo.png";
 import p3 from "../images/dmslogo.png";
 import p4 from "../images/dmsplus_logo1.png";
 import p5 from "../images/ignite_logo1.png";
-import Flowroi from "../images/flowroi.png";
-import Voicepad from "../images/voicepad.png";
+import Flowroi from "../images/flow2.jpg";
+import Voicepad from "../images/voice2.jpg";
 import Feature from "../images/featurespic.jpg";
 import B8 from "../images/boss8.png";
 import B9 from "../images/boss9.png";
@@ -43,12 +43,11 @@ const Priceadjustments = ({ children, classes, data, tags }) => {
           <div className={classes.centerHeading}>
                             
                             <div className={classes.heading}>A SPECIAL OFFER for Elevate Subscribers</div>
-                            <h2 className={classes.subtext} style={{paddingBottom:"35px"}}><span className={classes.bold}>Elevate price increases go into effect March 1, 2021.</span><br />
-        As a thank you for being a trusted technology partner,  we invite you to upgrade your Elevate account to include the next level of lead generation and LOCK IN 2020 PRICES FOR THE NEXT 12-MONTHS.
-*Offer expires January 31, 2021.
+                            <h2 className={classes.subtext} style={{paddingBottom:"35px"}}><span className={classes.bold}>Elevate price increases go into effect April 1, 2021.</span><br />
+                            As a thank you for being a trusted technology partner, we invite you to upgrade your Elevate account to include the next level of lead generation and LOCK IN 2020 PRICES FOR THE NEXT 12-MONTHS. *Offer expires March 31, 2021.
 <br />
 <div style={{ textAlign: "center", paddingBottom: "20px" }}>
-                 <a href="https://secure.systememerge.com/view-1050126230.html"  target="_blank"  className={classes.buttonLink}>Read Email From CEO, Prem Luthra</a>
+                 <a href="https://secure.systememerge.com/view-1050132867.html"  target="_blank"  className={classes.buttonLink}>Read Email From CEO, Prem Luthra</a>
             </div>
 
 </h2>
@@ -132,23 +131,60 @@ regarding your account, fill out the following:</span>
 
 
 
- <div style={{paddingBottom:"75px", paddingTop:"54px"}}>
+
+
+<div style={{paddingBottom:"75px", paddingTop:"74px", backgroundColor:"#ffffff",}}>
 <Container>
 <div className={classes.top} style={{textAlign:"center"}}>
 
+<div className={classes.centerHeading}>
+                            
+                            <div className={classes.Heading3}>Elm Street Technology Adds NEW Features &amp; Acquires VoicePad &amp; Flow ROI to Expand Offerings</div>
+                            <h2 className={classes.subtext} style={{paddingBottom:"35px"}}>Two acquisitions &amp; NEW features announced in January tease aggressive 2021 growth
 
-<div className={classes.column2} style={{ textAlign: "center", paddingTop: "20px" }}>
-<div className={classes.Heading3}>Elevate Releases wave of New Features</div>
-<div  className={classes.subtext}>It's clear that the COVID quarantine has been highly productive for the Elevate Development Team. Recently, the team has released a wave of exciting new services and features inside of Elevate designed to assist busy real estate professionals with providing an unparalleled online experience
+</h2>
+          </div>
+
+
+          <div className={classes.column3} style={{ textAlign: "center", paddingTop: "20px",}}>
+
+<div  className={classes.subtext}>Recently, the team has released a wave of exciting new services and features inside of Elevate designed to assist busy real estate professionals with providing an unparalleled online experience
 <br />for the buyers and sellers they serve.</div>
 
 <div style={{ textAlign: "center", paddingBottom: "10px" }}>
                  <a href="https://tryelevate.com/elevate-releases-wave-of-new-features/"  target="_blank"  className={classes.buttonLink}>Check Them Out</a>
+                 <img src={Feature} width="100%" style={{maxWidth:"450px", paddingTop:"15px"}}/>
             </div>
 </div>
 
-<div className={classes.column2} style={{ textAlign: "center", paddingTop: "20px" }}>
-<img src={Feature} width="100%" style={{maxWidth:"750px"}}/>
+<div className={classes.column3} style={{ textAlign: "center", paddingTop: "20px",}}>
+
+<div  className={classes.subtext}>For over 17-years, VoicePad has<br />
+provided high-level lead generation<br />
+and telecom solutions to real estate<br />
+professionals and now joins the<br />
+comprehensive suite of services<br />
+offered under Elevate.</div>
+
+<div style={{ textAlign: "center", paddingBottom: "10px" }}>
+                 <a href="https://tryelevate.com/elm-street-technology-acquires-voicepad/"  target="_blank"  className={classes.buttonLink}>Read The Press Release</a>
+                 <img src={Voicepad} width="100%" style={{maxWidth:"450px", paddingTop:"15px"}}/>
+            </div>
+</div>
+
+<div className={classes.column3} style={{ textAlign: "center", paddingTop: "20px" }}>
+
+<div  className={classes.subtext}>Flow ROI introduces real estate<br />
+transaction functionality<br />
+into the Elm Street Technology product<br />
+suite, enhancing Elevate’s<br />
+end-to-end solution<br />
+for brokers, agents and teams.</div>
+
+<div style={{ textAlign: "center", paddingBottom: "10px" }}>
+                 <a href="https://tryelevate.com/elm-street-technology-acquires-flow-roi/"  target="_blank"  className={classes.buttonLink}>Read The Press Release</a>
+                 <img src={Flowroi} width="100%" style={{maxWidth:"450px", paddingTop:"15px"}}/>
+            </div>
 
 </div>
 
@@ -160,37 +196,79 @@ regarding your account, fill out the following:</span>
 </div>
 
 
+
 <div style={{paddingBottom:"75px", paddingTop:"74px", backgroundColor:"#f7f7f7",}}>
 <Container>
 <div className={classes.top} style={{textAlign:"center"}}>
 
 <div className={classes.centerHeading}>
                             
-                            <div className={classes.Heading3}>Elm Street Technology Acquires VoicePad &amp; Flow ROI to Expand Offerings</div>
-                            <h2 className={classes.subtext} style={{paddingBottom:"35px"}}>Two acquisitions announced in January tease aggressive 2021 growth
-
-</h2>
+                            <div className={classes.Heading3}>Frequently Asked Questions</div>
+                
           </div>
 
 
-<div className={classes.column2} style={{ textAlign: "center", paddingTop: "20px", paddingLeft:"25px", paddingRight:"25px" }}>
-<img src={Voicepad} width="100%" style={{maxWidth:"220px", paddingBottom:"15px"}}/>
-<div  className={classes.subtext}>For over 17-years, VoicePad has provided high-level lead generation and telecom solutions to real estate professionals and now joins the comprehensive suite of services<br />offered under Elevate.</div>
+          <div className={classes.column2} style={{ textAlign: "left", paddingTop: "20px",}}>
 
-<div style={{ textAlign: "center", paddingBottom: "10px" }}>
-                 <a href="https://tryelevate.com/elm-street-technology-acquires-voicepad/"  target="_blank"  className={classes.buttonLink}>Read The Press Release</a>
-            </div>
+<div  className={classes.subtext}><span className={classes.bold}>Why are you raising prices at this time?</span><br />
+For the past several years we’ve been packing the Elevate Platform with value at an affordable price. From our NEW email nurture plans and a streamlined email editor, all the way to a new User Experience-optimized dashboard and instant property alerts for home-searchers - each tool equips you to do more - faster -  all while ensuring that meaningful connections are supported with our software. 
+We are excited to continue bringing awesome products to our subscribers at a price that matches the true value of Elevate, and after careful assessment of the value baked into our products and supported by our “customer-first” staff, we are adjusting prices - our first since the launch of our product - to match that value and continue adding even more. 
+<br /><br />Effective April 1, 2021, all Elevate pricing will be<br />
+adjusted to reflect our current pricing:
+<br /><br />
+IDX<sup>&reg;</sup> -  $110/m<br />
+Social Pro<sup>&reg;</sup> -  $110/m<br />
+DMS<sup>&reg;</sup> - $200/m<br />
+DMS Plus<sup>&reg;</sup> - $300/m<br />
+Elite<sup>&reg;</sup> - will increase by $50/m
+<br /><br />
+<span className={classes.bold}>Competitor X provides the same services<br />
+and tools for less, what gives?</span><br />
+There are a number of options available when it comes to finding a standalone CRM, IDX-enabled websites, website builders, lead generation services and email marketing software solutions. At Elevate, our focus continues to be optimizing each to compound their impact when they work smoothly together. It’s something we’re particularly proud of, and when we assess the value of Elevate products and services, we remain an outstanding value option.
+<br /><br />
+<span className={classes.bold}>What is the price going to be?</span><br />
+Our current pricing:
+<br /><br />
+IDX<sup>&reg;</sup> -  $110/m<br />
+Social Pro<sup>&reg;</sup> -  $110/m<br />
+DMS<sup>&reg;</sup> - $200/m<br />
+DMS Plus<sup>&reg;</sup> - $300/m<br />
+Elite<sup>&reg;</sup> - will increase by $50/m</div>
+
+
 </div>
 
-<div className={classes.column2} style={{ textAlign: "center", paddingTop: "20px" }}>
-<img src={Flowroi} width="100%" style={{maxWidth:"190px", paddingBottom:"15px"}}/>
-<div  className={classes.subtext}>The acquisition of Flow ROI introduces real estate transaction functionality into the Elm Street Technology product suite, enhancing Elevate’s end-to-end solution <br />for brokers, agents and teams.</div>
+<div className={classes.column2} style={{ textAlign: "left", paddingTop: "20px",}}>
 
-<div style={{ textAlign: "center", paddingBottom: "10px" }}>
-                 <a href="https://tryelevate.com/elm-street-technology-acquires-flow-roi/"  target="_blank"  className={classes.buttonLink}>Read The Press Release</a>
-            </div>
+<div  className={classes.subtext}>
+<span className={classes.bold}>Which features most maximize the value<br />
+of my Elevate subscription?</span><br />
+There are a number of new features that have been added to the Elevate Platform. Each tool has been designed, tested, and proven to make the most out of your time and energy spent in the new dashboard. 
+Some of the most powerful new features include Property Promoter - Create gorgeous digital property promotions using a selection of pre-made templates (Open House, Virtual Open House, Just Sold, New Listing). 
+<br /><br />
+NEW Lead Nurturing Emails - New “7-day nurture” campaigns ensure that no opportunity is missed this upcoming selling season. 
+<br /><br />
+Instant Property Alerts - In this ultra-competitive market, it’s imperative for active buyers to receive alerts when a new property matching their search criteria hits the market. Be first!
+<br /><br />
+<a href="https://tryelevate.com/elevate-releases-wave-of-new-features/"  target="_blank" style={{textDecoration:"none", color:"#52B1AD"}}><span className={classes.bold}>Many More!</span></a>
+<br /><br />
+<span className={classes.bold}>I signed up with my subscription price locked in.<br />
+Are my prices rising at this time?</span><br />
+No. As a valued subscriber who attended and claimed a special subscription price through the DMS promotion at in-person events, your rates will remain at their current level. However, any interruption or alteration in your subscription may result in current prices applying to the account.
+<br /><br />
+<span className={classes.bold}>Can I upgrade and lock in pricing?</span><br />
+Yes. If you upgrade your account to include lead services, we will ensure that your lead pipeline remains active with the same estimated amount of leads at current pricing for the next 12 months, even as costs to acquire those leads continue to rise.
+<br /><br />
+<span className={classes.bold}>Who can I contact to make sure I’m getting<br />
+the most out of my subscription?</span><br />
+If you have any questions about how you might maximize the value of your subscription, just reach out! We’re here to make sure you succeed with Elevate, and are here to make our small part in fulfilling the American Dream a meaningful one.
 
 </div>
+
+
+</div>
+
+
 
 
 
