@@ -27,12 +27,18 @@ const Sellerpilot = ({ children, classes, data, tags }) => {
         
         
         <Container>
+
+        <div className={classes.centerHeading} style={{paddingBottom:"30px"}}>
+                            
+                            <div className={classes.heading}>SELLER LEADS PILOT</div>
+                            <div className={classes.subtext}><span className={classes.bold}>You're invited to participate in an exciting NEW program, you lucky human!</span></div>
+                
+          </div>
                         
    
             <div className={classes.flexContainer}>
                 <div className={classes.flexItem} style={{padding:"30px", textAlign:"left"}}>
-                <div className={classes.Heading2}>You're invited to participate...</div>
-                <div className={classes.subtext} style={{paddingBottom:"25px"}}>in an exciting SELLER LEADS PILOT program, you lucky human!  Please verify that all of your contact information below is correct.  The address noted below will be used as the return address on your postcards.  If the information is NOT correct, please log into your Elevate account to update your account credentials or contact Customer Experience:  508-885-2040.</div>
+                <div className={classes.subtext} style={{paddingBottom:"25px"}}>Please verify that all of your contact information below is correct.  The address noted below will be used as the return address on your postcards.  If the information is NOT correct, please log into your Elevate account to update your account credentials or contact Customer Experience:  508-885-2040.</div>
                 <FormSellerOptin/>
                 </div>
 
@@ -48,6 +54,59 @@ const Sellerpilot = ({ children, classes, data, tags }) => {
         
     </Container>
 </div> 
+
+
+
+
+<div style={{paddingBottom:"75px", paddingTop:"74px", backgroundColor:"#f7f7f7",}}>
+<Container>
+<div className={classes.top} style={{textAlign:"center"}}>
+
+<div className={classes.centerHeading}>
+                            
+                            <div className={classes.Heading2}>Frequently Asked Questions</div>
+                
+          </div>
+
+
+          <div className={classes.column2} style={{ textAlign: "left", paddingTop: "20px",}}>
+
+<div  className={classes.subtext}><span className={classes.bold}>How does it work?</span><br />
+For every seller lead captured within your Elevate account that only reflects a postal address (no email or telephone), we will automatically send that lead an introduction postcard from you, encouraging them to connect with you.
+<br /><br />
+<span className={classes.bold}>What do I need to do?</span><br />
+Other than opting into the pilot program, you don't need to do anything!
+We will be launching the pilot at the beginning of March and run it for two-months
+in order to gauge response.
+</div>
+
+
+</div>
+
+<div className={classes.column2} style={{ textAlign: "left", paddingTop: "20px",}}>
+
+<div  className={classes.subtext}>
+<span className={classes.bold}>What does it cost?</span><br />
+There is no cost to participate in the pilot program. All we ask is that you provide us some feedback on engagement / response from prospective sellers.
+<br /><br />
+<span className={classes.bold}>Can I customize my postcard?</span><br />
+Not during the pilot program, but in the future you'll be able to select from multiple postcard templates, customize your messaging and control the frequency of outreach.
+
+
+</div>
+
+
+</div>
+
+
+
+
+
+</div>
+</Container>
+
+</div>
+
 
 
 
@@ -71,7 +130,7 @@ export default withStyles((theme) => ({
     letterSpacing: ".14px",
     color: "#2E2E35",
     textAlign: "center",
-    marginBottom: "12px",
+    marginBottom: "5px",
   },
 
   subtext: {
@@ -145,11 +204,11 @@ export default withStyles((theme) => ({
 
   heading: {
     color: theme.colors.secondary,
-    fontSize: "32px",
-    lineHeight: "40px",
+    fontSize: "38px",
+    lineHeight: "42px",
     fontWeight: "700",
     marginRight: "auto",
-    paddingBottom: "20px",
+    paddingBottom: "5px",
   },
 
   top: {
