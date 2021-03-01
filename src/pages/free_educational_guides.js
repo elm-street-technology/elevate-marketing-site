@@ -15,6 +15,7 @@ import Emailcover from "../images/email_cover.png";
 import Kardcover from "../images/kard_cover.png";
 import Saucecover from "../images/sauce_cover.png";
 import Twenty1cover from "../images/21_cover.png";
+import Listcover from "../images/list_cover.png";
 import Testa from "../images/testa.png";
 import Testb from "../images/testb.png";
 import Testc from "../images/testc.png";
@@ -49,25 +50,40 @@ const Educationalguides = ({ children, classes, data, tags }) => {
       <Container>
                    
 
-        <div className={classes.top} style={{paddingTop:"50px"}}>
+        <div className={classes.top} style={{paddingTop:"35px"}}>
 
-                <div className={classes.column2} style={{ textAlign: "center", }}>
+                <div className={classes.column2} style={{ textAlign: "center", paddingTop:"19px"}}>
+
+                <div className={classes.centerheading2}>
+                                    Listings, Listings, Listing!<br />
+                                    Marketing Guide to Capture<br />
+                                    &amp; Convert Seller Leads!</div><br />
+                                    <div className={classes.centersubtext}>Download this free, all-inclusive, educational guide and get the tips, tricks, and strategies from the pros to make the lead capture-to-conversion process as seemless,<br />
+                                    scalable, &amp; successful as possible.</div>
                                     
-                                          <div style={{ textAlign: "center",paddingTop:"35px" }}>
-                                          <img src={Twenty1cover} width="100%" style={{maxWidth:"500px"}}/>
+                                    
+                                    <a target="_blank" href="/listingsguide" className={classes.ctabutton}>
+                                    Download Now</a>
+                                    
+                                          <div style={{ textAlign: "center",paddingTop:"30px" }}>
+                                          <img src={Listcover} width="100%" style={{maxWidth:"500px"}}/>
                                           </div>
                                     
                   </div>
 
-                  <div className={classes.column2} style={{ textAlign: "center", paddingTop: "22px" }}>
+                  <div className={classes.column2} style={{ textAlign: "center", paddingTop:"25px"}}>
                                     
-                                    <div className={classes.centerheading2}>NEW THIS MONTH!<br />
+                                    <div className={classes.centerheading2}>
                                     Your 2021 Marketing Strategy Guide</div><br />
                                     <div className={classes.centersubtext}>Planning your goals, budget and overarching marketing strategy can feel like daunting work, but it’s a crucial part of running a successful business. This FREE guide from the experts at Elevate is designed to help you focus on what’s important, and to encourage you to expand your marketing for the start of the new year.</div>
                                     
                                     
                                     <a target="_blank" href="/your2021marketingguide" className={classes.ctabutton}>
                                     Download Now</a>
+
+                                    <div style={{ textAlign: "center",paddingTop:"30px" }}>
+                                          <img src={Twenty1cover} width="100%" style={{maxWidth:"500px"}}/>
+                                          </div>
                                    
                   </div>
 
