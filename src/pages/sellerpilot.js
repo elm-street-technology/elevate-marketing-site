@@ -36,9 +36,11 @@ const Sellerpilot = ({ children, classes, data, tags }) => {
                             <br /><br />
 Please verify that your contact information below is correct.  The address noted below will be used as the return address on your postcards.  If the information is NOT correct, please log into your Elevate account to update your account credentials or contact Customer Experience:  508-885-2040.</div>
 <FormSellerOptin/>
-<div className={classes.centerHeading} style={{paddingBottom:"25px"}}>
+<hr />
+<div className={classes.centerHeading} style={{paddingBottom:"25px", paddingTop:"25px"}}>
                             
-                            <div className={classes.subtext}><span className={classes.bold}>What your postcard will look like during this two-month pilot program:</span></div>
+                            <div className={classes.Heading2}><span className={classes.bold}>What your postcard will look<br />
+                            like during this two-month pilot program:</span></div>
                 
           </div>
 <img src={List} width="100%"/>
