@@ -8,7 +8,8 @@ import EventCard from "../components/EventCard";
 import EventCardZero from "../components/EventCardZero";
 import Container from "../components/Container";
 import SEO from "../components/SEO";
-import smbg from "../images/exbg_new.jpg";
+import fbcampbg from "../images/fbcampbg.jpg";
+import fbcamplogo from "../images/fbcamplogo.png";
 import Hexagons from "../images/hexagons.svg";
 import Search from "elevate-ui-icons/Search";
 
@@ -163,64 +164,41 @@ class EventsFBads extends Component {
     return (
       <div className={classes.root}>
         <Helmet>
-          <title>{`Social media & lead gen tips, tricks & shortcuts - ${config.siteTitle}`}</title>
-          <meta name="og:title" content={`Social media & lead gen tips, tricks & shortcuts - ${config.siteTitle}`}/>
-          <meta name="description" content={`Social media & lead gen tips, tricks & shortcuts - ${config.siteTitle}`} />
+          <title>{`Fool-proof strategies to generate high quality buyer & seller leads with targeted Facebook ads - ${config.siteTitle}`}</title>
+          <meta name="og:title" content={`Fool-proof strategies to generate high quality buyer & seller leads with targeted Facebook ads - ${config.siteTitle}`}/>
+          <meta name="description" content={`Fool-proof strategies to generate high quality buyer & seller leads with targeted Facebook ads - ${config.siteTitle}`} />
         </Helmet>
-        <SEO customTitle customDescription={`Social media & lead gen tips, tricks & shortcuts - ${config.siteTitle}`} />
+        <SEO customTitle customDescription={`Fool-proof strategies to generate high quality buyer & seller leads with targeted Facebook ads - ${config.siteTitle}`} />
 
         <div className={classes.smBackground}>
         <Container>
                 <div className={classes.titleText} style={{color:"#2d397c", paddingRight:"20px", paddingLeft:"20px"}}>
-                Do you struggle with social media? We’re here to help!<br />
+                <img src={fbcamplogo} width="100%" style={{paddingBottom:"20px", maxWidth:"500px"}}/><br />
+                Fool-proof strategies to generate high quality buyer<br />
+                &amp; seller leads with targeted Facebook ads.<br />
                 Register for this must-attend WEBINAR today...
                 { mls && <span><br/>exclusively for {mls} members.</span>}
                 </div>
                 <div className={classes.titleSubText} style={{paddingBottom:"40px", paddingRight:"20px", paddingLeft:"20px"}}>Registration is FREE.   <span style={{color:"#f48d07"}}>Space is LIMITED.</span> </div>
 
                 
-                <div className={classes.titleText} style={{color:"#2d397c"}}>
-                “This is the #1 must-attend<br />
-                social media training in the U.S.”
-                </div>
-
-
                
-
-
-
-                  <div className={classes.top2} style={{paddingTop:"28px", paddingBottom:"35px"}}>
-                  <div className={classes.column3} style={{ textAlign: "center", paddingBottom: "15px", }}>
-                  <div className={classes.titleSubText}>“The trainers were so<br />
-                  knowledgeable and made it<br />
-                  so easy to learn.”</div>
-                  </div>
-                  <div className={classes.column3} style={{ textAlign: "center", paddingBottom: "15px", }}>
-                  <div className={classes.titleSubText}>“Struggling with<br />
-                  social media marketing?<br />
-                  Not after attending this!”</div>
-                  </div>
-                  <div className={classes.column3} style={{ textAlign: "center", paddingBottom: "15px", }}>
-                  <div className={classes.titleSubText}>“I walked out with<br />
-                  the training &amp; tools I needed<br />
-                  to compete with other agents.”</div>
-                  </div>
-                  </div>
  
 
 
                 
                 <div className={classes.BodyText} style={{paddingBottom:"40px"}}>
-                Wonder how top real estate agents find time to be ‘everywhere’ online and STILL close more<br />
-                business? Interested in turning your social media from a toy into a powerful business tool?<br />
-                This FREE 60-minute, high-energy educational WEBINAR is designed to inspire and empower<br />
-                agents with tips, tricks &amp; strategies for conquering their website, blog and social media.
+                <div className={classes.titleSubText} style={{paddingBottom:"15px"}}>Did you know the average adult spends 45+ minutes or more every single day on Facebook?</div>
+                In this one-hour session, attendees will learn the step-by-step process of creating high conversion Facebook ads<br />
+to capture buyer and seller leads. This session is great for all levels of agent who want to learn<br />
+how to take their Facebook
+advertising to the next level.
                 </div>
          
         </Container>
         </div>
 
-        <div style={{backgroundColor:"#f15953", textAlign:"center", padding:"15px"}}><span className={classes.bold} style={{color:"#ffffff"}}>REGISTER TODAY by selecting from any upcoming date/time slots</span></div>
+        <div style={{backgroundColor:"#f15953", textAlign:"center", padding:"15px"}}><span className={classes.bold} style={{color:"#ffffff", lineHeight:"20px"}}>REGISTER TODAY by selecting from any upcoming date/time slots</span></div>
 
 
         <Container>
@@ -366,7 +344,7 @@ export const query = graphql`
 export default withStyles((theme) => ({
   root: {
     position: "relative",
-    paddingTop: "40px",
+    paddingTop: "20px",
     paddingBottom: "30px",
   },
   top: {
@@ -470,7 +448,7 @@ export default withStyles((theme) => ({
     lineHeight: "24px",
     fontWeight: "700",
     textAlign: "center",
-    color: "#55c3ba",
+    color: "#2c73ba",
   },
 
   BodyText: {
@@ -484,8 +462,8 @@ export default withStyles((theme) => ({
   },
 
   smBackground: {
-    backgroundImage: `url('${smbg}')`,
-    backgroundPosition: "bottom",
+    backgroundImage: `url('${fbcampbg}')`,
+    backgroundPosition: "middle",
     width:"100%",
   },
   videoEmbed:{
