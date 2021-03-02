@@ -306,16 +306,7 @@ advertising to the next level.
           )}
           
         </Container>
-        <Container>
-          <div className={classes.top} style={{
-            float:"right",
-            marginTop:"40px"}}>
-            <Link className={classes.bootcampLink} to="/bootcamp">
-              Learn about our Social Media Bootcamp →
-            </Link>
-          </div>
-        </Container>
-        
+       
       </div>
     );
   }
