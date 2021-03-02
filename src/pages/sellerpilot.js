@@ -3,7 +3,7 @@ import Helmet from "react-helmet";
 import withStyles from "elevate-ui/withStyles";
 import config from "../utils/siteConfig";
 import Container from "../components/Container";
-import List from "../images/listwithme.jpg";
+import List from "../images/listwithme2.jpg";
 import FormSellerOptin from "../components/FormSellerOptin";
 import SEO from "../components/SEO";
 
@@ -23,33 +23,29 @@ const Sellerpilot = ({ children, classes, data, tags }) => {
     <a id="refer_form"></a>
 
 
-    <div style={{paddingTop:"50px", paddingBottom:"50px",}}>
+    <div style={{paddingTop:"50px", paddingRight:"20px", paddingLeft:"20px"}}>
         
         
         <Container>
 
-        <div className={classes.centerHeading} style={{paddingBottom:"30px"}}>
+        <div className={classes.centerHeading}>
                             
-                            <div className={classes.heading}>SELLER LEADS PILOT</div>
-                            <div className={classes.subtext}><span className={classes.bold}>You're invited to participate in an exciting NEW program, you lucky human!</span></div>
+                            <div className={classes.Heading2}>You’re invited to participate<br />
+                            in an exciting NEW program, you lucky human!</div>
+                            <div className={classes.subtext} style={{paddingRight:"25px", paddingLeft:"25px", paddingBottom:"25px"}}>Beginning this next week, any seller leads that you have with only an address (no email or telephone) will automatically be sent an introductory postcard from you!  We will run this initiative for two-months to test audience response.  There’s no charge to you to participate, all you need to do is opt-in below.
+                            <br /><br />
+Please verify that your contact information below is correct.  The address noted below will be used as the return address on your postcards.  If the information is NOT correct, please log into your Elevate account to update your account credentials or contact Customer Experience:  508-885-2040.</div>
+<FormSellerOptin/>
+<div className={classes.centerHeading} style={{paddingBottom:"25px"}}>
+                            
+                            <div className={classes.subtext}><span className={classes.bold}>What your postcard will look like during this two-month pilot program:</span></div>
                 
+          </div>
+<img src={List} width="100%"/>
           </div>
                         
    
-            <div className={classes.flexContainer}>
-                <div className={classes.flexItem} style={{padding:"30px", textAlign:"left"}}>
-                <div className={classes.subtext} style={{paddingBottom:"25px"}}>Please verify that all of your contact information below is correct.  The address noted below will be used as the return address on your postcards.  If the information is NOT correct, please log into your Elevate account to update your account credentials or contact Customer Experience:  508-885-2040.</div>
-                <FormSellerOptin/>
-                </div>
 
-                <div className={classes.flexItem} style={{padding:"30px", textAlign:"center"}}>
-                <img src={List} width="100%" style={{paddingBottom:"15px"}}/>
-                </div>
-
-  
-
-
-      </div>
 
         
     </Container>
