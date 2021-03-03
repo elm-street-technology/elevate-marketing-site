@@ -227,6 +227,12 @@ const Footer = ({ classes }) => (
           <Link className={classes.link} to="/events_lg">
             Lead Gen. Boot Camp
           </Link>
+          <Link className={classes.link} to="/events_listings">
+            Listings Boot Camp
+          </Link>
+          <Link className={classes.link} to="/events_fbads">
+            Facebook Ads Boot Camp
+          </Link>
           <Link className={classes.link} to="/markets">
             MLS Markets
           </Link>
@@ -299,7 +305,7 @@ export default withStyles((theme) => ({
     width: "100%",
     display: "grid",
     gridTemplateColumns: "repeat(1, 1fr)",
-    gridColumnGap: "35px",
+    gridColumnGap: "25px",
     gridRowGap: "32px",
 
     [theme.breakpoints[900]]: {
