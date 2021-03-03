@@ -222,6 +222,28 @@ exports.createPages = ({ graphql, boundActionCreators }) => {
             },
           });
         }
+        if(edges[0].node.landingLayout === 'Listings'){
+          createPage({
+            path: `events/${fieldValue}/`,
+            component: path.resolve(`./src/pages/events_listings.js`),
+            context: {
+              slug: fieldValue,
+              eventType: edges[0].node.eventType,
+              mls: edges[0].node.mls
+            },
+          });
+        }
+        if(edges[0].node.landingLayout === 'FB Ads'){
+          createPage({
+            path: `events/${fieldValue}/`,
+            component: path.resolve(`./src/pages/events_fbads.js`),
+            context: {
+              slug: fieldValue,
+              eventType: edges[0].node.eventType,
+              mls: edges[0].node.mls
+            },
+          });
+        }
       });
       resolve();
     });
