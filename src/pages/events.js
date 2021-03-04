@@ -10,6 +10,8 @@ import Calendar from "elevate-ui-icons/Calendar";
 import eventsbg from "../images/events_bg.jpg";
 import SMBCLogo from "../images/sm_bootcamp.png";
 import LGBCLogo from "../images/lg_bootcamp.png";
+import Fbcamplogo from "../images/fbcamplogo.png";
+import Listlogo from "../images/lll.png";
 import MastermindLogo from "../images/mastermind_logo.png";
 import DeepLogo from "../images/deep_logo.png";
 import FormHostEvent from "../components/FormHostEvent";
@@ -129,6 +131,47 @@ class Events extends Component {
                     This is your chance to learn their secrets.</div>
                     <div >
                       <a href="/events_lg" className={classes.buttonIcon2}>
+                      <Calendar size={20} style={{position: "relative",top:"4px"}}/> Upcoming Events</a>
+                    </div>
+                    <a  href="#host_form" className={classes.button}>
+                    Host an Event</a>
+                    <a  href="#faqs" className={classes.button}>
+                    FAQ</a>
+             </div>
+          </div>
+
+
+          <div className={classes.top}>
+            {/* <div className={classes.heading} style={{ marginRight: "auto", marginLeft: "auto",textAlign:"center" }}>Upcoming Webinars &amp; Live Events</div> */}
+            <div className={classes.columnSection}>
+                    <Link className={classes.bootcampLink} to="/events_sm">
+                      <img src={Listlogo} className={classes.subLogoStyle}/>
+                    </Link><br />
+                    <div className={classes.subtitleText}>A real estate agent’s guide to capturing<br />
+                    &amp; marketing listings like a pro.</div>
+                    <div className={classes.subtext} style={{ minHeight:"130px"}}>With inventory at historic lows,capturing seller leads has never been a hotter topic. 
+                    Whether your memberswant to capture seller leads, create a killer listing presentation,
+                    or are lookingfor unique ways to make their listingsstand out...this is the educationalwebinar they need! </div>
+                    <div>
+                      <a href="/events_listings" className={classes.buttonIcon2}>
+                      <Calendar size={20} style={{position: "relative",top:"4px"}}/> Upcoming Events</a>
+                    </div>
+                    <a href="#host_form" className={classes.button}>
+                    Host an Event</a>
+                    <a  href="#faqs" className={classes.button}>
+                    FAQ</a>
+            </div>
+            <div className={classes.columnSection}>
+                    <Link className={classes.bootcampLink} to="/events_lg">
+                      <img src={Fbcamplogo} className={classes.subLogoStyle} />
+                    </Link><br />
+                    <div className={classes.subtitleText}>generate high-quality buyer<br />
+                    &amp; seller leads with targeted ads</div>
+                    <div className={classes.subtext} style={{ minHeight:"130px"}}>Did you know the average adultspends 45+ minutes or more everysingle day on Facebook? 
+                    In thisone-hour session, attendees will learnthe step-by-step process of creatinghigh conversion Facebook ads tocapture buyer and seller leads. 
+                    This session is great for all levelsof agent who want to learn how to take their Facebook advertisingto the next level.</div>
+                    <div >
+                      <a href="/events_fbads" className={classes.buttonIcon2}>
                       <Calendar size={20} style={{position: "relative",top:"4px"}}/> Upcoming Events</a>
                     </div>
                     <a  href="#host_form" className={classes.button}>
