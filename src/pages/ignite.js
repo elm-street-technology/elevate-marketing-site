@@ -8,6 +8,7 @@ import FormProduct from "../components/FormProduct";
 import Ignitebg from "../images/ignitebg.jpg";
 import Fadebg from "../images/fadebg.jpg";
 import Ignitelogo from "../images/ignitelogo.png";
+import Igniteprice from "../images/ignite_price.png";
 import Ignstar from "../images/ignstar.png";
 import Quote from "../images/quote.png";
 import Sp1 from "../images/sp1.png";
@@ -46,12 +47,17 @@ const Ignite = ({ children, classes, data, tags }) => {
 
       <div className={classes.top}  style={{paddingBottom:"50px",}}>
 
-             <div className={classes.column2} style={{ textAlign: "center", paddingBottom: "10px" }}>
+
+      <div className={classes.column3} style={{ textAlign: "center", paddingBottom: "10px" }}>
+      <img src={Igniteprice} width="100%"  style={{maxWidth:"280px"}} />
+            </div>
+
+             <div className={classes.column3} style={{ textAlign: "center", paddingBottom: "10px" }}>
                  <a href="#demo" className={classes.buttonLink}>Request Demo</a>
             </div>
 
 
-            <div className={classes.column2} style={{ textAlign: "center", paddingBottom: "10px" }}>
+            <div className={classes.column3} style={{ textAlign: "center", paddingBottom: "10px" }}>
                 <a target="_blank" href="/compare_products" className={classes.buttonLink}>Compare Products</a>
             </div>
 
@@ -321,6 +327,10 @@ export default withStyles((theme) => ({
     borderRadius: "4px",
     margin: "16px auto",
     marginBottom: "10px",
+
+    [theme.breakpoints[900]]: {
+      marginTop: "34px",
+    },
   },
 
   flexContainer: {

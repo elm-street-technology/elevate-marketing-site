@@ -7,6 +7,7 @@ import BgSectionExternal3 from "../components/BgSectionExternal3";
 import Sprobg from "../images/sprobg.jpg";
 import Fadebg from "../images/fadebg.jpg";
 import Sprologo from "../images/sprologo.png";
+import Sproprice from "../images/sp_price.png";
 import Quote from "../images/quote.png";
 import Sp1 from "../images/sp1.png";
 import Sp2 from "../images/sp2.png";
@@ -19,13 +20,13 @@ import FormProduct from "../components/FormProduct";
 
 const Socialpro = ({ children, classes, data, tags }) => {
   const postNode = {
-      title: `Elevate Social ProTM - ${config.siteTitle}`,
+      title: `Elevate Social Pro - ${config.siteTitle}`,
   };
 
   return (
 <div className={classes.root}>
       <Helmet>
-              <title>{`Elevate Social ProTM - ${config.siteTitle}`}</title>
+              <title>{`Elevate Social Pro - ${config.siteTitle}`}</title>
       </Helmet>
       <SEO postNode={postNode} pagePath="Socialpro" customTitle />
 
@@ -42,7 +43,12 @@ const Socialpro = ({ children, classes, data, tags }) => {
 
       <div className={classes.top}  style={{paddingBottom:"50px",}}>
 
-             <div className={classes.column2} style={{ textAlign: "center", paddingBottom: "10px" }}>
+
+      <div className={classes.column3} style={{ textAlign: "center", paddingBottom: "10px" }}>
+      <img src={Sproprice} width="100%"  style={{maxWidth:"280px"}} />
+            </div>
+
+             <div className={classes.column3} style={{ textAlign: "center", paddingBottom: "10px" }}>
                  <a href="#demo" className={classes.buttonLink}>Request Demo</a>
             </div>
 
@@ -52,7 +58,7 @@ const Socialpro = ({ children, classes, data, tags }) => {
             </div>
             */}
 
-            <div className={classes.column2} style={{ textAlign: "center", paddingBottom: "10px" }}>
+            <div className={classes.column3} style={{ textAlign: "center", paddingBottom: "10px" }}>
                 <a target="_blank" href="/compare_products" className={classes.buttonLink}>Compare Products</a>
             </div>
 
@@ -329,6 +335,10 @@ export default withStyles((theme) => ({
     borderRadius: "4px",
     margin: "16px auto",
     marginBottom: "10px",
+
+    [theme.breakpoints[900]]: {
+      marginTop: "34px",
+    },
   },
 
   flexContainer: {
