@@ -5,8 +5,8 @@ import config from "../utils/siteConfig";
 import Container from "../components/Container";
 import FormReview from "../components/SignUpFormReview";
 import SEO from "../components/SEO";
+import LandingHeader from "../images/smr_header.jpg";
 import ResponsiveVid from "../components/ResponsiveVid"
-import LandingHeader from "../images/leads_top_image.jpg";
 import LandingFooter from "../images/wowad_bottom.jpg";
 
 const SocialMediaReview = ({ children, classes, data, tags }) => {
@@ -24,18 +24,14 @@ const SocialMediaReview = ({ children, classes, data, tags }) => {
       <Container>
         <div >
                   <div style={{ maxWidth: "900px", backgroundColor: "#f7f7f7", marginRight:"auto",marginLeft:"auto",}}>
-                
-                  <div style={{marginBottom:"30px", paddingTop:"55px", paddingRight:"60px", paddingLeft:"60px"}}>
+                  <img src={LandingHeader} style={{width:"100%"}} />
+                  <div style={{marginBottom:"20px", paddingTop:"55px", paddingRight:"60px", paddingLeft:"60px"}}>
                 <div className={classes.headingLarge} style={{ marginBottom: "25px" }}>FREE Social Media Review</div>
 
-                <div style={{color:"#495050", lineHeight:"25px", paddingBottom:"55px", textAlign:"center"}}>Spend 15-minutes with an Elevate Success Coach who will review your website, blog and social channels with you and give you tips, tricks &amp; strategies for making the most of your online marketing NOW and in the FUTURE. No string attached.</div>
+                <div style={{color:"#495050", lineHeight:"25px", paddingBottom:"15px", textAlign:"center"}}>Spend 15-minutes with an Elevate Success Coach who will review your website, blog and social channels with you and give you tips, tricks &amp; strategies for making the most of your online marketing NOW and in the FUTURE. No string attached.</div>
 
 
-                <div className={classes.fullWidthVid}>
-                  <div aspectRatio="16by9">
-                  <ResponsiveVid youtubeId="xPJyb2d_tnU" />
-                  </div>
-                </div>
+             
 
               
                 </div>
