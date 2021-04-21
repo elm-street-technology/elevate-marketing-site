@@ -177,9 +177,7 @@ const Footer = ({ classes }) => (
           <Link className={classes.link} to="/socialpro">
             Social Pro&reg;
           </Link>
-          <Link className={classes.link} to="/ignite">
-            Ignite&reg;
-          </Link>
+       
           <Link className={classes.link} to="/elevatedms">
             DMS&reg;
           </Link>

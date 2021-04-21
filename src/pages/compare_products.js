@@ -7,7 +7,7 @@ import BgSectionExternal3 from "../components/BgSectionExternal3";
 import Formcomparison from "../components/Formcomparison";
 import Glancebg from "../images/glancebg.jpg";
 import Compchart from "../images/compchart.jpg";
-import Compchart2 from "../images/compchart2.jpg";
+import Compchart2 from "../images/compchart3.jpg";
 import Glance2 from "../images/glance2.png";
 import Glance3 from "../images/glance3.gif";
 import Glance4 from "../images/glance4.png";

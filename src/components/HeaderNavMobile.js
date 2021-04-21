@@ -21,9 +21,7 @@ const HeaderNavMobile = ({ classes, className, onMenuClose }) => {
           <Link className={classes.listItemLink} to="/socialpro">
             <li className={classes.listItem}>Social Pro&reg;</li>
           </Link>
-          <Link className={classes.listItemLink} to="/ignite">
-            <li className={classes.listItem}>Ignite&reg;</li>
-          </Link>
+         
           <Link className={classes.listItemLink} to="/elevatedms">
             <li className={classes.listItem}>DMS&reg;</li>
           </Link>
