@@ -55,7 +55,7 @@ Now it’s easier than ever to pay attention to the KPIs (key performance indica
                         <div style={{textAlign:"center", paddingRight:"35px", paddingLeft:"35px"}}>
                             <div className={classes.Heading2}>High SEO IDX Website</div>
                             <div className={classes.subtext}>Designed specifically to be found on search engines, your Elevate IDX&reg; website features rich, relevant content, an intuitive consumer interface
-                             with plenty of lead capture opportunity, and an interactive blog with automated ontent posted weekly.</div>     
+                             with plenty of lead capture opportunity, and an interactive blog with automated content posted weekly.</div>     
                             <img src={Glance2} width="100%"  style={{paddingTop:"45px", maxWidth:"700px"}} />
                         </div>
             </Container>
