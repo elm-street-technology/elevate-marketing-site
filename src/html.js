@@ -29,6 +29,7 @@ module.exports = class HTML extends React.Component {
             name="viewport"
             content="width=device-width, initial-scale=1, shrink-to-fit=no"
           />
+          <meta name="facebook-domain-verification" content="9h3esdff7hcp8uv7dhdtmy21haoray" />
           {this.props.headComponents}
           {css}
           <script
