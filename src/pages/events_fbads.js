@@ -173,7 +173,7 @@ class EventsFBads extends Component {
         <div className={classes.smBackground}>
         <Container>
                 <div className={classes.titleText} style={{color:"#2d397c", paddingRight:"20px", paddingLeft:"20px"}}>
-                <img src={fbcamplogo} width="100%" style={{paddingBottom:"20px", maxWidth:"500px"}}/><br />
+                <img src={fbcamplogo} width="100%" style={{paddingBottom:"20px", maxWidth:"450px"}}/><br />
                 Fool-proof strategies to generate high quality buyer<br />
                 &amp; seller leads with targeted Facebook ads.<br />
                 Register for this must-attend WEBINAR today...

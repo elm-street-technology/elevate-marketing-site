@@ -174,7 +174,7 @@ class EventsListings extends Component {
         <Container>
         
                 <div className={classes.titleText} style={{color:"#ffffff", paddingRight:"20px", paddingLeft:"20px"}}>
-                <img src={listlogo} width="100%" style={{paddingBottom:"20px", maxWidth:"550px"}}/><br />
+                <img src={listlogo} width="100%" style={{paddingBottom:"20px", maxWidth:"450px"}}/><br />
                 A real estate agent's guide to capturing<br />
                 &amp; marketing listings like a pro!<br />
                 Register for this MUST-ATTEND webinar today...
