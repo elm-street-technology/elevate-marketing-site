@@ -113,6 +113,38 @@ const Bright = ({ children, classes, data, tags }) => {
 
 
 
+<div style={{paddingBottom:"65px", backgroundColor:"#ffffff"}}>
+    <Container>
+    
+            <div className={classes.flexContainer}>
+                <div className={classes.flexItem2a} style={{paddingBottom:"30px",}}>  
+                <div style={{ textAlign: "center" }} className={classes.videoEmbed}>
+                      <iframe className={classes.videoContainer} src="https://www.youtube.com/embed/sgSS6uA_t-Q"
+                      frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                </div>
+                <br />
+                <div className={classes.subtext} style={{ textAlign: "center" }}>Elevate BOSS&reg; for BrightMLS</div>
+                </div>
+                <div className={classes.flexItem2a} style={{paddingBottom:"30px",}}>
+                <div style={{ textAlign: "center" }} className={classes.videoEmbed}>
+                      <iframe className={classes.videoContainer} src="https://www.youtube.com/embed/8YIWu5FqMeQ"
+                      frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                </div>
+                <br />
+                <div className={classes.subtext} style={{ textAlign: "center" }}>Elevate CRM&reg; for BrightMLS</div>
+                </div>
+
+               
+            </div>
+
+        
+    </Container>
+</div> 
+
+
+
+
+
 
 
 
@@ -244,6 +276,22 @@ export default withStyles((theme) => ({
         maxWidth: "26%",
         width: "26%",
         paddingRight: "20px",
+        paddingBottom: "0px",
+    },
+  },
+
+  flexItem2a: {
+    maxWidth: "100%",
+    width: "100%",
+    paddingRight: "0px",
+    paddingBottom: "25px",
+  
+  
+    [theme.breakpoints[900]]: {
+        maxWidth: "50%",
+        width: "50%",
+        paddingLeft: "15px",
+        paddingRight: "15px",
         paddingBottom: "0px",
     },
   },
