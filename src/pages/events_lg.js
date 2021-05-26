@@ -173,7 +173,7 @@ class EventsLG extends Component {
                 
                 <div style={{maxWidth:"800px",marginLeft:"auto",marginRight:"auto"}}>
                 <div style={{ textAlign: "center" }} className={classes.videoEmbed}>
-                      <iframe className={classes.videoContainer} src="https://www.youtube.com/embed/AU_uOzHsyM0?autoplay=1&rel=0"
+                      <iframe className={classes.videoContainer} src="https://www.youtube.com/embed/uO_Vh8Cx5_w?autoplay=1&rel=0"
                       frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                 </div>
                 </div>

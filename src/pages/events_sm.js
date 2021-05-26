@@ -180,7 +180,7 @@ class EventsSM extends Component {
                 
                 <div style={{maxWidth:"800px",marginLeft:"auto",marginRight:"auto"}}>
                 <div style={{ textAlign: "center" }} className={classes.videoEmbed}>
-                      <iframe className={classes.videoContainer} src="https://www.youtube.com/embed/bHTQ31OzZY8?autoplay=1&rel=0"
+                      <iframe className={classes.videoContainer} src="https://www.youtube.com/embed/kPz3JM4dv-I?autoplay=1&rel=0"
                       frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                 </div>
                 </div>
