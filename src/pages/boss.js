@@ -45,6 +45,18 @@ const Boss = ({ children, classes, data, tags }) => {
                             <div className={classes.subtext} style={{color:"#f7f7f7"}}>One vendor.  One point of contact.  One solution.  For your entire office.<br/>
                             <div className={classes.subtext2} style={{color:"#FCBA1E"}}>Ask us how we drive HIGH agent adoption rates!</div>
                             
+
+
+
+
+
+
+                            <div style={{maxWidth:"800px",marginLeft:"auto",marginRight:"auto", paddingTop:"40px"}}>
+                <div style={{ textAlign: "center" }} className={classes.videoEmbed}>
+                      <iframe className={classes.videoContainer} src="https://www.youtube.com/embed/F1jXTGc2Xng?autoplay=1&rel=0"
+                      frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                </div>
+                </div>
                             </div>
           </div>
       </div>

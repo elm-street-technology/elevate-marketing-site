@@ -200,7 +200,12 @@ class FormCRM extends Component {
                     Contemporary, intuitive design for broker, agent &amp; team success.<br/>Secure personal data on every level.
                 </div>
 
-               
+                <div style={{marginLeft:"auto",marginRight:"auto",}}>
+                <div style={{ textAlign: "center" }} className={classes.videoEmbed}>
+                      <iframe className={classes.videoContainer} src="https://www.youtube.com/embed/WMqvFA708ss?autoplay=1&rel=0"
+                      frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                </div>
+                </div>
 
                 <div className={classes.headingText} style={{ marginTop: "20px", paddingBottom:"25px", }}>
                 Learn more, secure leads &amp; conquer your marketing today.
@@ -306,6 +311,21 @@ export default withStyles((theme) => ({
       width: "75%"
   },
 },
+videoEmbed:{
+  position: "relative",
+  paddingBottom: "56.25%",
+  paddingTop: "30px",
+  height: "0",
+  overflow: "hidden",
+  
+},
+videoContainer:{
+  position: "absolute",
+  top: "0",
+  left: "0",
+  width: "100%",
+  height: "100%",
+},
   headingSmall: {
     fontSize: "20px",
     textTransform: "uppercase",
@@ -330,4 +350,5 @@ export default withStyles((theme) => ({
     padding: "3px",
     lineHeight: "1.4em",
   },
+  
 }))(FormCRM);
