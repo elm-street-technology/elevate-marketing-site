@@ -163,10 +163,10 @@ class Index extends Component {
             <div className={classes.flexContainer}>
                 <div className={classes.flexItem}>
 
-                {/*
-                <iframe width="100%" height="350" src="https://www.youtube.com/embed/fGRZ8-mLwnQ?rel=0" frameBorder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowFullScreen></iframe>
-                */}    
-                <img src={Bcesw} style={{width:"100%",}}/>
+                
+                <iframe width="100%" height="350" src="https://www.youtube.com/embed/WPb46jktD2A" frameBorder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowFullScreen></iframe>
+                   
+                
 
                 </div>
                 <div className={classes.flexItem} style={{padding:"25px",}}>

@@ -11,7 +11,7 @@ import eventsbg from "../images/events_bg.jpg";
 import SMBCLogo from "../images/sm_bootcamp.png";
 import LGBCLogo from "../images/lg_bootcamp.png";
 import Fbcamplogo from "../images/fbcamplogo.png";
-import Listlogo from "../images/lll.png";
+import Listlogo from "../images/listmore.png";
 import MastermindLogo from "../images/mastermind_logo.png";
 import DeepLogo from "../images/deep_logo.png";
 import FormHostEvent from "../components/FormHostEvent";
