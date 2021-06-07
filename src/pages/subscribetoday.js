@@ -14,6 +14,7 @@ import PlayCircleFilled from "elevate-ui-icons/PlayCircleFilled";
 import CheckCircle from "elevate-ui-icons/CheckCircle";
 import SMBCLogo from "../images/smbcLogo.jpg";
 import Elite from "../images/elite_logo.png";
+import Eliteplus from "../images/eplus.png";
 import Dplus from "../images/dplus.png";
 import Dms from "../images/dms_logo.png";
 import Line from "../images/line.png";
@@ -31,7 +32,15 @@ const subscribe_today = ({ classes }) => {
 
       
 
-
+    
+      <Container>
+        <div className={classes.top}>
+          <div className={classes.centerHeading} style={{paddingBottom:"15px", paddingTop:"20px", paddingLeft:"20px", paddingRight:"20px"}}>
+            <div className={classes.heading}><strong>Hurry to Lock Down Today’s Special Pricing!</strong></div>
+       
+          </div>
+        </div>
+      </Container>
 
 
 
@@ -44,10 +53,10 @@ const subscribe_today = ({ classes }) => {
       
         <div className={classes.top}>
         <div className={classes.infoboxGray2}>
-        <div className={classes.column3} style={{ textAlign: "center", paddingBottom: "35px" }}>
+        <div className={classes.column4} style={{ textAlign: "center", paddingBottom: "35px" }}>
           
           <div style={{ textAlign: "center",paddingBottom:"10px" }}>
-          <img src={Dms} style={{ width:"100%", maxWidth:"100px"}}/>
+          <img src={Dms} style={{ width:"100%", maxWidth:"90px"}}/>
         </div>
         
                 <div className={classes.productCol} style={{ textAlign: "left", paddingLeft:"10px", paddingRight:"10px",}}>
@@ -58,19 +67,19 @@ const subscribe_today = ({ classes }) => {
                 <div className={classes.bold} style={{color:"#57585b"}}>BLOG</div>
                 <div className={classes.bold} style={{color:"#57585b"}}>SOCIAL MEDIA SERVICES</div>
                 <div className={classes.bold} style={{color:"#57585b"}}>MLS Feed Listing Pushes:</div>
-                <div className={classes.bold} style={{color:"#57585b"}}>• Facebook</div>
-                <div className={classes.bold} style={{color:"#57585b"}}>• LinkedIn</div>
-                <div className={classes.bold} style={{color:"#57585b"}}>• Twitter</div>
-                <div className={classes.bold} style={{color:"#57585b"}}>• YouTube</div>
+                <div style={{color:"#57585b"}}>• Facebook</div>
+                <div style={{color:"#57585b"}}>• LinkedIn</div>
+                <div style={{color:"#57585b"}}>• Twitter</div>
+                <div style={{color:"#57585b"}}>• YouTube</div>
+                <div style={{color:"#57585b"}}>• Pinterest</div>
+                <div style={{color:"#57585b"}}>• Instagram</div>
                 </div>
 
                 <div style={{paddingTop:"33px"}}>
                 <img src={Line} style={{ width:"100%", maxWidth:"200px"}}/>
                 <br />
-                <span className={classes.bold} style={{color:"#4ab8ac"}}>ANNUAL AGREEMENT</span>
-                <br />
-                  <br />
-                  <div className={classes.bold} style={{color:"#4ab8ac", paddingTop:"8px"}}>Monthly: $249/m</div>
+                <span className={classes.bold} style={{color:"#4ab8ac"}}>6 MONTH AGREEMENT</span>
+                
 
 
 
@@ -86,16 +95,16 @@ const subscribe_today = ({ classes }) => {
           </div>
             </div>
             <div className={classes.infoboxGray2}>
-          <div className={classes.column3} style={{ textAlign: "center", paddingBottom: "35px" }}>
+          <div className={classes.column4} style={{ textAlign: "center", paddingBottom: "35px" }}>
           
           <div style={{ textAlign: "center",paddingBottom:"10px" }}>
-          <img src={Dplus} style={{ width:"100%", maxWidth:"215px"}}/>
+          <img src={Dplus} style={{ width:"100%", maxWidth:"195px"}}/>
         </div>
         
                 <div className={classes.productCol} style={{ textAlign: "left", paddingLeft:"10px", paddingRight:"10px",  paddingBottom:"20px"}}>
                 <div className={classes.bold} style={{color:"#f15953"}}>LEAD GENERATION</div>
-                <div className={classes.bold} style={{color:"#f15953"}}>• 5 - 10 leads per month</div>
-                <div className={classes.bold} style={{color:"#f15953"}}>• Pay-Per-Click Campaigns</div>
+                <div className={classes.bold} style={{color:"#f15953"}}>• 5 - 10 Leads /Month</div>
+                <div className={classes.bold} style={{color:"#f15953"}}>• PPC Campaigns</div>
                 <div className={classes.bold} style={{color:"#4ab8ac"}}>IDX WEBSITE</div>
                 <div className={classes.bold} style={{color:"#4ab8ac"}}>ADV. PRODUCTIVITY CRM</div>
                 <div className={classes.bold} style={{color:"#4ab8ac"}}>CMA WIZARD</div>
@@ -103,23 +112,33 @@ const subscribe_today = ({ classes }) => {
                 <div className={classes.bold} style={{color:"#57585b"}}>BLOG</div>
                 <div className={classes.bold} style={{color:"#57585b"}}>SOCIAL MEDIA SERVICES</div>
                 <div className={classes.bold} style={{color:"#57585b"}}>MLS Feed Listing Pushes:</div>
-                <div className={classes.bold} style={{color:"#57585b"}}>• Facebook</div>
-                <div className={classes.bold} style={{color:"#57585b"}}>• LinkedIn</div>
-                <div className={classes.bold} style={{color:"#57585b"}}>• Twitter</div>
-                <div className={classes.bold} style={{color:"#57585b"}}>• YouTube</div>
+                <div style={{color:"#57585b"}}>• Facebook</div>
+                <div style={{color:"#57585b"}}>• LinkedIn</div>
+                <div style={{color:"#57585b"}}>• Twitter</div>
+                <div style={{color:"#57585b"}}>• YouTube</div>
+                <div style={{color:"#57585b"}}>• Pinterest</div>
+                <div style={{color:"#57585b"}}>• Instagram</div>
                 </div>
 
                 <div>
                 <img src={Line} style={{ width:"100%", maxWidth:"200px"}}/>
                 <br />
-                <span className={classes.bold} style={{color:"#238076"}}>ANNUAL AGREEMENT</span>
+                <span className={classes.bold} style={{color:"#238076"}}>6 MONTH AGREEMENT</span>
                 <br />
-                  <br />
-                  <div className={classes.bold} style={{color:"#238076", paddingTop:"8px"}}>Monthly: $499/m</div>
+                 
+                  <div className={classes.bold} style={{color:"#238076", paddingTop:"8px"}}>For Buyer Leads:</div>
 
 
 
 <a target="_blank" href="https://elmstreettechnology.recurly.com/subscribe/dmsplus" className={classes.getStartedLinkignite}>
+                  SUBSCRIBE NOW
+                    </a>
+                    
+                    <div className={classes.bold} style={{color:"#238076", paddingTop:"8px"}}>For Seller Leads:</div>
+
+
+
+<a target="_blank" href="https://elmstreettechnology.recurly.com/subscribe/dmsplusseller" className={classes.getStartedLinkignite}>
                   SUBSCRIBE NOW
                     </a>
 
@@ -132,14 +151,15 @@ const subscribe_today = ({ classes }) => {
           </div>
 
           <div className={classes.infoboxGray2}>
-          <div className={classes.column3} style={{ textAlign: "center", paddingBottom: "35px" }}>
+          <div className={classes.column4} style={{ textAlign: "center", paddingBottom: "35px" }}>
           <div style={{ textAlign: "center",paddingBottom:"10px" }}>
-          <img src={Elite} style={{ width:"100%", maxWidth:"120px"}}/>
+          <img src={Elite} style={{ width:"100%", maxWidth:"110px"}}/>
         </div>
                 <div className={classes.productCol} style={{ textAlign: "left", paddingLeft:"10px", paddingRight:"10px", paddingBottom:"20px"}}>
                 <div className={classes.bold} style={{color:"#f15953"}}>LEAD GENERATION</div>
-                <div className={classes.bold} style={{color:"#f15953"}}>• 20 - 30 leads per month</div>
-                <div className={classes.bold} style={{color:"#f15953"}}>• Pay-Per-Click Campaigns</div>
+                <div className={classes.bold} style={{color:"#f15953"}}>• 20 - 30 Leads /Month</div>
+                <div className={classes.bold} style={{color:"#f15953"}}>• PPC Campaigns</div>
+                <div className={classes.bold} style={{color:"#f15953"}}>• Facebook Ads</div>
                 <div className={classes.bold} style={{color:"#4ab8ac"}}>IDX WEBSITE</div>
                 <div className={classes.bold} style={{color:"#4ab8ac"}}>ADV. PRODUCTIVITY CRM</div>
                 <div className={classes.bold} style={{color:"#4ab8ac"}}>CMA WIZARD</div>
@@ -147,10 +167,12 @@ const subscribe_today = ({ classes }) => {
                 <div className={classes.bold} style={{color:"#57585b"}}>BLOG</div>
                 <div className={classes.bold} style={{color:"#57585b"}}>SOCIAL MEDIA SERVICES</div>
                 <div className={classes.bold} style={{color:"#57585b"}}>MLS Feed Listing Pushes:</div>
-                <div className={classes.bold} style={{color:"#57585b"}}>• Facebook</div>
-                <div className={classes.bold} style={{color:"#57585b"}}>• LinkedIn</div>
-                <div className={classes.bold} style={{color:"#57585b"}}>• Twitter</div>
-                <div className={classes.bold} style={{color:"#57585b"}}>• YouTube</div>
+                <div style={{color:"#57585b"}}>• Facebook</div>
+                <div style={{color:"#57585b"}}>• LinkedIn</div>
+                <div style={{color:"#57585b"}}>• Twitter</div>
+                <div style={{color:"#57585b"}}>• YouTube</div>
+                <div style={{color:"#57585b"}}>• Pinterest</div>
+                <div style={{color:"#57585b"}}>• Instagram</div>
                 
                 </div>
 
@@ -159,14 +181,73 @@ const subscribe_today = ({ classes }) => {
                 <img src={Line} style={{ width:"100%", maxWidth:"200px"}}/>
                 <br />
                 <span className={classes.bold} style={{color:"#f15953"}}>6 MONTH AGREEMENT</span>
-                <br /><br />
+                <br />
 
 
-                <div className={classes.bold} style={{color:"#f15953", paddingTop:"8px"}}>Monthly: $899/m</div>
+                <div className={classes.bold} style={{color:"#f15953", paddingTop:"8px"}}>For Buyer Leads:</div>
 
 
                 
 <a target="_blank" href="https://elmstreettechnology.recurly.com/subscribe/elevateelite" className={classes.getStartedLinkignite}>
+                  SUBSCRIBE NOW
+                    </a>
+                    
+                    <div className={classes.bold} style={{color:"#f15953", paddingTop:"8px"}}>For Seller Leads:</div>
+
+
+                
+<a target="_blank" href="https://elmstreettechnology.recurly.com/subscribe/eliteseller" className={classes.getStartedLinkignite}>
+                  SUBSCRIBE NOW
+                    </a>
+                  
+                </div>
+                
+          </div>
+          </div>
+
+
+
+
+          <div className={classes.infoboxGray2}>
+          <div className={classes.column4} style={{ textAlign: "center", paddingBottom: "35px" }}>
+          <div style={{ textAlign: "center",paddingBottom:"10px" }}>
+          <img src={Eliteplus} style={{ width:"100%", maxWidth:"200px"}}/>
+        </div>
+                <div className={classes.productCol} style={{ textAlign: "left", paddingLeft:"10px", paddingRight:"10px", paddingBottom:"20px"}}>
+                <div className={classes.bold} style={{color:"#f15953"}}>LEAD GENERATION</div>
+                <div className={classes.bold} style={{color:"#f15953"}}>• 30 - 70 Leads /Month</div>
+                <div className={classes.bold} style={{color:"#f15953"}}>• Choice of Buyer/Seller/Combo Lead Campaigns</div>
+                <div className={classes.bold} style={{color:"#f15953"}}>• PPC Campaigns</div>
+                <div className={classes.bold} style={{color:"#f15953"}}>• Facebook Ads</div>
+                <div className={classes.bold} style={{color:"#4ab8ac"}}>IDX WEBSITE</div>
+                <div className={classes.bold} style={{color:"#4ab8ac"}}>ADV. PRODUCTIVITY CRM</div>
+                <div className={classes.bold} style={{color:"#4ab8ac"}}>CMA WIZARD</div>
+                <div className={classes.bold} style={{color:"#4ab8ac"}}>EMAIL MARKETING CAMPAIGNS</div>
+                <div className={classes.bold} style={{color:"#57585b"}}>BLOG</div>
+                <div className={classes.bold} style={{color:"#57585b"}}>SOCIAL MEDIA SERVICES</div>
+                <div className={classes.bold} style={{color:"#57585b"}}>MLS Listing Pushes:</div>
+                <div style={{color:"#57585b"}}>• Facebook</div>
+                <div style={{color:"#57585b"}}>• LinkedIn</div>
+                <div style={{color:"#57585b"}}>• Twitter</div>
+                <div style={{color:"#57585b"}}>• YouTube</div>
+                <div style={{color:"#57585b"}}>• Pinterest</div>
+                <div style={{color:"#57585b"}}>• Instagram</div>
+                
+                </div>
+
+
+                <div>
+                <img src={Line} style={{ width:"100%", maxWidth:"200px"}}/>
+                <br />
+                <span className={classes.bold} style={{color:"#f15953"}}>6 MONTH AGREEMENT</span>
+                
+
+
+                
+
+
+                
+<a target="_blank" href="https://elmstreettechnology.recurly.com/subscribe/elitebundle" className={classes.getStartedLinkignite}>
                   SUBSCRIBE NOW
                     </a>
                   
@@ -180,15 +261,16 @@ const subscribe_today = ({ classes }) => {
       </Container>
 
 <Container>
-<div style={{ textAlign: "center", padding: "35px", fontSize:"12px", lineHeight:"18px" }}>
+<div style={{ textAlign: "center", padding: "20px", fontSize:"12px", lineHeight:"18px" }}>
 By subscribing to Elevate, I expressly consent that Elm Street Technology or its agents may contact me at the numbers provided regarding the Elevate products or services, via live, automated or prerecorded call, text, or email. I am not required to enter into this agreement as a condition of any purchase. I can revoke this consent through any reasonable means. By subscribing to Elevate, I also agree to payment for the products and services ordered hereon and that sales tax may be charged where applicable. I also agree to the terms of cancellation policy on the back of this form including that set-up fees are non-refundable. I confirm I have read, understood and agree to the full <a target="_blank" href="https://tryelevate.com/terms-of-service" >Terms of Service</a> of the Elevate products.  I am purchasing as set forth at TryElevate.com. Visit TryElevate.com for full <a target="_blank" href="https://tryelevate.com/terms-of-service" >Terms of Service</a>, <a target="_blank" href="https://tryelevate.com/pricing-and-refund-policy" >Refund Policy</a>, <a target="_blank" href="https://tryelevate.com/privacy" >Privacy Policy</a> &amp; <a target="_blank" href="https://tryelevate.com/dmca" >DMCA Notice.</a>  Sales tax charged where applicable. Please note that setup fees are non-refundable.
 <br /><br />
 Questions? - 877.218.9771
+<br /><br />
 </div>
 </Container>
 
 <Container>
-  <div style={{textAlign:"center"}}>
+  <div style={{textAlign:"center", paddingLeft:"20px", paddingRight:"20px"}}>
             <h1 className={classes.heading}>Elevate Webinar Follow-up Video Demo</h1>
             <h2 className={classes.subHeading}>
             This 24-minute video provides you with a recap of the Elevate Educational Webinar series.</h2>
@@ -204,7 +286,7 @@ Questions? - 877.218.9771
 
 
 
-<div style={{backgroundColor:"#f7f7f7", paddingBottom:"60px"}}>
+<div style={{backgroundColor:"#f7f7f7", paddingBottom:"60px", paddingLeft:"20px", paddingRight:"20px"}}>
         <h1 className={classes.heading} style={{paddingTop:"50px", textAlign:"center"}}>
         Interested in a Personal Walk-Through?
         </h1>
@@ -251,7 +333,7 @@ Questions? - 877.218.9771
 export default withStyles((theme) => ({
   root: {
     position: "relative",
-    paddingTop: "36px",
+    paddingTop: "55px",
     paddingBottom: "0px",
     lineHeight: "1.75em",
   },
@@ -265,7 +347,7 @@ export default withStyles((theme) => ({
   },
   heading: {
     color: theme.colors.secondary,
-    fontSize: "32px",
+    fontSize: "30px",
     lineHeight: "40px",
     fontWeight: "700",
     marginRight: "auto",
@@ -316,6 +398,14 @@ export default withStyles((theme) => ({
     maxWidth: "100%",
     paddingRight:"10px",
     paddingLeft:"10px",
+    verticalAlign: "top",
+  },
+
+  column4:{
+    width:"235px",
+    maxWidth: "100%",
+    paddingRight:"6px",
+    paddingLeft:"6px",
     verticalAlign: "top",
   },
 
@@ -390,10 +480,10 @@ export default withStyles((theme) => ({
     backgroundColor: "#f99406",
     color: "#FFF",
     textDecoration: "none",
-    padding: "12px 14px",
+    padding: "8px 10px",
     borderRadius: "4px",
-    margin: "14px auto",
-    marginBottom: "20px",
+    margin: "12px auto",
+    marginBottom: "5px",
   },
   getStartedLinkelite: {
     minWidth: "200px",
@@ -495,7 +585,7 @@ export default withStyles((theme) => ({
     backgroundColor: "#fafafa",
     color: theme.colors.gray800,
     textDecoration: "none",
-    padding: "30px 15px 15px 15px",
+    padding: "25px 10px 10px 10px",
     borderRadius: "4px",
     margin: "30px auto",
     textAlign: "center",
@@ -525,7 +615,7 @@ export default withStyles((theme) => ({
     minHeight: "180px",
 
     [theme.breakpoints[900]]: {
-      minHeight: "380px",
+      minHeight: "570px",
     },
   },
 
