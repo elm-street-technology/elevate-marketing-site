@@ -80,12 +80,19 @@ class Index extends Component {
 
 
         <Container>
-    <div style={{textAlign:"center", paddingTop:"55px", paddingBottom:"60px",}}>
+    <div style={{textAlign:"center", paddingTop:"55px", paddingBottom:"70px",}}>
 
        
     <div className={classes.centerheading}>The power of <span style={{ fontWeight: "bold" }}>ONE.</span></div>
     <div className={classes.centersubtext}><span style={{ fontWeight: "bold" }}>One platform. One vendor.  One point of contact.</span><br />
     For all of your lead generation, digital marketing, &amp; client collaboration.</div>
+
+    <div style={{maxWidth:"800px",marginLeft:"auto",marginRight:"auto", paddingTop:"30px", paddingLeft:"15px", paddingRight:"15px"}}>
+                <div style={{ textAlign: "center" }} className={classes.videoEmbed}>
+                      <iframe className={classes.videoContainer} src="https://www.youtube.com/embed/WMqvFA708ss"
+                      frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                </div>
+                </div>
 </div>
         
 </Container>
@@ -718,6 +725,22 @@ close: {
   textDecoration: "none",
   cursor: "pointer"
 },
+videoEmbed:{
+  position: "relative",
+  paddingBottom: "56.25%",
+  paddingTop: "30px",
+  height: "0",
+  overflow: "hidden",
+  
+},
+videoContainer:{
+  position: "absolute",
+  top: "0",
+  left: "0",
+  width: "100%",
+  height: "100%",
+  
+}
 
 
 }))(Index);
