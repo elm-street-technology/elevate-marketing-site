@@ -172,7 +172,7 @@ class EventsSM extends Component {
         <Container>
                 <div className={classes.titleText} style={{color:"#2d397c", paddingRight:"20px", paddingLeft:"20px"}}>
                 Do you struggle with social media? We’re here to help!<br />
-                Register for this must-attend WEBINAR today...
+                Register for this WEBINAR today...
                 { mls && <span><br/>exclusively for {mls} members.</span>}
                 </div>
                 <div className={classes.titleSubText} style={{paddingBottom:"40px", paddingRight:"20px", paddingLeft:"20px"}}>Registration is FREE.   <span style={{color:"#f48d07"}}>Space is LIMITED.</span> </div>
@@ -185,8 +185,8 @@ class EventsSM extends Component {
                 </div>
                 </div>
                 <div className={classes.titleText} style={{color:"#2d397c"}}>
-                “This is the #1 must-attend<br />
-                social media training in the U.S.”
+                “This is the #1 social media<br />
+                training in the U.S.”
                 </div>
 
 
