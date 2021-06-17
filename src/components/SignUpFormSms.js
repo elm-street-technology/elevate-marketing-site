@@ -85,8 +85,8 @@ class SignUpFormSms extends Component {
             role: "",
             roleOther: "",
             interests: [],
-            form: "socialmediareview",
-            list: 98511,
+            form: "smstour",
+            list: 129498,
           }}
           validationSchema={() =>
             Yup.object().shape({
