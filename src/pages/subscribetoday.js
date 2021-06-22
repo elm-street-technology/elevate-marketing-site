@@ -188,7 +188,7 @@ const subscribe_today = ({ classes }) => {
 
 
                 
-<a target="_blank" href="https://elmstreettechnology.recurly.com/subscribe/elevateelite?subscription[coupon_code]=200setup" className={classes.getStartedLinkignite}>
+<a target="_blank" href="https://elmstreettechnology.recurly.com/subscribe/elevateelite?subscription[coupon_code]=elite50" className={classes.getStartedLinkignite}>
                   SUBSCRIBE NOW
                     </a>
                     
@@ -196,7 +196,7 @@ const subscribe_today = ({ classes }) => {
 
 
                 
-<a target="_blank" href="https://elmstreettechnology.recurly.com/subscribe/eliteseller?subscription[coupon_code]=200setup" className={classes.getStartedLinkignite}>
+<a target="_blank" href="https://elmstreettechnology.recurly.com/subscribe/eliteseller?subscription[coupon_code]=elite50" className={classes.getStartedLinkignite}>
                   SUBSCRIBE NOW
                     </a>
                   
@@ -247,7 +247,7 @@ const subscribe_today = ({ classes }) => {
 
 
                 
-<a target="_blank" href="https://elmstreettechnology.recurly.com/subscribe/elitebundle?subscription[coupon_code]=200setup" className={classes.getStartedLinkignite}>
+<a target="_blank" href="https://elmstreettechnology.recurly.com/subscribe/elitebundle?subscription[coupon_code]=elite50" className={classes.getStartedLinkignite}>
                   SUBSCRIBE NOW
                     </a>
                   
