@@ -177,7 +177,7 @@ class EventsListings extends Component {
                 <img src={listlogo} width="100%" style={{paddingBottom:"20px", maxWidth:"450px"}}/><br />
                 A real estate agent's guide to capturing<br />
                 &amp; marketing listings like a pro!<br />
-                Register for this MUST-ATTEND webinar today...
+                Register for this MUST-ATTEND experience today...
                 { mls && <span><br/>exclusively for {mls} members.</span>}
                 </div>
                 <div className={classes.titleSubText2} style={{paddingRight:"20px", paddingLeft:"20px"}}>Registration is FREE.   <span style={{color:"#fd3c89"}}>Space is LIMITED.</span> </div>
@@ -191,11 +191,11 @@ class EventsListings extends Component {
 
                 
                 <div className={classes.BodyText2} style={{padding:"40px"}}>
-                <div className={classes.titleSubText2} style={{paddingRight:"20px", paddingLeft:"20px", paddingBottom:"20px"}}>HOT NEW Educational Webinar</div>
+                <div className={classes.titleSubText2} style={{paddingRight:"20px", paddingLeft:"20px", paddingBottom:"20px"}}>HOT NEW Educational Experience</div>
                 With inventory at historic lows, capturing seller leads has never been a hotter topic.<br />
                 Whether you want to capture seller leads, create<br />
                 a killer listing presentation or are looking for unique ways to make your<br />
-                listings stand out...this is the educational webinar you need!
+                listings stand out...this is the educational experience you need!
                 </div>
          
         </Container>

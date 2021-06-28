@@ -176,7 +176,7 @@ class EventsFBads extends Component {
                 <img src={fbcamplogo} width="100%" style={{paddingBottom:"20px", maxWidth:"450px"}}/><br />
                 Fool-proof strategies to generate high quality buyer<br />
                 &amp; seller leads with targeted Facebook ads.<br />
-                Register for this must-attend WEBINAR today...
+                Register for this must-attend experience today...
                 { mls && <span><br/>exclusively for {mls} members.</span>}
                 </div>
                 <div className={classes.titleSubText} style={{paddingBottom:"40px", paddingRight:"20px", paddingLeft:"20px"}}>Registration is FREE.   <span style={{color:"#f48d07"}}>Space is LIMITED.</span> </div>
@@ -189,7 +189,7 @@ class EventsFBads extends Component {
                 
                 <div className={classes.BodyText} style={{paddingBottom:"40px"}}>
                 <div className={classes.titleSubText} style={{paddingBottom:"15px"}}>Did you know the average adult spends 45+ minutes or more every single day on Facebook?</div>
-                In this one-hour session, attendees will learn the step-by-step process of creating high conversion Facebook ads<br />
+                In this session, attendees will learn the step-by-step process of creating high conversion Facebook ads<br />
 to capture buyer and seller leads. This session is great for all levels of agent who want to learn<br />
 how to take their Facebook
 advertising to the next level.

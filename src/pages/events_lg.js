@@ -166,7 +166,7 @@ class EventsLG extends Component {
         <Container>
                 <div className={classes.titleText} style={{color:"#2d397c", paddingRight:"20px", paddingLeft:"20px"}}>
                 Want to capture, nurture &amp; convert MORE online leads?<br />
-                Register for this must-attend WEBINAR today...
+                Register for this must-attend experience today...
                 { mls && <span><br/>exclusively for {mls} members.</span>}</div>
                 <div className={classes.titleSubText} style={{paddingBottom:"40px", paddingRight:"20px", paddingLeft:"20px"}}>Registration is FREE.   <span style={{color:"#f48d07"}}>Space is LIMITED.</span></div>
 
@@ -210,7 +210,7 @@ to compete with other agents.”</div>
                 <div className={classes.BodyText} style={{paddingBottom:"40px"}}>
                 Wonder how top real estate agents find time to be ‘everywhere’ online and STILL close more<br />
                 business? Interested in turning your social media from a toy into a powerful business tool?<br />
-                This FREE 60-minute, high-energy educational WEBINAR is designed to inspire and empower<br />
+                This FREE, high-energy educational experience is designed to inspire and empower<br />
                 agents with tips, tricks &amp; strategies for conquering their website, blog and social media.
                 </div>
          
