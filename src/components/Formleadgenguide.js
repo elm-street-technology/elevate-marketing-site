@@ -225,20 +225,7 @@ class Formleadgenguide extends Component {
                 className={classes.field}
                 type="tel"
               />
-              <Field
-                id="company"
-                name="company"
-                label="Affiliation (optional)"
-                component={Input}
-                className={classes.field}
-              />
-                  <Field
-                      id="mls_number"
-                      name="mls_number"
-                      label="MLS # (optional)"
-                      component={Input}
-                      className={classes.field}
-                  />
+             
                   <div style={{textAlign:"left",fontSize:"14px",lineHeight:"19px"}}>
                   <Field
                 id="role"
