@@ -272,7 +272,7 @@ export default withStyles((theme) => ({
   },
   phoneImage: {
     display: "none",
-    [theme.breakpoints[900]]: {
+    ["@media (min-width:1090px)"]: {
       display: "block",
     },
   },
