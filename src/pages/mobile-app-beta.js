@@ -73,7 +73,7 @@ const MobileAppBeta = ({ children, classes, data, tags }) => {
       <div
         style={{
           paddingTop: "40px",
-          paddingBottom: "40px",
+          paddingBottom: "60px",
         }}
       >
         <Container>
@@ -95,7 +95,8 @@ const MobileAppBeta = ({ children, classes, data, tags }) => {
                 <ul
                   className={classes.subtext}
                   style={{
-                    listStyle: "inside",
+                    listStyle: "outside",
+                    marginLeft: "20px",
                     color: "#000",
                     fontSize: "18px",
                     lineHeight: "28px",
@@ -167,10 +168,7 @@ export default withStyles((theme) => ({
     display: "flex",
     flexWrap: "wrap",
     alignItems: "unset",
-    height: "unset",
-    [theme.breakpoints[900]]: {
-      height: "690px",
-    },
+    height: "710px",
   },
 
   heading: {

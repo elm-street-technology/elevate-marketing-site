@@ -176,23 +176,23 @@ class FormMobileAppBeta extends Component {
                   />
                 </div>
                 <div className={classes.topRow}>
-                <Field
-                  id="email"
-                  name="email"
-                  placeholder="Email"
-                  component={Input}
-                  className={classes.field}
-                />
+                  <Field
+                    id="email"
+                    name="email"
+                    placeholder="Email"
+                    component={Input}
+                    className={classes.field}
+                  />
                 </div>
                 <div className={classes.topRow}>
-                <Field
-                  id="phone"
-                  name="phone"
-                  placeholder="Phone"
-                  component={Input}
-                  className={classes.field}
-                  type="tel"
-                />
+                  <Field
+                    id="phone"
+                    name="phone"
+                    placeholder="Phone"
+                    component={Input}
+                    className={classes.field}
+                    type="tel"
+                  />
                 </div>
                 <button
                   type="submit"
@@ -274,7 +274,7 @@ export default withStyles((theme) => ({
     backgroundColor: "#5A5B5C",
     borderRadius: "6px",
     padding: "12px",
-    marginTop: "30px",
+    marginTop: "20px",
     marginBottom: "30px",
     textDecoration: "none",
   },
