@@ -175,6 +175,7 @@ class FormMobileAppBeta extends Component {
                     className={classes.field}
                   />
                 </div>
+                <div className={classes.topRow}>
                 <Field
                   id="email"
                   name="email"
@@ -182,6 +183,8 @@ class FormMobileAppBeta extends Component {
                   component={Input}
                   className={classes.field}
                 />
+                </div>
+                <div className={classes.topRow}>
                 <Field
                   id="phone"
                   name="phone"
@@ -190,6 +193,7 @@ class FormMobileAppBeta extends Component {
                   className={classes.field}
                   type="tel"
                 />
+                </div>
                 <button
                   type="submit"
                   className={classes.signUpBtn}
