@@ -168,7 +168,9 @@ export default withStyles((theme) => ({
     display: "flex",
     flexWrap: "wrap",
     alignItems: "unset",
-    height: "710px",
+    ["@media (min-width:1090px)"]: {
+      height: "710px",
+    },
   },
 
   heading: {
