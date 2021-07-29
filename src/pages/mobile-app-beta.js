@@ -145,8 +145,8 @@ const MobileAppBeta = ({ children, classes, data, tags }) => {
           <div className={classes.column2} style={{ color: "#fff !important" }}>
             <FormMobileAppBeta
               subject="Mobile App Beta"
-              listid="107389"
-              webhook="b1452e08-f398-11ea-9d14-bc764e046a9d"
+              listid="131134"
+              webhook=""
               leadsource="tryelevate.com:mobileAppBeta"
             />
           </div>

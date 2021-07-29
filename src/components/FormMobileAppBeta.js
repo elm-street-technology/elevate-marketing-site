@@ -52,18 +52,21 @@ class FormMobileAppBeta extends Component {
             <Typography
               type="heading3"
               gutterBottom
-              style={{ color: "#f15623" }}
+              style={{ color: "#ffffff" }}
             >
               Fantastic!
             </Typography>
 
             <Typography type="heading5" gutterTop style={{ fontSize: "18px" }}>
-              You can speak to a member of our sales team immediately <br />
+              Thank for your interest!<br/>
+              We will be reaching out to you soon with more information and the download link to the app.
+              {/* 
+              You can speak to a member of our support team immediately <br />
               by calling{" "}
               <a href="tel:18447920260" className={classes.link}>
-                844.792.0260
+               508.885.2040
               </a>
-              .
+              .*/}
             </Typography>
           </div>
         </div>
@@ -105,12 +108,10 @@ class FormMobileAppBeta extends Component {
             //if (values.meetingdate != undefined) {
             const body = {
               ...values,
-              notes: notes,
               utm_campaign: window.utm_tags ? window.utm_tags.campaign : "",
               utm_source: window.utm_tags ? window.utm_tags.source : "",
               utm_medium: window.utm_tags ? window.utm_tags.medium : "",
               utm_term: window.utm_tags ? window.utm_tags.term : "",
-              demo_request_date: meeting_request,
             };
             return fetch("https://easyemerge.com/plugins/elevate_form.php", {
               method: "POST",
