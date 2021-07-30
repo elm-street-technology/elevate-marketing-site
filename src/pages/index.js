@@ -34,6 +34,7 @@ import HeadsetMic from "elevate-ui-icons/HeadsetMic";
 import Elevatew from "../images/elevatew.png";
 import BottomArrow from "../images/bottom_arrow.png";
 import Seocover from "../images/seo_cover.png";
+import Blogcover from "../images/blog_cover.png";
 import Fadebg from "../images/fadebg.jpg";
 import Smcover from "../images/sm101_cover.png";
 import Btccover from "../images/btc_cover.png";
@@ -202,47 +203,28 @@ class Index extends Component {
 
         <div className={classes.top}>
 
-                <div className={classes.column3} style={{ textAlign: "center", paddingTop: "22px" }}>
+               
+
+                  <div className={classes.column2} style={{ textAlign: "left", paddingTop: "22px" }}>
                                     
-                                    <div className={classes.centerheading2}>Awesome Email<br />
-                                    Marketing Guide</div>
-                                    <div className={classes.centersubtext} >Your FREE Guide
-                                    For Creating AWESOME Email Marketing!</div>
+                                    <div className={classes.leftheading}>Blogging For Beginners</div>
+                                    <div className={classes.leftsubtext}>Want to finally master blogging &amp; reap the benefits?
+Come with us as we take a deep dive into the tips, tricks, &amp; strategies that will not only help you to effortlessly generate valuable content for your audience, but also reap the ROI that comes with generating high-quality leads &amp; increased SEO.</div>
                                     
                                     
-                                    <a target="_blank" href="/emailmarketingguide" className={classes.ctabutton}>
+                                    <a target="_blank" href="/bloggingguide" className={classes.ctabutton}>
                                     Download Now</a>
-                                    <div style={{ textAlign: "center",paddingTop:"35px" }}>
-                                          <img src={Emailcover} width="300"/>
-                                    </div>
+
+                                    <a target="_blank" href="/free_educational_guides" className={classes.ctabutton}>
+                                    View All Guides</a>
+                                
                   </div>
 
-                  <div className={classes.column3} style={{ textAlign: "center", paddingTop: "22px" }}>
-                                    
-                                    <div className={classes.centerheading2}>Social Media<br />
-                                    Marketing 101 Guide</div>
-                                    <div className={classes.centersubtext}>Your FREE, All-Inclusive Guide<br />
-                                    For Creating GREAT Content!</div>
-                                    
-                                    
-                                    <a target="_blank" href="/socialmediamarketingguide" className={classes.ctabutton}>
-                                    Download Now</a>
-                                    <div style={{ textAlign: "center",paddingTop:"35px" }}>
-                                          <img src={Smcover} width="300"/>
-                                    </div>
-                  </div>
-
-                  <div className={classes.column3} style={{ textAlign: "center", paddingTop: "22px" }}>
+                  <div className={classes.column2} style={{ textAlign: "center", }}>
                  
-                                    <div className={classes.centerheading2}>ROCKIN' Website<br />
-                                    SEO Guide</div>
-                                    <div className={classes.centersubtext}>Secrets to Getting<br />
-                                    Found on Google</div>
                                    
-                                    <a target="_blank" href="/websiteseoguide" className={classes.ctabutton}>
-                                    Download Today</a>
                                     <div style={{ textAlign: "center",paddingTop:"35px" }}>
-                                          <img src={Seocover} width="300" />
+                                          <img src={Blogcover} width="100%" style={{maxWidth:"500px"}} />
                                     </div>
                   </div>
 
@@ -253,61 +235,7 @@ class Index extends Component {
     </div>
 
 
-    <div style={{backgroundImage:"url("+Fadebg+")", backgroundSize:"cover", backgroundPosition:"centerBottom", textAlign:"center", paddingTop:"40px"}}>
-      <Container>
-                    
 
-        <div className={classes.top}>
-
-
-                  <div className={classes.column3} style={{ textAlign: "center", paddingTop: "22px" }}>
-                                    
-                                    <div className={classes.centerheading2}>Lead Generation<br />
-                                    "Secret Sauce"</div>
-                                    <div className={classes.centersubtext}>Packed Full of Easy-To-Implement<br />
-                                    Tips, Tricks &amp; Strategies</div>
-                                    
-                                 
-                                    
-                                    <a target="_blank" href="/leadgenguide" className={classes.ctabutton}>
-                                    Download Now</a>
-                                    <div style={{ textAlign: "center",paddingTop:"35px" }}>
-                                          <img src={Saucecover} width="300" />
-                                    </div>
-                  </div>
-
-                  <div className={classes.column3} style={{ textAlign: "center", paddingTop: "22px" }}>
-                 
-                                    <div className={classes.centerheading2}>The Brokerage<br />
-                                    Technology Checklist</div>
-                                    <div className={classes.centersubtext} >Select The Best Technology<br />
-                                    Partner for Your Brokerage</div>
-                                   
-                                    <a target="_blank" href="/brokeragetechchecklist" className={classes.ctabutton}>
-                                    Download Today</a>
-                                    <div style={{ textAlign: "center",paddingTop:"35px" }}>
-                                          <img src={Btccover} width="300" />
-                                    </div>
-                  </div>
-
-                  <div className={classes.column3} style={{ textAlign: "center", paddingTop: "22px" }}>
-                 
-                                    <div className={classes.centerheading2}>6 Real Estate Marketing<br />
-                                    Lessons From Kim Kardashian</div>
-                                    <div className={classes.centersubtext} >What Kim teach you about marketing?</div>
-                                   
-                                    <a target="_blank" href="/kardashian" className={classes.ctabutton}>
-                                    Download Today</a>
-                                    <div style={{ textAlign: "center",paddingTop:"28px" }}>
-                                          <img src={Kardcover} width="300" />
-                                    </div>
-                  </div>
-
-
-                  
-        </div>
-    </Container>
-    </div>
 
 
 
