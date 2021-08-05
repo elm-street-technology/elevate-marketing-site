@@ -13,7 +13,6 @@ import SmbcBootcampInstructors from "../components/SmbcBootcampInstructors";
 const Bootcamp = ({ classes, data: { contentfulBootcamp } }) => {
   const {
     faqs,
-    heroImage,
     heroText,
     instructors,
     signupMessaging,
@@ -63,8 +62,6 @@ const Bootcamp = ({ classes, data: { contentfulBootcamp } }) => {
           paddingBottom: "60px",
           paddingTop: "40px",
           textAlign: "left",
-          paddingRight: "30px",
-          paddingLeft: "30px",
         }}
       >
         <Container>
@@ -84,8 +81,6 @@ const Bootcamp = ({ classes, data: { contentfulBootcamp } }) => {
           paddingBottom: "60px",
           paddingTop: "40px",
           textAlign: "left",
-          paddingRight: "30px",
-          paddingLeft: "30px",
         }}
       >
         <Container>
@@ -223,6 +218,7 @@ export default withStyles((theme) => ({
       width: "50%",
       float: "right",
       paddingLeft: "80px",
+      marginTop: "40px",
     },
   },
   signup: {},

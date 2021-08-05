@@ -8,15 +8,24 @@ const SmbcBootcampSignup = ({ classes, className, signupMessaging }) => {
     <div className={classNames(classes.root, className)}>
       <div>
         <div>
-          <div
-            className={classes.signupMessaging}
-            dangerouslySetInnerHTML={{
-              __html:
-                signupMessaging &&
-                signupMessaging.childMarkdownRemark &&
-                signupMessaging.childMarkdownRemark.html,
-            }}
-          />
+          <div className={classes.signupMessaging}>
+            <h2>Take advantange. It’s free!</h2>
+            <h3>
+              Social media is a powerful tool that many agents aren't taking
+              full advantage of to maximize their business.
+            </h3>
+            <p>
+              Let us motivate and empower your agents at your next sales
+              meeting! Take advantage of our no cost Social Media Bootcamp
+              seminar designed exclusively for real estate professionals.{" "}
+            </p>
+            <p>
+              Our social media specialists will educate agents of all skill
+              levels in social media and online marketing. Each in-office
+              Bootcamp Seminar runs 30 minutes followed by a Q&amp;A session.
+            </p>
+            <h4>Sign up now by filling out this form.</h4>
+          </div>
         </div>
         <div>
           <SignUpFormSmbc />
@@ -32,7 +41,7 @@ export default withStyles((theme) => ({
     flexDirection: "column",
     alignItems: "center",
     width: "100%",
-    padding: "48px 32px 160px",
+    padding: "48px 0px 160px",
   },
   signupMessaging: {
     "& h2": {

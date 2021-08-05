@@ -1,35 +1,86 @@
 import React from "react";
 import classNames from "classnames";
 import withStyles from "elevate-ui/withStyles";
-import Check from "elevate-ui-icons/Check";
+import checkmark from "../images/check-mark.png";
 
-const SmbcBootcampTopics = ({ classes, className, topics }) => {
+const SmbcBootcampTopics = ({ classes, className }) => {
   return (
     <div className={classNames(classes.root, className)}>
       <div className={classes.heading}>What attendees can expect to learn</div>
+      <div className={classes.subheading} style={{ marginBottom: "15px" }}>
+        Attendees will leave feeling MOTIVATED, INSPIRED, and EXCITED to use
+        social media marketing to grow their business!
+      </div>
       <div className={classes.subheading}>
         Topics include but are not limited to:
       </div>
       <div className={classes.topicsGrid}>
-        {topics.map((item) => (
-          <div key={item.id} className={classes.topicsItem}>
-            <div className={classes.topicsItemIcon}>
-              <Check size={18} />
+        <div className={classes.topicsItem}>
+          <div className={classes.topicsItemIcon}>
+            <img src={checkmark} />
+          </div>
+          <div className={classes.topicsItemTextWrapper}>
+            <div className={classes.topicsItemTitle}>
+              The Basics of Facebook, Twitter, LinkedIn, YouTube
             </div>
-            <div className={classes.topicsItemTextWrapper}>
-              <div className={classes.topicsItemTitle}>{item.title}</div>
-              <div
-                className={classes.topicsItemDescription}
-                dangerouslySetInnerHTML={{
-                  __html:
-                    item.description &&
-                    item.description.childMarkdownRemark &&
-                    item.description.childMarkdownRemark.html,
-                }}
-              />
+            {/* <div className={classes.topicsItemDescription}>
+              A crucial skill for any modern real estate professional
+            </div> */}
+          </div>
+        </div>
+
+        <div className={classes.topicsItem}>
+          <div className={classes.topicsItemIcon}>
+            <img src={checkmark} />
+          </div>
+          <div className={classes.topicsItemTextWrapper}>
+            <div className={classes.topicsItemTitle}>
+              How to Be Professional and Personable Online
             </div>
           </div>
-        ))}
+        </div>
+
+        <div className={classes.topicsItem}>
+          <div className={classes.topicsItemIcon}>
+            <img src={checkmark} />
+          </div>
+          <div className={classes.topicsItemTextWrapper}>
+            <div className={classes.topicsItemTitle}>
+              Why You Need a Facebook Business Page
+            </div>
+          </div>
+        </div>
+
+        <div className={classes.topicsItem}>
+          <div className={classes.topicsItemIcon}>
+            <img src={checkmark} />
+          </div>
+          <div className={classes.topicsItemTextWrapper}>
+            <div className={classes.topicsItemTitle}>
+              How To Leverage Blogs &amp; Hyperlocal Content
+            </div>
+          </div>
+        </div>
+
+        <div className={classes.topicsItem}>
+          <div className={classes.topicsItemIcon}>
+            <img src={checkmark} />
+          </div>
+          <div className={classes.topicsItemTextWrapper}>
+            <div className={classes.topicsItemTitle}>
+              How to Attract More Followers
+            </div>
+          </div>
+        </div>
+
+        <div className={classes.topicsItem}>
+          <div className={classes.topicsItemIcon}>
+            <img src={checkmark} />
+          </div>
+          <div className={classes.topicsItemTextWrapper}>
+            <div className={classes.topicsItemTitle}>And Much, Much More!</div>
+          </div>
+        </div>
       </div>
     </div>
   );
