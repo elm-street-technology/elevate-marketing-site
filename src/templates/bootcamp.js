@@ -4,11 +4,10 @@ import withStyles from "elevate-ui/withStyles";
 
 import config from "../utils/siteConfig";
 import Container from "../components/Container";
-import BootcampFaqs from "../components/BootcampFaqs";
-import BootcampSignup from "../components/BootcampSignup";
-import BootcampTopics from "../components/BootcampTopics";
-import BootcampInstructors from "../components/BootcampInstructors";
-import SMBCLogo from "../images/smbcLogo.jpg";
+import SmbcBootcampFaqs from "../components/SmbcBootcampFaqs";
+import SmbcBootcampSignup from "../components/SmbcBootcampSignup";
+import SmbcBootcampTopics from "../components/SmbcBootcampTopics";
+import SmbcBootcampInstructors from "../components/SmbcBootcampInstructors";
 // import SEO from '../components/SEO'
 
 const Bootcamp = ({ classes, data: { contentfulBootcamp } }) => {
@@ -32,33 +31,72 @@ const Bootcamp = ({ classes, data: { contentfulBootcamp } }) => {
       </Helmet>
       {/* <SEO pagePath={slug} postNode={postNode} pageSEO /> */}
 
+      <div
+        style={{
+          background:
+            "transparent linear-gradient(360deg, #55C3BA 0%, #D8F2F4 100%) 0% 0% no-repeat padding-box",
+          textAlign: "center",
+          paddingTop: "80px",
+          paddingBottom: "80px",
+        }}
+      >
+        <Container>
+          <div className={classes.heroVideo}>
+            <iframe
+              width="100%"
+              height="328"
+              src="https://www.youtube.com/embed/kPz3JM4dv-I"
+              title="YouTube video player"
+              frameborder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowfullscreen
+            ></iframe>
+          </div>
+          <div className={classes.titleText}>
+            Free Social Media Seminar Exclusively for Real Estate Professionals
+          </div>
+        </Container>
+      </div>
+      <div
+        style={{
+          backgroundColor: "#f5f5f5",
+          paddingBottom: "60px",
+          paddingTop: "40px",
+          textAlign: "left",
+          paddingRight: "30px",
+          paddingLeft: "30px",
+        }}
+      >
+        <Container>
+          <SmbcBootcampSignup
+            className={classes.signup}
+            signupMessaging={signupMessaging}
+          />
+        </Container>
+      </div>
       <Container>
-        <div style={{textAlign:"center",paddingTop:"40px"}}>
-          <iframe width="800" height="450" src="https://www.youtube.com/embed/fGRZ8-mLwnQ?autoplay=1&rel=0"
-          frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-        </div>
-        <div className={classes.titleText}>
-          Free Social Media Seminar <span style={{ color:"#f3574e"}}>Exclusively</span> for Real Estate Professionals
-        </div>
-        <div style={{ textAlign: "center",paddingBottom:"40px" }}>
-          <img src={SMBCLogo} width="500" />
-        </div>
+        <SmbcBootcampTopics className={classes.topics} topics={topics} />
       </Container>
+      <div
+        style={{
+          backgroundColor: "#F15953",
+          color: "#ffffff !important",
+          paddingBottom: "60px",
+          paddingTop: "40px",
+          textAlign: "left",
+          paddingRight: "30px",
+          paddingLeft: "30px",
+        }}
+      >
+        <Container>
+          <SmbcBootcampInstructors
+            className={classes.instructors}
+            instructors={instructors}
+          />
+        </Container>
+      </div>
       <Container>
-        <BootcampFaqs className={classes.faqs} faqs={faqs} />
-      </Container>
-      <BootcampSignup
-        className={classes.signup}
-        signupMessaging={signupMessaging}
-      />
-      <Container>
-        <BootcampTopics className={classes.topics} topics={topics} />
-      </Container>
-      <Container>
-        <BootcampInstructors
-          className={classes.instructors}
-          instructors={instructors}
-        />
+        <SmbcBootcampFaqs className={classes.faqs} faqs={faqs} />
       </Container>
     </div>
   );
@@ -137,6 +175,13 @@ export default withStyles((theme) => ({
     paddingTop: "96px",
     paddingBottom: "48px",
   },
+  heroVideo: {
+    width: "100%",
+    [theme.breakpoints[900]]: {
+      width: "50%",
+      float: "left",
+    },
+  },
   heroImage: {
     display: "flex",
     alignItems: "center",
@@ -171,9 +216,14 @@ export default withStyles((theme) => ({
     fontSize: "36px",
     lineHeight: "52px",
     fontWeight: "700",
-    textAlign: "center",
+    textAlign: "left",
     paddingBottom: "60px",
-    paddingTop: "40px"
+    paddingTop: "40px",
+    [theme.breakpoints[900]]: {
+      width: "50%",
+      float: "right",
+      paddingLeft: "80px",
+    },
   },
   signup: {},
   faqs: {
