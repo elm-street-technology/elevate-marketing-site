@@ -88,8 +88,8 @@ class SignUpFormSmbc extends Component {
             role: "",
             roleOther: "",
             interests: [],
-            form: "contact_formNew",
-            list: 46483,
+            form: "contact_smbc",
+            list: 131538,
           }}
           validationSchema={() =>
             Yup.object().shape({
