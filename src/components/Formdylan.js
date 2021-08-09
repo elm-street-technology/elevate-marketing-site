@@ -84,8 +84,8 @@ class Formdylan extends Component {
             email: "",
             phone: "",
             mls_number: "",
-            form: "bloggingguide",
-            list: 129786,
+            form: "dylan",
+            list: 131482,
             meetingdate: '',
             meetingtime: '',
             role: "",
@@ -95,12 +95,9 @@ class Formdylan extends Component {
             Yup.object().shape({
               firstname: Yup.string().required("First name is required"),
               lastname: Yup.string().required("Last name is required"),
-              company: Yup.string(),
               email: Yup.string()
                 .email("Invalid email address")
-                .required("Email is required"),
-              phone: Yup.string().required("Phone is required"),
-              mls_number: Yup.string()
+                .required("Email is required")
             })
           }
           onSubmit={(values, { setSubmitting }) => {
@@ -144,8 +141,7 @@ class Formdylan extends Component {
               utm_campaign: (window.utm_tags) ? window.utm_tags.campaign : "",
               utm_source: (window.utm_tags) ? window.utm_tags.source : "",
               utm_medium: (window.utm_tags) ? window.utm_tags.medium : "",
-              utm_term: (window.utm_tags) ? window.utm_tags.term : "",
-              demo_request_date: meeting_request
+              utm_term: (window.utm_tags) ? window.utm_tags.term : ""
             };
             return fetch(
               "https://easyemerge.com/plugins/elevate_form.php",
