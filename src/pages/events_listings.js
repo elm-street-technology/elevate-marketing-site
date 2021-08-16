@@ -178,7 +178,7 @@ class EventsListings extends Component {
                 A real estate agent's guide to capturing<br />
                 &amp; marketing listings like a pro!<br />
                 Register for this MUST-ATTEND experience today...
-                { mls && <span><br/>exclusively for {mls} members.</span>}
+                { mls && <span><br/>exclusively for {mls}.</span>}
                 </div>
                 <div className={classes.titleSubText2} style={{paddingRight:"20px", paddingLeft:"20px"}}>Registration is FREE.   <span style={{color:"#fd3c89"}}>Space is LIMITED.</span> </div>
 
