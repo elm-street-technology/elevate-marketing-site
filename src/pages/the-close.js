@@ -74,9 +74,9 @@ const TheClose = ({ children, classes, data, tags }) => {
                 </div>
                 <FormTheClose
                   subject="The Close"
-                  listid="131134"
+                  listid="132027"
                   webhook=""
-                  leadsource="tryelevate.com:mobileAppBeta"
+                  leadsource="tryelevate.com:the-close"
                 />
               </div>
             </div>

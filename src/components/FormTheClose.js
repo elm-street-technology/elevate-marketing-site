@@ -58,17 +58,8 @@ class FormTheClose extends Component {
             </Typography>
 
             <Typography type="heading5" gutterTop style={{ fontSize: "18px" }}>
-              Thank for your interest!
-              <br />
-              We will be reaching out to you soon with more information and the
-              download link to the app.
-              {/* 
-              You can speak to a member of our support team immediately <br />
-              by calling{" "}
-              <a href="tel:18447920260" className={classes.link}>
-               508.885.2040
-              </a>
-              .*/}
+              Thank for your interest!<br/>
+              You can speak to a member of our sales team immediately by calling  <a href="tel:18447920260" className={classes.link}>844.792.0260</a>.
             </Typography>
           </div>
         </div>
@@ -90,7 +81,7 @@ class FormTheClose extends Component {
             email: "",
             phone: "",
             mls_number: "",
-            form: "form_mobile_app_beta",
+            form: "form_the_close",
             list: this.props.listid,
             subject: this.props.subject,
             webhook: this.props.webhook,
