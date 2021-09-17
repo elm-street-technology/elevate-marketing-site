@@ -231,6 +231,9 @@ const Footer = ({ classes }) => (
           <Link className={classes.link} to="/events_fbads">
             Facebook Ads Boot Camp
           </Link>
+          <Link className={classes.link} to="/events_referrals">
+            Referrals Boot Camp
+          </Link>
           <Link className={classes.link} to="/markets">
             MLS Markets
           </Link>

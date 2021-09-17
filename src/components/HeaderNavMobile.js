@@ -79,6 +79,9 @@ const HeaderNavMobile = ({ classes, className, onMenuClose }) => {
           <Link className={classes.listItemLink} to="/events_fbads">
             <li className={classes.listItem}>Facebook Ads Boot Camp</li>
           </Link>
+          <Link className={classes.listItemLink} to="/events_referrals">
+            <li className={classes.listItem}>Referrals Boot Camp</li>
+          </Link>
           <Link className={classes.listItemLink} to="/markets">
             <li className={classes.listItem}>MLS Markets</li>
           </Link>
