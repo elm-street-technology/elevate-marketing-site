@@ -21,26 +21,6 @@ if(window){
 }
 
 exports.onRouteUpdate = ({ location, prevLocation }) => {
-    
-    // The follow code is to hot reload the leadfollow tracking pixel on route update
-    // The leadfollow.io API doesn't seem to have a trigger or function to handle this in the same 
-    // way we handle FB or GA so pure DOM manipulation will have to suffice
-    /*
-    var LFElement = document.getElementById('LFTracking');
-
-    if(LFElement != null){
-        LFElement.outerHTML = '';
-    }
-
-    var new_element = document.createElement('SCRIPT');
-    new_element.id = 'LFTracking';
-    new_element.src = 'https://api.leadfollow.io/v1/tag/sifitag/159a1ba0-1cb3-0137-59dd-067f653fa718';
-    if (document.body != null) { 
-        document.body.appendChild(new_element); 
-    }
-    */
-    // End leadfollow.io tracking reload
-
     // AdRoll Integration here
     const adRollHtml = `
     adroll_adv_id = "QCK3V4BRFZB7VCNZ7UJ4QV";
