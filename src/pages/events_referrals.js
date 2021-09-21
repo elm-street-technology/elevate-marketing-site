@@ -18,7 +18,6 @@ class EventsReferrals extends Component {
     super(props);
 
     const { data } = this.props;
-    console.log(data);
     const events = data.allContentfulEvent !== null ? data.allContentfulEvent.edges : [];
 
     var mls = false;
@@ -314,7 +313,7 @@ but there’s a strategy that agents must know in order to be successful.
 }
 export const query = graphql`
   query eventReferralsQuery {
-    allContentfulEvent(limit: 1000, filter: {eventType: {eq: "Referralss"}}, sort: { fields: [datetime], order: ASC }) {
+    allContentfulEvent(limit: 1000, filter: {eventType: {eq: "RM"}}, sort: { fields: [datetime], order: ASC }) {
       edges {
         node {
           datetime
