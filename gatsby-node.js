@@ -244,6 +244,17 @@ exports.createPages = ({ graphql, boundActionCreators }) => {
             },
           });
         }
+        if(edges[0].node.landingLayout === 'Referrals'){
+          createPage({
+            path: `events/${fieldValue}/`,
+            component: path.resolve(`./src/pages/events_referrals.js`),
+            context: {
+              slug: fieldValue,
+              eventType: edges[0].node.eventType,
+              mls: edges[0].node.mls
+            },
+          });
+        }
       });
       resolve();
     });
