@@ -44,7 +44,7 @@ module.exports = class HTML extends React.Component {
           />
         </head>
         <body {...this.props.bodyAttributes}>
-          
+        <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KNZFKDR" height="0" width="0" style={{display:"none",visibility:"hidden"}}></iframe></noscript>
           <script aysnc src="https://www.eventbrite.com/static/widgets/eb_widgets.js" />
           
           <script
