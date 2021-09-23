@@ -214,6 +214,10 @@ class FormHostEvent extends Component {
                     value: "Facebook Ads Boot Camp",
                   },
                   {
+                    label: "Referrals Boot Camp",
+                    value: "Referrals Boot Camp",
+                  },
+                  {
                     label: " Broker-Only Mastermind",
                     value: " Broker-Only Mastermind",
                   },

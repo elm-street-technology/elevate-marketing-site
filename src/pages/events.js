@@ -13,6 +13,7 @@ import LGBCLogo from "../images/lg_bootcamp.png";
 import Fbcamplogo from "../images/fbcamplogo.png";
 import Listlogo from "../images/listmore.png";
 import MastermindLogo from "../images/mastermind_logo.png";
+import ReferralLogo from "../images/referral_logo2.png";
 import DeepLogo from "../images/deep_logo.png";
 import FormHostEvent from "../components/FormHostEvent";
 
@@ -211,6 +212,27 @@ class Events extends Component {
                     Consult with Our Team
                     </a>
              </div>
+          </div>
+
+          <div className={classes.top}>
+            {/* <div className={classes.heading} style={{ marginRight: "auto", marginLeft: "auto",textAlign:"center" }}>Upcoming Webinars &amp; Live Events</div> */}
+            <div className={classes.columnSection}>
+                    <img src={ReferralLogo} className={classes.subLogoStyle}/>
+                    <div className={classes.subtitleText}>Get more referrals for your business year-after-year</div>
+                    <div className={classes.subtext}>Referral and repeat business is one of the most effective<br />
+                      and affordable ways to build your real estate business,<br />
+                      but there’s a strategy that agents must know in order to be successful.</div>
+                    <div>
+                      <a href="/events_referrals" className={classes.buttonIcon2}>
+                      <Calendar size={20} style={{position: "relative",top:"4px"}}/> Upcoming Events</a>
+                    </div>
+                    <a href="#host_form" className={classes.button}>
+                    Host an Event</a>
+                    <a  href="#faqs" className={classes.button}>
+                    FAQ</a>
+                   
+            </div>
+            
           </div>
           <a id="host_form"></a>
         <hr />
