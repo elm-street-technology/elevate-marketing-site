@@ -174,7 +174,7 @@ class EventsReferrals extends Component {
         
                 <div className={classes.titleText} style={{color:"#ffffff", paddingRight:"20px", paddingLeft:"20px"}}>
                 <img src={Referrallogo} width="100%" style={{paddingBottom:"20px", maxWidth:"450px"}}/><br />
-                Hot to get MORE referrals for your business year-after-year!<br />
+                How to get MORE referrals for your business year-after-year!<br />
                 Register for this MUST-ATTEND experience today...
                 { mls && <span><br/>exclusively for {mls}.</span>}
                 </div>
