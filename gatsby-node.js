@@ -165,6 +165,7 @@ exports.createPages = ({ graphql, boundActionCreators }) => {
               eventType
               mls
               landingLayout
+              datetime
             }
           }
         }
@@ -172,89 +173,92 @@ exports.createPages = ({ graphql, boundActionCreators }) => {
     }
     `).then((result) => {
       result.data.allContentfulEvent.group.map(({ fieldValue, edges }) => {
+        // Possible values: SMBC - Supported,SMBC - Unsupported,LGBC - Supported,LGBC - Unsupported,Combined
+        
+        const rightNow = new Date();
+        const eventDate = new Date(edges[0].node.datetime);
 
-        console.log(fieldValue);
-        console.log(edges);
+        if(eventDate > rightNow){
 
-       // Possible values: SMBC - Supported,SMBC - Unsupported,LGBC - Supported,LGBC - Unsupported,Combined
-
-        if(edges[0].node.landingLayout === 'SMBC - Supported'){
-          createPage({
-            path: `events/${fieldValue}/`,
-            component: path.resolve(`./src/pages/events_sm.js`),
-            context: {
-              slug: fieldValue,
-              eventType: edges[0].node.eventType,
-              mls: edges[0].node.mls
-            },
-          });
+          if(edges[0].node.landingLayout === 'SMBC - Supported'){
+            createPage({
+              path: `events/${fieldValue}/`,
+              component: path.resolve(`./src/pages/events_sm.js`),
+              context: {
+                slug: fieldValue,
+                eventType: edges[0].node.eventType,
+                mls: edges[0].node.mls
+              },
+            });
+          }
+          if(edges[0].node.landingLayout === 'LGBC - Supported'){
+            createPage({
+              path: `events/${fieldValue}/`,
+              component: path.resolve(`./src/pages/events_lg.js`),
+              context: {
+                slug: fieldValue,
+                eventType: edges[0].node.eventType,
+                mls: edges[0].node.mls
+              },
+            });
+          }
+          if(edges[0].node.landingLayout === 'SMBC - Unsupported'){
+            createPage({
+              path: `events/${fieldValue}/`,
+              component: path.resolve(`./src/pages/events_sm_alt.js`),
+              context: {
+                slug: fieldValue,
+                eventType: edges[0].node.eventType,
+                mls: edges[0].node.mls
+              },
+            });
+          }
+          if(edges[0].node.landingLayout === 'LGBC - Unsupported'){
+            createPage({
+              path: `events/${fieldValue}/`,
+              component: path.resolve(`./src/pages/events_lg_alt.js`),
+              context: {
+                slug: fieldValue,
+                eventType: edges[0].node.eventType,
+                mls: edges[0].node.mls
+              },
+            });
+          }
+          if(edges[0].node.landingLayout === 'Listings'){
+            createPage({
+              path: `events/${fieldValue}/`,
+              component: path.resolve(`./src/pages/events_listings.js`),
+              context: {
+                slug: fieldValue,
+                eventType: edges[0].node.eventType,
+                mls: edges[0].node.mls
+              },
+            });
+          }
+          if(edges[0].node.landingLayout === 'FB Ads'){
+            createPage({
+              path: `events/${fieldValue}/`,
+              component: path.resolve(`./src/pages/events_fbads.js`),
+              context: {
+                slug: fieldValue,
+                eventType: edges[0].node.eventType,
+                mls: edges[0].node.mls
+              },
+            });
+          }
+          if(edges[0].node.landingLayout === 'Referrals'){
+            createPage({
+              path: `events/${fieldValue}/`,
+              component: path.resolve(`./src/pages/events_referrals.js`),
+              context: {
+                slug: fieldValue,
+                eventType: edges[0].node.eventType,
+                mls: edges[0].node.mls
+              },
+            });
+          }
         }
-        if(edges[0].node.landingLayout === 'LGBC - Supported'){
-          createPage({
-            path: `events/${fieldValue}/`,
-            component: path.resolve(`./src/pages/events_lg.js`),
-            context: {
-              slug: fieldValue,
-              eventType: edges[0].node.eventType,
-              mls: edges[0].node.mls
-            },
-          });
-        }
-        if(edges[0].node.landingLayout === 'SMBC - Unsupported'){
-          createPage({
-            path: `events/${fieldValue}/`,
-            component: path.resolve(`./src/pages/events_sm_alt.js`),
-            context: {
-              slug: fieldValue,
-              eventType: edges[0].node.eventType,
-              mls: edges[0].node.mls
-            },
-          });
-        }
-        if(edges[0].node.landingLayout === 'LGBC - Unsupported'){
-          createPage({
-            path: `events/${fieldValue}/`,
-            component: path.resolve(`./src/pages/events_lg_alt.js`),
-            context: {
-              slug: fieldValue,
-              eventType: edges[0].node.eventType,
-              mls: edges[0].node.mls
-            },
-          });
-        }
-        if(edges[0].node.landingLayout === 'Listings'){
-          createPage({
-            path: `events/${fieldValue}/`,
-            component: path.resolve(`./src/pages/events_listings.js`),
-            context: {
-              slug: fieldValue,
-              eventType: edges[0].node.eventType,
-              mls: edges[0].node.mls
-            },
-          });
-        }
-        if(edges[0].node.landingLayout === 'FB Ads'){
-          createPage({
-            path: `events/${fieldValue}/`,
-            component: path.resolve(`./src/pages/events_fbads.js`),
-            context: {
-              slug: fieldValue,
-              eventType: edges[0].node.eventType,
-              mls: edges[0].node.mls
-            },
-          });
-        }
-        if(edges[0].node.landingLayout === 'Referrals'){
-          createPage({
-            path: `events/${fieldValue}/`,
-            component: path.resolve(`./src/pages/events_referrals.js`),
-            context: {
-              slug: fieldValue,
-              eventType: edges[0].node.eventType,
-              mls: edges[0].node.mls
-            },
-          });
-        }
+        
       });
       resolve();
     });

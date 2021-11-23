@@ -51,7 +51,7 @@ module.exports = class HTML extends React.Component {
           <script async src={'/js/drift.js'}  />
           <script
             defer
-            src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/core.js"
+            src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"
           />
         </head>
         <body {...this.props.bodyAttributes}>

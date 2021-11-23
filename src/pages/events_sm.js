@@ -349,7 +349,7 @@ class EventsSM extends Component {
 }
 export const query = graphql`
   query eventSMQuery {
-    allContentfulEvent(limit: 1000, filter: {eventType: {eq: "SM"}}, sort: { fields: [datetime], order: ASC }) {
+    allContentfulEvent(filter: {eventType: {eq: "SM"}}, sort: { fields: [datetime], order: ASC }) {
       edges {
         node {
           datetime
