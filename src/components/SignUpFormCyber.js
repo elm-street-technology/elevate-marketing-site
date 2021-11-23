@@ -85,8 +85,8 @@ class SignUpFormCyber extends Component {
             role: "",
             roleOther: "",
             interests: [],
-            form: "socialmediareview",
-            list: 98511,
+            form: "elevate_cybermonday",
+            list: 136388,
           }}
           validationSchema={() =>
             Yup.object().shape({
