@@ -34,7 +34,7 @@ import HeadsetMic from "elevate-ui-icons/HeadsetMic";
 import Elevatew from "../images/elevatew.png";
 import BottomArrow from "../images/bottom_arrow.png";
 import Seocover from "../images/seo_cover.png";
-import Blogcover from "../images/blog_cover.png";
+import Guidecover from "../images/22_cover.png";
 import Fadebg from "../images/fadebg.jpg";
 import Smcover from "../images/sm101_cover.png";
 import Btccover from "../images/btc_cover.png";
@@ -207,12 +207,11 @@ class Index extends Component {
 
                   <div className={classes.column2} style={{ textAlign: "left", paddingTop: "22px" }}>
                                     
-                                    <div className={classes.leftheading}>Blogging For Beginners</div>
-                                    <div className={classes.leftsubtext}>Want to finally master blogging &amp; reap the benefits?
-Come with us as we take a deep dive into the tips, tricks, &amp; strategies that will not only help you to effortlessly generate valuable content for your audience, but also reap the ROI that comes with generating high-quality leads &amp; increased SEO.</div>
+                                    <div className={classes.leftheading}>Your 2022 Marketing Guide</div>
+                                    <div className={classes.leftsubtext}>Planning your goals, budget and overarching marketing strategy can feel like daunting work, but it’s a crucial part of running a successful business. This FREE guide is designed to help you focus on what’s important, and to encourage you to expand your marketing for the new year.</div>
                                     
                                     
-                                    <a target="_blank" href="/bloggingguide" className={classes.ctabutton}>
+                                    <a target="_blank" href="/yourmarketingguide" className={classes.ctabutton}>
                                     Download Now</a>
 
                                     <a target="_blank" href="/free_educational_guides" className={classes.ctabutton}>
@@ -224,7 +223,7 @@ Come with us as we take a deep dive into the tips, tricks, &amp; strategies that
                  
                                    
                                     <div style={{ textAlign: "center",paddingTop:"35px" }}>
-                                          <img src={Blogcover} width="100%" style={{maxWidth:"500px"}} />
+                                          <img src={Guidecover} width="100%" style={{maxWidth:"500px"}} />
                                     </div>
                   </div>
 
