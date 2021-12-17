@@ -14,8 +14,9 @@ import Btccover from "../images/btc_cover.png";
 import Emailcover from "../images/email_cover.png";
 import Kardcover from "../images/kard_cover.png";
 import Saucecover from "../images/sauce_cover.png";
-import Twenty1cover from "../images/21_cover.png";
+import Twenty2cover from "../images/22_cover.png";
 import Listcover from "../images/list_cover.png";
+import Em101 from "../images/em101_cover.png";
 import Blogcover from "../images/blog_cover.png";
 import Testa from "../images/testa.png";
 import Testb from "../images/testb.png";
@@ -47,11 +48,83 @@ const Educationalguides = ({ children, classes, data, tags }) => {
 </div>
 
 
-<div style={{backgroundColor:"#f7f7f7", textAlign:"center"}}>
+<div style={{backgroundColor:"#201a4f", textAlign:"center"}}>
       <Container>
                    
 
         <div className={classes.top} style={{paddingTop:"35px"}}>
+
+
+
+        <div className={classes.column2} style={{ textAlign: "center", paddingTop:"25px"}}>
+                                    
+                                    <div className={classes.centerheading2}>
+                                    Your 2022 Marketing<br />
+                                    Strategy Guide</div><br />
+                                    <div className={classes.centersubtext} style={{color:"#f7f7f7"}}>Planning your goals, budget and overarching marketing strategy can feel like daunting work, but it’s a crucial part of running a successful business. This FREE guide is designed to help you focus on what’s important, and to encourage you to expand your marketing for the new year.</div>
+                                    
+                                    
+                                    <a target="_blank" href="/yourmarketingguide" className={classes.ctabutton}>
+                                    Download Now</a>
+
+                               
+                                   
+                  </div>
+
+
+               <div className={classes.column2} style={{ textAlign: "center"}}>
+
+                  
+                    
+                          <div style={{ textAlign: "center",paddingTop:"36px" }}>
+                          <img src={Twenty2cover} width="100%" style={{maxWidth:"500px"}}/>
+                          </div>
+                    
+              </div>
+
+              
+
+                
+
+    
+
+
+                  
+        </div>
+    </Container>
+    </div>
+
+
+
+
+
+
+
+
+    <div style={{backgroundImage:"url("+Fadebg+")", backgroundSize:"cover", backgroundPosition:"centerBottom", textAlign:"center"}}>
+      <Container>
+                   
+
+        <div className={classes.top} style={{paddingTop:"35px"}}>
+
+
+
+        <div className={classes.column3} style={{ textAlign: "center", paddingTop:"25px"}}>
+                                    
+                                    <div className={classes.centerheading2}>
+                                    Email Marketing<br />
+                                    101 Guide</div><br />
+                                    <div className={classes.centersubtext}>There are plenty of people who are more than happy to tell you WHY it’s important to lean into email marketing, but far fewer will help you through HOW to actually go through with it. That’s where we come in with...</div>
+                                    
+                                    
+                                    <a target="_blank" href="/emailproguide" className={classes.ctabutton}>
+                                    Download Now</a>
+
+                                    <div style={{ textAlign: "center",paddingTop:"30px" }}>
+                                          <img src={Em101} width="100%" style={{maxWidth:"500px"}}/>
+                                          </div>
+                                   
+                  </div>
 
 
                <div className={classes.column3} style={{ textAlign: "center", paddingTop:"19px"}}>
@@ -59,8 +132,7 @@ const Educationalguides = ({ children, classes, data, tags }) => {
                     <div className={classes.centerheading2}>
                     Blogging For Beginners <br />
                     Free Marketing Guide</div><br />
-                    <div className={classes.centersubtext}>Want to finally master blogging &amp; reap the benefits? You're in the right place!
-Come with us as we take a deep dive into the tips, tricks, &amp; strategies that will not only help you to effortlessly generate valuable content for...</div>
+                    <div className={classes.centersubtext}>Want to finally master blogging &amp; reap the benefits? You're in the right place! Come with us as we take a deep dive into the tips, tricks, &amp; strategies that will not only help you to effortlessly generate valuable content for...</div>
                     
                     
                     <a target="_blank" href="/bloggingguide" className={classes.ctabutton}>
@@ -91,22 +163,7 @@ Come with us as we take a deep dive into the tips, tricks, &amp; strategies that
                                     
                   </div>
 
-                  <div className={classes.column3} style={{ textAlign: "center", paddingTop:"25px"}}>
-                                    
-                                    <div className={classes.centerheading2}>
-                                    Your 2021 Marketing<br />
-                                    Strategy Guide</div><br />
-                                    <div className={classes.centersubtext}>Planning your goals, budget and overarching marketing strategy can feel like daunting work, but it’s a crucial part of running a successful business. This FREE guide from  from the experts at Elevate is designed to help you...</div>
-                                    
-                                    
-                                    <a target="_blank" href="/your2021marketingguide" className={classes.ctabutton}>
-                                    Download Now</a>
-
-                                    <div style={{ textAlign: "center",paddingTop:"30px" }}>
-                                          <img src={Twenty1cover} width="100%" style={{maxWidth:"500px"}}/>
-                                          </div>
-                                   
-                  </div>
+                
 
     
 
