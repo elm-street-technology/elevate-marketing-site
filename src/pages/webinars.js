@@ -85,7 +85,7 @@ const Webinars = ({ classes, data }) => {
                                     analytics and much, much more.
                                     <br /><br />
                                     Training time:  1 hr.</div>
-                                    <a target="_blank" href="https://tryelevate.zoom.us/webinar/register/WN_WMTSiYfoRz-r9Ewyw0b0WA" className={classes.getStartedLink}>
+                                    <a target="_blank" href="https://tryelevate.zoom.us/webinar/register/WN_N01IKZVHSMqLl8Dkn2C1Ug" className={classes.getStartedLink}>
                                     Register Now</a>
                                     <div style={{ textAlign: "center",paddingTop:"5px" }}>
                                           <img src={Web2} width="300" />
@@ -136,7 +136,7 @@ const Webinars = ({ classes, data }) => {
                                     to nurture your leads. Live Q&amp;A throughout.
                                     <br /><br />
                                     Training time:  1 hr.</div>
-                                    <a target="_blank" href="https://tryelevate.zoom.us/webinar/register/WN_7EkH0HAFSRKWhwCK-xY2jw" className={classes.getStartedLink}>
+                                    <a target="_blank" href="https://tryelevate.zoom.us/webinar/register/WN_WMTSiYfoRz-r9Ewyw0b0WA" className={classes.getStartedLink}>
 Register Now</a>
                                     <div style={{ textAlign: "center",paddingTop:"5px" }}>
                                           <img src={Web4} width="300" />
