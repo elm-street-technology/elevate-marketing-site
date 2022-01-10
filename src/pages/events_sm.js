@@ -175,7 +175,7 @@ class EventsSM extends Component {
                 Register for this experience today...
                 { mls && <span><br/>exclusively for {mls} members.</span>}
                 </div>
-                <div className={classes.titleSubText} style={{paddingBottom:"40px", paddingRight:"20px", paddingLeft:"20px"}}>Registration is FREE.   <span style={{color:"#f48d07"}}>Space is LIMITED.</span> </div>
+                <div className={classes.titleSubText} style={{paddingBottom:"40px", paddingRight:"20px", paddingLeft:"20px"}}>Register TODAY!     <span style={{color:"#f48d07"}}>Space is LIMITED.</span> </div>
 
                 
                 <div style={{maxWidth:"800px",marginLeft:"auto",marginRight:"auto"}}>
@@ -218,7 +218,7 @@ class EventsSM extends Component {
                 <div className={classes.BodyText} style={{paddingBottom:"40px"}}>
                 Wonder how top real estate agents find time to be ‘everywhere’ online and STILL close more<br />
                 business? Interested in turning your social media from a toy into a powerful business tool?<br />
-                This FREE, high-energy educational experience is designed to inspire and empower<br />
+                This high-energy educational experience is designed to inspire and empower<br />
                 agents with tips, tricks &amp; strategies for conquering their website, blog and social media.
                 </div>
          
