@@ -58,7 +58,7 @@ class FormProduct extends Component {
             </Typography>
 
             <Typography type="heading5" gutterTop style={{fontSize:"18px"}}>
-              You can speak to a member of our sales team immediately <br/>by calling  <a href="tel:18447920260" className={classes.link}>844.792.0260</a>.
+              You can speak to a member of our sales team immediately <br/>by calling  <a href="tel:18333031040" className={classes.link}>833.303.1040</a>.
             </Typography>
           </div>
         </div>

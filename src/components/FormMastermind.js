@@ -60,7 +60,7 @@ class FormMastermind extends Component {
             </Typography>
             <Typography type="heading5" gutterTop>
         We’ll reach out to you asap via email or telephone.<br/>
-              You can also speak to a member of our sales team immediately by calling  <a href="tel:18447920260" className={classes.link}>844.792.0260</a>.
+              You can also speak to a member of our sales team immediately by calling  <a href="tel:18333031040" className={classes.link}>833.303.1040</a>.
             </Typography>
           </div>
         </div>
@@ -174,7 +174,7 @@ class FormMastermind extends Component {
             <Form noValidate>
               <div style={{marginBottom:"30px"}}>
                 <div className={classes.headingLarge}>Request a Tour of Elevate Today</div>
-                <div className={classes.headingText} style={{ marginTop: "20px" }}>Or, call 844.792.0260 to speak to an Elevate Success Coach NOW</div>
+                <div className={classes.headingText} style={{ marginTop: "20px" }}>Or, call 833.303.1040 to speak to an Elevate Success Coach NOW</div>
                 </div>
               <div style={{ maxWidth: "500px",marginLeft:"auto",marginRight:"auto"}}>
               <div className={classes.topRow}>

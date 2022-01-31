@@ -58,8 +58,8 @@ class SignUpFormSms extends Component {
             </Typography>
             <Typography type="heading6" gutterTop>
             We look forward to connecting with you.  In the meantime, feel free to connect with an Elevate Coach by calling{" "}
-              <a href="tel:18447920260" className={classes.link}>
-                844.792.0260
+              <a href="tel:18333031040" className={classes.link}>
+                833.303.1040
               </a>. We look forward to assisting you.
             </Typography>
           </Alert>

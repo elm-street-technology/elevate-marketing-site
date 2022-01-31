@@ -33,7 +33,7 @@ const Calendlythankyou = ({ classes }) => {
             </div>
                       <div className={classes.boldTextspace}>
                 Want to reach us IMMEDIATELY?<br/>
-                Give us a call at 844.792.0260
+                Give us a call at 833.303.1040
             </div>
             <div>
               <Hr style={{ marginTop: "40px", marginBottom: "40px" }} />

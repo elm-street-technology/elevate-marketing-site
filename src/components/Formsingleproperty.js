@@ -61,7 +61,7 @@ class Formsingleproperty extends Component {
             </Typography>
             
             <Typography type="heading5" gutterTop style={{fontSize:"18px"}}>
-              We will reach out to you asap! You can speak to a member of our sales team immediately <br/>by calling  <a href="tel:18447920260" className={classes.link}>844.792.0260</a>.
+              We will reach out to you asap! You can speak to a member of our sales team immediately <br/>by calling  <a href="tel:18333031040" className={classes.link}>833.303.1040</a>.
             </Typography>
           </div>
         </div>

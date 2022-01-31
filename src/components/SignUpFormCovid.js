@@ -61,8 +61,8 @@ class SignUpFormCovid extends Component {
             </Typography>
             <Typography type="heading4" gutterTop>
               If you'd like to speak to a sales representative NOW, please call{" "}
-              <a href="tel:18447920260" className={classes.link}>
-                844.792.0260
+              <a href="tel:18333031040" className={classes.link}>
+                833.303.1040
               </a>.
             </Typography>
           </Alert>

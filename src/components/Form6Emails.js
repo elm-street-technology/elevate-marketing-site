@@ -41,7 +41,7 @@ class Form6Emails extends Component {
             </Typography>
             <Typography type="heading5" gutterTop>
               One of our Marketing Success Coaches will be contacting you to see how we can help you take your marketing to the next level! 
-                If you'd like to speak with someone now, feel free to call us directly at <a href="tel:18449720260" className={classes.link}>844.972.0260</a>.
+                If you'd like to speak with someone now, feel free to call us directly at <a href="tel:8333031040" className={classes.link}>833.303.1040</a>.
             </Typography>
           </div>
         </div>

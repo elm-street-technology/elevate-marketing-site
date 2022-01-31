@@ -113,7 +113,7 @@ class FormLeadgenCalc extends Component {
             </Typography>
             <Typography type="heading5" gutterTop>
         We'll check availability &amp; reach out to you<br/> asap via email or telephone.<br/>
-              You can also speak to a lead generation specialist immediately by calling  <a href="tel:18447920260" className={classes.link}>844.792.0260</a>.
+              You can also speak to a lead generation specialist immediately by calling  <a href="tel:18333031040" className={classes.link}>833.303.1040</a>.
             </Typography>
           </div>
         </div>
@@ -201,7 +201,7 @@ class FormLeadgenCalc extends Component {
                 Claim Your Elevate Buyer / Seller Leads NOW
                 </div>
                 <div className={classes.headingText} style={{ marginTop: "10px" }}>
-                  Tell us your top 3 markets and a member of the Elevate Lead Generation Team will be in touch asap, or call 844-792-0260 to speak to a Success Coach immediately.
+                  Tell us your top 3 markets and a member of the Elevate Lead Generation Team will be in touch asap, or call 833.303.1040 to speak to a Success Coach immediately.
                 </div>
                 {/* 
                 <div className={classes.headingSmall}>
