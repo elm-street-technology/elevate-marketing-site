@@ -167,7 +167,7 @@ class EventsLG extends Component {
                 <div className={classes.titleText} style={{color:"#2d397c", paddingRight:"20px", paddingLeft:"20px"}}>
                 Want to capture, nurture &amp; convert MORE online leads?<br />
                 Register for this must-attend experience today...
-                { mls && <span><br/>exclusively for {mls} members.</span>}</div>
+                { mls && <span><br/>exclusively for {mls}.</span>}</div>
                 <div className={classes.titleSubText} style={{paddingBottom:"40px", paddingRight:"20px", paddingLeft:"20px"}}>Register TODAY.   <span style={{color:"#f48d07"}}>Space is LIMITED.</span></div>
 
                 
