@@ -62,8 +62,8 @@ const subscribe_today = ({ classes }) => {
                 <div className={classes.productCol} style={{ textAlign: "left", paddingLeft:"10px", paddingRight:"10px",}}>
                 <div className={classes.bold} style={{color:"#4ab8ac"}}>IDX WEBSITE</div>
                 <div className={classes.bold} style={{color:"#4ab8ac"}}>ADV. PRODUCTIVITY CRM</div>
-                <div className={classes.bold} style={{color:"#4ab8ac"}}>CMA WIZARD</div>
                 <div className={classes.bold} style={{color:"#4ab8ac"}}>EMAIL MARKETING CAMPAIGNS</div>
+                <div className={classes.bold} style={{color:"#4ab8ac"}}>CMA WIZARD</div>
                 <div className={classes.bold} style={{color:"#57585b"}}>BLOG</div>
                 <div className={classes.bold} style={{color:"#57585b"}}>SOCIAL MEDIA SERVICES</div>
                 <div className={classes.bold} style={{color:"#57585b"}}>MLS Feed Listing Pushes:</div>
@@ -75,7 +75,7 @@ const subscribe_today = ({ classes }) => {
                 <div style={{color:"#57585b"}}>• Instagram</div>
                 </div>
 
-                <div style={{paddingTop:"33px"}}>
+                <div>
                 <img src={Line} style={{ width:"100%", maxWidth:"200px"}}/>
                 <br />
                 <span className={classes.bold} style={{color:"#4ab8ac"}}>6 MONTH AGREEMENT</span>
@@ -103,12 +103,13 @@ const subscribe_today = ({ classes }) => {
         
                 <div className={classes.productCol} style={{ textAlign: "left", paddingLeft:"10px", paddingRight:"10px",  paddingBottom:"20px"}}>
                 <div className={classes.bold} style={{color:"#f15953"}}>LEAD GENERATION</div>
-                <div className={classes.bold} style={{color:"#f15953"}}>• 5 - 10 Leads /Month</div>
-                <div className={classes.bold} style={{color:"#f15953"}}>• PPC Campaigns</div>
+                <div className={classes.bold} style={{color:"#f15953"}}>• 7 - 10 Leads /Month</div>
+                <div className={classes.bold} style={{color:"#f15953"}}>• Google/PPC Ads</div>
+                <div className={classes.bold} style={{color:"#f15953"}}>• Lead Scrubbing Service</div>
                 <div className={classes.bold} style={{color:"#4ab8ac"}}>IDX WEBSITE</div>
                 <div className={classes.bold} style={{color:"#4ab8ac"}}>ADV. PRODUCTIVITY CRM</div>
-                <div className={classes.bold} style={{color:"#4ab8ac"}}>CMA WIZARD</div>
                 <div className={classes.bold} style={{color:"#4ab8ac"}}>EMAIL MARKETING CAMPAIGNS</div>
+                <div className={classes.bold} style={{color:"#4ab8ac"}}>CMA WIZARD</div>
                 <div className={classes.bold} style={{color:"#57585b"}}>BLOG</div>
                 <div className={classes.bold} style={{color:"#57585b"}}>SOCIAL MEDIA SERVICES</div>
                 <div className={classes.bold} style={{color:"#57585b"}}>MLS Feed Listing Pushes:</div>
@@ -126,7 +127,7 @@ const subscribe_today = ({ classes }) => {
                 <span className={classes.bold} style={{color:"#238076"}}>6 MONTH AGREEMENT</span>
                 <br />
                  
-                  <div className={classes.bold} style={{color:"#238076", paddingTop:"8px"}}>For Buyer Leads:</div>
+                  
 
 
 
@@ -134,13 +135,7 @@ const subscribe_today = ({ classes }) => {
                   SUBSCRIBE NOW
                     </a>
                     
-                    <div className={classes.bold} style={{color:"#238076", paddingTop:"8px"}}>For Seller Leads:</div>
-
-
-
-<a target="_blank" href="https://elmstreettechnology.recurly.com/subscribe/dmsplusseller?subscription[coupon_code]=200setup" className={classes.getStartedLinkignite}>
-                  SUBSCRIBE NOW
-                    </a>
+           
 
                                       
                   </div>
@@ -158,12 +153,14 @@ const subscribe_today = ({ classes }) => {
                 <div className={classes.productCol} style={{ textAlign: "left", paddingLeft:"10px", paddingRight:"10px", paddingBottom:"20px"}}>
                 <div className={classes.bold} style={{color:"#f15953"}}>LEAD GENERATION</div>
                 <div className={classes.bold} style={{color:"#f15953"}}>• 20 - 30 Leads /Month</div>
-                <div className={classes.bold} style={{color:"#f15953"}}>• PPC Campaigns</div>
+                <div className={classes.bold} style={{color:"#f15953"}}>• Google/PPC Ads</div>
                 <div className={classes.bold} style={{color:"#f15953"}}>• Facebook Ads</div>
+                <div className={classes.bold} style={{color:"#f15953"}}>• Lead Scrubbing Service</div>
+                <div className={classes.bold} style={{color:"#f15953"}}>• Elevate Support</div>
                 <div className={classes.bold} style={{color:"#4ab8ac"}}>IDX WEBSITE</div>
                 <div className={classes.bold} style={{color:"#4ab8ac"}}>ADV. PRODUCTIVITY CRM</div>
-                <div className={classes.bold} style={{color:"#4ab8ac"}}>CMA WIZARD</div>
                 <div className={classes.bold} style={{color:"#4ab8ac"}}>EMAIL MARKETING CAMPAIGNS</div>
+                <div className={classes.bold} style={{color:"#4ab8ac"}}>CMA WIZARD</div>
                 <div className={classes.bold} style={{color:"#57585b"}}>BLOG</div>
                 <div className={classes.bold} style={{color:"#57585b"}}>SOCIAL MEDIA SERVICES</div>
                 <div className={classes.bold} style={{color:"#57585b"}}>MLS Feed Listing Pushes:</div>
@@ -184,7 +181,7 @@ const subscribe_today = ({ classes }) => {
                 <br />
 
 
-                <div className={classes.bold} style={{color:"#f15953", paddingTop:"8px"}}>For Buyer Leads:</div>
+             
 
 
                 
@@ -192,13 +189,7 @@ const subscribe_today = ({ classes }) => {
                   SUBSCRIBE NOW
                     </a>
                     
-                    <div className={classes.bold} style={{color:"#f15953", paddingTop:"8px"}}>For Seller Leads:</div>
-
-
                 
-<a target="_blank" href="https://elmstreettechnology.recurly.com/subscribe/eliteseller?subscription[coupon_code]=elite50" className={classes.getStartedLinkignite}>
-                  SUBSCRIBE NOW
-                    </a>
                   
                 </div>
                 
@@ -215,14 +206,16 @@ const subscribe_today = ({ classes }) => {
         </div>
                 <div className={classes.productCol} style={{ textAlign: "left", paddingLeft:"10px", paddingRight:"10px", paddingBottom:"20px"}}>
                 <div className={classes.bold} style={{color:"#f15953"}}>LEAD GENERATION</div>
-                <div className={classes.bold} style={{color:"#f15953"}}>• 30 - 70 Leads /Month</div>
+                <div className={classes.bold} style={{color:"#f15953"}}>• 40 - 60 Leads /Month</div>
                 <div className={classes.bold} style={{color:"#f15953"}}>• Choice of Buyer/Seller/Combo Lead Campaigns</div>
-                <div className={classes.bold} style={{color:"#f15953"}}>• PPC Campaigns</div>
+                <div className={classes.bold} style={{color:"#f15953"}}>• Google/PPC Ads</div>
                 <div className={classes.bold} style={{color:"#f15953"}}>• Facebook Ads</div>
+                <div className={classes.bold} style={{color:"#f15953"}}>• Lead Scrubbing Service</div>
+                <div className={classes.bold} style={{color:"#f15953"}}>• Elevate Support</div>
                 <div className={classes.bold} style={{color:"#4ab8ac"}}>IDX WEBSITE</div>
                 <div className={classes.bold} style={{color:"#4ab8ac"}}>ADV. PRODUCTIVITY CRM</div>
-                <div className={classes.bold} style={{color:"#4ab8ac"}}>CMA WIZARD</div>
                 <div className={classes.bold} style={{color:"#4ab8ac"}}>EMAIL MARKETING CAMPAIGNS</div>
+                <div className={classes.bold} style={{color:"#4ab8ac"}}>CMA WIZARD</div>
                 <div className={classes.bold} style={{color:"#57585b"}}>BLOG</div>
                 <div className={classes.bold} style={{color:"#57585b"}}>SOCIAL MEDIA SERVICES</div>
                 <div className={classes.bold} style={{color:"#57585b"}}>MLS Listing Pushes:</div>
@@ -262,7 +255,7 @@ const subscribe_today = ({ classes }) => {
 
 <Container>
 <div style={{ textAlign: "center", padding: "20px", fontSize:"12px", lineHeight:"18px" }}>
-By subscribing to Elevate, I expressly consent that Elm Street Technology or its agents may contact me at the numbers provided regarding the Elevate products or services, via live, automated or prerecorded call, text, or email. I am not required to enter into this agreement as a condition of any purchase. I can revoke this consent through any reasonable means. By subscribing to Elevate, I also agree to payment for the products and services ordered hereon and that sales tax may be charged where applicable. I also agree to the terms of cancellation policy on the back of this form including that set-up fees are non-refundable. I confirm I have read, understood and agree to the full <a target="_blank" href="https://tryelevate.com/terms-of-service" >Terms of Service</a> of the Elevate products.  I am purchasing as set forth at TryElevate.com. Visit TryElevate.com for full <a target="_blank" href="https://tryelevate.com/terms-of-service" >Terms of Service</a>, <a target="_blank" href="https://tryelevate.com/pricing-and-refund-policy" >Refund Policy</a>, <a target="_blank" href="https://tryelevate.com/privacy" >Privacy Policy</a> &amp; <a target="_blank" href="https://tryelevate.com/dmca" >DMCA Notice.</a>  Sales tax charged where applicable. Please note that setup fees are non-refundable.
+By subscribing to Elevate, I expressly consent that Elm Street or its agents may contact me at the numbers provided regarding the Elevate products or services, via live, automated or prerecorded call, text, or email. I am not required to enter into this agreement as a condition of any purchase. I can revoke this consent through any reasonable means. By subscribing to Elevate, I also agree to payment for the products and services ordered hereon and that sales tax may be charged where applicable. I also agree to the terms of cancellation policy on the back of this form including that set-up fees are non-refundable. I confirm I have read, understood and agree to the full <a target="_blank" href="https://tryelevate.com/terms-of-service" >Terms of Service</a> of the Elevate products.  I am purchasing as set forth at TryElevate.com. Visit TryElevate.com for full <a target="_blank" href="https://tryelevate.com/terms-of-service" >Terms of Service</a>, <a target="_blank" href="https://tryelevate.com/pricing-and-refund-policy" >Refund Policy</a>, <a target="_blank" href="https://tryelevate.com/privacy" >Privacy Policy</a> &amp; <a target="_blank" href="https://tryelevate.com/dmca" >DMCA Notice.</a>  Sales tax charged where applicable. Please note that setup fees are non-refundable.
 <br /><br />
 Questions? - 877.218.9771
 <br /><br />
@@ -615,7 +608,7 @@ export default withStyles((theme) => ({
     minHeight: "180px",
 
     [theme.breakpoints[900]]: {
-      minHeight: "570px",
+      minHeight: "660px",
     },
   },
 
