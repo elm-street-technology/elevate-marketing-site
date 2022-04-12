@@ -7,7 +7,7 @@ import Container from "../components/Container";
 import SEO from "../components/SEO";
 import Calendar from "elevate-ui-icons/Calendar";
 import eventsbg from "../images/events_bg.jpg";
-import ALogo from "../images/academy_logow.png";
+import AcademyLogo from "../images/academy_logow.png";
 import LGBCLogo from "../images/lg_bootcamp.png";
 import Cover from "../images/academy_cover.png";
 import Fbcamplogo from "../images/fbcamplogo.png";
@@ -84,42 +84,38 @@ class Events extends Component {
         </Helmet>
         <SEO customTitle={`Social media & lead gen tips, tricks & shortcuts - ${config.siteTitle}`} customDescription={`Social media & lead gen tips, tricks & shortcuts - ${config.siteTitle}`} />
 
-        <div style={{backgroundColor:"#333666", paddingTop:"30px"}}>
-        <Container>
-        <div className={classes.top}>
-            {/* <div className={classes.heading} style={{ marginRight: "auto", marginLeft: "auto",textAlign:"center" }}>Upcoming Webinars &amp; Live Events</div> */}
-            <div className={classes.columnSection} style={{textAlign:"left", marginRight:"35px", marginBottom:"10px"}}>
-                    
-                      <img src={ALogo} className={classes.subLogoStyle}/>
-                   <br /><br />
-                    <div className={classes.subtitleText} style={{textAlign:"left"}}>Elm Street Academy offers 12-months<br />
+
+
+
+
+
+        
+        
+        <div style={{paddingTop:"20px", backgroundColor:"#333666",}}>
+    <Container>
+            <div className={classes.flexContainer}>
+                <div className={classes.flexItem} style={{paddingTop:"35px", paddingRight:"15px", paddingLeft:"15px"}}> 
+                <div className={classes.subtitleText} style={{textAlign:"left"}}>Elm Street Academy offers 12-months<br />
                     of educational content, providing classes<br />
                     on a variety of topics.</div><br />
                     <div className={classes.leftsubtext} style={{ minHeight:"130px", textAlign:"left", color:"#ffffff"}}>Whether you are brand new to the industry or are highly experienced and are looking to brush up on your skill sets, Elm Street Academy has a class for you.
                     <br /><br />
                     The best part? All education offered by Elm Street Academy is FREE for you to attend!
 Fill out the form below and download this 2022 Elm Street Academy Educational Guide to learn more about each class. We look forward to seeing you at an educational event soon!</div>
+                </div>
 
-            </div>
-            <div className={classes.columnSection} style={{marginBottom:"-2px"}}>
-                    
-            <div style={{ width: "550px" }}>
+                <div className={classes.flexItem} style={{paddingTop:"35px", paddingRight:"15px", paddingLeft:"15px" }}>
                 <img src={Cover} width="100%"/>
                 </div>
-                    
-                    
-             </div>
-          </div>
-        </Container>
-        </div>
+            </div>
+
         
-        
+    </Container>
+</div>   
+
+
 
         <Container>
-        
-        
-
-          
         <div style={{paddingTop:"60px",paddingBottom:"30px"}}>
           
             <FormHostEvent />
@@ -294,6 +290,14 @@ export default withStyles((theme) => ({
     textAlign: "center",
   },
 
+  column2:{
+    width:"530px",
+    maxWidth: "100%",
+    paddingRight:"20px",
+    paddingLeft:"20px",
+    verticalAlign: "top",
+  },
+
   eventsBackground: {
     backgroundImage: `url('${eventsbg}')`,
     backgroundPosition: "bottom",
@@ -342,7 +346,7 @@ export default withStyles((theme) => ({
     maxWidth: "100%",
     width: "100%",
     paddingRight: "0px",
-    paddingBottom: "25px",
+    marginBottom:"-2px",
   
   
     [theme.breakpoints[900]]: {
