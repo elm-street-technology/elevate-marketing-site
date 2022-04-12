@@ -3,6 +3,7 @@ import classNames from "classnames";
 import withStyles from "elevate-ui/withStyles";
 import HomePageHeroRoles from "../components/HomePageHeroRoles";
 import Logo from "../components/Logo";
+import Elevatelogo from "../images/elevate_tagw.svg";
 import Link from "gatsby-link";
 import heroVideo from "../images/homepage_hero_vid_new.mp4";
 import heroImage600 from "../images/hero_600.jpg";
@@ -39,14 +40,13 @@ const HomePageHeroVid = ({
               <div className={classes.heroContent}>
                   <div className={classes.heading}>
                       <span>explore</span>
-                      <span style={{ paddingTop: "8px", paddingLeft: "8px" }}>
-                          <Logo textColor="#fff" triangleColor={theme.colors.primary} />
+                      <span style={{ paddingTop: "15px", paddingLeft: "12px" }}>
+                      <img src={Elevatelogo} width="100%" style={{maxWidth:"140px"}}/>
                       </span>
                   </div>
-
-                  <div className={classes.centerheading} style={{ color: "#ffffff", }}>The power of <span style={{ fontWeight: "bold", color: "#ffffff" }}>PRODUCTIVITY</span></div>
-                  <div className={classes.centersubtext} style={{ color: "#ffffff", }}>The 1st true productivity platform in real estate<br />
-                      to <span style={{ fontWeight: "bold" }}>capture, nurture &amp; convert leads.</span>
+                  <div className={classes.centerheading} style={{ color: "#ffffff",  fontWeight: "bold"  }}>The #1 Social Media Marketing<br />
+                  CRM in Real Estate.</div>
+                  <div className={classes.centersubtext} style={{ color: "#ffffff",  }}>Intuitive lead generation &amp; marketing done for you.
                       <br />
                       <Link to="/get-started" className={classes.ctabutton}>
                           Take a Tour
@@ -127,7 +127,7 @@ export default withStyles((theme) => ({
         fontWeight: "700",
         letterSpacing: ".25px",
         fontWeight: "600",
-        lineHeight: "1.6",
+        lineHeight: "1.4",
         textAlign: "center",
 
         [theme.breakpoints[900]]: {

@@ -31,7 +31,7 @@ import Timeline from "elevate-ui-icons/Timeline";
 import Equalizer from "elevate-ui-icons/Equalizer";
 import CheckCircle from "elevate-ui-icons/CheckCircle";
 import HeadsetMic from "elevate-ui-icons/HeadsetMic";
-import Elevatew from "../images/elevatew.png";
+import Elevatew from "../images/elevate_tagw.svg";
 import BottomArrow from "../images/bottom_arrow.png";
 import Seocover from "../images/seo_cover.png";
 import Guidecover from "../images/22_cover.png";
@@ -157,7 +157,7 @@ class Index extends Component {
 
                    
                 <div className={classes.centerheading}>The power of <span style={{ fontWeight: "bold" }}>EDUCATION</span></div>
-                <div className={classes.centersubtext}><span style={{ fontWeight: "bold" }}>Important COVID-19 update:</span> At this time, ALL educational training series are WEBINAR only.</div>
+                <div className={classes.centersubtext}>Offering virtual &amp; live educational events across the United States.</div>
                     
 
                 </div>
