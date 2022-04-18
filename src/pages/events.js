@@ -5,11 +5,11 @@ import config from "../utils/siteConfig";
 import withStyles from "elevate-ui/withStyles";
 import Container from "../components/Container";
 import SEO from "../components/SEO";
-import Logo from "../images/generic_bootcamp.png";
 import Calendar from "elevate-ui-icons/Calendar";
 import eventsbg from "../images/events_bg.jpg";
-import SMBCLogo from "../images/sm_bootcamp.png";
+import AcademyLogo from "../images/academy_logow.png";
 import LGBCLogo from "../images/lg_bootcamp.png";
+import Cover from "../images/academy_cover.png";
 import Fbcamplogo from "../images/fbcamplogo.png";
 import Listlogo from "../images/listmore.png";
 import MastermindLogo from "../images/mastermind_logo.png";
@@ -84,159 +84,38 @@ class Events extends Component {
         </Helmet>
         <SEO customTitle={`Social media & lead gen tips, tricks & shortcuts - ${config.siteTitle}`} customDescription={`Social media & lead gen tips, tricks & shortcuts - ${config.siteTitle}`} />
 
-        <div className={classes.eventsBackground}>
-        <Container>
-                    <div style={{ textAlign: "center", paddingTop:"50px" }}>
-                          <img src={Logo} className={classes.logoStyle}/>
-                    </div>
-                    <div className={classes.titleText}>
-                        Select your area of interest:
-                    </div>
-        </Container>
-        </div>
+
+
+
+
+
         
-        <div style={{backgroundColor:"#f15953", textAlign:"center", padding:"15px"}}><span className={classes.bold} style={{color:"#ffffff"}}>Now available via WEBINAR</span></div>
+        
+        <div style={{paddingTop:"20px", backgroundColor:"#333666",}}>
+    <Container>
+            <div className={classes.flexContainer}>
+                <div className={classes.flexItem} style={{paddingTop:"35px", paddingRight:"15px", paddingLeft:"15px"}}> 
+                <div className={classes.subtitleText} style={{textAlign:"left"}}>Elm Street Academy offers 12-months<br />
+                    of educational content, providing classes<br />
+                    on a variety of topics.</div><br />
+                    <div className={classes.leftsubtext} style={{ minHeight:"130px", textAlign:"left", color:"#ffffff"}}>Whether you are brand new to the industry or are highly experienced and are looking to brush up on your skill sets, Elm Street Academy has a class for you.
+                    <br /><br />
+                    The best part? All education offered by Elm Street Academy is FREE for you to attend!
+Fill out the form below and download this 2022 Elm Street Academy Educational Guide to learn more about each class. We look forward to seeing you at an educational event soon!</div>
+                </div>
+
+                <div className={classes.flexItem} style={{paddingTop:"35px", paddingRight:"15px", paddingLeft:"15px" }}>
+                <img src={Cover} width="100%"/>
+                </div>
+            </div>
+
+        
+    </Container>
+</div>   
+
+
 
         <Container>
-          <div className={classes.top}>
-            {/* <div className={classes.heading} style={{ marginRight: "auto", marginLeft: "auto",textAlign:"center" }}>Upcoming Webinars &amp; Live Events</div> */}
-            <div className={classes.columnSection}>
-                    <Link className={classes.bootcampLink} to="/events_sm">
-                      <img src={SMBCLogo} className={classes.subLogoStyle}/>
-                    </Link><br />
-                    <div className={classes.subtitleText}>Turn your social media from a toy into a tool</div>
-                    <div className={classes.subtext} style={{ minHeight:"130px"}}>The #1 boot camp for real estate agents continues
-                    to take the US by storm. This 1-hr, interactive
-                    educational seminar is designed to inspire
-                    and empower agents with tips, tricks &amp; strategies
-                    for conquering their website, blog and social media.</div>
-                    <div>
-                      <a href="/events_sm" className={classes.buttonIcon2}>
-                      <Calendar size={20} style={{position: "relative",top:"4px"}}/> Upcoming Events</a>
-                    </div>
-                    <a href="#host_form" className={classes.button}>
-                    Host an Event</a>
-                    <a  href="#faqs" className={classes.button}>
-                    FAQ</a>
-            </div>
-            <div className={classes.columnSection}>
-                    <Link className={classes.bootcampLink} to="/events_lg">
-                      <img src={LGBCLogo} className={classes.subLogoStyle} />
-                    </Link><br />
-                    <div className={classes.subtitleText}>Capture, nurture &amp; convert more leads</div>
-                    <div className={classes.subtext} style={{ minHeight:"130px"}}>Come learn the tips, tricks &amp; shortcuts to online
-                    lead generation in this high-energy, 90-minute educational session. Brokers and agents
-                    alike will learn the three main types of lead generation, along with the pros,
-                    cons &amp; best practices to capture, nurture &amp; convert more online business in less time.
-                    Wonder how the top performers in the industry maximize their online lead generation?
-                    This is your chance to learn their secrets.</div>
-                    <div >
-                      <a href="/events_lg" className={classes.buttonIcon2}>
-                      <Calendar size={20} style={{position: "relative",top:"4px"}}/> Upcoming Events</a>
-                    </div>
-                    <a  href="#host_form" className={classes.button}>
-                    Host an Event</a>
-                    <a  href="#faqs" className={classes.button}>
-                    FAQ</a>
-             </div>
-          </div>
-
-
-          <div className={classes.top}>
-            {/* <div className={classes.heading} style={{ marginRight: "auto", marginLeft: "auto",textAlign:"center" }}>Upcoming Webinars &amp; Live Events</div> */}
-            <div className={classes.columnSection}>
-                    <Link className={classes.bootcampLink} to="/events_sm">
-                      <img src={Listlogo} className={classes.subLogoStyle}/>
-                    </Link><br />
-                    <div className={classes.subtitleText}>A real estate agent’s guide to capturing<br />
-                    &amp; marketing listings like a pro.</div>
-                    <div className={classes.subtext} style={{ minHeight:"130px"}}>With inventory at historic lows,capturing seller leads has never been a hotter topic. 
-                    Whether your memberswant to capture seller leads, create a killer listing presentation,
-                    or are lookingfor unique ways to make their listingsstand out...this is the educationalwebinar they need! </div>
-                    <div>
-                      <a href="/events_listings" className={classes.buttonIcon2}>
-                      <Calendar size={20} style={{position: "relative",top:"4px"}}/> Upcoming Events</a>
-                    </div>
-                    <a href="#host_form" className={classes.button}>
-                    Host an Event</a>
-                    <a  href="#faqs" className={classes.button}>
-                    FAQ</a>
-            </div>
-            <div className={classes.columnSection}>
-                    <Link className={classes.bootcampLink} to="/events_lg">
-                      <img src={Fbcamplogo} className={classes.subLogoStyle} />
-                    </Link><br />
-                    <div className={classes.subtitleText}>generate high-quality buyer<br />
-                    &amp; seller leads with targeted ads</div>
-                    <div className={classes.subtext} style={{ minHeight:"130px"}}>Did you know the average adultspends 45+ minutes or more everysingle day on Facebook? 
-                    In thisone-hour session, attendees will learnthe step-by-step process of creatinghigh conversion Facebook ads tocapture buyer and seller leads. 
-                    This session is great for all levelsof agent who want to learn how to take their Facebook advertisingto the next level.</div>
-                    <div >
-                      <a href="/events_fbads" className={classes.buttonIcon2}>
-                      <Calendar size={20} style={{position: "relative",top:"4px"}}/> Upcoming Events</a>
-                    </div>
-                    <a  href="#host_form" className={classes.button}>
-                    Host an Event</a>
-                    <a  href="#faqs" className={classes.button}>
-                    FAQ</a>
-             </div>
-          </div>
-
-          <div className={classes.top}>
-            {/* <div className={classes.heading} style={{ marginRight: "auto", marginLeft: "auto",textAlign:"center" }}>Upcoming Webinars &amp; Live Events</div> */}
-            <div className={classes.columnSection}>
-                    <img src={MastermindLogo} className={classes.subLogoStyle}/>
-                    <div className={classes.subtitleText}>Empowering brokers to lead &amp; succeed</div>
-                    <div className={classes.subtext}>You asked and we delivered! This half-day
-                    broker-only session addresses the key business practices
-                    and KPIs that brokers should pay attention to in order
-                    to succeed and grow.  Topics include lead generation,
-                    agent recruitment and retention, the most important KPIs
-                    and metrics to follow, and much more.</div>
-
-                    <a href="#host_form" className={classes.button}>
-                    Host an Event
-                    </a>
-            </div>
-            <div className={classes.columnSection}>
-                    <img src={DeepLogo} className={classes.subLogoStyle} style={{maxWidth:"260px"}}/>      
-                    <div className={classes.subtitleText}>Educational itinerary designed just for you</div>
-                    <div className={classes.subtext}>Work with the Elevate Educational Team to develop
-                    a custom experience for your membership and/or agents.
-                    Popular past deep dives include Facebook intensives,
-                    developing content for consumer audiences,
-                    agent recruitment &amp; retention strategies, and
-                    developing a website designed to capture &amp; convert.</div>
-
-                    <a href="#host_form" className={classes.button}>
-                    Consult with Our Team
-                    </a>
-             </div>
-          </div>
-
-          <div className={classes.top}>
-            {/* <div className={classes.heading} style={{ marginRight: "auto", marginLeft: "auto",textAlign:"center" }}>Upcoming Webinars &amp; Live Events</div> */}
-            <div className={classes.columnSection}>
-                    <img src={ReferralLogo} className={classes.subLogoStyle}/>
-                    <div className={classes.subtitleText}>Get more referrals for your business year-after-year</div>
-                    <div className={classes.subtext}>Referral and repeat business is one of the most effective<br />
-                      and affordable ways to build your real estate business,<br />
-                      but there’s a strategy that agents must know in order to be successful.</div>
-                    <div>
-                      <a href="/events_referrals" className={classes.buttonIcon2}>
-                      <Calendar size={20} style={{position: "relative",top:"4px"}}/> Upcoming Events</a>
-                    </div>
-                    <a href="#host_form" className={classes.button}>
-                    Host an Event</a>
-                    <a  href="#faqs" className={classes.button}>
-                    FAQ</a>
-                   
-            </div>
-            
-          </div>
-          <a id="host_form"></a>
-        <hr />
-          
         <div style={{paddingTop:"60px",paddingBottom:"30px"}}>
           
             <FormHostEvent />
@@ -245,7 +124,7 @@ class Events extends Component {
         <a id="faqs"></a>
         </Container>
 
-<div style={{paddingTop:"20px", paddingBottom:"50px", backgroundColor:"#28336f"}}>
+<div style={{paddingTop:"20px", paddingBottom:"50px", backgroundColor:"#333666"}}>
     <Container>
     <div style={{textAlign:"center", paddingBottom:"5px", paddingTop:"25px"}}><div className={classes.subtitleText2} style={{color:"#4cbbb0"}}>BOOT CAMP FAQ'S</div></div>
             <div className={classes.flexContainer}>
@@ -307,10 +186,8 @@ export default withStyles((theme) => ({
   },
   columnSection:{
     flex: "1",
-    margin:"20px", 
-    textAlign:"center", 
-    paddingTop:"20px", 
-    paddingBottom:"20px"
+    textAlign:"left", 
+    paddingTop:"25px", 
   },
   bold:{
     fontWeight:"700",
@@ -388,8 +265,8 @@ export default withStyles((theme) => ({
   },
 
   subtitleText: {
-    fontSize: "18px",
-    lineHeight: "30px",
+    fontSize: "22px",
+    lineHeight: "28px",
     fontWeight: "700",
     color: "#4cbbb0",
     textAlign: "center",
@@ -400,7 +277,7 @@ export default withStyles((theme) => ({
     fontSize: "22px",
     lineHeight: "24px",
     fontWeight: "700",
-    color: "#28336f",
+    color: "#f69c26",
     textAlign: "center",
     paddingTop: "10px",
   },
@@ -411,6 +288,14 @@ export default withStyles((theme) => ({
     fontWeight: "500",
     color: "#50555c",
     textAlign: "center",
+  },
+
+  column2:{
+    width:"530px",
+    maxWidth: "100%",
+    paddingRight:"20px",
+    paddingLeft:"20px",
+    verticalAlign: "top",
   },
 
   eventsBackground: {
@@ -461,7 +346,7 @@ export default withStyles((theme) => ({
     maxWidth: "100%",
     width: "100%",
     paddingRight: "0px",
-    paddingBottom: "25px",
+    marginBottom:"-2px",
   
   
     [theme.breakpoints[900]]: {

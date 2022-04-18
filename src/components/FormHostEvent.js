@@ -32,6 +32,9 @@ class FormHostEvent extends Component {
             <Typography type="heading3" gutterBottom>
             Thank YOU!
             </Typography>
+            <div style={{margin:"50px"}}>
+            <a className={classes.signUpBtn} href="/assets/est_academy_educational_series.pdf">Download the PDF</a>
+            </div>
             <Typography type="heading5" gutterTop>
             A member of the Elevate Educational Field Team will be in touch shortly.
             <br/>
@@ -208,10 +211,6 @@ class FormHostEvent extends Component {
                   {
                     label: "Listings Boot Camp",
                     value: "Listings Boot Camp",
-                  },
-                  {
-                    label: "Facebook Ads Boot Camp",
-                    value: "Facebook Ads Boot Camp",
                   },
                   {
                     label: "Referrals Boot Camp",

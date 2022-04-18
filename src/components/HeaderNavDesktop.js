@@ -80,9 +80,6 @@ const HeaderNavDesktop = ({ classes, className }) => {
           <Link className={classes.listItemLink} to="/events_listings">
             <li className={classes.listItem}>Listings Boot Camp</li>
           </Link>
-          <Link className={classes.listItemLink} to="/events_fbads">
-            <li className={classes.listItem}>Facebook Ads Boot Camp</li>
-          </Link>
           <Link className={classes.listItemLink} to="/events_referrals">
             <li className={classes.listItem}>Referrals Boot Camp</li>
           </Link>
