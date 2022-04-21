@@ -350,6 +350,9 @@ class FormRefer extends Component {
               >
                 Refer My Friends!
               </button>
+              <div style={{fontSize:"12px", color:"#5A5B5C"}}>
+              *Referred party must sign up for a DMS-level account or higher.
+              </div>
               </div>
             </Form>
           )}
@@ -409,8 +412,8 @@ export default withStyles((theme) => ({
     fontSize: "18px",
     lineHeight: "26px",
     fontWeight: "700",
-    backgroundColor: "#eefb18",
-    color: "#8776c7",
+    backgroundColor: "#f6fb18",
+    color: "#8649cf",
     borderRadius: "6px",
     padding: "12px",
     marginTop: "30px",

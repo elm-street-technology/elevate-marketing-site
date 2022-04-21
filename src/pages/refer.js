@@ -24,7 +24,7 @@ const Refer = ({ children, classes, data, tags }) => {
       <SEO postNode={postNode} pagePath="refer" customTitle />
 
       <ReferBgSectionExternal bgImage={Referbg} secLink="#refer_form" secButton="Start referring today...">
-      For every friend you refer that subscribes to Elevate, you’ll receive a FREE batch of 5 - 10 leads from your target market in your Elevate account, and so will your friend!
+      For every friend you refer that subscribes* to Elevate, you’ll receive a $200 credit to your Elevate account, and so will your friend!
     </ReferBgSectionExternal>
     <a id="refer_form"></a>
 

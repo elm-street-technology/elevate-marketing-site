@@ -33,7 +33,7 @@ const ReferBgSectionExternal = ({
                     Do you have friends &amp; colleagues that could benefit from the tools &amp; services of Elevate? You can spread the love by referring them today!
                     </span>
                     <br /><br />
-                    <span className={classes.leftsubtext} style={{fontWeight:"700", color:"#eefb18"}}>
+                    <span className={classes.leftsubtext} style={{fontWeight:"700", color:"#f6fb18"}}>
                     IT'S SUPER EASY...
                     </span>
                     <p className={classes.leftsubtext}>
@@ -107,8 +107,8 @@ export default withStyles((theme) => ({
         fontWeight: "700",
         minWidth: "250px",
         letterSpacing: ".25px",
-        backgroundColor: "#eefb18",
-        color: "#8776c7",
+        backgroundColor: "#f6fb18",
+        color: "#8649cf",
         display: "block",
         marginTop: "30px",
         maxWidth: "250px",
