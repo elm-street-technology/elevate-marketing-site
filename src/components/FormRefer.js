@@ -4,6 +4,7 @@ import { Formik, Form, Field } from "formik";
 import * as Yup from "yup";
 import Alert from "elevate-ui/Alert";
 import Input from "elevate-ui/Input";
+import Header from "../images/refer_ty.jpg"
 import Typography from "elevate-ui/Typography";
 import withStyles from "elevate-ui/withStyles";
 
@@ -34,7 +35,9 @@ class FormRefer extends Component {
         >
           <div >
                                   
-                      
+          <div style={{PaddingBottom:"13px"}}>
+                    <img src={Header} style={{width:"100%"}} />
+                </div><br />     
             <Typography type="heading3" gutterBottom>
                 AWESOME! YOU ARE A GOOD FRIEND!
             </Typography>
