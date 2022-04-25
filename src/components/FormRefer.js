@@ -39,7 +39,7 @@ class FormRefer extends Component {
                     <img src={Header} style={{width:"100%"}} />
                 </div><br />     
             <Typography type="heading3" gutterBottom>
-                AWESOME! YOU ARE A GOOD FRIEND!
+                AWESOME! You are a good friend!
             </Typography>
             <Typography type="heading5" gutterTop>
             Your referrals will receive an email letting them know that you referred them to Elevate. 
@@ -47,6 +47,15 @@ class FormRefer extends Component {
             <br /><br />
             You can come back to this form again and again to refer MORE friends!  We hope you do!
             </Typography>
+            <Typography type="heading3" gutterBottom style={{paddingTop:"25px"}}>
+            Loving your Elevate experience?
+            </Typography>
+            <Typography type="heading5" gutterTop>
+            Please take a moment to share a quick review on G2 &amp; be entered to win a $100 gift card.
+            </Typography>
+            <div style={{paddingTop:"20px"}}>
+            <a className={classes.signUpBtn} href="https://www.g2.com/products/elevate/reviews" target="_blank">Tell About Your Experience</a>
+            </div>
           </div>
         </div>
       );
