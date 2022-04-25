@@ -40,7 +40,7 @@ class FormRefer extends Component {
             </Typography>
             <Typography type="heading5" gutterTop>
             Your referrals will receive an email letting them know that you referred them to Elevate. 
-            When any of them subscribe to Elevate, we’ll let you know and provide a batch of leads to your account.
+            When any of them subscribe to Elevate, we’ll let you know and provide the credit to your account.
             <br /><br />
             You can come back to this form again and again to refer MORE friends!  We hope you do!
             </Typography>
