@@ -54,7 +54,7 @@ class FormRefer extends Component {
             Please take a moment to share a quick review on G2 &amp; be entered to win a $100 gift card.
             </Typography>
             <div style={{paddingTop:"20px"}}>
-            <a className={classes.signUpBtn} href="https://www.g2.com/products/elevate/reviews" target="_blank">Tell About Your Experience</a>
+            <a className={classes.signUpBtn} href="https://www.g2.com/products/elevate/reviews" target="_blank">Tell Us About Your Experience!</a>
             </div>
           </div>
         </div>
@@ -420,7 +420,7 @@ export default withStyles((theme) => ({
     },
   },
   signUpBtn: {
-    width: "55%",
+    width: "65%",
     fontSize: "18px",
     lineHeight: "26px",
     fontWeight: "700",

@@ -37,7 +37,7 @@ const Refer = ({ children, classes, data, tags }) => {
                 <div className={classes.landingHeaderStyle}>
                     {/* <img src={LandingHeader} style={{width:"100%"}} /> */}
                 </div>
-                <img src={Referlogo2} width="100%" style={{ paddingBottom:"28px", maxWidth:"330px",}}/>
+                
                 <div style={{ paddingLeft: "18px", paddingRight: "18px"}}>
                 
                     <FormRefer />
