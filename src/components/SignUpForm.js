@@ -66,7 +66,7 @@ class SignUpForm extends Component {
                 833.303.1040
               </a>.
             </Typography>
-            <Typography type="heading4" gutterTop>We look forward to connecting with you soon!</Typography>
+            <Typography type="heading6" style={{marginTop:"20px"}} gutterTop>We look forward to connecting with you soon!</Typography>
           </Alert>
         </div>
       );
