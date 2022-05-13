@@ -54,17 +54,19 @@ class SignUpForm extends Component {
         >
           <Alert color="success">
             <Typography type="heading3" gutterBottom>
-              AWESOME.
+              AWESOME!
             </Typography>
             <Typography type="heading6" gutterBottom>
-              An Elevate sales representative will be in touch with you shortly.
+            We encourage you to book a convenient connection date &amp; time with an Elevate Success Coach here:  {" "}
+            <a href="https://calendly.com/smcoaches" target="_blank">https://calendly.com/smcoaches</a>
             </Typography>
             <Typography type="heading4" gutterTop>
-              If you'd like to speak to a sales representative NOW, please call{" "}
+            You can also speak to a Success Coach Mon - Fri from 8am - 5pm CT by calling{" "}
               <a href="tel:18333031040" className={classes.link}>
                 833.303.1040
               </a>.
             </Typography>
+            <Typography type="heading4" gutterTop>We look forward to connecting with you soon!</Typography>
           </Alert>
         </div>
       );
