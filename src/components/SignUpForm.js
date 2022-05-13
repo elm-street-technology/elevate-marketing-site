@@ -240,7 +240,7 @@ class SignUpForm extends Component {
                     value: "Team",
                   },
                   {
-                    label: "Broker",
+                    label: "Broker/Owner",
                     value: "Broker",
                   },
                   {
@@ -267,16 +267,28 @@ class SignUpForm extends Component {
                 component={CheckboxGroup}
                 items={[
                   {
-                    label: "Lead Generation:  buyer leads, seller leads or a mix of both",
-                    value: "Lead Generation:  buyer leads, seller leads or a mix of both",
+                    label: "Lead Generation",
+                    value: "Lead Generation",
                   },
                   {
-                    label: "Digital Marketing Services (website, email, social, text, blog, SEO)",
-                    value: "Digital Marketing Services (website, email, social, text, blog, SEO)",
+                    label: "Lead Concierge Services",
+                    value: "Lead Concierge Services",
                   },
                   {
-                    label: "Elevate CRM",
-                    value: "Elevate CRM",
+                    label: "Digital Marketing Services (Website, Email, Social, Text, Blog, SEO)",
+                    value: "Digital Marketing Services (Website, Email, Social, Text, Blog, SEO)",
+                  },
+                  {
+                    label: "CRM Solutions",
+                    value: "CRM Solutions",
+                  },
+                  {
+                    label: "Telecommunication Services",
+                    value: "Telecommunication Services",
+                  },
+                  {
+                    label: "Recruitment & Retention",
+                    value: "Recruitment & Retention",
                   },
                   {
                     label: "Custom Creative / Marketing Services",
