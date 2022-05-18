@@ -154,7 +154,7 @@ const boot_camp_extras = ({ classes }) => {
                                     Sweet!  Take a quick video tour below and then connect with a Success Coach.
                                               <div style={{textAlign: "center", maxWidth:"700px",marginLeft:"auto",marginRight:"auto", paddingTop:"30px"}}>
                                                              <div style={{ textAlign: "center"}} className={classes.videoEmbed}>
-                                                              <iframe className={classes.videoContainer} src="https://www.youtube.com/embed/xPJyb2d_tnU"
+                                                              <iframe className={classes.videoContainer} src="https://www.youtube.com/embed/WMqvFA708ss "
                                                               frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                                                              </div>
                                               </div>
