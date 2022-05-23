@@ -210,7 +210,7 @@ databases</div>
         Tour the BOSS
         </h1>
         <h2 className={classes.subtext} style={{paddingBottom:"40px"}}>Request your personal consultation with our broker<br/>
-        development team using the form below, or call 833-978-1196 to speak to us today.</h2>
+        development team using the form below, or call 833-303-1040 to speak to us today.</h2>
         <Formboss/>
         {/* <div className={classes.closingContainer}>
           For Media Inquiries, {""} Please {""}
