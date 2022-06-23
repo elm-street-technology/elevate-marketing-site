@@ -165,7 +165,7 @@ class EventsLG extends Component {
         <div className={classes.lnBackground}>
         <Container>
                 <div className={classes.titleText} style={{color:"#2d397c", paddingRight:"20px", paddingLeft:"20px"}}>
-                    <img src={lnTop} />
+                    <img src={lnTop} style={{maxWidth:"80%"}} alt="Lead Nurture Boot Camp Promo Image"/>
                 </div>
          
         </Container>
