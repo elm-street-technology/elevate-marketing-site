@@ -15,7 +15,7 @@ import Sp5 from "../images/sp5.png";
 import Glance4 from "../images/glance4.png";
 import Glance5 from "../images/glance5.png";
 import SEO from "../components/SEO";
-import FormProduct from "../components/FormProduct";
+import FormFreetrial from "../components/FormFreetrial";
 
 const Freetrial = ({ children, classes, data, tags }) => {
   const postNode = {
@@ -185,11 +185,11 @@ blog with weekly posts</div>
         Create Your FREE 60-Day Trial Account Today!
         </h1>
        
-        <FormProduct
-          subject="Social Pro Product Lead"
-          listid="107379"
-          webhook="b1452e08-f398-11ea-9d14-bc764e046a9d"
-          leadsource="tryelevate.com:socialpro" />
+        <FormFreetrial
+          subject="Social Pro Free Trial Lead"
+          listid="148020"
+          webhook="5a0ac3e9-fa6f-11ec-a07e-bc764e046a9d"
+          leadsource="tryelevate.com/freetrial" />
         {/* <div className={classes.closingContainer}>
           For Media Inquiries, {""} Please {""}
           <a
