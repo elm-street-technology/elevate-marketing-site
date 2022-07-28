@@ -76,7 +76,7 @@ const Freetrialthankyou = ({ children, classes, data, tags }) => {
             Technology Trends<br />
             Business Planning<br />
             And...MORE!</div>
-            <a href="https://tryelevate.com/events" target="_blank" className={classes.buttonLink}>Browse Upcoming Events</a>
+            <a href="https://elmstreet.com/events" target="_blank" className={classes.buttonLink}>Browse Upcoming Events</a>
                 </div>
               
 

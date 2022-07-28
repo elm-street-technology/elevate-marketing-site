@@ -42,6 +42,9 @@ class FormProduct extends Component {
     };
 
     if (formState === "success") {
+      if (typeof window !== 'undefined') {
+        window.location.href="/freetrial_thankyou"
+      }
       return (
         <div
           style={{
