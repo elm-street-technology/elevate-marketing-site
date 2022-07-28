@@ -71,8 +71,7 @@ const subscribe_today = ({ classes }) => {
                 <div style={{color:"#57585b"}}>• LinkedIn</div>
                 <div style={{color:"#57585b"}}>• Twitter</div>
                 <div style={{color:"#57585b"}}>• YouTube</div>
-                <div style={{color:"#57585b"}}>• Pinterest</div>
-                <div style={{color:"#57585b"}}>• Instagram</div>
+               
                 </div>
 
                 <div>
@@ -117,8 +116,7 @@ const subscribe_today = ({ classes }) => {
                 <div style={{color:"#57585b"}}>• LinkedIn</div>
                 <div style={{color:"#57585b"}}>• Twitter</div>
                 <div style={{color:"#57585b"}}>• YouTube</div>
-                <div style={{color:"#57585b"}}>• Pinterest</div>
-                <div style={{color:"#57585b"}}>• Instagram</div>
+               
                 </div>
 
                 <div>
@@ -168,8 +166,7 @@ const subscribe_today = ({ classes }) => {
                 <div style={{color:"#57585b"}}>• LinkedIn</div>
                 <div style={{color:"#57585b"}}>• Twitter</div>
                 <div style={{color:"#57585b"}}>• YouTube</div>
-                <div style={{color:"#57585b"}}>• Pinterest</div>
-                <div style={{color:"#57585b"}}>• Instagram</div>
+               
                 
                 </div>
 
@@ -223,8 +220,7 @@ const subscribe_today = ({ classes }) => {
                 <div style={{color:"#57585b"}}>• LinkedIn</div>
                 <div style={{color:"#57585b"}}>• Twitter</div>
                 <div style={{color:"#57585b"}}>• YouTube</div>
-                <div style={{color:"#57585b"}}>• Pinterest</div>
-                <div style={{color:"#57585b"}}>• Instagram</div>
+               
                 
                 </div>
 
