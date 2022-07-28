@@ -42,6 +42,9 @@ class FormProduct extends Component {
     };
 
     if (formState === "success") {
+      if (typeof window !== 'undefined') {
+        window.location.href="/freetrial_thankyou"
+      }
       return (
         <div
           style={{
@@ -317,6 +320,7 @@ class FormProduct extends Component {
               </button>
               </div>
               <div style={{fontSize:"11px", lineHeight:"16px", paddingBottom:"35px"}}>
+              NEW ACCOUNTS ONLY.<br />
               By submitting this form, you are requesting to be contacted by a member of the Elevate Sales Team at the details provided via text, email or call (may involve automated or pre-recorded means).  You may revoke this consent through any reasonable means.
                 Existing subscribers seeking support, please visit the <a href="https://elmstreettechnology.zendesk.com/hc/en-us">Elevate Help Center</a>.
               </div>

@@ -41,7 +41,7 @@ import Btccover from "../images/btc_cover.png";
 import Emailcover from "../images/email_cover.png";
 import Kardcover from "../images/kard_cover.png";
 import Saucecover from "../images/sauce_cover.png";
-import Modalpic from "../images/nov_pop.gif";
+import Modalpic from "../images/freetrial_top.jpg";
 import Modalpic2 from "../images/doubledown.png";
 import Container from "../components/Container";
 import Bcesw from "../images/bcesw.jpg";
@@ -312,24 +312,22 @@ class Index extends Component {
           <div className={classes.modalContent}>
             <span id="modalClose" className={classes.close}>&times;</span>
             <div style={{ textAlign: "center",}}>
-                                          <img src={Modalpic} width="100%" style={{maxWidth:"400px", padding:"15px"}}/>
+                                          <img src={Modalpic} width="100%" style={{maxWidth:"600px", padding:"15px"}}/>
                                     </div>
          
             <div>
-            <div className={classes.centerheading} style={{fontSize:"20px"}}>NO CONTRACT COMMITMENT!</div>
               <span style={{fontWeight:"bold"}}>
-              on Elevate Social Pro&trade;, DMS&trade;, DMS Plus&trade; &amp; Elite&trade;
-
+              Try Elevate Social Pro&reg;
               </span>
+              <div className={classes.centerheading} style={{fontSize:"20px"}}>FREE FOR 60-DAYS!</div>
             </div> 
 
       
               <div style={{paddingbottom:"22px"}}>
-                <Link to="/get-started" target="_blank" className={classes.ctabutton} style={{maxWidth:"550px"}}>
-                Connect To Learn More
+                <Link to="/freetrial" className={classes.ctabutton} style={{maxWidth:"550px"}}>
+                Create Your Account
                 </Link>
-                <br /><br />
-                <span style={{fontSize:"12px"}}>excludes Elite Pro&trade; &amp; brokerage solutions</span>
+
               </div>
 
               <div>
@@ -619,7 +617,7 @@ cardinner: {
 },
 
 modal: {
-  display: "none",
+  display: "inherent",
   position: "fixed",
   zIndex: "10000",
   paddingTop: "0px",

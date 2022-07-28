@@ -78,14 +78,14 @@ class Header extends Component {
           )}
         />
       </header>
-      {/*
+     
         {thisPath != '/leadgen' && thisPath != '/leadgen/' && 
         <div className={classes.violator}>
-          <span style={{fontWeight:"bold", fontSize:"14px"}}>NO CONTRACT COMMITMENT: This Month Only:</span>
-          <Link to="/get-started" target="_blank" style={{color:"#fdf134", fontWeight:"bold", paddingLeft:"4px", fontSize:"14px"}}>Learn More</Link>
+          <span style={{fontWeight:"bold", fontSize:"14px"}}>Try Elevate's Social Pro&reg; <span  style={{color:"#fdf134",}}>FREE FOR 60-DAYS!</span></span>
+          <Link to="/freetrial" target="_blank" style={{color:"#fdf134", fontWeight:"bold", marginLeft:"8px", fontSize:"14px"}}>Create Account</Link>
         </div>
             }
-          */}
+       
       </div>
     
     );
@@ -178,7 +178,7 @@ export default withStyles((theme) => ({
   },
   violator:{
     display:"fixed",
-    background:"#f58706",
+    background:"#e72f6c",
     color:"#FFFFFF",
     position:"fixed",
     top:"80px",
