@@ -182,7 +182,7 @@ const subscribe_today = ({ classes }) => {
 
 
                 
-<a target="_blank" href="https://elmstreettechnology.recurly.com/subscribe/elevateelite?subscription[coupon_code]=elite50" className={classes.getStartedLinkignite}>
+<a target="_blank" href="https://elmstreettechnology.recurly.com/subscribe/elevateelite?subscription[coupon_code]=elevate20" className={classes.getStartedLinkignite}>
                   SUBSCRIBE NOW
                     </a>
                     
@@ -193,57 +193,6 @@ const subscribe_today = ({ classes }) => {
           </div>
           </div>
 
-
-
-
-          <div className={classes.infoboxGray2}>
-          <div className={classes.column4} style={{ textAlign: "center", paddingBottom: "35px" }}>
-          <div style={{ textAlign: "center",paddingBottom:"10px" }}>
-          <img src={Eliteplus} style={{ width:"100%", maxWidth:"200px"}}/>
-        </div>
-                <div className={classes.productCol} style={{ textAlign: "left", paddingLeft:"10px", paddingRight:"10px", paddingBottom:"20px"}}>
-                <div className={classes.bold} style={{color:"#f15953"}}>LEAD GENERATION</div>
-                <div className={classes.bold} style={{color:"#f15953"}}>• 40 - 60 Leads /Month</div>
-                <div className={classes.bold} style={{color:"#f15953"}}>• Choice of Buyer/Seller/Combo Lead Campaigns</div>
-                <div className={classes.bold} style={{color:"#f15953"}}>• Google/PPC Ads</div>
-                <div className={classes.bold} style={{color:"#f15953"}}>• Facebook Ads</div>
-                <div className={classes.bold} style={{color:"#f15953"}}>• Lead Scrubbing Service</div>
-                <div className={classes.bold} style={{color:"#f15953"}}>• Elevate Support</div>
-                <div className={classes.bold} style={{color:"#4ab8ac"}}>IDX WEBSITE</div>
-                <div className={classes.bold} style={{color:"#4ab8ac"}}>ADV. PRODUCTIVITY CRM</div>
-                <div className={classes.bold} style={{color:"#4ab8ac"}}>EMAIL MARKETING CAMPAIGNS</div>
-                <div className={classes.bold} style={{color:"#4ab8ac"}}>CMA WIZARD</div>
-                <div className={classes.bold} style={{color:"#57585b"}}>BLOG</div>
-                <div className={classes.bold} style={{color:"#57585b"}}>SOCIAL MEDIA SERVICES</div>
-                <div className={classes.bold} style={{color:"#57585b"}}>MLS Listing Pushes:</div>
-                <div style={{color:"#57585b"}}>• Facebook</div>
-                <div style={{color:"#57585b"}}>• LinkedIn</div>
-                <div style={{color:"#57585b"}}>• Twitter</div>
-                <div style={{color:"#57585b"}}>• YouTube</div>
-               
-                
-                </div>
-
-
-                <div>
-                <img src={Line} style={{ width:"100%", maxWidth:"200px"}}/>
-                <br />
-                <span className={classes.bold} style={{color:"#f15953"}}>6 MONTH AGREEMENT</span>
-                
-
-
-                
-
-
-                
-<a target="_blank" href="https://elmstreettechnology.recurly.com/subscribe/elitebundle?subscription[coupon_code]=elite50" className={classes.getStartedLinkignite}>
-                  SUBSCRIBE NOW
-                    </a>
-                  
-                </div>
-                
-          </div>
-          </div>
 
 
           </div>
