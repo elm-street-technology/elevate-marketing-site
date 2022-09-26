@@ -48,7 +48,7 @@ const Educationalguides = ({ children, classes, data, tags }) => {
 </div>
 
 
-<div style={{backgroundColor:"#201a4f", textAlign:"center"}}>
+<div style={{backgroundColor:"#333666", textAlign:"center"}}>
       <Container>
                    
 
@@ -59,7 +59,7 @@ const Educationalguides = ({ children, classes, data, tags }) => {
         <div className={classes.column2} style={{ textAlign: "center", paddingTop:"25px"}}>
                                     
                                     <div className={classes.centerheading2}>
-                                    Your 2022 Marketing<br />
+                                    Your 2023 Marketing<br />
                                     Strategy Guide</div><br />
                                     <div className={classes.centersubtext} style={{color:"#f7f7f7"}}>Planning your goals, budget and overarching marketing strategy can feel like daunting work, but it’s a crucial part of running a successful business. This FREE guide is designed to help you focus on what’s important, and to encourage you to expand your marketing for the new year.</div>
                                     

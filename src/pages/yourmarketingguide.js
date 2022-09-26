@@ -11,15 +11,15 @@ import Logo2022 from "../images/2022_logo.png";
 
 const Yourmarketingguide = ({ children, classes, data, tags }) => {
   const postNode = {
-      title: `Your 2022 Marketing Strategy Guide - ${config.siteTitle}`,
+      title: `Your 2023 Marketing Strategy Guide - ${config.siteTitle}`,
   };
 
   return (
     <div className={classes.root}>
       <Helmet>
-              <title>{`Your 2022 Marketing Strategy Guide - ${config.siteTitle}`}</title>
+              <title>{`Your 2023 Marketing Strategy Guide - ${config.siteTitle}`}</title>
       </Helmet>
-      <SEO postNode={postNode} pagePath="Your 2022 Marketing Strategy Guide" customTitle />
+      <SEO postNode={postNode} pagePath="Your 2023 Marketing Strategy Guide" customTitle />
 
       <Container>
         <div >
@@ -28,7 +28,7 @@ const Yourmarketingguide = ({ children, classes, data, tags }) => {
                 <div style={{paddingLeft:"65px", paddingRight:"65px",}}>
                     <img src={Logo2022} width="100%"  style={{paddingBottom:"45px", paddingTop:"20px", maxWidth:"538px", textAlign:"center"}}  />
                    <h1 className={classes.Heading}>Download Your FREE, Marketing Strategy Guide<br />
-                   to Get 2022 Started Right!</h1>
+                   to Get 2023 Started Right!</h1>
                   <div style={{color:"#495050", lineHeight:"26px", textAlign:"center", paddingBottom:"35px"}}>
                   Planning your goals, budget and overarching marketing strategy can feel like daunting work, but it’s a crucial part of running a successful business.  This FREE guide from the experts at Elevate is designed to help you focus on what’s important, and to encourage you to expand your marketing for the new year. 
                  </div>

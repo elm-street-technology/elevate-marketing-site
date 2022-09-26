@@ -60,7 +60,7 @@ class Formmarketingguide extends Component {
               Fantastic!
             </Typography>
             <div style={{margin:"50px"}}>
-            <a className={classes.signUpBtn} href="/assets/2022_marketing_guide.pdf">Download the PDF</a>
+            <a className={classes.signUpBtn} href="/assets/2023_marketing_guide.pdf">Download the PDF</a>
             </div>
             <Typography type="heading5" gutterTop style={{fontSize:"18px"}}>
               You can speak to a member of our sales team immediately <br/>by calling  <a href="tel:18333031040" className={classes.link}>833.303.1040</a>.

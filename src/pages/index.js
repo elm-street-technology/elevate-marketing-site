@@ -207,7 +207,7 @@ class Index extends Component {
 
                   <div className={classes.column2} style={{ textAlign: "left", paddingTop: "22px" }}>
                                     
-                                    <div className={classes.leftheading}>Your 2022 Marketing Guide</div>
+                                    <div className={classes.leftheading}>Your 2023 Marketing Guide</div>
                                     <div className={classes.leftsubtext}>Planning your goals, budget and overarching marketing strategy can feel like daunting work, but it’s a crucial part of running a successful business. This FREE guide is designed to help you focus on what’s important, and to encourage you to expand your marketing for the new year.</div>
                                     
                                     
