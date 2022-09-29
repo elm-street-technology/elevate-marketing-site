@@ -177,7 +177,7 @@ export default withStyles((theme) => ({
     visibility: "visible",
   },
   violator:{
-    display:"fixed",
+    display:"none",
     background:"#e72f6c",
     color:"#FFFFFF",
     position:"fixed",
