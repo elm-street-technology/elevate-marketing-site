@@ -257,12 +257,12 @@ class Index extends Component {
         </Section1Col>
       </div>
       </div>
-*/}
+
 
         <BgSectionExternal bgImage={Blogbg} secTitle="3sixtyfive.agency Blog" secLink="http://3sixtyfive.agency/blog" secButton="Feed Your Brain" secImage={Blogpic}>
         Join the smarty pants at our full-service creative &amp; digital marketing agency as they interview &amp; interact with marketing minds across industries, and provide tons of insightful, entertaining &amp; inspiring content to help you grow.
         </BgSectionExternal>
-
+*/}
 
 
         <Container>
