@@ -151,7 +151,7 @@ Register Now</a>
 
     <BgSectionExternal2 bgImage={Webbottombg} 
       secTitle="On Demand Webinars" 
-      secLink="https://www.youtube.com/playlist?list=PLPP1FwqCgJxPn3-c3uTapf0Hx5yhwAcKg" 
+      secLink="https://gateway.on24.com/wcc/eh/3767195/category/113505/elevate" 
       secButton="View Recordings" secImage={Web0}>
     Browse our ever-growing selection of on-demand Elevate training webinars, including our popular “Secrets of Successful Lead Generation”, “How to Promote Your Open Houses”, and so much more just for you.
         </BgSectionExternal2>
