@@ -19,13 +19,13 @@ import FormFreetrial from "../components/FormFreetrial";
 
 const Freetrialthankyou = ({ children, classes, data, tags }) => {
   const postNode = {
-      title: `Thank you for signing up for the Elevate Free Trial - ${config.siteTitle}`,
+      title: `Thank you for signing up for the Cyber Monday Special - ${config.siteTitle}`,
   };
 
   return (
 <div className={classes.root}>
       <Helmet>
-              <title>{`Thank you for signing up for the Elevate Free Trial - ${config.siteTitle}`}</title>
+              <title>{`Thank you for signing up for the Cyber Monday Special - ${config.siteTitle}`}</title>
       </Helmet>
       <SEO postNode={postNode} pagePath="Freetrialthankyou" customTitle />
 
@@ -35,8 +35,8 @@ const Freetrialthankyou = ({ children, classes, data, tags }) => {
           <div className={classes.centerHeading}>
                             <div className={classes.heading} style={{color:"#f69c26"}}>WELCOME TO</div>
                             <img src={Eslogo} width="100%"  style={{paddingBottom:"18px", maxWidth:"400px"}} />
-                            <div className={classes.subtext} style={{color:"#ffffff", fontSize:"18px"}}>A member of our Success Team will reach out shortly to finish<br />
-                            activating your FREE trial account. In the meantime, please feel free<br />
+                            <div className={classes.subtext} style={{color:"#ffffff", fontSize:"18px"}}>A member of our Success Team will reach out shortly to confirm your account with the Cyber Monday special.
+                            In the meantime, please feel free<br />
                             to connect with us directly at: <a href="tel:18333031040" className={classes.link} style={{color:"#ffffff"}}>833.303.1040</a>.
                 
                             </div>

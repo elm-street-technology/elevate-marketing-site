@@ -9,9 +9,9 @@ import Fadebg from "../images/fadebg.jpg";
 import Sprologo from "../images/sprologo.png";
 import Quote from "../images/quote.png";
 import Sp1 from "../images/sp1.png";
-import Sp2 from "../images/sp2.png";
+import Newl from "../images/newl.png";
 import Sp3 from "../images/sp3.png";
-import Sp5 from "../images/sp5.png";
+import Av from "../images/av.png";
 import Glance4 from "../images/glance4.png";
 import Glance5 from "../images/glance5.png";
 import SEO from "../components/SEO";
@@ -31,11 +31,13 @@ const Freetrial = ({ children, classes, data, tags }) => {
 
 <div style={{backgroundImage:"url("+Spcrmbg+")", backgroundSize:"cover", backgroundPosition:"centerTop"}}>
 <Container>
-      <div className={classes.top} style={{paddingBottom:"30px", paddingRight:"35px", paddingLeft:"35px", paddingTop:"75px", paddingBottom:"75px"}}>
+      <div className={classes.top} style={{paddingBottom:"30px", paddingRight:"35px", paddingLeft:"35px", paddingTop:"95px", paddingBottom:"95px"}}>
           <div className={classes.centerHeading}>
-                            <img src={Sprologo} width="100%"  style={{paddingBottom:"18px", paddingTop:"20px",maxWidth:"350px"}} />
-                            <div className={classes.heading} style={{color:"#ffffff"}}>TRY ELEVATE SOCIAL PRO&reg;<br />
-                            FREE FOR 60-DAYS</div>
+                            
+                            <div className={classes.heading} style={{color:"#ffffff"}}><span style={{color:"#f9ea6c",}}>CYBER MONDAY</span><br />
+GET THE ELEVATE CRM FOR $1<br />
+ANY LEVEL. ANY PACKAGE.
+</div>
                             <div className={classes.subtext} style={{color:"#f7f7f7", fontSize:"18px"}}>Voted the #1 Social Media CRM for Real Estate Agents in 2022, by TheClose.com.
                             <br />
                             <div style={{ textAlign: "center", paddingBottom: "10px" }}>
@@ -71,13 +73,11 @@ const Freetrial = ({ children, classes, data, tags }) => {
                 </div>
 
                 <div className={classes.column2} style={{padding:"30px", textAlign:"center"}}>
-                <div className={classes.Heading2}>TRY FREE FOR 60-DAYS!</div>
+                <div className={classes.Heading2}><span style={{color:"#f9ea6c",}}>CYBER MONDAY SPECIAL</span><br />
+DECEMBER FOR A DOLLAR
+</div>
                 <div className={classes.subtext} style={{color:"#f7f7f7"}}>
-                Elevate's “Social Pro” offers busy
-                real estate professionals a 
-                comprehensive, all-in-one social 
-                media marketing solution that is 
-                UNPARALLELED in the space.
+                Elevate's CRM offers busy real estate professionals a comprehensive, all-in-one lead generation &amp; nurturing solution that is UNPARALLELED in the space.
                 </div>
                 <div style={{ textAlign: "center", paddingTop: "15px" }}>
                  <a href="#demo" className={classes.buttonLink}>Create Your Account!</a>
@@ -106,9 +106,10 @@ const Freetrial = ({ children, classes, data, tags }) => {
             <Container>
 
                         <div style={{textAlign:"center", paddingRight:"35px", paddingLeft:"35px", paddingBottom:"35px"}}>
-                            <div className={classes.Heading2}>Elevate Social Pro&reg; Includes...</div>
-                            <div className={classes.subtext}>Automate your social media marketing so you can focus on what matters the most...<br />
-                            growing your sphere &amp; selling more homes, faster...</div>     
+                            <div className={classes.Heading2}>The Elevate CRM Includes...</div>
+                            <div className={classes.subtext}>Automate your lead generation &amp; social media marketing so you can focus on what matters the most...<br />
+growing your sphere &amp; selling more homes, faster...
+</div>     
                             
                         </div>
             </Container>
@@ -128,10 +129,10 @@ Twitter, LinkedIn &amp; YouTube</div>
 </div>
 
 <div className={classes.column3} style={{ textAlign: "center", paddingTop: "20px" }}>
-<div className={classes.subtext2}>Relevant, life-style content<br />
-posted weekly</div>
+<div className={classes.subtext2}>Lead Generation &amp; Prospecting,<br />
+with leads provided monthly</div>
 <div style={{ textAlign: "center",}}>
-    <img src={Sp2} width="100%"  style={{paddingTop:"25px", maxWidth:"320px"}} />
+    <img src={Newl} width="100%"  style={{paddingTop:"25px", maxWidth:"320px"}} />
 </div>
 </div>
 
@@ -165,10 +166,10 @@ YouTube video tours</div>
 </div>
 
 <div className={classes.column2} style={{ textAlign: "center", paddingTop: "20px" }}>
-<div className={classes.subtext2}>Content-rich consumer<br />
-blog with weekly posts</div>
+<div className={classes.subtext2}>Lead Concierge nurtures your<br />
+leads through to conversion</div>
 <div style={{ textAlign: "center",}}>
-    <img src={Sp5} width="100%"  style={{paddingTop:"25px", maxWidth:"320px"}} />
+    <img src={Av} width="100%"  style={{paddingTop:"25px", maxWidth:"320px"}} />
 </div>
 </div>
 
@@ -182,7 +183,7 @@ blog with weekly posts</div>
 
 <div style={{backgroundColor:"#ffffff", paddingBottom:"60px", textAlign:"center", paddingRight:"30px", paddingLeft:"30px"}}>
         <h1 className={classes.Heading2} style={{paddingTop:"70px"}}>
-        Create Your FREE 60-Day Trial Account Today!
+        Get Elm Street Technology's Elevate CRM for $1 Today!
         </h1>
        
         <FormFreetrial
