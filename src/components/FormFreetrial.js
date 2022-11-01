@@ -316,11 +316,11 @@ class FormProduct extends Component {
                 className={classes.signUpBtn}
                 disabled={isSubmitting}
               >
-                Create My Free Trial
+                Let's Get Started!
               </button>
               </div>
               <div style={{fontSize:"11px", lineHeight:"16px", paddingBottom:"35px"}}>
-              NEW ACCOUNTS ONLY.<br />
+              *NEW ACCOUNTS ONLY. SPECIAL PRICING DOES NOT INCLUDE ADDITIONAL LEAD GENERATION / PAY-PER-CLICK SERVICES.<br />
               By submitting this form, you are requesting to be contacted by a member of the Elevate Sales Team at the details provided via text, email or call (may involve automated or pre-recorded means).  You may revoke this consent through any reasonable means.
                 Existing subscribers seeking support, please visit the <a href="https://elmstreettechnology.zendesk.com/hc/en-us">Elevate Help Center</a>.
               </div>
