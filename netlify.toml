@@ -108,3 +108,8 @@
   from = "/playbook"
   to = "https://sites.google.com/tryelevate.com/branding/home"
   status = 301
+
+  [[redirects]]
+  from = "/playbook"
+  to = "https://sites.google.com/tryelevate.com/branding/home"
+  status = 301
