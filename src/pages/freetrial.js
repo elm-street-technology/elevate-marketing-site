@@ -35,7 +35,7 @@ const Freetrial = ({ children, classes, data, tags }) => {
           <div className={classes.centerHeading}>
                             
                             <div className={classes.heading} style={{color:"#ffffff"}}><span style={{color:"#f9ea6c",}}>CYBER MONDAY</span><br />
-GET THE ELEVATE CRM FOR $1<span style={{fontSize:"19px"}}><sup>*</sup></span><br />
+GET THE ELEVATE CRM - FIRST MONTH FREE<span style={{fontSize:"19px"}}><sup>*</sup></span><br />
 ANY LEVEL. ANY PACKAGE.
 </div>
                             <div className={classes.subtext} style={{color:"#f7f7f7", fontSize:"18px"}}>Voted the #1 Social Media CRM for Real Estate Agents in 2022, by TheClose.com.
@@ -74,7 +74,7 @@ ANY LEVEL. ANY PACKAGE.
 
                 <div className={classes.column2} style={{padding:"30px", textAlign:"center"}}>
                 <div className={classes.Heading2}><span style={{color:"#f9ea6c",}}>CYBER MONDAY SPECIAL</span><br />
-DECEMBER FOR A DOLLAR<span style={{fontSize:"19px"}}><sup>*</sup></span>
+FIRST MONTH IS FREE<span style={{fontSize:"19px"}}><sup>*</sup></span>
 </div>
                 <div className={classes.subtext} style={{color:"#f7f7f7"}}>
                 Elevate's CRM offers busy real estate professionals a comprehensive, all-in-one lead generation &amp; nurturing solution that is UNPARALLELED in the space.
@@ -183,7 +183,8 @@ leads through to conversion</div>
 
 <div style={{backgroundColor:"#ffffff", paddingBottom:"60px", textAlign:"center", paddingRight:"30px", paddingLeft:"30px"}}>
         <h1 className={classes.Heading2} style={{paddingTop:"70px"}}>
-        Get Elm Street Technology's Elevate CRM for $1<span style={{fontSize:"19px"}}><sup>*</sup></span> Today!
+        Get Elm Street Technology's Elevate CRM<br />
+        Today &amp; the First Month is on Us!<span style={{fontSize:"19px"}}><sup>*</sup></span>
         </h1>
        
         <FormFreetrial
