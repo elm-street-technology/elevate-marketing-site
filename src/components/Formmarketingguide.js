@@ -163,6 +163,7 @@ class Formmarketingguide extends Component {
               .then((res) => {
                 if (res.message === "ok") {
                   this.setState({ formState: "success" });
+                  dataLayer.push({'event': 'form-success'});
 
                   if (window.fbq) {
                     window.fbq("track", "Lead");

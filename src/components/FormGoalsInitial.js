@@ -85,6 +85,7 @@ class FormGoalsInitial extends Component {
               .then((res) => {
                 if (res.message === "ok") {
                     this.setState({ formState: "success" });
+                  dataLayer.push({'event': 'form-success'});
                     console.log("success");
                     this.setState({ showError: false });
 
