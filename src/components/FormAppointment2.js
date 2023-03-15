@@ -133,7 +133,7 @@ You can also speak to a member of our lead generation team immediately by callin
               .then((res) => {
                 if (res.message === "ok") {
                   this.setState({ formState: "success" });
-
+                  dataLayer.push({'event': 'form-success'});
                   if (window.fbq) {
                     window.fbq("track", "Lead");
                   }

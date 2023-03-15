@@ -112,4 +112,4 @@
 [[redirects]]
   from = "/freetrial"
   to = "/"
-  status = 302
+  status = 301

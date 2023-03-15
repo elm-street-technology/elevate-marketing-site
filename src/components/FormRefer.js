@@ -146,6 +146,7 @@ class FormRefer extends Component {
               .then((res) => {
                 if (res.message === "ok") {
                   this.setState({ formState: "success" });
+                  dataLayer.push({'event': 'form-success'});
                   this.setState({ firstName: values.firstname });
 
                   if (window.fbq) {
