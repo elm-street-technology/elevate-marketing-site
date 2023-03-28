@@ -3,11 +3,14 @@ let contentfulConfig;
 
 try {
   contentfulConfig = require("./.contentful");
+  //console.log(contentfulConfig);
 } catch (e) {
   contentfulConfig = {
     production: {
-      spaceId: process.env.SPACE_ID,
-      accessToken: process.env.ACCESS_TOKEN,
+      spaceId: "mzr4br7puxv0",
+      accessToken: "e5ab27fdd3a934eb2f4a6f36cfbacfd312ecb38fa7fe442a85728e150dfdda71"
+      // spaceId: process.env.SPACE_ID,
+      // accessToken: process.env.ACCESS_TOKEN,
     },
   };
 } finally {
