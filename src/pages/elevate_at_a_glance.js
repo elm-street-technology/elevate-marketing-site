@@ -92,8 +92,7 @@ Nurture your past, present &amp; future clients with intelligent campaigns and w
                                   &amp; Creative Services</div>
                                 
                                   
-                                 Looking to deliver a truly custom &amp; unique brand experience? Visit <a href="https://3sixtyfive.agency" target="_blank" className={classes.bold}>3sixtyfive.agency</a>,
-                                 our full service digital and creative ad agency offering a variety of services including brand consulting,
+                                 Looking to deliver a truly custom &amp; unique brand experience? Our full service digital and creative ad agency offering a variety of services including brand consulting,
                                  creative design, campaign development, execution and analysis, copywriting, and more.
                         </div>
                 </div>
