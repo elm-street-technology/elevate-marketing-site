@@ -60,24 +60,33 @@ const subscribe_today = ({ classes }) => {
         </div>
         
                 <div className={classes.productCol} style={{ textAlign: "left", paddingLeft:"10px", paddingRight:"10px",}}>
-                <div className={classes.bold} style={{color:"#4ab8ac"}}>IDX WEBSITE</div>
-                <div className={classes.bold} style={{color:"#4ab8ac"}}>ADV. PRODUCTIVITY CRM</div>
-                <div className={classes.bold} style={{color:"#4ab8ac"}}>EMAIL MARKETING CAMPAIGNS</div>
-                <div className={classes.bold} style={{color:"#4ab8ac"}}>CMA WIZARD</div>
-                <div className={classes.bold} style={{color:"#57585b"}}>BLOG</div>
-                <div className={classes.bold} style={{color:"#57585b"}}>SOCIAL MEDIA SERVICES</div>
-                <div className={classes.bold} style={{color:"#57585b"}}>MLS Feed Listing Pushes:</div>
-                <div style={{color:"#57585b"}}>• Facebook</div>
-                <div style={{color:"#57585b"}}>• LinkedIn</div>
-                <div style={{color:"#57585b"}}>• Twitter</div>
-                <div style={{color:"#57585b"}}>• YouTube</div>
+                <div className={classes.bold} style={{color:"#57585b"}}>IDX Website</div>
+                <div className={classes.bold} style={{color:"#57585b"}}>Adv. Productivity CRM</div>
+                <div className={classes.bold} style={{color:"#57585b"}}>Email Marketing Campaigns</div>
+                <div className={classes.bold} style={{color:"#57585b"}}>Market Updates</div>
+                <div className={classes.bold} style={{color:"#57585b"}}>Social Media Syndication</div> 
+                <div style={{color:"#57585b", fontSize:"14px"}}>• Facebook Business Page</div>
+                <div style={{color:"#57585b", fontSize:"14px"}}>• LinkedIn Profile Page</div>
+                <div style={{color:"#57585b", fontSize:"14px"}}>• Twitter</div>
+                <div style={{color:"#57585b", fontSize:"14px"}}>• YouTube (Listing Videos)</div>
+                <div className={classes.bold} style={{color:"#57585b"}}>Property Promoter</div>
+                <div className={classes.bold} style={{color:"#57585b"}}>Blog Feature</div>
+                <div className={classes.bold} style={{color:"#57585b"}}>Branded Consumer Portal</div>
+              
                
                 </div>
 
                 <div>
                 <img src={Line} style={{ width:"100%", maxWidth:"200px"}}/>
                 <br />
-                <span className={classes.bold} style={{color:"#4ab8ac"}}>6 MONTH AGREEMENT</span>
+                <span className={classes.bold} style={{color:"#4ab8ac"}}>
+                MONTHLY:<br />
+                <strike>$350/m</strike> <span style={{color:"#f69c26"}}>$200/m</span><br />
+                SET-UP FEE: $500<br /><br />
+
+                ANNUAL:<br />
+                <strike>$3,360</strike> <span style={{color:"#f69c26"}}>$1,920</span>
+                </span>
                 
 
 
@@ -85,7 +94,8 @@ const subscribe_today = ({ classes }) => {
 <a target="_blank" href="https://elmstreettechnology.recurly.com/subscribe/edigitalmarketingsystem?subscription[coupon_code]=200setup" className={classes.getStartedLinkignite}>
                   SUBSCRIBE NOW
                     </a>
-
+                   
+                <span className={classes.bold} style={{color:"#4ab8ac"}}>12 MONTH AGREEMENT</span>
                                       
                   </div>
 
@@ -104,26 +114,34 @@ const subscribe_today = ({ classes }) => {
                 <div className={classes.bold} style={{color:"#f15953"}}>LEAD GENERATION</div>
                 <div className={classes.bold} style={{color:"#f15953"}}>• 7 - 10 Leads /Month</div>
                 <div className={classes.bold} style={{color:"#f15953"}}>• Google/PPC Ads</div>
-                <div className={classes.bold} style={{color:"#f15953"}}>• Lead Scrubbing Service</div>
-                <div className={classes.bold} style={{color:"#4ab8ac"}}>IDX WEBSITE</div>
-                <div className={classes.bold} style={{color:"#4ab8ac"}}>ADV. PRODUCTIVITY CRM</div>
-                <div className={classes.bold} style={{color:"#4ab8ac"}}>EMAIL MARKETING CAMPAIGNS</div>
-                <div className={classes.bold} style={{color:"#4ab8ac"}}>CMA WIZARD</div>
-                <div className={classes.bold} style={{color:"#57585b"}}>BLOG</div>
-                <div className={classes.bold} style={{color:"#57585b"}}>SOCIAL MEDIA SERVICES</div>
-                <div className={classes.bold} style={{color:"#57585b"}}>MLS Feed Listing Pushes:</div>
-                <div style={{color:"#57585b"}}>• Facebook</div>
-                <div style={{color:"#57585b"}}>• LinkedIn</div>
-                <div style={{color:"#57585b"}}>• Twitter</div>
-                <div style={{color:"#57585b"}}>• YouTube</div>
+                <div className={classes.bold} style={{color:"#f15953"}}>• Lead Concierge Service</div>
+                <br />
+                <div className={classes.bold} style={{color:"#57585b"}}>IDX Website</div>
+                <div className={classes.bold} style={{color:"#57585b"}}>Adv. Productivity CRM</div>
+                <div className={classes.bold} style={{color:"#57585b"}}>Email Marketing Campaigns</div>
+                <div className={classes.bold} style={{color:"#57585b"}}>Market Updates</div>
+                <div className={classes.bold} style={{color:"#57585b"}}>Social Media Syndication</div> 
+                <div style={{color:"#57585b", fontSize:"14px"}}>• Facebook Business Page</div>
+                <div style={{color:"#57585b", fontSize:"14px"}}>• LinkedIn Profile Page</div>
+                <div style={{color:"#57585b", fontSize:"14px"}}>• Twitter</div>
+                <div style={{color:"#57585b", fontSize:"14px"}}>• YouTube (Listing Videos)</div>
+                <div className={classes.bold} style={{color:"#57585b"}}>Property Promoter</div>
+                <div className={classes.bold} style={{color:"#57585b"}}>Blog Feature</div>
+                <div className={classes.bold} style={{color:"#57585b"}}>Branded Consumer Portal</div>
                
                 </div>
 
                 <div>
                 <img src={Line} style={{ width:"100%", maxWidth:"200px"}}/>
                 <br />
-                <span className={classes.bold} style={{color:"#238076"}}>6 MONTH AGREEMENT</span>
-                <br />
+                <span className={classes.bold} style={{color:"#238076"}}>
+                MONTHLY:<br />
+                <strike>$600/m</strike> <span style={{color:"#f69c26"}}>$300/m</span><br />
+                SET-UP FEE: $500<br /><br />
+
+                ANNUAL:<br />
+                <strike>$5,760</strike> <span style={{color:"#f69c26"}}>$2,880</span>
+                </span>
                  
                   
 
@@ -132,7 +150,7 @@ const subscribe_today = ({ classes }) => {
 <a target="_blank" href="https://elmstreettechnology.recurly.com/subscribe/dmsplus?subscription[coupon_code]=200setup" className={classes.getStartedLinkignite}>
                   SUBSCRIBE NOW
                     </a>
-                    
+                    <span className={classes.bold} style={{color:"#238076"}}>12 MONTH AGREEMENT</span>
            
 
                                       
@@ -152,20 +170,20 @@ const subscribe_today = ({ classes }) => {
                 <div className={classes.bold} style={{color:"#f15953"}}>LEAD GENERATION</div>
                 <div className={classes.bold} style={{color:"#f15953"}}>• 20 - 30 Leads /Month</div>
                 <div className={classes.bold} style={{color:"#f15953"}}>• Google/PPC Ads</div>
-                <div className={classes.bold} style={{color:"#f15953"}}>• Facebook Ads</div>
-                <div className={classes.bold} style={{color:"#f15953"}}>• Lead Scrubbing Service</div>
-                <div className={classes.bold} style={{color:"#f15953"}}>• Elevate Support</div>
-                <div className={classes.bold} style={{color:"#4ab8ac"}}>IDX WEBSITE</div>
-                <div className={classes.bold} style={{color:"#4ab8ac"}}>ADV. PRODUCTIVITY CRM</div>
-                <div className={classes.bold} style={{color:"#4ab8ac"}}>EMAIL MARKETING CAMPAIGNS</div>
-                <div className={classes.bold} style={{color:"#4ab8ac"}}>CMA WIZARD</div>
-                <div className={classes.bold} style={{color:"#57585b"}}>BLOG</div>
-                <div className={classes.bold} style={{color:"#57585b"}}>SOCIAL MEDIA SERVICES</div>
-                <div className={classes.bold} style={{color:"#57585b"}}>MLS Feed Listing Pushes:</div>
-                <div style={{color:"#57585b"}}>• Facebook</div>
-                <div style={{color:"#57585b"}}>• LinkedIn</div>
-                <div style={{color:"#57585b"}}>• Twitter</div>
-                <div style={{color:"#57585b"}}>• YouTube</div>
+                <div className={classes.bold} style={{color:"#f15953"}}>• Lead Conceirge Service</div>
+<br />
+<div className={classes.bold} style={{color:"#57585b"}}>IDX Website</div>
+                <div className={classes.bold} style={{color:"#57585b"}}>Adv. Productivity CRM</div>
+                <div className={classes.bold} style={{color:"#57585b"}}>Email Marketing Campaigns</div>
+                <div className={classes.bold} style={{color:"#57585b"}}>Market Updates</div>
+                <div className={classes.bold} style={{color:"#57585b"}}>Social Media Syndication</div> 
+                <div style={{color:"#57585b", fontSize:"14px"}}>• Facebook Business Page</div>
+                <div style={{color:"#57585b", fontSize:"14px"}}>• LinkedIn Profile Page</div>
+                <div style={{color:"#57585b", fontSize:"14px"}}>• Twitter</div>
+                <div style={{color:"#57585b", fontSize:"14px"}}>• YouTube (Listing Videos)</div>
+                <div className={classes.bold} style={{color:"#57585b"}}>Property Promoter</div>
+                <div className={classes.bold} style={{color:"#57585b"}}>Blog Feature</div>
+                <div className={classes.bold} style={{color:"#57585b"}}>Branded Consumer Portal</div>
                
                 
                 </div>
@@ -174,8 +192,14 @@ const subscribe_today = ({ classes }) => {
                 <div>
                 <img src={Line} style={{ width:"100%", maxWidth:"200px"}}/>
                 <br />
-                <span className={classes.bold} style={{color:"#f15953"}}>6 MONTH AGREEMENT</span>
-                <br />
+                <span className={classes.bold} style={{color:"#f15953"}}>
+                MONTHLY:<br />
+                <strike>$1,500/m</strike> <span style={{color:"#f69c26"}}>$800/m</span><br />
+                SET-UP FEE: $500<br /><br />
+
+                ANNUAL:<br />
+                <strike>$2,500</strike> <span style={{color:"#f69c26"}}>$1,300</span>
+                </span>
 
 
              
@@ -186,7 +210,7 @@ const subscribe_today = ({ classes }) => {
                   SUBSCRIBE NOW
                     </a>
                     
-                
+                    <span className={classes.bold} style={{color:"#f15953"}}>12 MONTH AGREEMENT</span>
                   
                 </div>
                 
@@ -200,9 +224,9 @@ const subscribe_today = ({ classes }) => {
 
 <Container>
 <div style={{ textAlign: "center", padding: "20px", fontSize:"12px", lineHeight:"18px" }}>
-By subscribing to Elevate, I expressly consent that Elm Street or its agents may contact me at the numbers provided regarding the Elevate products or services, via live, automated or prerecorded call, text, or email. I am not required to enter into this agreement as a condition of any purchase. I can revoke this consent through any reasonable means. By subscribing to Elevate, I also agree to payment for the products and services ordered hereon and that sales tax may be charged where applicable. I also agree to the terms of cancellation policy on the back of this form including that set-up fees are non-refundable. I confirm I have read, understood and agree to the full <a target="_blank" href="https://tryelevate.com/terms-of-service" >Terms of Service</a> of the Elevate products.  I am purchasing as set forth at TryElevate.com. Visit TryElevate.com for full <a target="_blank" href="https://tryelevate.com/terms-of-service" >Terms of Service</a>, <a target="_blank" href="https://tryelevate.com/pricing-and-refund-policy" >Refund Policy</a>, <a target="_blank" href="https://tryelevate.com/privacy" >Privacy Policy</a> &amp; <a target="_blank" href="https://tryelevate.com/dmca" >DMCA Notice.</a>  Sales tax charged where applicable. Please note that setup fees are non-refundable.
+By signing this form, I expressly consent that Elm Street or its agents may contact me at the numbers provided regarding Elm Street products or services, via live, automated or prerecorded call, text or email. I am not required to enter into this agreement as a condition of any purchase. I can revoke this consent through any reasonable means. By signing this form, I also agree to payment for the products and services ordered herein and that sales tax may be charged where applicable. Annual subscription services are non-cancelable and non-refundable for the first 12 months.   I confirm that I have read, understood and agreed to the <a href="https://elmstreet.com/terms" target="_blank">Full Terms of Service</a> of the Elm Street products I am purchasing as set forth at elmstreet.com. Visit elmstreet.com/terms for complete <a href="https://elmstreet.com/terms" target="_blank">Terms of Service</a>, <a href="https://elmstreet.com/terms" target="_blank">Refund Policy,</a> <a href="https://elmstreet.com/privacy" target="_blank">Privacy Policy</a> &amp; <a href="https://elmstreet.com/dmca" target="_blank">DMCA Notice.</a> 
 <br /><br />
-Questions? - 877.218.9771
+Questions? 877-218-9771
 <br /><br />
 </div>
 </Container>
@@ -314,6 +338,7 @@ export default withStyles((theme) => ({
   },
   bold:{
     fontWeight:"700",
+    fontSize: "14px",
   },
   column:{
     width:"525px",
@@ -415,7 +440,7 @@ export default withStyles((theme) => ({
     fontWeight: "700",
     display: "block",
     letterSpacing: ".25px",
-    backgroundColor: "#f99406",
+    backgroundColor: "#f69c26",
     color: "#FFF",
     textDecoration: "none",
     padding: "8px 10px",

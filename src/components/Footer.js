@@ -113,18 +113,18 @@ const Footer = ({ classes }) => (
           <Link className={classes.link} to="/free_educational_guides">
             Free Educational Guides
           </Link>
-          <Link className={classes.link} to="/terms-of-service">
+          <a className={classes.link} href="https://elmstreet.com/terms" target="_blank">
             Terms of Service
-          </Link>
-          <Link className={classes.link} to="/pricing-and-refund-policy">
+          </a>
+          <a className={classes.link} href="https://elmstreet.com/terms" target="_blank">
             Pricing &amp; Refund Policy
-          </Link>
-          <Link className={classes.link} to="/privacy">
+          </a>
+          <a className={classes.link} href="https://elmstreet.com/privacy" target="_blank">
             Privacy Policy
-          </Link>
-          <Link className={classes.link} to="/dmca">
+          </a>
+          <a className={classes.link} href="https://elmstreet.com/dmca" target="_blank">
             DMCA Notice
-          </Link>
+          </a>
           <SocialLinks className={classes.social} />
         </div>
       </div>
