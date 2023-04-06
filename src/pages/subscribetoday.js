@@ -82,10 +82,7 @@ const subscribe_today = ({ classes }) => {
                 <span className={classes.bold} style={{color:"#4ab8ac"}}>
                 MONTHLY:<br />
                 <strike>$350/m</strike> <span style={{color:"#f69c26"}}>$200/m</span><br />
-                SET-UP FEE: $500<br /><br />
-
-                ANNUAL:<br />
-                <strike>$3,360</strike> <span style={{color:"#f69c26"}}>$1,920</span>
+                SET-UP FEE: $500<br />
                 </span>
                 
 
@@ -137,10 +134,7 @@ const subscribe_today = ({ classes }) => {
                 <span className={classes.bold} style={{color:"#238076"}}>
                 MONTHLY:<br />
                 <strike>$600/m</strike> <span style={{color:"#f69c26"}}>$300/m</span><br />
-                SET-UP FEE: $500<br /><br />
-
-                ANNUAL:<br />
-                <strike>$5,760</strike> <span style={{color:"#f69c26"}}>$2,880</span>
+                SET-UP FEE: $500<br />
                 </span>
                  
                   
@@ -195,10 +189,9 @@ const subscribe_today = ({ classes }) => {
                 <span className={classes.bold} style={{color:"#f15953"}}>
                 MONTHLY:<br />
                 <strike>$1,500/m</strike> <span style={{color:"#f69c26"}}>$800/m</span><br />
-                SET-UP FEE: $500<br /><br />
+                SET-UP FEE: $500<br />
 
-                ANNUAL:<br />
-                <strike>$2,500</strike> <span style={{color:"#f69c26"}}>$1,300</span>
+                
                 </span>
 
 
