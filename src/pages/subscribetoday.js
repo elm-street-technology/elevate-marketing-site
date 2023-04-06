@@ -53,7 +53,7 @@ const subscribe_today = ({ classes }) => {
       
         <div className={classes.top}>
         <div className={classes.infoboxGray2}>
-        <div className={classes.column4} style={{ textAlign: "center", paddingBottom: "35px" }}>
+        <div className={classes.column3} style={{ textAlign: "center", paddingBottom: "35px" }}>
           
           <div style={{ textAlign: "center",paddingBottom:"10px" }}>
           <img src={Dms} style={{ width:"100%", maxWidth:"90px"}}/>
@@ -101,7 +101,7 @@ const subscribe_today = ({ classes }) => {
           </div>
             </div>
             <div className={classes.infoboxGray2}>
-          <div className={classes.column4} style={{ textAlign: "center", paddingBottom: "35px" }}>
+          <div className={classes.column3} style={{ textAlign: "center", paddingBottom: "35px" }}>
           
           <div style={{ textAlign: "center",paddingBottom:"10px" }}>
           <img src={Dplus} style={{ width:"100%", maxWidth:"195px"}}/>
@@ -156,7 +156,7 @@ const subscribe_today = ({ classes }) => {
           </div>
 
           <div className={classes.infoboxGray2}>
-          <div className={classes.column4} style={{ textAlign: "center", paddingBottom: "35px" }}>
+          <div className={classes.column3} style={{ textAlign: "center", paddingBottom: "35px" }}>
           <div style={{ textAlign: "center",paddingBottom:"10px" }}>
           <img src={Elite} style={{ width:"100%", maxWidth:"110px"}}/>
         </div>
@@ -571,7 +571,7 @@ export default withStyles((theme) => ({
     minHeight: "180px",
 
     [theme.breakpoints[900]]: {
-      minHeight: "660px",
+      minHeight: "520px",
     },
   },
 
