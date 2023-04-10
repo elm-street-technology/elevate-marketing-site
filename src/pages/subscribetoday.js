@@ -109,7 +109,7 @@ const subscribe_today = ({ classes }) => {
         
                 <div className={classes.productCol} style={{ textAlign: "left", paddingLeft:"10px", paddingRight:"10px",  paddingBottom:"20px"}}>
                 <div className={classes.bold} style={{color:"#f15953"}}>LEAD GENERATION</div>
-                <div className={classes.bold} style={{color:"#f15953"}}>• 7 - 10 Leads /Month</div>
+                <div className={classes.bold} style={{color:"#f15953"}}>• 5 - 7 Leads /Month</div>
                 <div className={classes.bold} style={{color:"#f15953"}}>• Google/PPC Ads</div>
                 <div className={classes.bold} style={{color:"#f15953"}}>• Lead Concierge Service</div>
                 <br />
