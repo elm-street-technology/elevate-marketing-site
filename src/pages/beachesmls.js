@@ -122,7 +122,7 @@ Preferred pricing for members of Beaches MLS</div>
           leadsource="tryelevate.com:elevatedms" />
             
 <div className={classes.subtext2} style={{fontSize:"20px", lineHeight:"28px"}}>If you already have an Elevate account...</div>
-<a href="http://crm.yourelevate.com/" target="_blank" className={classes.buttonLink}>Access Your Account</a> 
+<a href="https://auth.yourelevate.com/saml/login?tenant=elevate" target="_blank" className={classes.buttonLink}>Access Your Account</a> 
               </div>
 
          
@@ -168,7 +168,7 @@ Preferred pricing for members of Beaches MLS</div>
           leadsource="tryelevate.com:elevatedms" />
             
 <div className={classes.subtext2} style={{fontSize:"20px", lineHeight:"28px"}}>If you already have an Elevate account...</div>
-<a href="http://crm.yourelevate.com/" target="_blank" className={classes.buttonLink}>Access Your Account</a> 
+<a href="https://auth.yourelevate.com/saml/login?tenant=elevate" target="_blank" className={classes.buttonLink}>Access Your Account</a> 
               </div>
 
          
@@ -222,7 +222,7 @@ Preferred pricing for members of Beaches MLS</div>
                             <div className={classes.Heading2}>If You Already Have an Account...</div>
                             <div className={classes.subtext2}>Access It Here.</div>    
 
-                            <a href="http://crm.yourelevate.com/" target="_blank" className={classes.buttonLink}>Access Your Account</a> 
+                            <a href="https://auth.yourelevate.com/saml/login?tenant=elevate" target="_blank" className={classes.buttonLink}>Access Your Account</a> 
                             
                         </div>
 
