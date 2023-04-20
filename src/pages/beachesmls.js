@@ -73,7 +73,7 @@ const Beachesmls = ({ children, classes, data, tags }) => {
 
                         <div style={{textAlign:"center", paddingRight:"35px", paddingLeft:"35px", paddingBottom:"55px",}}>
                             
-                            <div className={classes.subtext}>As a member of Beaches BLS, Elevate is your approved supplier of done-for-you social media marketing, automated marketing templates and campaigns, lead generation and conversion tools, IDX websites, CRM, blog content creation, and more!
+                            <div className={classes.subtext}>As a member of BeachesMLS, Elevate is your approved supplier of done-for-you social media marketing, automated marketing templates and campaigns, lead generation and conversion tools, IDX websites, CRM, blog content creation, and more!
 <br /><br />
 The best part? All members of BeachesMLS receive access to preferred pricing on tools that are designed to help make your life easier, and your business grow. Explore the tools and resources available below.
 </div>     
