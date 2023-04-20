@@ -37,6 +37,7 @@ const Template = ({ children, classes, location }) => {
         location.pathname == "/gettingsocialwithdylan/" || location.pathname == "/gettingsocialwithdylan" ||
         location.pathname == "/30daymarketingchallenge/" || location.pathname == "/30daymarketingchallenge" ||
         location.pathname == "/personalgrowthplan/" || location.pathname == "/personalgrowthplan" ||
+        location.pathname == "/beachesmls/" || location.pathname == "/beachesmls" ||
         location.pathname == "/leadgenguide/" || location.pathname == "/leadgenguide") {
       return <FooterLander />;
     }
@@ -67,6 +68,7 @@ const Template = ({ children, classes, location }) => {
         location.pathname == "/gettingsocialwithdylan/" || location.pathname == "/gettingsocialwithdylan" ||
         location.pathname == "/30daymarketingchallenge/" || location.pathname == "/30daymarketingchallenge" ||
         location.pathname == "/personalgrowthplan/" || location.pathname == "/personalgrowthplan" ||
+        location.pathname == "/beachesmls/" || location.pathname == "/beachesmls" ||
         location.pathname == "/leadgenguide/" || location.pathname == "/leadgenguide") {
       return <HeaderLander />;
     }
