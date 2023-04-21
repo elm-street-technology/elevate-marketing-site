@@ -81,7 +81,7 @@ class FormBeaches extends Component {
             email: "",
             phone: "",
             mls_number: "",
-            form: "form_product",
+            form: "beaches_mls",
             list: this.props.listid,
             meetingdate: '',
             meetingtime: '',
