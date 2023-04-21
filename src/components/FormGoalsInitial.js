@@ -72,18 +72,15 @@ class FormGoalsInitial extends Component {
               utm_term: (window.utm_tags) ? window.utm_tags.term : "",
             };
             return fetch(
-              "https://easyemerge.com/plugins/elevate_form.php",
+              "https://hooks.zapier.com/hooks/catch/4496703/3uy9gh0/",
               {
                 method: "POST",
-                headers: {
-                  "Content-Type": "application/json; charset=utf-8",
-                },
                 body: JSON.stringify(body),
               }
             )
               .then((response) => response.json())
               .then((res) => {
-                if (res.message === "ok") {
+                if (res.status === "success") {
                     this.setState({ formState: "success" });
                   dataLayer.push({'event': 'form-success'});
                     console.log("success");

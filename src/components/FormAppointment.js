@@ -120,18 +120,15 @@ You can also speak to a member of our lead generation team immediately by callin
             utm_term: window.utm_tags ? window.utm_tags.term : "", 
             demo_request_date: meeting_request};
             return fetch(
-              "https://easyemerge.com/plugins/elevate_form.php",
+              "https://hooks.zapier.com/hooks/catch/4496703/3uy9gh0/",
               {
                 method: "POST",
-                headers: {
-                  "Content-Type": "application/json; charset=utf-8",
-                },
                 body: JSON.stringify(body),
               }
             )
               .then((response) => response.json())
               .then((res) => {
-                if (res.message === "ok") {
+                if (res.status === "success") {
                   this.setState({ formState: "success" });
                   dataLayer.push({'event': 'form-success'});
 
