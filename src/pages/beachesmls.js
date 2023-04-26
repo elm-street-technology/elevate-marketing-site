@@ -13,7 +13,8 @@ import Beacheslogo from "../images/beachesmls.png";
 import Elevatelogo from "../images/elevate_tag.svg";
 import Beacheslogow from "../images/beachesmlsw.png";
 import Elevatelogow from "../images/elevate_tagw.svg";
-import Quote from "../images/quote.png";
+import Spnew from "../images/sp-new.gif";
+import Dmsnew from "../images/dms-new.gif";
 import Sp1 from "../images/sp1.png";
 import Cma from "../images/prodcma.png";
 import Dms2 from "../images/dms2.png";
@@ -39,14 +40,14 @@ const Beachesmls = ({ children, classes, data, tags }) => {
       </Helmet>
       <SEO postNode={postNode} pagePath="Beachesmls" customTitle />
 
-<div style={{backgroundImage:"url("+Beachbg+")", backgroundSize:"cover", backgroundPosition:"centerTop"}}>
+<div style={{backgroundImage:"url("+Beachbg+")", backgroundSize:"cover", backgroundPosition:"CenterTop"}}>
 <Container>
-      <div className={classes.top} style={{paddingBottom:"75px", paddingRight:"35px", paddingLeft:"35px",}}>
+      <div className={classes.top} style={{paddingBottom:"95px", paddingRight:"35px", paddingLeft:"35px", paddingTop:"40px"}}>
           <div className={classes.centerHeading}>
                             <img src={Elevatelogo} width="100%"  style={{paddingBottom:"20px",maxWidth:"160px", marginRight:"12px"}} />
                             <img src={Beacheslogo} width="100%"  style={{paddingBottom:"20px",maxWidth:"280px", marginLeft:"12px"}} />
-                            <div className={classes.heading} style={{fontSize:"42px", lineHeight:"48px", paddingBottom:"8px"}}>Marketing Done For You!</div>
-                            <div className={classes.subtext2} style={{fontSize:"20px", lineHeight:"28px"}}>Automated Social Media Marketing<br />
+                            <div className={classes.heading} style={{fontSize:"50px", lineHeight:"55px", paddingBottom:"8px"}}>Marketing Done For You!</div>
+                            <div className={classes.subtext2} style={{fontSize:"18px", lineHeight:"24px"}}>Automated Social Media Marketing
                             &amp; Lead Conversion Services by Elevate<br/>
                             
                             </div>
@@ -67,11 +68,21 @@ const Beachesmls = ({ children, classes, data, tags }) => {
 
 
 
+
+
+
+
+
+
+
+
+
+
 <div style={{paddingTop:"78px",}}>
 
             <Container>
 
-                        <div style={{textAlign:"center", paddingRight:"35px", paddingLeft:"35px", paddingBottom:"55px",}}>
+                        <div style={{textAlign:"center", paddingRight:"35px", paddingLeft:"35px", paddingBottom:"65px",}}>
                             
                             <div className={classes.subtext}>As a member of BeachesMLS, Elevate is your approved supplier of done-for-you social media marketing, automated marketing templates and campaigns, lead generation and conversion tools, IDX websites, CRM, blog content creation, and more!
 <br /><br />
@@ -86,103 +97,76 @@ The best part? All members of BeachesMLS receive access to preferred pricing on 
 
 
 
+<div style={{paddingBottom:"50px",}}>
+        <Container>
+            <div className={classes.flexContainer}>
+                <div className={classes.flexItem} style={{paddingBottom:"20px", paddingLeft:"15px", paddingRight:"15px"}}>
 
+                   
+                <img src={Spnew} width="100%"  style={{paddingBottom:"20px",maxWidth:"800px",}} />
+                    
 
-
-<Container>
-      
-      
-      <div className={classes.top}>
-      <div className={classes.infoboxGray2}>
-      <div className={classes.column2} style={{ textAlign: "center", paddingBottom: "15px" }}>
-        
-        <div style={{ textAlign: "center",paddingBottom:"10px" }}>
-        
-      </div>
-      
-              <div className={classes.productCol} style={{ paddingLeft:"10px", paddingRight:"10px",}}>
-              <img src={Splogo} width="100%"  style={{paddingBottom:"18px", paddingTop:"13px",maxWidth:"290px"}} />
-              <div className={classes.Heading3} style={{fontSize:"20px", lineHeight:"28px"}}>The Power of Social Media</div>
+                </div>
+                <div className={classes.flexItem} style={{paddingLeft:"40px", paddingRight:"40px", paddingBottom:"20px",}}>
+                <img src={Splogo} width="100%"  style={{paddingBottom:"18px", paddingTop:"13px",maxWidth:"290px"}} />
+                <div className={classes.Heading3} style={{fontSize:"20px", lineHeight:"28px"}}>The Power of Social Media</div>
               <div className={classes.subtext}>Automate your social media marketing so you can focus on what matters the most...growing your sphere &amp; selling more homes, faster.
               <br /><br />
-              • Customized social branding on Facebook,<br />
-Twitter, LinkedIn &amp; YouTube.<br />
+              • Customized branding on social media.<br />
 • Relevant, lifestyle content posted weekly.<br />
 • Automated posts of new listings &amp; listing updates.<br />
 • Automated creation of YouTube video tours.<br />
-• Content-rich consumer blog with weekly posts.
+• Content-rich consumer blog with weekly posts.</div>
 <br /><br />
-<div className={classes.Heading3}>Learn More Today</div>
-Preferred pricing for members of Beaches MLS</div>
-
-<FormBeaches
-          subject="Beaches MLS Social Pro Product Lead"
-          listid="107387"
-          webhook="5b144544-e06d-11ed-9ef6-bc764e046a9d"
-          leadsource="tryelevate.com:beachesmls" />
-            
-<div className={classes.subtext2} style={{fontSize:"20px", lineHeight:"28px"}}>If you already have an Elevate account...</div>
-<a href="https://auth.yourelevate.com/saml/login?tenant=elevate" target="_blank" className={classes.buttonLink}>Access Your Account</a> 
-              </div>
-
-         
+<a href="#demo" className={classes.buttonLink2}>Learn More Today</a><br /><br />
+<div className={classes.subtext} style={{fontSize:"12px", paddingTop:"6px"}}>Preferred pricing for members of Beaches MLS</div>
+                    
+                </div>
+            </div>
+        </Container>
+</div>
 
 
 
-        </div>
-          </div>
 
-          <div className={classes.infoboxGray2}>
-      <div className={classes.column2} style={{ textAlign: "center", paddingBottom: "15px" }}>
-        
-        <div style={{ textAlign: "center",paddingBottom:"10px" }}>
-        
-      </div>
-      
-              <div className={classes.productCol} style={{ paddingLeft:"10px", paddingRight:"10px",}}>
-              <img src={Dmslogo} width="100%"  style={{paddingBottom:"18px", paddingTop:"13px",maxWidth:"120px"}} />
+<div style={{paddingBottom:"50px",}}>
+        <Container>
+            <div className={classes.flexContainer}>
+
+            <div className={classes.flexItem} style={{paddingLeft:"40px", paddingRight:"40px", paddingBottom:"20px",}}>
+            <img src={Dmslogo} width="100%"  style={{paddingBottom:"18px", paddingTop:"13px",maxWidth:"120px"}} />
               <div className={classes.Heading3} style={{fontSize:"20px", lineHeight:"28px"}}>The Power of Marketing</div>
               <div className={classes.subtext}>Build your business, increase your sphere &amp; look like a marketing expert
 with an all-in-one solution designed to capture, engage &amp; convert.
               <br /><br />
-              • Advanced, intuitive CRM with<br />
-              powerful performance metrics.<br />
+              • Advanced, intuitive CRM with performance metrics.<br />
               • Morning reports with the latest activity data.<br />
               • IDX website.<br />
               • Robust blog with automated posts.<br />
               • Automated social media posts weekly.<br />
               • Intuitive CMA Wizard.<br />
               • Email marketing templates, campaigns &amp; image library.<br />
-              • Customized social branding on Facebook,<br />
-              Twitter, LinkedIn &amp; YouTube.<br />
-              • Automated creation of YouTube video tours.
+              • Customized branding on social media.<br />
+              • Automated creation of YouTube video tours.</div>
 
-<br /><br />
-<div className={classes.Heading3}>Learn More Today</div>
-Preferred pricing for members of Beaches MLS</div>
-
-<FormBeaches
-          subject="Beaches MLS DMS Product Lead"
-          listid="107387"
-          webhook="5b144544-e06d-11ed-9ef6-bc764e046a9d"
-          leadsource="tryelevate.com:beachesmls" />
-            
-<div className={classes.subtext2} style={{fontSize:"20px", lineHeight:"28px"}}>If you already have an Elevate account...</div>
-<a href="https://auth.yourelevate.com/saml/login?tenant=elevate" target="_blank" className={classes.buttonLink}>Access Your Account</a> 
-              </div>
-
-         
+              <br /><br />
+<a href="#demo" className={classes.buttonLink2}>Learn More Today</a><br /><br />
+<div className={classes.subtext} style={{fontSize:"12px", paddingTop:"6px"}}>Preferred pricing for members of Beaches MLS</div>
+                    
+                </div>
 
 
+                <div className={classes.flexItem} style={{paddingBottom:"20px", paddingLeft:"15px", paddingRight:"15px"}}>
 
-        </div>
-          </div>
+                   
+                <img src={Dmsnew} width="100%"  style={{paddingBottom:"20px",maxWidth:"800px",}} />
+                    
 
-
-
-
-        </div>
-    </Container>
+                </div>
+               
+            </div>
+        </Container>
+</div>
 
 
 
@@ -194,8 +178,15 @@ Preferred pricing for members of Beaches MLS</div>
 
 
 
+
+
+
+
+
+
+    <a id="demo"></a>
 <div style={{backgroundColor:"#ffffff", paddingBottom:"60px", textAlign:"center", paddingRight:"30px", paddingLeft:"30px"}}>
-        <h1 className={classes.Heading2} style={{paddingTop:"70px"}}>
+        <h1 className={classes.Heading2} style={{paddingTop:"40px"}}>
         Not Sure Which Program Fits Your Business Needs?
         </h1>
         <h2 className={classes.subtext2}>Connect with a success coach today to find the perfect solution.</h2>
@@ -357,6 +348,23 @@ export default withStyles((theme) => ({
     marginBottom: "10px",
   },
 
+  buttonLink2: {
+    minWidth: "280px",
+    maxWidth: "280px",
+    alignContent: "left",
+    justifyContent: "left",
+    fontSize: "16px",
+    fontWeight: "700",
+    letterSpacing: ".25px",
+    backgroundColor: "#32c4b9",
+    color: "#FFF",
+    textDecoration: "none",
+    padding: "16px",
+    borderRadius: "4px",
+    margin: "16px auto",
+    marginBottom: "10px",
+  },
+
   flexContainer: {
     padding: "0",
     margin: '0',
@@ -379,7 +387,7 @@ export default withStyles((theme) => ({
     [theme.breakpoints[900]]: {
         maxWidth: "50%",
         width: "50%",
-        paddingRight: "20px",
+        paddingRight: "25px",
         paddingBottom: "0px",
     },
   },
