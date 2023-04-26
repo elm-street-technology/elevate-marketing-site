@@ -100,7 +100,7 @@ const HeaderNavDesktop = ({ classes, className }) => {
         <ul className={classes.dropDown}>
           <a
             className={classes.listItemLink}
-            href="https://elmstreettechnology.zendesk.com/hc/en-us"
+            href="https://support.tryelevate.com/s/"
             target="_blank"
             rel="noreferrer noopener"
           >

@@ -93,7 +93,7 @@ const HeaderNavMobile = ({ classes, className, onMenuClose }) => {
         <ul className={classes.dropDown}>
           <a
             className={classes.listItemLink}
-            href="https://elmstreettechnology.zendesk.com/hc/en-us"
+            href="https://support.tryelevate.com/s/"
             target="_blank"
           >
             <li className={classes.listItem}>Help Center</li>

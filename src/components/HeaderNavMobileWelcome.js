@@ -20,7 +20,7 @@ const HeaderNavMobileWelcome = ({ classes, className, onMenuClose }) => {
       <Link className={classes.listItemLink} to="/webinars"><div className={classes.navItem}>Webinars</div></Link>
       </div>
       <div className={classes.link}>
-      <Link className={classes.listItemLink} to="https://elmstreettechnology.zendesk.com/hc/en-us" target="_blank"><div className={classes.navItem}>Help Center</div></Link>
+      <Link className={classes.listItemLink} to="https://support.tryelevate.com/s/" target="_blank"><div className={classes.navItem}>Help Center</div></Link>
       </div>
 
       <div className={classes.link}>

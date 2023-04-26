@@ -19,7 +19,7 @@ const HeaderNavDesktopWelcome = ({ classes, className }) => {
       </div>
       <div className={classes.link}>
         <div className={classes.navItem}>
-        <Link className={classes.listItemLink} to="https://elmstreettechnology.zendesk.com/hc/en-us" target="_blank">Help Center</Link>
+        <Link className={classes.listItemLink} to="https://support.tryelevate.com/s/" target="_blank">Help Center</Link>
         </div>
       </div>
       <div className={classes.link}>
