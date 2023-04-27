@@ -4,6 +4,7 @@ import { Formik, Form, Field } from "formik";
 import * as Yup from "yup";
 import Alert from "elevate-ui/Alert";
 import Input from "elevate-ui/Input";
+import CheckboxGroup from "elevate-ui/CheckboxGroup";
 import RadioGroup from "elevate-ui/RadioGroup";
 import Typography from "elevate-ui/Typography";
 import withStyles from "elevate-ui/withStyles";
@@ -81,7 +82,7 @@ class FormBeaches extends Component {
             email: "",
             phone: "",
             mls_number: "",
-            form: "form_product",
+            form: "beaches_mls",
             list: this.props.listid,
             meetingdate: '',
             meetingtime: '',
@@ -177,7 +178,7 @@ class FormBeaches extends Component {
                     });
                   }
                   if (window.ga) {
-                    window.ga('send','event','form','form_completed','bright');
+                    window.ga('send','event','form','form_completed','beaches');
                   }
                 } else {
                   this.setState({ formState: "error" });
@@ -236,9 +237,23 @@ class FormBeaches extends Component {
                 component={Input}
                 className={classes.field}
               />
-                  
-              
-           
+              <Field
+                id="interests"
+                name="interests"
+                label="I am interested in:  (select all that apply)"
+                component={CheckboxGroup}
+                items={[
+                  {
+                    label: "Social Pro",
+                    value: "Social Pro",
+                  },
+                  {
+                    label: "DMS",
+                    value: "DMS",
+                  },
+                ]}
+                className={classes.field}
+              />    
               <button
                 type="submit"
                 className={classes.signUpBtn}

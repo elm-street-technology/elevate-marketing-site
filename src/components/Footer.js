@@ -96,7 +96,7 @@ const Footer = ({ classes }) => (
           <div className={classes.section}>Support</div>
           <a
             className={classes.link}
-            href="https://elmstreettechnology.zendesk.com/hc/en-us"
+            href="https://support.tryelevate.com/s/"
             target="_blank"
           >
             Help Center
