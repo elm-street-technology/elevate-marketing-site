@@ -43,7 +43,7 @@ const Success = ({ children, classes, data, tags }) => {
           <img src={Elevatew} style={{width:"100%", maxWidth:"250px", paddingBottom:"20px"}}/>
 
                             <div className={classes.heading} style={{color:"#ffffff", paddingBottom:"10px"}}>The Power of Marketing</div>
-                            <div className={classes.subtext2} style={{color:"#f7f7f7", fontSize:"18px", lineHeight:"24px"}}>Be in front of more people, more often.
+                            <div className={classes.subtext2} style={{color:"#f7f7f7", fontSize:"18px", lineHeight:"24px"}}>Be in front of more people, more often with the Elevate CRM.
 
 <div style={{ textAlign: "center", paddingTop: "24px" }}>
                  <a href="#demo" className={classes.buttonLink}>Request a Demo</a>
@@ -72,8 +72,9 @@ const Success = ({ children, classes, data, tags }) => {
 
                         <div style={{textAlign:"center", paddingRight:"35px", paddingLeft:"35px", paddingBottom:"35px"}}>
                             <div className={classes.Heading2}>Key Highlights</div>
-                            <div className={classes.subtext}>Build your business, increase your sphere &amp; look like<br />
-                            a marketing rockstar with an all-in-one solution designed to capture, engage &amp; convert.</div>     
+                            <div className={classes.subtext}>Build your business, increase your sphere<br />
+                            &amp; look like a marketing rockstar with an all-in-onee<br />
+                            solution designed to capture, engage &amp; convert.</div>     
                             
                         </div>
             </Container>
@@ -147,7 +148,7 @@ CMA Wizard</div>
 </Container>
 </div>
 
-<div style={{paddingTop:"40px", backgroundImage:"url("+Fadebg+")", backgroundSize:"cover", backgroundPosition:"centerBottom"}}>
+<div style={{paddingTop:"40px", backgroundImage:"url("+Fadebg+")", backgroundSize:"cover", backgroundPosition:"centerBottom", textAlign:"center"}}>
 <Container>
 <div className={classes.top} style={{textAlign:"center"}}>
 
@@ -189,7 +190,7 @@ YouTube video tours</div>
 <a id="demo"></a>
 <div style={{backgroundColor:"#ffffff", paddingBottom:"60px", textAlign:"center", paddingRight:"30px", paddingLeft:"30px"}}>
         <h1 className={classes.Heading2} style={{paddingTop:"80px"}}>
-        Take a Tour of Elevate Today
+        Take a Tour of Elevate
         </h1>
         <h2 className={classes.subtext}>Schedule 15-minutes with an Elevate Success Coach to explore Elevate's marketing power.</h2>
         <FormProduct
@@ -213,8 +214,8 @@ YouTube video tours</div>
         
                         <div style={{textAlign:"center", paddingRight:"35px", paddingLeft:"35px", paddingBottom:"25px"}}>
                             <div className={classes.Heading2}>The Power of Success</div>
-                            <div className={classes.subtext}>Nothing feels better than happy clients celebrating<br />
-their productivity, success &amp; growth using Elevate.</div>     
+                            <div className={classes.subtext}>Nothing feels better than happy clients<br />
+                            celebrating their productivity, success &amp; growth using Elevate.</div>     
                             
                         </div>
     <Container>
@@ -315,6 +316,7 @@ export default withStyles((theme) => ({
     paddingRight:"10px",
     paddingLeft:"10px",
     verticalAlign: "top",
+    textAlign: "center",
   },
 
   bold:{
