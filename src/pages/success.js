@@ -73,8 +73,8 @@ const Success = ({ children, classes, data, tags }) => {
                         <div style={{textAlign:"center", paddingRight:"35px", paddingLeft:"35px", paddingBottom:"35px"}}>
                             <div className={classes.Heading2}>Key Highlights</div>
                             <div className={classes.subtext}>Build your business, increase your sphere<br />
-                            &amp; look like a marketing rockstar with an all-in-onee<br />
-                            solution designed to capture, engage &amp; convert.</div>     
+                            &amp; look like a marketing rockstar with our<br />
+                            solution that captures, engages &amp; converts leads.</div>     
                             
                         </div>
             </Container>
