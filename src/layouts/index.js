@@ -69,6 +69,7 @@ const Template = ({ children, classes, location }) => {
         location.pathname == "/30daymarketingchallenge/" || location.pathname == "/30daymarketingchallenge" ||
         location.pathname == "/personalgrowthplan/" || location.pathname == "/personalgrowthplan" ||
         location.pathname == "/beachesmls/" || location.pathname == "/beachesmls" ||
+        location.pathname == "/success/" || location.pathname == "/success" ||
         location.pathname == "/leadgenguide/" || location.pathname == "/leadgenguide") {
       return <HeaderLander />;
     }
