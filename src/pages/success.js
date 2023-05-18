@@ -5,8 +5,8 @@ import config from "../utils/siteConfig";
 import Container from "../components/Container";
 import BgSectionExternal3 from "../components/BgSectionExternal3";
 import FormSuccess from "../components/FormSuccess";
-import Glancebg from "../images/glancebg.jpg";
-import Fadebg from "../images/fadebg.jpg";
+import Bossbg from "../images/bossbg.jpg";
+import Fadebg from "../images/fadebg2.jpg";
 import Dmslogo from "../images/dmslogo.png";
 import Dmsstar from "../images/dmsstar.png";
 import Quote from "../images/quote.png";
@@ -16,10 +16,11 @@ import Dms2 from "../images/dms2.png";
 import Dms3 from "../images/dms3.png";
 import Dms5 from "../images/dms5.gif";
 import Dms7 from "../images/dms7.png";
-import Elevatew from "../images/elevate_tagw.svg";
-import Sp3 from "../images/sp3.png";
-import Sp5 from "../images/sp5.png";
-import Ign2 from "../images/ign2.gif";
+import Elevate from "../images/elevate_tag.svg";
+import Redx from "../images/redx.png";
+import Greenc from "../images/greenc.png";
+import Crm1 from "../images/crm1.png";
+import Crm2 from "../images/crm2.png";
 import Glance4 from "../images/glance4.png";
 import Glance5 from "../images/glance5.png";
 import SEO from "../components/SEO";
@@ -36,164 +37,35 @@ const Success = ({ children, classes, data, tags }) => {
       </Helmet>
       <SEO postNode={postNode} pagePath="Success" customTitle />
 
-<div style={{backgroundImage:"url("+Glancebg+")", backgroundSize:"cover", backgroundPosition:"centerTop", marginTop:"-80px"}}>
+<div style={{backgroundImage:"url("+Fadebg+")", backgroundSize:"cover", backgroundPosition:"centerBottom",}}>
 <Container>
-      <div className={classes.top} style={{paddingBottom:"60px", paddingRight:"35px", paddingLeft:"35px", paddingTop:"75px"}}>
+      <div className={classes.top} style={{paddingBottom:"60px",}}>
           <div className={classes.centerHeading}>
-          <img src={Elevatew} style={{width:"100%", maxWidth:"250px", paddingBottom:"20px"}}/>
-
-                            <div className={classes.heading} style={{color:"#ffffff", paddingBottom:"10px"}}>The Power of Marketing</div>
-                            <div className={classes.subtext2} style={{color:"#f7f7f7", fontSize:"18px", lineHeight:"24px"}}>Be in front of more people, more often with the Elevate CRM.
-
-<div style={{ textAlign: "center", paddingTop: "24px" }}>
-                 <a href="#demo" className={classes.buttonLink}>Request a Demo</a>
-            </div>
-                            </div>
+          <img src={Elevate} style={{width:"100%", maxWidth:"250px", paddingBottom:"20px"}}/>           
           </div>
-      </div>
 
          
 
+               
 
-
-</Container>
-</div>
-
-
-
-
-
-
-
-
-<div style={{paddingTop:"68px",}}>
-
-            <Container>
-
-                        <div style={{textAlign:"center", paddingRight:"35px", paddingLeft:"35px", paddingBottom:"35px"}}>
-                            <div className={classes.Heading2}>Key Highlights</div>
-                            <div className={classes.subtext}>Build your business, increase your sphere<br />
-                            &amp; look like a marketing rockstar with our<br />
-                            solution that captures, engages &amp; converts leads.</div>     
-                            
-                        </div>
-            </Container>
-
-</div>
-<div style={{backgroundImage:"url("+Fadebg+")", backgroundSize:"cover", backgroundPosition:"centerBottom"}}>
-<Container>
-<div className={classes.top} style={{textAlign:"center"}}>
-
-
-<div className={classes.column3} style={{ textAlign: "center", paddingTop: "20px" }}>
-<div className={classes.subtext2}>Advanced, intuitive CRM with<br />
-powerful performance metrics</div>
-<div style={{ textAlign: "center",}}>
-    <img src={Ign2} width="100%"  style={{paddingTop:"25px", maxWidth:"320px"}} />
-</div>
-</div>
-
-<div className={classes.column3} style={{ textAlign: "center", paddingTop: "20px" }}>
-<div className={classes.subtext2}>Morning reports with<br />
-the latest activity data.</div>
-<div style={{ textAlign: "center",}}>
-    <img src={Dms2} width="100%"  style={{paddingTop:"25px", maxWidth:"320px"}} />
-</div>
-</div>
-
-<div className={classes.column3} style={{ textAlign: "center", paddingTop: "20px" }}>
-<div className={classes.subtext2}>Mobile-friendly<br />
-IDX website</div>
-<div style={{ textAlign: "center",}}>
-    <img src={Dms3} width="100%"  style={{paddingTop:"25px", maxWidth:"320px"}} />
-</div>
-</div>
-
-
-</div>
-</Container>
-</div>
-
-<div style={{paddingTop:"40px", backgroundImage:"url("+Fadebg+")", backgroundSize:"cover", backgroundPosition:"centerBottom"}}>
-<Container>
-<div className={classes.top} style={{textAlign:"center"}}>
-
-
-<div className={classes.column3} style={{ textAlign: "center", paddingTop: "20px" }}>
-<div className={classes.subtext2}>Robust blog with<br />
-automated posts</div>
-<div style={{ textAlign: "center",}}>
-    <img src={Sp5} width="100%"  style={{paddingTop:"25px", maxWidth:"320px"}} />
-</div>
-</div>
-
-<div className={classes.column3} style={{ textAlign: "center", paddingTop: "20px" }}>
-<div className={classes.subtext2}>Automated social media<br />
-posts weekly</div>
-<div style={{ textAlign: "center",}}>
-    <img src={Dms5} width="100%"  style={{paddingTop:"25px", maxWidth:"320px"}} />
-</div>
-</div>
-
-<div className={classes.column3} style={{ textAlign: "center", paddingTop: "20px" }}>
-<div className={classes.subtext2}>Intuitive<br />
-CMA Wizard</div>
-<div style={{ textAlign: "center",}}>
-    <img src={Cma} width="100%"  style={{paddingTop:"25px", maxWidth:"320px"}} />
-</div>
-</div>
-
-
-</div>
-</Container>
-</div>
-
-<div style={{paddingTop:"40px", backgroundImage:"url("+Fadebg+")", backgroundSize:"cover", backgroundPosition:"centerBottom", textAlign:"center"}}>
-<Container>
-<div className={classes.top} style={{textAlign:"center"}}>
-
-
-<div className={classes.column3} style={{ textAlign: "center", paddingTop: "20px" }}>
-<div className={classes.subtext2}>Email marketing templates,<br />
-campaigns &amp; image library</div>
-<div style={{ textAlign: "center",}}>
-    <img src={Dms7} width="100%"  style={{paddingTop:"25px", maxWidth:"320px"}} />
-</div>
-</div>
-
-<div className={classes.column3} style={{ textAlign: "center", paddingTop: "20px" }}>
-<div className={classes.subtext2}>Customized social branding on Facebook,<br />
-Twitter, LinkedIn &amp; YouTube</div>
-<div style={{ textAlign: "center",}}>
-    <img src={Sp1} width="100%"  style={{paddingTop:"25px", maxWidth:"320px"}} />
-</div>
-</div>
-
-<div className={classes.column3} style={{ textAlign: "center", paddingTop: "20px" }}>
-<div className={classes.subtext2}>Automated creation of<br />
-YouTube video tours</div>
-<div width="100%" style={{textAlign: "center", maxWidth:"320px",marginLeft:"auto",marginRight:"auto", paddingTop:"25px" }}>
-                <div style={{ textAlign: "center"}} className={classes.videoEmbed}>
-                        <iframe className={classes.videoContainer} src="https://www.youtube.com/embed/CwXlC7Xuojs"
-                         frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<div className={classes.column2} style={{ textAlign: "center", paddingTop: "35px" }}>
+                  
+<div style={{maxWidth:"800px",marginLeft:"auto",marginRight:"auto",}}>
+                <div style={{ textAlign: "center" }} className={classes.videoEmbed}>
+                      <iframe className={classes.videoContainer} src="https://www.youtube.com/embed/qtXMvK19Y9c"
+                      frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                 </div>
-              </div>
+                <div className={classes.heading} style={{paddingTop:"25px"}}>The Power of Marketing</div>
+                            <div className={classes.subtext}>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</div>  
+                </div>
+              
 </div>
 
+<div className={classes.column2} style={{ textAlign: "center", }}>
 
-</div>
-</Container>
-</div>
-
-
-
-<a id="demo"></a>
-<div style={{backgroundColor:"#ffffff", paddingBottom:"60px", textAlign:"center", paddingRight:"30px", paddingLeft:"30px"}}>
-        <h1 className={classes.Heading2} style={{paddingTop:"80px"}}>
-        Take a Tour of Elevate
-        </h1>
-        <h2 className={classes.subtext}>Schedule 15-minutes with an Elevate Success Coach to explore Elevate's marketing power.</h2>
-        <FormSuccess
+                 
+                  <div style={{ textAlign: "center", }}>
+                  <FormSuccess
           subject="Elevate Success"
           listid="107387"
           webhook="b1452e08-f398-11ea-9d14-bc764e046a9d"
@@ -207,16 +79,27 @@ YouTube video tours</div>
             Email Us
           </a>
         </div> */}
- </div>
+                  </div>
+</div>
 
 
-<div style={{paddingTop:"70px", paddingBottom:"60px", backgroundColor:"#f7f7f7"}}>
+
+
+      </div>
+
+         
+
+
+
+</Container>
+</div>
+
+
+
+<div style={{paddingTop:"75px", paddingBottom:"55px", backgroundColor:"#ffffff"}}>
         
-                        <div style={{textAlign:"center", paddingRight:"35px", paddingLeft:"35px", paddingBottom:"25px"}}>
-                            <div className={classes.Heading2}>The Power of Success</div>
-                            <div className={classes.subtext}>Nothing feels better than happy clients<br />
-                            celebrating their productivity, success &amp; growth using Elevate.</div>     
-                            
+                        <div style={{textAlign:"center", paddingRight:"35px", paddingLeft:"35px",}}>
+                            <div className={classes.Heading2}>The Power of Success</div>   
                         </div>
     <Container>
             <div className={classes.flexContainer}>
@@ -260,6 +143,135 @@ YouTube video tours</div>
 
 
 
+
+
+<div style={{paddingTop:"70px", paddingBottom:"80px", backgroundImage:"url("+Bossbg+")", backgroundSize:"cover", paddingLeft:"20px", paddingRight:"20px"}}>
+        
+<div style={{textAlign:"center",paddingBottom:"25px", paddingLeft:"20px", paddingRight:"20px"}}>
+                            <div className={classes.Heading2} style={{color:"#ffffff"}}>The #1 Social Media Marketing CRM in Real Estate</div>
+                              
+                            
+                        </div>      
+    <Container>
+    <div className={classes.top}>
+                <div className={classes.column2} style={{textAlign:"left", paddingBottom:"24px"}}>
+                       
+                      <div className={classes.subtextnew} style={{color:"#ffffff"}}>
+                      <div className={classes.Heading3}>With Elevate</div>
+                      <img src={Greenc} style={{width:"100%", maxWidth:"18px", marginRight:"6px"}}/> Lorem ipsum dolor sit amet, consectetur.<br />
+                      <img src={Greenc} style={{width:"100%", maxWidth:"18px", marginRight:"6px"}}/> Lorem ipsum dolor sit amet, consectetur.<br />
+                      <img src={Greenc} style={{width:"100%", maxWidth:"18px", marginRight:"6px"}}/> Lorem ipsum dolor sit amet, consectetur.<br />
+                      <img src={Greenc} style={{width:"100%", maxWidth:"18px", marginRight:"6px"}}/> Lorem ipsum dolor sit amet, consectetur.<br />
+                      </div>
+                </div>
+
+                <div className={classes.column2} style={{textAlign:"left", paddingBottom:"24px"}}>
+                
+                      <div className={classes.subtextnew} style={{color:"#ffffff"}}>  
+                      <div className={classes.Heading3} style={{color:"#f15a53"}}>Without Elevate</div>
+                      <img src={Redx} style={{width:"100%", maxWidth:"18px", marginRight:"6px"}}/> Lorem ipsum dolor sit amet, consectetur.<br />
+                      <img src={Redx} style={{width:"100%", maxWidth:"18px", marginRight:"6px"}}/> Lorem ipsum dolor sit amet, consectetur.<br />
+                      <img src={Redx} style={{width:"100%", maxWidth:"18px", marginRight:"6px"}}/> Lorem ipsum dolor sit amet, consectetur.<br />
+                      <img src={Redx} style={{width:"100%", maxWidth:"18px", marginRight:"6px"}}/> Lorem ipsum dolor sit amet, consectetur.<br />
+                        </div>
+              
+
+               
+
+
+      </div>
+
+        </div>
+    </Container>
+</div> 
+
+
+
+
+
+
+
+
+
+
+
+<div style={{paddingTop:"68px",}}>
+<Container>
+<div className={classes.top} style={{textAlign:"center"}}>
+
+
+<div className={classes.column1} style={{ textAlign: "center", paddingTop: "20px", paddingLeft:"30px", paddingRight:"30px", paddingBottom:"20px" }}>
+
+<div style={{ textAlign: "center",}}>
+    <img src={Crm1} width="100%"  style={{maxWidth:"550px"}} />
+</div>
+
+</div>
+
+<div className={classes.column1a} style={{ textAlign: "left", paddingTop: "20px", paddingLeft:"30px", paddingRight:"30px" }}>
+<div className={classes.subtext}>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</div><br />
+<div className={classes.subtext2} style={{paddingBottom:"14px"}}>Key Highlights:</div>
+<div className={classes.subtext}>+ Advanced CRM with powerful metrics.<br />
++ Mobile-friendly IDX website.<br />
++ Robust blog with automated posts.<br />
++ Intuitive CMA Wizard.<br />
++ Email marketing campaigns.</div>
+
+</div>
+
+
+</div>
+</Container>
+</div>
+
+
+
+
+<div style={{paddingTop:"48px", paddingBottom:"70px"}}>
+<Container>
+<div className={classes.top} style={{textAlign:"center"}}>
+
+<div className={classes.column1a} style={{ textAlign: "left", paddingTop: "20px", paddingLeft:"30px", paddingRight:"30px" }}>
+<div className={classes.subtext}>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</div><br />
+<div className={classes.subtext2} style={{paddingBottom:"14px"}}>Key Highlights:</div>
+<div className={classes.subtext}>+ Advanced CRM with powerful metrics.<br />
++ Mobile-friendly IDX website.<br />
++ Robust blog with automated posts.<br />
++ Intuitive CMA Wizard.<br />
++ Email marketing campaigns.</div>
+
+</div>
+
+
+
+
+<div className={classes.column1} style={{ textAlign: "center", paddingTop: "20px", paddingLeft:"30px", paddingRight:"30px", paddingBottom:"20px" }}>
+
+<div style={{ textAlign: "center",}}>
+    <img src={Crm2} width="100%"  style={{maxWidth:"550px"}} />
+</div>
+
+</div>
+
+
+
+
+</div>
+</Container>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
     </div>
   );
 };
@@ -295,15 +307,41 @@ export default withStyles((theme) => ({
     color: "#5A5B5C",
   },
 
-  subtext2: {
-    fontSize: "16px",
-    fontWeight: "700",
-    lineHeight: "24px",
+  subtextnew: {
+    fontSize: "18px",
+    fontWeight: "300",
+    lineHeight: "36px",
     color: "#5A5B5C",
   },
 
+  subtext2: {
+    fontSize: "24px",
+    fontWeight: "700",
+    lineHeight: "33px",
+    color: "#52B1AD",
+  },
+
+
+  column1:{
+    width:"650px",
+    maxWidth: "100%",
+    paddingRight:"20px",
+    paddingLeft:"20px",
+    verticalAlign: "top",
+  },
+
+
+  column1a:{
+    width:"400px",
+    maxWidth: "100%",
+    paddingRight:"20px",
+    paddingLeft:"20px",
+    verticalAlign: "top",
+  },
+
+
   column2:{
-    width:"530px",
+    width:"520px",
     maxWidth: "100%",
     paddingRight:"20px",
     paddingLeft:"20px",
@@ -333,7 +371,7 @@ export default withStyles((theme) => ({
     fontSize: "30px",
     paddingBottom: "20px",
     fontWeight: "700",
-    lineHeight: "36px",
+    lineHeight: "42px",
     color: "#52B1AD",
     letterSpacing: ".14px",
   },
