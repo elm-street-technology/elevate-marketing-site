@@ -59,7 +59,9 @@ const Success = ({ children, classes, data, tags }) => {
                 <div className={classes.subtext2} style={{paddingBottom:"14px"}}>Next-Gen CRM + IDX Website<br />
                 + Social Media Marketing</div>
                 
-                            <div className={classes.subtext}>Close more transactions and increase your brand's reach with Elm Street's advanced DMS solution that combines a CRM platform, beautiful IDX website, and automated social media content. The ONLY Digital Marketing solution you need to build and scale your online real estate business.</div>  
+                            <div className={classes.subtext}>Close more transactions and increase your brand's reach with Elm Street's advanced DMS solution that combines a CRM platform, beautiful IDX website, and automated social media content.
+                            <br /><br />
+                            Elevate by Elm Street: The ONLY digital marketing solution you need to build and scale your online real estate business.</div>  
                 </div>
               
 </div>
@@ -212,18 +214,16 @@ const Success = ({ children, classes, data, tags }) => {
 </div>
 
 <div className={classes.column1a} style={{ textAlign: "left", paddingTop: "20px", paddingLeft:"30px", paddingRight:"30px" }}>
-<div className={classes.subtext}>Build your business, increase your sphere and look like a marketing rockstar
+<div className={classes.subtext}>Build your business, increase your sphere, and look like a marketing rockstar
 with an all-in-one solution designed to capture, engage and convert.</div><br />
 <div className={classes.subtext2} style={{paddingBottom:"14px"}}>Key Highlights:</div>
-<div className={classes.subtext}>+ Advanced CRM with powerful metrics.<br />
-+ Morning reports with activity data.<br />
-+ Mobile-friendly IDX website.<br />
-+ Robust blog with automated posts.<br />
-+ Automated social media posts.<br />
-+ Intuitive CMA Wizard.<br />
-+ Email marketing campaigns.<br />
-+ Customized social branding.<br />
-+ Automated YouTube video tours.</div>
+<div className={classes.subtext}>∙ Advanced CRM with powerful<br />
+&nbsp; &nbsp;reporting and activity monitoring.<br />
+∙ Mobile-friendly IDX website.<br />
+∙ Customized social branding.<br />
+∙ Automated social and blog content.<br />
+∙ Intuitive CMA Wizard.<br />
+∙ Plus much more!</div>
 
 </div>
 
@@ -241,7 +241,7 @@ with an all-in-one solution designed to capture, engage and convert.</div><br />
 
 <div className={classes.column1a} style={{ textAlign: "left", paddingTop: "20px", paddingLeft:"30px", paddingRight:"30px" }}>
 <div className={classes.subtext}>
-Now it's easier than ever to pay attention to the KPIs (key performance indicators) of your business with activity workflows, task coaching, agent-protected databases, lead response routing and tracking, and a customizable metrics dashboard.</div><br />
+With the Elevate customizable metrics dashboard, you can keep of what matters most to your business including lead activity, team performance, and more.</div><br />
 
 </div>
 
@@ -295,7 +295,7 @@ export default withStyles((theme) => ({
   },
 
   heading: {
-    fontSize: "44px",
+    fontSize: "40px",
     fontWeight: "700",
     lineHeight: "52px",
     letterSpacing: ".14px",
@@ -340,14 +340,18 @@ export default withStyles((theme) => ({
     paddingRight:"20px",
     paddingLeft:"20px",
     verticalAlign: "top",
+
+    [theme.breakpoints[900]]: {
+      marginTop: "68px",
+  },
   },
 
 
   column2:{
     width:"520px",
     maxWidth: "100%",
-    paddingRight:"20px",
-    paddingLeft:"20px",
+    paddingRight:"45px",
+    paddingLeft:"45px",
     verticalAlign: "top",
   },
 
