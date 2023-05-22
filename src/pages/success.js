@@ -55,8 +55,11 @@ const Success = ({ children, classes, data, tags }) => {
                       <iframe className={classes.videoContainer} src="https://www.youtube.com/embed/qtXMvK19Y9c"
                       frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                 </div>
-                <div className={classes.heading} style={{paddingTop:"25px"}}>The Power of Marketing</div>
-                            <div className={classes.subtext}>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</div>  
+                <div className={classes.heading} style={{paddingTop:"25px"}}>The Power of Productivity</div>
+                <div className={classes.subtext2} style={{paddingBottom:"14px"}}>Next-Gen CRM + IDX Website<br />
+                + Social Media Marketing</div>
+                
+                            <div className={classes.subtext}>Close more transactions and increase your brand's reach with Elm Street's advanced DMS solution that combines a CRM platform, beautiful IDX website, and automated social media content. The ONLY Digital Marketing solution you need to build and scale your online real estate business.</div>  
                 </div>
               
 </div>
@@ -209,13 +212,18 @@ const Success = ({ children, classes, data, tags }) => {
 </div>
 
 <div className={classes.column1a} style={{ textAlign: "left", paddingTop: "20px", paddingLeft:"30px", paddingRight:"30px" }}>
-<div className={classes.subtext}>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</div><br />
+<div className={classes.subtext}>Build your business, increase your sphere and look like a marketing rockstar
+with an all-in-one solution designed to capture, engage and convert.</div><br />
 <div className={classes.subtext2} style={{paddingBottom:"14px"}}>Key Highlights:</div>
 <div className={classes.subtext}>+ Advanced CRM with powerful metrics.<br />
++ Morning reports with activity data.<br />
 + Mobile-friendly IDX website.<br />
 + Robust blog with automated posts.<br />
++ Automated social media posts.<br />
 + Intuitive CMA Wizard.<br />
-+ Email marketing campaigns.</div>
++ Email marketing campaigns.<br />
++ Customized social branding.<br />
++ Automated YouTube video tours.</div>
 
 </div>
 
@@ -232,13 +240,8 @@ const Success = ({ children, classes, data, tags }) => {
 <div className={classes.top} style={{textAlign:"center"}}>
 
 <div className={classes.column1a} style={{ textAlign: "left", paddingTop: "20px", paddingLeft:"30px", paddingRight:"30px" }}>
-<div className={classes.subtext}>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</div><br />
-<div className={classes.subtext2} style={{paddingBottom:"14px"}}>Key Highlights:</div>
-<div className={classes.subtext}>+ Advanced CRM with powerful metrics.<br />
-+ Mobile-friendly IDX website.<br />
-+ Robust blog with automated posts.<br />
-+ Intuitive CMA Wizard.<br />
-+ Email marketing campaigns.</div>
+<div className={classes.subtext}>
+Now it's easier than ever to pay attention to the KPIs (key performance indicators) of your business with activity workflows, task coaching, agent-protected databases, lead response routing and tracking, and a customizable metrics dashboard.</div><br />
 
 </div>
 
