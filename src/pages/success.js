@@ -66,12 +66,12 @@ const Success = ({ children, classes, data, tags }) => {
 Build your business, increase your sphere, and look like a marketing rockstar with an all-in-one solution designed to capture, engage and convert.
 <br /><br />
 <div className={classes.bold}>
-<img src={Greenc} style={{width:"100%", maxWidth:"14px", marginRight:"6px"}}/>Advanced CRM.<br />
-<img src={Greenc} style={{width:"100%", maxWidth:"14px", marginRight:"6px"}}/>Mobile-friendly IDX website.<br />
-<img src={Greenc} style={{width:"100%", maxWidth:"14px", marginRight:"6px"}}/>Customized social branding.<br />
-<img src={Greenc} style={{width:"100%", maxWidth:"14px", marginRight:"6px"}}/>Automated social and blog content.<br />
-<img src={Greenc} style={{width:"100%", maxWidth:"14px", marginRight:"6px"}}/>Intuitive CMA Wizard.<br />
-<img src={Greenc} style={{width:"100%", maxWidth:"14px", marginRight:"6px"}}/>Plus Much More! 
+<img src={Greenc} style={{width:"100%", maxWidth:"14px", marginRight:"6px"}}/>Advanced CRM<br />
+<img src={Greenc} style={{width:"100%", maxWidth:"14px", marginRight:"6px"}}/>Mobile-friendly IDX website<br />
+<img src={Greenc} style={{width:"100%", maxWidth:"14px", marginRight:"6px"}}/>Customized social branding<br />
+<img src={Greenc} style={{width:"100%", maxWidth:"14px", marginRight:"6px"}}/>Automated social and blog content<br />
+<img src={Greenc} style={{width:"100%", maxWidth:"14px", marginRight:"6px"}}/>Intuitive CMA Wizard<br />
+<img src={Greenc} style={{width:"100%", maxWidth:"14px", marginRight:"6px"}}/>Plus much more! 
 </div>
 </div>  
                 </div>
@@ -185,12 +185,12 @@ Build your business, increase your sphere, and look like a marketing rockstar wi
     
                       <div className={classes.subtextnew} style={{color:"#ffffff"}}>  
                       <div className={classes.Heading3} style={{color:"#f15a53"}}>Without Elevate</div>
-                      <img src={Redx} style={{width:"100%", maxWidth:"14px", marginRight:"3px"}}/> Inability to see how email and social marketing strategies are working.<br /><br />
-                      <img src={Redx} style={{width:"100%", maxWidth:"14px", marginRight:"3px"}}/> No knowledge of how your website is performing or if you are getting leads from it.<br /><br />
+                      <img src={Redx} style={{width:"100%", maxWidth:"14px", marginRight:"3px"}}/> Inability to see how email and social marketing strategies are working<br /><br />
+                      <img src={Redx} style={{width:"100%", maxWidth:"14px", marginRight:"3px"}}/> No knowledge of how your website is performing or if you are getting leads from it<br /><br />
                       <img src={Redx} style={{width:"100%", maxWidth:"14px", marginRight:"3px"}}/> Spending too much time creating<br />
-                      and posting social campaigns.<br /><br />
+                      and posting social campaigns<br /><br />
                       <img src={Redx} style={{width:"100%", maxWidth:"14px", marginRight:"3px"}}/> Struggling to design email campaigns<br />
-                      that look professional.
+                      that look professional
                       
               </div>
 
@@ -205,10 +205,10 @@ Build your business, increase your sphere, and look like a marketing rockstar wi
                
                       <div className={classes.subtextnew} style={{color:"#ffffff"}}>
                       <div className={classes.Heading3}>With Elevate</div>
-                      <img src={Greenc} style={{width:"100%", maxWidth:"14px", marginRight:"3px"}}/> Make informed decisions with an advanced, intuitive CRM with powerful metrics.<br /><br />
-                      <img src={Greenc} style={{width:"100%", maxWidth:"14px", marginRight:"3px"}}/> Easy-to-use, high SEO IDX website with many lead capture opportunities.<br /><br />
-                      <img src={Greenc} style={{width:"100%", maxWidth:"14px", marginRight:"3px"}}/> Automated social, email, and text campaigns that establish credibility and authority.<br /><br />
-                      <img src={Greenc} style={{width:"100%", maxWidth:"14px", marginRight:"3px"}}/> Modern, engaging marketing templates, campaigns and robust image library.
+                      <img src={Greenc} style={{width:"100%", maxWidth:"14px", marginRight:"3px"}}/> Make informed decisions with an advanced, intuitive CRM with powerful metrics<br /><br />
+                      <img src={Greenc} style={{width:"100%", maxWidth:"14px", marginRight:"3px"}}/> Easy-to-use, high SEO IDX website with many lead capture opportunities<br /><br />
+                      <img src={Greenc} style={{width:"100%", maxWidth:"14px", marginRight:"3px"}}/> Automated social, email, and text campaigns that establish credibility and authority<br /><br />
+                      <img src={Greenc} style={{width:"100%", maxWidth:"14px", marginRight:"3px"}}/> Modern, engaging marketing templates, campaigns and robust image library
                       </div>
                      
                 </div>
@@ -230,6 +230,13 @@ Build your business, increase your sphere, and look like a marketing rockstar wi
 
 
 <div style={{paddingTop:"68px",}}>
+
+
+
+<div style={{textAlign:"center", paddingRight:"35px", paddingLeft:"35px",}}>
+                            <div className={classes.Heading2}>Must-Have Elevate Features</div>   
+                        </div>
+
 <Container>
 <div className={classes.top} style={{textAlign:"center"}}>
 
@@ -246,10 +253,10 @@ Build your business, increase your sphere, and look like a marketing rockstar wi
 <div className={classes.subtext}>With the Elevate customizable metrics dashboard, you can keep track of what matters most to your business including lead activity, team performance, and more.
 <br /><br />
 <div className={classes.bold}>
-<img src={Greenc} style={{width:"100%", maxWidth:"14px", marginRight:"6px"}}/>Track KPIs with activity workflows.<br /><br />
-<img src={Greenc} style={{width:"100%", maxWidth:"14px", marginRight:"6px"}}/>Task coaching.<br /><br />
-<img src={Greenc} style={{width:"100%", maxWidth:"14px", marginRight:"6px"}}/>Agent-protected databases.<br /><br />
-<img src={Greenc} style={{width:"100%", maxWidth:"14px", marginRight:"6px"}}/>Lead response routing and tracking.</div>
+<img src={Greenc} style={{width:"100%", maxWidth:"14px", marginRight:"6px"}}/>Track KPIs with activity workflows<br /><br />
+<img src={Greenc} style={{width:"100%", maxWidth:"14px", marginRight:"6px"}}/>Task coaching<br /><br />
+<img src={Greenc} style={{width:"100%", maxWidth:"14px", marginRight:"6px"}}/>Agent-protected databases<br /><br />
+<img src={Greenc} style={{width:"100%", maxWidth:"14px", marginRight:"6px"}}/>Lead response routing and tracking</div>
 </div>
 
 </div>
@@ -272,11 +279,11 @@ Nurture your past, present and future clients with intelligent campaigns and wor
 <br /><br />
 <div className={classes.bold}>
 <img src={Greenc} style={{width:"100%", maxWidth:"14px", marginRight:"6px"}}/>Pay-per-click (PPC) capture<br />
-&nbsp;&nbsp;&nbsp;&nbsp; of exclusive buyer/seller leads.<br /><br />
+&nbsp;&nbsp;&nbsp;&nbsp; of exclusive buyer/seller leads<br /><br />
 <img src={Greenc} style={{width:"100%", maxWidth:"14px", marginRight:"6px"}}/>Morning reports with<br />
-&nbsp;&nbsp;&nbsp;&nbsp; the latest activity data.<br /><br />
+&nbsp;&nbsp;&nbsp;&nbsp; the latest activity data<br /><br />
 <img src={Greenc} style={{width:"100%", maxWidth:"14px", marginRight:"6px"}}/>Advanced, intuitive CRM with<br />
-&nbsp;&nbsp;&nbsp;&nbsp; powerful performance metrics.</div>
+&nbsp;&nbsp;&nbsp;&nbsp; powerful performance metrics</div>
 </div>
 
 </div>
@@ -321,13 +328,13 @@ Nurture your past, present and future clients with intelligent campaigns and wor
 <div className={classes.subtext}>Save time spent on hours of tedious social marketing. Elevate handles all of your social marketing needs so you can focus on what matters—selling more homes and growing your business.
 <br /><br />
 <div className={classes.bold}>
-<img src={Greenc} style={{width:"100%", maxWidth:"14px", marginRight:"6px"}}/>Customized branding on social media.<br /><br />
+<img src={Greenc} style={{width:"100%", maxWidth:"14px", marginRight:"6px"}}/>Customized branding on social media<br /><br />
 <img src={Greenc} style={{width:"100%", maxWidth:"14px", marginRight:"6px"}}/>Relevant, life-style content<br />
-&nbsp;&nbsp;&nbsp;&nbsp; posted weekly.<br /><br />
+&nbsp;&nbsp;&nbsp;&nbsp; posted weekly<br /><br />
 <img src={Greenc} style={{width:"100%", maxWidth:"14px", marginRight:"6px"}}/>Automated posts of new listings<br />
-&nbsp;&nbsp;&nbsp;&nbsp; and listing updates.<br /><br />
+&nbsp;&nbsp;&nbsp;&nbsp; and listing updates<br /><br />
 <img src={Greenc} style={{width:"100%", maxWidth:"14px", marginRight:"6px"}}/>Automated creation of<br />
-&nbsp;&nbsp;&nbsp;&nbsp; YouTube video tours.</div>
+&nbsp;&nbsp;&nbsp;&nbsp; YouTube video tours</div>
 </div>
 
 </div>
