@@ -21,6 +21,7 @@ import Redx from "../images/redx.png";
 import Greenc from "../images/greenc.png";
 import Crm1 from "../images/crm1.png";
 import Crm2 from "../images/crm2.png";
+import Crm3 from "../images/crm3.png";
 import Glance4 from "../images/glance4.png";
 import Glance5 from "../images/glance5.png";
 import SEO from "../components/SEO";
@@ -48,20 +49,31 @@ const Success = ({ children, classes, data, tags }) => {
 
                
 
-<div className={classes.column2} style={{ textAlign: "center", paddingTop: "35px" }}>
+<div className={classes.column2} style={{ textAlign: "left", paddingTop: "35px" }}>
                   
 <div style={{maxWidth:"800px",marginLeft:"auto",marginRight:"auto",}}>
                 <div style={{ textAlign: "center" }} className={classes.videoEmbed}>
                       <iframe className={classes.videoContainer} src="https://www.youtube.com/embed/qtXMvK19Y9c"
                       frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                 </div>
-                <div className={classes.heading} style={{paddingTop:"25px"}}>The Power of Productivity</div>
-                <div className={classes.subtext2} style={{paddingBottom:"14px"}}>Next-Gen CRM + IDX Website<br />
-                + Social Media Marketing</div>
                 
-                            <div className={classes.subtext}>Close more transactions and increase your brand's reach with Elm Street's advanced DMS solution that combines a CRM platform, beautiful IDX website, and automated social media content.
-                            <br /><br />
-                            Elevate by Elm Street: The ONLY digital marketing solution you need to build and scale your online real estate business.</div>  
+                <div className={classes.Heading2} style={{paddingBottom:"14px", paddingTop:"20px"}}>Experience the power<br />
+                of pure productivity<br />
+                with Elevate! </div>
+                
+                            <div className={classes.subtext}>Elevate by Elm Street is the ONLY digital marketing solution you need to build and scale your online real estate business.
+                            <br /><br /> 
+Build your business, increase your sphere, and look like a marketing rockstar with an all-in-one solution designed to capture, engage and convert.
+<br /><br />
+<div className={classes.bold}>
+<img src={Greenc} style={{width:"100%", maxWidth:"14px", marginRight:"6px"}}/>Advanced CRM.<br />
+<img src={Greenc} style={{width:"100%", maxWidth:"14px", marginRight:"6px"}}/>Mobile-friendly IDX website.<br />
+<img src={Greenc} style={{width:"100%", maxWidth:"14px", marginRight:"6px"}}/>Customized social branding.<br />
+<img src={Greenc} style={{width:"100%", maxWidth:"14px", marginRight:"6px"}}/>Automated social and blog content.<br />
+<img src={Greenc} style={{width:"100%", maxWidth:"14px", marginRight:"6px"}}/>Intuitive CMA Wizard.<br />
+<img src={Greenc} style={{width:"100%", maxWidth:"14px", marginRight:"6px"}}/>Plus Much More! 
+</div>
+</div>  
                 </div>
               
 </div>
@@ -111,30 +123,38 @@ const Success = ({ children, classes, data, tags }) => {
                 <div className={classes.flexItem2} style={{padding:"30px", textAlign:"center"}}>
                         <img src={Quote} width="80" style={{paddingBottom:"15px"}}/>
                       <div className={classes.subtext}>
-                      “My Elevate website is so easy for my customers to use...and I LOVE the daily marketing report emails.”
+                      <div className={classes.Heading3}>"Great lead capture website."</div>
+"Elevate is everything I need in a lead capture website. I have been using Elevate for three years now and most of my sales have been from the platform. Elevate makes me look like a pro by blogging and posting to my Facebook page, Linked In and Twitter. This leaves me to do what I do best, sell real estate!"
                       <br /><br />
                       <div className={classes.Heading3}>Mark H.</div>
-                      REALTOR&reg; - Tucson, AZ
+                      Sales Associate<br />
+                      Tucson, AZ
                       </div>
                 </div>
 
                 <div className={classes.flexItem2} style={{padding:"30px", textAlign:"center"}}>
                 <img src={Quote} width="80" style={{paddingBottom:"15px"}}/>
-                      <div className={classes.subtext}>  
-                      “For the first time ever, I actually like using a CRM!  Elevate automates so much of my day-to-day.  It’s simple!”
+                      <div className={classes.subtext}> 
+                      <div className={classes.Heading3}>"Amazing uptick<br />
+                      in my business."</div>
+                      “Elevate helped me provide quality content to my blog and my social media outlets and grow my on-line business. The ability to post to all of my social media accounts at one time has saved me time and has boosted my on-line profiles.”
                       <br /><br />
-                      <div className={classes.Heading3}>Kendra D.</div>
-                      REALTOR&reg; - Denver, CO.
+                      <div className={classes.Heading3}>Scott S.</div>
+                      Licensed Real Estate Agent<br />
+                      Denver, CO.
                         </div>
                 </div>
 
                 <div className={classes.flexItem2} style={{padding:"30px", textAlign:"center"}}>
                 <img src={Quote} width="80" style={{paddingBottom:"15px"}}/>
-                      <div className={classes.subtext}>  
-                      “All of my social media is done for me, and I love the email drip campaigns and newsletters for my clients.”
+                      <div className={classes.subtext}>
+                      <div className={classes.Heading3}>"Help I didn't<br />
+                      know I needed."</div>  
+                      “Elevate is helping me post often on social media to stay relevant and be front of mind. The automatic posts are exactly what I need and this frees up my day to do more lead generation. Elevate Customer Service is super responsive and I really like the overall hands off ease of use.”
                       <br /><br />
                       <div className={classes.Heading3}>Brenda T.</div>
-                      REALTOR&reg; -  Atlanta, GA
+                      REALTOR&reg;<br />
+                      Atlanta, GA
                         </div>
                 </div>
 
@@ -150,7 +170,7 @@ const Success = ({ children, classes, data, tags }) => {
 
 
 
-<div style={{paddingTop:"70px", paddingBottom:"80px", backgroundImage:"url("+Bossbg+")", backgroundSize:"cover", paddingLeft:"20px", paddingRight:"20px"}}>
+<div style={{paddingTop:"70px", paddingBottom:"60px", backgroundImage:"url("+Bossbg+")", backgroundSize:"cover",}}>
         
 <div style={{textAlign:"center",paddingBottom:"25px", paddingLeft:"20px", paddingRight:"20px"}}>
                             <div className={classes.Heading2} style={{color:"#ffffff"}}>The #1 Social Media Marketing CRM in Real Estate</div>
@@ -159,32 +179,41 @@ const Success = ({ children, classes, data, tags }) => {
                         </div>      
     <Container>
     <div className={classes.top}>
-                <div className={classes.column2} style={{textAlign:"left", paddingBottom:"24px"}}>
-                       
-                      <div className={classes.subtextnew} style={{color:"#ffffff"}}>
-                      <div className={classes.Heading3}>With Elevate</div>
-                      <img src={Greenc} style={{width:"100%", maxWidth:"18px", marginRight:"6px"}}/> Lorem ipsum dolor sit amet, consectetur.<br />
-                      <img src={Greenc} style={{width:"100%", maxWidth:"18px", marginRight:"6px"}}/> Lorem ipsum dolor sit amet, consectetur.<br />
-                      <img src={Greenc} style={{width:"100%", maxWidth:"18px", marginRight:"6px"}}/> Lorem ipsum dolor sit amet, consectetur.<br />
-                      <img src={Greenc} style={{width:"100%", maxWidth:"18px", marginRight:"6px"}}/> Lorem ipsum dolor sit amet, consectetur.<br />
-                      </div>
-                </div>
 
-                <div className={classes.column2} style={{textAlign:"left", paddingBottom:"24px"}}>
-                
+
+    <div className={classes.column2} style={{textAlign:"left", paddingBottom:"48px"}}>
+    
                       <div className={classes.subtextnew} style={{color:"#ffffff"}}>  
                       <div className={classes.Heading3} style={{color:"#f15a53"}}>Without Elevate</div>
-                      <img src={Redx} style={{width:"100%", maxWidth:"18px", marginRight:"6px"}}/> Lorem ipsum dolor sit amet, consectetur.<br />
-                      <img src={Redx} style={{width:"100%", maxWidth:"18px", marginRight:"6px"}}/> Lorem ipsum dolor sit amet, consectetur.<br />
-                      <img src={Redx} style={{width:"100%", maxWidth:"18px", marginRight:"6px"}}/> Lorem ipsum dolor sit amet, consectetur.<br />
-                      <img src={Redx} style={{width:"100%", maxWidth:"18px", marginRight:"6px"}}/> Lorem ipsum dolor sit amet, consectetur.<br />
-                        </div>
-              
+                      <img src={Redx} style={{width:"100%", maxWidth:"14px", marginRight:"3px"}}/> Inability to see how email and social marketing strategies are working.<br /><br />
+                      <img src={Redx} style={{width:"100%", maxWidth:"14px", marginRight:"3px"}}/> No knowledge of how your website is performing or if you are getting leads from it.<br /><br />
+                      <img src={Redx} style={{width:"100%", maxWidth:"14px", marginRight:"3px"}}/> Spending too much time creating<br />
+                      and posting social campaigns.<br /><br />
+                      <img src={Redx} style={{width:"100%", maxWidth:"14px", marginRight:"3px"}}/> Struggling to design email campaigns<br />
+                      that look professional.
+                      
+              </div>
 
                
 
 
       </div>
+
+
+
+                <div className={classes.column2} style={{textAlign:"left", paddingBottom:"48px"}}>
+               
+                      <div className={classes.subtextnew} style={{color:"#ffffff"}}>
+                      <div className={classes.Heading3}>With Elevate</div>
+                      <img src={Greenc} style={{width:"100%", maxWidth:"14px", marginRight:"3px"}}/> Make informed decisions with an advanced, intuitive CRM with powerful metrics.<br /><br />
+                      <img src={Greenc} style={{width:"100%", maxWidth:"14px", marginRight:"3px"}}/> Easy-to-use, high SEO IDX website with many lead capture opportunities.<br /><br />
+                      <img src={Greenc} style={{width:"100%", maxWidth:"14px", marginRight:"3px"}}/> Automated social, email, and text campaigns that establish credibility and authority.<br /><br />
+                      <img src={Greenc} style={{width:"100%", maxWidth:"14px", marginRight:"3px"}}/> Modern, engaging marketing templates, campaigns and robust image library.
+                      </div>
+                     
+                </div>
+
+            
 
         </div>
     </Container>
@@ -214,16 +243,14 @@ const Success = ({ children, classes, data, tags }) => {
 </div>
 
 <div className={classes.column1a} style={{ textAlign: "left", paddingTop: "20px", paddingLeft:"30px", paddingRight:"30px" }}>
-<div className={classes.subtext}>Build your business, increase your sphere, and look like a marketing rockstar
-with an all-in-one solution designed to capture, engage and convert.</div><br />
-<div className={classes.subtext2} style={{paddingBottom:"14px"}}>Key Highlights:</div>
-<div className={classes.subtext}>∙ Advanced CRM with powerful<br />
-&nbsp; &nbsp;reporting and activity monitoring.<br />
-∙ Mobile-friendly IDX website.<br />
-∙ Customized social branding.<br />
-∙ Automated social and blog content.<br />
-∙ Intuitive CMA Wizard.<br />
-∙ Plus much more!</div>
+<div className={classes.subtext}>With the Elevate customizable metrics dashboard, you can keep track of what matters most to your business including lead activity, team performance, and more.
+<br /><br />
+<div className={classes.bold}>
+<img src={Greenc} style={{width:"100%", maxWidth:"14px", marginRight:"6px"}}/>Track KPIs with activity workflows.<br /><br />
+<img src={Greenc} style={{width:"100%", maxWidth:"14px", marginRight:"6px"}}/>Task coaching.<br /><br />
+<img src={Greenc} style={{width:"100%", maxWidth:"14px", marginRight:"6px"}}/>Agent-protected databases.<br /><br />
+<img src={Greenc} style={{width:"100%", maxWidth:"14px", marginRight:"6px"}}/>Lead response routing and tracking.</div>
+</div>
 
 </div>
 
@@ -241,7 +268,16 @@ with an all-in-one solution designed to capture, engage and convert.</div><br />
 
 <div className={classes.column1a} style={{ textAlign: "left", paddingTop: "20px", paddingLeft:"30px", paddingRight:"30px" }}>
 <div className={classes.subtext}>
-With the Elevate customizable metrics dashboard, you can keep of what matters most to your business including lead activity, team performance, and more.</div><br />
+Nurture your past, present and future clients with intelligent campaigns and workflows designed to provide insight and engagement with every step of your lead’s life cycle.
+<br /><br />
+<div className={classes.bold}>
+<img src={Greenc} style={{width:"100%", maxWidth:"14px", marginRight:"6px"}}/>Pay-per-click (PPC) capture<br />
+&nbsp;&nbsp;&nbsp;&nbsp; of exclusive buyer/seller leads.<br /><br />
+<img src={Greenc} style={{width:"100%", maxWidth:"14px", marginRight:"6px"}}/>Morning reports with<br />
+&nbsp;&nbsp;&nbsp;&nbsp; the latest activity data.<br /><br />
+<img src={Greenc} style={{width:"100%", maxWidth:"14px", marginRight:"6px"}}/>Advanced, intuitive CRM with<br />
+&nbsp;&nbsp;&nbsp;&nbsp; powerful performance metrics.</div>
+</div>
 
 </div>
 
@@ -268,7 +304,38 @@ With the Elevate customizable metrics dashboard, you can keep of what matters mo
 
 
 
+<div style={{paddingTop:"28px", paddingBottom:"70px"}}>
+<Container>
+<div className={classes.top} style={{textAlign:"center"}}>
 
+
+<div className={classes.column1} style={{ textAlign: "center", paddingTop: "20px", paddingLeft:"30px", paddingRight:"30px", paddingBottom:"20px" }}>
+
+<div style={{ textAlign: "center",}}>
+    <img src={Crm3} width="100%"  style={{maxWidth:"550px"}} />
+</div>
+
+</div>
+
+<div className={classes.column2a} style={{ textAlign: "left", paddingTop: "20px", paddingLeft:"30px", paddingRight:"30px" }}>
+<div className={classes.subtext}>Save time spent on hours of tedious social marketing. Elevate handles all of your social marketing needs so you can focus on what matters—selling more homes and growing your business.
+<br /><br />
+<div className={classes.bold}>
+<img src={Greenc} style={{width:"100%", maxWidth:"14px", marginRight:"6px"}}/>Customized branding on social media.<br /><br />
+<img src={Greenc} style={{width:"100%", maxWidth:"14px", marginRight:"6px"}}/>Relevant, life-style content<br />
+&nbsp;&nbsp;&nbsp;&nbsp; posted weekly.<br /><br />
+<img src={Greenc} style={{width:"100%", maxWidth:"14px", marginRight:"6px"}}/>Automated posts of new listings<br />
+&nbsp;&nbsp;&nbsp;&nbsp; and listing updates.<br /><br />
+<img src={Greenc} style={{width:"100%", maxWidth:"14px", marginRight:"6px"}}/>Automated creation of<br />
+&nbsp;&nbsp;&nbsp;&nbsp; YouTube video tours.</div>
+</div>
+
+</div>
+
+
+</div>
+</Container>
+</div>
 
 
 
@@ -311,10 +378,10 @@ export default withStyles((theme) => ({
   },
 
   subtextnew: {
-    fontSize: "18px",
-    fontWeight: "300",
-    lineHeight: "36px",
-    color: "#5A5B5C",
+    fontSize: "16px",
+    fontWeight: "700",
+    lineHeight: "24px",
+    color: "#ffffff",
   },
 
   subtext2: {
@@ -347,6 +414,16 @@ export default withStyles((theme) => ({
   },
 
 
+  column2a:{
+    width:"400px",
+    maxWidth: "100%",
+    paddingRight:"20px",
+    paddingLeft:"20px",
+    verticalAlign: "top",
+
+
+  },
+
   column2:{
     width:"520px",
     maxWidth: "100%",
@@ -378,7 +455,7 @@ export default withStyles((theme) => ({
     fontSize: "30px",
     paddingBottom: "20px",
     fontWeight: "700",
-    lineHeight: "42px",
+    lineHeight: "38px",
     color: "#52B1AD",
     letterSpacing: ".14px",
   },
