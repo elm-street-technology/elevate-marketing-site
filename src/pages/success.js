@@ -60,8 +60,9 @@ const Success = ({ children, classes, data, tags }) => {
                   
 <div style={{maxWidth:"800px",marginLeft:"auto",marginRight:"auto",}}>
                 <div style={{ textAlign: "center" }} className={classes.videoEmbed}>
-                      <iframe className={classes.videoContainer} src={Video}
-                      frameBorder="0"></iframe>
+                      <video controls className={classes.videoContainer}>
+                        <source src={Video} type="video/mp4" />
+                      </video>
                 </div>
                 
                 <div className={classes.Heading2} style={{paddingBottom:"14px", paddingTop:"20px"}}>Experience the power<br />
