@@ -46,6 +46,7 @@ const Success = ({ children, classes, data, tags }) => {
           <img src={Elevate} style={{width:"100%", maxWidth:"250px", paddingBottom:"20px"}}/>
           <div style={{textAlign:"center", paddingLeft:"20px", paddingRight:"20px"}}>
                             <div className={classes.Heading2}>The #1 Social Media Marketing CRM in Real Estate</div>
+                            <div className={classes.bold}>Intuitive lead generation &amp; marketing done for you.</div>
                               
                             
                         </div>                 
@@ -466,7 +467,7 @@ export default withStyles((theme) => ({
 
   Heading2: {
     fontSize: "30px",
-    paddingBottom: "20px",
+    paddingBottom: "15px",
     fontWeight: "700",
     lineHeight: "38px",
     color: "#52B1AD",
