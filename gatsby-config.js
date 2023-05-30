@@ -1,3 +1,6 @@
+require("dotenv").config({
+  path: `.env.${process.env.NODE_ENV}`,
+})
 const config = require("./src/utils/siteConfig");
 let contentfulConfig;
 
