@@ -19,6 +19,7 @@ import Dms7 from "../images/dms7.png";
 import Elevate from "../images/elevate_tag.svg";
 import Redx from "../images/redx.png";
 import Greenc from "../images/greenc.png";
+import Video from "../videos/meet-the-elevate-crm.mp4";
 import Crm1 from "../images/crm1.png";
 import Crm2 from "../images/crm2.png";
 import Crm3 from "../images/crm3.png";
@@ -40,9 +41,14 @@ const Success = ({ children, classes, data, tags }) => {
 
 <div style={{backgroundImage:"url("+Fadebg+")", backgroundSize:"cover", backgroundPosition:"centerBottom",}}>
 <Container>
-      <div className={classes.top} style={{paddingBottom:"60px",}}>
-          <div className={classes.centerHeading}>
-          <img src={Elevate} style={{width:"100%", maxWidth:"250px", paddingBottom:"20px"}}/>           
+      <div className={classes.top} style={{paddingBottom:"65px",}}>
+          <div className={classes.centerHeading}> 
+          <img src={Elevate} style={{width:"100%", maxWidth:"250px", paddingBottom:"20px"}}/>
+          <div style={{textAlign:"center", paddingLeft:"20px", paddingRight:"20px"}}>
+                            <div className={classes.Heading2}>The #1 Social Media Marketing CRM in Real Estate</div>
+                              
+                            
+                        </div>                 
           </div>
 
          
@@ -53,7 +59,7 @@ const Success = ({ children, classes, data, tags }) => {
                   
 <div style={{maxWidth:"800px",marginLeft:"auto",marginRight:"auto",}}>
                 <div style={{ textAlign: "center" }} className={classes.videoEmbed}>
-                      <iframe className={classes.videoContainer} src="https://www.youtube.com/embed/qtXMvK19Y9c"
+                      <iframe className={classes.videoContainer} src={Video}
                       frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                 </div>
                 
@@ -61,7 +67,7 @@ const Success = ({ children, classes, data, tags }) => {
                 of pure productivity<br />
                 with Elevate! </div>
                 
-                            <div className={classes.subtext}>Elevate by Elm Street is the ONLY digital marketing solution you need to build and scale your online real estate business.
+                            <div className={classes.subtext}>Elevate by Elm Street is the ONLY digital marketing solution you need to build and scale your real estate business.
                             <br /><br /> 
 Build your business, increase your sphere, and look like a marketing rockstar with an all-in-one solution designed to capture, engage and convert.
 <br /><br />
