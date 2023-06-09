@@ -16,7 +16,7 @@
     "elevate-ui": "^0.20.0",
     "elevate-ui-icons": "^0.1.0",
     "formik": "0.11.11",
-    "gatsby": "^1.9.279",
+    "gatsby": "^4.25.7",
     "gatsby-image": "^1.0.54",
     "gatsby-link": "^1.6.44",
     "gatsby-plugin-canonical-urls": "^1.0.18",
