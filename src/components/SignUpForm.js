@@ -11,6 +11,9 @@ import withStyles from "elevate-ui/withStyles";
 import Datetime from "elevate-ui/Datetime";
 import moment from "moment";
 
+//temporarily hard-coded
+const CRM_API_URL = 'https://crm.yourelevate.com/api/marketing-site/ip';
+
 class SignUpForm extends Component {
     constructor(props) {
         super(props);
@@ -20,7 +23,7 @@ class SignUpForm extends Component {
     }
 
     componentDidMount() {
-        const crmApiIp = process.env.CRM_API_URL;
+        const crmApiIp = CRM_API_URL;
         fetch(crmApiIp, {
             method: 'POST',
             credentials:'include',
