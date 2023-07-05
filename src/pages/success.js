@@ -45,8 +45,8 @@ const Success = ({ children, classes, data, tags }) => {
           <div className={classes.centerHeading}> 
           <img src={Elevate} style={{width:"100%", maxWidth:"250px", paddingBottom:"20px"}}/>
           <div style={{textAlign:"center", paddingLeft:"20px", paddingRight:"20px"}}>
-                            <div className={classes.Heading2}>The #1 Social Media Marketing CRM in Real Estate</div>
-                            <div className={classes.bold}>Intuitive lead generation &amp; marketing done for you.</div>
+                            <div className={classes.Heading2}>Convert More Leads Into Clients</div>
+                            <div className={classes.bold}>Over 15,000 real estate professionals trust Elevate for managing their leads, website, marketing, and automation.</div>
                               
                             
                         </div>                 
@@ -65,9 +65,9 @@ const Success = ({ children, classes, data, tags }) => {
                       </video>
                 </div>
                 
-                <div className={classes.Heading2} style={{paddingBottom:"14px", paddingTop:"20px"}}>Experience the power<br />
-                of pure productivity<br />
-                with Elevate! </div>
+                <div className={classes.Heading2} style={{paddingBottom:"14px", paddingTop:"20px"}}>Elevate: Say Hi to the <br />
+                World’s Most Trusted and<br />
+                Powerful Real Estate CRM</div>
                 
                             <div className={classes.subtext}>Elevate by Elm Street is the ONLY digital marketing solution you need to build and scale your real estate business.
                             <br /><br /> 
