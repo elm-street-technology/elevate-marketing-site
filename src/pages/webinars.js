@@ -12,6 +12,7 @@ import Web1 from "../images/miles_pic.png";
 import Web2 from "../images/crm_pic.png";
 import Web3 from "../images/list_pic.png";
 import Web4 from "../images/emerge_screen.png";
+import Web5 from "../images/elevate_crm.gif";
 import SEO from "../components/SEO";
 import OverlappingHexagons from "../images/overlapping-hexagons.svg";
 
@@ -62,16 +63,16 @@ const Webinars = ({ classes, data }) => {
                   <div className={classes.column2} style={{ textAlign: "center", paddingTop: "22px" }}>
                                     
                                     <div className={classes.subheading} >Welcome to Elevate</div>
-                                    <div className={classes.subtext}>Join Miles Greer, your Digital Tour Guide for an introduction to the POWER of Elevate.
+                                    <div className={classes.subtext}>Join your Digital Tour Guide for an introduction to the POWER of Elevate.
                                     This popular training is complemented by best practices for engaging your sphere of influence, as well as tips for getting
                                     the most out of all that Elevate<br />
                                     has to offer you and your business. 
                                     <br /><br />
                                     Training time:  1 hr.</div>
-                                    <a target="_blank" href="https://tryelevate.zoom.us/webinar/register/WN_TBl4N5RFQy6hG5-Bl68Hag" className={classes.getStartedLink}>
+                                    <a target="_blank" href="https://gateway.on24.com/wcc/eh/3767195/lp/3993321/welcome-to-elevate" className={classes.getStartedLink}>
                                     Register Now</a>
                                     <div style={{ textAlign: "center",paddingTop:"5px" }}>
-                                          <img src={Web1} width="300" />
+                                          <img src={Web5} width="440" />
                                     </div>
                   </div>
 
@@ -85,7 +86,7 @@ const Webinars = ({ classes, data }) => {
                                     analytics and much, much more.
                                     <br /><br />
                                     Training time:  1 hr.</div>
-                                    <a target="_blank" href="https://tryelevate.zoom.us/webinar/register/WN_RkmyfcSjT7azNvsVh-p_ow" className={classes.getStartedLink}>
+                                    <a target="_blank" href="https://gateway.on24.com/wcc/eh/3767195/lp/3993323/elevate-crm-training" className={classes.getStartedLink}>
                                     Register Now</a>
                                     <div style={{ textAlign: "center",paddingTop:"5px" }}>
                                           <img src={Web2} width="300" />
@@ -119,7 +120,7 @@ const Webinars = ({ classes, data }) => {
                                     of the tools you need to succeed.
                                     <br /><br />
                                     Training time:  1 hr.</div>
-                                    <a target="_blank" href="https://tryelevate.zoom.us/webinar/register/WN_HNAOpBSWQmeMldDf0IBEwQ" className={classes.getStartedLink}>
+                                    <a target="_blank" href="https://gateway.on24.com/wcc/eh/3767195/lp/3993325/exploring-social-media" className={classes.getStartedLink}>
                                     Register Now</a>
                                     <div style={{ textAlign: "center",paddingTop:"5px" }}>
                                           <img src={Web3} width="300" />
@@ -136,7 +137,7 @@ const Webinars = ({ classes, data }) => {
                                     to nurture your leads. Live Q&amp;A throughout.
                                     <br /><br />
                                     Training time:  1 hr.</div>
-                                    <a target="_blank" href="https://tryelevate.zoom.us/webinar/register/WN_K8uhdZePRESzKzmCGR4-tg" className={classes.getStartedLink}>
+                                    <a target="_blank" href="https://gateway.on24.com/wcc/eh/3767195/lp/3993322/elevate-email-marketing" className={classes.getStartedLink}>
 Register Now</a>
                                     <div style={{ textAlign: "center",paddingTop:"5px" }}>
                                           <img src={Web4} width="300" />
