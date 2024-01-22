@@ -28,11 +28,11 @@
   status = 301
 [[redirects]]
   from = "/support/"
-  to = "https://elmstreettechnology.zendesk.com/hc/en-us"
+  to = "https://support.tryelevate.com/s/ "
   status = 301
 [[redirects]]
   from = "/Support/"
-  to = "https://elmstreettechnology.zendesk.com/hc/en-us"
+  to = "https://support.tryelevate.com/s/ "
   status = 301
 
 [[redirects]]

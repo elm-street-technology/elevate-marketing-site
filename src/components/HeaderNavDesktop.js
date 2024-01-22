@@ -7,7 +7,7 @@ import ArrowDropDown from "elevate-ui-icons/ArrowDropDown";
 const HeaderNavDesktop = ({ classes, className }) => {
   return (
     <nav className={classNames(classes.nav, className)}>
-        <div className={classes.link}>
+      <div className={classes.link}>
         <div className={classes.navItem}>
           Products
           <ArrowDropDown size={20} />
@@ -19,7 +19,7 @@ const HeaderNavDesktop = ({ classes, className }) => {
           <Link className={classes.listItemLink} to="/socialpro">
             <li className={classes.listItem}>Social Pro&reg;</li>
           </Link>
-         
+
           <Link className={classes.listItemLink} to="/elevatedms">
             <li className={classes.listItem}>DMS&reg;</li>
           </Link>
@@ -40,7 +40,6 @@ const HeaderNavDesktop = ({ classes, className }) => {
           </Link>
         </ul>
       </div>
-
 
       {/*
       <div className={classes.link}>
@@ -68,21 +67,6 @@ const HeaderNavDesktop = ({ classes, className }) => {
           <ArrowDropDown size={20} />
         </div>
         <ul className={classes.dropDown}>
-          <Link className={classes.listItemLink} to="/events">
-            <li className={classes.listItem}>Educational Programs</li>
-          </Link>
-          <Link className={classes.listItemLink} to="/events_sm">
-            <li className={classes.listItem}>Social Media Boot Camp</li>
-          </Link>
-          <Link className={classes.listItemLink} to="/events_lg">
-            <li className={classes.listItem}>Lead Gen. Boot Camp</li>
-          </Link>
-          <Link className={classes.listItemLink} to="/events_listings">
-            <li className={classes.listItem}>Listings Boot Camp</li>
-          </Link>
-          <Link className={classes.listItemLink} to="/events_referrals">
-            <li className={classes.listItem}>Referrals Boot Camp</li>
-          </Link>
           <Link className={classes.listItemLink} to="/markets">
             <li className={classes.listItem}>MLS Markets</li>
           </Link>

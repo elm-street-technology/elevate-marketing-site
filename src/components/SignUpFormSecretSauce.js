@@ -23,12 +23,11 @@ class SignUpFormSecretSauce extends Component {
     const { formState } = this.state;
     const { classes, className } = this.props;
 
-    var valid = function (current) {
+    var valid = function(current) {
       return current.day() !== 0 && current.day() !== 6;
     };
 
-    var renderDay = function (props, currentDate, selectedDate) {
-
+    var renderDay = function(props, currentDate, selectedDate) {
       if (currentDate.month() == moment().month()) {
         if (currentDate.date() < moment().date()) {
           if (props.className == "rdtDay") {
@@ -58,12 +57,6 @@ class SignUpFormSecretSauce extends Component {
             </Typography>
             <Typography type="heading6" gutterBottom>
               An Elevate sales representative will be in touch with you shortly.
-            </Typography>
-            <Typography type="heading4" gutterTop>
-              If you'd like to speak to a sales representative NOW, please call{" "}
-              <a href="tel:18333031040" className={classes.link}>
-                833.303.1040
-              </a>.
             </Typography>
           </Alert>
         </div>
@@ -106,25 +99,36 @@ class SignUpFormSecretSauce extends Component {
             })
           }
           onSubmit={(values, { setSubmitting }) => {
-            var meeting_request = '';
-            Object.keys(values).forEach(function (key, index) {
+            var meeting_request = "";
+            Object.keys(values).forEach(function(key, index) {
               // key: the name of the object key
-              // index: the ordinal position of the key within the object 
-              if (key == 'meetingdate') {
+              // index: the ordinal position of the key within the object
+              if (key == "meetingdate") {
                 if (typeof values.meetingdate.format === "function") {
-                  meeting_request = values.meetingdate.format("YYYY-MM-DD") + "T" + values.meetingtime.replace(" (EDT)", "") + "-04:00"
+                  meeting_request =
+                    values.meetingdate.format("YYYY-MM-DD") +
+                    "T" +
+                    values.meetingtime.replace(" (EDT)", "") +
+                    "-04:00";
                 }
               }
             });
             const body = {
               ...values,
               roleOther: values.role === "Other" ? values.roleOther : "", // Just in case the user had typed in roleOther then changed their role to something else
-              interestStr: values.interests.join(",") + ", Interested Markets: " + values.market1 + ", " + values.market2 + "," + values.market3,
-              utm_campaign: (window.utm_tags) ? window.utm_tags.campaign : "",
-              utm_source: (window.utm_tags) ? window.utm_tags.source : "",
-              utm_medium: (window.utm_tags) ? window.utm_tags.medium : "",
-              utm_term: (window.utm_tags) ? window.utm_tags.term : "",
-              demo_request_date: meeting_request
+              interestStr:
+                values.interests.join(",") +
+                ", Interested Markets: " +
+                values.market1 +
+                ", " +
+                values.market2 +
+                "," +
+                values.market3,
+              utm_campaign: window.utm_tags ? window.utm_tags.campaign : "",
+              utm_source: window.utm_tags ? window.utm_tags.source : "",
+              utm_medium: window.utm_tags ? window.utm_tags.medium : "",
+              utm_term: window.utm_tags ? window.utm_tags.term : "",
+              demo_request_date: meeting_request,
             };
             return fetch(
               "https://hooks.zapier.com/hooks/catch/4496703/3uy9gh0/",
@@ -137,7 +141,7 @@ class SignUpFormSecretSauce extends Component {
               .then((res) => {
                 if (res.status === "success") {
                   this.setState({ formState: "success" });
-                  dataLayer.push({'event': 'form-success'});
+                  dataLayer.push({ event: "form-success" });
 
                   if (window.fbq) {
                     window.fbq("track", "Lead");
@@ -148,7 +152,13 @@ class SignUpFormSecretSauce extends Component {
                     });
                   }
                   if (window.ga) {
-                    window.ga('send','event','form','form_completed','get-started');
+                    window.ga(
+                      "send",
+                      "event",
+                      "form",
+                      "form_completed",
+                      "get-started"
+                    );
                   }
                 } else {
                   this.setState({ formState: "error" });
@@ -163,10 +173,7 @@ class SignUpFormSecretSauce extends Component {
               <Typography
                 type="heading6"
                 style={{ textAlign: "center", color: "#888f96" }}
-              >
-                
-                
-              </Typography>
+              />
               <div className={classes.topRow}>
                 <Field
                   id="firstname"
@@ -220,15 +227,18 @@ class SignUpFormSecretSauce extends Component {
                 display="inline"
                 items={[
                   {
-                    label: "Existing client – looking to connect with a Success Coach regarding my account.",
+                    label:
+                      "Existing client – looking to connect with a Success Coach regarding my account.",
                     value: "Existing Client",
                   },
                   {
-                    label: "An agent – looking to schedule my 15-minute one-on-one consultation with a Success Coach.",
+                    label:
+                      "An agent – looking to schedule my 15-minute one-on-one consultation with a Success Coach.",
                     value: "Agent",
                   },
                   {
-                    label: "A broker – interested in lead generation for myself and/or my agents.",
+                    label:
+                      "A broker – interested in lead generation for myself and/or my agents.",
                     value: "Broker",
                   },
                   {
@@ -248,7 +258,7 @@ class SignUpFormSecretSauce extends Component {
                   autoFocus
                 />
               )}
-              
+
               <button
                 type="submit"
                 className={classes.signUpBtn}
@@ -256,8 +266,12 @@ class SignUpFormSecretSauce extends Component {
               >
                 Please contact me asap
               </button>
-              <div style={{ fontSize: "11px",textAlign: "center" }}>
-              By submitting this form, you are requesting to be contacted by a member of the Elevate Sales Team at the details provided via text, email or call (may involve automated or pre-recorded means).  You may revoke this consent through any reasonable means.
+              <div style={{ fontSize: "11px", textAlign: "center" }}>
+                By submitting this form, you are requesting to be contacted by a
+                member of the Elevate Sales Team at the details provided via
+                text, email or call (may involve automated or pre-recorded
+                means). You may revoke this consent through any reasonable
+                means.
               </div>
             </Form>
           )}
@@ -308,7 +322,7 @@ export default withStyles((theme) => ({
   selectfield: {
     borderRadius: "6px",
     border: "2px solid #ECECEC",
-    height: "40px"
+    height: "40px",
   },
   selectlabel: {
     width: "100%",

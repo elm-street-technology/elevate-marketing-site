@@ -27,185 +27,233 @@ import Elite from "../images/elite.gif";
 import Bar from "../images/bar.gif";
 import Freebg from "../images/free_bg.jpg";
 const welcome_elite = ({ classes }) => {
-
   return (
     <div className={classes.root}>
       <SEO />
       <Container>
         <div className={classes.top}>
-          <div className={classes.centerHeading} style={{paddingBottom:"35px"}}>
-            <div className={classes.heading}><strong>Welcome to Elevate</strong></div>
-            <div className={classes.bold}>We invite you to explore your NEW Elevate experience.
-            
-</div>
+          <div
+            className={classes.centerHeading}
+            style={{ paddingBottom: "35px" }}
+          >
+            <div className={classes.heading}>
+              <strong>Welcome to Elevate</strong>
+            </div>
+            <div className={classes.bold}>
+              We invite you to explore your NEW Elevate experience.
+            </div>
           </div>
         </div>
       </Container>
-      
+
       <Container>
         <div className={classes.top}>
-          <div className={classes.column2} style={{ height:"950px", paddingTop:"20px",}}> 
-    
-          <img src={Elite} style={{ width:"100%", maxWidth:"675px"}}/>
-            
-            
-
+          <div
+            className={classes.column2}
+            style={{ height: "950px", paddingTop: "20px" }}
+          >
+            <img src={Elite} style={{ width: "100%", maxWidth: "675px" }} />
           </div>
-          
+
           <div className={classes.column3}>
             <div className={classes.infoboxTeal}>
               <div>
-            
-                <div className={classes.heading2} style={{color:"#FFFFFF"}}>Get Started Guide</div>
-                <span style={{color:"#FFFFFF"}}>
-                Let us walk you step-by-step through your Elevate Elite&reg; experience.
-
-
+                <div className={classes.heading2} style={{ color: "#FFFFFF" }}>
+                  Get Started Guide
+                </div>
+                <span style={{ color: "#FFFFFF" }}>
+                  Let us walk you step-by-step through your Elevate Elite&reg;
+                  experience.
                 </span>
               </div>
-                <div>
-                <a target="_blank" href="/assets/elevate_welcome_ebook.pdf" className={classes.getStartedLink2}>
-                 Download PDF
-                    </a>
-                </div>
+              <div>
+                <a
+                  target="_blank"
+                  href="/assets/elevate_welcome_ebook.pdf"
+                  className={classes.getStartedLink2}
+                >
+                  Download PDF
+                </a>
+              </div>
             </div>
 
             <div className={classes.infoboxGray}>
-          
-              <div style={{textAlign:"center"}}>
+              <div style={{ textAlign: "center" }}>
                 <div className={classes.heading2}>Training Webinars</div>
-                <div style={{color:"#FFFFFF"}}>
-                Join a live walk-through with our Elevate Success Team to explore your new service.
-
+                <div style={{ color: "#FFFFFF" }}>
+                  Join a live walk-through with our Elevate Success Team to
+                  explore your new service.
                 </div>
-                <a target="_blank" href="https://tryelevate.com/webinars/" className={classes.getStartedLink}>
+                <a
+                  target="_blank"
+                  href="https://tryelevate.com/webinars/"
+                  className={classes.getStartedLink}
+                >
                   Register Now
-                    </a>
+                </a>
               </div>
             </div>
 
             <div className={classes.infoboxTeal}>
               <div>
-             
-                <div className={classes.heading2} style={{color:"#FFFFFF"}}>Help Center</div>
-                <div style={{color:"#FFFFFF"}}>
-                Browse our easy-to-search knowledge base with any questions you may have.
-
-
+                <div className={classes.heading2} style={{ color: "#FFFFFF" }}>
+                  Help Center
+                </div>
+                <div style={{ color: "#FFFFFF" }}>
+                  Browse our easy-to-search knowledge base with any questions
+                  you may have.
                 </div>
               </div>
-                <div>
-                <a target="_blank" href="https://elmstreettechnology.zendesk.com/hc/en-us" className={classes.getStartedLink2}>
-                Browse Help
-                    </a>
-                </div>
+              <div>
+                <a
+                  target="_blank"
+                  href="https://support.tryelevate.com/s/ "
+                  className={classes.getStartedLink2}
+                >
+                  Browse Help
+                </a>
+              </div>
             </div>
-
           </div>
-
         </div>
       </Container>
-   
-      <div style={{backgroundColor:"gray",backgroundImage:"url("+Freebg+")"}}>
-      <Container>
-            <div className={classes.section}></div>
-        <div className={classes.top}>
-          <div className={classes.centerHeading} style={{paddingBottom:"55px",}}>
-            <div className={classes.heading} style={{color:"#ffffff"}}>
-            FREE Tips, Tricks &amp; Strategies
+
+      <div
+        style={{
+          backgroundColor: "gray",
+          backgroundImage: "url(" + Freebg + ")",
+        }}
+      >
+        <Container>
+          <div className={classes.section} />
+          <div className={classes.top}>
+            <div
+              className={classes.centerHeading}
+              style={{ paddingBottom: "55px" }}
+            >
+              <div className={classes.heading} style={{ color: "#ffffff" }}>
+                FREE Tips, Tricks &amp; Strategies
+              </div>
+              for marketing &amp; lead generation success.
             </div>
-            for marketing &amp; lead generation success.
           </div>
-        </div>
-      
-      
-        <div className={classes.top}>
-          <div className={classes.column3} style={{ textAlign: "center", paddingBottom: "35px" }}>
-          <div style={{ textAlign: "center",paddingBottom:"20px" }}>
-          <img src={Dose} style={{ width:"100%", maxWidth:"300px"}}/>
-        </div>
-            
-          <div className={classes.heading2} style={{color:"#ffffff"}}>Daily Marketing Tips<br />
-free daily email
-</div>
-                <div> 
-                Sign up to receive your daily dose<br />
-                of marketing awesomeness<br />
+
+          <div className={classes.top}>
+            <div
+              className={classes.column3}
+              style={{ textAlign: "center", paddingBottom: "35px" }}
+            >
+              <div style={{ textAlign: "center", paddingBottom: "20px" }}>
+                <img src={Dose} style={{ width: "100%", maxWidth: "300px" }} />
+              </div>
+
+              <div className={classes.heading2} style={{ color: "#ffffff" }}>
+                Daily Marketing Tips
+                <br />
+                free daily email
+              </div>
+              <div>
+                Sign up to receive your daily dose
+                <br />
+                of marketing awesomeness
+                <br />
                 delivered straight to your inbox.
-                </div>
-                <a target="_blank" href="http://3sixtyfive.agency/" className={classes.getStartedLink2}>
-                  Register Today
-                    </a>
-                
-
+              </div>
+              <a
+                target="_blank"
+                href="http://3sixtyfive.agency/"
+                className={classes.getStartedLink2}
+              >
+                Register Today
+              </a>
             </div>
-          <div className={classes.column3} style={{ textAlign: "center", paddingBottom: "35px" }}>
-          <div style={{ textAlign: "center",paddingBottom:"20px" }}>
-          <img src={Emails} style={{ width:"100%", maxWidth:"300px"}}/>
-        </div>
-          <div className={classes.heading2} style={{color:"#ffffff"}}>Email Marketing Tips<br />
-free download
-</div>
-                <div> 
-                6 emails every real estate agent<br />
-                should be sending to nurture past,<br />
+            <div
+              className={classes.column3}
+              style={{ textAlign: "center", paddingBottom: "35px" }}
+            >
+              <div style={{ textAlign: "center", paddingBottom: "20px" }}>
+                <img
+                  src={Emails}
+                  style={{ width: "100%", maxWidth: "300px" }}
+                />
+              </div>
+              <div className={classes.heading2} style={{ color: "#ffffff" }}>
+                Email Marketing Tips
+                <br />
+                free download
+              </div>
+              <div>
+                6 emails every real estate agent
+                <br />
+                should be sending to nurture past,
+                <br />
                 present &amp; future clients.
-                </div>
-                <a target="_blank" href="/assets/6emails_elevate.pdf" className={classes.getStartedLink2}>
-                  Download PDF
-                    </a>
-          </div>
+              </div>
+              <a
+                target="_blank"
+                href="/assets/6emails_elevate.pdf"
+                className={classes.getStartedLink2}
+              >
+                Download PDF
+              </a>
+            </div>
 
-          <div className={classes.column3} style={{ textAlign: "center", paddingBottom: "35px" }}>
-          <div style={{ textAlign: "center",paddingBottom:"20px" }}>
-          <img src={Social} style={{ width:"100%", maxWidth:"300px"}}/>
-        </div>
-          <div className={classes.heading2} style={{color:"#ffffff"}}>Social Media Tips<br />
-free download
-</div>
-                <div> 
-                Quick tips to establishing<br />
-                &amp; build your online presence<br />
+            <div
+              className={classes.column3}
+              style={{ textAlign: "center", paddingBottom: "35px" }}
+            >
+              <div style={{ textAlign: "center", paddingBottom: "20px" }}>
+                <img
+                  src={Social}
+                  style={{ width: "100%", maxWidth: "300px" }}
+                />
+              </div>
+              <div className={classes.heading2} style={{ color: "#ffffff" }}>
+                Social Media Tips
+                <br />
+                free download
+              </div>
+              <div>
+                Quick tips to establishing
+                <br />
+                &amp; build your online presence
+                <br />
                 &amp; strengthen relationships.
-                </div>
-                <a target="_blank" href="/assets/elevatesocialmediaebook.pdf" className={classes.getStartedLink2}>
-                  Download PDF
-                    </a>
+              </div>
+              <a
+                target="_blank"
+                href="/assets/elevatesocialmediaebook.pdf"
+                className={classes.getStartedLink2}
+              >
+                Download PDF
+              </a>
+            </div>
           </div>
-
-
-
-          </div>
-      </Container>
+        </Container>
       </div>
 
-
       <Container>
         <div className={classes.top}>
-          <div className={classes.centerHeading} style={{paddingTop:"70px"}}>
-            <div className={classes.heading}><strong>Enjoying your Elevate experience so far?</strong></div>
+          <div className={classes.centerHeading} style={{ paddingTop: "70px" }}>
+            <div className={classes.heading}>
+              <strong>Enjoying your Elevate experience so far?</strong>
+            </div>
             We’d love for you to share your experience.
-           
-
-
-            <div style={{paddingBottom:"50px", paddingTop:"20px"}}>
-            <a target="_blank" href="https://www.facebook.com/TryElevateRE/reviews/" className={classes.getStartedLink}>
-                  Write Us a Review
-                    </a></div>
+            <div style={{ paddingBottom: "50px", paddingTop: "20px" }}>
+              <a
+                target="_blank"
+                href="https://www.facebook.com/TryElevateRE/reviews/"
+                className={classes.getStartedLink}
+              >
+                Write Us a Review
+              </a>
+            </div>
           </div>
         </div>
       </Container>
-
-
-
-
-
-
-
     </div>
   );
 };
-
 
 export default withStyles((theme) => ({
   root: {
@@ -219,13 +267,13 @@ export default withStyles((theme) => ({
     flexWrap: "wrap",
     alignItems: "top",
   },
-  section:{
+  section: {
     paddingTop: "60px",
   },
   heading: {
     color: theme.colors.secondary,
     fontSize: "32px",
-    lineHeight:"40px",
+    lineHeight: "40px",
     fontWeight: "700",
     marginRight: "auto",
     paddingBottom: "20px",
@@ -246,33 +294,33 @@ export default withStyles((theme) => ({
     marginRight: "auto",
     paddingBottom: "20px",
   },
-  centerHeading:{
+  centerHeading: {
     alignItems: "center",
     width: "100%",
     textAlign: "center",
   },
-  bold:{
-    fontWeight:"700",
+  bold: {
+    fontWeight: "700",
   },
-  column:{
-    width:"530px",
+  column: {
+    width: "530px",
     maxWidth: "100%",
-    paddingRight:"10px",
-    paddingLeft:"10px",
+    paddingRight: "10px",
+    paddingLeft: "10px",
     verticalAlign: "top",
   },
-  column2:{
-    width:"710px",
+  column2: {
+    width: "710px",
     maxWidth: "100%",
-    paddingRight:"10px",
-    paddingLeft:"10px",
+    paddingRight: "10px",
+    paddingLeft: "10px",
     verticalAlign: "top",
   },
-  column3:{
-    width:"350px",
+  column3: {
+    width: "350px",
     maxWidth: "100%",
-    paddingRight:"10px",
-    paddingLeft:"10px",
+    paddingRight: "10px",
+    paddingLeft: "10px",
     verticalAlign: "top",
   },
   getStartedLink: {
@@ -338,7 +386,7 @@ export default withStyles((theme) => ({
     borderRadius: "4px",
     margin: "16px auto",
   },
-  grayText:{
+  grayText: {
     color: theme.colors.gray800,
   },
   infoboxGray: {
@@ -364,14 +412,13 @@ export default withStyles((theme) => ({
     textAlign: "center",
   },
   videoBorder: {
-    borderStyle:"solid",
+    borderStyle: "solid",
     borderWidth: "1px",
     borderColor: theme.colors.gray400,
   },
-  iconPosition:{
+  iconPosition: {
     position: "relative",
-    top:"12px",
-    right:"4px"
-  }
-
+    top: "12px",
+    right: "4px",
+  },
 }))(welcome_elite);

@@ -7,7 +7,7 @@ import CheckboxGroup from "elevate-ui/CheckboxGroup";
 import Input from "elevate-ui/Input";
 import RadioGroup from "elevate-ui/RadioGroup";
 import Typography from "elevate-ui/Typography";
-import ResponsiveVid from "../components/ResponsiveVid"
+import ResponsiveVid from "../components/ResponsiveVid";
 import withStyles from "elevate-ui/withStyles";
 import Datetime from "elevate-ui/Datetime";
 import moment from "moment";
@@ -24,12 +24,11 @@ class FormLeadSource extends Component {
     const { formState } = this.state;
     const { classes, className } = this.props;
 
-    var valid = function (current) {
+    var valid = function(current) {
       return current.day() !== 0 && current.day() !== 6;
     };
 
-    var renderDay = function (props, currentDate, selectedDate) {
-
+    var renderDay = function(props, currentDate, selectedDate) {
       if (currentDate.month() == moment().month()) {
         if (currentDate.date() < moment().date()) {
           if (props.className == "rdtDay") {
@@ -53,15 +52,20 @@ class FormLeadSource extends Component {
             margin: "24px auto",
           }}
         >
-          <div >
-                                  
-                      
-            <Typography type="heading3" gutterBottom style={{color:"#f15623",}}>
-              <a className={classes.signUpBtn} href="/assets/last_year_review.xlsx">Download the Evaluation Spreadsheet</a>
+          <div>
+            <Typography
+              type="heading3"
+              gutterBottom
+              style={{ color: "#f15623" }}
+            >
+              <a
+                className={classes.signUpBtn}
+                href="/assets/last_year_review.xlsx"
+              >
+                Download the Evaluation Spreadsheet
+              </a>
             </Typography>
-            <Typography type="heading5" gutterTop>
-              
-            </Typography>
+            <Typography type="heading5" gutterTop />
           </div>
         </div>
       );
@@ -89,16 +93,16 @@ class FormLeadSource extends Component {
               lastname: Yup.string().required("Last name is required"),
               email: Yup.string()
                 .email("Invalid email address")
-                .required("Email is required")
+                .required("Email is required"),
             })
           }
           onSubmit={(values, { setSubmitting }) => {
             const body = {
               ...values,
-              utm_campaign: (window.utm_tags) ? window.utm_tags.campaign : "",
-              utm_source: (window.utm_tags) ? window.utm_tags.source : "",
-              utm_medium: (window.utm_tags) ? window.utm_tags.medium : "",
-              utm_term: (window.utm_tags) ? window.utm_tags.term : ""
+              utm_campaign: window.utm_tags ? window.utm_tags.campaign : "",
+              utm_source: window.utm_tags ? window.utm_tags.source : "",
+              utm_medium: window.utm_tags ? window.utm_tags.medium : "",
+              utm_term: window.utm_tags ? window.utm_tags.term : "",
             };
             return fetch(
               "https://hooks.zapier.com/hooks/catch/4496703/3uy9gh0/",
@@ -111,7 +115,7 @@ class FormLeadSource extends Component {
               .then((res) => {
                 if (res.status === "success") {
                   this.setState({ formState: "success" });
-                  dataLayer.push({'event': 'form-success'});
+                  dataLayer.push({ event: "form-success" });
 
                   if (window.fbq) {
                     window.fbq("track", "Lead");
@@ -122,7 +126,13 @@ class FormLeadSource extends Component {
                     });
                   }
                   if (window.ga) {
-                    window.ga('send','event','form','form_completed','bright');
+                    window.ga(
+                      "send",
+                      "event",
+                      "form",
+                      "form_completed",
+                      "bright"
+                    );
                   }
                 } else {
                   this.setState({ formState: "error" });
@@ -132,56 +142,73 @@ class FormLeadSource extends Component {
                 this.setState({ formState: "error" });
               });
           }}
-          render={({ values, isSubmitting,handleBlur, handleChange }) => (
+          render={({ values, isSubmitting, handleBlur, handleChange }) => (
             <Form noValidate>
-              <div style={{marginBottom:"30px"}}>
-                
-
-
-             
-
-              
-                </div>
-              <div style={{ maxWidth: "600px",marginLeft:"auto",marginRight:"auto"}}>
-              <div className={classes.topRow}>
-                <Field
-                  id="firstname"
-                  name="firstname"
-                  label="First Name"
-                  component={Input}
-                  className={classes.field}
-                />
-                <Field
-                  id="lastname"
-                  name="lastname"
-                  label="Last Name"
-                  component={Input}
-                  className={classes.field}
-                />
-              </div>
-              <Field
-                id="email"
-                name="email"
-                label="Email"
-                component={Input}
-                className={classes.field}
-              />
-              
-                  <div style={{textAlign:"left",fontSize:"14px",lineHeight:"19px"}}>
-             
-              
-              </div>
-              <button
-                type="submit"
-                className={classes.signUpBtn}
-                disabled={isSubmitting}
+              <div style={{ marginBottom: "30px" }} />
+              <div
+                style={{
+                  maxWidth: "600px",
+                  marginLeft: "auto",
+                  marginRight: "auto",
+                }}
               >
-                Dowload Now
-              </button>
+                <div className={classes.topRow}>
+                  <Field
+                    id="firstname"
+                    name="firstname"
+                    label="First Name"
+                    component={Input}
+                    className={classes.field}
+                  />
+                  <Field
+                    id="lastname"
+                    name="lastname"
+                    label="Last Name"
+                    component={Input}
+                    className={classes.field}
+                  />
+                </div>
+                <Field
+                  id="email"
+                  name="email"
+                  label="Email"
+                  component={Input}
+                  className={classes.field}
+                />
+
+                <div
+                  style={{
+                    textAlign: "left",
+                    fontSize: "14px",
+                    lineHeight: "19px",
+                  }}
+                />
+                <button
+                  type="submit"
+                  className={classes.signUpBtn}
+                  disabled={isSubmitting}
+                >
+                  Dowload Now
+                </button>
               </div>
-              <div style={{fontSize:"11px", paddingBottom:"35px", lineHeight:"16px"}}>
-              By submitting this form, you are requesting to be contacted by a member of the Elevate Sales Team at the details provided via text, email or call (may involve automated or pre-recorded means).  You may revoke this consent through any reasonable means.<br/>
-                Existing subscribers seeking support, please visit the <a href="https://elmstreettechnology.zendesk.com/hc/en-us">Elevate Help Center</a>.
+              <div
+                style={{
+                  fontSize: "11px",
+                  paddingBottom: "35px",
+                  lineHeight: "16px",
+                }}
+              >
+                By submitting this form, you are requesting to be contacted by a
+                member of the Elevate Sales Team at the details provided via
+                text, email or call (may involve automated or pre-recorded
+                means). You may revoke this consent through any reasonable
+                means.
+                <br />
+                Existing subscribers seeking support, please visit the{" "}
+                <a href="https://support.tryelevate.com/s/ ">
+                  Elevate Help Center
+                </a>
+                .
               </div>
             </Form>
           )}
@@ -198,7 +225,7 @@ export default withStyles((theme) => ({
     width: "100%",
     maxWidth: "700px",
     margin: "0 auto",
-    textAlign: "center"
+    textAlign: "center",
   },
   link: {
     color: "inherit",
@@ -210,8 +237,8 @@ export default withStyles((theme) => ({
     fontWeight: "600",
     textAlign: "left",
   },
-  bold:{
-    fontWeight:"700",
+  bold: {
+    fontWeight: "700",
   },
   topRow: {
     display: "flex",
@@ -222,34 +249,34 @@ export default withStyles((theme) => ({
       marginLeft: "12px",
     },
   },
-  headingSmall:{
-    fontSize:"20px",
-    textTransform:"uppercase",
-    fontWeight:"600",
-    color:"#777777",
-    textAlign:"center",
-    padding:"3px"
-  },
-  headingLarge:{
-    fontSize: "48px",
-    fontWeight: "700",
-    color: "#5bc0b8",
-    textAlign:"center",
-    padding:"3px",
-    lineHeight:"43px"
-  },
-  headingText:{
+  headingSmall: {
+    fontSize: "20px",
+    textTransform: "uppercase",
+    fontWeight: "600",
     color: "#777777",
     textAlign: "center",
     padding: "3px",
-    lineHeight: "1.4em"
+  },
+  headingLarge: {
+    fontSize: "48px",
+    fontWeight: "700",
+    color: "#5bc0b8",
+    textAlign: "center",
+    padding: "3px",
+    lineHeight: "43px",
+  },
+  headingText: {
+    color: "#777777",
+    textAlign: "center",
+    padding: "3px",
+    lineHeight: "1.4em",
   },
   checkfield: {
     width: "20px",
     height: "20px",
     position: "relative",
     top: "4px",
-    marginLeft: "10px"
+    marginLeft: "10px",
   },
   signUpBtn: {
     width: "60%",
@@ -263,12 +290,11 @@ export default withStyles((theme) => ({
     marginTop: "30px",
     marginBottom: "30px",
     textDecoration: "none",
-
   },
   selectfield: {
     borderRadius: "6px",
     border: "2px solid #ECECEC",
-    height: "40px"
+    height: "40px",
   },
   selectlabel: {
     width: "100%",
@@ -281,12 +307,12 @@ export default withStyles((theme) => ({
     marginBottom: "4px",
   },
 
-  fullWidthVid:{
+  fullWidthVid: {
     width: "100%",
-    marginLeft:"auto",
-    marginRight:"auto",
+    marginLeft: "auto",
+    marginRight: "auto",
     [theme.breakpoints[900]]: {
-      width: "75%"
+      width: "75%",
+    },
   },
-},
 }))(FormLeadSource);

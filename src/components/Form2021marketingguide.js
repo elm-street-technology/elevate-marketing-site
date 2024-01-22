@@ -7,7 +7,7 @@ import CheckboxGroup from "elevate-ui/CheckboxGroup";
 import Input from "elevate-ui/Input";
 import RadioGroup from "elevate-ui/RadioGroup";
 import Typography from "elevate-ui/Typography";
-import ResponsiveVid from "../components/ResponsiveVid"
+import ResponsiveVid from "../components/ResponsiveVid";
 import withStyles from "elevate-ui/withStyles";
 import Datetime from "elevate-ui/Datetime";
 import moment from "moment";
@@ -24,12 +24,11 @@ class Form2021marketingguide extends Component {
     const { formState } = this.state;
     const { classes, className } = this.props;
 
-    var valid = function (current) {
+    var valid = function(current) {
       return current.day() !== 0 && current.day() !== 6;
     };
 
-    var renderDay = function (props, currentDate, selectedDate) {
-
+    var renderDay = function(props, currentDate, selectedDate) {
       if (currentDate.month() == moment().month()) {
         if (currentDate.date() < moment().date()) {
           if (props.className == "rdtDay") {
@@ -53,18 +52,22 @@ class Form2021marketingguide extends Component {
             margin: "24px auto",
           }}
         >
-          <div >
-                                  
-                      
-            <Typography type="heading3" gutterBottom style={{color:"#f15623",}}>
+          <div>
+            <Typography
+              type="heading3"
+              gutterBottom
+              style={{ color: "#f15623" }}
+            >
               Fantastic!
             </Typography>
-            <div style={{margin:"50px"}}>
-            <a className={classes.signUpBtn} href="/assets/2021_marketing_guide.pdf">Download the PDF</a>
+            <div style={{ margin: "50px" }}>
+              <a
+                className={classes.signUpBtn}
+                href="/assets/2021_marketing_guide.pdf"
+              >
+                Download the PDF
+              </a>
             </div>
-            <Typography type="heading5" gutterTop style={{fontSize:"18px"}}>
-              You can speak to a member of our sales team immediately <br/>by calling  <a href="tel:18333031040" className={classes.link}>833.303.1040</a>.
-            </Typography>
           </div>
         </div>
       );
@@ -88,10 +91,10 @@ class Form2021marketingguide extends Component {
             mls_number: "",
             form: "2021marketingguide",
             list: 120590,
-            meetingdate: '',
-            meetingtime: '',
+            meetingdate: "",
+            meetingtime: "",
             role: "",
-            interests: '',
+            interests: "",
           }}
           validationSchema={() =>
             Yup.object().shape({
@@ -102,52 +105,56 @@ class Form2021marketingguide extends Component {
                 .email("Invalid email address")
                 .required("Email is required"),
               phone: Yup.string().required("Phone is required"),
-              mls_number: Yup.string()
+              mls_number: Yup.string(),
             })
           }
           onSubmit={(values, { setSubmitting }) => {
             //if (values.meetingdate != undefined) {
-            var meeting_request = '';
-            var notes = 'Interests: ';
-            Object.keys(values).forEach(function (key, index) {
+            var meeting_request = "";
+            var notes = "Interests: ";
+            Object.keys(values).forEach(function(key, index) {
               // key: the name of the object key
-              // index: the ordinal position of the key within the object 
-              if (key == 'meetingdate') {
+              // index: the ordinal position of the key within the object
+              if (key == "meetingdate") {
                 if (typeof values.meetingdate.format === "function") {
-                  meeting_request = values.meetingdate.format("YYYY-MM-DD") + "T" + values.meetingtime.replace(" (EDT)", "") + "-04:00"
+                  meeting_request =
+                    values.meetingdate.format("YYYY-MM-DD") +
+                    "T" +
+                    values.meetingtime.replace(" (EDT)", "") +
+                    "-04:00";
                 }
               }
-              if (key == 'roleOther'){
-                if(values.roleOther.length > 0){
+              if (key == "roleOther") {
+                if (values.roleOther.length > 0) {
                   values.role = values.roleOther;
                 }
               }
-              if (key == 'interestsOther'){
-                if(values.interestsOther.length > 0){
+              if (key == "interestsOther") {
+                if (values.interestsOther.length > 0) {
                   //notes = values.interests.join(",");
                   notes = notes + "," + values.interestsOther;
                 }
               }
-              if (key == "interests"){
-                if(values.interests.length > 0){
+              if (key == "interests") {
+                if (values.interests.length > 0) {
                   notes = notes + "," + values.interests.join(",");
                 }
               }
-              if (key == "demorequest"){
-                if(values.demorequest) {
+              if (key == "demorequest") {
+                if (values.demorequest) {
                   notes = notes + ", Requesting 15 min demo";
                 }
               }
             });
-            
+
             const body = {
               ...values,
               notes: notes,
-              utm_campaign: (window.utm_tags) ? window.utm_tags.campaign : "",
-              utm_source: (window.utm_tags) ? window.utm_tags.source : "",
-              utm_medium: (window.utm_tags) ? window.utm_tags.medium : "",
-              utm_term: (window.utm_tags) ? window.utm_tags.term : "",
-              demo_request_date: meeting_request
+              utm_campaign: window.utm_tags ? window.utm_tags.campaign : "",
+              utm_source: window.utm_tags ? window.utm_tags.source : "",
+              utm_medium: window.utm_tags ? window.utm_tags.medium : "",
+              utm_term: window.utm_tags ? window.utm_tags.term : "",
+              demo_request_date: meeting_request,
             };
             return fetch(
               "https://hooks.zapier.com/hooks/catch/4496703/3uy9gh0/",
@@ -160,7 +167,7 @@ class Form2021marketingguide extends Component {
               .then((res) => {
                 if (res.status === "success") {
                   this.setState({ formState: "success" });
-                  dataLayer.push({'event': 'form-success'});
+                  dataLayer.push({ event: "form-success" });
 
                   if (window.fbq) {
                     window.fbq("track", "Lead");
@@ -171,7 +178,13 @@ class Form2021marketingguide extends Component {
                     });
                   }
                   if (window.ga) {
-                    window.ga('send','event','form','form_completed','bright');
+                    window.ga(
+                      "send",
+                      "event",
+                      "form",
+                      "form_completed",
+                      "bright"
+                    );
                   }
                 } else {
                   this.setState({ formState: "error" });
@@ -181,114 +194,142 @@ class Form2021marketingguide extends Component {
                 this.setState({ formState: "error" });
               });
           }}
-          render={({ values, isSubmitting,handleBlur, handleChange }) => (
+          render={({ values, isSubmitting, handleBlur, handleChange }) => (
             <Form noValidate>
-              <div style={{marginBottom:"30px"}}>
-                
-
-
-             
-
-              
-                </div>
-              <div style={{ maxWidth: "600px",marginLeft:"auto",marginRight:"auto"}}>
-              <div className={classes.topRow}>
-                <Field
-                  id="firstname"
-                  name="firstname"
-                  label="First Name"
-                  component={Input}
-                  className={classes.field}
-                />
-                <Field
-                  id="lastname"
-                  name="lastname"
-                  label="Last Name"
-                  component={Input}
-                  className={classes.field}
-                />
-              </div>
-              <Field
-                id="email"
-                name="email"
-                label="Email"
-                component={Input}
-                className={classes.field}
-              />
-              <Field
-                id="phone"
-                name="phone"
-                label="Phone"
-                component={Input}
-                className={classes.field}
-                type="tel"
-              />
-              <Field
-                id="company"
-                name="company"
-                label="Affiliation (optional)"
-                component={Input}
-                className={classes.field}
-              />
+              <div style={{ marginBottom: "30px" }} />
+              <div
+                style={{
+                  maxWidth: "600px",
+                  marginLeft: "auto",
+                  marginRight: "auto",
+                }}
+              >
+                <div className={classes.topRow}>
                   <Field
-                      id="mls_number"
-                      name="mls_number"
-                      label="MLS # (optional)"
+                    id="firstname"
+                    name="firstname"
+                    label="First Name"
+                    component={Input}
+                    className={classes.field}
+                  />
+                  <Field
+                    id="lastname"
+                    name="lastname"
+                    label="Last Name"
+                    component={Input}
+                    className={classes.field}
+                  />
+                </div>
+                <Field
+                  id="email"
+                  name="email"
+                  label="Email"
+                  component={Input}
+                  className={classes.field}
+                />
+                <Field
+                  id="phone"
+                  name="phone"
+                  label="Phone"
+                  component={Input}
+                  className={classes.field}
+                  type="tel"
+                />
+                <Field
+                  id="company"
+                  name="company"
+                  label="Affiliation (optional)"
+                  component={Input}
+                  className={classes.field}
+                />
+                <Field
+                  id="mls_number"
+                  name="mls_number"
+                  label="MLS # (optional)"
+                  component={Input}
+                  className={classes.field}
+                />
+                <div
+                  style={{
+                    textAlign: "left",
+                    fontSize: "14px",
+                    lineHeight: "19px",
+                  }}
+                >
+                  <Field
+                    id="role"
+                    name="role"
+                    label="I am:"
+                    component={RadioGroup}
+                    display="inline"
+                    items={[
+                      {
+                        label: "An Existing Client",
+                        value: "Existing Client",
+                      },
+                      {
+                        label: "An Agent",
+                        value: "Agent",
+                      },
+                      {
+                        label: "A Broker/Owner",
+                        value: "Broker/Owner",
+                      },
+                      {
+                        label: "Other (please specify)",
+                        value: "Other",
+                      },
+                    ]}
+                    className={classes.field}
+                  />
+                  {values.role === "Other" && (
+                    <Field
+                      id="roleOther"
+                      name="roleOther"
+                      label="Other"
                       component={Input}
                       className={classes.field}
-                  />
-                  <div style={{textAlign:"left",fontSize:"14px",lineHeight:"19px"}}>
+                      autoFocus
+                    />
+                  )}
                   <Field
-                id="role"
-                name="role"
-                label="I am:"
-                component={RadioGroup}
-                display="inline"
-                items={[
-                  {
-                    label: "An Existing Client",
-                    value: "Existing Client",
-                  },
-                  {
-                    label: "An Agent",
-                    value: "Agent",
-                  },
-                  {
-                    label: "A Broker/Owner",
-                    value: "Broker/Owner",
-                  },
-                  {
-                    label: "Other (please specify)",
-                    value: "Other",
-                  },
-                ]}
-                className={classes.field}
-              />
-              {values.role === "Other" && (
-                <Field
-                  id="roleOther"
-                  name="roleOther"
-                  label="Other"
-                  component={Input}
-                  className={classes.field}
-                  autoFocus
-                />
-              )}
-             <Field id="demorequest" name="demorequest" type="checkbox" value="yes" className={classes.checkfield} style={{marginLeft:"0px",marginRight:"15px"}} />
-              <span style={{fontSize:"16px"}}>Schedule a 15-minute demo of Elevate</span>
-              
+                    id="demorequest"
+                    name="demorequest"
+                    type="checkbox"
+                    value="yes"
+                    className={classes.checkfield}
+                    style={{ marginLeft: "0px", marginRight: "15px" }}
+                  />
+                  <span style={{ fontSize: "16px" }}>
+                    Schedule a 15-minute demo of Elevate
+                  </span>
+                </div>
+                <button
+                  type="submit"
+                  className={classes.signUpBtn}
+                  disabled={isSubmitting}
+                >
+                  Get Download
+                </button>
               </div>
-              <button
-                type="submit"
-                className={classes.signUpBtn}
-                disabled={isSubmitting}
+              <div
+                style={{
+                  fontSize: "11px",
+                  paddingBottom: "35px",
+                  lineHeight: "16px",
+                }}
               >
-                Get Download
-              </button>
-              </div>
-              <div style={{fontSize:"11px", paddingBottom:"35px", lineHeight:"16px"}}>
-              By submitting this form, you are requesting to be contacted by a member of the Elevate Sales Team at the details provided via text, email or call (may involve automated or pre-recorded means).  You may revoke this consent through any reasonable means.<br/>
-                Existing subscribers seeking support, please visit the <a href="https://elmstreettechnology.zendesk.com/hc/en-us">Elevate Help Center</a>.
+                By submitting this form, you are requesting to be contacted by a
+                member of the Elevate Sales Team at the details provided via
+                text, email or call (may involve automated or pre-recorded
+                means). You may revoke this consent through any reasonable
+                means.
+                <br />
+                Existing subscribers seeking support, please visit the{" "}
+                <a href="https://support.tryelevate.com/s/ ">
+                  Elevate Help Center
+                </a>
+                .
               </div>
             </Form>
           )}
@@ -305,7 +346,7 @@ export default withStyles((theme) => ({
     width: "100%",
     maxWidth: "700px",
     margin: "0 auto",
-    textAlign: "center"
+    textAlign: "center",
   },
   link: {
     color: "inherit",
@@ -326,34 +367,34 @@ export default withStyles((theme) => ({
       marginLeft: "12px",
     },
   },
-  headingSmall:{
-    fontSize:"20px",
-    textTransform:"uppercase",
-    fontWeight:"600",
-    color:"#777777",
-    textAlign:"center",
-    padding:"3px"
-  },
-  headingLarge:{
-    fontSize: "33px",
-    fontWeight: "700",
-    color: "#5bc0b8",
-    textAlign:"center",
-    padding:"3px",
-    lineHeight:"38px"
-  },
-  headingText:{
+  headingSmall: {
+    fontSize: "20px",
+    textTransform: "uppercase",
+    fontWeight: "600",
     color: "#777777",
     textAlign: "center",
     padding: "3px",
-    lineHeight: "1.4em"
+  },
+  headingLarge: {
+    fontSize: "33px",
+    fontWeight: "700",
+    color: "#5bc0b8",
+    textAlign: "center",
+    padding: "3px",
+    lineHeight: "38px",
+  },
+  headingText: {
+    color: "#777777",
+    textAlign: "center",
+    padding: "3px",
+    lineHeight: "1.4em",
   },
   checkfield: {
     width: "20px",
     height: "20px",
     position: "relative",
     top: "4px",
-    marginLeft: "10px"
+    marginLeft: "10px",
   },
   signUpBtn: {
     width: "60%",
@@ -367,12 +408,11 @@ export default withStyles((theme) => ({
     marginTop: "30px",
     marginBottom: "30px",
     textDecoration: "none",
-
   },
   selectfield: {
     borderRadius: "6px",
     border: "2px solid #ECECEC",
-    height: "40px"
+    height: "40px",
   },
   selectlabel: {
     width: "100%",
@@ -385,12 +425,12 @@ export default withStyles((theme) => ({
     marginBottom: "4px",
   },
 
-  fullWidthVid:{
+  fullWidthVid: {
     width: "100%",
-    marginLeft:"auto",
-    marginRight:"auto",
+    marginLeft: "auto",
+    marginRight: "auto",
     [theme.breakpoints[900]]: {
-      width: "75%"
+      width: "75%",
+    },
   },
-},
 }))(Form2021marketingguide);

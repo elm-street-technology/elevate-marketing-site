@@ -23,12 +23,11 @@ class FormDMS extends Component {
     const { formState } = this.state;
     const { classes, className } = this.props;
 
-    var valid = function (current) {
+    var valid = function(current) {
       return current.day() !== 0 && current.day() !== 6;
     };
 
-    var renderDay = function (props, currentDate, selectedDate) {
-
+    var renderDay = function(props, currentDate, selectedDate) {
       if (currentDate.month() == moment().month()) {
         if (currentDate.date() < moment().date()) {
           if (props.className == "rdtDay") {
@@ -52,15 +51,13 @@ class FormDMS extends Component {
             margin: "24px auto",
           }}
         >
-          <div >
-                                  
-                      
+          <div>
             <Typography type="heading3" gutterBottom>
               Fantastic!
             </Typography>
             <Typography type="heading5" gutterTop>
-        We’ll reach out to you asap via email or telephone.<br/>
-              You can also speak to a member of our sales team immediately by calling  <a href="tel:18333031040" className={classes.link}>833.303.1040</a>.
+              We’ll reach out to you asap via email or telephone.
+              <br />
             </Typography>
           </div>
         </div>
@@ -85,8 +82,8 @@ class FormDMS extends Component {
             mls_number: "",
             form: "dms_form2",
             list: 57291,
-            meetingdate: '',
-            meetingtime: '',
+            meetingdate: "",
+            meetingtime: "",
           }}
           validationSchema={() =>
             Yup.object().shape({
@@ -97,28 +94,32 @@ class FormDMS extends Component {
                 .email("Invalid email address")
                 .required("Email is required"),
               phone: Yup.string().required("Phone is required"),
-              mls_number: Yup.string()
+              mls_number: Yup.string(),
             })
           }
           onSubmit={(values, { setSubmitting }) => {
             //if (values.meetingdate != undefined) {
-            var meeting_request = '';
-            Object.keys(values).forEach(function (key, index) {
+            var meeting_request = "";
+            Object.keys(values).forEach(function(key, index) {
               // key: the name of the object key
-              // index: the ordinal position of the key within the object 
-              if (key == 'meetingdate') {
+              // index: the ordinal position of the key within the object
+              if (key == "meetingdate") {
                 if (typeof values.meetingdate.format === "function") {
-                  meeting_request = values.meetingdate.format("YYYY-MM-DD") + "T" + values.meetingtime.replace(" (EDT)", "") + "-04:00"
+                  meeting_request =
+                    values.meetingdate.format("YYYY-MM-DD") +
+                    "T" +
+                    values.meetingtime.replace(" (EDT)", "") +
+                    "-04:00";
                 }
               }
             });
             const body = {
               ...values,
-              utm_campaign: (window.utm_tags) ? window.utm_tags.campaign : "",
-              utm_source: (window.utm_tags) ? window.utm_tags.source : "",
-              utm_medium: (window.utm_tags) ? window.utm_tags.medium : "",
-              utm_term: (window.utm_tags) ? window.utm_tags.term : "",
-              demo_request_date: meeting_request
+              utm_campaign: window.utm_tags ? window.utm_tags.campaign : "",
+              utm_source: window.utm_tags ? window.utm_tags.source : "",
+              utm_medium: window.utm_tags ? window.utm_tags.medium : "",
+              utm_term: window.utm_tags ? window.utm_tags.term : "",
+              demo_request_date: meeting_request,
             };
             return fetch(
               "https://hooks.zapier.com/hooks/catch/4496703/3uy9gh0/",
@@ -131,7 +132,7 @@ class FormDMS extends Component {
               .then((res) => {
                 if (res.status === "success") {
                   this.setState({ formState: "success" });
-                  dataLayer.push({'event': 'form-success'});
+                  dataLayer.push({ event: "form-success" });
 
                   if (window.fbq) {
                     window.fbq("track", "Lead");
@@ -142,7 +143,7 @@ class FormDMS extends Component {
                     });
                   }
                   if (window.ga) {
-                    window.ga('send','event','form','form_completed','dms');
+                    window.ga("send", "event", "form", "form_completed", "dms");
                   }
                 } else {
                   this.setState({ formState: "error" });
@@ -152,73 +153,97 @@ class FormDMS extends Component {
                 this.setState({ formState: "error" });
               });
           }}
-          render={({ values, isSubmitting,handleBlur, handleChange }) => (
+          render={({ values, isSubmitting, handleBlur, handleChange }) => (
             <Form noValidate>
-              <div style={{marginBottom:"30px"}}>
+              <div style={{ marginBottom: "30px" }}>
                 <div className={classes.headingSmall}>Looking for</div>
                 <div className={classes.headingLarge}>One Single Source</div>
-                <div className={classes.headingSmall}>For all of your digital marketing needs?</div>
-                <div className={classes.headingText} style={{ marginTop: "20px" }}>Email Marketing.  Social Media Marketing.  IDX Websites.  Lead Generation.  Lead Scrubbing.<br/>
-Let us show you how we make your marketing super easy...</div>
+                <div className={classes.headingSmall}>
+                  For all of your digital marketing needs?
                 </div>
-              <div style={{ maxWidth: "500px",marginLeft:"auto",marginRight:"auto"}}>
-              <div className={classes.topRow}>
-                <Field
-                  id="firstname"
-                  name="firstname"
-                  label="First Name"
-                  component={Input}
-                  className={classes.field}
-                />
-                <Field
-                  id="lastname"
-                  name="lastname"
-                  label="Last Name"
-                  component={Input}
-                  className={classes.field}
-                />
+                <div
+                  className={classes.headingText}
+                  style={{ marginTop: "20px" }}
+                >
+                  Email Marketing. Social Media Marketing. IDX Websites. Lead
+                  Generation. Lead Scrubbing.
+                  <br />
+                  Let us show you how we make your marketing super easy...
+                </div>
               </div>
-              <Field
-                id="email"
-                name="email"
-                label="Email"
-                component={Input}
-                className={classes.field}
-              />
-              <Field
-                id="phone"
-                name="phone"
-                label="Phone"
-                component={Input}
-                className={classes.field}
-                type="tel"
-              />
-              <Field
-                id="company"
-                name="company"
-                label="Affiliation (optional)"
-                component={Input}
-                className={classes.field}
-              />
-                  <Field
-                      id="mls_number"
-                      name="mls_number"
-                      label="MLS # (optional)"
-                      component={Input}
-                      className={classes.field}
-                  />
-                
-              <button
-                type="submit"
-                className={classes.signUpBtn}
-                disabled={isSubmitting}
+              <div
+                style={{
+                  maxWidth: "500px",
+                  marginLeft: "auto",
+                  marginRight: "auto",
+                }}
               >
-                Contact Me TODAY
-              </button>
+                <div className={classes.topRow}>
+                  <Field
+                    id="firstname"
+                    name="firstname"
+                    label="First Name"
+                    component={Input}
+                    className={classes.field}
+                  />
+                  <Field
+                    id="lastname"
+                    name="lastname"
+                    label="Last Name"
+                    component={Input}
+                    className={classes.field}
+                  />
+                </div>
+                <Field
+                  id="email"
+                  name="email"
+                  label="Email"
+                  component={Input}
+                  className={classes.field}
+                />
+                <Field
+                  id="phone"
+                  name="phone"
+                  label="Phone"
+                  component={Input}
+                  className={classes.field}
+                  type="tel"
+                />
+                <Field
+                  id="company"
+                  name="company"
+                  label="Affiliation (optional)"
+                  component={Input}
+                  className={classes.field}
+                />
+                <Field
+                  id="mls_number"
+                  name="mls_number"
+                  label="MLS # (optional)"
+                  component={Input}
+                  className={classes.field}
+                />
+
+                <button
+                  type="submit"
+                  className={classes.signUpBtn}
+                  disabled={isSubmitting}
+                >
+                  Contact Me TODAY
+                </button>
               </div>
-              <div style={{fontSize:"11px"}}>
-              By submitting this form, you are requesting to be contacted by a member of the Elevate Sales Team at the details provided via text, email or call (may involve automated or pre-recorded means).  You may revoke this consent through any reasonable means.<br/>
-                Existing subscribers seeking support, please visit the <a href="https://elmstreettechnology.zendesk.com/hc/en-us">Elevate Help Center</a>.
+              <div style={{ fontSize: "11px" }}>
+                By submitting this form, you are requesting to be contacted by a
+                member of the Elevate Sales Team at the details provided via
+                text, email or call (may involve automated or pre-recorded
+                means). You may revoke this consent through any reasonable
+                means.
+                <br />
+                Existing subscribers seeking support, please visit the{" "}
+                <a href="https://support.tryelevate.com/s/ ">
+                  Elevate Help Center
+                </a>
+                .
               </div>
             </Form>
           )}
@@ -235,7 +260,7 @@ export default withStyles((theme) => ({
     width: "100%",
     maxWidth: "700px",
     margin: "0 auto",
-    textAlign: "center"
+    textAlign: "center",
   },
   link: {
     color: "inherit",
@@ -255,34 +280,34 @@ export default withStyles((theme) => ({
       marginLeft: "12px",
     },
   },
-  headingSmall:{
-    fontSize:"20px",
-    textTransform:"uppercase",
-    fontWeight:"600",
-    color:"#777777",
-    textAlign:"center",
-    padding:"3px"
+  headingSmall: {
+    fontSize: "20px",
+    textTransform: "uppercase",
+    fontWeight: "600",
+    color: "#777777",
+    textAlign: "center",
+    padding: "3px",
   },
-  headingLarge:{
+  headingLarge: {
     fontSize: "40px",
     textTransform: "uppercase",
     fontWeight: "700",
     color: "#55c3ba",
-    textAlign:"center",
-    padding:"3px"
+    textAlign: "center",
+    padding: "3px",
   },
-  headingText:{
+  headingText: {
     color: "#777777",
     textAlign: "center",
     padding: "3px",
-    lineHeight: "1.4em"
+    lineHeight: "1.4em",
   },
   checkfield: {
     width: "20px",
     height: "20px",
     position: "relative",
     top: "4px",
-    marginLeft: "10px"
+    marginLeft: "10px",
   },
   signUpBtn: {
     width: "100%",
@@ -296,12 +321,11 @@ export default withStyles((theme) => ({
     marginTop: "30px",
     marginBottom: "30px",
     textDecoration: "none",
-
   },
   selectfield: {
     borderRadius: "6px",
     border: "2px solid #ECECEC",
-    height: "40px"
+    height: "40px",
   },
   selectlabel: {
     width: "100%",

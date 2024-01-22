@@ -8,19 +8,15 @@ import config from "../utils/siteConfig";
 import SocialLinks from "./SocialLinks";
 
 const FooterWelcome = ({ classes }) => (
-  <div className={classes.root} style={{alignItems:"center"}}>
-    <Container style={{textAlign:"center", marginLeft:"auto", marginRight:"auto",}}>
-          <Link to="/">
-          <div style={{ width: "170px", paddingBottom:"30px" }}>
-                <img src={Elevatelogo} width="100%"/>
-                </div>
-          </Link>
-          
-
-<div style={{color:"#FFFFFF"}}>
-      You can speak to a member of our sales team immediately <br/>by calling  <a href="tel:18333031040" className={classes.link}>833.303.1040</a>.
-      </div>
-
+  <div className={classes.root} style={{ alignItems: "center" }}>
+    <Container
+      style={{ textAlign: "center", marginLeft: "auto", marginRight: "auto" }}
+    >
+      <Link to="/">
+        <div style={{ width: "170px", paddingBottom: "30px" }}>
+          <img src={Elevatelogo} width="100%" />
+        </div>
+      </Link>
     </Container>
   </div>
 );

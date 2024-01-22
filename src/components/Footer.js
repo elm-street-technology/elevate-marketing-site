@@ -13,11 +13,10 @@ const Footer = ({ classes }) => (
       <div className={classes.grid}>
         <div className={classNames(classes.column, classes.logo)}>
           <Link to="/">
-          <div style={{ width: "170px", paddingBottom:"30px" }}>
-                <img src={Elevatelogo} width="100%"/>
-                </div>
+            <div style={{ width: "170px", paddingBottom: "30px" }}>
+              <img src={Elevatelogo} width="100%" />
+            </div>
           </Link>
-   
         </div>
 
         <div className={classes.column}>
@@ -28,7 +27,7 @@ const Footer = ({ classes }) => (
           <Link className={classes.link} to="/socialpro">
             Social Pro&reg;
           </Link>
-       
+
           <Link className={classes.link} to="/elevatedms">
             DMS&reg;
           </Link>
@@ -63,34 +62,16 @@ const Footer = ({ classes }) => (
           </Link>
         </div>
         */}
-      
 
         <div className={classes.column}>
           <div className={classes.section}>Explore</div>
-          <Link className={classes.link} to="/events">
-            Educational Programs
-          </Link>
-          <Link className={classes.link} to="/events_sm">
-            Social Media Boot Camp
-          </Link>
-          <Link className={classes.link} to="/events_lg">
-            Lead Gen. Boot Camp
-          </Link>
-          <Link className={classes.link} to="/events_listings">
-            Listings Boot Camp
-          </Link>
-          <Link className={classes.link} to="/events_referrals">
-            Referrals Boot Camp
-          </Link>
           <Link className={classes.link} to="/markets">
             MLS Markets
           </Link>
           <Link className={classes.link} to="/testimonials">
             Happy Clients
           </Link>
-          
         </div>
-
 
         <div className={classes.column}>
           <div className={classes.section}>Support</div>
@@ -113,16 +94,32 @@ const Footer = ({ classes }) => (
           <Link className={classes.link} to="/free_educational_guides">
             Free Educational Guides
           </Link>
-          <a className={classes.link} href="https://elmstreet.com/terms" target="_blank">
+          <a
+            className={classes.link}
+            href="https://elmstreet.com/terms"
+            target="_blank"
+          >
             Terms of Service
           </a>
-          <a className={classes.link} href="https://elmstreet.com/terms" target="_blank">
+          <a
+            className={classes.link}
+            href="https://elmstreet.com/terms"
+            target="_blank"
+          >
             Pricing &amp; Refund Policy
           </a>
-          <a className={classes.link} href="https://elmstreet.com/privacy" target="_blank">
+          <a
+            className={classes.link}
+            href="https://elmstreet.com/privacy"
+            target="_blank"
+          >
             Privacy Policy
           </a>
-          <a className={classes.link} href="https://elmstreet.com/dmca" target="_blank">
+          <a
+            className={classes.link}
+            href="https://elmstreet.com/dmca"
+            target="_blank"
+          >
             DMCA Notice
           </a>
           <SocialLinks className={classes.social} />

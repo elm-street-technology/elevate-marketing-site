@@ -58,8 +58,8 @@ class FormTheClose extends Component {
             </Typography>
 
             <Typography type="heading5" gutterTop style={{ fontSize: "18px" }}>
-              Thank for your interest!<br/>
-              You can speak to a member of our sales team immediately by calling  <a href="tel:18333031040" className={classes.link}>833.303.1040</a>.
+              Thank for your interest!
+              <br />
             </Typography>
           </div>
         </div>
@@ -117,7 +117,7 @@ class FormTheClose extends Component {
               .then((res) => {
                 if (res.message === "ok") {
                   this.setState({ formState: "success" });
-                  dataLayer.push({'event': 'form-success'});
+                  dataLayer.push({ event: "form-success" });
 
                   if (window.fbq) {
                     window.fbq("track", "Lead");
@@ -146,7 +146,7 @@ class FormTheClose extends Component {
           }}
           render={({ values, isSubmitting, handleBlur, handleChange }) => (
             <Form noValidate>
-              <div style={{ marginBottom: "30px" }}></div>
+              <div style={{ marginBottom: "30px" }} />
               <div
                 style={{
                   maxWidth: "600px",

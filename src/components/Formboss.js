@@ -23,12 +23,11 @@ class Formboss extends Component {
     const { formState } = this.state;
     const { classes, className } = this.props;
 
-    var valid = function (current) {
+    var valid = function(current) {
       return current.day() !== 0 && current.day() !== 6;
     };
 
-    var renderDay = function (props, currentDate, selectedDate) {
-
+    var renderDay = function(props, currentDate, selectedDate) {
       if (currentDate.month() == moment().month()) {
         if (currentDate.date() < moment().date()) {
           if (props.className == "rdtDay") {
@@ -52,15 +51,19 @@ class Formboss extends Component {
             margin: "24px auto",
           }}
         >
-          <div >
-                            
-                      
+          <div>
             <Typography type="heading3" gutterBottom>
               Fantastic!
             </Typography>
             <Typography type="heading5" gutterTop>
-        We’ll reach out to you asap via email or telephone.<br/>
-              You can also speak to a member of our sales team immediately by calling  <a href="tel:18339781196" className={classes.link}>833.978.1196</a>.
+              We’ll reach out to you asap via email or telephone.
+              <br />
+              You can also speak to a member of our sales team immediately by
+              calling{" "}
+              <a href="tel:18339781196" className={classes.link}>
+                833.978.1196
+              </a>
+              .
             </Typography>
           </div>
         </div>
@@ -85,8 +88,8 @@ class Formboss extends Component {
             mls_number: "",
             form: "boss_product",
             list: 107390,
-            meetingdate: '',
-            meetingtime: '',
+            meetingdate: "",
+            meetingtime: "",
           }}
           validationSchema={() =>
             Yup.object().shape({
@@ -97,28 +100,32 @@ class Formboss extends Component {
                 .email("Invalid email address")
                 .required("Email is required"),
               phone: Yup.string().required("Phone is required"),
-              mls_number: Yup.string()
+              mls_number: Yup.string(),
             })
           }
           onSubmit={(values, { setSubmitting }) => {
             //if (values.meetingdate != undefined) {
-            var meeting_request = '';
-            Object.keys(values).forEach(function (key, index) {
+            var meeting_request = "";
+            Object.keys(values).forEach(function(key, index) {
               // key: the name of the object key
-              // index: the ordinal position of the key within the object 
-              if (key == 'meetingdate') {
+              // index: the ordinal position of the key within the object
+              if (key == "meetingdate") {
                 if (typeof values.meetingdate.format === "function") {
-                  meeting_request = values.meetingdate.format("YYYY-MM-DD") + "T" + values.meetingtime.replace(" (EDT)", "") + "-04:00"
+                  meeting_request =
+                    values.meetingdate.format("YYYY-MM-DD") +
+                    "T" +
+                    values.meetingtime.replace(" (EDT)", "") +
+                    "-04:00";
                 }
               }
             });
             const body = {
               ...values,
-              utm_campaign: (window.utm_tags) ? window.utm_tags.campaign : "",
-              utm_source: (window.utm_tags) ? window.utm_tags.source : "",
-              utm_medium: (window.utm_tags) ? window.utm_tags.medium : "",
-              utm_term: (window.utm_tags) ? window.utm_tags.term : "",
-              demo_request_date: meeting_request
+              utm_campaign: window.utm_tags ? window.utm_tags.campaign : "",
+              utm_source: window.utm_tags ? window.utm_tags.source : "",
+              utm_medium: window.utm_tags ? window.utm_tags.medium : "",
+              utm_term: window.utm_tags ? window.utm_tags.term : "",
+              demo_request_date: meeting_request,
             };
             return fetch(
               "https://hooks.zapier.com/hooks/catch/4496703/3uy9gh0/",
@@ -131,7 +138,7 @@ class Formboss extends Component {
               .then((res) => {
                 if (res.status === "success") {
                   this.setState({ formState: "success" });
-                  dataLayer.push({'event': 'form-success'});
+                  dataLayer.push({ event: "form-success" });
 
                   if (window.fbq) {
                     window.fbq("track", "Lead");
@@ -142,7 +149,13 @@ class Formboss extends Component {
                     });
                   }
                   if (window.ga) {
-                    window.ga('send','event','form','form_completed','broker');
+                    window.ga(
+                      "send",
+                      "event",
+                      "form",
+                      "form_completed",
+                      "broker"
+                    );
                   }
                 } else {
                   this.setState({ formState: "error" });
@@ -152,67 +165,80 @@ class Formboss extends Component {
                 this.setState({ formState: "error" });
               });
           }}
-          render={({ values, isSubmitting,handleBlur, handleChange }) => (
+          render={({ values, isSubmitting, handleBlur, handleChange }) => (
             <Form noValidate>
-              <div style={{ maxWidth: "600px",marginLeft:"auto",marginRight:"auto"}}>
-              <div className={classes.topRow}>
-                <Field
-                  id="firstname"
-                  name="firstname"
-                  placeholder="First Name"
-                  component={Input}
-                  className={classes.field}
-                />
-                <Field
-                  id="lastname"
-                  name="lastname"
-                  placeholder="Last Name"
-                  component={Input}
-                  className={classes.field}
-                />
-              </div>
-              <Field
-                id="email"
-                name="email"
-                placeholder="Email"
-                component={Input}
-                className={classes.field}
-              />
-              <Field
-                id="phone"
-                name="phone"
-                placeholder="Phone"
-                component={Input}
-                className={classes.field}
-                type="tel"
-              />
-              <Field
-                id="company"
-                name="company"
-                placeholder="Affiliation (optional)"
-                component={Input}
-                className={classes.field}
-              />
-                  <Field
-                      id="mls_number"
-                      name="mls_number"
-                      placeholder="MLS # (optional)"
-                      component={Input}
-                      className={classes.field}
-                  />
-                
-              <button
-                type="submit"
-                className={classes.signUpBtn}
-                disabled={isSubmitting}
-                style={{width:"70%"}}
+              <div
+                style={{
+                  maxWidth: "600px",
+                  marginLeft: "auto",
+                  marginRight: "auto",
+                }}
               >
-                Please Contact Me
-              </button>
+                <div className={classes.topRow}>
+                  <Field
+                    id="firstname"
+                    name="firstname"
+                    placeholder="First Name"
+                    component={Input}
+                    className={classes.field}
+                  />
+                  <Field
+                    id="lastname"
+                    name="lastname"
+                    placeholder="Last Name"
+                    component={Input}
+                    className={classes.field}
+                  />
+                </div>
+                <Field
+                  id="email"
+                  name="email"
+                  placeholder="Email"
+                  component={Input}
+                  className={classes.field}
+                />
+                <Field
+                  id="phone"
+                  name="phone"
+                  placeholder="Phone"
+                  component={Input}
+                  className={classes.field}
+                  type="tel"
+                />
+                <Field
+                  id="company"
+                  name="company"
+                  placeholder="Affiliation (optional)"
+                  component={Input}
+                  className={classes.field}
+                />
+                <Field
+                  id="mls_number"
+                  name="mls_number"
+                  placeholder="MLS # (optional)"
+                  component={Input}
+                  className={classes.field}
+                />
+
+                <button
+                  type="submit"
+                  className={classes.signUpBtn}
+                  disabled={isSubmitting}
+                  style={{ width: "70%" }}
+                >
+                  Please Contact Me
+                </button>
               </div>
-              <div style={{fontSize:"11px", lineHeight:"16px"}}>
-              By submitting this form, you are requesting to be contacted by a member of the Elevate Sales Team at the details provided via text, email or call (may involve automated or pre-recorded means).  You may revoke this consent through any reasonable means.
-                Existing subscribers seeking support, please visit the <a href="https://elmstreettechnology.zendesk.com/hc/en-us">Elevate Help Center</a>.
+              <div style={{ fontSize: "11px", lineHeight: "16px" }}>
+                By submitting this form, you are requesting to be contacted by a
+                member of the Elevate Sales Team at the details provided via
+                text, email or call (may involve automated or pre-recorded
+                means). You may revoke this consent through any reasonable
+                means. Existing subscribers seeking support, please visit the{" "}
+                <a href="https://support.tryelevate.com/s/ ">
+                  Elevate Help Center
+                </a>
+                .
               </div>
             </Form>
           )}
@@ -229,7 +255,7 @@ export default withStyles((theme) => ({
     width: "100%",
     maxWidth: "800px",
     margin: "0 auto",
-    textAlign: "center"
+    textAlign: "center",
   },
   link: {
     color: "inherit",
@@ -249,34 +275,34 @@ export default withStyles((theme) => ({
       marginLeft: "12px",
     },
   },
-  headingSmall:{
-    fontSize:"20px",
-    textTransform:"uppercase",
-    fontWeight:"600",
-    color:"#777777",
-    textAlign:"center",
-    padding:"3px"
+  headingSmall: {
+    fontSize: "20px",
+    textTransform: "uppercase",
+    fontWeight: "600",
+    color: "#777777",
+    textAlign: "center",
+    padding: "3px",
   },
-  headingLarge:{
+  headingLarge: {
     fontSize: "40px",
     textTransform: "uppercase",
     fontWeight: "700",
     color: "#55c3ba",
-    textAlign:"center",
-    padding:"3px"
+    textAlign: "center",
+    padding: "3px",
   },
-  headingText:{
+  headingText: {
     color: "#777777",
     textAlign: "center",
     padding: "3px",
-    lineHeight: "1.4em"
+    lineHeight: "1.4em",
   },
   checkfield: {
     width: "20px",
     height: "20px",
     position: "relative",
     top: "4px",
-    marginLeft: "10px"
+    marginLeft: "10px",
   },
   signUpBtn: {
     width: "100%",
@@ -290,12 +316,11 @@ export default withStyles((theme) => ({
     marginTop: "30px",
     marginBottom: "30px",
     textDecoration: "none",
-
   },
   selectfield: {
     borderRadius: "6px",
     border: "2px solid #ECECEC",
-    height: "40px"
+    height: "40px",
   },
   selectlabel: {
     width: "100%",

@@ -21,7 +21,7 @@ const HeaderNavMobile = ({ classes, className, onMenuClose }) => {
           <Link className={classes.listItemLink} to="/socialpro">
             <li className={classes.listItem}>Social Pro&reg;</li>
           </Link>
-         
+
           <Link className={classes.listItemLink} to="/elevatedms">
             <li className={classes.listItem}>DMS&reg;</li>
           </Link>
@@ -63,22 +63,6 @@ const HeaderNavMobile = ({ classes, className, onMenuClose }) => {
       <div className={classes.link}>
         <div className={classes.navItem}>Explore</div>
         <ul className={classes.dropDown}>
-          <Link className={classes.listItemLink} to="/events">
-            <li className={classes.listItem}>Educational Programs</li>
-          </Link>
-          <Link className={classes.listItemLink} to="/events_sm">
-            <li className={classes.listItem}>Social Media Boot Camp</li>
-          </Link>
-
-          <Link className={classes.listItemLink} to="/events_lg">
-            <li className={classes.listItem}>Lead Gen. Boot Camp</li>
-          </Link>
-          <Link className={classes.listItemLink} to="/events_listings">
-            <li className={classes.listItem}>Listings Boot Camp</li>
-          </Link>
-          <Link className={classes.listItemLink} to="/events_referrals">
-            <li className={classes.listItem}>Referrals Boot Camp</li>
-          </Link>
           <Link className={classes.listItemLink} to="/markets">
             <li className={classes.listItem}>MLS Markets</li>
           </Link>

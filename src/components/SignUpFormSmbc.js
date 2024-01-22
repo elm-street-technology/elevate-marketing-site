@@ -58,13 +58,6 @@ class SignUpFormSmbc extends Component {
             <Typography type="heading6" gutterBottom>
               An Elevate sales representative will be in touch with you shortly.
             </Typography>
-            <Typography type="heading4" gutterTop>
-              If you'd like to speak to a sales representative NOW, please call{" "}
-              <a href="tel:18333031040" className={classes.link}>
-                833.303.1040
-              </a>
-              .
-            </Typography>
           </Alert>
         </div>
       );
@@ -147,7 +140,7 @@ class SignUpFormSmbc extends Component {
               .then((res) => {
                 if (res.message === "ok") {
                   this.setState({ formState: "success" });
-                  dataLayer.push({'event': 'form-success'});
+                  dataLayer.push({ event: "form-success" });
 
                   if (window.fbq) {
                     window.fbq("track", "Lead");

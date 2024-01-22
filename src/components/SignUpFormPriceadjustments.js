@@ -23,12 +23,11 @@ class SignUpFormPriceadjustments extends Component {
     const { formState } = this.state;
     const { classes, className } = this.props;
 
-    var valid = function (current) {
+    var valid = function(current) {
       return current.day() !== 0 && current.day() !== 6;
     };
 
-    var renderDay = function (props, currentDate, selectedDate) {
-
+    var renderDay = function(props, currentDate, selectedDate) {
       if (currentDate.month() == moment().month()) {
         if (currentDate.date() < moment().date()) {
           if (props.className == "rdtDay") {
@@ -58,12 +57,6 @@ class SignUpFormPriceadjustments extends Component {
             </Typography>
             <Typography type="heading6" gutterBottom>
               An Elevate sales representative will be in touch with you shortly.
-            </Typography>
-            <Typography type="heading4" gutterTop>
-              If you'd like to speak to a sales representative NOW, please call{" "}
-              <a href="tel:18333031040" className={classes.link}>
-                833.303.1040
-              </a>.
             </Typography>
           </Alert>
         </div>
@@ -110,24 +103,29 @@ class SignUpFormPriceadjustments extends Component {
             })
           }
           onSubmit={(values, { setSubmitting }) => {
-            var meeting_request = '';
-            Object.keys(values).forEach(function (key, index) {
+            var meeting_request = "";
+            Object.keys(values).forEach(function(key, index) {
               // key: the name of the object key
-              // index: the ordinal position of the key within the object 
-              if (key == 'meetingdate') {
+              // index: the ordinal position of the key within the object
+              if (key == "meetingdate") {
                 if (typeof values.meetingdate.format === "function") {
-                  meeting_request = values.meetingdate.format("YYYY-MM-DD") + "T" + values.meetingtime.replace(" (EDT)", "") + "-04:00"
+                  meeting_request =
+                    values.meetingdate.format("YYYY-MM-DD") +
+                    "T" +
+                    values.meetingtime.replace(" (EDT)", "") +
+                    "-04:00";
                 }
               }
             });
             const body = {
               ...values,
               role: values.role === "Other" ? values.roleOther : values.role, // Just in case the user had typed in roleOther then changed their role to something else
-              notes: values.notes === "Other" ? values.notesOther : values.notes,
-              utm_campaign: (window.utm_tags) ? window.utm_tags.campaign : "",
-              utm_source: (window.utm_tags) ? window.utm_tags.source : "",
-              utm_medium: (window.utm_tags) ? window.utm_tags.medium : "",
-              utm_term: (window.utm_tags) ? window.utm_tags.term : ""
+              notes:
+                values.notes === "Other" ? values.notesOther : values.notes,
+              utm_campaign: window.utm_tags ? window.utm_tags.campaign : "",
+              utm_source: window.utm_tags ? window.utm_tags.source : "",
+              utm_medium: window.utm_tags ? window.utm_tags.medium : "",
+              utm_term: window.utm_tags ? window.utm_tags.term : "",
             };
             return fetch(
               "https://hooks.zapier.com/hooks/catch/4496703/3uy9gh0/",
@@ -140,7 +138,7 @@ class SignUpFormPriceadjustments extends Component {
               .then((res) => {
                 if (res.status === "success") {
                   this.setState({ formState: "success" });
-                  dataLayer.push({'event': 'form-success'});
+                  dataLayer.push({ event: "form-success" });
 
                   if (window.fbq) {
                     window.fbq("track", "Lead");
@@ -151,7 +149,13 @@ class SignUpFormPriceadjustments extends Component {
                     });
                   }
                   if (window.ga) {
-                    window.ga('send','event','form','form_completed','get-started');
+                    window.ga(
+                      "send",
+                      "event",
+                      "form",
+                      "form_completed",
+                      "get-started"
+                    );
                   }
                 } else {
                   this.setState({ formState: "error" });
@@ -163,7 +167,6 @@ class SignUpFormPriceadjustments extends Component {
           }}
           render={({ values, isSubmitting, handleBlur, handleChange }) => (
             <Form noValidate>
-             
               <div className={classes.topRow}>
                 <Field
                   id="firstname"
@@ -195,7 +198,7 @@ class SignUpFormPriceadjustments extends Component {
                 className={classes.field}
                 type="tel"
               />
-             
+
               <Field
                 id="role"
                 name="role"
@@ -233,8 +236,7 @@ class SignUpFormPriceadjustments extends Component {
                 />
               )}
 
-
-<Field
+              <Field
                 id="notes"
                 name="notes"
                 label="Please contact me:"
@@ -242,15 +244,18 @@ class SignUpFormPriceadjustments extends Component {
                 display="inline"
                 items={[
                   {
-                    label: "To learn more about the lead generation special offer.",
-                    value: "To learn more about the lead generation special offer.",
+                    label:
+                      "To learn more about the lead generation special offer.",
+                    value:
+                      "To learn more about the lead generation special offer.",
                   },
                   {
-                    label: "To speak with an Elevate Success Coach about my account.",
-                    value: "To speak with an Elevate Success Coach about my account.",
+                    label:
+                      "To speak with an Elevate Success Coach about my account.",
+                    value:
+                      "To speak with an Elevate Success Coach about my account.",
                   },
                   {
-                
                     label: "Other (please specify)*",
                     value: "Other",
                   },
@@ -267,7 +272,7 @@ class SignUpFormPriceadjustments extends Component {
                   autoFocus
                 />
               )}
-              
+
               <button
                 type="submit"
                 className={classes.signUpBtn}
@@ -275,8 +280,18 @@ class SignUpFormPriceadjustments extends Component {
               >
                 Let's Connect
               </button>
-              <div style={{ fontSize: "11px", lineHeight:"16px", textAlign: "center" }}>
-              By submitting this form, you are requesting to be contacted by a member of the Elevate Sales Team at the details provided via text, email or call (may involve automated or pre-recorded means).  You may revoke this consent through any reasonable means.
+              <div
+                style={{
+                  fontSize: "11px",
+                  lineHeight: "16px",
+                  textAlign: "center",
+                }}
+              >
+                By submitting this form, you are requesting to be contacted by a
+                member of the Elevate Sales Team at the details provided via
+                text, email or call (may involve automated or pre-recorded
+                means). You may revoke this consent through any reasonable
+                means.
               </div>
             </Form>
           )}
@@ -327,7 +342,7 @@ export default withStyles((theme) => ({
   selectfield: {
     borderRadius: "6px",
     border: "2px solid #ECECEC",
-    height: "40px"
+    height: "40px",
   },
   selectlabel: {
     width: "100%",

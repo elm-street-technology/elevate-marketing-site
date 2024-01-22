@@ -23,12 +23,11 @@ class SignUpFormSuccess extends Component {
     const { formState } = this.state;
     const { classes, className } = this.props;
 
-    var valid = function (current) {
+    var valid = function(current) {
       return current.day() !== 0 && current.day() !== 6;
     };
 
-    var renderDay = function (props, currentDate, selectedDate) {
-
+    var renderDay = function(props, currentDate, selectedDate) {
       if (currentDate.month() == moment().month()) {
         if (currentDate.date() < moment().date()) {
           if (props.className == "rdtDay") {
@@ -58,12 +57,6 @@ class SignUpFormSuccess extends Component {
             </Typography>
             <Typography type="heading6" gutterBottom>
               An Elevate sales representative will be in touch with you shortly.
-            </Typography>
-            <Typography type="heading4" gutterTop>
-              If you'd like to speak to a sales representative NOW, please call{" "}
-              <a href="tel:18333031040" className={classes.link}>
-                833.303.1040
-              </a>.
             </Typography>
           </Alert>
         </div>
@@ -106,25 +99,36 @@ class SignUpFormSuccess extends Component {
             })
           }
           onSubmit={(values, { setSubmitting }) => {
-            var meeting_request = '';
-            Object.keys(values).forEach(function (key, index) {
+            var meeting_request = "";
+            Object.keys(values).forEach(function(key, index) {
               // key: the name of the object key
-              // index: the ordinal position of the key within the object 
-              if (key == 'meetingdate') {
+              // index: the ordinal position of the key within the object
+              if (key == "meetingdate") {
                 if (typeof values.meetingdate.format === "function") {
-                  meeting_request = values.meetingdate.format("YYYY-MM-DD") + "T" + values.meetingtime.replace(" (EDT)", "") + "-04:00"
+                  meeting_request =
+                    values.meetingdate.format("YYYY-MM-DD") +
+                    "T" +
+                    values.meetingtime.replace(" (EDT)", "") +
+                    "-04:00";
                 }
               }
             });
             const body = {
               ...values,
               roleOther: values.role === "Other" ? values.roleOther : "", // Just in case the user had typed in roleOther then changed their role to something else
-              interestStr: values.interests.join(",") + ", Interested Markets: " + values.market1 + ", " + values.market2 + "," + values.market3,
-              utm_campaign: (window.utm_tags) ? window.utm_tags.campaign : "",
-              utm_source: (window.utm_tags) ? window.utm_tags.source : "",
-              utm_medium: (window.utm_tags) ? window.utm_tags.medium : "",
-              utm_term: (window.utm_tags) ? window.utm_tags.term : "",
-              demo_request_date: meeting_request
+              interestStr:
+                values.interests.join(",") +
+                ", Interested Markets: " +
+                values.market1 +
+                ", " +
+                values.market2 +
+                "," +
+                values.market3,
+              utm_campaign: window.utm_tags ? window.utm_tags.campaign : "",
+              utm_source: window.utm_tags ? window.utm_tags.source : "",
+              utm_medium: window.utm_tags ? window.utm_tags.medium : "",
+              utm_term: window.utm_tags ? window.utm_tags.term : "",
+              demo_request_date: meeting_request,
             };
             return fetch(
               "https://hooks.zapier.com/hooks/catch/4496703/3uy9gh0/",
@@ -137,7 +141,7 @@ class SignUpFormSuccess extends Component {
               .then((res) => {
                 if (res.status === "success") {
                   this.setState({ formState: "success" });
-                  dataLayer.push({'event': 'form-success'});
+                  dataLayer.push({ event: "form-success" });
 
                   if (window.fbq) {
                     window.fbq("track", "Lead");
@@ -148,7 +152,13 @@ class SignUpFormSuccess extends Component {
                     });
                   }
                   if (window.ga) {
-                    window.ga('send','event','form','form_completed','get-started');
+                    window.ga(
+                      "send",
+                      "event",
+                      "form",
+                      "form_completed",
+                      "get-started"
+                    );
                   }
                 } else {
                   this.setState({ formState: "error" });
@@ -160,15 +170,6 @@ class SignUpFormSuccess extends Component {
           }}
           render={({ values, isSubmitting, handleBlur, handleChange }) => (
             <Form noValidate>
-              <Typography
-                type="heading6"
-                style={{ textAlign: "center", marginBottom: "32px", color: "#888f96" }}
-              >
-                Call <a href="tel:18333031040" className={classes.link}>
-                833.303.1040
-                </a> to speak to an Elevate Success Coach today.
-                
-              </Typography>
               <div className={classes.topRow}>
                 <Field
                   id="firstname"
@@ -257,8 +258,10 @@ class SignUpFormSuccess extends Component {
                 component={CheckboxGroup}
                 items={[
                   {
-                    label: "Digital Marketing Services (Website, Email, Social, Text, Blog, SEO)",
-                    value: "Digital Marketing Services (Website, Email, Social, Text, Blog, SEO)",
+                    label:
+                      "Digital Marketing Services (Website, Email, Social, Text, Blog, SEO)",
+                    value:
+                      "Digital Marketing Services (Website, Email, Social, Text, Blog, SEO)",
                   },
                   {
                     label: "Lead Generation, Parsing & Scrubbing Services",
@@ -275,18 +278,39 @@ class SignUpFormSuccess extends Component {
                 ]}
                 className={classes.field}
               />
-              {values.interests.includes("Lead Generation, Parsing & Scrubbing Services") && (
+              {values.interests.includes(
+                "Lead Generation, Parsing & Scrubbing Services"
+              ) && (
                 <div>
                   <div style={{ width: "100%", textAlign: "center" }}>
                     What are your top 3 markets of interest? (optional)
                   </div>
-                  <Field id="market1" name="market1" label="City/State" component={Input} className={classes.field} onBlur={this.setFormVal} />
-                  <Field id="market2" name="market2" label="City/State" component={Input} className={classes.field} onBlur={this.setFormVal} />
-                  <Field id="market3" name="market3" label="City/State" component={Input} className={classes.field} onBlur={this.setFormVal} />
+                  <Field
+                    id="market1"
+                    name="market1"
+                    label="City/State"
+                    component={Input}
+                    className={classes.field}
+                    onBlur={this.setFormVal}
+                  />
+                  <Field
+                    id="market2"
+                    name="market2"
+                    label="City/State"
+                    component={Input}
+                    className={classes.field}
+                    onBlur={this.setFormVal}
+                  />
+                  <Field
+                    id="market3"
+                    name="market3"
+                    label="City/State"
+                    component={Input}
+                    className={classes.field}
+                    onBlur={this.setFormVal}
+                  />
                 </div>
               )}
-
-
 
               <button
                 type="submit"
@@ -295,9 +319,18 @@ class SignUpFormSuccess extends Component {
               >
                 Tell Me More about Elevate
               </button>
-              <div style={{ fontSize: "11px",textAlign: "center" }}>
-              By submitting this form, you are requesting to be contacted by a member of the Elevate Sales Team at the details provided via text, email or call (may involve automated or pre-recorded means).  You may revoke this consent through any reasonable means.<br />
-                Existing subscribers seeking support, please visit the <a href="https://elmstreettechnology.zendesk.com/hc/en-us">Elevate Help Center</a>.
+              <div style={{ fontSize: "11px", textAlign: "center" }}>
+                By submitting this form, you are requesting to be contacted by a
+                member of the Elevate Sales Team at the details provided via
+                text, email or call (may involve automated or pre-recorded
+                means). You may revoke this consent through any reasonable
+                means.
+                <br />
+                Existing subscribers seeking support, please visit the{" "}
+                <a href="https://support.tryelevate.com/s/ ">
+                  Elevate Help Center
+                </a>
+                .
               </div>
             </Form>
           )}
@@ -348,7 +381,7 @@ export default withStyles((theme) => ({
   selectfield: {
     borderRadius: "6px",
     border: "2px solid #ECECEC",
-    height: "40px"
+    height: "40px",
   },
   selectlabel: {
     width: "100%",

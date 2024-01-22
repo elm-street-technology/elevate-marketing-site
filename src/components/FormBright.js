@@ -23,12 +23,11 @@ class FormBright extends Component {
     const { formState } = this.state;
     const { classes, className } = this.props;
 
-    var valid = function (current) {
+    var valid = function(current) {
       return current.day() !== 0 && current.day() !== 6;
     };
 
-    var renderDay = function (props, currentDate, selectedDate) {
-
+    var renderDay = function(props, currentDate, selectedDate) {
       if (currentDate.month() == moment().month()) {
         if (currentDate.date() < moment().date()) {
           if (props.className == "rdtDay") {
@@ -52,15 +51,23 @@ class FormBright extends Component {
             margin: "24px auto",
           }}
         >
-          <div >
-                                  
-                      
-            <Typography type="heading3" gutterBottom style={{color:"#f15623",}}>
+          <div>
+            <Typography
+              type="heading3"
+              gutterBottom
+              style={{ color: "#f15623" }}
+            >
               Fantastic!
             </Typography>
             <Typography type="heading5" gutterTop>
-        We’ll reach out to you asap via email or telephone.<br/>
-              You can also speak to a member of our sales team immediately by calling  <a href="tel:18339781196" className={classes.link}>833.978.1196</a>.
+              We’ll reach out to you asap via email or telephone.
+              <br />
+              You can also speak to a member of our sales team immediately by
+              calling{" "}
+              <a href="tel:18339781196" className={classes.link}>
+                833.978.1196
+              </a>
+              .
             </Typography>
           </div>
         </div>
@@ -85,10 +92,10 @@ class FormBright extends Component {
             mls_number: "",
             form: "bright_form",
             list: 85576,
-            meetingdate: '',
-            meetingtime: '',
+            meetingdate: "",
+            meetingtime: "",
             role: "",
-            interests: '',
+            interests: "",
           }}
           validationSchema={() =>
             Yup.object().shape({
@@ -99,42 +106,46 @@ class FormBright extends Component {
                 .email("Invalid email address")
                 .required("Email is required"),
               phone: Yup.string().required("Phone is required"),
-              mls_number: Yup.string()
+              mls_number: Yup.string(),
             })
           }
           onSubmit={(values, { setSubmitting }) => {
             //if (values.meetingdate != undefined) {
-            var meeting_request = '';
-            var notes = 'Notes: ';
-            Object.keys(values).forEach(function (key, index) {
+            var meeting_request = "";
+            var notes = "Notes: ";
+            Object.keys(values).forEach(function(key, index) {
               // key: the name of the object key
-              // index: the ordinal position of the key within the object 
-              if (key == 'meetingdate') {
+              // index: the ordinal position of the key within the object
+              if (key == "meetingdate") {
                 if (typeof values.meetingdate.format === "function") {
-                  meeting_request = values.meetingdate.format("YYYY-MM-DD") + "T" + values.meetingtime.replace(" (EDT)", "") + "-04:00"
+                  meeting_request =
+                    values.meetingdate.format("YYYY-MM-DD") +
+                    "T" +
+                    values.meetingtime.replace(" (EDT)", "") +
+                    "-04:00";
                 }
               }
-              if (key == 'roleOther'){
-                if(values.roleOther.length > 0){
+              if (key == "roleOther") {
+                if (values.roleOther.length > 0) {
                   values.role = values.roleOther;
                 }
               }
-              if (key == 'interestsOther'){
-                if(values.interestsOther.length > 0){
+              if (key == "interestsOther") {
+                if (values.interestsOther.length > 0) {
                   notes = values.interests.join(",");
                   notes = notes + "," + values.interestsOther;
                 }
               }
             });
-            
+
             const body = {
               ...values,
               notes: notes,
-              utm_campaign: (window.utm_tags) ? window.utm_tags.campaign : "",
-              utm_source: (window.utm_tags) ? window.utm_tags.source : "",
-              utm_medium: (window.utm_tags) ? window.utm_tags.medium : "",
-              utm_term: (window.utm_tags) ? window.utm_tags.term : "",
-              demo_request_date: meeting_request
+              utm_campaign: window.utm_tags ? window.utm_tags.campaign : "",
+              utm_source: window.utm_tags ? window.utm_tags.source : "",
+              utm_medium: window.utm_tags ? window.utm_tags.medium : "",
+              utm_term: window.utm_tags ? window.utm_tags.term : "",
+              demo_request_date: meeting_request,
             };
             return fetch(
               "https://hooks.zapier.com/hooks/catch/4496703/3uy9gh0/",
@@ -147,7 +158,7 @@ class FormBright extends Component {
               .then((res) => {
                 if (res.status === "success") {
                   this.setState({ formState: "success" });
-                  dataLayer.push({'event': 'form-success'});
+                  dataLayer.push({ event: "form-success" });
 
                   if (window.fbq) {
                     window.fbq("track", "Lead");
@@ -158,7 +169,13 @@ class FormBright extends Component {
                     });
                   }
                   if (window.ga) {
-                    window.ga('send','event','form','form_completed','bright');
+                    window.ga(
+                      "send",
+                      "event",
+                      "form",
+                      "form_completed",
+                      "bright"
+                    );
                   }
                 } else {
                   this.setState({ formState: "error" });
@@ -168,140 +185,152 @@ class FormBright extends Component {
                 this.setState({ formState: "error" });
               });
           }}
-          render={({ values, isSubmitting,handleBlur, handleChange }) => (
+          render={({ values, isSubmitting, handleBlur, handleChange }) => (
             <Form noValidate>
-              
-              <div style={{ maxWidth: "500px",marginLeft:"auto",marginRight:"auto"}}>
-              <div className={classes.topRow}>
-                <Field
-                  id="firstname"
-                  name="firstname"
-                  label="First Name"
-                  component={Input}
-                  className={classes.field}
-                />
-                <Field
-                  id="lastname"
-                  name="lastname"
-                  label="Last Name"
-                  component={Input}
-                  className={classes.field}
-                />
-              </div>
-              <Field
-                id="email"
-                name="email"
-                label="Email"
-                component={Input}
-                className={classes.field}
-              />
-              <Field
-                id="phone"
-                name="phone"
-                label="Phone"
-                component={Input}
-                className={classes.field}
-                type="tel"
-              />
-              <Field
-                id="company"
-                name="company"
-                label="Affiliation (optional)"
-                component={Input}
-                className={classes.field}
-              />
-                  <Field
-                      id="mls_number"
-                      name="mls_number"
-                      label="MLS # (optional)"
-                      component={Input}
-                      className={classes.field}
-                  />
-              <Field
-                id="role"
-                name="role"
-                label="I am:"
-                component={RadioGroup}
-                display="inline"
-                items={[
-                  {
-                    label: "a Broker/Owner in Bright MLS",
-                    value: "a Broker/Owner in Bright MLS",
-                  },
-                  {
-                    label: "a Recruiter for a Broker/Owner in Bright MLS",
-                    value: "a Recruiter for a Broker/Owner in Bright MLS",
-                  },
-                  {
-                    label: "Other (please specify)",
-                    value: "Other",
-                  },
-                ]}
-                className={classes.field}
-              />
-              {values.role === "Other" && (
-                <Field
-                  id="roleOther"
-                  name="roleOther"
-                  label="Other"
-                  component={Input}
-                  className={classes.field}
-                  autoFocus
-                />
-              )}
-
-              <Field
-                id="interests"
-                name="interests"
-                label="I am interested in:  (select all that apply)"
-                component={CheckboxGroup}
-                items={[
-                  {
-                    label: "Elevate BOSS® for my brokerage",
-                    value: "Elevate BOSS for my brokerage",
-                  },
-                  {
-                    label: "Lead generation solutions for my brokerage",
-                    value: "Lead generation solutions for my brokerage",
-                  },
-                  {
-                    label: "Elevate BOSS®’s recruitment program",
-                    value: "Elevate BOSS’s recruitment program",
-                  },
-                  {
-                    label: "Consolidating technology & saving money",
-                    value: "Consolidating technology & saving money",
-                  },
-                  {
-                    label: "Other (please specify)",
-                    value: "Other",
-                  },
-                ]}
-                className={classes.field}
-              />
-              {console.log(values.interests)}
-              {values.interests.includes('Other') && (
-                <Field
-                  id="interestsOther"
-                  name="interestsOther"
-                  label="Other"
-                  component={Input}
-                  className={classes.field}
-                  autoFocus
-                />
-              )}
-
-              <button
-                type="submit"
-                className={classes.signUpBtn}
-                disabled={isSubmitting}
+              <div
+                style={{
+                  maxWidth: "500px",
+                  marginLeft: "auto",
+                  marginRight: "auto",
+                }}
               >
-                let's connect
-              </button>
+                <div className={classes.topRow}>
+                  <Field
+                    id="firstname"
+                    name="firstname"
+                    label="First Name"
+                    component={Input}
+                    className={classes.field}
+                  />
+                  <Field
+                    id="lastname"
+                    name="lastname"
+                    label="Last Name"
+                    component={Input}
+                    className={classes.field}
+                  />
+                </div>
+                <Field
+                  id="email"
+                  name="email"
+                  label="Email"
+                  component={Input}
+                  className={classes.field}
+                />
+                <Field
+                  id="phone"
+                  name="phone"
+                  label="Phone"
+                  component={Input}
+                  className={classes.field}
+                  type="tel"
+                />
+                <Field
+                  id="company"
+                  name="company"
+                  label="Affiliation (optional)"
+                  component={Input}
+                  className={classes.field}
+                />
+                <Field
+                  id="mls_number"
+                  name="mls_number"
+                  label="MLS # (optional)"
+                  component={Input}
+                  className={classes.field}
+                />
+                <Field
+                  id="role"
+                  name="role"
+                  label="I am:"
+                  component={RadioGroup}
+                  display="inline"
+                  items={[
+                    {
+                      label: "a Broker/Owner in Bright MLS",
+                      value: "a Broker/Owner in Bright MLS",
+                    },
+                    {
+                      label: "a Recruiter for a Broker/Owner in Bright MLS",
+                      value: "a Recruiter for a Broker/Owner in Bright MLS",
+                    },
+                    {
+                      label: "Other (please specify)",
+                      value: "Other",
+                    },
+                  ]}
+                  className={classes.field}
+                />
+                {values.role === "Other" && (
+                  <Field
+                    id="roleOther"
+                    name="roleOther"
+                    label="Other"
+                    component={Input}
+                    className={classes.field}
+                    autoFocus
+                  />
+                )}
+
+                <Field
+                  id="interests"
+                  name="interests"
+                  label="I am interested in:  (select all that apply)"
+                  component={CheckboxGroup}
+                  items={[
+                    {
+                      label: "Elevate BOSS® for my brokerage",
+                      value: "Elevate BOSS for my brokerage",
+                    },
+                    {
+                      label: "Lead generation solutions for my brokerage",
+                      value: "Lead generation solutions for my brokerage",
+                    },
+                    {
+                      label: "Elevate BOSS®’s recruitment program",
+                      value: "Elevate BOSS’s recruitment program",
+                    },
+                    {
+                      label: "Consolidating technology & saving money",
+                      value: "Consolidating technology & saving money",
+                    },
+                    {
+                      label: "Other (please specify)",
+                      value: "Other",
+                    },
+                  ]}
+                  className={classes.field}
+                />
+                {console.log(values.interests)}
+                {values.interests.includes("Other") && (
+                  <Field
+                    id="interestsOther"
+                    name="interestsOther"
+                    label="Other"
+                    component={Input}
+                    className={classes.field}
+                    autoFocus
+                  />
+                )}
+
+                <button
+                  type="submit"
+                  className={classes.signUpBtn}
+                  disabled={isSubmitting}
+                >
+                  let's connect
+                </button>
               </div>
-              <div style={{fontSize:"11px", lineHeight:"16px"}}>
-              By submitting this form, you are requesting to be contacted by a member of the Elevate Sales Team at the details provided via text, email or call (may involve automated or pre-recorded means).  You may revoke this consent through any reasonable means.
-                Existing subscribers seeking support, please visit the <a href="https://elmstreettechnology.zendesk.com/hc/en-us">Elevate Help Center</a>.
+              <div style={{ fontSize: "11px", lineHeight: "16px" }}>
+                By submitting this form, you are requesting to be contacted by a
+                member of the Elevate Sales Team at the details provided via
+                text, email or call (may involve automated or pre-recorded
+                means). You may revoke this consent through any reasonable
+                means. Existing subscribers seeking support, please visit the{" "}
+                <a href="https://support.tryelevate.com/s/ ">
+                  Elevate Help Center
+                </a>
+                .
               </div>
             </Form>
           )}
@@ -318,7 +347,7 @@ export default withStyles((theme) => ({
     width: "100%",
     maxWidth: "700px",
     margin: "0 auto",
-    textAlign: "center"
+    textAlign: "center",
   },
   link: {
     color: "inherit",
@@ -338,34 +367,34 @@ export default withStyles((theme) => ({
       marginLeft: "12px",
     },
   },
-  headingSmall:{
-    fontSize:"20px",
-    textTransform:"uppercase",
-    fontWeight:"600",
-    color:"#777777",
-    textAlign:"center",
-    padding:"3px"
-  },
-  headingLarge:{
-    fontSize: "33px",
-    fontWeight: "700",
-    color: "#f15623",
-    textAlign:"center",
-    padding:"3px",
-    lineHeight:"38px"
-  },
-  headingText:{
+  headingSmall: {
+    fontSize: "20px",
+    textTransform: "uppercase",
+    fontWeight: "600",
     color: "#777777",
     textAlign: "center",
     padding: "3px",
-    lineHeight: "1.4em"
+  },
+  headingLarge: {
+    fontSize: "33px",
+    fontWeight: "700",
+    color: "#f15623",
+    textAlign: "center",
+    padding: "3px",
+    lineHeight: "38px",
+  },
+  headingText: {
+    color: "#777777",
+    textAlign: "center",
+    padding: "3px",
+    lineHeight: "1.4em",
   },
   checkfield: {
     width: "20px",
     height: "20px",
     position: "relative",
     top: "4px",
-    marginLeft: "10px"
+    marginLeft: "10px",
   },
   signUpBtn: {
     width: "60%",
@@ -379,12 +408,11 @@ export default withStyles((theme) => ({
     marginTop: "30px",
     marginBottom: "30px",
     textDecoration: "none",
-
   },
   selectfield: {
     borderRadius: "6px",
     border: "2px solid #ECECEC",
-    height: "40px"
+    height: "40px",
   },
   selectlabel: {
     width: "100%",
