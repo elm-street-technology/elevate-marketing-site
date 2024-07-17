@@ -96,7 +96,7 @@ const Footer = ({ classes }) => (
           </Link>
           <a
             className={classes.link}
-            href="https://elmstreet.com/terms"
+            href="https://tryelevate.com/terms-of-service"
             target="_blank"
           >
             Terms of Service
@@ -110,7 +110,7 @@ const Footer = ({ classes }) => (
           </a>
           <a
             className={classes.link}
-            href="https://elmstreet.com/privacy"
+            href="https://tryelevate.com/privacy"
             target="_blank"
           >
             Privacy Policy
